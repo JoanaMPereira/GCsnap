@@ -12,4 +12,5 @@ GCsnap is written in Python 3.7.4 and requires mostly core Python modules. Only 
   - Biopython
   - Bokeh
   - Networkx 
+
 Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
