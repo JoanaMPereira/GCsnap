@@ -8,4 +8,8 @@ All information is stored in detailed, human and machine-readable files, and cus
 
 ## Dependencies
 
-GCsnap is written in Python 3.7.4 and requires mostly core Python modules. Only three external packages are required: Biopython, Bokeh and Networkx. Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
+GCsnap is written in Python 3.7.4 and requires mostly core Python modules. Only three external packages are required: 
+  - Biopython
+  - Bokeh
+  - Networkx 
+Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
