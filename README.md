@@ -32,9 +32,11 @@ GCsnap takes as main input a list of sequence identifiers, which can be in **Ent
 In its most simple mode of usage, GCsnap only requires a list of sequence identifiers. 
 
 **Required** arguments are:
+```
   - '-targets': which can be a list of sequence identifiers, a text file, a fasta file, a clans file or a list of files
- 
+```
 **Optional** arguments allow for the tweaking of GCsnap behaviour. There are various optional arguments that can be used, but the most relevant are:
+```  
   - '-user_email': it may be required to access the NCBI databases. It is not used for anything else.
   - '-ncbi_api_key': the key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Can be obtained after obtaing an NCBI account.
   - '-n_flanking': the number of flanking genes (to each side) to be taken. By default, it is set to 4.
@@ -44,7 +46,7 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
   - '-annotate_TM': set to true to annotate the presence of transmembrane segments and signal peptides.
   - '-annotation_TM_mode': the mode to use to collect transmembrane and signal peptide annotations (phobius, tmhmm or uniprot).
   - '-clans_pattern': a set of patterns in CLANS groups names that define different groups to be considered as independent jobs.
- 
+```
 ### 1. Simple job
 
 Using the example in folder example/ybez_KHI, 
