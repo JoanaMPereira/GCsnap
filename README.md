@@ -16,3 +16,11 @@ GCsnap is written in Python 3.7.4 and requires mostly core Python modules. Only 
   - Networkx 
 
 Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
+
+## Allowed inputs
+
+GCsnap takes as main input a list of sequence identifiers, which can be in **Entrez, UniprotKB, and UniRef formats, or a mix**. These identifiers can be given as:
+  1. a text file, where each is in a different line
+  2. a fasta file, where the sequence header starts with the sequence identifier
+  3. a sequences cluster file in CLANS format
+  4. direct input in the terminal as a space-separated list
