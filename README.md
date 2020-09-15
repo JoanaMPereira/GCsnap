@@ -54,5 +54,14 @@ Using the example in folder `example/ybez_KHI`, the input file `targets_ybez_sel
 python3 GCsnap.py -targets targets_ybez_selected.txt
 ```
 will generate the output folder `targets_ybez_selected`, where all output files and figures are stored.
+This will NOT annotate transmembrane segments and signal peptides.
+
+In order to do so, one shall run:
+```
+python3 GCsnap.py -targets targets_ybez_selected.txt -annotate_TM True
+```
+which will by default collect that information from Uniprot.
+
+
 
 
