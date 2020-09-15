@@ -28,3 +28,16 @@ GCsnap takes as main input a list of sequence identifiers, which can be in **Ent
   - direct input in the terminal as a space-separated list
   
 ## Usage
+
+In its most simple mode of usage, GCsnap only requires a list of sequence identifiers. 
+
+**Required** arguments are:
+  - '-targets': which can be a list of sequence identifiers, a text file, a fasta file, a clans file or a list of files
+ 
+**Optional** arguments allow for the tweaking of GCsnap behaviour. There are various optional arguments that can be used, but the most relevant are:
+  - '-user_email': it may be required to access the NCBI databases. It is not used for anything else.
+  - '-ncbi_api_key': the key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Can be obtained after obtaing an NCBI account.
+  - '-n_flanking': The number of flanking genes (to each side) to be taken. By default, it is set to 4.
+  - '-n_flanking5': The number of flanking genes to be taken on the 5' side. By default, it is set to 4.
+  - '-n_flanking3': The number of flanking genes to be taken on the 3' side. By default, it is set to 4.
+  - 
