@@ -76,4 +76,6 @@ python3 GCsnap.py -targets yqlc_nostoc_blast_nrbac70.clans -clans_pattern cluste
 will make GCsnap identify all clusters in the CLANS file that have 'cluster' in their name, which will be considered as two independent jobs, generating the two folders `cluster1_cyanobacteria` and `cluster2_allothers`.
 
 ## Acknowledgements
-GCsnap was developed during the COVID-19 lockdown (March 2020 - June 2020) by Joana Pereira (Dept. Protein Evolution, Max Planck Institute for Developmental Biology) with the support of Prof. Andrei N. Lupas
+
+GCsnap was developed during the COVID-19 lockdown. 
+I would like to thank Prof. Andrei N. Lupas, Dr. Laura Weidmann-Krebs, Dr. Marcus Hartmann, Dr. Vikram Alva, Dr. Felipe Merino, Dr. Jörg Martin, Dr. Adrian Fuchs, Hadeer Elhabashy, Dr. João Barros and Prof. Volkmar Braun for the support and the insightful discussions that helped the development of GCsnap.
