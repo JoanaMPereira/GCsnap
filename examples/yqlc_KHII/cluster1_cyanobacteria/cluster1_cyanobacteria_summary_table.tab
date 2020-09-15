@@ -1,0 +1,999 @@
+Operon type	Target	AssemblyId	Gene direction	Gene start	Gene end	Relative gene start	Relative gene end	Protein family code	EntrzID	Protein name	Superkingdom	Phylum	Class	Order	Genus	Species
+
+
+00014	PZO49560.1	GCA_003242115.1	-	4403	4873	-1600	-1130	48	PZO49552.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	-	5044	5247	-959	-756	47	PZO49553.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	+	5318	5458	-685	-545	46	PZO49554.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	+	5733	5981	-270	-22	75	PZO49555.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	+	6004	6468	1	465	80	PZO49560.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	+	6538	7464	535	1461	78	PZO49556.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00014	PZO49560.1	GCA_003242115.1	+	7574	7956	1571	1953	45	PZO49557.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+
+00014	PZO08615.1	GCA_003242035.1	-	419	796	-1339	-962	48	PZO08611.1	twin-arginine translocase TatA/TatE family subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	-	937	1140	-821	-618	47	PZO08612.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	+	1213	1353	-545	-405	46	PZO08613.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	+	1498	1746	-260	-12	75	PZO08614.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	+	1759	2208	1	450	80	PZO08615.1	RNA-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	+	2228	3181	470	1423	78	PZO08616.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+00014	PZO08615.1	GCA_003242035.1	+	3215	3888	1457	2130	45	PZO08617.1	ATP-dependent helicase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya foveolarum
+
+00001	BAG05582.1	GCA_000010625.1	-	5299755	5299937	-2488	-2306	0	BAG05579.1	unknown protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	+	5299945	5300796	-2298	-1447	66	BAG05580.1	cation efflux system protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	+	5300843	5301919	-1400	-324	65	BAG05581.1	dTDP-glucose 4%2C6-dehydratase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	+	5302114	5302362	-129	119	75	BAG48297.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	+	5302244	5302720	1	477	80	BAG05582.1	RNA-binding protein like	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	-	5302730	5303758	487	1515	64	BAG05583.1	GTP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	-	5303803	5304015	1560	1772	0	BAG05584.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	-	5304202	5304393	1959	2150	0	BAG05585.1	unknown protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+00001	BAG05582.1	GCA_000010625.1	-	5304478	5304726	2235	2483	63	BAG05586.1	unknown protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa NIES-843
+
+00002	WP_104397532.1	GCF_002933835.1	+	102071	102757	-3428	-2742	0	WP_104397530.1	phosphoribosylformylglycinamidine synthase subunit PurQ	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	+	103015	103941	-2484	-1558	66	WP_104397531.1	cation transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	+	103988	105064	-1511	-435	65	WP_104397572.1	dTDP-glucose 4%2C6-dehydratase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	+	105259	105507	-240	8	75	WP_002780060.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	+	105500	105865	1	366	80	WP_104397532.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	-	105875	106903	376	1404	64	WP_104397533.1	GTPase ObgE	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	-	106948	107013	1449	1514	10000	myaer87_RS17080	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	-	107291	107512	1792	2013	63	WP_104397534.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+00002	WP_104397532.1	GCF_002933835.1	+	107683	109494	2184	3995	0	WP_104397535.1	signal peptide peptidase SppA	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Microcystis	Microcystis aeruginosa
+
+00003	WP_024544479.1	GCF_000485815.1	+	115891	116895	-3401	-2397	15	WP_024544483.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	+	114609	115820	-2326	-1115	16	WP_024544482.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	-	113926	114534	-1040	-432	12	WP_148293394.1	chorismate lyase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	+	113486	113734	-240	8	75	WP_024544480.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	+	113062	113493	1	432	80	WP_024544479.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	-	112019	112960	534	1475	74	WP_024544478.1	GTPase Era	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	+	110447	111733	1761	3047	17	WP_024544477.1	insulinase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	-	109231	110208	3286	4263	0	WP_024544476.1	cysteine synthase A	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+00003	WP_024544479.1	GCF_000485815.1	+	108135	108968	4526	5359	0	WP_024544475.1	BtpA/SgcQ family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. NKBG15041c
+
+00004	WP_030007129.1	GCF_001693275.1	+	563596	564519	-3317	-2394	15	WP_065710099.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	+	564582	565793	-2331	-1120	16	WP_065710100.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	-	565879	566475	-1034	-438	12	WP_030007127.1	DUF98 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	+	566672	566914	-241	1	75	WP_030007128.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	+	566914	567342	1	429	80	WP_030007129.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	-	567469	568410	556	1497	74	WP_065710101.1	GTPase Era	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	-	568435	569268	1522	2355	0	WP_065710102.1	phosphatase PAP2 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	+	569319	570605	2406	3692	17	WP_065710103.1	insulinase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00004	WP_030007129.1	GCF_001693275.1	+	570714	571466	3801	4553	73	WP_065710104.1	class I SAM-dependent methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+
+00005	WP_069967886.1	GCF_001746915.1	+	47768	47926	-2847	-2689	0	WP_158020402.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	-	47238	47699	-2620	-2159	0	WP_069968027.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	45621	47063	-1984	-542	71	WP_069967888.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	45041	45301	-222	38	75	WP_069967887.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	44647	45078	1	432	80	WP_069967886.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	43652	44611	468	1427	78	WP_069967885.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	43253	43648	1431	1826	79	WP_069967884.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	+	42520	43230	1849	2559	70	WP_141724406.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+00005	WP_069967886.1	GCF_001746915.1	-	41113	42531	2548	3966	59	WP_069967882.1	AAA family ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Desertifilum	Desertifilum sp. IPPAS B-1220
+
+00006	WP_168571633.1	GCF_012295525.1	-	6319383	6319811	-3272	-2844	0	WP_168571630.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6319973	6320359	-2682	-2296	26	WP_168572076.1	histidine kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6320558	6322009	-2097	-646	71	WP_168571631.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6322433	6322699	-222	44	75	WP_168571632.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6322656	6323117	1	462	80	WP_168571633.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6323312	6324265	657	1610	78	WP_168571634.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6324370	6324771	1715	2116	79	WP_168571635.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	+	6324950	6325738	2295	3083	70	WP_168572077.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+00006	WP_168571633.1	GCF_012295525.1	-	6325832	6326770	3177	4115	0	WP_168571636.1	exopolyphosphatase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oxynema	Oxynema sp. AP17
+
+00007	EDX73328.1	GCA_000155555.1	-	148826	149740	-3031	-2117	0	EDX73395.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	+	147138	148598	-1889	-429	71	EDX73345.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	-	146974	147147	-438	-265	0	EDX73350.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	+	146701	146952	-243	8	75	EDX73299.1	ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	+	146328	146708	1	381	80	EDX73328.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	+	145205	146161	548	1504	78	EDX73303.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	-	140064	145061	1648	6645	59	EDX73313.1	haemagglutination activity domain protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	+	136608	139628	7081	10101	0	EDX73278.1	RecF/RecN/SMC N terminal domain%2C putative	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+00007	EDX73328.1	GCA_000155555.1	-	136299	136598	10111	10410	0	EDX73398.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Coleofasciculus	Coleofasciculus chthonoplastes PCC 7420
+
+00008	WP_071102121.1	GCF_001854205.1	-	93393	94118	-3181	-2456	10000	BJP36_RS00355	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	+	91581	93020	-2083	-644	71	WP_071102124.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	-	91226	91426	-489	-289	0	WP_071102123.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	+	90911	91159	-222	26	75	WP_071102122.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	+	90520	90936	1	417	80	WP_071102121.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	+	89356	90312	625	1581	78	WP_071102120.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	-	85340	89329	1608	5597	59	WP_071102119.1	CHAT domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	+	83824	84615	6322	7113	70	WP_083374047.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+00008	WP_071102121.1	GCF_001854205.1	-	83530	83718	7219	7407	0	WP_071102117.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Moorea	Moorea producens
+
+00009	ERT09159.1	GCA_000478195.2	+	147743	147865	-2148	-2026	0	ERT09164.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	146263	147705	-1988	-546	71	ERT09107.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	-	146130	146243	-526	-413	0	ERT09077.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	145745	146044	-327	-28	75	ERT09076.1	ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	145381	145716	1	336	80	ERT09159.1	KH domain protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	144048	145001	716	1669	78	ERT09138.1	DEAD/DEAH box helicase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	143600	144007	1710	2117	79	ERT09204.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	+	142762	143592	2125	2955	70	ERT09093.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+00009	ERT09159.1	GCA_000478195.2	-	141368	142729	2988	4349	72	ERT09070.1	serine/threonine-protein kinase D	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Lyngbya	Lyngbya aestuarii BL J
+
+00010	WP_019504521.1	GCF_000332195.1	+	659563	659955	-3805	-3413	13	WP_026102367.1	FHA domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	-	658763	659566	-3416	-2613	21	WP_019504524.1	TlyA family RNA methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	656472	657920	-1770	-322	71	WP_019504523.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	656139	656390	-240	11	75	WP_019504522.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	655757	656149	1	393	80	WP_019504521.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	-	654677	655738	412	1473	29	WP_019504520.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	654424	654537	1613	1726	28	WP_019504519.1	cytochrome b6	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	653785	654153	1997	2365	0	WP_019504518.1	photosystem II reaction center protein Psb28	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+00010	WP_019504521.1	GCF_000332195.1	+	652785	653702	2448	3365	19	WP_019504517.1	TIGR01777 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa sp. PCC 7319
+
+00011	WP_036482472.1	GCF_000756305.1	+	244811	245203	-3201	-2809	13	WP_036482463.1	FHA domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	-	245196	246005	-2816	-2007	21	WP_036482664.1	TlyA family RNA methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	246223	247677	-1789	-335	71	WP_036482466.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	247772	248020	-240	8	75	WP_036482469.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	248013	248375	1	363	80	WP_036482472.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	-	248383	249426	371	1414	29	WP_036482475.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	249563	249700	1551	1688	28	WP_036482478.1	cytochrome b6	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	249839	250756	1827	2744	19	WP_036482481.1	TIGR01777 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+00011	WP_036482472.1	GCF_000756305.1	+	250766	251617	2754	3605	0	WP_036482484.1	S-formylglutathione hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Myxosarcina	Myxosarcina sp. GI1
+
+00012	BAZ39800.1	GCA_004296455.1	+	3455710	3458865	-7250	-4095	62	BAZ39796.1	two-component sensor histidine kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	-	3458881	3460236	-4079	-2724	61	BAZ39797.1	pentapeptide repeat family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3461028	3462497	-1932	-463	71	BAZ39798.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3462696	3462959	-264	-1	75	BAZ39799.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3462961	3463374	1	414	80	BAZ39800.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3463918	3464094	958	1134	77	BAZ39801.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3464382	3465335	1422	2375	78	BAZ39802.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3465422	3466270	2462	3310	60	BAZ39803.1	short-chain dehydrogenase/reductase SDR	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+00012	BAZ39800.1	GCA_004296455.1	+	3466531	3467049	3571	4089	0	BAZ39804.1	RDD domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-4101
+
+00013	WP_144416121.1	GCF_000734895.2	+	4679006	4679503	-4232	-3735	0	WP_035155738.1	acyl-CoA thioesterase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	-	4679637	4680722	-3601	-2516	61	WP_052754497.1	pentapeptide repeat-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	+	4681200	4682663	-2038	-575	71	WP_035155739.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	+	4682920	4683180	-318	-58	75	WP_035155740.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	+	4683239	4683574	1	336	80	WP_144416121.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	+	4683937	4684128	699	890	77	WP_035155745.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	+	4684351	4685304	1113	2066	78	WP_035155747.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	-	4685307	4686170	2069	2932	11	WP_035155749.1	DNA-formamidopyrimidine glycosylase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+00013	WP_144416121.1	GCF_000734895.2	-	4686764	4686976	3526	3738	10	WP_035155751.1	photosystem I reaction center subunit IV	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. 336/3
+
+00015	WP_106882388.1	GCF_003017785.1	-	3275	3607	-1480	-1148	48	WP_106882385.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+00015	WP_106882388.1	GCF_003017785.1	-	2868	3071	-944	-741	47	WP_106882384.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+00015	WP_106882388.1	GCF_003017785.1	+	2661	2792	-665	-534	46	WP_106882383.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+00015	WP_106882388.1	GCF_003017785.1	+	2155	2409	-282	-28	75	WP_106882382.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+00015	WP_106882388.1	GCF_003017785.1	+	1758	2126	1	369	80	WP_106882388.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+00015	WP_106882388.1	GCF_003017785.1	+	745	1734	393	1382	78	WP_106882381.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	filamentous	filamentous cyanobacterium CCP5
+
+00016	WP_006455717.1	GCF_000155595.1	-	4700586	4701023	-1826	-1389	48	WP_006454391.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	-	4700131	4700334	-1137	-934	47	WP_038016562.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	+	4699922	4700062	-865	-725	46	WP_006457718.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	+	4699290	4699538	-341	-93	75	WP_006454975.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	+	4698801	4699196	1	396	80	WP_006455717.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	+	4697586	4698542	655	1611	78	WP_038016558.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	+	4694127	4697372	1825	5070	45	WP_006457724.1	DEAD/DEAH box helicase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	-	4692747	4693949	5248	6450	0	WP_006453858.1	aspartate aminotransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+00016	WP_006455717.1	GCF_000155595.1	-	4691428	4692627	6570	7769	0	WP_006454793.1	iron-containing alcohol dehydrogenase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7335
+
+00017	WP_023071406.1	GCF_000482245.1	-	29908	30222	-1580	-1266	48	WP_023071402.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	-	30431	30634	-1057	-854	47	WP_023071403.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	30711	30842	-777	-646	46	WP_023071404.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	31098	31346	-390	-142	75	WP_023071405.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	31489	31875	1	387	80	WP_023071406.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	31976	32929	488	1441	78	WP_031291898.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	33010	36228	1522	4740	45	WP_023071408.1	DEAD/DEAH box helicase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	36734	38038	5246	6550	22	WP_152532077.1	RNA polymerase sigma factor SigC	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+00017	WP_023071406.1	GCF_000482245.1	+	38301	40925	6813	9437	27	WP_023071410.1	DUF4114 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. Heron Island J
+
+00018	WP_121967814.1	GCF_002286735.1	-	30461	30835	-1329	-955	48	WP_121967818.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	-	30183	30386	-880	-677	47	WP_121967817.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	29974	30114	-608	-468	46	WP_121967816.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	29508	29756	-250	-2	75	WP_121967815.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	29050	29505	1	456	80	WP_121967814.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	28046	28999	507	1460	78	WP_121967813.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	24771	27956	1550	4735	45	WP_121967812.1	DEAD/DEAH box helicase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	24618	24755	4751	4888	0	WP_121967811.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+00018	WP_121967814.1	GCF_002286735.1	+	22565	23755	5751	6941	22	WP_121967998.1	RNA polymerase sigma factor SigC	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. BC1307
+
+00019	WP_052584896.1	GCF_000176895.2	+	880	1666	-1146	-360	10000	ARTHRO_RS22125	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica
+00019	WP_052584896.1	GCF_000176895.2	+	449	742	-222	71	75	WP_008055729.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica
+00019	WP_052584896.1	GCF_000176895.2	+	97	519	1	423	80	WP_052584896.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica
+
+00020	WP_084639422.1	GCF_001870905.1	+	336	1787	-1795	-344	71	WP_071516057.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 9228
+00020	WP_084639422.1	GCF_001870905.1	+	1909	2169	-222	38	75	WP_071516058.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 9228
+00020	WP_084639422.1	GCF_001870905.1	+	2132	2626	1	495	80	WP_084639422.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 9228
+00020	WP_084639422.1	GCF_001870905.1	+	2790	3746	659	1615	78	WP_071516060.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 9228
+
+00021	WP_048321220.1	GCF_001039555.1	-	27248	27724	-3748	-3272	18	WP_021832141.1	NAD(P)H-quinone oxidoreductase subunit N	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Crocosphaera	Crocosphaera watsonii
+00021	WP_048321220.1	GCF_001039555.1	+	27922	28038	-3074	-2958	35	WP_007303656.1	photosystem II reaction center protein I	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Crocosphaera	Crocosphaera watsonii
+00021	WP_048321220.1	GCF_001039555.1	+	28209	30680	-2787	-316	30	WP_048321219.1	DUF3769 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Crocosphaera	Crocosphaera watsonii
+00021	WP_048321220.1	GCF_001039555.1	+	30756	31004	-240	8	75	WP_007309195.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Crocosphaera	Crocosphaera watsonii
+00021	WP_048321220.1	GCF_001039555.1	+	30997	31278	1	282	80	WP_048321220.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Crocosphaera	Crocosphaera watsonii
+
+00022	OKH36044.1	GCA_001904725.1	-	122227	123225	-4771	-3773	0	OKH36048.1	glycosyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	-	120459	122144	-3690	-2005	0	OKH36047.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	118773	120236	-1782	-319	71	OKH36046.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	118434	118694	-240	20	75	OKH36045.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	118052	118453	1	402	80	OKH36044.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	117711	117884	570	743	77	OKH36043.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	116557	117513	941	1897	78	OKH36042.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	115818	116225	2229	2636	79	OKH36041.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+00022	OKH36044.1	GCA_001904725.1	+	114953	115774	2680	3501	70	OKH36040.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium ambiguum IAM M-71
+
+00023	WP_067774034.1	GCF_001548375.1	+	5950866	5952233	-4539	-3172	0	WP_067774045.1	aminopeptidase P family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5949871	5950494	-2800	-2177	0	WP_067774042.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5948161	5949624	-1930	-467	71	WP_067774039.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5947653	5947916	-222	41	75	WP_067774036.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5947259	5947693	1	435	80	WP_067774034.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5946851	5947027	667	843	77	WP_010996119.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5945523	5946476	1218	2171	78	WP_067774031.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5945068	5945472	2222	2626	79	WP_067774029.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+00023	WP_067774034.1	GCF_001548375.1	+	5944152	5944991	2703	3542	70	WP_067774026.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc sp. NIES-3756
+
+00024	WP_082218351.1	GCF_000332335.1	-	5802660	5803805	-3728	-2583	10000	OSC10802_RS41775	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5804344	5804517	-2044	-1871	0	WP_155968373.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5804549	5805991	-1839	-397	71	WP_017719621.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5806166	5806414	-222	26	75	WP_017719623.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5806389	5806826	1	438	80	WP_082218351.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	-	5807194	5807442	806	1054	0	WP_017719624.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5807662	5808615	1274	2227	78	WP_017719625.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5808877	5809281	2489	2893	79	WP_017719626.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+00024	WP_082218351.1	GCF_000332335.1	+	5809346	5810209	2958	3821	70	WP_017719627.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria sp. PCC 10802
+
+00025	WP_046281311.1	GCF_000972705.2	+	15571	15864	-222	71	75	WP_046281312.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+00025	WP_046281311.1	GCF_000972705.2	+	15204	15641	1	438	80	WP_046281311.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+00025	WP_046281311.1	GCF_000972705.2	+	14918	15088	554	724	10000	WN50_RS13410	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+00025	WP_046281311.1	GCF_000972705.2	+	13968	14921	721	1674	78	WP_046281310.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+00025	WP_046281311.1	GCF_000972705.2	+	13522	13932	1710	2120	79	WP_152964801.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+00025	WP_046281311.1	GCF_000972705.2	+	12687	13514	2128	2955	70	WP_046281308.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnoraphis	Limnoraphis robusta
+
+00026	CBN56019.1	GCA_000180455.1	+	70	357	-255	32	75	CBN56018.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+00026	CBN56019.1	GCA_000180455.1	+	326	790	1	465	80	CBN56019.1	conserved hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+00026	CBN56019.1	GCA_000180455.1	+	654	902	329	577	0	CBN56020.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+00026	CBN56019.1	GCA_000180455.1	+	1054	2007	729	1682	78	CBN56021.1	PhoH-like protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+00026	CBN56019.1	GCA_000180455.1	+	2120	2533	1795	2208	0	CBN56022.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+00026	CBN56019.1	GCA_000180455.1	+	2577	2981	2252	2656	79	CBN56023.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Kamptonema	Kamptonema sp. PCC 6506
+
+00027	CDM93748.1	GCA_000973065.1	+	1382506	1382679	-2025	-1852	0	CDM93744.1	protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	-	1382584	1382739	-1947	-1792	0	CDM93745.1	conserved protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1382756	1384171	-1775	-360	71	CDM93746.1	Signal Recognition Particle (SRP) component with 4.5S RNA (ffs)	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1384309	1384602	-222	71	75	CDM93747.1	30S ribosomal subunit protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1384532	1384744	1	213	80	CDM93748.1	conserved protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1384807	1384959	276	428	76	CDM93749.1	conserved protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1385429	1386382	898	1851	78	CDM93750.1	PhoH-like protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	+	1386420	1386806	1889	2275	79	CDM93751.1	conserved protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+00027	CDM93748.1	GCA_000973065.1	-	1386931	1387461	2400	2930	0	CDM93752.1	conserved protein of unknown function	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Limnospira	Limnospira indica PCC 8005
+
+00028	PLS68317.1	GCA_002861535.1	+	7890	9176	-6239	-4953	55	PLS68320.1	efflux transporter periplasmic adaptor subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	4722	7909	-4972	-1785	10000	CV045_08565	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	3275	4663	-1726	-338	71	PLS68319.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	2929	3216	-279	8	75	PLS68318.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	2646	2936	1	291	80	PLS68317.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	1218	2555	382	1719	56	PLS68324.1	DUF2252 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	-	383	1060	1877	2554	0	PLS68316.1	DUF1995 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+00028	PLS68317.1	GCA_002861535.1	+	1	194	2743	2936	10000	CV045_08535	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium M5B4
+
+00029	RMF21621.1	GCA_003695125.1	+	207	1796	-4609	-3020	0	RMF21617.1	phosphoglycerate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+00029	RMF21621.1	GCA_003695125.1	+	2019	2927	-2797	-1889	0	RMF21618.1	50S ribosomal protein L11 methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+00029	RMF21621.1	GCA_003695125.1	+	3036	4487	-1780	-329	71	RMF21619.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+00029	RMF21621.1	GCA_003695125.1	+	4576	4827	-240	11	75	RMF21620.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+00029	RMF21621.1	GCA_003695125.1	+	4817	5191	1	375	80	RMF21621.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+00029	RMF21621.1	GCA_003695125.1	-	5230	6093	414	1277	42	RMF21622.1	formyltetrahydrofolate deformylase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J083
+
+00030	TKZ26913.1	GCA_005518235.1	+	100617	100852	-3478	-3243	10000	EBE85_11075	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	99167	99757	-2383	-1793	0	TKZ26916.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	97666	99108	-1734	-292	71	TKZ26915.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	97327	97596	-222	47	75	TKZ26914.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	96930	97373	1	444	80	TKZ26913.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	95953	96918	456	1421	78	TKZ26912.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	95397	95834	1540	1977	0	TKZ26911.1	DUF433 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	94781	95374	2000	2593	0	TKZ26910.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+00030	TKZ26913.1	GCA_005518235.1	+	94531	94809	2565	2843	0	TKZ26909.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Hormoscilla	Hormoscilla sp. GUM007
+
+00031	WP_073607616.1	GCF_001904775.1	-	154656	155006	-1453	-1103	48	WP_073607620.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	-	154258	154461	-908	-705	47	WP_073607619.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	+	154052	154183	-630	-499	46	WP_073607618.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	+	153585	153863	-310	-32	75	WP_073607617.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	+	153205	153552	1	348	80	WP_073607616.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	+	152171	153154	399	1382	78	WP_073607615.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	-	151087	151953	1600	2466	7	WP_073607614.1	6-carboxytetrahydropterin synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	+	150274	150690	2863	3279	8	WP_073607613.1	DUF4278 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+00031	WP_073607616.1	GCF_001904775.1	-	149566	150048	3505	3987	0	WP_073607612.1	Cys-tRNA(Pro) deacylase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Phormidium	Phormidium tenue
+
+00032	WP_080808153.1	GCF_002075285.3	-	1683975	1684304	-1437	-1108	48	WP_080808148.1	TatA/E family twin arginine-targeting protein translocase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	-	1683478	1683681	-814	-611	47	WP_080808173.1	photosystem II reaction center protein PsbH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	+	1683271	1683402	-535	-404	46	WP_080808177.1	photosystem II reaction center protein PsbN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	+	1682835	1683089	-222	32	75	WP_088429435.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	+	1682459	1682866	1	408	80	WP_080808153.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	+	1681455	1682405	462	1412	78	WP_080808156.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	-	1680567	1681451	1416	2300	0	WP_080808159.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	-	1679956	1680531	2336	2911	0	WP_088429433.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+00032	WP_080808153.1	GCF_002075285.3	+	1679052	1679735	3132	3815	0	WP_088429431.1	nitrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Halomicronema	Halomicronema hongdechloris
+
+00033	ACL45117.1	GCA_000022045.1	+	2731340	2732074	-3271	-2537	0	ACL45121.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	-	2730567	2731331	-2528	-1764	0	ACL45120.1	conserved hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	-	2729438	2730511	-1708	-635	0	ACL45119.1	conserved hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	+	2728795	2729043	-240	8	75	ACL45118.1	ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	+	2728431	2728802	1	372	80	ACL45117.1	conserved hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	+	2728248	2728421	382	555	77	ACL45116.1	ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	+	2727215	2728177	626	1588	78	ACL45115.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	+	2726774	2727184	1619	2029	79	ACL45114.1	conserved hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+00033	ACL45117.1	GCA_000022045.1	-	2726206	2726661	2142	2597	0	ACL45113.1	protein of unknown function DUF306 Meta and HslJ	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. PCC 7425
+
+00034	AFY81343.1	GCA_000317105.1	-	2035435	2037873	-4940	-2502	0	AFY81339.1	uncharacterized protein containing a von Willebrand factor type A (vWA) domain	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	-	2038033	2038218	-2342	-2157	0	AFY81340.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2038428	2039858	-1947	-517	71	AFY81341.1	signal recognition particle subunit FFH/SRP54 (srp54)	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2040135	2040395	-240	20	75	AFY81342.1	SSU ribosomal protein S16P	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2040376	2040813	1	438	80	AFY81343.1	putative RNA-binding protein (contains KH domain)	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2041011	2041964	636	1589	78	AFY81344.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2041984	2042745	1609	2370	70	AFY81345.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	+	2043123	2044880	2748	4505	69	AFY81346.1	ABC-type multidrug transport system%2C ATPase and permease component	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+00034	AFY81343.1	GCA_000317105.1	-	2044924	2045382	4549	5007	0	AFY81347.1	cytochrome c%2C mono- and diheme variants family	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoria	Oscillatoria acuminata PCC 6304
+
+00035	KOR37720.1	GCA_001276715.1	-	23257	23460	-7100	-6897	0	KOR37594.1	8-amino-7-oxononanoate synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	24008	27721	-6349	-2636	59	KOR37595.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	28433	29890	-1924	-467	71	KOR37596.1	signal recognition particle	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	30063	30329	-294	-28	75	KOR37597.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	30358	30756	1	399	80	KOR37720.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	31053	32006	696	1649	78	KOR37598.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	32239	32655	1882	2298	0	KOR37599.1	fatty-acid oxidation protein subunit alpha	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	+	32643	33014	2286	2657	0	KOR37600.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+00035	KOR37720.1	GCA_001276715.1	-	33084	33296	2727	2939	0	KOR37601.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Planktothricoides	Planktothricoides sp. SR001
+
+00036	KST67722.1	GCA_001456025.1	-	139243	139485	-4869	-4627	0	KST67726.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	-	138053	139192	-4576	-3437	61	KST67725.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	+	135155	136612	-1996	-539	71	KST67724.1	signal recognition particle	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	+	134596	134856	-240	20	75	KST67723.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	+	134193	134615	1	423	80	KST67722.1	RNA-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	+	132710	133666	950	1906	78	KST67721.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	+	132280	132684	1932	2336	79	KST67720.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	-	131444	131812	2804	3172	0	KST67831.1	diacylglyceryl transferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+00036	KST67722.1	GCA_001456025.1	-	129957	130508	4108	4659	0	KST67719.1	GTPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Mastigocoleus	Mastigocoleus testarum BC008
+
+00037	OLP20417.1	GCA_001939115.1	+	84462	85415	-3727	-2774	57	OLP20297.1	asparaginase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	-	83675	84229	-2541	-1987	0	OLP20296.1	peroxiredoxin	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	82077	83540	-1852	-389	71	OLP20295.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	81719	81967	-279	-31	75	OLP20294.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	81277	81687	1	411	80	OLP20417.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	81065	81238	450	623	77	OLP20416.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	79938	80894	794	1750	78	OLP20293.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	+	79186	79731	1957	2502	58	OLP20292.1	phycobiliprotein lyase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+00037	OLP20417.1	GCA_001939115.1	-	77432	79177	2511	4256	0	OLP20291.1	flavin oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. 'hensonii'
+
+00038	OUC15092.1	GCA_002148405.1	-	14848	15423	-3994	-3419	0	OUC15095.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	-	13546	14742	-3313	-2117	56	OUC15101.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	11919	13391	-1962	-490	71	OUC15094.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	11487	11726	-297	-58	75	OUC15093.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	11075	11428	1	354	80	OUC15092.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	10703	10876	553	726	77	OUC15091.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	9534	10490	939	1895	78	OUC15090.1	phosphate starvation-inducible protein PhoH	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	+	8254	9384	2045	3175	73	OUC15100.1	SAM-dependent methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+00038	OUC15092.1	GCA_002148405.1	-	7324	7881	3548	4105	0	OUC15089.1	HPP family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Alkalinema	Alkalinema sp. CACIAM 70d
+
+00039	PSP15035.1	GCA_003021435.1	+	7351	8187	-4328	-3492	52	PSP15039.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	5978	6781	-2922	-2119	0	PSP15038.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	4150	5610	-1751	-291	71	PSP15037.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	3848	4099	-240	11	75	PSP15036.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	3475	3858	1	384	80	PSP15035.1	RNA-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	2972	3268	591	887	0	PSP15034.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	2569	2829	1030	1290	53	PSP15033.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	-	2105	2548	1311	1754	54	PSP15032.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+00039	PSP15035.1	GCA_003021435.1	+	1262	1957	1902	2597	0	PSP15031.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium SW_11_48_12
+
+00040	PSP17127.1	GCA_003022125.1	-	16747	18123	-3653	-2277	0	PSP17131.1	16S rRNA (cytosine(967)-C(5))-methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	-	16463	16657	-2187	-1993	50	PSP17130.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	+	14777	16207	-1737	-307	71	PSP17129.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	+	14459	14710	-240	11	75	PSP17128.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	+	14134	14469	1	336	80	PSP17127.1	RNA-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	+	13790	14050	420	680	53	PSP17126.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	-	13339	13767	703	1131	54	PSP17125.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	-	12418	13284	1186	2052	51	PSP17124.1	shikimate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+00040	PSP17127.1	GCA_003022125.1	+	10833	12344	2126	3637	0	PSP17123.1	glycerol kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium QS_8_64_29
+
+00041	PZD71832.1	GCA_003231495.1	-	148849	149727	-4022	-3144	49	PZD71786.1	Soluble epoxide hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	-	147710	148804	-3099	-2005	73	PZD71762.1	Demethylmenaquinone methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	+	146135	147592	-1887	-430	71	PZD71742.1	Signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	+	145719	145970	-265	-14	75	PZD71844.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	+	145330	145704	1	375	80	PZD71832.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	+	144300	145259	446	1405	78	PZD71777.1	PhoH-like protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	+	144115	144213	1492	1590	0	PZD71855.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	-	143585	144028	1677	2120	0	PZD71827.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+00041	PZD71832.1	GCA_003231495.1	-	143173	143442	2263	2532	0	PZD71841.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Acaryochloris	Acaryochloris sp. RCC1774
+
+00042	RMG07956.1	GCA_003695795.1	-	1667	2713	-3435	-2389	0	RMG07953.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	2801	3373	-2301	-1729	0	RMG07954.1	TerD family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	3548	4681	-1554	-421	0	RMG07964.1	succinate--CoA ligase subunit beta	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	4880	5140	-222	38	75	RMG07955.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	5103	5495	1	393	80	RMG07956.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	5555	6526	453	1424	78	RMG07957.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	6986	9991	1884	4889	0	RMG07958.1	phosphoenolpyruvate carboxylase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	10091	10354	4989	5252	10000	D6728_15585	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+00042	RMG07956.1	GCA_003695795.1	+	10737	11510	5635	6408	0	RMG07959.1	ZIP family metal transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	Cyanobacteria	Cyanobacteria bacterium J055
+
+00043	TVQ19912.1	GCA_007694125.1	+	20150	21421	-4474	-3203	0	TVQ19927.1	PDZ domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	19181	20038	-3091	-2234	0	TVQ19915.1	urease accessory protein UreD	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	17599	19077	-2130	-652	71	TVQ19914.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	16951	17307	-360	-4	75	TVQ19913.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	16569	16946	1	378	80	TVQ19912.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	15519	16517	430	1428	78	TVQ19911.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	14855	15430	1517	2092	0	TVQ19910.1	DUF2808 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	-	13239	14492	2455	3708	0	TVQ19909.1	GTP cyclohydrolase II	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+00043	TVQ19912.1	GCA_007694125.1	+	12377	13012	3935	4570	0	TVQ19926.1	uracil phosphoribosyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. DLM2.Bin15
+
+00044	WP_006528479.1	GCF_000332035.1	+	8654	9016	-3094	-2732	0	WP_006528475.1	helix-turn-helix transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	+	9151	9927	-2597	-1821	0	WP_006528476.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	+	10020	11465	-1728	-283	71	WP_006528477.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	+	11508	11756	-240	8	75	WP_006528478.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	+	11749	12060	1	312	80	WP_006528479.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	-	12333	13496	585	1748	0	WP_006528480.1	GuaB3 family IMP dehydrogenase-related protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	-	13558	15273	1810	3525	0	WP_006528481.1	AAA family ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	-	15305	15427	3557	3679	10000	GLO73106_RS21660	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+00044	WP_006528479.1	GCF_000332035.1	-	15483	16535	3735	4787	39	WP_006528483.1	PstS family phosphate ABC transporter substrate-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. PCC 73106
+
+00045	WP_009555277.1	GCF_000309945.1	-	1136547	1137164	-3315	-2698	0	WP_009555281.1	2OG-Fe(II) oxygenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	-	1135725	1136525	-2676	-1876	33	WP_009555280.1	mechanosensitive ion channel family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	-	1134358	1135557	-1708	-509	0	WP_009555279.1	alanine racemase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	+	1133841	1134089	-240	8	75	WP_009555278.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	+	1133453	1133848	1	396	80	WP_009555277.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	+	1132353	1133309	540	1496	78	WP_009555276.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	-	1132185	1132331	1518	1664	10000	OSCCYDRAFT_RS26555	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	-	1129589	1131931	1918	4260	0	WP_009555275.1	copper-translocating P-type ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+00045	WP_009555277.1	GCF_000309945.1	+	1128817	1129383	4466	5032	0	WP_009555274.1	sigma-70 family RNA polymerase sigma factor	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Oscillatoriales	Oscillatoriales cyanobacterium JSC-12
+
+00046	WP_013322190.1	GCF_000147335.1	-	2340051	2341046	-2429	-1434	0	WP_013322194.1	GntR family transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	-	2339663	2339923	-1306	-1046	0	WP_013322193.1	BolA family transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	-	2338994	2339617	-1000	-377	0	WP_013322192.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	+	2338609	2338857	-240	8	75	WP_013322191.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	+	2338194	2338616	1	423	80	WP_013322190.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	-	2337838	2338011	606	779	0	WP_013322189.1	DUF1328 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	-	2337435	2337617	1000	1182	0	WP_013322188.1	CsbD family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	+	2336378	2336557	2060	2239	10000	CYAN7822_RS37620	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+00046	WP_013322190.1	GCF_000147335.1	+	2335688	2336068	2549	2929	10000	CYAN7822_RS37615	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeothece	Gloeothece verrucosa
+
+00047	WP_015166536.1	GCF_000317065.1	-	4161483	4162226	-4704	-3961	0	WP_015166532.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	-	4162246	4163664	-3941	-2523	37	WP_015166533.1	1-acyl-sn-glycerol-3-phosphate acyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4164370	4165788	-1817	-399	71	WP_015166534.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4165947	4166195	-240	8	75	WP_015166535.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4166188	4166541	1	354	80	WP_015166536.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4166538	4167803	351	1616	44	WP_015166537.1	competence/damage-inducible protein A	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4168864	4169211	2677	3024	0	WP_015166538.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	+	4169241	4169699	3054	3512	0	WP_015166539.1	SsrA-binding protein SmpB	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+00047	WP_015166536.1	GCF_000317065.1	-	4169913	4170887	3726	4700	0	WP_015166540.1	carotenoid biosynthesis protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 7367
+
+00048	WP_015192774.1	GCF_000317575.1	+	1714393	1715958	-6237	-4672	0	WP_015192770.1	MFS transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1716275	1718545	-4355	-2085	0	WP_015192771.1	nitrate reductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1718835	1720292	-1795	-338	71	WP_015192772.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1720390	1720638	-240	8	75	WP_015192773.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1720631	1721041	1	411	80	WP_015192774.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	-	1721042	1722088	412	1458	29	WP_015192775.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1722245	1722358	1615	1728	28	WP_015192776.1	cytochrome b6-f complex subunit 7	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	+	1722643	1723515	2013	2885	49	WP_015192777.1	alpha/beta hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+00048	WP_015192774.1	GCF_000317575.1	-	1723567	1723725	2937	3095	0	WP_015192778.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Stanieria	Stanieria cyanosphaera
+
+00049	WP_015200940.1	GCF_000317435.1	+	6533031	6534584	-5319	-3766	72	WP_015200936.1	serine/threonine protein kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	-	6534838	6535866	-3512	-2484	61	WP_015200937.1	pentapeptide repeat-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6536462	6537925	-1888	-425	71	WP_015200938.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6538059	6538319	-291	-31	75	WP_015200939.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6538351	6538764	1	414	80	WP_015200940.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6538985	6539938	635	1588	78	WP_015200941.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6540786	6541394	2436	3044	27	WP_015200942.1	hemolysin-type calcium-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	-	6541422	6541601	3072	3251	0	WP_041740004.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+00049	WP_015200940.1	GCF_000317435.1	+	6541684	6542481	3334	4131	70	WP_015200943.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix parietina
+
+00050	WP_015203352.1	GCF_000317495.1	+	2673238	2674311	-3702	-2629	0	WP_015203347.1	delta-12 acyl-phospholipid desaturase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2674487	2674870	-2453	-2070	26	WP_015203348.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2675075	2676523	-1865	-417	71	WP_015203350.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2676718	2676966	-222	26	75	WP_015203351.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2676941	2677375	1	435	80	WP_015203352.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2677630	2677794	690	854	0	WP_015203353.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2678197	2679156	1257	2216	78	WP_015203354.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2679293	2681890	2353	4950	62	WP_015203355.1	GAF domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+00050	WP_015203352.1	GCF_000317495.1	+	2682062	2683087	5122	6147	25	WP_015203356.1	D-alanine--D-alanine ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Crinalium	Crinalium epipsammum
+
+00051	WP_017295263.1	GCF_000332235.1	-	2992976	2993191	-4389	-4174	10000	SYN6308_RS22630	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2993503	2995041	-3862	-2324	0	WP_026102101.1	bifunctional phosphoribosylaminoimidazolecarboxamide formyltransferase/IMP cyclohydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	-	2995517	2996764	-1848	-601	14	WP_026102102.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2997125	2997373	-240	8	75	WP_017295262.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2997366	2997764	1	399	80	WP_017295263.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2997985	2998359	620	994	0	WP_017295264.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	-	2998418	2998666	1053	1301	0	WP_017295265.1	Ycf34 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2998836	2999441	1471	2076	0	WP_017295266.1	repressor LexA	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+00051	WP_017295263.1	GCF_000332235.1	+	2999520	2999714	2155	2349	0	WP_017295267.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Geminocystis	Geminocystis herdmanii
+
+00052	WP_019500117.1	GCF_000332175.1	-	1239142	1241139	-5963	-3966	59	WP_019500121.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	-	1237029	1239119	-3943	-1853	59	WP_019500120.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	+	1235503	1236927	-1751	-327	71	WP_019500119.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	+	1235168	1235416	-240	8	75	WP_019500118.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	+	1234849	1235175	1	327	80	WP_019500117.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	+	1234704	1234886	290	472	77	WP_071592280.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	+	1233439	1234692	484	1737	44	WP_036946039.1	competence/damage-inducible protein A	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	-	1232387	1233082	2094	2789	0	WP_019500115.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+00052	WP_019500117.1	GCF_000332175.1	-	1231103	1232377	2799	4073	0	WP_019500114.1	AAA family ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp. PCC 6802
+
+00053	WP_023172072.1	GCF_000484535.1	-	808331	809242	-3429	-2518	0	WP_144080462.1	D-glycero-beta-D-manno-heptose-7-phosphate kinase	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	-	809615	809776	-2145	-1984	0	WP_023172069.1	DUF1328 domain-containing protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	809972	811450	-1788	-310	71	WP_023172070.1	signal recognition particle protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	811487	811768	-273	8	75	WP_041243701.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	811761	812030	1	270	80	WP_023172072.1	KH domain-containing protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	812082	812255	322	495	77	WP_011142630.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	812673	813794	913	2034	0	WP_023172073.1	phage integrase family protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	814945	817377	3185	5617	0	WP_051382648.1	hypothetical protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+00053	WP_023172072.1	GCF_000484535.1	+	817443	817625	5683	5865	0	WP_041243702.1	hypothetical protein	Bacteria	Cyanobacteria	Gloeobacteria	Gloeobacterales	Gloeobacter	Gloeobacter kilaueensis
+
+00054	WP_028954273.1	GCF_000332075.2	-	2417103	2417525	-3476	-3054	10000	SYN7509_RS29205	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	-	2418162	2419421	-2417	-1158	62	WP_009632332.1	HAMP domain-containing histidine kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	-	2419408	2420091	-1171	-488	32	WP_009632333.1	response regulator transcription factor	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	+	2420351	2420614	-228	35	75	WP_009632335.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	+	2420580	2421005	1	426	80	WP_028954273.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	+	2421099	2422052	520	1473	78	WP_009632337.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	-	2422090	2424441	1511	3862	59	WP_009632338.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	+	2424633	2425586	4054	5007	0	WP_009632339.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00054	WP_028954273.1	GCF_000332075.2	+	2425583	2426332	5004	5753	0	WP_009632340.1	isoprenyl transferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+
+00055	WP_018400175.1	GCF_000380225.1	-	4703097	4704614	-5545	-4028	0	WP_018400179.1	glucosylglycerol-phosphate synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	+	4700170	4702698	-3629	-1101	0	WP_018400178.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	-	4699516	4700106	-1037	-447	0	WP_018400177.1	fasciclin domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	+	4699090	4699338	-269	-21	75	WP_018400176.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	+	4698667	4699068	1	402	80	WP_018400175.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	+	4697663	4698619	450	1406	78	WP_018400174.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	-	4693722	4697120	1949	5347	59	WP_155973184.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	-	4692937	4693482	5587	6132	0	WP_018400172.1	DUF2062 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+00055	WP_018400175.1	GCF_000380225.1	-	4691715	4692818	6251	7354	33	WP_155973181.1	mechanosensitive ion channel	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	filamentous	filamentous cyanobacterium ESFC-1
+
+00056	WP_068817853.1	GCF_001650195.1	+	25502	25894	-3593	-3201	26	WP_068817857.1	histidine kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	-	24289	25494	-3193	-1988	56	WP_068817856.1	DUF2252 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	+	22658	24142	-1841	-357	71	WP_068817855.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	+	22305	22556	-255	-4	75	WP_068817854.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	+	21914	22300	1	387	80	WP_068817853.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	+	20776	21729	572	1525	78	WP_068817852.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	-	20050	20607	1694	2251	0	WP_068817851.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	-	19669	19941	2360	2632	0	WP_068817850.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+00056	WP_068817853.1	GCF_001650195.1	-	19077	19427	2874	3224	9	WP_068817849.1	endoribonuclease MazF	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Phormidesmis	Phormidesmis priestleyi
+
+00057	WP_071455489.1	GCF_001870225.1	+	2861884	2862555	-3143	-2472	0	WP_071455493.1	global nitrogen regulator NtcA	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	+	2860739	2861536	-2124	-1327	60	WP_071455492.1	SDR family oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	-	2859746	2860780	-1368	-334	64	WP_071455491.1	GTPase ObgE	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	+	2859417	2859677	-265	-5	75	WP_071455490.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	+	2859109	2859411	1	303	80	WP_071455489.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	+	2858147	2859085	327	1265	78	WP_071455907.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	-	2857847	2858011	1401	1565	0	WP_099092507.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	-	2857708	2857831	1581	1704	10000	GlitD10_RS15575	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+00057	WP_071455489.1	GCF_001870225.1	-	2856895	2857171	2241	2517	0	WP_071455488.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Gloeoemargaritales	Gloeomargarita	Gloeomargarita lithophora
+
+00058	WP_073548873.1	GCF_001904655.1	+	239275	240597	-2894	-1572	0	WP_073548870.1	3-isopropylmalate dehydratase large subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	240639	240977	-1530	-1192	0	WP_073548871.1	transposase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	-	241071	241685	-1098	-484	12	WP_073548872.1	DUF98 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	241947	242207	-222	38	75	WP_015188235.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	242170	242577	1	408	80	WP_073548873.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	242677	243630	508	1461	78	WP_073548874.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	243658	244065	1489	1896	79	WP_073548875.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	244095	244883	1926	2714	70	WP_073548876.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+00058	WP_073548873.1	GCF_001904655.1	+	245019	246836	2850	4667	69	WP_073548877.1	ABC transporter ATP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Chroogloeocystis	Chroogloeocystis siderophila
+
+00059	WP_075889505.1	GCF_001904615.1	+	47046	47309	-1661	-1398	0	WP_075889498.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	-	47301	47897	-1406	-810	12	WP_075889501.1	chorismate lyase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	48208	48419	-499	-288	10000	NIES208_RS02805	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	48467	48715	-240	8	75	WP_075889503.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	48708	49127	1	420	80	WP_075889505.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	-	49272	50213	565	1506	74	WP_075889507.1	GTPase Era	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	50708	52003	2001	3296	17	WP_075889509.1	insulinase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	52278	53081	3571	4374	70	WP_171971701.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+00059	WP_075889505.1	GCF_001904615.1	+	53179	54015	4472	5308	0	WP_075889511.1	CPBP family intramembrane metalloprotease	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Limnothrix	Limnothrix rosea
+
+00060	WP_088243775.1	GCF_900185595.1	+	4814	5716	-4557	-3655	0	WP_088243770.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	+	5722	6465	-3649	-2906	0	WP_088243771.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	+	7248	8705	-2123	-666	71	WP_088243772.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	+	9149	9409	-222	38	75	WP_088243774.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	+	9372	9809	1	438	80	WP_088243775.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	+	10573	10938	1202	1567	59	WP_088243776.1	CHAT domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	-	10959	12311	1588	2940	68	WP_088243777.1	HlyC/CorC family transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	-	12438	13826	3067	4455	0	WP_088243778.1	IS200/IS605 family element transposase accessory protein TnpB	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+00060	WP_088243775.1	GCF_900185595.1	-	14153	14320	4782	4949	0	WP_159460691.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix rhizosoleniae
+
+00061	WP_096691558.1	GCF_002368415.1	-	8668740	8668988	-3733	-3485	23	WP_096691554.1	DUF4351 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	-	8669152	8670162	-3321	-2311	23	WP_096691555.1	DUF4351 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8670666	8672129	-1807	-344	71	WP_096691556.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8672233	8672493	-240	20	75	WP_096691557.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8672474	8672914	1	441	80	WP_096691558.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8673003	8673179	530	706	77	WP_096691559.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8673331	8674284	858	1811	78	WP_096691560.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	+	8674430	8677561	1957	5088	62	WP_096691561.1	GAF domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+00061	WP_096691558.1	GCF_002368415.1	-	8677596	8677817	5123	5344	0	WP_096694443.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	unclassified	unclassified Calothrix
+
+00062	WP_106258366.1	GCF_003003795.1	+	62010	63773	-4340	-2577	0	WP_106258374.1	glycosyltransferase family 39 protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	60921	61538	-2105	-1488	3	WP_106258372.1	TMEM165/GDT1 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	-	59943	60866	-1433	-510	59	WP_106258370.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	59425	59673	-240	8	75	WP_106258368.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	59016	59432	1	417	80	WP_106258366.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	57911	58870	563	1522	78	WP_106258365.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	56746	57927	1506	2687	59	WP_106258363.1	MSMEG_0565 family glycosyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	+	56466	56753	2680	2967	0	WP_106258362.1	MSMEG_0570 family nitrogen starvation response protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+00062	WP_106258366.1	GCF_003003795.1	-	55337	56383	3050	4096	0	WP_106258360.1	alcohol dehydrogenase catalytic domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Stenomitos	Stenomitos frigidus
+
+00063	WP_106287117.1	GCF_003003775.1	+	39586	39828	-3153	-2911	0	WP_106287113.1	HNH endonuclease	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	40042	40779	-2697	-1960	61	WP_106287114.1	DnaJ domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	40950	42380	-1789	-359	71	WP_106287115.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	42480	42728	-259	-11	75	WP_106287116.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	42740	43123	1	384	80	WP_106287117.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	43226	44185	487	1446	78	WP_106287138.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	44471	45418	1732	2679	69	WP_106287118.1	ABC transporter ATP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	45459	47030	2720	4291	0	WP_106287119.1	ABC transporter permease	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+00063	WP_106287117.1	GCF_003003775.1	+	47501	48859	4762	6120	0	WP_106287120.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Merismopedia	Merismopedia glauca
+
+00064	WP_106456638.1	GCF_003007785.1	+	208290	208556	-2931	-2665	0	WP_106456651.1	helix-turn-helix transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	+	208583	209386	-2638	-1835	0	WP_106456635.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	-	209480	210667	-1741	-554	0	WP_106456636.1	tyrosine-type recombinase/integrase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	+	210981	211229	-240	8	75	WP_106456637.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	+	211222	211641	1	420	80	WP_106456638.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	+	211705	212568	484	1347	51	WP_106456639.1	shikimate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+00064	WP_106456638.1	GCF_003007785.1	+	212677	212785	1456	1564	0	WP_146136507.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece hegewaldii
+
+00065	WP_107671288.1	GCF_003013815.1	-	15221	15697	-3778	-3302	18	WP_107671291.1	NAD(P)H-quinone oxidoreductase subunit N	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	14891	15007	-3088	-2972	35	WP_008276509.1	photosystem II reaction center protein I	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	12240	14702	-2783	-321	30	WP_107671290.1	DUF3769 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	11911	12159	-240	8	75	WP_107671289.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	11499	11918	1	420	80	WP_107671288.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	10252	11502	417	1667	40	WP_107671287.1	lipid-A-disaccharide synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	9023	9910	2009	2896	0	WP_107671286.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	7779	8996	2923	4140	0	WP_107671285.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+00065	WP_107671288.1	GCF_003013815.1	+	6051	7766	4153	5868	62	WP_107671284.1	GAF domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Cyanothece	Cyanothece sp. BG0011
+
+00066	WP_132866703.1	GCF_000817735.3	-	1493739	1493936	-2346	-2149	50	WP_015153918.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1493379	1493558	-1968	-1789	0	WP_132866705.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1491943	1493406	-1816	-353	71	WP_039715700.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1491540	1491812	-222	50	75	WP_015153916.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1491140	1491589	1	450	80	WP_132866703.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1490069	1491022	568	1521	78	WP_039715698.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1489121	1490002	1588	2469	0	WP_132866701.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1487743	1488723	2867	3847	0	WP_039715696.1	ABC transporter substrate-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+00066	WP_132866703.1	GCF_000817735.3	+	1486146	1487678	3912	5444	69	WP_052290059.1	sugar ABC transporter ATP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Scytonema	Scytonema millei
+
+00067	WP_161825902.1	GCF_009939295.1	-	13890	14342	-3185	-2733	0	WP_161825906.1	transcriptional repressor	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	13156	13698	-2541	-1999	0	WP_161825905.1	peroxiredoxin	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	11526	12881	-1724	-369	6	WP_161825904.1	glutathione-disulfide reductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	11173	11421	-264	-16	75	WP_161825903.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	10836	11156	1	321	80	WP_161825902.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	10575	10748	409	582	77	WP_161825943.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	9472	10434	723	1685	78	WP_161825901.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	8994	9266	1891	2163	0	WP_161825900.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+00067	WP_161825902.1	GCF_009939295.1	+	8639	9031	2126	2518	10000	GS597_RS13035	pseudogene	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcales	Synechococcales cyanobacterium C
+
+00068	WP_015126244.1	GCF_000316685.1	-	3614233	3617064	-6559	-3728	59	WP_015126240.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	-	3617213	3618949	-3579	-1843	0	WP_015126241.1	ABC transporter permease subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	-	3618954	3620318	-1838	-474	69	WP_015126242.1	AAA-associated domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	+	3620537	3620785	-255	-7	75	WP_015126243.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	+	3620793	3621155	1	363	80	WP_015126244.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	+	3621159	3621332	367	540	77	WP_015126245.1	30S ribosomal protein S21	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	+	3621342	3622295	550	1503	78	WP_015126246.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	-	3622301	3624250	1509	3458	72	WP_015126247.1	serine/threonine protein kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+00068	WP_015126244.1	GCF_000316685.1	-	3624412	3625359	3620	4567	57	WP_015126248.1	asparaginase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 6312
+
+00069	WP_162548634.1	GCF_010156995.1	-	9216	10433	-3901	-2684	1	WP_162548638.1	FtsX-like permease family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	-	7714	9216	-2684	-1182	55	WP_162548637.1	efflux RND transporter periplasmic adaptor subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	-	6969	7607	-1075	-437	0	WP_162548636.1	MarR family transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	6497	6754	-222	35	75	WP_162548635.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	6067	6531	1	465	80	WP_162548634.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	5051	6004	528	1481	78	WP_162548633.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	4592	4996	1536	1940	79	WP_162548632.1	heme utilization protein HuvX	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	3780	4595	1937	2752	70	WP_162548631.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+00069	WP_162548634.1	GCF_010156995.1	+	3317	3778	2754	3215	0	WP_162548630.1	nuclear transport factor 2 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Jacksonvillea	Jacksonvillea sp. ISTCYN1
+
+00070	WP_166274714.1	GCF_000817745.2	-	184947	185267	-3458	-3138	34	WP_166274706.1	2Fe-2S iron-sulfur cluster binding domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	+	185665	186414	-2740	-1991	0	WP_166274708.1	FHA domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	+	186549	188000	-1856	-405	71	WP_166274710.1	signal recognition particle protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	+	188129	188377	-276	-28	75	WP_166274712.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	+	188406	188765	1	360	80	WP_166274714.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	+	188973	189950	568	1545	78	WP_166274716.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	-	189928	190107	1523	1702	0	WP_166274718.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	-	190202	190774	1797	2369	59	WP_166274720.1	tetratricopeptide repeat protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+00070	WP_166274714.1	GCF_000817745.2	-	190859	192718	2454	4313	62	WP_166274884.1	HAMP domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Aphanocapsa	Aphanocapsa montana
+
+00071	WP_169613988.1	GCF_012911975.1	+	54790	54936	-6687	-6541	0	WP_169613991.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	+	52219	54516	-6267	-3970	0	WP_169614003.1	DUF1254 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	-	48911	52180	-3931	-662	0	WP_169613990.1	carbamoyl-phosphate synthase large subunit	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	+	48296	48550	-301	-47	75	WP_169613989.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	+	47883	48248	1	366	80	WP_169613988.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	+	46729	47700	549	1520	78	WP_169613987.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	-	45753	46625	1624	2496	7	WP_169613986.1	6-pyruvoyl tetrahydropterin synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	+	44878	45297	2952	3371	8	WP_169613985.1	DUF4278 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+00071	WP_169613988.1	GCF_012911975.1	-	43632	44759	3490	4617	0	WP_169613984.1	DUF58 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Nodosilinea	Nodosilinea sp. P-1105
+
+00072	AFY67793.1	GCA_000317045.1	+	4074501	4075370	-3431	-2562	0	AFY67789.1	SH3 type 3 domain protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	-	4075367	4076881	-2565	-1051	74	AFY67790.1	GTP-binding protein HSR1-related protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	-	4077056	4077235	-876	-697	77	AFY67791.1	SSU ribosomal protein S21P	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	+	4077671	4077919	-261	-13	75	AFY67792.1	SSU ribosomal protein S16P	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	+	4077933	4078325	1	393	80	AFY67793.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	-	4078373	4079122	441	1190	73	AFY67794.1	Methyltransferase type 11	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	-	4079119	4079331	1187	1399	0	AFY67795.1	RNA-binding S4 domain protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	-	4079389	4080267	1457	2335	0	AFY67796.1	UspA domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+00072	AFY67793.1	GCA_000317045.1	+	4080728	4082794	2796	4862	72	AFY67797.1	serine/threonine protein kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7407
+
+00073	AIE75570.1	GCA_000478825.2	-	3021333	3021464	-3310	-3179	0	AIE75566.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	+	3021613	3022686	-3030	-1957	75	AIE75567.1	Prophage Lp2 protein 6	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	-	3022694	3024040	-1949	-603	68	AIE75568.1	Hemolysins-related protein containing CBS domains	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	+	3024330	3024578	-313	-65	75	AIE75569.1	SSU ribosomal protein S16p	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	+	3024644	3024979	1	336	80	AIE75570.1	KH domain RNA binding protein YlqC	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	+	3025173	3027347	530	2704	0	AIE75571.1	Glutamine synthetase type III%2C GlnN	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	+	3027898	3028188	3255	3545	0	AIE75572.1	HigA protein (antitoxin to HigB)	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	-	3028488	3028970	3845	4327	0	AIE75573.1	Photosystem II protein PsbV%2C cytochrome c550	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+00073	AIE75570.1	GCA_000478825.2	-	3029128	3029328	4485	4685	0	AIE75574.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 6714
+
+00074	PZV10928.1	GCA_003249035.1	-	13651	15195	-3973	-2429	0	PZV10932.1	serine hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	-	12823	13584	-2362	-1601	0	PZV10931.1	RNA methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	-	11795	12763	-1541	-573	0	PZV10930.1	aspartate carbamoyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	+	11260	11508	-286	-38	75	PZV10929.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	+	10844	11221	1	378	80	PZV10928.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	+	9514	10773	449	1708	44	PZV10927.1	competence/damage-inducible protein A	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	-	7795	8847	2375	3427	0	PZV10926.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	+	5245	7239	3983	5977	0	PZV10925.1	NAD(FAD)-dependent dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+00074	PZV10928.1	GCA_003249035.1	-	4770	5078	6144	6452	0	PZV10924.1	DUF3082 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Pseudanabaena	Pseudanabaena sp.
+
+00075	PZV25621.1	GCA_003249095.1	-	12864	13826	-4422	-3460	73	PZV25625.1	class I SAM-dependent methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	-	11287	12720	-3316	-1883	0	PZV25624.1	glycogen synthase GlgA	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	-	9878	11224	-1820	-474	68	PZV25623.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	+	9396	9644	-240	8	75	PZV25622.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	+	8987	9403	1	417	80	PZV25621.1	RNA-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	+	4783	8610	794	4621	59	PZV25620.1	TIGR03032 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	-	3195	4742	4662	6209	0	PZV25619.1	polyketide biosynthesis operon protein CyrO	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	+	2257	2919	6485	7147	43	PZV25618.1	response regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+00075	PZV25621.1	GCA_003249095.1	+	893	2197	7207	8511	0	PZV25617.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Snowella	Snowella sp.
+
+00076	RNJ67070.1	GCA_003724315.1	-	47190	47414	-3151	-2927	0	RNJ67067.1	XRE family transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	+	47560	47760	-2781	-2581	0	RNJ67068.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	-	47767	49692	-2574	-649	0	RNJ67137.1	cyanophycin synthetase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	+	50007	50258	-334	-83	75	RNJ67069.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	+	50342	50701	1	360	80	RNJ67070.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	+	50974	51939	633	1598	78	RNJ67071.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	-	51970	52404	1629	2063	41	RNJ67072.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	-	52592	53956	2251	3615	40	RNJ67073.1	lipid-A-disaccharide synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+00076	RNJ67070.1	GCA_003724315.1	+	54084	56357	3743	6016	39	RNJ67074.1	DUF4912 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. IPPAS B-1204
+
+00077	TVQ43653.1	GCA_007693955.1	+	8881	9357	-2062	-1586	38	TVQ43649.1	rhodanese-like domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	9401	10099	-1542	-844	0	TVQ43650.1	MBL fold metallo-hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	10103	10642	-840	-301	38	TVQ43651.1	DUF2892 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	10703	10951	-240	8	75	TVQ43652.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	10944	11282	1	339	80	TVQ43653.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	11411	12718	468	1775	0	TVQ43654.1	PDZ domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	-	12702	13394	1759	2451	37	TVQ43655.1	1-acyl-sn-glycerol-3-phosphate acyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	13458	14096	2515	3153	0	TVQ43656.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+00077	TVQ43653.1	GCA_007693955.1	+	14096	14692	3153	3749	61	TVQ43657.1	pentapeptide repeat-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Gloeocapsa	Gloeocapsa sp. DLM2.Bin57
+
+00078	WP_006511796.1	GCF_000332055.1	-	20088	21860	-5647	-3875	0	WP_144053350.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	+	19279	19773	-3560	-3066	0	WP_006511799.1	lactoylglutathione lyase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	+	16605	19145	-2932	-392	36	WP_006511798.1	alpha/beta hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	+	16205	16453	-240	8	75	WP_006511797.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	+	15781	16212	1	432	80	WP_006511796.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	-	13971	15677	536	2242	0	WP_158500438.1	AMP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	-	11429	13879	2334	4784	0	WP_006511794.1	GNAT family N-acetyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	-	10491	11384	4829	5722	0	WP_006511793.1	sterol desaturase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+00078	WP_006511796.1	GCF_000332055.1	-	9556	10356	5857	6657	60	WP_006511792.1	SDR family oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Xenococcus	Xenococcus sp. PCC 7305
+
+00079	WP_011431089.1	GCF_002760345.1	-	1626124	1627095	-2738	-1767	0	WP_011431085.1	solanesyl diphosphate synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1625615	1626010	-1653	-1258	0	WP_041439172.1	metal-sensing transcriptional repressor	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	-	1625126	1625563	-1206	-769	0	WP_011431087.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1624420	1624887	-530	-63	75	WP_011431088.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1624096	1624356	1	261	80	WP_011431089.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1622996	1624099	258	1361	0	WP_011431090.1	ArsA family ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1622207	1622968	1389	2150	31	WP_011431091.1	imidazole glycerol phosphate synthase subunit HisF	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	+	1621392	1622189	2168	2965	0	WP_011431092.1	3'(2')%2C5'-bisphosphate nucleotidase CysQ	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+00079	WP_011431089.1	GCF_002760345.1	-	1620916	1621380	2977	3441	61	WP_011431093.1	pentapeptide repeat-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	unclassified	unclassified Synechococcus
+
+00080	WP_012954188.1	GCF_000025125.1	+	916971	918134	-6704	-5541	0	WP_012954184.1	sulfate adenylyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	918284	920518	-5391	-3157	0	WP_012954185.1	caspase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	920911	923355	-2764	-320	30	WP_012954186.1	DUF3769 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	923435	923683	-240	8	75	WP_012954187.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	923676	923987	1	312	80	WP_012954188.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	924091	925350	416	1675	40	WP_012954189.1	lipid-A-disaccharide synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	+	925541	925954	1866	2279	0	WP_012954190.1	DUF2996 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	-	926146	927081	2471	3406	0	WP_012954191.1	UDP-N-acetylmuramate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+00080	WP_012954188.1	GCF_000025125.1	-	927180	928685	3505	5010	0	WP_012954192.1	UDP-N-acetylmuramate--L-alanine ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Candidatus	Candidatus Atelocyanobacterium thalassa
+
+
+00082	WP_015144817.1	GCF_000317025.1	+	3552734	3554347	-4059	-2446	36	WP_015144821.1	alpha/beta hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	+	3551695	3552630	-2342	-1407	65	WP_041393425.1	NAD-dependent epimerase/dehydratase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	+	3550668	3551168	-880	-380	0	WP_015144819.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	+	3550280	3550528	-240	8	75	WP_015144818.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	+	3549874	3550287	1	414	80	WP_015144817.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	-	3548660	3549823	465	1628	0	WP_015144816.1	ferrochelatase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	-	3546890	3547873	2415	3398	0	WP_015144814.1	permease	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	+	3546286	3546546	3742	4002	0	WP_015144812.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+00082	WP_015144817.1	GCF_000317025.1	-	3545336	3546211	4077	4952	0	WP_015144811.1	MBL fold metallo-hydrolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Pleurocapsa	Pleurocapsa minor
+
+00083	WP_015218062.1	GCF_009710015.1	-	39385	40134	-3702	-2953	0	WP_015218066.1	creatininase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	-	40488	41447	-2599	-1640	0	WP_155082901.1	glutathione S-transferase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	41820	42590	-1267	-497	31	WP_155082903.1	1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	42847	43095	-240	8	75	WP_015218063.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	43088	43504	1	417	80	WP_015218062.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	-	43798	44139	711	1052	0	WP_015218061.1	helix-turn-helix transcriptional regulator	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	44240	45220	1153	2133	24	WP_015218060.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	45254	46357	2167	3270	24	WP_155082905.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+00083	WP_015218062.1	GCF_009710015.1	+	46619	48436	3532	5349	43	WP_155082907.1	pyruvate kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium aponinum
+
+00084	WP_015224605.1	GCF_000317635.1	+	556073	556897	-3028	-2204	0	WP_015224610.1	4-hydroxy-tetrahydrodipicolinate reductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	554886	555938	-2069	-1017	0	WP_015224609.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	554307	554873	-1004	-438	0	WP_015224608.1	TIGR04376 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	553861	554109	-240	8	75	WP_015224606.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	553431	553868	1	438	80	WP_015224605.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	552402	553358	511	1467	78	WP_015224604.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	-	550805	552376	1493	3064	32	WP_015224603.1	diguanylate cyclase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	549849	550487	3382	4020	0	WP_015224602.1	histidine phosphatase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+00084	WP_015224605.1	GCF_000317635.1	+	548820	549836	4033	5049	0	WP_015224601.1	glucokinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Halothece	Halothece sp. PCC 7418
+
+00085	WP_015230632.1	GCF_000317615.1	+	3218457	3219677	-2976	-1756	0	WP_015230636.1	NAD-dependent epimerase/dehydratase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	-	3217467	3218138	-1437	-766	0	WP_015230635.1	16S rRNA (guanine(527)-N(7))-methyltransferase RsmG	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	+	3217040	3217288	-587	-339	0	WP_015230634.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	+	3216693	3216941	-240	8	75	WP_015230633.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	+	3216284	3216700	1	417	80	WP_015230632.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	+	3215295	3216251	450	1406	78	WP_015230631.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	-	3208117	3215001	1700	8584	27	WP_015230629.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	-	3206446	3207678	9023	10255	0	WP_156800819.1	ISAs1 family transposase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+00085	WP_015230632.1	GCF_000317615.1	-	3205408	3206346	10355	11293	23	WP_015230628.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Dactylococcopsis	Dactylococcopsis salina
+
+00086	WP_017304341.1	GCF_000314005.1	-	1865892	1866572	-3685	-3005	0	WP_017304345.1	Uma2 family endonuclease	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	-	1864060	1865787	-2900	-1173	0	WP_017304344.1	MFS transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1863316	1863846	-959	-429	0	WP_017304343.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1862986	1863234	-347	-99	75	WP_017304342.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1862509	1862886	1	378	80	WP_017304341.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1861562	1862455	432	1325	78	WP_083883597.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1861345	1861581	1306	1542	0	WP_071525271.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	-	1859561	1861393	1494	3326	0	WP_017304339.1	glycosyltransferase family 39 protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+00086	WP_017304341.1	GCF_000314005.1	+	1859140	1859358	3529	3747	0	WP_017304338.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina subsalsa
+
+00087	WP_017711242.1	GCF_000332315.1	+	716728	717873	-5410	-4265	0	WP_016923988.1	transaldolase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	718332	719861	-3806	-2277	0	WP_017711238.1	glucose-6-phosphate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	720181	721512	-1957	-626	0	WP_017711240.1	glucose-6-phosphate dehydrogenase assembly protein OpcA	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	721880	722137	-258	-1	75	WP_017711241.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	722139	722549	1	411	80	WP_017711242.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	722703	723653	565	1515	78	WP_017711244.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	-	723734	724327	1596	2189	0	WP_017711245.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	+	724994	725881	2856	3743	0	WP_017711247.1	polyamine aminopropyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+00087	WP_017711242.1	GCF_000332315.1	-	726049	727251	3911	5113	0	WP_017711248.1	type IV pilus twitching motility protein PilT	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Prochlorothrix	Prochlorothrix hollandica
+
+00088	WP_022606389.1	GCF_000473895.1	+	111763	112761	-5894	-4896	42	WP_022606382.1	methionyl-tRNA formyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	112876	114405	-4781	-3252	0	WP_022606383.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	-	114891	116843	-2766	-814	0	WP_022606385.1	DNA primase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	117398	117658	-259	1	75	WP_022606387.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	117658	118035	1	378	80	WP_022606389.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	118111	119070	454	1413	78	WP_022606391.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	119200	120504	1543	2847	0	WP_040655546.1	homoserine dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	+	120702	121691	3045	4034	0	WP_022606396.1	dsRNA-specific ribonuclease	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+00088	WP_022606389.1	GCF_000473895.1	-	121789	123579	4132	5922	0	WP_040655547.1	aspartate--tRNA ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Rubidibacter	Rubidibacter lacunae
+
+00089	WP_026100966.1	GCF_000332275.1	+	2744858	2745307	-3259	-2810	0	WP_051039914.1	CGLD27 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	+	2743804	2744742	-2694	-1756	0	WP_017326400.1	bifunctional riboflavin kinase/FAD synthetase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	-	2743051	2743737	-1689	-1003	0	WP_017326399.1	HEAT repeat domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	+	2742095	2742796	-748	-47	75	WP_017326398.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	+	2741766	2742047	1	282	80	WP_026100966.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	-	2741268	2741747	301	780	0	WP_017326396.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	-	2740339	2740641	1407	1709	0	WP_038025953.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	-	2739145	2740197	1851	2903	22	WP_017326393.1	RNA polymerase sigma factor%2C RpoD/SigA family	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+00089	WP_026100966.1	GCF_000332275.1	-	2738960	2739118	2930	3088	0	WP_017326392.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechococcus	Synechococcus sp. PCC 7336
+
+00090	WP_068390409.1	GCF_001548435.1	-	5486093	5486584	-3354	-2863	0	WP_068390406.1	D-glycero-beta-D-manno-heptose 1-phosphate adenylyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	-	5486581	5487261	-2866	-2186	32	WP_068390407.1	response regulator transcription factor	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5487528	5488949	-1919	-498	0	WP_068390408.1	NADP-dependent isocitrate dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5489185	5489442	-262	-5	75	WP_068393680.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5489448	5489798	1	351	80	WP_068390409.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5489895	5490848	448	1401	78	WP_068390410.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5490829	5491023	1382	1576	0	WP_068390413.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5491016	5492386	1569	2939	0	WP_068390415.1	beta-glucosidase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+00090	WP_068390409.1	GCF_001548435.1	+	5492383	5492799	2936	3352	41	WP_068390418.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. NIES-3755
+
+00091	WP_069790862.1	GCF_001747005.1	+	20713	22098	-6134	-4749	0	WP_069790866.1	phosphomethylpyrimidine synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	-	17796	20648	-4684	-1832	43	WP_069790865.1	pyruvate phosphate dikinase PEP/pyruvate-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	-	16473	17750	-1786	-509	14	WP_069790864.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	+	15956	16204	-240	8	75	WP_069790863.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	+	15535	15963	1	429	80	WP_069790862.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	+	14881	15114	850	1083	0	WP_069790861.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	-	12667	14592	1372	3297	74	WP_069790860.1	GTP-binding protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	-	9883	12486	3478	6081	0	WP_069790859.1	leucine--tRNA ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+00091	WP_069790862.1	GCF_001747005.1	-	9577	9768	6196	6387	0	WP_069790872.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Cyanobacterium	Cyanobacterium sp. IPPAS B-1200
+
+00092	WP_071591932.1	GCF_000332355.1	+	113495	114001	-2408	-1902	20	WP_026097338.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	+	112844	113329	-1736	-1251	20	WP_017658666.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	-	111995	112825	-1232	-402	0	WP_017658665.1	fumarylacetoacetate hydrolase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	+	111555	111818	-225	38	75	WP_017658664.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	+	111170	111592	1	423	80	WP_071591932.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	+	110103	111068	525	1490	78	WP_017658662.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	+	109013	109810	1783	2580	21	WP_017658661.1	TlyA family RNA methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	-	104312	108706	2887	7281	52	WP_017658660.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+00092	WP_071591932.1	GCF_000332355.1	-	104094	104276	7317	7499	0	WP_144053622.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Oscillatoriales	Geitlerinema	Geitlerinema sp. PCC 7105
+
+00093	WP_071992200.1	GCF_000332095.2	+	1050144	1050464	-2486	-2166	34	WP_008313374.1	2Fe-2S iron-sulfur cluster binding domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	+	1049655	1049843	-1865	-1677	0	WP_008313376.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	+	1048573	1049658	-1680	-595	0	WP_008313378.1	DUF3326 domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	+	1047943	1048200	-222	35	75	WP_008313380.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	+	1047516	1047977	1	462	80	WP_071992200.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	+	1046518	1047501	477	1460	78	WP_008313383.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	-	1045864	1046391	1587	2114	0	WP_027268854.1	cation transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	-	1044210	1045574	2404	3768	0	WP_008313387.1	UDP-N-acetylmuramoyl-tripeptide--D-alanyl-D-alanine ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+00093	WP_071992200.1	GCF_000332095.2	-	1043568	1044005	3973	4410	61	WP_081748143.1	pentapeptide repeat-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. PCC 6406
+
+00094	WP_072620600.1	GCF_001890765.1	-	1950770	1951804	-4407	-3373	61	WP_072620596.1	J domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	-	1951838	1954060	-3339	-1117	0	WP_072620597.1	molecular chaperone DnaK	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	+	1954257	1954592	-920	-585	0	WP_072620598.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	+	1954927	1955178	-250	1	75	WP_072620599.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	+	1955178	1955576	1	399	80	WP_072620600.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	+	1955589	1956539	412	1362	78	WP_072623062.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	-	1956752	1957279	1575	2102	0	WP_072620601.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	-	1957376	1957843	2199	2666	0	WP_072620602.1	type II 3-dehydroquinate dehydratase	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+00094	WP_072620600.1	GCF_001890765.1	-	1958182	1959729	3005	4552	0	WP_072620603.1	gamma-glutamyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Spirulinales	Spirulina	Spirulina major
+
+00095	WP_084782559.1	GCF_001548395.1	+	2747307	2747519	-3804	-3592	0	WP_068510775.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2745925	2747193	-3478	-2210	0	WP_068510774.1	cytosine deaminase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2744092	2745621	-1906	-377	0	WP_068510772.1	SagB/ThcOx family dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2743719	2743970	-255	-4	75	WP_068510770.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2743331	2743714	1	384	80	WP_084782559.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2742204	2743157	558	1511	78	WP_068510768.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	-	2740868	2742160	1555	2847	0	WP_068510767.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2740188	2740496	3219	3527	10	WP_068510765.1	photosystem I reaction center subunit IV	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+00095	WP_084782559.1	GCF_001548395.1	+	2739016	2739864	3851	4699	11	WP_068510763.1	DNA-formamidopyrimidine glycosylase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya sp. O-77
+
+00096	WP_085435726.1	GCF_002110465.1	+	158120	159364	-5436	-4192	6	WP_085435730.1	NAD(P)/FAD-dependent oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	156008	157591	-3663	-2080	2	WP_170922231.1	NAD(P)H-quinone oxidoreductase subunit 4	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	-	154358	155929	-2001	-430	0	WP_085435728.1	B12-binding domain-containing radical SAM protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	153914	154168	-240	14	75	WP_085435727.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	153511	153927	1	417	80	WP_085435726.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	153105	153422	506	823	0	WP_085435718.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	152678	152920	1008	1250	0	WP_085435715.1	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	152331	152684	1244	1597	9	WP_085435713.1	type II toxin-antitoxin system PemK/MazF family toxin	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+00096	WP_085435726.1	GCF_002110465.1	+	150695	152014	1914	3233	0	WP_085435711.1	FAD-binding oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Cyanobacteria_na_na	unicellular	unicellular cyanobacterium SU2
+
+00097	WP_088894709.1	GCF_002215035.1	-	3559311	3560144	-3996	-3163	0	WP_088893920.1	1%2C4-dihydroxy-2-naphthoyl-CoA synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	-	3560201	3561256	-3106	-2051	0	WP_088893921.1	site-specific DNA-methyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3561405	3562706	-1902	-601	0	WP_088894708.1	exonuclease subunit SbcD	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3562889	3563140	-418	-167	75	WP_088893922.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3563308	3563706	1	399	80	WP_088894709.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3563788	3564780	481	1473	78	WP_088893923.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3565263	3567308	1956	4001	0	WP_088894710.1	elongation factor G	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	-	3567518	3567754	4211	4447	0	WP_088893924.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+00097	WP_088894709.1	GCF_002215035.1	+	3568460	3570022	5153	6715	0	WP_088893925.1	anthranilate synthase component I family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Leptolyngbya	Leptolyngbya ohadii
+
+00098	WP_096621581.1	GCF_002368395.1	-	2460107	2461042	-5548	-4613	0	WP_096621587.1	DMT family transporter	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2458602	2459864	-4370	-3108	0	WP_096621585.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2456114	2458024	-2530	-620	0	WP_096621584.1	1-deoxy-D-xylulose-5-phosphate synthase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2455558	2455818	-324	-64	75	WP_096621582.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2455161	2455493	1	333	80	WP_096621581.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	-	2452482	2455100	394	3012	0	WP_096621579.1	ATP-dependent chaperone ClpB	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2451450	2451857	3637	4044	4	WP_096621577.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2450176	2451438	4056	5318	5	WP_096621575.1	glutamate-5-semialdehyde dehydrogenase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+00098	WP_096621581.1	GCF_002368395.1	+	2448816	2449376	6118	6678	58	WP_096626057.1	phycobiliprotein lyase	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Calothrix	Calothrix sp. NIES-3974
+
+00099	WP_106300434.1	GCF_003003845.1	+	23707	24936	-5050	-3821	0	WP_106300426.1	DNA double-strand break repair nuclease NurA	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	-	22055	23551	-3665	-2169	72	WP_106300424.1	serine/threonine protein kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	-	20450	21634	-1748	-564	0	WP_106300422.1	anhydro-N-acetylmuramic acid kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	+	19935	20201	-315	-49	75	WP_106300420.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	+	19454	19885	1	432	80	WP_106300434.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	-	18173	19417	469	1713	5	WP_106300419.1	aldehyde dehydrogenase family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	-	17721	18161	1725	2165	4	WP_106300417.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	+	16078	17253	2633	3808	25	WP_106300415.1	D-alanine--D-alanine ligase	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+00099	WP_106300434.1	GCF_003003845.1	-	15350	16009	3877	4536	0	WP_106300413.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Chamaesiphon	Chamaesiphon polymorphus
+
+00100	WP_124972497.1	GCF_003864315.1	-	18463	18816	-2378	-2025	0	WP_124972504.1	Rieske (2Fe-2S) protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	17469	18371	-1933	-1031	0	WP_124972502.1	LD-carboxypeptidase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	16972	17373	-935	-534	0	WP_124972501.1	IS200/IS605 family transposase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	+	16430	16678	-240	8	75	WP_124972499.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	+	16021	16437	1	417	80	WP_124972497.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	15697	15969	469	741	0	WP_124972495.1	50S ribosomal protein L27	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	15240	15650	788	1198	0	WP_124972493.1	50S ribosomal protein L21	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	13835	14893	1545	2603	0	WP_124972491.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+00100	WP_124972497.1	GCF_003864315.1	-	13023	13661	2777	3415	0	WP_124972489.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Aphanothece	Aphanothece sacrum
+
+00101	WP_144868371.1	GCF_900659865.1	+	6772	8265	-4697	-3204	0	WP_144868404.1	FAD-dependent oxidoreductase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	-	8529	10178	-2940	-1291	2	WP_144868365.1	NADH-quinone oxidoreductase subunit M	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	-	10276	11043	-1193	-426	0	WP_144868367.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	+	11229	11477	-240	8	75	WP_144868368.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	+	11470	11841	1	372	80	WP_144868371.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	+	11895	12392	426	923	0	WP_144868373.1	pantetheine-phosphate adenylyltransferase	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	+	12613	13245	1144	1776	0	WP_144868375.1	ATP synthase F0 subunit B	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	+	13238	13630	1769	2161	0	WP_144868377.1	RidA family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+00101	WP_144868371.1	GCF_900659865.1	-	13730	14947	2261	3478	1	WP_144868379.1	FtsX-like permease family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Pleurocapsales	Hyella	Hyella patelloides
+
+00102	WP_146296165.1	GCF_007904085.1	-	2245640	2247469	-5015	-3186	69	WP_146296157.1	ATP-binding cassette domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2247757	2249679	-2898	-976	72	WP_146296159.1	protein kinase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2249686	2250357	-969	-298	0	WP_146296161.1	ComF family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2250415	2250663	-240	8	75	WP_146296163.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2250656	2251111	1	456	80	WP_146296165.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2251108	2252064	453	1409	78	WP_146296167.1	AAA family ATPase	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	-	2252227	2252712	1572	2057	0	WP_146296169.1	molybdenum cofactor biosynthesis protein MoaE	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	-	2252660	2253799	2005	3144	69	WP_146296171.1	ATP-binding cassette domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+00102	WP_146296165.1	GCF_007904085.1	+	2253982	2254680	3327	4025	60	WP_146296173.1	3-oxoacyl-ACP reductase FabG	Bacteria	Cyanobacteria	Cyanobacteria_na	Chroococcales	Euhalothece	Euhalothece natronophila
+
+00103	WP_162425297.1	GCF_010091945.1	+	1117	1695	-1883	-1305	0	WP_162425293.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	1794	2054	-1206	-946	0	WP_162425294.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	2047	2466	-953	-534	0	WP_162425295.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	2728	2976	-272	-24	75	WP_162425296.1	30S ribosomal protein S16	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	3001	3366	1	366	80	WP_162425297.1	KH domain-containing protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	3532	4485	532	1485	78	WP_162425298.1	PhoH family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	+	4770	5423	1770	2423	3	WP_162425320.1	TMEM165/GDT1 family protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	-	5480	5998	2480	2998	0	WP_162425321.1	cyclic pyranopterin monophosphate synthase MoaC	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis
+00103	WP_162425297.1	GCF_010091945.1	-	6386	7042	3386	4042	0	WP_162425299.1	hypothetical protein	Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Myxacorys	Myxacorys almedinensis

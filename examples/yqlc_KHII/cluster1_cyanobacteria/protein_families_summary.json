@@ -1,0 +1,3293 @@
+{
+    "0": {
+        "name": "Non-conserved",
+        "members": [
+            "WP_067774045.1",
+            "WP_067774042.1",
+            "WP_088243770.1",
+            "WP_088243771.1",
+            "WP_088243778.1",
+            "WP_159460691.1",
+            "BAZ39804.1",
+            "WP_035155738.1",
+            "WP_096694443.1",
+            "WP_041740004.1",
+            "OLP20296.1",
+            "OLP20291.1",
+            "KST67726.1",
+            "KST67831.1",
+            "KST67719.1",
+            "WP_132866705.1",
+            "WP_132866701.1",
+            "WP_039715696.1",
+            "WP_015144819.1",
+            "WP_015144816.1",
+            "WP_015144814.1",
+            "WP_015144812.1",
+            "WP_015144811.1",
+            "WP_015203347.1",
+            "WP_015203353.1",
+            "WP_071102123.1",
+            "WP_071102117.1",
+            "WP_009632339.1",
+            "WP_009632340.1",
+            "WP_096621587.1",
+            "WP_096621585.1",
+            "WP_096621584.1",
+            "WP_096621579.1",
+            "TKZ26916.1",
+            "TKZ26911.1",
+            "TKZ26910.1",
+            "TKZ26909.1",
+            "RMG07953.1",
+            "RMG07954.1",
+            "RMG07964.1",
+            "RMG07958.1",
+            "RMG07959.1",
+            "WP_009555281.1",
+            "WP_009555279.1",
+            "WP_009555275.1",
+            "WP_009555274.1",
+            "WP_068817851.1",
+            "WP_068817850.1",
+            "KOR37594.1",
+            "KOR37599.1",
+            "KOR37600.1",
+            "KOR37601.1",
+            "ACL45121.1",
+            "ACL45120.1",
+            "ACL45119.1",
+            "ACL45113.1",
+            "WP_015192770.1",
+            "WP_015192771.1",
+            "WP_015192778.1",
+            "WP_155968373.1",
+            "WP_017719624.1",
+            "WP_013322194.1",
+            "WP_013322193.1",
+            "WP_013322192.1",
+            "WP_013322189.1",
+            "WP_013322188.1",
+            "RMF21617.1",
+            "RMF21618.1",
+            "WP_158020402.1",
+            "WP_069968027.1",
+            "WP_068390406.1",
+            "WP_068390408.1",
+            "WP_068390413.1",
+            "WP_068390415.1",
+            "WP_106258374.1",
+            "WP_106258362.1",
+            "WP_106258360.1",
+            "WP_162425293.1",
+            "WP_162425294.1",
+            "WP_162425295.1",
+            "WP_162425321.1",
+            "WP_162425299.1",
+            "WP_073607612.1",
+            "WP_085435728.1",
+            "WP_085435718.1",
+            "WP_085435715.1",
+            "WP_085435711.1",
+            "EDX73395.1",
+            "EDX73350.1",
+            "EDX73278.1",
+            "EDX73398.1",
+            "RNJ67067.1",
+            "RNJ67068.1",
+            "RNJ67137.1",
+            "WP_106456651.1",
+            "WP_106456635.1",
+            "WP_106456636.1",
+            "WP_146136507.1",
+            "WP_168571630.1",
+            "WP_168571636.1",
+            "WP_088893920.1",
+            "WP_088893921.1",
+            "WP_088894708.1",
+            "WP_088894710.1",
+            "WP_088893924.1",
+            "WP_088893925.1",
+            "WP_162548636.1",
+            "WP_162548630.1",
+            "AFY81339.1",
+            "AFY81340.1",
+            "AFY81347.1",
+            "WP_144053350.1",
+            "WP_006511799.1",
+            "WP_158500438.1",
+            "WP_006511794.1",
+            "WP_006511793.1",
+            "WP_106287113.1",
+            "WP_106287119.1",
+            "WP_106287120.1",
+            "PZV25624.1",
+            "PZV25619.1",
+            "PZV25617.1",
+            "WP_012954184.1",
+            "WP_012954185.1",
+            "WP_012954190.1",
+            "WP_012954191.1",
+            "WP_012954192.1",
+            "CBN56020.1",
+            "CBN56022.1",
+            "WP_161825906.1",
+            "WP_161825905.1",
+            "WP_161825900.1",
+            "WP_015224610.1",
+            "WP_015224609.1",
+            "WP_015224608.1",
+            "WP_015224602.1",
+            "WP_015224601.1",
+            "WP_073548870.1",
+            "WP_073548871.1",
+            "WP_017304345.1",
+            "WP_017304344.1",
+            "WP_017304343.1",
+            "WP_071525271.1",
+            "WP_017304339.1",
+            "WP_017304338.1",
+            "BAG05579.1",
+            "BAG05584.1",
+            "BAG05585.1",
+            "WP_006528475.1",
+            "WP_006528476.1",
+            "WP_006528480.1",
+            "WP_006528481.1",
+            "WP_104397530.1",
+            "WP_104397535.1",
+            "WP_146296161.1",
+            "WP_146296169.1",
+            "WP_019504518.1",
+            "WP_124972504.1",
+            "WP_124972502.1",
+            "WP_124972501.1",
+            "WP_124972495.1",
+            "WP_124972493.1",
+            "WP_124972491.1",
+            "WP_124972489.1",
+            "WP_026102101.1",
+            "WP_017295264.1",
+            "WP_017295265.1",
+            "WP_017295266.1",
+            "WP_017295267.1",
+            "WP_107671286.1",
+            "WP_107671285.1",
+            "OKH36048.1",
+            "OKH36047.1",
+            "WP_144868404.1",
+            "WP_144868367.1",
+            "WP_144868373.1",
+            "WP_144868375.1",
+            "WP_144868377.1",
+            "ERT09164.1",
+            "ERT09077.1",
+            "WP_015218066.1",
+            "WP_155082901.1",
+            "WP_015218061.1",
+            "WP_015230636.1",
+            "WP_015230635.1",
+            "WP_015230634.1",
+            "WP_156800819.1",
+            "WP_024544476.1",
+            "WP_024544475.1",
+            "WP_036482484.1",
+            "WP_106300426.1",
+            "WP_106300422.1",
+            "WP_106300413.1",
+            "AFY67789.1",
+            "AFY67795.1",
+            "AFY67796.1",
+            "WP_069790866.1",
+            "WP_069790861.1",
+            "WP_069790859.1",
+            "WP_069790872.1",
+            "PSP15038.1",
+            "PSP15034.1",
+            "PSP15031.1",
+            "WP_015166532.1",
+            "WP_015166538.1",
+            "WP_015166539.1",
+            "WP_015166540.1",
+            "WP_065710102.1",
+            "WP_072620597.1",
+            "WP_072620598.1",
+            "WP_072620601.1",
+            "WP_072620602.1",
+            "WP_072620603.1",
+            "PZD71855.1",
+            "PZD71827.1",
+            "PZD71841.1",
+            "WP_075889498.1",
+            "WP_075889511.1",
+            "WP_015126241.1",
+            "WP_022606383.1",
+            "WP_022606385.1",
+            "WP_040655546.1",
+            "WP_022606396.1",
+            "WP_040655547.1",
+            "TVQ19927.1",
+            "TVQ19915.1",
+            "TVQ19910.1",
+            "TVQ19909.1",
+            "TVQ19926.1",
+            "WP_169613991.1",
+            "WP_169614003.1",
+            "WP_169613990.1",
+            "WP_169613984.1",
+            "WP_008313376.1",
+            "WP_008313378.1",
+            "WP_027268854.1",
+            "WP_008313387.1",
+            "WP_019500115.1",
+            "WP_019500114.1",
+            "WP_144080462.1",
+            "WP_023172069.1",
+            "WP_023172073.1",
+            "WP_051382648.1",
+            "WP_041243702.1",
+            "PZV10932.1",
+            "PZV10931.1",
+            "PZV10930.1",
+            "PZV10926.1",
+            "PZV10925.1",
+            "PZV10924.1",
+            "WP_068510775.1",
+            "WP_068510774.1",
+            "WP_068510772.1",
+            "WP_068510767.1",
+            "WP_018400179.1",
+            "WP_018400178.1",
+            "WP_018400177.1",
+            "WP_018400172.1",
+            "AIE75566.1",
+            "AIE75571.1",
+            "AIE75572.1",
+            "AIE75573.1",
+            "AIE75574.1",
+            "WP_016923988.1",
+            "WP_017711238.1",
+            "WP_017711240.1",
+            "WP_017711245.1",
+            "WP_017711247.1",
+            "WP_017711248.1",
+            "OUC15095.1",
+            "OUC15089.1",
+            "WP_166274708.1",
+            "WP_166274718.1",
+            "WP_080808159.1",
+            "WP_088429433.1",
+            "WP_088429431.1",
+            "WP_017658665.1",
+            "WP_144053622.1",
+            "WP_051039914.1",
+            "WP_017326400.1",
+            "WP_017326399.1",
+            "WP_017326396.1",
+            "WP_038025953.1",
+            "WP_017326392.1",
+            "WP_121967811.1",
+            "TVQ43650.1",
+            "TVQ43654.1",
+            "TVQ43656.1",
+            "CDM93744.1",
+            "CDM93745.1",
+            "CDM93752.1",
+            "WP_006453858.1",
+            "WP_006454793.1",
+            "WP_071455493.1",
+            "WP_099092507.1",
+            "WP_071455488.1",
+            "WP_011431085.1",
+            "WP_041439172.1",
+            "WP_011431087.1",
+            "WP_011431090.1",
+            "WP_011431092.1",
+            "PLS68316.1",
+            "PSP17131.1",
+            "PSP17123.1"
+        ],
+        "all_names": [
+            "Non-conserved"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "71": {
+        "name": "signal recognition particle protein",
+        "members": [
+            "WP_067774039.1",
+            "WP_088243772.1",
+            "BAZ39798.1",
+            "WP_035155739.1",
+            "WP_096691556.1",
+            "WP_015200938.1",
+            "WP_015116531.1",
+            "OLP20295.1",
+            "KST67724.1",
+            "WP_039715700.1",
+            "WP_015203350.1",
+            "WP_071102124.1",
+            "TKZ26915.1",
+            "WP_068817855.1",
+            "KOR37596.1",
+            "WP_015192772.1",
+            "WP_017719621.1",
+            "RMF21619.1",
+            "WP_069967888.1",
+            "EDX73345.1",
+            "WP_168571631.1",
+            "AFY81341.1",
+            "WP_106287115.1",
+            "WP_006528477.1",
+            "WP_019504523.1",
+            "WP_071516057.1",
+            "OKH36046.1",
+            "ERT09107.1",
+            "WP_036482466.1",
+            "PSP15037.1",
+            "WP_015166534.1",
+            "PZD71742.1",
+            "TVQ19914.1",
+            "WP_019500119.1",
+            "WP_023172070.1",
+            "OUC15094.1",
+            "WP_166274710.1",
+            "CDM93746.1",
+            "PLS68319.1",
+            "PSP17129.1"
+        ],
+        "all_names": [
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle subunit FFH/SRP54 (srp54)",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "Signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "Signal Recognition Particle (SRP) component with 4.5S RNA (ffs)",
+            "signal recognition particle protein",
+            "signal recognition particle protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:signal recognition particle",
+                "F:7S RNA binding",
+                "F:GTP binding",
+                "F:GTPase activity",
+                "P:SRP-dependent cotranslational protein targeting to membrane"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Cytoplasm",
+                "GTP-binding",
+                "Nucleotide-binding",
+                "Ribonucleoprotein",
+                "RNA-binding",
+                "Signal recognition particle"
+            ],
+            "Function_description": "Involved in targeting and insertion of nascent membrane proteins into the cytoplasmic membrane. Binds to the hydrophobic signal sequence of the ribosome-nascent chain (RNC) as it emerges from the ribosomes. The SRP-RNC complex is then targeted to the cytoplasmic membrane where it interacts with the SRP receptor FtsY"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1C8Y2_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "75": {
+        "name": "30S ribosomal protein S16",
+        "members": [
+            "WP_067774036.1",
+            "WP_088243774.1",
+            "BAZ39799.1",
+            "WP_035155740.1",
+            "WP_096691557.1",
+            "WP_015200939.1",
+            "OLP20294.1",
+            "KST67723.1",
+            "WP_015153916.1",
+            "WP_015144818.1",
+            "WP_015203351.1",
+            "WP_071102122.1",
+            "WP_009632335.1",
+            "WP_096621582.1",
+            "WP_046281312.1",
+            "TKZ26914.1",
+            "RMG07955.1",
+            "WP_009555278.1",
+            "WP_068817854.1",
+            "WP_008055729.1",
+            "KOR37597.1",
+            "ACL45118.1",
+            "WP_015192773.1",
+            "WP_017719623.1",
+            "WP_013322191.1",
+            "RMF21620.1",
+            "WP_069967887.1",
+            "WP_068393680.1",
+            "WP_106258368.1",
+            "WP_162425296.1",
+            "WP_073607617.1",
+            "WP_085435727.1",
+            "EDX73299.1",
+            "RNJ67069.1",
+            "WP_106456637.1",
+            "WP_168571632.1",
+            "WP_088893922.1",
+            "WP_162548635.1",
+            "AFY81342.1",
+            "WP_006511797.1",
+            "WP_106287116.1",
+            "PZV25622.1",
+            "WP_012954187.1",
+            "CBN56018.1",
+            "WP_161825903.1",
+            "WP_015224606.1",
+            "WP_015188235.1",
+            "WP_017304342.1",
+            "BAG48297.1",
+            "WP_006528478.1",
+            "WP_002780060.1",
+            "WP_146296163.1",
+            "WP_019504522.1",
+            "WP_071516058.1",
+            "WP_124972499.1",
+            "WP_017295262.1",
+            "WP_107671289.1",
+            "OKH36045.1",
+            "WP_144868368.1",
+            "ERT09076.1",
+            "WP_015218063.1",
+            "WP_015230633.1",
+            "WP_024544480.1",
+            "WP_036482469.1",
+            "WP_106300420.1",
+            "AFY67792.1",
+            "WP_069790863.1",
+            "PSP15036.1",
+            "WP_015166535.1",
+            "WP_007309195.1",
+            "WP_030007128.1",
+            "WP_072620599.1",
+            "PZD71844.1",
+            "WP_023071405.1",
+            "WP_075889503.1",
+            "WP_015126243.1",
+            "WP_022606387.1",
+            "TVQ19913.1",
+            "WP_169613989.1",
+            "WP_008313380.1",
+            "WP_019500118.1",
+            "WP_041243701.1",
+            "PZV10929.1",
+            "WP_068510770.1",
+            "WP_018400176.1",
+            "AIE75567.1",
+            "AIE75569.1",
+            "WP_017711241.1",
+            "OUC15093.1",
+            "WP_166274712.1",
+            "WP_088429435.1",
+            "WP_017658664.1",
+            "WP_106882382.1",
+            "WP_017326398.1",
+            "WP_121967815.1",
+            "PZO49555.1",
+            "TVQ43652.1",
+            "CDM93747.1",
+            "PZO08614.1",
+            "WP_006454975.1",
+            "WP_071455490.1",
+            "WP_011431088.1",
+            "PLS68318.1",
+            "PSP17128.1"
+        ],
+        "all_names": [
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "SSU ribosomal protein S16P",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "SSU ribosomal protein S16P",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "Prophage Lp2 protein 6",
+            "SSU ribosomal protein S16p",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal subunit protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "30S ribosomal protein S16"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation"
+            ],
+            "Keywords": [
+                "Ribonucleoprotein",
+                "Ribosomal protein"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RS16_CYAP4",
+        "uniprot_code": "RS16_CYAP4",
+        "model_state": "Model exists"
+    },
+    "80": {
+        "name": "KH domain-containing protein",
+        "members": [
+            "WP_067774034.1",
+            "WP_088243775.1",
+            "BAZ39800.1",
+            "WP_144416121.1",
+            "WP_096691558.1",
+            "WP_015200940.1",
+            "WP_015116529.1",
+            "OLP20417.1",
+            "KST67722.1",
+            "WP_132866703.1",
+            "WP_015144817.1",
+            "WP_015203352.1",
+            "WP_071102121.1",
+            "WP_028954273.1",
+            "WP_096621581.1",
+            "WP_046281311.1",
+            "TKZ26913.1",
+            "RMG07956.1",
+            "WP_009555277.1",
+            "WP_068817853.1",
+            "WP_052584896.1",
+            "KOR37720.1",
+            "ACL45117.1",
+            "WP_015192774.1",
+            "WP_082218351.1",
+            "WP_013322190.1",
+            "RMF21621.1",
+            "WP_069967886.1",
+            "WP_068390409.1",
+            "WP_106258366.1",
+            "WP_162425297.1",
+            "WP_073607616.1",
+            "WP_085435726.1",
+            "EDX73328.1",
+            "RNJ67070.1",
+            "WP_106456638.1",
+            "WP_168571633.1",
+            "WP_088894709.1",
+            "WP_162548634.1",
+            "AFY81343.1",
+            "WP_006511796.1",
+            "WP_106287117.1",
+            "PZV25621.1",
+            "WP_012954188.1",
+            "CBN56019.1",
+            "WP_161825902.1",
+            "WP_015224605.1",
+            "WP_073548873.1",
+            "WP_017304341.1",
+            "BAG05582.1",
+            "WP_006528479.1",
+            "WP_104397532.1",
+            "WP_146296165.1",
+            "WP_019504521.1",
+            "WP_084639422.1",
+            "WP_124972497.1",
+            "WP_017295263.1",
+            "WP_107671288.1",
+            "OKH36044.1",
+            "WP_144868371.1",
+            "ERT09159.1",
+            "WP_015218062.1",
+            "WP_015230632.1",
+            "WP_024544479.1",
+            "WP_036482472.1",
+            "WP_106300434.1",
+            "AFY67793.1",
+            "WP_069790862.1",
+            "PSP15035.1",
+            "WP_015166536.1",
+            "WP_048321220.1",
+            "WP_030007129.1",
+            "WP_072620600.1",
+            "PZD71832.1",
+            "WP_023071406.1",
+            "WP_075889505.1",
+            "WP_015126244.1",
+            "WP_022606389.1",
+            "TVQ19912.1",
+            "WP_169613988.1",
+            "WP_071992200.1",
+            "WP_019500117.1",
+            "WP_023172072.1",
+            "PZV10928.1",
+            "WP_084782559.1",
+            "WP_018400175.1",
+            "AIE75570.1",
+            "WP_017711242.1",
+            "OUC15092.1",
+            "WP_166274714.1",
+            "WP_080808153.1",
+            "WP_071591932.1",
+            "WP_106882388.1",
+            "WP_026100966.1",
+            "WP_121967814.1",
+            "PZO49560.1",
+            "TVQ43653.1",
+            "CDM93748.1",
+            "PZO08615.1",
+            "WP_006455717.1",
+            "WP_071455489.1",
+            "WP_011431089.1",
+            "PLS68317.1",
+            "PSP17127.1"
+        ],
+        "all_names": [
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "RNA-binding protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "conserved hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "putative RNA-binding protein (contains KH domain)",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "RNA-binding protein",
+            "KH domain-containing protein",
+            "conserved hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "RNA-binding protein like",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "RNA-binding protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain RNA binding protein YlqC",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "hypothetical protein",
+            "KH domain-containing protein",
+            "conserved protein of unknown function",
+            "RNA-binding protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "KH domain-containing protein",
+            "RNA-binding protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:RNA binding"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A3M2GLZ9_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "77": {
+        "name": "30S ribosomal protein S21",
+        "members": [
+            "WP_010996119.1",
+            "BAZ39801.1",
+            "WP_035155745.1",
+            "WP_096691559.1",
+            "OLP20416.1",
+            "ACL45116.1",
+            "WP_161825943.1",
+            "OKH36043.1",
+            "AFY67791.1",
+            "WP_015126245.1",
+            "WP_071592280.1",
+            "WP_011142630.1",
+            "OUC15091.1"
+        ],
+        "all_names": [
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "SSU ribosomal protein S21P",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation"
+            ],
+            "Keywords": [
+                "Ribonucleoprotein",
+                "Ribosomal protein"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RS21C_NOSS1",
+        "uniprot_code": "RS21C_NOSS1",
+        "model_state": "Model exists"
+    },
+    "78": {
+        "name": "PhoH family protein",
+        "members": [
+            "WP_067774031.1",
+            "BAZ39802.1",
+            "WP_035155747.1",
+            "WP_096691560.1",
+            "WP_015200941.1",
+            "OLP20293.1",
+            "KST67721.1",
+            "WP_039715698.1",
+            "WP_015203354.1",
+            "WP_071102120.1",
+            "WP_009632337.1",
+            "WP_046281310.1",
+            "TKZ26912.1",
+            "RMG07957.1",
+            "WP_009555276.1",
+            "WP_068817852.1",
+            "KOR37598.1",
+            "ACL45115.1",
+            "WP_017719625.1",
+            "WP_069967885.1",
+            "WP_068390410.1",
+            "WP_106258365.1",
+            "WP_162425298.1",
+            "WP_073607615.1",
+            "EDX73303.1",
+            "RNJ67071.1",
+            "WP_168571634.1",
+            "WP_088893923.1",
+            "WP_162548633.1",
+            "AFY81344.1",
+            "WP_106287138.1",
+            "CBN56021.1",
+            "WP_161825901.1",
+            "WP_015224604.1",
+            "WP_073548874.1",
+            "WP_083883597.1",
+            "WP_146296167.1",
+            "WP_071516060.1",
+            "OKH36042.1",
+            "ERT09138.1",
+            "WP_015230631.1",
+            "WP_072623062.1",
+            "PZD71777.1",
+            "WP_031291898.1",
+            "WP_015126246.1",
+            "WP_022606391.1",
+            "TVQ19911.1",
+            "WP_169613987.1",
+            "WP_008313383.1",
+            "WP_068510768.1",
+            "WP_018400174.1",
+            "WP_017711244.1",
+            "OUC15090.1",
+            "WP_166274716.1",
+            "WP_080808156.1",
+            "WP_017658662.1",
+            "WP_106882381.1",
+            "WP_121967813.1",
+            "PZO49556.1",
+            "CDM93750.1",
+            "PZO08616.1",
+            "WP_038016558.1",
+            "WP_071455907.1"
+        ],
+        "all_names": [
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH%2C predicted ATPase",
+            "PhoH family protein",
+            "PhoH-like protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "AAA family ATPase",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "DEAD/DEAH box helicase family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH-like protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH-like protein",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein",
+            "PhoH family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding",
+                "F:helicase activity",
+                "F:RNA binding"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Helicase",
+                "Hydrolase",
+                "Nucleotide-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A3M2GV55_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "79": {
+        "name": "heme utilization protein HuvX",
+        "members": [
+            "WP_067774029.1",
+            "KST67720.1",
+            "WP_152964801.1",
+            "ACL45114.1",
+            "WP_017719626.1",
+            "WP_069967884.1",
+            "WP_168571635.1",
+            "WP_162548632.1",
+            "CBN56023.1",
+            "WP_073548875.1",
+            "OKH36041.1",
+            "ERT09204.1",
+            "CDM93751.1"
+        ],
+        "all_names": [
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "conserved hypothetical protein",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "hypothetical protein",
+            "conserved protein of unknown function"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A3M2GQV3_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "70": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_067774026.1",
+            "WP_015200943.1",
+            "WP_083374047.1",
+            "WP_046281308.1",
+            "WP_017719627.1",
+            "WP_141724406.1",
+            "WP_168572077.1",
+            "WP_162548631.1",
+            "AFY81345.1",
+            "WP_073548876.1",
+            "OKH36040.1",
+            "ERT09093.1",
+            "WP_171971701.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Signal"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1U7HW24_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "59": {
+        "name": "tetratricopeptide repeat protein",
+        "members": [
+            "WP_088243776.1",
+            "WP_071102119.1",
+            "WP_009632338.1",
+            "KOR37595.1",
+            "WP_069967882.1",
+            "WP_106258370.1",
+            "WP_106258363.1",
+            "EDX73313.1",
+            "PZV25620.1",
+            "WP_015126240.1",
+            "WP_019500121.1",
+            "WP_019500120.1",
+            "WP_155973184.1",
+            "WP_166274720.1"
+        ],
+        "all_names": [
+            "CHAT domain-containing protein",
+            "CHAT domain-containing protein",
+            "tetratricopeptide repeat protein",
+            "hypothetical protein",
+            "AAA family ATPase",
+            "tetratricopeptide repeat protein",
+            "MSMEG_0565 family glycosyltransferase",
+            "haemagglutination activity domain protein",
+            "TIGR03032 family protein",
+            "tetratricopeptide repeat protein",
+            "tetratricopeptide repeat protein",
+            "tetratricopeptide repeat protein",
+            "tetratricopeptide repeat protein",
+            "tetratricopeptide repeat protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "F:N-acetyltransferase activity",
+                "F:transferase activity, transferring glycosyl groups",
+                "P:protein O-linked glycosylation",
+                "F:ADP binding",
+                "F:transferase activity",
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Signal",
+                "Coiled coil",
+                "TPR repeat",
+                "Transferase",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1DZU7_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "68": {
+        "name": "HlyC/CorC family transporter",
+        "members": [
+            "WP_088243777.1",
+            "PZV25623.1",
+            "AIE75568.1"
+        ],
+        "all_names": [
+            "HlyC/CorC family transporter",
+            "hypothetical protein",
+            "Hemolysins-related protein containing CBS domains"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:flavin adenine dinucleotide binding"
+            ],
+            "Keywords": [
+                "CBS domain",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2W7BLY2_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "62": {
+        "name": "GAF domain-containing protein",
+        "members": [
+            "BAZ39796.1",
+            "WP_096691561.1",
+            "WP_015203355.1",
+            "WP_009632332.1",
+            "WP_107671284.1",
+            "WP_166274884.1"
+        ],
+        "all_names": [
+            "two-component sensor histidine kinase",
+            "GAF domain-containing protein",
+            "GAF domain-containing protein",
+            "HAMP domain-containing histidine kinase",
+            "GAF domain-containing protein",
+            "HAMP domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:phosphorelay sensor kinase activity",
+                "F:adenylate cyclase activity",
+                "P:cyclic nucleotide biosynthetic process",
+                "P:intracellular signal transduction",
+                "F:ATP binding",
+                "P:protein-chromophore linkage"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Kinase",
+                "Membrane",
+                "Transferase",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Lyase",
+                "ATP-binding",
+                "Nucleotide-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2H2YFC9_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "61": {
+        "name": "pentapeptide repeat-containing protein",
+        "members": [
+            "BAZ39797.1",
+            "WP_052754497.1",
+            "WP_015200937.1",
+            "KST67725.1",
+            "WP_106287114.1",
+            "WP_072620596.1",
+            "WP_081748143.1",
+            "TVQ43657.1",
+            "WP_011431093.1"
+        ],
+        "all_names": [
+            "pentapeptide repeat family protein",
+            "pentapeptide repeat-containing protein",
+            "pentapeptide repeat-containing protein",
+            "hypothetical protein",
+            "DnaJ domain-containing protein",
+            "J domain-containing protein",
+            "pentapeptide repeat-containing protein",
+            "pentapeptide repeat-containing protein",
+            "pentapeptide repeat-containing protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1C919_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "60": {
+        "name": "SDR family oxidoreductase",
+        "members": [
+            "BAZ39803.1",
+            "WP_006511792.1",
+            "WP_146296173.1",
+            "WP_071455492.1"
+        ],
+        "all_names": [
+            "short-chain dehydrogenase/reductase SDR",
+            "SDR family oxidoreductase",
+            "3-oxoacyl-ACP reductase FabG",
+            "SDR family oxidoreductase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:oxidoreductase activity",
+                "F:3-oxo-glutaryl-[acp] methyl ester reductase activity",
+                "F:3-oxo-pimeloyl-[acp] methyl ester reductase activity",
+                "F:3-oxoacyl-[acyl-carrier-protein] reductase (NADPH) activity"
+            ],
+            "Keywords": [
+                "Oxidoreductase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A5B8NPG4_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "11": {
+        "name": "DNA-formamidopyrimidine glycosylase",
+        "members": [
+            "WP_035155749.1",
+            "WP_068510763.1"
+        ],
+        "all_names": [
+            "DNA-formamidopyrimidine glycosylase",
+            "DNA-formamidopyrimidine glycosylase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:class I DNA-(apurinic or apyrimidinic site) endonuclease activity",
+                "F:damaged DNA binding",
+                "F:oxidized purine nucleobase lesion DNA N-glycosylase activity",
+                "F:zinc ion binding",
+                "P:base-excision repair",
+                "P:nucleotide-excision repair"
+            ],
+            "Keywords": [
+                "DNA damage",
+                "DNA repair",
+                "DNA-binding",
+                "Glycosidase",
+                "Hydrolase",
+                "Lyase",
+                "Metal-binding",
+                "Multifunctional enzyme",
+                "Zinc",
+                "Zinc-finger"
+            ],
+            "Function_description": "Involved in base excision repair of DNA damaged by oxidation or by mutagenic agents. Acts as DNA glycosylase that recognizes and removes damaged bases. Has a preference for oxidized purines, such as 7,8-dihydro-8-oxoguanine (8-oxoG). Has AP (apurinic/apyrimidinic) lyase activity and introduces nicks in the DNA strand. Cleaves the DNA backbone by beta-delta elimination to generate a single-strand break at the site of the removed base with both 3'- and 5'-phosphates"
+        },
+        "structure": "",
+        "uniprot_code": "A0A110AW62_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "10": {
+        "name": "photosystem I reaction center subunit IV",
+        "members": [
+            "WP_035155751.1",
+            "WP_068510765.1"
+        ],
+        "all_names": [
+            "photosystem I reaction center subunit IV",
+            "photosystem I reaction center subunit IV"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:photosystem I reaction center",
+                "C:thylakoid membrane",
+                "P:photosynthesis"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Photosynthesis",
+                "Photosystem I",
+                "Thylakoid"
+            ],
+            "Function_description": "Stabilizes the interaction between PsaC and the PSI core, assists the docking of the ferredoxin to PSI and interacts with ferredoxin-NADP oxidoreductase"
+        },
+        "structure": "",
+        "uniprot_code": "A0A120MVN5_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "23": {
+        "name": "DUF4351 domain-containing protein",
+        "members": [
+            "WP_096691554.1",
+            "WP_096691555.1",
+            "WP_015230628.1"
+        ],
+        "all_names": [
+            "DUF4351 domain-containing protein",
+            "DUF4351 domain-containing protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2H2YCW5_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "72": {
+        "name": "serine/threonine protein kinase",
+        "members": [
+            "WP_015200936.1",
+            "WP_146296159.1",
+            "ERT09070.1",
+            "WP_106300424.1",
+            "AFY67797.1",
+            "WP_015126247.1"
+        ],
+        "all_names": [
+            "serine/threonine protein kinase",
+            "protein kinase",
+            "serine/threonine-protein kinase D",
+            "serine/threonine protein kinase",
+            "serine/threonine protein kinase",
+            "serine/threonine protein kinase"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "F:ATP binding",
+                "F:protein serine/threonine kinase activity",
+                "F:protein tyrosine kinase activity",
+                "C:integral component of membrane",
+                "F:protein kinase activity"
+            ],
+            "Keywords": [
+                "Kinase",
+                "Serine/threonine-protein kinase",
+                "Transferase",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix",
+                "WD repeat"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A5B8NMX6_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "27": {
+        "name": "hemolysin-type calcium-binding protein",
+        "members": [
+            "WP_015200942.1",
+            "WP_015230629.1",
+            "WP_023071410.1"
+        ],
+        "all_names": [
+            "hemolysin-type calcium-binding protein",
+            "hypothetical protein",
+            "DUF4114 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:calcium ion binding",
+                "C:integral component of membrane",
+                "P:cell communication",
+                "P:integrin-mediated signaling pathway"
+            ],
+            "Keywords": [
+                "Integrin"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "U9WCH2_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "67": {
+        "name": "aminopeptidase P family protein",
+        "members": [
+            "WP_015116534.1",
+            "WP_015116532.1",
+            "WP_015116530.1",
+            "WP_015116528.1",
+            "WP_015116527.1",
+            "WP_044291396.1",
+            "WP_015116525.1"
+        ],
+        "all_names": [
+            "aminopeptidase P family protein",
+            "pentapeptide repeat-containing protein",
+            "30S ribosomal protein S16",
+            "PhoH family protein",
+            "WD40 repeat domain-containing protein",
+            "bifunctional 4-hydroxy-2-oxoglutarate aldolase/2-dehydro-3-deoxy-phosphogluconate aldolase",
+            "L%2CD-transpeptidase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:transferase activity",
+                "F:ATP binding",
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation",
+                "F:aminopeptidase activity",
+                "F:manganese ion binding"
+            ],
+            "Keywords": [
+                "WD repeat",
+                "Ribonucleoprotein",
+                "Ribosomal protein",
+                "Aminopeptidase",
+                "Hydrolase",
+                "Metal-binding",
+                "Protease"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9R680_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "57": {
+        "name": "asparaginase",
+        "members": [
+            "OLP20297.1",
+            "WP_015126248.1"
+        ],
+        "all_names": [
+            "asparaginase",
+            "asparaginase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:asparaginase activity"
+            ],
+            "Keywords": [
+                "Hydrolase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9RYW2_SYNP3",
+        "model_state": "Model does not exist"
+    },
+    "58": {
+        "name": "phycobiliprotein lyase",
+        "members": [
+            "OLP20292.1",
+            "WP_096626057.1"
+        ],
+        "all_names": [
+            "phycobiliprotein lyase",
+            "phycobiliprotein lyase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:lyase activity",
+                "P:protein-phycocyanobilin linkage"
+            ],
+            "Keywords": [
+                "Lyase"
+            ],
+            "Function_description": "Covalently attaches a chromophore to Cys residue(s) of phycobiliproteins"
+        },
+        "structure": "",
+        "uniprot_code": "A0A1Q8ZIY7_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "50": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_015153918.1",
+            "PSP17130.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9TXT3_CHRTP",
+        "model_state": "Model does not exist"
+    },
+    "69": {
+        "name": "sugar ABC transporter ATP-binding protein",
+        "members": [
+            "WP_052290059.1",
+            "AFY81346.1",
+            "WP_106287118.1",
+            "WP_073548877.1",
+            "WP_146296157.1",
+            "WP_146296171.1",
+            "WP_015126242.1"
+        ],
+        "all_names": [
+            "sugar ABC transporter ATP-binding protein",
+            "ABC-type multidrug transport system%2C ATPase and permease component",
+            "ABC transporter ATP-binding protein",
+            "ABC transporter ATP-binding protein",
+            "ATP-binding cassette domain-containing protein",
+            "ATP-binding cassette domain-containing protein",
+            "AAA-associated domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:ATP binding",
+                "F:ATPase activity",
+                "F:ATPase-coupled transmembrane transporter activity",
+                "C:ATP-binding cassette (ABC) transporter complex",
+                "F:transmembrane transporter activity"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Membrane",
+                "Nucleotide-binding",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Coiled coil",
+                "Transport"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A5B8NQF0_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "36": {
+        "name": "alpha/beta hydrolase",
+        "members": [
+            "WP_015144821.1",
+            "WP_006511798.1"
+        ],
+        "all_names": [
+            "alpha/beta hydrolase",
+            "alpha/beta hydrolase"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:1-alkyl-2-acetylglycerophosphocholine esterase activity",
+                "P:lipid catabolic process"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Hydrolase",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9T6K8_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "65": {
+        "name": "dTDP-glucose 4%2C6-dehydratase",
+        "members": [
+            "WP_041393425.1",
+            "BAG05581.1",
+            "WP_104397572.1"
+        ],
+        "all_names": [
+            "NAD-dependent epimerase/dehydratase family protein",
+            "dTDP-glucose 4%2C6-dehydratase",
+            "dTDP-glucose 4%2C6-dehydratase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:dTDP-glucose 4,6-dehydratase activity",
+                "P:nucleotide-sugar metabolic process"
+            ],
+            "Keywords": [
+                "Lyase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "B0JI19_MICAN",
+        "model_state": "Model does not exist"
+    },
+    "26": {
+        "name": "histidine kinase",
+        "members": [
+            "WP_015203348.1",
+            "WP_068817857.1",
+            "WP_168572076.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "histidine kinase",
+            "histidine kinase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:kinase activity"
+            ],
+            "Keywords": [
+                "Kinase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A3M2GPU5_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "25": {
+        "name": "D-alanine--D-alanine ligase",
+        "members": [
+            "WP_015203356.1",
+            "WP_106300415.1"
+        ],
+        "all_names": [
+            "D-alanine--D-alanine ligase",
+            "D-alanine--D-alanine ligase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding",
+                "F:D-alanine-D-alanine ligase activity",
+                "F:metal ion binding",
+                "C:cytoplasm",
+                "P:cell wall organization",
+                "P:peptidoglycan biosynthetic process",
+                "P:regulation of cell shape"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Ligase",
+                "Nucleotide-binding",
+                "Cell shape",
+                "Cell wall biogenesis/degradation",
+                "Cytoplasm",
+                "Magnesium",
+                "Manganese",
+                "Metal-binding",
+                "Peptidoglycan synthesis"
+            ],
+            "Function_description": "Cell wall formation"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1GLI7_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "10000": {
+        "name": "pseudogene",
+        "members": [
+            "BJP36_RS00355",
+            "SYN7509_RS29205",
+            "WN50_RS13410",
+            "EBE85_11075",
+            "D6728_15585",
+            "OSCCYDRAFT_RS26555",
+            "ARTHRO_RS22125",
+            "OSC10802_RS41775",
+            "CYAN7822_RS37620",
+            "CYAN7822_RS37615",
+            "GS597_RS13035",
+            "GLO73106_RS21660",
+            "myaer87_RS17080",
+            "SYN6308_RS22630",
+            "NIES208_RS02805",
+            "GlitD10_RS15575",
+            "CV045_08565",
+            "CV045_08535"
+        ],
+        "all_names": [
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene",
+            "pseudogene"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "32": {
+        "name": "response regulator transcription factor",
+        "members": [
+            "WP_009632333.1",
+            "WP_068390407.1",
+            "WP_015224603.1"
+        ],
+        "all_names": [
+            "response regulator transcription factor",
+            "response regulator transcription factor",
+            "diguanylate cyclase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "P:phosphorelay signal transduction system",
+                "F:DNA binding",
+                "P:regulation of transcription, DNA-templated"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Phosphoprotein",
+                "DNA-binding",
+                "Transcription",
+                "Transcription regulation"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A0S3UBV3_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "4": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_096621577.1",
+            "WP_106300417.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1GLI8_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "5": {
+        "name": "glutamate-5-semialdehyde dehydrogenase",
+        "members": [
+            "WP_096621575.1",
+            "WP_106300419.1"
+        ],
+        "all_names": [
+            "glutamate-5-semialdehyde dehydrogenase",
+            "aldehyde dehydrogenase family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:glutamate-5-semialdehyde dehydrogenase activity",
+                "F:NADP binding",
+                "P:L-proline biosynthetic process"
+            ],
+            "Keywords": [
+                "Amino-acid biosynthesis",
+                "Cytoplasm",
+                "NADP",
+                "Oxidoreductase",
+                "Proline biosynthesis"
+            ],
+            "Function_description": "Catalyzes the NADPH-dependent reduction of L-glutamate 5-phosphate into L-glutamate 5-semialdehyde and phosphate. The product spontaneously undergoes cyclization to form 1-pyrroline-5-carboxylate"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1GLP6_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "33": {
+        "name": "mechanosensitive ion channel family protein",
+        "members": [
+            "WP_009555280.1",
+            "WP_155973181.1"
+        ],
+        "all_names": [
+            "mechanosensitive ion channel family protein",
+            "mechanosensitive ion channel"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "P:transmembrane transport"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K8GTE4_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "56": {
+        "name": "DUF2252 domain-containing protein",
+        "members": [
+            "WP_068817856.1",
+            "OUC15101.1",
+            "PLS68324.1"
+        ],
+        "all_names": [
+            "DUF2252 domain-containing protein",
+            "hypothetical protein",
+            "DUF2252 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2N5JP62_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "9": {
+        "name": "endoribonuclease MazF",
+        "members": [
+            "WP_068817849.1",
+            "WP_085435713.1"
+        ],
+        "all_names": [
+            "endoribonuclease MazF",
+            "type II toxin-antitoxin system PemK/MazF family toxin"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "29": {
+        "name": "4-hydroxythreonine-4-phosphate dehydrogenase PdxA",
+        "members": [
+            "WP_015192775.1",
+            "WP_019504520.1",
+            "WP_036482475.1"
+        ],
+        "all_names": [
+            "4-hydroxythreonine-4-phosphate dehydrogenase PdxA",
+            "4-hydroxythreonine-4-phosphate dehydrogenase PdxA",
+            "4-hydroxythreonine-4-phosphate dehydrogenase PdxA"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:4-hydroxythreonine-4-phosphate dehydrogenase activity",
+                "F:metal ion binding",
+                "F:NAD binding",
+                "P:pyridoxal phosphate biosynthetic process",
+                "P:pyridoxine biosynthetic process"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Metal-binding",
+                "NAD",
+                "NADP",
+                "Oxidoreductase",
+                "Pyridoxine biosynthesis"
+            ],
+            "Function_description": "Catalyzes the NAD(P)-dependent oxidation of 4-(phosphooxy)-L-threonine (HTP) into 2-amino-3-oxo-4-(phosphooxy)butyric acid which spontaneously decarboxylates to form 3-amino-2-oxopropyl phosphate (AHAP)"
+        },
+        "structure": "",
+        "uniprot_code": "K9XSR0_STAC7",
+        "model_state": "Model does not exist"
+    },
+    "28": {
+        "name": "cytochrome b6",
+        "members": [
+            "WP_015192776.1",
+            "WP_019504519.1",
+            "WP_036482478.1"
+        ],
+        "all_names": [
+            "cytochrome b6-f complex subunit 7",
+            "cytochrome b6",
+            "cytochrome b6"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:cytochrome b6f complex",
+                "C:integral component of membrane",
+                "C:thylakoid membrane",
+                "F:electron transfer activity",
+                "P:photosynthesis"
+            ],
+            "Keywords": [
+                "Electron transport",
+                "Membrane",
+                "Photosynthesis",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Transport"
+            ],
+            "Function_description": "Component of the cytochrome b6-f complex, which mediates electron transfer between photosystem II (PSII) and photosystem I (PSI), cyclic electron flow around PSI, and state transitions"
+        },
+        "structure": "",
+        "uniprot_code": "K9XR72_STAC7",
+        "model_state": "Model does not exist"
+    },
+    "49": {
+        "name": "alpha/beta hydrolase",
+        "members": [
+            "WP_015192777.1",
+            "PZD71786.1"
+        ],
+        "all_names": [
+            "alpha/beta hydrolase",
+            "Soluble epoxide hydrolase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:epoxide hydrolase activity",
+                "F:haloacetate dehalogenase activity"
+            ],
+            "Keywords": [
+                "Hydrolase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9XSQ9_STAC7",
+        "model_state": "Model does not exist"
+    },
+    "42": {
+        "name": "formyltetrahydrofolate deformylase",
+        "members": [
+            "RMF21622.1",
+            "WP_022606382.1"
+        ],
+        "all_names": [
+            "formyltetrahydrofolate deformylase",
+            "methionyl-tRNA formyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:formyltetrahydrofolate deformylase activity",
+                "F:hydroxymethyl-, formyl- and related transferase activity",
+                "P:'de novo' IMP biosynthetic process",
+                "P:one-carbon metabolic process"
+            ],
+            "Keywords": [
+                "Hydrolase",
+                "One-carbon metabolism",
+                "Purine biosynthesis"
+            ],
+            "Function_description": "Catalyzes the hydrolysis of 10-formyltetrahydrofolate (formyl-FH4) to formate and tetrahydrofolate (FH4)"
+        },
+        "structure": "",
+        "uniprot_code": "U5DJB9_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "41": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_068390418.1",
+            "RNJ67072.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A0S3UBQ3_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "3": {
+        "name": "TMEM165/GDT1 family protein",
+        "members": [
+            "WP_106258372.1",
+            "WP_162425320.1"
+        ],
+        "all_names": [
+            "TMEM165/GDT1 family protein",
+            "TMEM165/GDT1 family protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1E076_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "48": {
+        "name": "TatA/E family twin arginine-targeting protein translocase",
+        "members": [
+            "WP_073607620.1",
+            "WP_023071402.1",
+            "WP_080808148.1",
+            "WP_106882385.1",
+            "WP_121967818.1",
+            "PZO49552.1",
+            "PZO08611.1",
+            "WP_006454391.1"
+        ],
+        "all_names": [
+            "TatA/E family twin arginine-targeting protein translocase",
+            "TatA/E family twin arginine-targeting protein translocase",
+            "TatA/E family twin arginine-targeting protein translocase",
+            "TatA/E family twin arginine-targeting protein translocase",
+            "TatA/E family twin arginine-targeting protein translocase",
+            "hypothetical protein",
+            "twin-arginine translocase TatA/TatE family subunit",
+            "TatA/E family twin arginine-targeting protein translocase"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of plasma membrane",
+                "C:TAT protein transport complex",
+                "F:protein transmembrane transporter activity",
+                "P:protein transport by the Tat complex"
+            ],
+            "Keywords": [
+                "Cell membrane",
+                "Coiled coil",
+                "Membrane",
+                "Protein transport",
+                "Translocation",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Transport"
+            ],
+            "Function_description": "Part of the twin-arginine translocation (Tat) system that transports large folded proteins containing a characteristic twin-arginine motif in their signal peptide across membranes. TatA could form the protein-conducting channel of the Tat system"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2P8WCS9_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "47": {
+        "name": "photosystem II reaction center protein PsbH",
+        "members": [
+            "WP_073607619.1",
+            "WP_023071403.1",
+            "WP_080808173.1",
+            "WP_106882384.1",
+            "WP_121967817.1",
+            "PZO49553.1",
+            "PZO08612.1",
+            "WP_038016562.1"
+        ],
+        "all_names": [
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:photosystem II",
+                "C:thylakoid membrane",
+                "F:phosphate ion binding",
+                "P:photosynthesis",
+                "P:protein stabilization"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Photosynthesis",
+                "Photosystem II",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "One of the components of the core complex of photosystem II (PSII), required for its stability and/or assembly. PSII is a light-driven water:plastoquinone oxidoreductase that uses light energy to abstract electrons from H(2)O, generating O(2) and a proton gradient subsequently used for ATP formation. It consists of a core antenna complex that captures photons, and an electron transfer chain that converts photonic excitation into a charge separation"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2P8WCY4_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "46": {
+        "name": "photosystem II reaction center protein PsbN",
+        "members": [
+            "WP_073607618.1",
+            "WP_023071404.1",
+            "WP_080808177.1",
+            "WP_106882383.1",
+            "WP_121967816.1",
+            "PZO49554.1",
+            "PZO08613.1",
+            "WP_006457718.1"
+        ],
+        "all_names": [
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:photosystem II reaction center",
+                "C:thylakoid membrane",
+                "P:photosynthesis"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "May play a role in photosystem I and II biogenesis"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2P8WED2_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "7": {
+        "name": "6-carboxytetrahydropterin synthase",
+        "members": [
+            "WP_073607614.1",
+            "WP_169613986.1"
+        ],
+        "all_names": [
+            "6-carboxytetrahydropterin synthase",
+            "6-pyruvoyl tetrahydropterin synthase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1U7J8C7_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "8": {
+        "name": "DUF4278 domain-containing protein",
+        "members": [
+            "WP_073607613.1",
+            "WP_169613985.1"
+        ],
+        "all_names": [
+            "DUF4278 domain-containing protein",
+            "DUF4278 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1U7J871_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "6": {
+        "name": "NAD(P)/FAD-dependent oxidoreductase",
+        "members": [
+            "WP_085435730.1",
+            "WP_161825904.1"
+        ],
+        "all_names": [
+            "NAD(P)/FAD-dependent oxidoreductase",
+            "glutathione-disulfide reductase"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "2": {
+        "name": "NAD(P)H-quinone oxidoreductase subunit 4",
+        "members": [
+            "WP_170922231.1",
+            "WP_144868365.1"
+        ],
+        "all_names": [
+            "NAD(P)H-quinone oxidoreductase subunit 4",
+            "NADH-quinone oxidoreductase subunit M"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:thylakoid membrane",
+                "F:NADH dehydrogenase (ubiquinone) activity",
+                "F:quinone binding",
+                "P:ATP synthesis coupled electron transport"
+            ],
+            "Keywords": [
+                "Membrane",
+                "NAD",
+                "NADP",
+                "Oxidoreductase",
+                "Plastoquinone",
+                "Quinone",
+                "Thylakoid",
+                "Translocase",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "NDH-1 shuttles electrons from NAD(P)H, via FMN and iron-sulfur (Fe-S) centers, to quinones in the respiratory chain. The immediate electron acceptor for the enzyme in this species is believed to be plastoquinone. Couples the redox reaction to proton translocation (for every two electrons transferred, four hydrogen ions are translocated across the cytoplasmic membrane), and thus conserves the redox energy in a proton gradient"
+        },
+        "structure": "",
+        "uniprot_code": "A0A563W5C4_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "40": {
+        "name": "lipid-A-disaccharide synthase",
+        "members": [
+            "RNJ67073.1",
+            "WP_012954189.1",
+            "WP_107671287.1"
+        ],
+        "all_names": [
+            "lipid-A-disaccharide synthase",
+            "lipid-A-disaccharide synthase",
+            "lipid-A-disaccharide synthase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:lipid-A-disaccharide synthase activity",
+                "P:lipid A biosynthetic process"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "D3EPV2_ATETH",
+        "model_state": "Model does not exist"
+    },
+    "39": {
+        "name": "DUF4912 domain-containing protein",
+        "members": [
+            "RNJ67074.1",
+            "WP_006528483.1"
+        ],
+        "all_names": [
+            "DUF4912 domain-containing protein",
+            "PstS family phosphate ABC transporter substrate-binding protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "L8LU28_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "51": {
+        "name": "shikimate dehydrogenase",
+        "members": [
+            "WP_106456639.1",
+            "PSP17124.1"
+        ],
+        "all_names": [
+            "shikimate dehydrogenase",
+            "shikimate dehydrogenase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:shikimate 3-dehydrogenase (NADP+) activity",
+                "P:aromatic amino acid family biosynthetic process",
+                "P:chorismate biosynthetic process"
+            ],
+            "Keywords": [
+                "Amino-acid biosynthesis",
+                "Aromatic amino acid biosynthesis",
+                "NADP",
+                "Oxidoreductase"
+            ],
+            "Function_description": "Involved in the biosynthesis of the chorismate, which leads to the biosynthesis of aromatic amino acids. Catalyzes the reversible NADPH linked reduction of 3-dehydroshikimate (DHSA) to yield shikimate (SA)"
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T1LZK7_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "1": {
+        "name": "FtsX-like permease family protein",
+        "members": [
+            "WP_162548638.1",
+            "WP_144868379.1"
+        ],
+        "all_names": [
+            "FtsX-like permease family protein",
+            "FtsX-like permease family protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:plasma membrane"
+            ],
+            "Keywords": [
+                "Cell membrane",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A563W595_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "55": {
+        "name": "efflux RND transporter periplasmic adaptor subunit",
+        "members": [
+            "WP_162548637.1",
+            "PLS68320.1"
+        ],
+        "all_names": [
+            "efflux RND transporter periplasmic adaptor subunit",
+            "efflux transporter periplasmic adaptor subunit"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:membrane",
+                "F:transmembrane transporter activity"
+            ],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2N5JP43_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "73": {
+        "name": "class I SAM-dependent methyltransferase",
+        "members": [
+            "PZV25625.1",
+            "AFY67794.1",
+            "WP_065710104.1",
+            "PZD71762.1",
+            "OUC15100.1"
+        ],
+        "all_names": [
+            "class I SAM-dependent methyltransferase",
+            "Methyltransferase type 11",
+            "class I SAM-dependent methyltransferase",
+            "Demethylmenaquinone methyltransferase",
+            "SAM-dependent methyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:methyltransferase activity",
+                "P:methylation",
+                "F:demethylmenaquinone methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylmenaquinol methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylmenaquinol-7 methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylquinol-8 methyltransferase activity"
+            ],
+            "Keywords": [
+                "Methyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1B1TVQ8_9SYNE",
+        "model_state": "Model does not exist"
+    },
+    "43": {
+        "name": "response regulator",
+        "members": [
+            "PZV25618.1",
+            "WP_155082907.1",
+            "WP_069790865.1"
+        ],
+        "all_names": [
+            "response regulator",
+            "pyruvate kinase",
+            "pyruvate phosphate dikinase PEP/pyruvate-binding protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "P:phosphorelay signal transduction system",
+                "C:integral component of membrane",
+                "C:plasma membrane",
+                "F:acyl-phosphate glycerol-3-phosphate acyltransferase activity",
+                "F:ATP binding",
+                "F:kinase activity",
+                "P:phospholipid biosynthetic process"
+            ],
+            "Keywords": [
+                "Phosphoprotein",
+                "Kinase",
+                "Membrane",
+                "Pyruvate",
+                "Transferase",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1E5QV84_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "30": {
+        "name": "DUF3769 domain-containing protein",
+        "members": [
+            "WP_012954186.1",
+            "WP_107671290.1",
+            "WP_048321219.1"
+        ],
+        "all_names": [
+            "DUF3769 domain-containing protein",
+            "DUF3769 domain-containing protein",
+            "DUF3769 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "D3EPU9_ATETH",
+        "model_state": "Model does not exist"
+    },
+    "12": {
+        "name": "DUF98 domain-containing protein",
+        "members": [
+            "WP_073548872.1",
+            "WP_148293394.1",
+            "WP_030007127.1",
+            "WP_075889501.1"
+        ],
+        "all_names": [
+            "DUF98 domain-containing protein",
+            "chorismate lyase",
+            "DUF98 domain-containing protein",
+            "chorismate lyase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:lyase activity"
+            ],
+            "Keywords": [
+                "Lyase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1Q4R8H5_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "66": {
+        "name": "cation efflux system protein",
+        "members": [
+            "BAG05580.1",
+            "WP_104397531.1"
+        ],
+        "all_names": [
+            "cation efflux system protein",
+            "cation transporter"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:cation transmembrane transporter activity"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Transport"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2H6L7D7_MICAE",
+        "model_state": "Model does not exist"
+    },
+    "64": {
+        "name": "GTPase ObgE",
+        "members": [
+            "BAG05583.1",
+            "WP_104397533.1",
+            "WP_071455491.1"
+        ],
+        "all_names": [
+            "GTP-binding protein",
+            "GTPase ObgE",
+            "GTPase ObgE"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:GTP binding",
+                "F:GTPase activity",
+                "F:magnesium ion binding",
+                "P:ribosome biogenesis"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "GTP-binding",
+                "Hydrolase",
+                "Magnesium",
+                "Metal-binding",
+                "Nucleotide-binding"
+            ],
+            "Function_description": "An essential GTPase which binds GTP, GDP and possibly (p)ppGpp with moderate affinity, with high nucleotide exchange rates and a fairly low GTP hydrolysis rate. Plays a role in control of the cell cycle, stress response, ribosome biogenesis and in those bacteria that undergo differentiation, in morphogenesis control"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/OBG_MICAN",
+        "uniprot_code": "OBG_MICAN",
+        "model_state": "Model exists"
+    },
+    "63": {
+        "name": "unknown protein",
+        "members": [
+            "BAG05586.1",
+            "WP_104397534.1"
+        ],
+        "all_names": [
+            "unknown protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2H6L759_MICAE",
+        "model_state": "Model does not exist"
+    },
+    "13": {
+        "name": "FHA domain-containing protein",
+        "members": [
+            "WP_026102367.1",
+            "WP_036482463.1"
+        ],
+        "all_names": [
+            "FHA domain-containing protein",
+            "FHA domain-containing protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "21": {
+        "name": "TlyA family RNA methyltransferase",
+        "members": [
+            "WP_019504524.1",
+            "WP_036482664.1",
+            "WP_017658661.1"
+        ],
+        "all_names": [
+            "TlyA family RNA methyltransferase",
+            "TlyA family RNA methyltransferase",
+            "TlyA family RNA methyltransferase"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "19": {
+        "name": "TIGR01777 family protein",
+        "members": [
+            "WP_019504517.1",
+            "WP_036482481.1"
+        ],
+        "all_names": [
+            "TIGR01777 family protein",
+            "TIGR01777 family protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "14": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_026102102.1",
+            "WP_069790864.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "ANK repeat"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1E5QVA4_9CHRO",
+        "model_state": "Model does not exist"
+    },
+    "18": {
+        "name": "NAD(P)H-quinone oxidoreductase subunit N",
+        "members": [
+            "WP_107671291.1",
+            "WP_021832141.1"
+        ],
+        "all_names": [
+            "NAD(P)H-quinone oxidoreductase subunit N",
+            "NAD(P)H-quinone oxidoreductase subunit N"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:thylakoid membrane",
+                "F:oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor",
+                "F:quinone binding"
+            ],
+            "Keywords": [
+                "Membrane",
+                "NAD",
+                "NADP",
+                "Plastoquinone",
+                "Quinone",
+                "Thylakoid",
+                "Translocase",
+                "Transport"
+            ],
+            "Function_description": "NDH-1 shuttles electrons from an unknown electron donor, via FMN and iron-sulfur (Fe-S) centers, to quinones in the respiratory and/or the photosynthetic chain. The immediate electron acceptor for the enzyme in this species is believed to be plastoquinone. Couples the redox reaction to proton translocation, and thus conserves the redox energy in a proton gradient. Cyanobacterial NDH-1 also plays a role in inorganic carbon-concentration"
+        },
+        "structure": "",
+        "uniprot_code": "T2ILK1_CROWT",
+        "model_state": "Model does not exist"
+    },
+    "35": {
+        "name": "photosystem II reaction center protein I",
+        "members": [
+            "WP_008276509.1",
+            "WP_007303656.1"
+        ],
+        "all_names": [
+            "photosystem II reaction center protein I",
+            "photosystem II reaction center protein I"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:photosystem II reaction center",
+                "C:thylakoid membrane",
+                "P:photosynthesis"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Photosynthesis",
+                "Photosystem II",
+                "Reaction center",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "One of the components of the core complex of photosystem II (PSII), required for its stability and/or assembly. PSII is a light-driven water:plastoquinone oxidoreductase that uses light energy to abstract electrons from H(2)O, generating O(2) and a proton gradient subsequently used for ATP formation. It consists of a core antenna complex that captures photons, and an electron transfer chain that converts photonic excitation into a charge separation"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/PSBI_CROS5",
+        "uniprot_code": "PSBI_CROS5",
+        "model_state": "Model exists"
+    },
+    "31": {
+        "name": "1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase",
+        "members": [
+            "WP_155082903.1",
+            "WP_011431091.1"
+        ],
+        "all_names": [
+            "1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase",
+            "imidazole glycerol phosphate synthase subunit HisF"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:imidazoleglycerol-phosphate synthase activity",
+                "F:lyase activity",
+                "P:histidine biosynthetic process"
+            ],
+            "Keywords": [
+                "Amino-acid biosynthesis",
+                "Cytoplasm",
+                "Histidine biosynthesis",
+                "Lyase"
+            ],
+            "Function_description": "IGPS catalyzes the conversion of PRFAR and glutamine to IGP, AICAR and glutamate. The HisF subunit catalyzes the cyclization activity that produces IGP and AICAR from PRFAR using the ammonia provided by the HisH subunit"
+        },
+        "structure": "",
+        "uniprot_code": "Q2JSF7_SYNJA",
+        "model_state": "Model does not exist"
+    },
+    "24": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_015218060.1",
+            "WP_155082905.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9Z1T3_CYAAP",
+        "model_state": "Model does not exist"
+    },
+    "15": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_024544483.1",
+            "WP_065710099.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1B1TVU6_9SYNE",
+        "model_state": "Model does not exist"
+    },
+    "16": {
+        "name": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+        "members": [
+            "WP_024544482.1",
+            "WP_065710100.1"
+        ],
+        "all_names": [
+            "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+            "4-hydroxy-3-methylbut-2-enyl diphosphate reductase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:4 iron, 4 sulfur cluster binding",
+                "F:4-hydroxy-3-methylbut-2-en-1-yl diphosphate reductase activity",
+                "F:metal ion binding",
+                "P:dimethylallyl diphosphate biosynthetic process",
+                "P:isopentenyl diphosphate biosynthetic process, methylerythritol 4-phosphate pathway",
+                "P:terpenoid biosynthetic process"
+            ],
+            "Keywords": [
+                "4Fe-4S",
+                "Iron",
+                "Iron-sulfur",
+                "Isoprene biosynthesis",
+                "Metal-binding",
+                "Oxidoreductase"
+            ],
+            "Function_description": "Catalyzes the conversion of 1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate (HMBPP) into a mixture of isopentenyl diphosphate (IPP) and dimethylallyl diphosphate (DMAPP). Acts in the terminal step of the DOXP/MEP pathway for isoprenoid precursor biosynthesis"
+        },
+        "structure": "",
+        "uniprot_code": "A0A1B1TVT3_9SYNE",
+        "model_state": "Model does not exist"
+    },
+    "74": {
+        "name": "GTPase Era",
+        "members": [
+            "WP_024544478.1",
+            "AFY67790.1",
+            "WP_069790860.1",
+            "WP_065710101.1",
+            "WP_075889507.1"
+        ],
+        "all_names": [
+            "GTPase Era",
+            "GTP-binding protein HSR1-related protein",
+            "GTP-binding protein",
+            "GTPase Era",
+            "GTPase Era"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:GTP binding",
+                "C:cytoplasm",
+                "C:plasma membrane",
+                "F:GTPase activity",
+                "F:small ribosomal subunit rRNA binding",
+                "P:ribosomal small subunit biogenesis"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Cell membrane",
+                "Cytoplasm",
+                "GTP-binding",
+                "Membrane",
+                "Nucleotide-binding",
+                "Ribosome biogenesis",
+                "RNA-binding",
+                "rRNA-binding"
+            ],
+            "Function_description": "An essential GTPase that binds both GDP and GTP, with rapid nucleotide exchange. Plays a role in 16S rRNA processing and 30S ribosomal subunit biogenesis and possibly also in cell cycle regulation and energy metabolism"
+        },
+        "structure": "",
+        "uniprot_code": "A0A1Q4R8L1_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "17": {
+        "name": "insulinase family protein",
+        "members": [
+            "WP_024544477.1",
+            "WP_065710103.1",
+            "WP_075889509.1"
+        ],
+        "all_names": [
+            "insulinase family protein",
+            "insulinase family protein",
+            "insulinase family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:metal ion binding",
+                "F:metalloendopeptidase activity"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1Q4R8F1_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "52": {
+        "name": "hypothetical protein",
+        "members": [
+            "PSP15039.1",
+            "WP_017658660.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "53": {
+        "name": "hypothetical protein",
+        "members": [
+            "PSP15033.1",
+            "PSP17126.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T2RZN0_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "54": {
+        "name": "hypothetical protein",
+        "members": [
+            "PSP15032.1",
+            "PSP17125.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Signal"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A2T2RZU9_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "37": {
+        "name": "1-acyl-sn-glycerol-3-phosphate acyltransferase",
+        "members": [
+            "WP_015166533.1",
+            "TVQ43655.1"
+        ],
+        "all_names": [
+            "1-acyl-sn-glycerol-3-phosphate acyltransferase",
+            "1-acyl-sn-glycerol-3-phosphate acyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:transferase activity, transferring acyl groups"
+            ],
+            "Keywords": [
+                "Acyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9SP47_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "44": {
+        "name": "competence/damage-inducible protein A",
+        "members": [
+            "WP_015166537.1",
+            "WP_036946039.1",
+            "PZV10927.1"
+        ],
+        "all_names": [
+            "competence/damage-inducible protein A",
+            "competence/damage-inducible protein A",
+            "competence/damage-inducible protein A"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "K9SMZ0_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "45": {
+        "name": "DEAD/DEAH box helicase",
+        "members": [
+            "WP_023071408.1",
+            "WP_121967812.1",
+            "PZO49557.1",
+            "PZO08617.1",
+            "WP_006457724.1"
+        ],
+        "all_names": [
+            "DEAD/DEAH box helicase",
+            "DEAD/DEAH box helicase",
+            "hypothetical protein",
+            "ATP-dependent helicase",
+            "DEAD/DEAH box helicase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:helicase activity",
+                "F:ATP binding"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Helicase",
+                "Hydrolase",
+                "Nucleotide-binding",
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "U9VYS1_9CYAN",
+        "model_state": "Model does not exist"
+    },
+    "22": {
+        "name": "RNA polymerase sigma factor SigC",
+        "members": [
+            "WP_152532077.1",
+            "WP_017326393.1",
+            "WP_121967998.1"
+        ],
+        "all_names": [
+            "RNA polymerase sigma factor SigC",
+            "RNA polymerase sigma factor%2C RpoD/SigA family",
+            "RNA polymerase sigma factor SigC"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "34": {
+        "name": "2Fe-2S iron-sulfur cluster binding domain-containing protein",
+        "members": [
+            "WP_008313374.1",
+            "WP_166274706.1"
+        ],
+        "all_names": [
+            "2Fe-2S iron-sulfur cluster binding domain-containing protein",
+            "2Fe-2S iron-sulfur cluster binding domain-containing protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "20": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_026097338.1",
+            "WP_017658666.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "38": {
+        "name": "rhodanese-like domain-containing protein",
+        "members": [
+            "TVQ43649.1",
+            "TVQ43651.1"
+        ],
+        "all_names": [
+            "rhodanese-like domain-containing protein",
+            "DUF2892 domain-containing protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "76": {
+        "name": "conserved protein of unknown function",
+        "members": [
+            "CDM93749.1"
+        ],
+        "all_names": [
+            "conserved protein of unknown function"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    }
+}

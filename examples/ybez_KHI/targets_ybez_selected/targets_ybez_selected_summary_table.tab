@@ -1,0 +1,252 @@
+Operon type	Target	AssemblyId	Gene direction	Gene start	Gene end	Relative gene start	Relative gene end	Protein family code	EntrzID	Protein name	Transmembrane/Signal peptide prediction	Superkingdom	Phylum	Class	Order	Genus	Species
+
+
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	41097	42245	-4766	-3618	0	KWX22257.1	molecular chaperone DnaJ		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	42250	42999	-3613	-2864	9	KWX22258.1	ribosomal RNA small subunit methyltransferase E		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	43329	43838	-2534	-2025	0	KWX22358.1	hypothetical protein		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	43916	45307	-1947	-556	0	KWX22259.1	C4-dicarboxylate transporter	TM	Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	45864	46910	1	1047	23	KWX22260.1	phosphate starvation protein PhoH		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	46907	47443	1044	1580	22	KWX22261.1	heat-shock protein		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	47440	48756	1577	2893	19	KWX22262.1	membrane protein	TM	Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	48749	49066	2886	3203	7	KWX22263.1	cytidine deaminase		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+00001	A0A132PIT0_9MYCO	GCA_001545135.1	+	49063	49962	3200	4099	6	KWX22264.1	GTPase Era		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycolicibacterium	Mycolicibacterium wolinskyi
+
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	865973	866710	-3122	-2385	9	ADH66148.1	protein of unknown function DUF558		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	-	866849	867610	-2246	-1485	0	ADH66149.1	conserved hypothetical protein		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	-	867607	868137	-1488	-958	0	ADH66150.1	RNA polymerase%2C sigma-24 subunit%2C ECF subfamily		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	868463	868813	-632	-282	8	ADH66151.1	histidine triad (HIT) protein		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	869096	870205	1	1110	23	ADH66152.1	PhoH family protein		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	870400	870888	1305	1793	22	ADH66153.1	protein of unknown function UPF0054		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	870885	872282	1790	3187	19	ADH66154.1	CBS domain containing protein	TM	Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	872279	872623	3184	3528	7	ADH66155.1	conserved hypothetical protein		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+00002	D7AYG7_NOCDD	GCA_000092985.1	+	872633	873601	3538	4506	6	ADH66156.1	GTP-binding protein Era		Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsis	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4377384	4378421	-5231	-4194	0	ALM84748.1	hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4378581	4380131	-4034	-2484	0	ALM84749.1	gamma-glutamyltransferase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	-	4380201	4380878	-2414	-1737	0	ALM84750.1	hypothetical protein	TM	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4381153	4382619	-1462	4	21	ALM84751.1	(dimethylallyl)adenosine tRNA methylthiotransferase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4382616	4383659	1	1044	23	ALM84752.1	phosphate starvation-inducible protein PhoH		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4383757	4384212	1142	1597	22	ALM87087.1	rRNA maturation RNase YbeY		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4384333	4385208	1718	2593	19	ALM84753.1	magnesium/cobalt efflux protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	+	4385205	4386839	2590	4224	20	ALM84754.1	apolipoprotein N-acyltransferase	TM	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+00003	A0A0S1Y445_9BORD	GCA_001433395.1	-	4386933	4388018	4318	5403	4	ALM84755.1	aldo/keto reductase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella sp. N
+
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	-	1188182	1188517	-3395	-3060	0	ALZ83663.1	hypothetical protein		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	-	1187207	1188130	-3008	-2085	3	ALZ83662.1	LysR family transcriptional regulator		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1186682	1187086	-1964	-1560	0	ALZ83661.1	enamine deaminase RidA		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1185222	1186631	-1509	-100	21	ALZ83660.1	tRNA-2-methylthio-N(6)-dimethylallyladenosine synthase MiaB		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1184105	1185121	1	1017	23	ALZ83659.1	ATP-binding protein		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1183660	1184115	1007	1462	22	ALZ83658.1	rRNA maturation factor		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1182813	1183652	1470	2309	19	ALZ83657.1	magnesium/cobalt efflux protein		Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	+	1180944	1182491	2631	4178	20	ALZ83656.1	apolipoprotein N-acyltransferase	TM	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+00004	A0A0U4VKN7_9PSED	GCA_001518815.1	-	1180192	1180953	4169	4930	0	ALZ83655.1	hypothetical protein	TM	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonas	Pseudomonas oryzihabitans
+
+00005	A1UU40_BARBK	GCA_000015445.1	+	1283819	1284424	-3597	-2992	0	ABM44526.1	recombination protein RecR		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1284661	1285368	-2755	-2048	0	ABM45248.1	glycoprotease family protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1285361	1285852	-2055	-1564	0	ABM45260.1	ribosomal-protein-alanine acetyltransferase		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1285884	1287260	-1532	-156	21	ABM44770.1	tRNA-i(6)A37 thiotransferase enzyme MiaB		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1287417	1288529	1	1113	23	ABM45079.1	PhoH family protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1288537	1289013	1121	1597	22	ABM44555.1	conserved hypothetical protein TIGR00043		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1289116	1290138	1700	2722	19	ABM45581.1	magnesium and cobalt efflux protein CorC		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1290101	1291726	2685	4310	20	ABM45042.1	apolipoprotein N-acyltransferase	TM	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00005	A1UU40_BARBK	GCA_000015445.1	+	1291877	1292290	4461	4874	0	ABM45051.1	DNA-binding protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+
+00006	PHOL_ECOLI	GCF_000005845.2	+	699574	700326	-6947	-6195	0	NP_415201.1	UMP phosphatase		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	697513	699177	-5798	-4134	0	NP_415200.1	asparagine synthetase B		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	-	695101	696276	-2897	-1722	0	NP_415195.1	2-octaprenyl-3-methyl-6-methoxy-1%2C4-benzoquinol hydroxylase		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	693531	694955	-1576	-152	21	NP_415194.1	isopentenyl-adenosine A37 tRNA methylthiolase		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	692338	693378	1	1041	23	NP_415193.2	PhoH-like protein		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	691874	692341	1038	1505	22	NP_415192.1	endoribonuclease YbeY		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	690906	691784	1595	2473	19	NP_415191.1	CorC-HlyC family protein YbeX		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	689343	690881	2498	4036	20	NP_415190.1	apolipoprotein N-acyltransferase		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00006	PHOL_ECOLI	GCF_000005845.2	+	687997	689013	4366	5382	0	NP_415189.1	IS5 transposase and trans-activator		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	20328	21557	-3282	-2053	10000	A2Z07_13220	pseudogene		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	21541	22329	-2069	-1281	10000	A2Z07_13225	pseudogene		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	22441	22982	-1169	-628	10000	A2Z07_13230	pseudogene		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	22994	23455	-616	-155	0	OFX35327.1	arginine repressor		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	23611	24612	1	1002	23	OFX35328.1	phosphate starvation-inducible protein PhoH		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	24681	26720	1071	3110	11	OFX35329.1	hypothetical protein	TM	Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	26724	27158	3114	3548	22	OFX35330.1	rRNA maturation RNase YbeY		Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	27163	27660	3553	4050	5	OFX35331.1	hypothetical protein	TM	Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+00007	A0A1F3CXR1_9BACT	GCA_001768115.1	+	27738	29660	4128	6050	0	OFX35343.1	hypothetical protein	TM	Bacteria	Armatimonadetes	Armatimonadetes_na	Armatimonadetes_na_na	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+
+00008	U5SC87_9LACT	GCA_000493735.1	+	1086986	1087405	-4225	-3806	0	AGY81689.1	MerR family transcriptional regulator		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1087492	1088343	-3719	-2868	4	AGY81690.1	2%2C5-diketo-D-gluconic acid reductase		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1088691	1089359	-2520	-1852	0	AGY81691.1	flavodoxin		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1089497	1090480	-1714	-731	4	AGY81692.1	aldehyde oxidase		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1091212	1092231	1	1020	23	AGY81693.1	phosphate starvation-inducible protein PhoH		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1092243	1094450	1032	3239	11	AGY81694.1	phosphohydrolase	TM	Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1094501	1094977	3290	3766	22	AGY81695.1	rRNA maturation factor		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1094961	1095356	3750	4145	5	AGY81696.1	UDP kinase	TM	Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+00008	U5SC87_9LACT	GCA_000493735.1	+	1095372	1095782	4161	4571	10	AGY81697.1	cytidine deaminase		Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacterium	Carnobacterium inhibens subsp. gilichinskyi
+
+00009	W7C1W6_9LIST	GCA_000525875.1	+	38723	39664	-2686	-1745	0	EUJ33345.1	ribosomal protein L11 methyltransferase		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	39760	40434	-1649	-975	9	EUJ33346.1	16S ribosomal RNA methyltransferase RsmE		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	40621	40794	-788	-615	2	EUJ33347.1	30S ribosomal protein S21		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	40815	41258	-594	-151	0	EUJ33348.1	hypothetical protein		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	41410	42366	1	957	23	EUJ33349.1	PhoH family protein		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	42382	44517	973	3108	11	EUJ33350.1	hypothetical protein	TM	Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	44517	44996	3108	3587	22	EUJ33351.1	metal-binding heat shock protein		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	44980	45411	3571	4002	5	EUJ33352.1	hypothetical protein	TM	Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+00009	W7C1W6_9LIST	GCA_000525875.1	+	45389	45799	3980	4390	10	EUJ33353.1	cytidine deaminase		Bacteria	Firmicutes	Bacilli	Bacillales	Listeria	Listeria floridensis FSL S10-1187
+
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	-	1198786	1199058	-4955	-4683	0	AKU90592.1	SSU ribosomal protein S20p		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	-	1199347	1200162	-4394	-3579	13	AKU90593.1	Nucleoside triphosphate pyrophosphohydrolase MazG		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1200400	1202511	-3341	-1230	0	AKU90594.1	hypothetical protein	TM	Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1202514	1203692	-1227	-49	0	AKU90595.1	Response regulator		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1203742	1204758	1	1017	23	AKU90596.1	Phosphate starvation-inducible protein PhoH%2C predicted ATPase		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1204828	1207239	1087	3498	11	AKU90597.1	Membrane protein containing HD superfamily hydrolase	TM	Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1207288	1207830	3547	4089	22	AKU90598.1	Metal-dependent hydrolase YbeY		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	+	1207827	1208246	4086	4505	0	AKU90599.1	CopG domain protein DNA-binding domain protein		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+00010	A0A0K1PB02_9DELT	GCA_001263175.1	-	1208257	1208478	4516	4737	0	AKU90600.1	hypothetical protein		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Vulgatibacter	Vulgatibacter incomptus
+
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	3150	4076	-5289	-4363	0	OGW06853.1	hypothetical protein		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	4073	4564	-4366	-3875	0	OGW06854.1	hypothetical protein	TM	Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	4557	5624	-3882	-2815	0	OGW06855.1	hypothetical protein		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	5715	8435	-2724	-4	0	OGW06856.1	[protein-PII] uridylyltransferase		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	8440	9438	1	999	23	OGW06857.1	hypothetical protein		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	9435	11936	996	3497	11	OGW06858.1	hypothetical protein	TM	Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	11836	12285	3397	3846	22	OGW06859.1	rRNA maturation RNase YbeY		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	+	12358	12846	3919	4407	8	OGW06860.1	HIT family hydrolase		Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+00011	A0A1G1DHS7_9BACT	GCA_001803575.1	-	12870	14639	4431	6200	15	OGW06861.1	antibiotic ABC transporter ATP-binding protein	TM	Bacteria	Nitrospinae	Nitrospinae_na	Nitrospinae_na_na	Nitrospinae	Nitrospinae bacterium RIFCSPLOWO2_02_39_17
+
+00012	D5EEA3_AMICL	GCA_000025885.1	+	769363	769953	-6147	-5557	0	ADE56881.1	peptidyl-tRNA hydrolase		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	770075	773152	-5435	-2358	14	ADE56882.1	DEAD/DEAH box helicase domain protein		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	773155	774000	-2355	-1510	13	ADE56883.1	MazG family protein		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	774097	775494	-1413	-16	12	ADE56884.1	Conserved carboxylase region		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	775511	776509	1	999	23	ADE56885.1	PhoH family protein		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	776481	778601	971	3091	11	ADE56886.1	metal dependent phosphohydrolase	TM	Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	778605	779141	3095	3631	22	ADE56887.1	protein of unknown function UPF0054		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	779144	780430	3634	4920	19	ADE56888.1	protein of unknown function DUF21	TM	Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+00012	D5EEA3_AMICL	GCA_000025885.1	+	780417	780860	4907	5350	10	ADE56889.1	cytidine deaminase		Bacteria	Synergistetes	Synergistia	Synergistales	Aminobacterium	Aminobacterium colombiense DSM 12261
+
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1068864	1069052	-2531	-2343	0	ADK84325.1	4Fe-4S ferredoxin iron-sulfur binding domain protein		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	-	1068304	1068732	-2211	-1783	0	ADK84324.1	conserved hypothetical protein		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	-	1067351	1068169	-1648	-830	13	ADK84323.1	MazG family protein		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	-	1066755	1067354	-833	-234	0	ADK84322.1	Colicin V production protein	TM	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1065564	1066520	1	957	23	ADK84321.1	PhoH family protein		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1063847	1065559	962	2674	11	ADK84320.1	7TM receptor with intracellular metal dependent phosphohydrolase	TM	Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1063471	1063893	2628	3050	22	ADK84319.1	protein of unknown function UPF0054		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1062732	1063490	3031	3789	0	ADK84318.1	pyridoxal phosphate biosynthetic protein PdxJ		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+00013	E1QFI5_DESB2	GCA_000143965.1	+	1062352	1062729	3792	4169	0	ADK84317.1	holo-acyl-carrier-protein synthase		Bacteria	Proteobacteria	Deltaproteobacteria	Desulfarculales	Desulfarculus	Desulfarculus baarsii DSM 2075
+
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	647209	650340	-5687	-2556	14	AFM21326.1	transcription-repair coupling factor Mfd		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	650319	651140	-2577	-1756	13	AFM21327.1	MazG family protein		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	651148	652599	-1748	-297	12	AFM21328.1	pyruvate/oxaloacetate carboxyltransferase		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	652627	652869	-269	-27	0	AFM21329.1	thioredoxin-like protein		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	652897	653925	1	1029	23	AFM21330.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	653879	655912	983	3016	11	AFM21331.1	putative domain HDIG-containing protein	TM	Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	655934	656443	3038	3547	22	AFM21332.1	metalloprotein%2C YbeY/UPF0054 family		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	656445	657734	3549	4838	19	AFM21333.1	CBS domain-containing protein	TM	Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+00014	I4BVM3_ACEMN	GCA_000266925.1	+	657741	658448	4845	5552	0	AFM21334.1	DNA replication and repair protein RecO		Bacteria	Synergistetes	Synergistia	Synergistales	Acetomicrobium	Acetomicrobium mobile DSM 13181
+
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	427408	429435	-6096	-4069	1	CDM65284.1	diguanylate cyclase with GAF sensor		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	429413	431656	-4091	-1848	0	CDM65285.1	anti-sigma regulatory factor (Ser/Thr protein kinase)		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	431676	432050	-1828	-1454	0	CDM65286.1	anti-anti-sigma regulatory factor (antagonist of anti-sigma factor)		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	432062	433333	-1442	-171	0	CDM65287.1	uncharacterized domain HDIG-containing protein		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	433505	434458	1	954	23	CDM65288.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	434511	434948	1007	1444	22	CDM65289.1	probable rRNA maturation factor YbeY		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	434965	436260	1461	2756	19	CDM65290.1	CBS domain-containing protein	TM	Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	436446	436877	2942	3373	0	CDM65291.1	predicted Fe-S oxidoreductase		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+00015	A0A0B6WVG5_9BACT	GCA_000820845.2	+	436924	437139	3420	3635	0	CDM65292.1	hypothetical protein		Bacteria	Acidobacteria	Blastocatellia	Blastocatellales	Pyrinomonas	Pyrinomonas methylaliphatogenes
+
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	541069	541509	-3763	-3323	0	KUR80365.1	transcriptional regulator		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	541712	542134	-3120	-2698	0	KUR80366.1	Fur family transcriptional regulator		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	542106	542975	-2726	-1857	0	KUR80367.1	acyl-phosphate glycerol 3-phosphate acyltransferase	TM	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	543030	544352	-1802	-480	21	KUR80368.1	(dimethylallyl)adenosine tRNA methylthiotransferase		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	544833	545915	1	1083	23	KUR80369.1	phosphate starvation-inducible protein PhoH		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	545930	546418	1098	1586	22	KUR80477.1	rRNA maturation RNase YbeY		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	546445	547398	1613	2566	19	KUR80478.1	cobalt transporter		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	+	547459	548340	2627	3508	3	KUR80370.1	LysR family transcriptional regulator		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+00016	A0A102DF82_9SPHN	GCA_001519055.1	-	548350	549327	3518	4495	1	KUR80371.1	diguanylate cyclase		Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Novosphingobium	Novosphingobium sp. Fuku2-ISO-50
+
+00017	A0A179D2U7_9BACT	GCA_001652585.1	-	23969	24619	-3072	-2422	0	OAQ19962.1	hypothetical protein	TM	Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	-	23489	23968	-2421	-1942	0	OAQ19961.1	flavin reductase domain protein%2C FMN-binding		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	23392	23508	-1961	-1845	0	OAQ19960.1	hypothetical protein		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	21581	23356	-1809	-34	0	OAQ19959.1	Chloride channel protein	TM	Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	20587	21546	1	960	23	OAQ19958.1	Phosphate starvation-inducible protein PhoH%2C predicted ATPase		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	19559	20590	957	1988	0	OAQ19957.1	Molybdopterin biosynthesis protein MoeA		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	19262	19558	1989	2285	0	OAQ19956.1	Integral membrane protein YggT%2C involved in response to extracytoplasmic stress (osmotic shock)	TM	Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	18786	19262	2285	2761	0	OAQ19955.1	Cell division initiation protein DivIVA		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+00017	A0A179D2U7_9BACT	GCA_001652585.1	+	18569	18829	2718	2978	0	OAQ19954.1	hypothetical protein		Bacteria	Thermodesulfobacteria	Thermodesulfobacteria	Thermodesulfobacteriales	Thermosulfurimonas	Thermosulfurimonas dismutans
+
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1919493	1919759	-3262	-2996	0	AOY00580.1	transglycosylase	TM	Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1919778	1919990	-2977	-2765	0	AOY00581.1	hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1920440	1921831	-2315	-924	21	AOY02282.1	tRNA (N6-isopentenyl adenosine(37)-C2)-methylthiotransferase MiaB		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1922118	1922738	-637	-17	0	AOY00582.1	hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1922756	1923760	1	1005	23	AOY00583.1	phosphate starvation-inducible protein PhoH		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1923757	1924230	1002	1475	22	AOY00584.1	rRNA maturation RNase YbeY		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1924239	1925096	1484	2341	19	AOY00585.1	magnesium/cobalt efflux protein		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1925096	1926589	2341	3834	20	AOY00586.1	apolipoprotein N-acyltransferase	TM	Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+00018	A0A1D9BE35_9NEIS	GCA_001808185.1	+	1927018	1928283	4263	5528	0	AOY02283.1	hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Jeongeupia	Jeongeupia sp. USM3
+
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	23953	24377	-4132	-3708	0	OFW14527.1	dCTP deaminase		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	24472	24993	-3613	-3092	0	OFW14528.1	gamma carbonic anhydrase family protein		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	24996	26321	-3089	-1764	0	OFW14529.1	histidine--tRNA ligase		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	26314	28089	-1771	4	0	OFW14530.1	aspartate--tRNA ligase		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	28086	29045	1	960	23	OFW14531.1	hypothetical protein		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	29143	29550	1058	1465	22	OFW14544.1	rRNA maturation RNase YbeY		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	29547	30782	1462	2697	19	OFW14532.1	hypothetical protein	TM	Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	31105	31992	3020	3907	6	OFW14533.1	GTPase Era		Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+00019	A0A1F2T079_9BACT	GCA_001767195.1	+	32262	33629	4177	5544	0	OFW14534.1	magnesium transporter	TM	Bacteria	Acidobacteria	Acidobacteria_na	Acidobacteria_na_na	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21
+
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1221362	1221808	-3259	-2813	0	ADR36648.1	UspA domain-containing protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1221824	1223104	-2797	-1517	0	ADR36649.1	protein of unknown function DUF107	TM	Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1223108	1224082	-1513	-539	0	ADR36650.1	band 7 protein	TM	Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1224086	1224613	-535	-8	0	ADR36651.1	hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1224622	1225647	1	1026	23	ADR36652.1	PhoH family protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1225634	1226059	1013	1438	22	ADR36653.1	protein of unknown function UPF0054		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1226014	1226424	1393	1803	5	ADR36654.1	diacylglycerol kinase	TM	Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1226430	1227800	1809	3179	19	ADR36655.1	protein of unknown function DUF21	TM	Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+00020	E4U8H2_OCEP5	GCA_000183745.1	+	1227810	1228208	3189	3587	10	ADR36656.1	cytidine deaminase		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Oceanithermus	Oceanithermus profundus DSM 14977
+
+00021	Q2S2P3_SALRD	GCA_000013045.1	+	1774087	1775328	-5463	-4222	0	ABC46242.1	conserved hypothetical protein		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	-	1773108	1774094	-4229	-3243	0	ABC45197.1	Protein of unknown function (DUF980) superfamily	TM	Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	+	1770858	1772933	-3068	-993	0	ABC45660.1	peptidylprolyl cis-trans isomerase	TM	Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	-	1769969	1770826	-961	-104	0	ABC44289.1	diaminopimelate epimerase		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	+	1768902	1769864	1	963	23	ABC43690.1	PhoH family protein		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	-	1767934	1768788	1077	1931	0	ABC45405.1	3-hydroxybutyryl-CoA dehydrogenase		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	-	1767213	1767653	2212	2652	0	ABC46034.1	aspartate 1-decarboxylase		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	-	1766284	1767171	2694	3581	0	ABC43779.1	pantoate--beta-alanine ligase		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+00021	Q2S2P3_SALRD	GCA_000013045.1	+	1765462	1767198	2667	4403	0	ABC44328.1	hypothetical protein		Bacteria	Bacteroidetes	Bacteroidetes_na	Bacteroidetes Order II. Incertae sedis	Salinibacter	Salinibacter ruber DSM 13855
+
+00022	Q9RSY1_DEIRA	GCA_000008565.1	-	2014742	2015440	-2763	-2065	0	AAF11543.1	conserved hypothetical protein	TM	Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2013610	2014671	-1994	-933	0	AAF11542.1	conserved hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2013224	2013613	-936	-547	0	AAF11550.1	hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2012793	2013227	-550	-116	0	AAF11541.1	conserved hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2011534	2012676	1	1143	23	AAF11540.1	PhoH-related protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2010710	2011231	1446	1967	0	AAF11549.1	hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2009752	2010597	2080	2925	0	AAF11538.1	degV protein		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2008475	2009749	2928	4202	0	AAF11537.1	beta-lactamase%2C putative		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+00022	Q9RSY1_DEIRA	GCA_000008565.1	+	2007783	2008421	4256	4894	0	AAF11536.1	thymidine kinase		Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcus	Deinococcus radiodurans R1
+
+00023	R7AQW7_9BACE	GCA_000434155.1	+	115983	117275	-3186	-1894	0	CDD55825.1	phosphoribosyl-ATP diphosphatase		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	115647	115823	-1734	-1558	2	CDD55824.1	30S ribosomal protein S21		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	115286	115531	-1442	-1197	0	CDD55823.1	putative uncharacterized protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	114069	115271	-1182	20	0	CDD55822.1	putative uncharacterized protein	TM	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	113051	114088	1	1038	23	CDD55821.1	putative uncharacterized protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	112540	113061	1028	1549	22	CDD55820.1	probable rRNA maturation factor		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	111428	112543	1546	2661	0	CDD55819.1	putative uncharacterized protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	110982	111386	2703	3107	10	CDD55818.1	putative uncharacterized protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+00023	R7AQW7_9BACE	GCA_000434155.1	+	110286	110888	3201	3803	0	CDD55817.1	putative uncharacterized protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroides	Bacteroides pectinophilus CAG:437
+
+00024	ACC81393.1	GCA_000020025.1	-	3529312	3529992	-3669	-2989	0	ACC81389.1	protein of unknown function DUF820		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3530157	3531623	-2824	-1358	0	ACC81390.1	signal recognition particle protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3531822	3532082	-1159	-899	18	ACC81391.1	ribosomal protein S16		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3532045	3532479	-936	-502	17	ACC81392.1	conserved hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3532982	3533935	1	954	25	ACC81393.1	PhoH family protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3534027	3534431	1046	1450	16	ACC81394.1	conserved hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	-	3534471	3535586	1490	2605	0	ACC81395.1	conserved hypothetical protein	TM	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3535875	3536675	2894	3694	0	ACC81396.1	conserved hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00024	ACC81393.1	GCA_000020025.1	+	3536763	3538583	3782	5602	15	ACC81397.1	ABC transporter related	TM	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+
+00025	WP_009632337.1	GCF_000332075.2	-	2418162	2419421	-2936	-1677	0	WP_009632332.1	HAMP domain-containing histidine kinase		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	-	2419408	2420091	-1690	-1007	0	WP_009632333.1	response regulator transcription factor		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2420351	2420614	-747	-484	18	WP_009632335.1	30S ribosomal protein S16		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2420580	2421005	-518	-93	17	WP_028954273.1	KH domain-containing protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2421099	2422052	1	954	25	WP_009632337.1	PhoH family protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	-	2422090	2424441	992	3343	0	WP_009632338.1	tetratricopeptide repeat protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2424633	2425586	3535	4488	0	WP_009632339.1	hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2425583	2426332	4485	5234	0	WP_009632340.1	isoprenyl transferase		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509
+00025	WP_009632337.1	GCF_000332075.2	+	2426520	2426930	5422	5832	16	WP_009632341.1	hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Synechococcales	Synechocystis	Synechocystis sp. PCC 7509

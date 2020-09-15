@@ -1,0 +1,199 @@
+
+ ### Family: 1 -> diguanylate cyclase
+
+	 KUR80371.1	diguanylate cyclase
+	 CDM65284.1	diguanylate cyclase with GAF sensor
+
+ ### Family: 2 -> 30S ribosomal protein S21
+
+	 CDD55824.1	30S ribosomal protein S21
+	 EUJ33347.1	30S ribosomal protein S21
+
+ ### Family: 3 -> LysR family transcriptional regulator
+
+	 ALZ83662.1	LysR family transcriptional regulator
+	 KUR80370.1	LysR family transcriptional regulator
+
+ ### Family: 4 -> aldo/keto reductase
+
+	 ALM84755.1	aldo/keto reductase
+	 AGY81690.1	2%2C5-diketo-D-gluconic acid reductase
+	 AGY81692.1	aldehyde oxidase
+
+ ### Family: 5 -> diacylglycerol kinase
+
+	 ADR36654.1	diacylglycerol kinase
+	 OFX35331.1	hypothetical protein
+	 AGY81696.1	UDP kinase
+	 EUJ33352.1	hypothetical protein
+
+ ### Family: 6 -> GTPase Era
+
+	 OFW14533.1	GTPase Era
+	 KWX22264.1	GTPase Era
+	 ADH66156.1	GTP-binding protein Era
+
+ ### Family: 7 -> cytidine deaminase
+
+	 KWX22263.1	cytidine deaminase
+	 ADH66155.1	conserved hypothetical protein
+
+ ### Family: 8 -> HIT family hydrolase
+
+	 OGW06860.1	HIT family hydrolase
+	 ADH66151.1	histidine triad (HIT) protein
+
+ ### Family: 9 -> ribosomal RNA small subunit methyltransferase E
+
+	 KWX22258.1	ribosomal RNA small subunit methyltransferase E
+	 ADH66148.1	protein of unknown function DUF558
+	 EUJ33346.1	16S ribosomal RNA methyltransferase RsmE
+
+ ### Family: 10 -> cytidine deaminase
+
+	 CDD55818.1	putative uncharacterized protein
+	 ADR36656.1	cytidine deaminase
+	 ADE56889.1	cytidine deaminase
+	 AGY81697.1	cytidine deaminase
+	 EUJ33353.1	cytidine deaminase
+
+ ### Family: 11 -> Membrane protein containing HD superfamily hydrolase
+
+	 AKU90597.1	Membrane protein containing HD superfamily hydrolase
+	 ADK84320.1	7TM receptor with intracellular metal dependent phosphohydrolase
+	 OGW06858.1	hypothetical protein
+	 AFM21331.1	putative domain HDIG-containing protein
+	 ADE56886.1	metal dependent phosphohydrolase
+	 OFX35329.1	hypothetical protein
+	 AGY81694.1	phosphohydrolase
+	 EUJ33350.1	hypothetical protein
+
+ ### Family: 12 -> pyruvate/oxaloacetate carboxyltransferase
+
+	 AFM21328.1	pyruvate/oxaloacetate carboxyltransferase
+	 ADE56884.1	Conserved carboxylase region
+
+ ### Family: 13 -> MazG family protein
+
+	 AKU90593.1	Nucleoside triphosphate pyrophosphohydrolase MazG
+	 ADK84323.1	MazG family protein
+	 AFM21327.1	MazG family protein
+	 ADE56883.1	MazG family protein
+
+ ### Family: 14 -> transcription-repair coupling factor Mfd
+
+	 AFM21326.1	transcription-repair coupling factor Mfd
+	 ADE56882.1	DEAD/DEAH box helicase domain protein
+
+ ### Family: 15 -> antibiotic ABC transporter ATP-binding protein
+
+	 OGW06861.1	antibiotic ABC transporter ATP-binding protein
+	 ACC81397.1	ABC transporter related
+
+ ### Family: 16 -> conserved hypothetical protein
+
+	 WP_009632341.1	hypothetical protein
+	 ACC81394.1	conserved hypothetical protein
+
+ ### Family: 17 -> KH domain-containing protein
+
+	 WP_028954273.1	KH domain-containing protein
+	 ACC81392.1	conserved hypothetical protein
+
+ ### Family: 18 -> 30S ribosomal protein S16
+
+	 WP_009632335.1	30S ribosomal protein S16
+	 ACC81391.1	ribosomal protein S16
+
+ ### Family: 19 -> magnesium/cobalt efflux protein
+
+	 NP_415191.1	CorC-HlyC family protein YbeX
+	 ALZ83657.1	magnesium/cobalt efflux protein
+	 ALM84753.1	magnesium/cobalt efflux protein
+	 AOY00585.1	magnesium/cobalt efflux protein
+	 ABM45581.1	magnesium and cobalt efflux protein CorC
+	 KUR80478.1	cobalt transporter
+	 CDM65290.1	CBS domain-containing protein
+	 OFW14532.1	hypothetical protein
+	 ADR36655.1	protein of unknown function DUF21
+	 AFM21333.1	CBS domain-containing protein
+	 ADE56888.1	protein of unknown function DUF21
+	 KWX22262.1	membrane protein
+	 ADH66154.1	CBS domain containing protein
+
+ ### Family: 20 -> apolipoprotein N-acyltransferase
+
+	 NP_415190.1	apolipoprotein N-acyltransferase
+	 ALZ83656.1	apolipoprotein N-acyltransferase
+	 ALM84754.1	apolipoprotein N-acyltransferase
+	 AOY00586.1	apolipoprotein N-acyltransferase
+	 ABM45042.1	apolipoprotein N-acyltransferase
+
+ ### Family: 21 -> (dimethylallyl)adenosine tRNA methylthiotransferase
+
+	 NP_415194.1	isopentenyl-adenosine A37 tRNA methylthiolase
+	 ALZ83660.1	tRNA-2-methylthio-N(6)-dimethylallyladenosine synthase MiaB
+	 ALM84751.1	(dimethylallyl)adenosine tRNA methylthiotransferase
+	 AOY02282.1	tRNA (N6-isopentenyl adenosine(37)-C2)-methylthiotransferase MiaB
+	 ABM44770.1	tRNA-i(6)A37 thiotransferase enzyme MiaB
+	 KUR80368.1	(dimethylallyl)adenosine tRNA methylthiotransferase
+
+ ### Family: 22 -> rRNA maturation RNase YbeY
+
+	 NP_415192.1	endoribonuclease YbeY
+	 ALZ83658.1	rRNA maturation factor
+	 ALM87087.1	rRNA maturation RNase YbeY
+	 AOY00584.1	rRNA maturation RNase YbeY
+	 ABM44555.1	conserved hypothetical protein TIGR00043
+	 KUR80477.1	rRNA maturation RNase YbeY
+	 AKU90598.1	Metal-dependent hydrolase YbeY
+	 ADK84319.1	protein of unknown function UPF0054
+	 CDM65289.1	probable rRNA maturation factor YbeY
+	 OFW14544.1	rRNA maturation RNase YbeY
+	 OGW06859.1	rRNA maturation RNase YbeY
+	 CDD55820.1	probable rRNA maturation factor
+	 ADR36653.1	protein of unknown function UPF0054
+	 AFM21332.1	metalloprotein%2C YbeY/UPF0054 family
+	 ADE56887.1	protein of unknown function UPF0054
+	 KWX22261.1	heat-shock protein
+	 ADH66153.1	protein of unknown function UPF0054
+	 OFX35330.1	rRNA maturation RNase YbeY
+	 AGY81695.1	rRNA maturation factor
+	 EUJ33351.1	metal-binding heat shock protein
+
+ ### Family: 23 -> PhoH family protein
+
+	 NP_415193.2	PhoH-like protein
+	 ALZ83659.1	ATP-binding protein
+	 ALM84752.1	phosphate starvation-inducible protein PhoH
+	 AOY00583.1	phosphate starvation-inducible protein PhoH
+	 ABM45079.1	PhoH family protein
+	 KUR80369.1	phosphate starvation-inducible protein PhoH
+	 AKU90596.1	Phosphate starvation-inducible protein PhoH%2C predicted ATPase
+	 ADK84321.1	PhoH family protein
+	 CDM65288.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase
+	 OFW14531.1	hypothetical protein
+	 OAQ19958.1	Phosphate starvation-inducible protein PhoH%2C predicted ATPase
+	 OGW06857.1	hypothetical protein
+	 ABC43690.1	PhoH family protein
+	 CDD55821.1	putative uncharacterized protein
+	 ADR36652.1	PhoH family protein
+	 AAF11540.1	PhoH-related protein
+	 AFM21330.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase
+	 ADE56885.1	PhoH family protein
+	 KWX22260.1	phosphate starvation protein PhoH
+	 ADH66152.1	PhoH family protein
+	 OFX35328.1	phosphate starvation-inducible protein PhoH
+	 AGY81693.1	phosphate starvation-inducible protein PhoH
+	 EUJ33349.1	PhoH family protein
+
+ ### Family: 25 -> PhoH family protein
+
+	 WP_009632337.1	PhoH family protein
+	 ACC81393.1	PhoH family protein
+
+ ### Family: 10000 -> pseudogene
+
+	 A2Z07_13220	pseudogene
+	 A2Z07_13225	pseudogene
+	 A2Z07_13230	pseudogene

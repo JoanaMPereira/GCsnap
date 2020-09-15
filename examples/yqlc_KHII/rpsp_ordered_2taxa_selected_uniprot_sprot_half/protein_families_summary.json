@@ -1,0 +1,611 @@
+{
+    "0": {
+        "name": "Non-conserved",
+        "members": [
+            "NP_417104.1",
+            "YP_026171.3",
+            "NP_417102.4",
+            "CAE38163.1",
+            "CAE38162.1",
+            "CAE38161.1",
+            "CAE38156.1",
+            "CAE38155.1",
+            "ABM44559.1",
+            "ABM45117.1",
+            "ABM44704.1",
+            "ABM45177.1",
+            "ABM44460.1",
+            "ABM45685.1",
+            "ABM44945.1",
+            "CAL34843.1",
+            "CAL34844.1",
+            "CAL34845.1",
+            "ABF90607.1",
+            "ABF91257.1",
+            "ABF90253.1",
+            "ABF86078.1",
+            "ACO32581.1",
+            "ACO31372.1",
+            "ACO34497.1",
+            "ACI20485.1",
+            "ACI21187.1",
+            "ACI22065.1",
+            "AAC67612.1",
+            "AAC67613.1",
+            "AAC67614.1",
+            "AAC67620.1",
+            "ACD83334.1",
+            "ACD83333.1",
+            "ACD83332.1",
+            "ACD83329.1",
+            "CAD77807.1",
+            "CAD77806.1",
+            "CAD77805.1",
+            "CAD77800.1",
+            "CAD77799.1",
+            "BAG32690.1",
+            "BAG32689.1",
+            "BAG32688.1",
+            "BAG32687.1",
+            "BAG32685.1",
+            "BAG32684.1",
+            "BAG32683.1",
+            "BAG32682.1",
+            "ABB28074.1",
+            "ABB28073.1",
+            "ABB28072.1",
+            "ABB28066.1",
+            "ADL26778.1",
+            "ADL24632.1",
+            "ADL26321.1",
+            "ADL25209.1",
+            "AAC06475.1",
+            "AAC06476.1",
+            "AAC06483.1",
+            "AAC06477.1",
+            "AAC06497.1",
+            "AAC06498.1",
+            "AAC06499.1",
+            "BAD70862.1",
+            "BAD70861.1",
+            "BAD70860.1",
+            "ACZ19651.1",
+            "ACZ19650.1",
+            "CCP45715.1",
+            "CCP45714.1",
+            "CCP45713.1",
+            "CCP45712.1",
+            "CCP45707.1",
+            "CCW36459.1",
+            "CCW36460.1",
+            "NP_389478.1",
+            "NP_389483.1",
+            "AAC72471.1",
+            "AAC72470.2",
+            "AAC72468.1",
+            "AAC72467.1",
+            "AAC72463.1",
+            "AAC72462.1",
+            "ACC81388.1",
+            "ACC81389.1",
+            "ACC81393.1",
+            "ACC81394.1",
+            "ACC81395.1",
+            "AAD36628.1",
+            "AAD36629.1",
+            "AAD36630.1",
+            "AAD36637.1",
+            "AAK74909.1",
+            "AAK74910.1",
+            "AAK74911.1",
+            "AAK74912.1",
+            "AAK74915.1"
+        ],
+        "all_names": [
+            "Non-conserved"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "9": {
+        "name": "signal recognition particle protein",
+        "members": [
+            "NP_417101.1",
+            "ABM45267.1",
+            "CAL34846.1",
+            "AAC67615.1",
+            "ACD83331.1",
+            "CAD77804.1",
+            "ABB28071.1",
+            "ADL27401.1",
+            "BAD70859.1",
+            "ACZ19648.1",
+            "CCW36462.1",
+            "NP_389477.1",
+            "NP_389480.1",
+            "ACC81390.1",
+            "AAD36632.1"
+        ],
+        "all_names": [
+            "signal recognition particle protein component",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "Signal Recognition Particle GTPase",
+            "Signal recognition particle GTPase",
+            "signal recognition particle protein",
+            "signal recognition particle subunit FFH/SRP54 (srp54)",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle protein",
+            "signal recognition particle subunit FFH/SRP54 (srp54)",
+            "signal recognition particle (docking protein)",
+            "signal recognition particle-like (SRP) GTPase",
+            "signal recognition particle protein",
+            "signal recognition particle protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:signal recognition particle",
+                "F:7S RNA binding",
+                "F:GTP binding",
+                "F:GTPase activity",
+                "P:SRP-dependent cotranslational protein targeting to membrane"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Cytoplasm",
+                "GTP-binding",
+                "Nucleotide-binding",
+                "Ribonucleoprotein",
+                "RNA-binding",
+                "Signal recognition particle"
+            ],
+            "Function_description": "Involved in targeting and insertion of nascent membrane proteins into the cytoplasmic membrane. Binds to the hydrophobic signal sequence of the ribosome-nascent chain (RNC) as it emerges from the ribosomes. The SRP-RNC complex is then targeted to the cytoplasmic membrane where it interacts with the SRP receptor FtsY"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/FTSY_BACSU",
+        "uniprot_code": "FTSY_BACSU",
+        "model_state": "Model exists"
+    },
+    "11": {
+        "name": "ribosomal protein S16",
+        "members": [
+            "NP_417100.1",
+            "CAE38159.1",
+            "ABM44631.1",
+            "CAL34847.1",
+            "ABF88726.1",
+            "ACO33354.1",
+            "ACI20405.1",
+            "AAC67616.1",
+            "ACD83330.1",
+            "CAD77803.1",
+            "BAG32686.1",
+            "ABB28070.1",
+            "ADL25432.1",
+            "AAC06492.1",
+            "BAD70858.1",
+            "ACZ19647.1",
+            "CCP45711.1",
+            "CCW36463.1",
+            "NP_389481.1",
+            "AAC72466.2",
+            "ACC81391.1",
+            "AAD36633.1",
+            "AAK74913.1"
+        ],
+        "all_names": [
+            "30S ribosomal subunit protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "ribosomal protein S16",
+            "ribosomal protein S16",
+            "S16 Ribosomal Protein",
+            "Ribosomal protein S16",
+            "probable 30S ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "SSU ribosomal protein S16P",
+            "ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16",
+            "ribosomal protein S16",
+            "30S ribosomal protein S16 RpsP",
+            "SSU ribosomal protein S16P",
+            "ribosomal protein S16 (BS17)",
+            "ribosomal protein S16",
+            "ribosomal protein S16",
+            "ribosomal protein S16",
+            "ribosomal protein S16"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation"
+            ],
+            "Keywords": [
+                "Ribonucleoprotein",
+                "Ribosomal protein"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RS16_AQUAE",
+        "uniprot_code": "RS16_AQUAE",
+        "model_state": "Model exists"
+    },
+    "5": {
+        "name": "16S rRNA processing protein RimM",
+        "members": [
+            "NP_417099.4",
+            "CAE38158.1",
+            "CAL34849.1",
+            "ABF89241.1",
+            "ACO31518.1",
+            "ABB28069.1",
+            "ADL26406.1",
+            "BAD70856.1",
+            "ACZ19645.1",
+            "CCP45709.1",
+            "CCW36465.1",
+            "NP_389484.1",
+            "AAD36635.1",
+            "AAK74916.1"
+        ],
+        "all_names": [
+            "ribosome maturation factor RimM",
+            "16S rRNA processing protein",
+            "putative 16S rRNA processing protein",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "Probable 16S rRNA processing protein RimM",
+            "16S rRNA processing protein RimM",
+            "16S rRNA processing protein",
+            "16S rRNA processing protein%2C putative",
+            "16S rRNA processing protein RimM"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "C:ribosome",
+                "F:ribosome binding",
+                "P:ribosomal small subunit biogenesis",
+                "P:rRNA processing"
+            ],
+            "Keywords": [
+                "Chaperone",
+                "Cytoplasm",
+                "Ribosome biogenesis"
+            ],
+            "Function_description": "An accessory protein needed during the final step in the assembly of 30S ribosomal subunit, possibly for assembly of the head region. Probably interacts with S19. Essential for efficient processing of 16S rRNA. May be needed both before and after RbfA during the maturation of 16S rRNA. It has affinity for free ribosomal 30S subunits but not for 70S ribosomes"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RIMM_THEMA",
+        "uniprot_code": "RIMM_THEMA",
+        "model_state": "Model exists"
+    },
+    "8": {
+        "name": "tRNA (guanine-N1)-methyltransferase",
+        "members": [
+            "NP_417098.1",
+            "CAE38157.1",
+            "CAL34850.1",
+            "ABF92908.1",
+            "ACO33737.1",
+            "ACI20613.1",
+            "AAC67617.1",
+            "ACD83328.1",
+            "CAD77802.1",
+            "ABB28068.1",
+            "ADL25835.1",
+            "BAD70855.1",
+            "ACZ19644.1",
+            "CCP45708.1",
+            "CCW36466.1",
+            "NP_389485.1",
+            "AAC72465.1",
+            "AAD36636.1",
+            "AAK74917.1"
+        ],
+        "all_names": [
+            "tRNA m(1)G37 methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine N-1) Methyltransferase",
+            "tRNA-(guanine-N1)-methyltransferase",
+            "tRNA (Guanine-N(1))-methyltransferase",
+            "tRNA (Guanine37-N(1)-) methyltransferase",
+            "tRNA (guanine-N(1)-)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "Probable tRNA (guanine-N1)-methyltransferase TrmD (M1G-methyltransferase) (tRNA [GM37] methyltransferase)",
+            "tRNA (Guanine37-N(1)-) methyltransferase",
+            "tRNA(m1G37)methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase",
+            "tRNA guanine-N1 methyltransferase",
+            "tRNA (guanine-N1)-methyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:tRNA (guanine(37)-N(1))-methyltransferase activity"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Methyltransferase",
+                "S-adenosyl-L-methionine",
+                "Transferase",
+                "tRNA processing"
+            ],
+            "Function_description": "Specifically methylates guanosine-37 in various tRNAs"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/TRMD_CHLTR",
+        "uniprot_code": "TRMD_CHLTR",
+        "model_state": "Model exists"
+    },
+    "7": {
+        "name": "ribosomal protein L19",
+        "members": [
+            "NP_417097.1",
+            "CAL34851.1",
+            "ABF91840.1",
+            "ACI21105.1",
+            "AAC67618.1",
+            "ACD83327.1",
+            "CAD77801.1",
+            "ABB28067.1",
+            "ADL26577.1",
+            "BAD70854.1",
+            "ACZ19643.1",
+            "CCW36467.1",
+            "AAC72464.1"
+        ],
+        "all_names": [
+            "50S ribosomal subunit protein L19",
+            "50S ribosomal protein L19",
+            "ribosomal protein L19",
+            "ribosomal protein L19",
+            "L19 Ribosomal Protein",
+            "Ribosomal protein L19",
+            "50S ribosomal protein L19",
+            "LSU ribosomal protein L19P",
+            "ribosomal protein L19",
+            "50S ribosomal protein L19",
+            "ribosomal protein L19",
+            "ribosomal protein L19%2C bacterial type",
+            "ribosomal protein L19"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation"
+            ],
+            "Keywords": [
+                "Ribonucleoprotein",
+                "Ribosomal protein"
+            ],
+            "Function_description": "This protein is located at the 30S-50S ribosomal subunit interface and may play a role in the structure and function of the aminoacyl-tRNA binding site"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RL19_CHLTR",
+        "uniprot_code": "RL19_CHLTR",
+        "model_state": "Model exists"
+    },
+    "3": {
+        "name": "lipoprotein YfiB",
+        "members": [
+            "NP_417096.1",
+            "ACI20276.1"
+        ],
+        "all_names": [
+            "lipoprotein YfiB",
+            "chemotaxis protein MotB"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:cell outer membrane",
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/YFIB_ECOLI",
+        "uniprot_code": "YFIB_ECOLI",
+        "model_state": "Model exists"
+    },
+    "10000": {
+        "name": "pseudogene",
+        "members": [
+            "BPP2868"
+        ],
+        "all_names": [
+            "pseudogene"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "10": {
+        "name": "conserved hypothetical protein",
+        "members": [
+            "CAL34848.1",
+            "ABF88169.1",
+            "ACO31799.1",
+            "ACI21321.1",
+            "AAC06503.1",
+            "BAD70857.1",
+            "ACZ19646.1",
+            "CCP45710.1",
+            "CCW36464.1",
+            "NP_389482.1",
+            "ACC81392.1",
+            "AAD36634.1",
+            "AAK74914.1"
+        ],
+        "all_names": [
+            "hypothetical protein Cj0711",
+            "KH domain protein",
+            "conserved hypothetical protein",
+            "conserved domain protein",
+            "hypothetical protein",
+            "conserved hypothetical protein",
+            "KH type 2 domain protein",
+            "Conserved hypothetical protein",
+            "RNA-binding protein (KH domain)",
+            "putative RNA binding protein",
+            "conserved hypothetical protein",
+            "conserved hypothetical protein",
+            "KH domain protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:RNA binding"
+            ],
+            "Keywords": [
+                "RNA-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "YLQC_BACSU",
+        "model_state": "Model does not exist"
+    },
+    "2": {
+        "name": "3-deoxy-D-manno-octulosonate cytidylyltransferase",
+        "members": [
+            "ACO33639.1",
+            "CCW36461.1"
+        ],
+        "all_names": [
+            "3-deoxy-D-manno-octulosonate cytidylyltransferase",
+            "3-deoxy-D-manno-octulosonate cytidylyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:3-deoxy-manno-octulosonate cytidylyltransferase activity",
+                "P:CMP-keto-3-deoxy-D-manno-octulosonic acid biosynthetic process",
+                "P:lipopolysaccharide biosynthetic process"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Lipopolysaccharide biosynthesis",
+                "Nucleotidyltransferase",
+                "Transferase"
+            ],
+            "Function_description": "Activates KDO (a required 8-carbon sugar) for incorporation into bacterial lipopolysaccharide in Gram-negative bacteria"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/KDSB_ACIC5",
+        "uniprot_code": "KDSB_ACIC5",
+        "model_state": "Model exists"
+    },
+    "4": {
+        "name": "two-component hybrid sensor and regulator",
+        "members": [
+            "ACO31734.1",
+            "ACC81387.1"
+        ],
+        "all_names": [
+            "two-component hybrid sensor and regulator",
+            "GAF sensor signal transduction histidine kinase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding",
+                "F:phosphorelay sensor kinase activity",
+                "P:protein-chromophore linkage",
+                "P:regulation of transcription, DNA-templated"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Coiled coil",
+                "Kinase",
+                "Nucleotide-binding",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "C1F3B6_ACIC5",
+        "model_state": "Model does not exist"
+    },
+    "6": {
+        "name": "Ribonuclease HII",
+        "members": [
+            "ACI21777.1",
+            "AAC67619.1",
+            "ACD83326.1"
+        ],
+        "all_names": [
+            "ribonuclease HII",
+            "Ribonuclease HII",
+            "Ribonuclease HII"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:manganese ion binding",
+                "F:RNA binding",
+                "F:RNA-DNA hybrid ribonuclease activity",
+                "P:RNA catabolic process"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Endonuclease",
+                "Hydrolase",
+                "Manganese",
+                "Metal-binding",
+                "Nuclease"
+            ],
+            "Function_description": "Endonuclease that specifically degrades the RNA of RNA-DNA hybrids"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RNH2_CHLTR",
+        "uniprot_code": "RNH2_CHLTR",
+        "model_state": "Model exists"
+    },
+    "1": {
+        "name": "putative helix-turn-helix protein YlxM/p13 family protein",
+        "members": [
+            "ACZ19649.1",
+            "NP_389479.1"
+        ],
+        "all_names": [
+            "putative helix-turn-helix protein YlxM/p13 family protein",
+            "component of the signal recognition particle (SRP) protein-targeting pathway"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": "Might take part in the signal recognition particle (SRP) pathway. This is inferred from the conservation of its genetic proximity to ftsY/ffh. May be a regulatory protein"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/YLXM_BACSU",
+        "uniprot_code": "YLXM_BACSU",
+        "model_state": "Model exists"
+    }
+}

@@ -1,0 +1,360 @@
+{
+    "Bacteria": {
+        "Proteobacteria": {
+            "Gammaproteobacteria": {
+                "Enterobacterales": {
+                    "Escherichia": {
+                        "Escherichia coli str. K-12 substr. MG1655": {
+                            "ncbi_codes": [
+                                "NP_417100.1"
+                            ],
+                            "target_members": [
+                                "RS16_ECOLI"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Betaproteobacteria": {
+                "Burkholderiales": {
+                    "Bordetella": {
+                        "Bordetella parapertussis": {
+                            "ncbi_codes": [
+                                "CAE38159.1"
+                            ],
+                            "target_members": [
+                                "RS16_BORPA"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Alphaproteobacteria": {
+                "Rhizobiales": {
+                    "Bartonella": {
+                        "Bartonella bacilliformis KC583": {
+                            "ncbi_codes": [
+                                "ABM44631.1"
+                            ],
+                            "target_members": [
+                                "RS16_BARBK"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Epsilonproteobacteria": {
+                "Campylobacterales": {
+                    "Campylobacter": {
+                        "Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819": {
+                            "ncbi_codes": [
+                                "CAL34847.1"
+                            ],
+                            "target_members": [
+                                "RS16_CAMJE"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Deltaproteobacteria": {
+                "Myxococcales": {
+                    "Myxococcus": {
+                        "Myxococcus xanthus DK 1622": {
+                            "ncbi_codes": [
+                                "ABF88726.1"
+                            ],
+                            "target_members": [
+                                "RS16_MYXXD"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Acidobacteria": {
+            "Acidobacteriia": {
+                "Acidobacteriales": {
+                    "Acidobacterium": {
+                        "Acidobacterium capsulatum ATCC 51196": {
+                            "ncbi_codes": [
+                                "ACO33354.1"
+                            ],
+                            "target_members": [
+                                "RS16_ACIC5"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Nitrospirae": {
+            "Nitrospira": {
+                "Nitrospirales": {
+                    "Thermodesulfovibrio": {
+                        "Thermodesulfovibrio yellowstonii DSM 11347": {
+                            "ncbi_codes": [
+                                "ACI20405.1"
+                            ],
+                            "target_members": [
+                                "RS16_THEYD"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Chlamydiae": {
+            "Chlamydiia": {
+                "Chlamydiales": {
+                    "Chlamydia": {
+                        "Chlamydia trachomatis D/UW-3/CX": {
+                            "ncbi_codes": [
+                                "AAC67616.1"
+                            ],
+                            "target_members": [
+                                "RS16_CHLTR"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Verrucomicrobia": {
+            "Methylacidiphilae": {
+                "Methylacidiphilales": {
+                    "Methylacidiphilum": {
+                        "Methylacidiphilum infernorum V4": {
+                            "ncbi_codes": [
+                                "ACD83330.1"
+                            ],
+                            "target_members": [
+                                "RS16_METI4"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Planctomycetes": {
+            "Planctomycetia": {
+                "Pirellulales": {
+                    "Rhodopirellula": {
+                        "Rhodopirellula baltica SH 1": {
+                            "ncbi_codes": [
+                                "CAD77803.1"
+                            ],
+                            "target_members": [
+                                "RS16_RHOBA"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Bacteroidetes": {
+            "Bacteroidia": {
+                "Bacteroidales": {
+                    "Porphyromonas": {
+                        "Porphyromonas gingivalis ATCC 33277": {
+                            "ncbi_codes": [
+                                "BAG32686.1"
+                            ],
+                            "target_members": [
+                                "RS16_PORG3"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Chlorobi": {
+            "Chlorobia": {
+                "Chlorobiales": {
+                    "Chlorobium": {
+                        "Chlorobium chlorochromatii CaD3": {
+                            "ncbi_codes": [
+                                "ABB28070.1"
+                            ],
+                            "target_members": [
+                                "RS16_CHLCH"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Fibrobacteres": {
+            "Fibrobacteria": {
+                "Fibrobacterales": {
+                    "Fibrobacter": {
+                        "Fibrobacter succinogenes subsp. succinogenes S85": {
+                            "ncbi_codes": [
+                                "ADL25432.1"
+                            ],
+                            "target_members": [
+                                "C9RLH7_FIBSS"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Aquificae": {
+            "Aquificae": {
+                "Aquificales": {
+                    "Aquifex": {
+                        "Aquifex aeolicus VF5": {
+                            "ncbi_codes": [
+                                "AAC06492.1"
+                            ],
+                            "target_members": [
+                                "RS16_AQUAE"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Deinococcus-Thermus": {
+            "Deinococci": {
+                "Thermales": {
+                    "Thermus": {
+                        "Thermus thermophilus HB8": {
+                            "ncbi_codes": [
+                                "BAD70858.1"
+                            ],
+                            "target_members": [
+                                "RS16_THET8"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Synergistetes": {
+            "Synergistia": {
+                "Synergistales": {
+                    "Thermanaerovibrio": {
+                        "Thermanaerovibrio acidaminovorans DSM 6589": {
+                            "ncbi_codes": [
+                                "ACZ19647.1"
+                            ],
+                            "target_members": [
+                                "D1B6K6_THEAS"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Actinobacteria": {
+            "Actinobacteria": {
+                "Corynebacteriales": {
+                    "Mycobacterium": {
+                        "Mycobacterium tuberculosis H37Rv": {
+                            "ncbi_codes": [
+                                "CCP45711.1"
+                            ],
+                            "target_members": [
+                                "RS16_MYCTU"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Armatimonadetes": {
+            "Chthonomonadetes": {
+                "Chthonomonadales": {
+                    "Chthonomonas": {
+                        "Chthonomonas calidirosea T49": {
+                            "ncbi_codes": [
+                                "CCW36463.1"
+                            ],
+                            "target_members": [
+                                "S0EXP8_CHTCT"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Firmicutes": {
+            "Bacilli": {
+                "Bacillales": {
+                    "Bacillus": {
+                        "Bacillus subtilis subsp. subtilis str. 168": {
+                            "ncbi_codes": [
+                                "NP_389481.1"
+                            ],
+                            "target_members": [
+                                "RS16_BACSU"
+                            ]
+                        }
+                    }
+                },
+                "Lactobacillales": {
+                    "Streptococcus": {
+                        "Streptococcus pneumoniae TIGR4": {
+                            "ncbi_codes": [
+                                "AAK74913.1"
+                            ],
+                            "target_members": [
+                                "RS16_STRPN"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Tenericutes": {
+            "Mollicutes": {
+                "Mycoplasmatales": {
+                    "Mycoplasma": {
+                        "Mycoplasma genitalium G37": {
+                            "ncbi_codes": [
+                                "AAC72466.2"
+                            ],
+                            "target_members": [
+                                "RS16_MYCGE"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Cyanobacteria": {
+            "Cyanobacteria_na": {
+                "Nostocales": {
+                    "Nostoc": {
+                        "Nostoc punctiforme PCC 73102": {
+                            "ncbi_codes": [
+                                "ACC81391.1"
+                            ],
+                            "target_members": [
+                                "RS16_NOSP7"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Thermotogae": {
+            "Thermotogae": {
+                "Thermotogales": {
+                    "Thermotoga": {
+                        "Thermotoga maritima MSB8": {
+                            "ncbi_codes": [
+                                "AAD36633.1"
+                            ],
+                            "target_members": [
+                                "RS16_THEMA"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

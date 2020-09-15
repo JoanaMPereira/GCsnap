@@ -1,0 +1,1996 @@
+{
+    "Bacteria": {
+        "Actinobacteria": {
+            "Actinobacteria_na": {
+                "Actinobacteria_na_na": {
+                    "Actinobacteria": {
+                        "Actinobacteria bacterium HGW-Actinobacteria-7": {
+                            "ncbi_codes": [
+                                "PKQ17359.1"
+                            ],
+                            "target_members": [
+                                "PKQ17359.1"
+                            ]
+                        },
+                        "Actinobacteria bacterium RBG_13_63_9": {
+                            "ncbi_codes": [
+                                "OFW67048.1"
+                            ],
+                            "target_members": [
+                                "OFW67048.1"
+                            ]
+                        },
+                        "Actinobacteria bacterium HGW-Actinobacteria-3": {
+                            "ncbi_codes": [
+                                "PKQ28811.1"
+                            ],
+                            "target_members": [
+                                "PKQ28811.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Actinobacteria": {
+                "Actinobacteria_na": {
+                    "Actinobacteria": {
+                        "Actinobacteria bacterium": {
+                            "ncbi_codes": [
+                                "WP_174621182.1",
+                                "TMM13716.1",
+                                "TMK87696.1",
+                                "TMK87268.1",
+                                "TMK17718.1",
+                                "PLS75815.1",
+                                "TMM01377.1"
+                            ],
+                            "target_members": [
+                                "WP_174621182.1",
+                                "TMM13716.1",
+                                "TMK87696.1",
+                                "TMK87268.1",
+                                "TMK17718.1",
+                                "PLS75815.1",
+                                "TMM01377.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Coriobacteriia": {
+                "Eggerthellales": {
+                    "unclassified": {
+                        "unclassified Adlercreutzia": {
+                            "ncbi_codes": [
+                                "WP_165059976.1",
+                                "WP_165044303.1"
+                            ],
+                            "target_members": [
+                                "WP_165059976.1",
+                                "WP_165044303.1"
+                            ]
+                        }
+                    },
+                    "Slackia": {
+                        "Slackia equolifaciens": {
+                            "ncbi_codes": [
+                                "WP_123208283.1"
+                            ],
+                            "target_members": [
+                                "WP_123208283.1"
+                            ]
+                        },
+                        "Slackia heliotrinireducens": {
+                            "ncbi_codes": [
+                                "WP_012798236.1"
+                            ],
+                            "target_members": [
+                                "WP_012798236.1"
+                            ]
+                        }
+                    },
+                    "Eggerthella": {
+                        "Eggerthella sp. CAG:368": {
+                            "ncbi_codes": [
+                                "CDD67297.1"
+                            ],
+                            "target_members": [
+                                "CDD67297.1"
+                            ]
+                        }
+                    },
+                    "Denitrobacterium": {
+                        "Denitrobacterium detoxificans": {
+                            "ncbi_codes": [
+                                "WP_066661777.1"
+                            ],
+                            "target_members": [
+                                "WP_066661777.1"
+                            ]
+                        }
+                    },
+                    "Adlercreutzia": {
+                        "Adlercreutzia sp. 8CFCBH1": {
+                            "ncbi_codes": [
+                                "WP_173112693.1"
+                            ],
+                            "target_members": [
+                                "WP_173112693.1"
+                            ]
+                        }
+                    }
+                },
+                "Coriobacteriales": {
+                    "Atopobium": {
+                        "Atopobium fossor": {
+                            "ncbi_codes": [
+                                "WP_028264296.1"
+                            ],
+                            "target_members": [
+                                "WP_028264296.1"
+                            ]
+                        }
+                    },
+                    "Coriobacteriales": {
+                        "Coriobacteriales bacterium DNF00809": {
+                            "ncbi_codes": [
+                                "WP_066779811.1"
+                            ],
+                            "target_members": [
+                                "WP_066779811.1"
+                            ]
+                        }
+                    },
+                    "Olsenella": {
+                        "Olsenella urininfantis": {
+                            "ncbi_codes": [
+                                "WP_097677401.1"
+                            ],
+                            "target_members": [
+                                "WP_097677401.1"
+                            ]
+                        }
+                    },
+                    "Coriobacterium": {
+                        "Coriobacterium glomerans": {
+                            "ncbi_codes": [
+                                "WP_041739193.1"
+                            ],
+                            "target_members": [
+                                "WP_041739193.1"
+                            ]
+                        }
+                    }
+                },
+                "Coriobacteriia_na": {
+                    "Coriobacteriia": {
+                        "Coriobacteriia bacterium": {
+                            "ncbi_codes": [
+                                "PWL79277.1"
+                            ],
+                            "target_members": [
+                                "PWL79277.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Thermoleophilia": {
+                "Solirubrobacterales": {
+                    "Solirubrobacter": {
+                        "Solirubrobacter soli": {
+                            "ncbi_codes": [
+                                "WP_084286292.1"
+                            ],
+                            "target_members": [
+                                "WP_084286292.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Rubrobacteria": {
+                "Rubrobacterales": {
+                    "Rubrobacter": {
+                        "Rubrobacter indicoceani": {
+                            "ncbi_codes": [
+                                "WP_119067951.1"
+                            ],
+                            "target_members": [
+                                "WP_119067951.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Firmicutes": {
+            "Clostridia": {
+                "Clostridiales": {
+                    "Peptococcaceae": {
+                        "Peptococcaceae bacterium DCMF": {
+                            "ncbi_codes": [
+                                "WP_148133815.1"
+                            ],
+                            "target_members": [
+                                "WP_148133815.1"
+                            ]
+                        }
+                    },
+                    "Desulfonispora": {
+                        "Desulfonispora thiosulfatigenes": {
+                            "ncbi_codes": [
+                                "WP_084053921.1"
+                            ],
+                            "target_members": [
+                                "WP_084053921.1"
+                            ]
+                        }
+                    },
+                    "Oscillospiraceae": {
+                        "Oscillospiraceae bacterium HV4-5-C5C": {
+                            "ncbi_codes": [
+                                "WP_168097847.1"
+                            ],
+                            "target_members": [
+                                "WP_168097847.1"
+                            ]
+                        }
+                    },
+                    "Clostridiales": {
+                        "Clostridiales bacterium": {
+                            "ncbi_codes": [
+                                "PWM50527.1"
+                            ],
+                            "target_members": [
+                                "PWM50527.1"
+                            ]
+                        }
+                    },
+                    "Peptostreptococcaceae": {
+                        "Peptostreptococcaceae bacterium oral taxon 113": {
+                            "ncbi_codes": [
+                                "WP_036741206.1"
+                            ],
+                            "target_members": [
+                                "WP_036741206.1"
+                            ]
+                        }
+                    },
+                    "Peptococcus": {
+                        "Peptococcus niger": {
+                            "ncbi_codes": [
+                                "WP_091790858.1"
+                            ],
+                            "target_members": [
+                                "WP_091790858.1"
+                            ]
+                        }
+                    },
+                    "Alterileibacterium": {
+                        "Alterileibacterium massiliense": {
+                            "ncbi_codes": [
+                                "WP_071131953.1"
+                            ],
+                            "target_members": [
+                                "WP_071131953.1"
+                            ]
+                        }
+                    },
+                    "Ruminococcaceae": {
+                        "Ruminococcaceae bacterium": {
+                            "ncbi_codes": [
+                                "PWM34106.1"
+                            ],
+                            "target_members": [
+                                "PWM34106.1"
+                            ]
+                        }
+                    },
+                    "Anaerofustis": {
+                        "Anaerofustis stercorihominis": {
+                            "ncbi_codes": [
+                                "WP_138268653.1"
+                            ],
+                            "target_members": [
+                                "WP_138268653.1"
+                            ]
+                        }
+                    },
+                    "Clostridium": {
+                        "Clostridium sp. CAG:914": {
+                            "ncbi_codes": [
+                                "CDE95132.1"
+                            ],
+                            "target_members": [
+                                "CDE95132.1"
+                            ]
+                        }
+                    },
+                    "Anaerobranca": {
+                        "Anaerobranca gottschalkii": {
+                            "ncbi_codes": [
+                                "WP_091351128.1"
+                            ],
+                            "target_members": [
+                                "WP_091351128.1"
+                            ]
+                        }
+                    },
+                    "Coprococcus": {
+                        "Coprococcus sp. OM04-5BH": {
+                            "ncbi_codes": [
+                                "WP_021939060.1"
+                            ],
+                            "target_members": [
+                                "WP_021939060.1"
+                            ]
+                        }
+                    },
+                    "[Clostridium]": {
+                        "[Clostridium] polysaccharolyticum": {
+                            "ncbi_codes": [
+                                "WP_092478849.1"
+                            ],
+                            "target_members": [
+                                "WP_092478849.1"
+                            ]
+                        }
+                    },
+                    "Youngiibacter": {
+                        "Youngiibacter fragilis": {
+                            "ncbi_codes": [
+                                "WP_023387859.1"
+                            ],
+                            "target_members": [
+                                "WP_023387859.1"
+                            ]
+                        }
+                    }
+                },
+                "Halanaerobiales": {
+                    "Halanaerobium": {
+                        "Halanaerobium congolense": {
+                            "ncbi_codes": [
+                                "WP_089722705.1"
+                            ],
+                            "target_members": [
+                                "WP_089722705.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Bacilli": {
+                "Bacillales": {
+                    "Bacillus": {
+                        "Bacillus thermozeamaize": {
+                            "ncbi_codes": [
+                                "OUM88402.1"
+                            ],
+                            "target_members": [
+                                "OUM88402.1"
+                            ]
+                        },
+                        "Bacillus gobiensis": {
+                            "ncbi_codes": [
+                                "WP_053605992.1"
+                            ],
+                            "target_members": [
+                                "WP_053605992.1"
+                            ]
+                        },
+                        "Bacillus sp. FJAT-27916": {
+                            "ncbi_codes": [
+                                "WP_049671448.1"
+                            ],
+                            "target_members": [
+                                "WP_049671448.1"
+                            ]
+                        },
+                        "Bacillus taeanensis": {
+                            "ncbi_codes": [
+                                "WP_113808291.1"
+                            ],
+                            "target_members": [
+                                "WP_113808291.1"
+                            ]
+                        },
+                        "Bacillus solimangrovi": {
+                            "ncbi_codes": [
+                                "WP_069718753.1"
+                            ],
+                            "target_members": [
+                                "WP_069718753.1"
+                            ]
+                        },
+                        "Bacillus vietnamensis": {
+                            "ncbi_codes": [
+                                "WP_148940207.1"
+                            ],
+                            "target_members": [
+                                "WP_148940207.1"
+                            ]
+                        },
+                        "Bacillus coahuilensis": {
+                            "ncbi_codes": [
+                                "WP_059350745.1"
+                            ],
+                            "target_members": [
+                                "WP_059350745.1"
+                            ]
+                        },
+                        "Bacillus mangrovi": {
+                            "ncbi_codes": [
+                                "WP_155111253.1"
+                            ],
+                            "target_members": [
+                                "WP_155111253.1"
+                            ]
+                        },
+                        "Bacillus acidicola": {
+                            "ncbi_codes": [
+                                "WP_066264726.1"
+                            ],
+                            "target_members": [
+                                "WP_066264726.1"
+                            ]
+                        },
+                        "Bacillus pumilus": {
+                            "ncbi_codes": [
+                                "WP_099680534.1"
+                            ],
+                            "target_members": [
+                                "WP_099680534.1"
+                            ]
+                        }
+                    },
+                    "Planococcaceae": {
+                        "Planococcaceae bacterium Storch 2/2-2": {
+                            "ncbi_codes": [
+                                "WP_156705555.1"
+                            ],
+                            "target_members": [
+                                "WP_156705555.1"
+                            ]
+                        }
+                    },
+                    "Pontibacillus": {
+                        "Pontibacillus yanchengensis": {
+                            "ncbi_codes": [
+                                "WP_036816310.1"
+                            ],
+                            "target_members": [
+                                "WP_036816310.1"
+                            ]
+                        }
+                    },
+                    "Jeotgalicoccus": {
+                        "Jeotgalicoccus sp. S0W5": {
+                            "ncbi_codes": [
+                                "WP_166626503.1"
+                            ],
+                            "target_members": [
+                                "WP_166626503.1"
+                            ]
+                        }
+                    },
+                    "Caldibacillus": {
+                        "Caldibacillus debilis": {
+                            "ncbi_codes": [
+                                "WP_020156288.1"
+                            ],
+                            "target_members": [
+                                "WP_020156288.1"
+                            ]
+                        }
+                    },
+                    "Bhargavaea": {
+                        "Bhargavaea cecembensis": {
+                            "ncbi_codes": [
+                                "WP_040228095.1"
+                            ],
+                            "target_members": [
+                                "WP_040228095.1"
+                            ]
+                        }
+                    },
+                    "Salinicoccus": {
+                        "Salinicoccus sediminis": {
+                            "ncbi_codes": [
+                                "WP_046510790.1"
+                            ],
+                            "target_members": [
+                                "WP_046510790.1"
+                            ]
+                        }
+                    },
+                    "Alicyclobacillus": {
+                        "Alicyclobacillus herbarius": {
+                            "ncbi_codes": [
+                                "WP_026961723.1"
+                            ],
+                            "target_members": [
+                                "WP_026961723.1"
+                            ]
+                        },
+                        "Alicyclobacillus pomorum": {
+                            "ncbi_codes": [
+                                "WP_026963946.1"
+                            ],
+                            "target_members": [
+                                "WP_026963946.1"
+                            ]
+                        },
+                        "Alicyclobacillus montanus": {
+                            "ncbi_codes": [
+                                "WP_072873835.1"
+                            ],
+                            "target_members": [
+                                "WP_072873835.1"
+                            ]
+                        }
+                    },
+                    "Staphylospora": {
+                        "Staphylospora marina": {
+                            "ncbi_codes": [
+                                "WP_124727619.1"
+                            ],
+                            "target_members": [
+                                "WP_124727619.1"
+                            ]
+                        }
+                    },
+                    "Paenibacillus": {
+                        "Paenibacillus antri": {
+                            "ncbi_codes": [
+                                "WP_138196693.1"
+                            ],
+                            "target_members": [
+                                "WP_138196693.1"
+                            ]
+                        }
+                    },
+                    "Falsibacillus": {
+                        "Falsibacillus sp. GY 10110": {
+                            "ncbi_codes": [
+                                "WP_121680293.1"
+                            ],
+                            "target_members": [
+                                "WP_121680293.1"
+                            ]
+                        }
+                    },
+                    "Metasolibacillus": {
+                        "Metasolibacillus fluoroglycofenilyticus": {
+                            "ncbi_codes": [
+                                "WP_066169962.1"
+                            ],
+                            "target_members": [
+                                "WP_066169962.1"
+                            ]
+                        }
+                    },
+                    "Quasibacillus": {
+                        "Quasibacillus thermotolerans": {
+                            "ncbi_codes": [
+                                "WP_039232122.1"
+                            ],
+                            "target_members": [
+                                "WP_039232122.1"
+                            ]
+                        }
+                    },
+                    "Bacillaceae": {
+                        "Bacillaceae bacterium G1": {
+                            "ncbi_codes": [
+                                "OJF16653.1"
+                            ],
+                            "target_members": [
+                                "OJF16653.1"
+                            ]
+                        },
+                        "Bacillaceae bacterium SIJ1": {
+                            "ncbi_codes": [
+                                "WP_165199465.1"
+                            ],
+                            "target_members": [
+                                "WP_165199465.1"
+                            ]
+                        }
+                    },
+                    "Salsuginibacillus": {
+                        "Salsuginibacillus halophilus": {
+                            "ncbi_codes": [
+                                "PSL51166.1"
+                            ],
+                            "target_members": [
+                                "PSL51166.1"
+                            ]
+                        }
+                    },
+                    "Alkalihalobacillus": {
+                        "Alkalihalobacillus alcalophilus": {
+                            "ncbi_codes": [
+                                "WP_003322053.1"
+                            ],
+                            "target_members": [
+                                "WP_003322053.1"
+                            ]
+                        }
+                    },
+                    "Salimicrobium": {
+                        "Salimicrobium flavidum": {
+                            "ncbi_codes": [
+                                "WP_076556693.1"
+                            ],
+                            "target_members": [
+                                "WP_076556693.1"
+                            ]
+                        }
+                    },
+                    "Risungbinella": {
+                        "Risungbinella massiliensis": {
+                            "ncbi_codes": [
+                                "WP_044642606.1"
+                            ],
+                            "target_members": [
+                                "WP_044642606.1"
+                            ]
+                        }
+                    },
+                    "Acidibacillus": {
+                        "Acidibacillus sulfuroxidans": {
+                            "ncbi_codes": [
+                                "WP_109430894.1"
+                            ],
+                            "target_members": [
+                                "WP_109430894.1"
+                            ]
+                        }
+                    },
+                    "Sporolactobacillus": {
+                        "Sporolactobacillus shoreae": {
+                            "ncbi_codes": [
+                                "WP_135346905.1"
+                            ],
+                            "target_members": [
+                                "WP_135346905.1"
+                            ]
+                        }
+                    },
+                    "Indiicoccus": {
+                        "Indiicoccus explosivorum": {
+                            "ncbi_codes": [
+                                "WP_088005904.1"
+                            ],
+                            "target_members": [
+                                "WP_088005904.1"
+                            ]
+                        }
+                    },
+                    "Macrococcus": {
+                        "Macrococcus bovicus": {
+                            "ncbi_codes": [
+                                "WP_133451944.1"
+                            ],
+                            "target_members": [
+                                "WP_133451944.1"
+                            ]
+                        }
+                    },
+                    "Geobacillus": {
+                        "Geobacillus": {
+                            "ncbi_codes": [
+                                "WP_033023251.1"
+                            ],
+                            "target_members": [
+                                "WP_033023251.1"
+                            ]
+                        }
+                    },
+                    "Pueribacillus": {
+                        "Pueribacillus theae": {
+                            "ncbi_codes": [
+                                "WP_116552985.1"
+                            ],
+                            "target_members": [
+                                "WP_116552985.1"
+                            ]
+                        }
+                    },
+                    "Hazenella": {
+                        "Hazenella coriacea": {
+                            "ncbi_codes": [
+                                "WP_131926248.1"
+                            ],
+                            "target_members": [
+                                "WP_131926248.1"
+                            ]
+                        }
+                    },
+                    "Aureibacillus": {
+                        "Aureibacillus halotolerans": {
+                            "ncbi_codes": [
+                                "WP_133579266.1"
+                            ],
+                            "target_members": [
+                                "WP_133579266.1"
+                            ]
+                        }
+                    },
+                    "Nosocomiicoccus": {
+                        "Nosocomiicoccus sp. HMSC059G07": {
+                            "ncbi_codes": [
+                                "WP_070710341.1"
+                            ],
+                            "target_members": [
+                                "WP_070710341.1"
+                            ]
+                        }
+                    },
+                    "Terribacillus": {
+                        "Terribacillus aidingensis": {
+                            "ncbi_codes": [
+                                "WP_097040384.1"
+                            ],
+                            "target_members": [
+                                "WP_097040384.1"
+                            ]
+                        }
+                    }
+                },
+                "Lactobacillales": {
+                    "Weissella": {
+                        "Weissella fabalis": {
+                            "ncbi_codes": [
+                                "WP_168722522.1"
+                            ],
+                            "target_members": [
+                                "WP_168722522.1"
+                            ]
+                        }
+                    },
+                    "Aerococcus": {
+                        "Aerococcus urinaehominis": {
+                            "ncbi_codes": [
+                                "AMB98951.1"
+                            ],
+                            "target_members": [
+                                "AMB98951.1"
+                            ]
+                        }
+                    },
+                    "Dolosicoccus": {
+                        "Dolosicoccus paucivorans": {
+                            "ncbi_codes": [
+                                "WP_092085186.1"
+                            ],
+                            "target_members": [
+                                "WP_092085186.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Firmicutes_na": {
+                "Firmicutes_na_na": {
+                    "Firmicutes": {
+                        "Firmicutes bacterium CAG:552_39_19": {
+                            "ncbi_codes": [
+                                "OLA43507.1"
+                            ],
+                            "target_members": [
+                                "OLA43507.1"
+                            ]
+                        },
+                        "Firmicutes bacterium ADurb.Bin193": {
+                            "ncbi_codes": [
+                                "OQB15766.1"
+                            ],
+                            "target_members": [
+                                "OQB15766.1"
+                            ]
+                        },
+                        "Firmicutes bacterium": {
+                            "ncbi_codes": [
+                                "PWL41573.1"
+                            ],
+                            "target_members": [
+                                "PWL41573.1"
+                            ]
+                        },
+                        "Firmicutes bacterium CAG:321": {
+                            "ncbi_codes": [
+                                "CDE39195.1"
+                            ],
+                            "target_members": [
+                                "CDE39195.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Tissierellia": {
+                "Tissierellales": {
+                    "Parvimonas": {
+                        "Parvimonas": {
+                            "ncbi_codes": [
+                                "WP_009372714.1"
+                            ],
+                            "target_members": [
+                                "WP_009372714.1"
+                            ]
+                        }
+                    },
+                    "Peptoniphilus": {
+                        "Peptoniphilus": {
+                            "ncbi_codes": [
+                                "WP_004825665.1"
+                            ],
+                            "target_members": [
+                                "WP_004825665.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Negativicutes": {
+                "Selenomonadales": {
+                    "Megamonas": {
+                        "Megamonas hypermegale": {
+                            "ncbi_codes": [
+                                "WP_027889696.1"
+                            ],
+                            "target_members": [
+                                "WP_027889696.1"
+                            ]
+                        },
+                        "Megamonas hypermegale ART12/1": {
+                            "ncbi_codes": [
+                                "CBL06223.1"
+                            ],
+                            "target_members": [
+                                "CBL06223.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Elusimicrobia": {
+            "Elusimicrobia_na": {
+                "Elusimicrobia_na_na": {
+                    "Elusimicrobia": {
+                        "Elusimicrobia bacterium": {
+                            "ncbi_codes": [
+                                "PCI38739.1"
+                            ],
+                            "target_members": [
+                                "PCI38739.1"
+                            ]
+                        },
+                        "Elusimicrobia bacterium CG11_big_fil_rev_8_21_14_0_20_64_6": {
+                            "ncbi_codes": [
+                                "PIR19223.1"
+                            ],
+                            "target_members": [
+                                "PIR19223.1"
+                            ]
+                        },
+                        "Elusimicrobia bacterium RIFCSPLOWO2_12_FULL_59_9": {
+                            "ncbi_codes": [
+                                "OGS05586.1"
+                            ],
+                            "target_members": [
+                                "OGS05586.1"
+                            ]
+                        },
+                        "Elusimicrobia bacterium GWA2_69_24": {
+                            "ncbi_codes": [
+                                "OGR58986.1"
+                            ],
+                            "target_members": [
+                                "OGR58986.1"
+                            ]
+                        },
+                        "Elusimicrobia bacterium RIFOXYD2_FULL_34_15": {
+                            "ncbi_codes": [
+                                "OGS45708.1"
+                            ],
+                            "target_members": [
+                                "OGS45708.1"
+                            ]
+                        },
+                        "Elusimicrobia bacterium ADurb.Bin231": {
+                            "ncbi_codes": [
+                                "OQA89719.1"
+                            ],
+                            "target_members": [
+                                "OQA89719.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Bacteria_na": {
+            "Bacteria_na_na": {
+                "Bacteria_na_na_na": {
+                    "bacterium": {
+                        "bacterium": {
+                            "ncbi_codes": [
+                                "RPH35072.1",
+                                "TRZ65843.1",
+                                "TSA16903.1"
+                            ],
+                            "target_members": [
+                                "RPH35072.1",
+                                "TRZ65843.1",
+                                "TSA16903.1"
+                            ]
+                        },
+                        "uncultured bacterium": {
+                            "ncbi_codes": [
+                                "EKD23417.1"
+                            ],
+                            "target_members": [
+                                "EKD23417.1"
+                            ]
+                        },
+                        "bacterium (Candidatus Stahlbacteria) CG23_combo_of_CG06-09_8_20_14_all_40_9": {
+                            "ncbi_codes": [
+                                "PIP12460.1"
+                            ],
+                            "target_members": [
+                                "PIP12460.1"
+                            ]
+                        },
+                        "bacterium D16-63": {
+                            "ncbi_codes": [
+                                "WP_120377795.1"
+                            ],
+                            "target_members": [
+                                "WP_120377795.1"
+                            ]
+                        },
+                        "bacterium DOLZORAL124_64_63": {
+                            "ncbi_codes": [
+                                "PID79571.1"
+                            ],
+                            "target_members": [
+                                "PID79571.1"
+                            ]
+                        },
+                        "bacterium BM706": {
+                            "ncbi_codes": [
+                                "PLX18540.1"
+                            ],
+                            "target_members": [
+                                "PLX18540.1"
+                            ]
+                        }
+                    },
+                    "Actinobacteria": {
+                        "Actinobacteria": {
+                            "ncbi_codes": [
+                                "WP_058985486.1"
+                            ],
+                            "target_members": [
+                                "WP_058985486.1"
+                            ]
+                        }
+                    },
+                    "candidate": {
+                        "candidate division WS6 bacterium OLB21": {
+                            "ncbi_codes": [
+                                "KXK07983.1"
+                            ],
+                            "target_members": [
+                                "KXK07983.1"
+                            ]
+                        },
+                        "candidate division WOR-1 bacterium RIFOXYA2_FULL_37_7": {
+                            "ncbi_codes": [
+                                "OGC16053.1"
+                            ],
+                            "target_members": [
+                                "OGC16053.1"
+                            ]
+                        },
+                        "candidate division TM6 bacterium GW2011_GWE2_31_21": {
+                            "ncbi_codes": [
+                                "KKP25997.1"
+                            ],
+                            "target_members": [
+                                "KKP25997.1"
+                            ]
+                        },
+                        "candidate division TM6 bacterium GW2011_GWF2_32_72": {
+                            "ncbi_codes": [
+                                "KKP35792.1"
+                            ],
+                            "target_members": [
+                                "KKP35792.1"
+                            ]
+                        }
+                    },
+                    "Candidatus": {
+                        "Candidatus Vecturithrix granuli": {
+                            "ncbi_codes": [
+                                "GAK55151.1"
+                            ],
+                            "target_members": [
+                                "GAK55151.1"
+                            ]
+                        },
+                        "Candidatus Dependentiae bacterium": {
+                            "ncbi_codes": [
+                                "PCI74298.1"
+                            ],
+                            "target_members": [
+                                "PCI74298.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Verrucomicrobia": {
+            "Spartobacteria": {
+                "Spartobacteria_na": {
+                    "Spartobacteria": {
+                        "Spartobacteria bacterium LR76": {
+                            "ncbi_codes": [
+                                "WP_108059770.1"
+                            ],
+                            "target_members": [
+                                "WP_108059770.1"
+                            ]
+                        }
+                    }
+                },
+                "Chthoniobacterales": {
+                    "Chthoniobacterales": {
+                        "Chthoniobacterales bacterium": {
+                            "ncbi_codes": [
+                                "PZR71877.1"
+                            ],
+                            "target_members": [
+                                "PZR71877.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Verrucomicrobia_na": {
+                "Verrucomicrobia_na_na": {
+                    "Verrucomicrobia": {
+                        "Verrucomicrobia bacterium": {
+                            "ncbi_codes": [
+                                "PYI93902.1",
+                                "PYI56111.1"
+                            ],
+                            "target_members": [
+                                "PYI93902.1",
+                                "PYI56111.1"
+                            ]
+                        },
+                        "Verrucomicrobia bacterium LW23": {
+                            "ncbi_codes": [
+                                "WP_108040934.1"
+                            ],
+                            "target_members": [
+                                "WP_108040934.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Verrucomicrobiae": {
+                "Verrucomicrobiales": {
+                    "Verrucomicrobiaceae": {
+                        "Verrucomicrobiaceae bacterium": {
+                            "ncbi_codes": [
+                                "TSA29763.1"
+                            ],
+                            "target_members": [
+                                "TSA29763.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Proteobacteria": {
+            "Deltaproteobacteria": {
+                "Desulfuromonadales": {
+                    "Desulfuromonas": {
+                        "Desulfuromonas sp. SDB": {
+                            "ncbi_codes": [
+                                "KQC14147.1"
+                            ],
+                            "target_members": [
+                                "KQC14147.1"
+                            ]
+                        }
+                    }
+                },
+                "Syntrophobacterales": {
+                    "Syntrophobacteraceae": {
+                        "Syntrophobacteraceae bacterium CG2_30_61_12": {
+                            "ncbi_codes": [
+                                "OIP96968.1"
+                            ],
+                            "target_members": [
+                                "OIP96968.1"
+                            ]
+                        }
+                    },
+                    "Desulfacinum": {
+                        "Desulfacinum hydrothermale": {
+                            "ncbi_codes": [
+                                "WP_084057338.1"
+                            ],
+                            "target_members": [
+                                "WP_084057338.1"
+                            ]
+                        }
+                    },
+                    "Thermodesulforhabdus": {
+                        "Thermodesulforhabdus norvegica": {
+                            "ncbi_codes": [
+                                "WP_093393933.1"
+                            ],
+                            "target_members": [
+                                "WP_093393933.1"
+                            ]
+                        }
+                    }
+                },
+                "Desulfobacterales": {
+                    "Desulfobacteraceae": {
+                        "Desulfobacteraceae bacterium 4572_187": {
+                            "ncbi_codes": [
+                                "OQY14477.1"
+                            ],
+                            "target_members": [
+                                "OQY14477.1"
+                            ]
+                        },
+                        "Desulfobacteraceae bacterium": {
+                            "ncbi_codes": [
+                                "RJR47606.1"
+                            ],
+                            "target_members": [
+                                "RJR47606.1"
+                            ]
+                        }
+                    },
+                    "Desulfobacter": {
+                        "Desulfobacter curvatus": {
+                            "ncbi_codes": [
+                                "WP_020588717.1"
+                            ],
+                            "target_members": [
+                                "WP_020588717.1"
+                            ]
+                        }
+                    },
+                    "Desulfosarcina": {
+                        "Desulfosarcina widdelii": {
+                            "ncbi_codes": [
+                                "WP_155303092.1"
+                            ],
+                            "target_members": [
+                                "WP_155303092.1"
+                            ]
+                        }
+                    },
+                    "Desulfofustis": {
+                        "Desulfofustis sp. PB-SRB1": {
+                            "ncbi_codes": [
+                                "ESQ12861.1"
+                            ],
+                            "target_members": [
+                                "ESQ12861.1"
+                            ]
+                        }
+                    }
+                },
+                "Deltaproteobacteria_na": {
+                    "Deltaproteobacteria": {
+                        "Deltaproteobacteria bacterium": {
+                            "ncbi_codes": [
+                                "PID75101.1",
+                                "TDI95161.1",
+                                "TNF49508.1"
+                            ],
+                            "target_members": [
+                                "PID75101.1",
+                                "TDI95161.1",
+                                "TNF49508.1"
+                            ]
+                        },
+                        "Deltaproteobacteria bacterium ADurb.Bin058": {
+                            "ncbi_codes": [
+                                "OQC43023.1"
+                            ],
+                            "target_members": [
+                                "OQC43023.1"
+                            ]
+                        },
+                        "Deltaproteobacteria bacterium SG8_13": {
+                            "ncbi_codes": [
+                                "KPJ79156.1"
+                            ],
+                            "target_members": [
+                                "KPJ79156.1"
+                            ]
+                        },
+                        "Deltaproteobacteria bacterium HGW-Deltaproteobacteria-13": {
+                            "ncbi_codes": [
+                                "PKN53458.1"
+                            ],
+                            "target_members": [
+                                "PKN53458.1"
+                            ]
+                        },
+                        "Deltaproteobacteria bacterium DG_8": {
+                            "ncbi_codes": [
+                                "KPJ55722.1"
+                            ],
+                            "target_members": [
+                                "KPJ55722.1"
+                            ]
+                        }
+                    },
+                    "delta": {
+                        "delta proteobacterium PSCGC 5296": {
+                            "ncbi_codes": [
+                                "WP_027984593.1"
+                            ],
+                            "target_members": [
+                                "WP_027984593.1"
+                            ]
+                        },
+                        "delta proteobacterium PSCGC 5451": {
+                            "ncbi_codes": [
+                                "WP_027985545.1"
+                            ],
+                            "target_members": [
+                                "WP_027985545.1"
+                            ]
+                        }
+                    },
+                    "Olavius": {
+                        "Olavius algarvensis associated proteobacterium Delta 3": {
+                            "ncbi_codes": [
+                                "WP_175645309.1"
+                            ],
+                            "target_members": [
+                                "WP_175645309.1"
+                            ]
+                        }
+                    }
+                },
+                "Desulfovibrionales": {
+                    "Desulfocurvibacter": {
+                        "Desulfocurvibacter africanus": {
+                            "ncbi_codes": [
+                                "WP_027366251.1"
+                            ],
+                            "target_members": [
+                                "WP_027366251.1"
+                            ]
+                        }
+                    },
+                    "unclassified": {
+                        "unclassified Desulfovibrio": {
+                            "ncbi_codes": [
+                                "WP_124791567.1"
+                            ],
+                            "target_members": [
+                                "WP_124791567.1"
+                            ]
+                        }
+                    }
+                },
+                "Myxococcales": {
+                    "Myxococcales": {
+                        "Myxococcales bacterium": {
+                            "ncbi_codes": [
+                                "WP_174356430.1"
+                            ],
+                            "target_members": [
+                                "WP_174356430.1"
+                            ]
+                        }
+                    },
+                    "Pajaroellobacter": {
+                        "Pajaroellobacter abortibovis": {
+                            "ncbi_codes": [
+                                "WP_075276636.1"
+                            ],
+                            "target_members": [
+                                "WP_075276636.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Alphaproteobacteria": {
+                "Rhodospirillales": {
+                    "Acidiphilium": {
+                        "Acidiphilium sp. CAG:727": {
+                            "ncbi_codes": [
+                                "CDE20839.1"
+                            ],
+                            "target_members": [
+                                "CDE20839.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Proteobacteria_na": {
+                "Proteobacteria_na_na": {
+                    "Proteobacteria": {
+                        "Proteobacteria bacterium": {
+                            "ncbi_codes": [
+                                "PZM91784.1"
+                            ],
+                            "target_members": [
+                                "PZM91784.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Oligoflexia": {
+                "Bdellovibrionales": {
+                    "Bdellovibrio": {
+                        "Bdellovibrio bacteriovorus HD100": {
+                            "ncbi_codes": [
+                                "CAE79962.1"
+                            ],
+                            "target_members": [
+                                "CAE79962.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Synergistetes": {
+            "Synergistia": {
+                "Synergistales": {
+                    "Jonquetella": {
+                        "Jonquetella": {
+                            "ncbi_codes": [
+                                "WP_008520911.1"
+                            ],
+                            "target_members": [
+                                "WP_008520911.1"
+                            ]
+                        }
+                    },
+                    "Aminiphilus": {
+                        "Aminiphilus circumscriptus": {
+                            "ncbi_codes": [
+                                "WP_029165374.1"
+                            ],
+                            "target_members": [
+                                "WP_029165374.1"
+                            ]
+                        }
+                    },
+                    "Synergistes": {
+                        "Synergistes jonesii": {
+                            "ncbi_codes": [
+                                "WP_037974870.1"
+                            ],
+                            "target_members": [
+                                "WP_037974870.1"
+                            ]
+                        }
+                    },
+                    "Fretibacterium": {
+                        "Fretibacterium fastidiosum": {
+                            "ncbi_codes": [
+                                "CBL28406.1"
+                            ],
+                            "target_members": [
+                                "CBL28406.1"
+                            ]
+                        }
+                    },
+                    "Aminobacterium": {
+                        "Aminobacterium colombiense": {
+                            "ncbi_codes": [
+                                "WP_041459500.1"
+                            ],
+                            "target_members": [
+                                "WP_041459500.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Synergistetes_na": {
+                "Synergistetes_na_na": {
+                    "Synergistetes": {
+                        "Synergistetes bacterium ADurb.Bin520": {
+                            "ncbi_codes": [
+                                "OPZ59235.1"
+                            ],
+                            "target_members": [
+                                "OPZ59235.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Ignavibacteriae": {
+            "Ignavibacteriae_na": {
+                "Ignavibacteriae_na_na": {
+                    "Ignavibacteriae": {
+                        "Ignavibacteriae bacterium 37-53-5": {
+                            "ncbi_codes": [
+                                "OYV85121.1"
+                            ],
+                            "target_members": [
+                                "OYV85121.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Armatimonadetes": {
+            "Armatimonadetes_na": {
+                "Armatimonadetes_na_na": {
+                    "Armatimonadetes": {
+                        "Armatimonadetes bacterium": {
+                            "ncbi_codes": [
+                                "RMG23772.1",
+                                "RIK01244.1"
+                            ],
+                            "target_members": [
+                                "RMG23772.1",
+                                "RIK01244.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Fimbriimonadia": {
+                "Fimbriimonadales": {
+                    "Fimbriimonas": {
+                        "Fimbriimonas ginsengisoli": {
+                            "ncbi_codes": [
+                                "WP_025228702.1"
+                            ],
+                            "target_members": [
+                                "WP_025228702.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Chloroflexi": {
+            "Chloroflexi_na": {
+                "Chloroflexi_na_na": {
+                    "Chloroflexi": {
+                        "Chloroflexi bacterium HGW-Chloroflexi-3": {
+                            "ncbi_codes": [
+                                "PKO07036.1"
+                            ],
+                            "target_members": [
+                                "PKO07036.1"
+                            ]
+                        },
+                        "Chloroflexi bacterium": {
+                            "ncbi_codes": [
+                                "TAK21487.1",
+                                "RIK53503.1",
+                                "TME15659.1",
+                                "RLT24846.1",
+                                "PID85410.1",
+                                "TMC83628.1",
+                                "PZR62573.1"
+                            ],
+                            "target_members": [
+                                "TAK21487.1",
+                                "RIK53503.1",
+                                "TME15659.1",
+                                "RLT24846.1",
+                                "PID85410.1",
+                                "TMC83628.1",
+                                "PZR62573.1"
+                            ]
+                        },
+                        "Chloroflexi bacterium UTCFX4": {
+                            "ncbi_codes": [
+                                "OQY91747.1"
+                            ],
+                            "target_members": [
+                                "OQY91747.1"
+                            ]
+                        },
+                        "Chloroflexi bacterium RBG_16_56_8": {
+                            "ncbi_codes": [
+                                "OGO37218.1"
+                            ],
+                            "target_members": [
+                                "OGO37218.1"
+                            ]
+                        },
+                        "Chloroflexi bacterium RBG_16_54_11": {
+                            "ncbi_codes": [
+                                "OGO26176.1"
+                            ],
+                            "target_members": [
+                                "OGO26176.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Ardenticatenia": {
+                "Ardenticatenales": {
+                    "Candidatus": {
+                        "Candidatus Promineofilum breve": {
+                            "ncbi_codes": [
+                                "WP_095041880.1"
+                            ],
+                            "target_members": [
+                                "WP_095041880.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Dehalococcoidia": {
+                "Dehalococcoidia_na": {
+                    "Dehalococcoidia": {
+                        "Dehalococcoidia bacterium": {
+                            "ncbi_codes": [
+                                "TAK59397.1"
+                            ],
+                            "target_members": [
+                                "TAK59397.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Anaerolineae": {
+                "Anaerolineae_na": {
+                    "Anaerolineae": {
+                        "Anaerolineae bacterium": {
+                            "ncbi_codes": [
+                                "RME08879.1"
+                            ],
+                            "target_members": [
+                                "RME08879.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Bacteroidetes": {
+            "Bacteroidetes_na": {
+                "Bacteroidetes_na_na": {
+                    "Bacteroidetes": {
+                        "Bacteroidetes bacterium": {
+                            "ncbi_codes": [
+                                "RLD33598.1"
+                            ],
+                            "target_members": [
+                                "RLD33598.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Nitrospinae": {
+            "Nitrospinae_na": {
+                "Nitrospinae_na_na": {
+                    "Nitrospinae": {
+                        "Nitrospinae bacterium": {
+                            "ncbi_codes": [
+                                "RMF93602.1"
+                            ],
+                            "target_members": [
+                                "RMF93602.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Lentisphaerae": {
+            "Lentisphaerae_na": {
+                "Lentisphaerae_na_na": {
+                    "Lentisphaerae": {
+                        "Lentisphaerae bacterium GWF2_49_21": {
+                            "ncbi_codes": [
+                                "OGV37652.1"
+                            ],
+                            "target_members": [
+                                "OGV37652.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Woykebacteria": {
+            "Candidatus Woykebacteria_na": {
+                "Candidatus Woykebacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Woykebacteria bacterium GWB1_45_5": {
+                            "ncbi_codes": [
+                                "OGY24467.1"
+                            ],
+                            "target_members": [
+                                "OGY24467.1"
+                            ]
+                        },
+                        "Candidatus Woykebacteria bacterium RIFCSPLOWO2_01_FULL_41_12": {
+                            "ncbi_codes": [
+                                "OGY31576.1"
+                            ],
+                            "target_members": [
+                                "OGY31576.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Fermentibacteria": {
+            "Candidatus Fermentibacteria (class)": {
+                "Candidatus Fermentibacterales": {
+                    "Candidatus": {
+                        "Candidatus Fermentibacter daniensis": {
+                            "ncbi_codes": [
+                                "KZD15133.1"
+                            ],
+                            "target_members": [
+                                "KZD15133.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "candidate division WWE3": {
+            "candidate division WWE3_na": {
+                "candidate division WWE3_na_na": {
+                    "candidate": {
+                        "candidate division WWE3 bacterium CG06_land_8_20_14_3_00_42_16": {
+                            "ncbi_codes": [
+                                "PIU69083.1"
+                            ],
+                            "target_members": [
+                                "PIU69083.1"
+                            ]
+                        },
+                        "candidate division WWE3 bacterium GW2011_GWC2_44_9": {
+                            "ncbi_codes": [
+                                "KKT84964.1"
+                            ],
+                            "target_members": [
+                                "KKT84964.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Woesebacteria": {
+            "Candidatus Woesebacteria_na": {
+                "Candidatus Woesebacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Woesebacteria bacterium GW2011_GWA1_43_12": {
+                            "ncbi_codes": [
+                                "KKS90374.1"
+                            ],
+                            "target_members": [
+                                "KKS90374.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Cloacimonetes": {
+            "Candidatus Cloacimonetes_na": {
+                "Candidatus Cloacimonetes_na_na": {
+                    "Candidatus": {
+                        "Candidatus Cloacimonas sp. 4484_143": {
+                            "ncbi_codes": [
+                                "OPX26141.1"
+                            ],
+                            "target_members": [
+                                "OPX26141.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Acidobacteria": {
+            "Acidobacteria_na": {
+                "Acidobacteria_na_na": {
+                    "Acidobacteria": {
+                        "Acidobacteria bacterium": {
+                            "ncbi_codes": [
+                                "PSH03671.1",
+                                "PYQ11329.1"
+                            ],
+                            "target_members": [
+                                "PSH03671.1",
+                                "PYQ11329.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Blastocatellia": {
+                "Blastocatellia_na": {
+                    "Chloracidobacterium": {
+                        "Chloracidobacterium thermophilum": {
+                            "ncbi_codes": [
+                                "WP_082671097.1"
+                            ],
+                            "target_members": [
+                                "WP_082671097.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Acidobacteriia": {
+                "Acidobacteriales": {
+                    "Granulicella": {
+                        "Granulicella sp. WH15": {
+                            "ncbi_codes": [
+                                "WP_162539957.1"
+                            ],
+                            "target_members": [
+                                "WP_162539957.1"
+                            ]
+                        },
+                        "Granulicella tundricola": {
+                            "ncbi_codes": [
+                                "WP_041597675.1"
+                            ],
+                            "target_members": [
+                                "WP_041597675.1"
+                            ]
+                        }
+                    },
+                    "Acidobacteriaceae": {
+                        "Acidobacteriaceae bacterium": {
+                            "ncbi_codes": [
+                                "WP_174306861.1"
+                            ],
+                            "target_members": [
+                                "WP_174306861.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Sumerlaeota": {
+            "Candidatus Sumerlaeota_na": {
+                "Candidatus Sumerlaeota_na_na": {
+                    "candidate": {
+                        "candidate division BRC1 bacterium ADurb.Bin183": {
+                            "ncbi_codes": [
+                                "OQB21461.1"
+                            ],
+                            "target_members": [
+                                "OQB21461.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Spirochaetes": {
+            "Spirochaetia": {
+                "Spirochaetales": {
+                    "Spirochaeta": {
+                        "Spirochaeta sp. LUC14_002_19_P3": {
+                            "ncbi_codes": [
+                                "OQX29578.1"
+                            ],
+                            "target_members": [
+                                "OQX29578.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Shapirobacteria": {
+            "Candidatus Shapirobacteria_na": {
+                "Candidatus Shapirobacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Shapirobacteria bacterium CG10_big_fil_rev_8_21_14_0_10_40_9": {
+                            "ncbi_codes": [
+                                "PJE67290.1"
+                            ],
+                            "target_members": [
+                                "PJE67290.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Eremiobacteraeota": {
+            "Candidatus Eremiobacteraeota_na": {
+                "Candidatus Eremiobacteraeota_na_na": {
+                    "Candidatus": {
+                        "Candidatus Eremiobacteraeota bacterium": {
+                            "ncbi_codes": [
+                                "WP_173928157.1"
+                            ],
+                            "target_members": [
+                                "WP_173928157.1"
+                            ]
+                        }
+                    }
+                },
+                "Candidatus Eremiobacterales": {
+                    "Candidatus": {
+                        "Candidatus Eremiobacter sp. RRmetagenome_bin22": {
+                            "ncbi_codes": [
+                                "PZR60529.1"
+                            ],
+                            "target_members": [
+                                "PZR60529.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Tenericutes": {
+            "Tenericutes_na": {
+                "Tenericutes_na_na": {
+                    "Tenericutes": {
+                        "Tenericutes bacterium HGW-Tenericutes-5": {
+                            "ncbi_codes": [
+                                "PKK94860.1"
+                            ],
+                            "target_members": [
+                                "PKK94860.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Mollicutes": {
+                "Anaeroplasmatales": {
+                    "Anaeroplasma": {
+                        "Anaeroplasma bactoclasticum": {
+                            "ncbi_codes": [
+                                "WP_119015225.1"
+                            ],
+                            "target_members": [
+                                "WP_119015225.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Rokubacteria": {
+            "Candidatus Rokubacteria_na": {
+                "Candidatus Rokubacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Rokubacteria bacterium 13_1_40CM_4_67_11": {
+                            "ncbi_codes": [
+                                "OLC57891.1"
+                            ],
+                            "target_members": [
+                                "OLC57891.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "candidate division WOR-3": {
+            "candidate division WOR-3_na": {
+                "candidate division WOR-3_na_na": {
+                    "candidate": {
+                        "candidate division WOR-3 bacterium": {
+                            "ncbi_codes": [
+                                "RKX69607.1"
+                            ],
+                            "target_members": [
+                                "RKX69607.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Poribacteria": {
+            "Candidatus Poribacteria_na": {
+                "Candidatus Poribacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Poribacteria bacterium": {
+                            "ncbi_codes": [
+                                "RKU28278.1"
+                            ],
+                            "target_members": [
+                                "RKU28278.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Bipolaricaulota": {
+            "Candidatus Bipolaricaulota_na": {
+                "Candidatus Bipolaricaulota_na_na": {
+                    "Candidatus": {
+                        "Candidatus Acetothermia bacterium": {
+                            "ncbi_codes": [
+                                "RLE32576.1"
+                            ],
+                            "target_members": [
+                                "RLE32576.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Chlamydiae": {
+            "Chlamydiia": {
+                "Chlamydiales": {
+                    "Chlamydia": {
+                        "Chlamydia ibidis": {
+                            "ncbi_codes": [
+                                "WP_020370739.1"
+                            ],
+                            "target_members": [
+                                "WP_020370739.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Candidatus Fraserbacteria": {
+            "Candidatus Fraserbacteria_na": {
+                "Candidatus Fraserbacteria_na_na": {
+                    "Candidatus": {
+                        "Candidatus Fraserbacteria bacterium RBG_16_55_9": {
+                            "ncbi_codes": [
+                                "OGF52896.1"
+                            ],
+                            "target_members": [
+                                "OGF52896.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

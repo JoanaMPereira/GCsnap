@@ -1,0 +1,416 @@
+{
+    "GC Type 00001 (1)": {
+        "target_members": [
+            "RS16_CHLTR"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                8,
+                7,
+                6,
+                0
+            ]
+        ]
+    },
+    "GC Type 00002 (1)": {
+        "target_members": [
+            "RS16_RHOBA"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                8,
+                7,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00003 (1)": {
+        "target_members": [
+            "RS16_MYCGE"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                8,
+                7,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00004 (1)": {
+        "target_members": [
+            "RS16_CHLCH"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                5,
+                8,
+                7,
+                0
+            ]
+        ]
+    },
+    "GC Type 00005 (1)": {
+        "target_members": [
+            "RS16_ECOLI"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                5,
+                8,
+                7,
+                3
+            ]
+        ]
+    },
+    "GC Type 00006 (1)": {
+        "target_members": [
+            "C9RLH7_FIBSS"
+        ],
+        "operon_protein_families_structure": [
+            [
+                9,
+                0,
+                0,
+                0,
+                11,
+                5,
+                8,
+                7,
+                0
+            ]
+        ]
+    },
+    "GC Type 00007 (1)": {
+        "target_members": [
+            "RS16_BORPA"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                10000,
+                11,
+                5,
+                8,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00008 (1)": {
+        "target_members": [
+            "RS16_METI4"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                0,
+                8,
+                7,
+                6
+            ]
+        ]
+    },
+    "GC Type 00009 (1)": {
+        "target_members": [
+            "RS16_THEYD"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                3,
+                0,
+                0,
+                11,
+                10,
+                8,
+                7,
+                6
+            ]
+        ]
+    },
+    "GC Type 00010 (1)": {
+        "target_members": [
+            "D1B6K6_THEAS"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                1,
+                9,
+                11,
+                10,
+                5,
+                8,
+                7
+            ]
+        ]
+    },
+    "GC Type 00011 (1)": {
+        "target_members": [
+            "RS16_CAMJE"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                10,
+                5,
+                8,
+                7
+            ]
+        ]
+    },
+    "GC Type 00012 (1)": {
+        "target_members": [
+            "RS16_THET8"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                10,
+                5,
+                8,
+                7
+            ]
+        ]
+    },
+    "GC Type 00013 (1)": {
+        "target_members": [
+            "S0EXP8_CHTCT"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                2,
+                9,
+                11,
+                10,
+                5,
+                8,
+                7
+            ]
+        ]
+    },
+    "GC Type 00014 (1)": {
+        "target_members": [
+            "RS16_MYXXD"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                10,
+                5,
+                8,
+                7
+            ]
+        ]
+    },
+    "GC Type 00015 (1)": {
+        "target_members": [
+            "RS16_THEMA"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                10,
+                5,
+                8,
+                0
+            ]
+        ]
+    },
+    "GC Type 00016 (1)": {
+        "target_members": [
+            "RS16_ACIC5"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                2,
+                0,
+                4,
+                11,
+                10,
+                5,
+                8,
+                0
+            ]
+        ]
+    },
+    "GC Type 00017 (1)": {
+        "target_members": [
+            "RS16_BACSU"
+        ],
+        "operon_protein_families_structure": [
+            [
+                9,
+                0,
+                1,
+                9,
+                11,
+                10,
+                0,
+                5,
+                8
+            ]
+        ]
+    },
+    "GC Type 00018 (1)": {
+        "target_members": [
+            "RS16_MYCTU"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                10,
+                5,
+                8,
+                0
+            ]
+        ]
+    },
+    "GC Type 00019 (1)": {
+        "target_members": [
+            "RS16_STRPN"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                10,
+                0,
+                5,
+                8
+            ]
+        ]
+    },
+    "GC Type 00020 (1)": {
+        "target_members": [
+            "RS16_NOSP7"
+        ],
+        "operon_protein_families_structure": [
+            [
+                4,
+                0,
+                0,
+                9,
+                11,
+                10,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00021 (1)": {
+        "target_members": [
+            "RS16_AQUAE"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                10,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00022 (1)": {
+        "target_members": [
+            "RS16_BARBK"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                9,
+                11,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00023 (1)": {
+        "target_members": [
+            "RS16_PORG3"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                11,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    }
+}

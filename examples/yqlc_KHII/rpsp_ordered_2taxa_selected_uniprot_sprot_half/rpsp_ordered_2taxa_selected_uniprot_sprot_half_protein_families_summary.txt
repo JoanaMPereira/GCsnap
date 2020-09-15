@@ -1,0 +1,145 @@
+
+ ### Family: 1 -> putative helix-turn-helix protein YlxM/p13 family protein
+
+	 ACZ19649.1	putative helix-turn-helix protein YlxM/p13 family protein
+	 NP_389479.1	component of the signal recognition particle (SRP) protein-targeting pathway
+
+ ### Family: 2 -> 3-deoxy-D-manno-octulosonate cytidylyltransferase
+
+	 ACO33639.1	3-deoxy-D-manno-octulosonate cytidylyltransferase
+	 CCW36461.1	3-deoxy-D-manno-octulosonate cytidylyltransferase
+
+ ### Family: 3 -> lipoprotein YfiB
+
+	 NP_417096.1	lipoprotein YfiB
+	 ACI20276.1	chemotaxis protein MotB
+
+ ### Family: 4 -> two-component hybrid sensor and regulator
+
+	 ACO31734.1	two-component hybrid sensor and regulator
+	 ACC81387.1	GAF sensor signal transduction histidine kinase
+
+ ### Family: 5 -> 16S rRNA processing protein RimM
+
+	 NP_417099.4	ribosome maturation factor RimM
+	 CAE38158.1	16S rRNA processing protein
+	 CAL34849.1	putative 16S rRNA processing protein
+	 ABF89241.1	16S rRNA processing protein RimM
+	 ACO31518.1	16S rRNA processing protein RimM
+	 ABB28069.1	16S rRNA processing protein RimM
+	 ADL26406.1	16S rRNA processing protein RimM
+	 BAD70856.1	16S rRNA processing protein RimM
+	 ACZ19645.1	16S rRNA processing protein RimM
+	 CCP45709.1	Probable 16S rRNA processing protein RimM
+	 CCW36465.1	16S rRNA processing protein RimM
+	 NP_389484.1	16S rRNA processing protein
+	 AAD36635.1	16S rRNA processing protein%2C putative
+	 AAK74916.1	16S rRNA processing protein RimM
+
+ ### Family: 6 -> Ribonuclease HII
+
+	 ACI21777.1	ribonuclease HII
+	 AAC67619.1	Ribonuclease HII
+	 ACD83326.1	Ribonuclease HII
+
+ ### Family: 7 -> ribosomal protein L19
+
+	 NP_417097.1	50S ribosomal subunit protein L19
+	 CAL34851.1	50S ribosomal protein L19
+	 ABF91840.1	ribosomal protein L19
+	 ACI21105.1	ribosomal protein L19
+	 AAC67618.1	L19 Ribosomal Protein
+	 ACD83327.1	Ribosomal protein L19
+	 CAD77801.1	50S ribosomal protein L19
+	 ABB28067.1	LSU ribosomal protein L19P
+	 ADL26577.1	ribosomal protein L19
+	 BAD70854.1	50S ribosomal protein L19
+	 ACZ19643.1	ribosomal protein L19
+	 CCW36467.1	ribosomal protein L19%2C bacterial type
+	 AAC72464.1	ribosomal protein L19
+
+ ### Family: 8 -> tRNA (guanine-N1)-methyltransferase
+
+	 NP_417098.1	tRNA m(1)G37 methyltransferase
+	 CAE38157.1	tRNA (guanine-N1)-methyltransferase
+	 CAL34850.1	tRNA (guanine-N1)-methyltransferase
+	 ABF92908.1	tRNA (guanine-N1)-methyltransferase
+	 ACO33737.1	tRNA (guanine-N1)-methyltransferase
+	 ACI20613.1	tRNA (guanine-N1)-methyltransferase
+	 AAC67617.1	tRNA (guanine N-1) Methyltransferase
+	 ACD83328.1	tRNA-(guanine-N1)-methyltransferase
+	 CAD77802.1	tRNA (Guanine-N(1))-methyltransferase
+	 ABB28068.1	tRNA (Guanine37-N(1)-) methyltransferase
+	 ADL25835.1	tRNA (guanine-N(1)-)-methyltransferase
+	 BAD70855.1	tRNA (guanine-N1)-methyltransferase
+	 ACZ19644.1	tRNA (guanine-N1)-methyltransferase
+	 CCP45708.1	Probable tRNA (guanine-N1)-methyltransferase TrmD (M1G-methyltransferase) (tRNA [GM37] methyltransferase)
+	 CCW36466.1	tRNA (Guanine37-N(1)-) methyltransferase
+	 NP_389485.1	tRNA(m1G37)methyltransferase
+	 AAC72465.1	tRNA (guanine-N1)-methyltransferase
+	 AAD36636.1	tRNA guanine-N1 methyltransferase
+	 AAK74917.1	tRNA (guanine-N1)-methyltransferase
+
+ ### Family: 9 -> signal recognition particle protein
+
+	 NP_417101.1	signal recognition particle protein component
+	 ABM45267.1	signal recognition particle protein
+	 CAL34846.1	signal recognition particle protein
+	 AAC67615.1	Signal Recognition Particle GTPase
+	 ACD83331.1	Signal recognition particle GTPase
+	 CAD77804.1	signal recognition particle protein
+	 ABB28071.1	signal recognition particle subunit FFH/SRP54 (srp54)
+	 ADL27401.1	signal recognition particle protein
+	 BAD70859.1	signal recognition particle protein
+	 ACZ19648.1	signal recognition particle protein
+	 CCW36462.1	signal recognition particle subunit FFH/SRP54 (srp54)
+	 NP_389477.1	signal recognition particle (docking protein)
+	 NP_389480.1	signal recognition particle-like (SRP) GTPase
+	 ACC81390.1	signal recognition particle protein
+	 AAD36632.1	signal recognition particle protein
+
+ ### Family: 10 -> conserved hypothetical protein
+
+	 CAL34848.1	hypothetical protein Cj0711
+	 ABF88169.1	KH domain protein
+	 ACO31799.1	conserved hypothetical protein
+	 ACI21321.1	conserved domain protein
+	 AAC06503.1	hypothetical protein
+	 BAD70857.1	conserved hypothetical protein
+	 ACZ19646.1	KH type 2 domain protein
+	 CCP45710.1	Conserved hypothetical protein
+	 CCW36464.1	RNA-binding protein (KH domain)
+	 NP_389482.1	putative RNA binding protein
+	 ACC81392.1	conserved hypothetical protein
+	 AAD36634.1	conserved hypothetical protein
+	 AAK74914.1	KH domain protein
+
+ ### Family: 11 -> ribosomal protein S16
+
+	 NP_417100.1	30S ribosomal subunit protein S16
+	 CAE38159.1	30S ribosomal protein S16
+	 ABM44631.1	ribosomal protein S16
+	 CAL34847.1	30S ribosomal protein S16
+	 ABF88726.1	ribosomal protein S16
+	 ACO33354.1	ribosomal protein S16
+	 ACI20405.1	ribosomal protein S16
+	 AAC67616.1	S16 Ribosomal Protein
+	 ACD83330.1	Ribosomal protein S16
+	 CAD77803.1	probable 30S ribosomal protein S16
+	 BAG32686.1	30S ribosomal protein S16
+	 ABB28070.1	SSU ribosomal protein S16P
+	 ADL25432.1	ribosomal protein S16
+	 AAC06492.1	ribosomal protein S16
+	 BAD70858.1	30S ribosomal protein S16
+	 ACZ19647.1	ribosomal protein S16
+	 CCP45711.1	30S ribosomal protein S16 RpsP
+	 CCW36463.1	SSU ribosomal protein S16P
+	 NP_389481.1	ribosomal protein S16 (BS17)
+	 AAC72466.2	ribosomal protein S16
+	 ACC81391.1	ribosomal protein S16
+	 AAD36633.1	ribosomal protein S16
+	 AAK74913.1	ribosomal protein S16
+
+ ### Family: 10000 -> pseudogene
+
+	 BPP2868	pseudogene

@@ -1,0 +1,232 @@
+Operon type	Target	AssemblyId	Gene direction	Gene start	Gene end	Relative gene start	Relative gene end	Protein family code	EntrzID	Protein name	Transmembrane/Signal peptide prediction	Superkingdom	Phylum	Class	Order	Genus	Species
+
+
+00001	RS16_CHLTR	GCA_000008725.1	+	27492	27818	-3782	-3456	0	AAC67612.1	L31 Ribosomal Protein		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	28006	29085	-3268	-2189	0	AAC67613.1	Peptide Chain Releasing Factor (RF-1)		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	29069	29941	-2205	-1333	0	AAC67614.1	N6-adenine-specific DNA methylase		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	29938	31284	-1336	10	9	AAC67615.1	Signal Recognition Particle GTPase		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	31275	31625	1	351	11	AAC67616.1	S16 Ribosomal Protein		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	31641	32699	367	1425	8	AAC67617.1	tRNA (guanine N-1) Methyltransferase		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	32725	33090	1451	1816	7	AAC67618.1	L19 Ribosomal Protein		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	33154	33807	1880	2533	6	AAC67619.1	Ribonuclease HII		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+00001	RS16_CHLTR	GCA_000008725.1	+	33798	34415	2524	3141	0	AAC67620.1	GMP Kinase		Bacteria	Chlamydiae	Chlamydiia	Chlamydiales	Chlamydia	Chlamydia trachomatis D/UW-3/CX
+
+00002	RS16_RHOBA	GCA_000196115.1	+	6920200	6920508	-2764	-2456	0	CAD77807.1	hypothetical protein		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	-	6919813	6920292	-2548	-2069	0	CAD77806.1	hypothetical protein		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6919361	6919729	-1985	-1617	0	CAD77805.1	hypothetical protein-signal peptide and transmembrane prediction	TM	Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6917834	6919309	-1565	-90	9	CAD77804.1	signal recognition particle protein		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6917303	6917743	1	441	11	CAD77803.1	probable 30S ribosomal protein S16		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6916578	6917306	438	1166	8	CAD77802.1	tRNA (Guanine-N(1))-methyltransferase		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6916205	6916558	1186	1539	7	CAD77801.1	50S ribosomal protein L19		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6915996	6916142	1602	1748	0	CAD77800.1	hypothetical protein		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+00002	RS16_RHOBA	GCA_000196115.1	+	6915498	6915989	1755	2246	0	CAD77799.1	hypothetical protein		Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Rhodopirellula	Rhodopirellula baltica SH 1
+
+00003	RS16_MYCGE	GCA_000027325.1	+	554430	555614	-5421	-4237	0	AAC72471.1	translation elongation factor Tu		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	553558	554430	-4237	-3365	0	AAC72470.2	degV family protein		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	552447	552899	-2706	-2254	0	AAC72468.1	methionine-R-sulfoxide reductase		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	550803	552446	-2253	-610	0	AAC72467.1	membrane protein%2C putative		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	549905	550192	1	288	11	AAC72466.2	ribosomal protein S16		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	549210	549905	288	983	8	AAC72465.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	548867	549226	967	1326	7	AAC72464.1	ribosomal protein L19		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	547664	548851	1342	2529	0	AAC72463.1	membrane protein%2C putative		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+00003	RS16_MYCGE	GCA_000027325.1	+	546880	547692	2501	3313	0	AAC72462.1	GTP-binding conserved hypothetical protein		Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasma	Mycoplasma genitalium G37
+
+00004	RS16_CHLCH	GCA_000012585.1	-	1131852	1132943	-5203	-4112	0	ABB28074.1	specificity determinant HsdS-like protein		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	-	1130395	1131855	-4115	-2655	0	ABB28073.1	DNA-methyltransferase%2C type I restriction-modification enzyme subunit M		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	-	1129256	1130290	-2550	-1516	0	ABB28072.1	RfaE bifunctional protein%2C domain I		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1127792	1129147	-1407	-52	9	ABB28071.1	signal recognition particle subunit FFH/SRP54 (srp54)		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1127329	1127739	1	411	11	ABB28070.1	SSU ribosomal protein S16P		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1126793	1127296	444	947	5	ABB28069.1	16S rRNA processing protein RimM		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1126066	1126761	979	1674	8	ABB28068.1	tRNA (Guanine37-N(1)-) methyltransferase		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1125677	1126039	1701	2063	7	ABB28067.1	LSU ribosomal protein L19P		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+00004	RS16_CHLCH	GCA_000012585.1	+	1124699	1125538	2202	3041	0	ABB28066.1	conserved hypothetical protein		Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobium	Chlorobium chlorochromatii CaD3
+
+00005	RS16_ECOLI	GCF_000005845.2	+	2750115	2750708	-4522	-3929	0	NP_417104.1	nucleotide exchange factor GrpE		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	-	2748774	2750060	-3874	-2588	0	YP_026171.3	putative inner membrane protein		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	-	2747962	2748753	-2567	-1776	0	NP_417102.4	cytochrome c assembly family protein		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	+	2746434	2747795	-1609	-248	9	NP_417101.1	signal recognition particle protein component		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	+	2745937	2746185	1	249	11	NP_417100.1	30S ribosomal subunit protein S16		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	+	2745370	2745918	268	816	5	NP_417099.4	ribosome maturation factor RimM		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	+	2744572	2745339	847	1614	8	NP_417098.1	tRNA m(1)G37 methyltransferase		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	+	2744183	2744530	1656	2003	7	NP_417097.1	50S ribosomal subunit protein L19		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+00005	RS16_ECOLI	GCF_000005845.2	-	2743625	2744107	2079	2561	3	NP_417096.1	lipoprotein YfiB		Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Escherichia	Escherichia coli str. K-12 substr. MG1655
+
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3426332	3427696	-4090	-2726	9	ADL27401.1	signal recognition particle protein		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	-	3425733	3426263	-2657	-2127	0	ADL26778.1	acetyltransferase%2C GNAT family		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	-	3425500	3425718	-2112	-1894	0	ADL24632.1	hypothetical protein		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	-	3423935	3425302	-1696	-329	0	ADL26321.1	diguanylate cyclase (GGDEF) domain protein		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3423192	3423605	1	414	11	ADL25432.1	ribosomal protein S16		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3422528	3423085	521	1078	5	ADL26406.1	16S rRNA processing protein RimM		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3421827	3422531	1075	1779	8	ADL25835.1	tRNA (guanine-N(1)-)-methyltransferase		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3421463	3421810	1796	2143	7	ADL26577.1	ribosomal protein L19		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+00006	C9RLH7_FIBSS	GCA_000146505.1	+	3420523	3420972	2634	3083	0	ADL25209.1	hypothetical protein		Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacter	Fibrobacter succinogenes subsp. succinogenes S85
+
+00007	RS16_BORPA	GCA_000195695.1	+	3073518	3074336	-4663	-3845	0	CAE38163.1	putative exported protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	+	3070822	3073446	-3773	-1149	0	CAE38162.1	alanyl-tRNA synthetase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	+	3070581	3070835	-1162	-908	0	CAE38161.1	conserved hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	-	3069931	3070512	-839	-258	10000	BPP2868	pseudogene		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	+	3069367	3069672	1	306	11	CAE38159.1	30S ribosomal protein S16		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	+	3068578	3069201	472	1095	5	CAE38158.1	16S rRNA processing protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	+	3067805	3068578	1095	1868	8	CAE38157.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	-	3066600	3067808	1865	3073	0	CAE38156.1	probable class-V aminotransferase		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+00007	RS16_BORPA	GCA_000195695.1	-	3066068	3066574	3099	3605	0	CAE38155.1	conserved hypothetical protein		Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Bordetella	Bordetella parapertussis
+
+00008	RS16_METI4	GCA_000019665.1	-	1196838	1197119	-3911	-3630	0	ACD83334.1	Hypothetical protein		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1196089	1196853	-3645	-2881	0	ACD83333.1	20S proteasome%2C alpha subunit		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1194642	1196057	-2849	-1434	0	ACD83332.1	Putative proteasome component		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1193326	1194648	-1440	-118	9	ACD83331.1	Signal recognition particle GTPase		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1192947	1193207	1	261	11	ACD83330.1	Ribosomal protein S16		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	-	1192646	1192762	446	562	0	ACD83329.1	Hypothetical protein		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1191922	1192620	588	1286	8	ACD83328.1	tRNA-(guanine-N1)-methyltransferase		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1191581	1191955	1253	1627	7	ACD83327.1	Ribosomal protein L19		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+00008	RS16_METI4	GCA_000019665.1	+	1190848	1191528	1680	2360	6	ACD83326.1	Ribonuclease HII		Bacteria	Verrucomicrobia	Methylacidiphilae	Methylacidiphilales	Methylacidiphilum	Methylacidiphilum infernorum V4
+
+00009	RS16_THEYD	GCA_000020985.1	-	793815	794351	-3012	-2476	0	ACI20485.1	type IV pilus assembly protein PilZ		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	-	794357	794998	-2470	-1829	3	ACI20276.1	chemotaxis protein MotB	TM	Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	-	794995	795756	-1832	-1071	0	ACI21187.1	chemotaxis MotA protein	TM	Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	795813	796760	-1014	-67	0	ACI22065.1	tRNA delta(2)-isopentenylpyrophosphate transferase		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	796828	797064	1	237	11	ACI20405.1	ribosomal protein S16		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	797112	797348	285	521	10	ACI21321.1	conserved domain protein		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	797407	798174	580	1347	8	ACI20613.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	798155	798517	1328	1690	7	ACI21105.1	ribosomal protein L19		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+00009	RS16_THEYD	GCA_000020985.1	+	798514	799119	1687	2292	6	ACI21777.1	ribonuclease HII		Bacteria	Nitrospirae	Nitrospira	Nitrospirales	Thermodesulfovibrio	Thermodesulfovibrio yellowstonii DSM 11347
+
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1476316	1476744	-2579	-2151	0	ACZ19651.1	hypothetical protein		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1476053	1476310	-2145	-1888	0	ACZ19650.1	hypothetical protein		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1475549	1475899	-1734	-1384	1	ACZ19649.1	putative helix-turn-helix protein YlxM/p13 family protein		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1474213	1475556	-1391	-48	9	ACZ19648.1	signal recognition particle protein		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1473898	1474164	1	267	11	ACZ19647.1	ribosomal protein S16		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1473617	1473883	282	548	10	ACZ19646.1	KH type 2 domain protein		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1473085	1473630	535	1080	5	ACZ19645.1	16S rRNA processing protein RimM		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1471970	1473085	1080	2195	8	ACZ19644.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+00010	D1B6K6_THEAS	GCA_000024905.1	+	1471584	1471943	2222	2581	7	ACZ19643.1	ribosomal protein L19		Bacteria	Synergistetes	Synergistia	Synergistales	Thermanaerovibrio	Thermanaerovibrio acidaminovorans DSM 6589
+
+00011	RS16_CAMJE	GCA_000009085.1	+	663117	663833	-4072	-3356	0	CAL34843.1	conserved hypothetical protein Cj0706		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	663830	664987	-3359	-2202	0	CAL34844.1	3-deoxy-D-manno-octulosonic-acid transferase	TM	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	664968	665720	-2221	-1469	0	CAL34845.1	putative ribosomal pseudouridine synthase		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	665788	667125	-1401	-64	9	CAL34846.1	signal recognition particle protein		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	667190	667417	1	228	11	CAL34847.1	30S ribosomal protein S16		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	667420	667662	231	473	10	CAL34848.1	hypothetical protein Cj0711		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	667655	668194	466	1005	5	CAL34849.1	putative 16S rRNA processing protein		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	668191	668895	1002	1706	8	CAL34850.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+00011	RS16_CAMJE	GCA_000009085.1	+	668906	669262	1717	2073	7	CAL34851.1	50S ribosomal protein L19		Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacter	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+
+00012	RS16_THET8	GCA_000091545.1	+	985329	986984	-3970	-2315	0	BAD70862.1	methylmalonyl-CoA mutase%2C alpha subunit%2C chain A		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	984890	985318	-2304	-1876	0	BAD70861.1	methylmalonyl-CoA mutase%2C alpha subunit%2C chain B		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	984420	984893	-1879	-1406	0	BAD70860.1	conserved hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	983018	984322	-1308	-4	9	BAD70859.1	signal recognition particle protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	982747	983013	1	267	11	BAD70858.1	30S ribosomal protein S16		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	982470	982688	326	544	10	BAD70857.1	conserved hypothetical protein		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	981948	982436	578	1066	5	BAD70856.1	16S rRNA processing protein RimM		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	981229	981948	1066	1785	8	BAD70855.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+00012	RS16_THET8	GCA_000091545.1	+	980732	981172	1842	2282	7	BAD70854.1	50S ribosomal protein L19		Bacteria	Deinococcus-Thermus	Deinococci	Thermales	Thermus	Thermus thermophilus HB8
+
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3141214	3143727	-6707	-4194	0	CCW36459.1	ATPases with chaperone activity%2C ATP-binding subunit		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3143937	3145337	-3984	-2584	0	CCW36460.1	hypothetical protein		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3145347	3146096	-2574	-1825	2	CCW36461.1	3-deoxy-D-manno-octulosonate cytidylyltransferase		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3146428	3147831	-1493	-90	9	CCW36462.1	signal recognition particle subunit FFH/SRP54 (srp54)		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3147922	3148215	1	294	11	CCW36463.1	SSU ribosomal protein S16P		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3148208	3148474	287	553	10	CCW36464.1	RNA-binding protein (KH domain)		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3148501	3149049	580	1128	5	CCW36465.1	16S rRNA processing protein RimM		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3149073	3149927	1152	2006	8	CCW36466.1	tRNA (Guanine37-N(1)-) methyltransferase		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+00013	S0EXP8_CHTCT	GCA_000427095.1	+	3149899	3150366	1978	2445	7	CCW36467.1	ribosomal protein L19%2C bacterial type		Bacteria	Armatimonadetes	Chthonomonadetes	Chthonomonadales	Chthonomonas	Chthonomonas calidirosea T49
+
+00014	RS16_MYXXD	GCA_000012685.1	+	4126766	4127926	-3985	-2825	0	ABF90607.1	succinyl-CoA synthase%2C beta subunit		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4127956	4128855	-2795	-1896	0	ABF91257.1	succinyl-CoA synthetase%2C alpha subunit		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4128889	4129326	-1862	-1425	0	ABF90253.1	nucleoside diphosphate kinase		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4129525	4130661	-1226	-90	0	ABF86078.1	radical SAM enzyme%2C Cfr family		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4130752	4131012	1	261	11	ABF88726.1	ribosomal protein S16		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4131024	4131308	273	557	10	ABF88169.1	KH domain protein		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4131305	4131871	554	1120	5	ABF89241.1	16S rRNA processing protein RimM		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4131868	4132611	1117	1860	8	ABF92908.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+00014	RS16_MYXXD	GCA_000012685.1	+	4132728	4133111	1977	2360	7	ABF91840.1	ribosomal protein L19		Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Myxococcus	Myxococcus xanthus DK 1622
+
+00015	RS16_THEMA	GCA_000008545.1	+	1552946	1553746	-3324	-2524	0	AAD36628.1	hypothetical protein		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1553751	1554557	-2519	-1713	0	AAD36629.1	conserved hypothetical protein	TM	Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1554532	1554804	-1738	-1466	0	AAD36630.1	acylphosphatase%2C putative		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1554956	1556257	-1314	-13	9	AAD36632.1	signal recognition particle protein		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1556271	1556558	1	288	11	AAD36633.1	ribosomal protein S16		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1556555	1556782	285	512	10	AAD36634.1	conserved hypothetical protein		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1556787	1557317	517	1047	5	AAD36635.1	16S rRNA processing protein%2C putative		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1557317	1558054	1047	1784	8	AAD36636.1	tRNA guanine-N1 methyltransferase		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+00015	RS16_THEMA	GCA_000008545.1	+	1558048	1558626	1778	2356	0	AAD36637.1	conserved hypothetical protein		Bacteria	Thermotogae	Thermotogae	Thermotogales	Thermotoga	Thermotoga maritima MSB8
+
+00016	RS16_ACIC5	GCA_000022565.1	+	3280933	3282183	-6991	-5741	0	ACO32581.1	transporter%2C major facilitator family	TM	Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	-	3280191	3280928	-5736	-4999	2	ACO33639.1	3-deoxy-D-manno-octulosonate cytidylyltransferase		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	+	3278087	3280048	-4856	-2895	0	ACO31372.1	acetate--CoA ligase		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	-	3275616	3278015	-2823	-424	4	ACO31734.1	two-component hybrid sensor and regulator		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	+	3274943	3275191	1	249	11	ACO33354.1	ribosomal protein S16		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	+	3274530	3274808	384	662	10	ACO31799.1	conserved hypothetical protein		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	+	3273883	3274524	668	1309	5	ACO31518.1	16S rRNA processing protein RimM		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	+	3273056	3273874	1318	2136	8	ACO33737.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+00016	RS16_ACIC5	GCA_000022565.1	-	3272132	3273028	2164	3060	0	ACO34497.1	PAP2 domain protein		Bacteria	Acidobacteria	Acidobacteriia	Acidobacteriales	Acidobacterium	Acidobacterium capsulatum ATCC 51196
+
+00017	RS16_BACSU	GCF_000009045.1	+	1670140	1671129	-3479	-2490	9	NP_389477.1	signal recognition particle (docking protein)		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	-	1671166	1671651	-2453	-1968	0	NP_389478.1	conserved exported protein of unknown function		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1671828	1672160	-1791	-1459	1	NP_389479.1	component of the signal recognition particle (SRP) protein-targeting pathway		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1672174	1673514	-1445	-105	9	NP_389480.1	signal recognition particle-like (SRP) GTPase		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1673620	1673892	1	273	11	NP_389481.1	ribosomal protein S16 (BS17)		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1673892	1674137	273	518	10	NP_389482.1	putative RNA binding protein		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1674259	1674645	640	1026	0	NP_389483.1	conserved hypothetical protein		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1674650	1675174	1031	1555	5	NP_389484.1	16S rRNA processing protein		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+00017	RS16_BACSU	GCF_000009045.1	+	1675171	1675902	1552	2283	8	NP_389485.1	tRNA(m1G37)methyltransferase		Bacteria	Firmicutes	Bacilli	Bacillales	Bacillus	Bacillus subtilis subsp. subtilis str. 168
+
+00018	RS16_MYCTU	GCA_000195955.2	+	3219863	3221698	-4054	-2219	0	CCP45715.1	Possible D-amino acid aminohydrolase (D-amino acid hydrolase)		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3219274	3219861	-2217	-1630	0	CCP45714.1	Probable transcriptional regulatory protein (probably TetR-family)		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	-	3218339	3219214	-1570	-695	0	CCP45713.1	Probable penicillin-binding protein DacB2 (D-alanyl-D-alanine carboxypeptidase) (DD-peptidase) (DD-carboxypeptidase) (PBP) (DD-transpeptidase) (serine-type D-ala-D-ala carboxypeptidase) (D-amino acid hydrolase)		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3217827	3218270	-626	-183	0	CCP45712.1	Conserved hypothetical protein		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3217155	3217643	1	489	11	CCP45711.1	30S ribosomal protein S16 RpsP		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3216905	3217147	497	739	10	CCP45710.1	Conserved hypothetical protein		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3216361	3216891	753	1283	5	CCP45709.1	Probable 16S rRNA processing protein RimM		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	+	3215665	3216357	1287	1979	8	CCP45708.1	Probable tRNA (guanine-N1)-methyltransferase TrmD (M1G-methyltransferase) (tRNA [GM37] methyltransferase)		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+00018	RS16_MYCTU	GCA_000195955.2	-	3214628	3215572	2072	3016	0	CCP45707.1	Probable conserved alanine rich lipoprotein LppW		Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacterium	Mycobacterium tuberculosis H37Rv
+
+00019	RS16_STRPN	GCA_000006885.1	-	729840	730643	-1957	-1154	0	AAK74909.1	peptidyl-prolyl cis-trans isomerase%2C cyclophilin-type		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	-	730727	730930	-1070	-867	0	AAK74910.1	hypothetical protein	TM	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	731337	731435	-460	-362	0	AAK74911.1	hypothetical protein		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	-	731419	731628	-378	-169	0	AAK74912.1	hypothetical protein		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	731798	732070	1	273	11	AAK74913.1	ribosomal protein S16		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	732090	732329	293	532	10	AAK74914.1	KH domain protein		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	732894	733694	1097	1897	0	AAK74915.1	hypothetical protein		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	733725	734243	1928	2446	5	AAK74916.1	16S rRNA processing protein RimM		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+00019	RS16_STRPN	GCA_000006885.1	+	734233	734952	2436	3155	8	AAK74917.1	tRNA (guanine-N1)-methyltransferase		Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcus	Streptococcus pneumoniae TIGR4
+
+00020	RS16_NOSP7	GCA_000020025.1	+	3525338	3528520	-6483	-3301	4	ACC81387.1	GAF sensor signal transduction histidine kinase		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	-	3528600	3529271	-3221	-2550	0	ACC81388.1	DSBA oxidoreductase		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	-	3529312	3529992	-2509	-1829	0	ACC81389.1	protein of unknown function DUF820		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	+	3530157	3531623	-1664	-198	9	ACC81390.1	signal recognition particle protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	+	3531822	3532082	1	261	11	ACC81391.1	ribosomal protein S16		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	+	3532045	3532479	224	658	10	ACC81392.1	conserved hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	+	3532982	3533935	1161	2114	0	ACC81393.1	PhoH family protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	+	3534027	3534431	2206	2610	0	ACC81394.1	conserved hypothetical protein		Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+00020	RS16_NOSP7	GCA_000020025.1	-	3534471	3535586	2650	3765	0	ACC81395.1	conserved hypothetical protein	TM	Bacteria	Cyanobacteria	Cyanobacteria_na	Nostocales	Nostoc	Nostoc punctiforme PCC 73102
+
+00021	RS16_AQUAE	GCA_000008625.1	-	74123	75316	-4204	-3011	0	AAC06475.1	phosphoglycerate kinase		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	-	75328	75981	-2999	-2346	0	AAC06476.1	transaldolase		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	-	76010	77038	-2317	-1289	0	AAC06483.1	hypothetical protein		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	-	77035	78246	-1292	-81	0	AAC06477.1	histidyl-tRNA synthetase		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	+	78328	78666	1	339	11	AAC06492.1	ribosomal protein S16		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	+	78663	78902	336	575	10	AAC06503.1	hypothetical protein		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	+	78902	79300	575	973	0	AAC06497.1	putative protein		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	+	79305	79748	978	1421	0	AAC06498.1	putative protein		Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+00021	RS16_AQUAE	GCA_000008625.1	+	79748	80566	1421	2239	0	AAC06499.1	putative protein	TM	Bacteria	Aquificae	Aquificae	Aquificales	Aquifex	Aquifex aeolicus VF5
+
+00022	RS16_BARBK	GCA_000015445.1	+	70042	70809	-8910	-8143	0	ABM44559.1	class I glutamine amidotransferase family protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	-	71085	75794	-7867	-3158	0	ABM45117.1	glutamate dehydrogenase%2C NAD-specific		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	76074	76730	-2878	-2222	0	ABM44704.1	carbonic anhydrase		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	76976	78523	-1976	-429	9	ABM45267.1	signal recognition particle protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	78953	79315	1	363	11	ABM44631.1	ribosomal protein S16		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	-	79464	79670	512	718	0	ABM45177.1	conserved hypothetical protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	79755	80786	803	1834	0	ABM44460.1	peptidase%2C M48 family		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	80897	82267	1945	3315	0	ABM45685.1	putative ribosomal RNA small subunit methyltransferase B		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+00022	RS16_BARBK	GCA_000015445.1	+	82335	84044	3383	5092	0	ABM44945.1	heparinase II/III-like family protein		Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonella	Bartonella bacilliformis KC583
+
+00023	RS16_PORG3	GCA_000010505.1	+	183701	184012	-4138	-3827	0	BAG32690.1	partial transposase in ISPg2	TM	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	+	182610	183623	-3749	-2736	0	BAG32689.1	L-asparaginase		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	+	181748	182557	-2683	-1874	0	BAG32688.1	probable metallo-beta-lactamase superfamily protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	-	180659	181630	-1756	-785	0	BAG32687.1	lipopolysaccharide biosynthesis protein WbpB		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	+	179295	179873	1	579	11	BAG32686.1	30S ribosomal protein S16		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	-	178991	179143	731	883	0	BAG32685.1	conserved hypothetical protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	-	178645	178812	1062	1229	0	BAG32684.1	conserved hypothetical protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	+	178270	178503	1371	1604	0	BAG32683.1	conserved hypothetical protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277
+00023	RS16_PORG3	GCA_000010505.1	-	177696	178004	1870	2178	0	BAG32682.1	hypothetical protein		Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonas	Porphyromonas gingivalis ATCC 33277

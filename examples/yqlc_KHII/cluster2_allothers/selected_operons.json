@@ -1,0 +1,3165 @@
+{
+    "GC Type 00013 (20)": {
+        "target_members": [
+            "WP_036816310.1",
+            "WP_053605992.1",
+            "WP_020156288.1",
+            "WP_049671448.1",
+            "WP_113808291.1",
+            "WP_069718753.1",
+            "WP_121680293.1",
+            "WP_039232122.1",
+            "WP_148940207.1",
+            "WP_059350745.1",
+            "PSL51166.1",
+            "WP_003322053.1",
+            "WP_076556693.1",
+            "WP_033023251.1",
+            "WP_116552985.1",
+            "WP_155111253.1",
+            "WP_066264726.1",
+            "WP_099680534.1",
+            "WP_097040384.1",
+            "WP_165199465.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                10000,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                10000,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00018 (12)": {
+        "target_members": [
+            "OYV85121.1",
+            "TAK59397.1",
+            "TMK87696.1",
+            "EKD23417.1",
+            "RIK53503.1",
+            "TMK17718.1",
+            "WP_120377795.1",
+            "OQX29578.1",
+            "PID85410.1",
+            "TNF49508.1",
+            "OGO37218.1",
+            "RLE32576.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                60,
+                66
+            ],
+            [
+                59,
+                60,
+                66,
+                62,
+                0
+            ],
+            [
+                59,
+                60,
+                66,
+                10000,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                60,
+                66,
+                63
+            ],
+            [
+                59,
+                60,
+                66,
+                62,
+                38,
+                27,
+                39
+            ],
+            [
+                59,
+                60,
+                66,
+                62,
+                0,
+                63,
+                64
+            ],
+            [
+                59,
+                60,
+                66,
+                10000
+            ],
+            [
+                0,
+                51,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                10000
+            ],
+            [
+                59,
+                60,
+                66,
+                62,
+                38,
+                27,
+                36
+            ],
+            [
+                0,
+                0,
+                10000,
+                10000,
+                66,
+                62,
+                63,
+                63
+            ],
+            [
+                10000,
+                10000,
+                59,
+                60,
+                66,
+                62,
+                10000,
+                10000
+            ],
+            [
+                59,
+                60,
+                66,
+                63
+            ]
+        ]
+    },
+    "GC Type 00016 (7)": {
+        "target_members": [
+            "OUM88402.1",
+            "WP_040228095.1",
+            "WP_124727619.1",
+            "WP_066169962.1",
+            "OJF16653.1",
+            "WP_088005904.1",
+            "WP_131926248.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00014 (4)": {
+        "target_members": [
+            "WP_026961723.1",
+            "WP_026963946.1",
+            "WP_109430894.1",
+            "WP_072873835.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63
+            ]
+        ]
+    },
+    "GC Type 00017 (4)": {
+        "target_members": [
+            "WP_058985486.1",
+            "CDD67297.1",
+            "WP_066661777.1",
+            "WP_066779811.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                55,
+                10000,
+                59,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ],
+            [
+                55,
+                59,
+                59,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ],
+            [
+                55,
+                59,
+                59,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ],
+            [
+                55,
+                59,
+                59,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00001 (3)": {
+        "target_members": [
+            "PCI38739.1",
+            "OGS05586.1",
+            "OGR58986.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                34,
+                35,
+                40,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ],
+            [
+                34,
+                35,
+                40,
+                60,
+                66,
+                63,
+                10000,
+                42,
+                41
+            ],
+            [
+                34,
+                35,
+                40,
+                60,
+                66,
+                63,
+                64,
+                10000,
+                41
+            ]
+        ]
+    },
+    "GC Type 00015 (3)": {
+        "target_members": [
+            "WP_135346905.1",
+            "PWL41573.1",
+            "WP_023387859.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                31
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                31
+            ],
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                31
+            ]
+        ]
+    },
+    "GC Type 00002 (2)": {
+        "target_members": [
+            "OGS45708.1",
+            "OQA89719.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                33,
+                35,
+                40,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ],
+            [
+                33,
+                35,
+                40,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ]
+        ]
+    },
+    "GC Type 00003 (2)": {
+        "target_members": [
+            "OGY24467.1",
+            "OGY31576.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                46,
+                45,
+                44,
+                60,
+                66,
+                63,
+                43,
+                59,
+                50
+            ],
+            [
+                46,
+                45,
+                44,
+                60,
+                66,
+                63,
+                43,
+                59,
+                50
+            ]
+        ]
+    },
+    "GC Type 00010 (2)": {
+        "target_members": [
+            "WP_028264296.1",
+            "WP_097677401.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                8,
+                14,
+                48,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ],
+            [
+                8,
+                14,
+                48,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00004 (1)": {
+        "target_members": [
+            "KKT84964.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                46,
+                45,
+                44,
+                60,
+                66,
+                63,
+                0,
+                59,
+                50
+            ]
+        ]
+    },
+    "GC Type 00005 (1)": {
+        "target_members": [
+            "KKS90374.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                46,
+                45,
+                44,
+                60,
+                66,
+                43,
+                0,
+                50,
+                0
+            ]
+        ]
+    },
+    "GC Type 00006 (1)": {
+        "target_members": [
+            "PIU69083.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                46,
+                45,
+                44,
+                60,
+                66,
+                43,
+                59,
+                50,
+                0
+            ]
+        ]
+    },
+    "GC Type 00007 (1)": {
+        "target_members": [
+            "WP_041597675.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                9,
+                10,
+                1,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00008 (1)": {
+        "target_members": [
+            "WP_162539957.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                9,
+                10,
+                1,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00009 (1)": {
+        "target_members": [
+            "WP_174306861.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                9,
+                10,
+                1,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00011 (1)": {
+        "target_members": [
+            "WP_012798236.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                12,
+                11,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00012 (1)": {
+        "target_members": [
+            "WP_123208283.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                12,
+                11,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00019 (1)": {
+        "target_members": [
+            "CAE79962.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00020 (1)": {
+        "target_members": [
+            "CDE20839.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66
+            ]
+        ]
+    },
+    "GC Type 00021 (1)": {
+        "target_members": [
+            "KZD15133.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                40,
+                0,
+                59,
+                10000,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00022 (1)": {
+        "target_members": [
+            "OFW67048.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                10000,
+                10000,
+                59,
+                60,
+                66,
+                62,
+                10000,
+                54,
+                0
+            ]
+        ]
+    },
+    "GC Type 00023 (1)": {
+        "target_members": [
+            "OGF52896.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                10000,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00024 (1)": {
+        "target_members": [
+            "OGO26176.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                37,
+                59,
+                60,
+                66,
+                62,
+                38,
+                36,
+                39
+            ]
+        ]
+    },
+    "GC Type 00025 (1)": {
+        "target_members": [
+            "OLA43507.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                31,
+                42
+            ]
+        ]
+    },
+    "GC Type 00026 (1)": {
+        "target_members": [
+            "OLC57891.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00027 (1)": {
+        "target_members": [
+            "OPX26141.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                40,
+                59,
+                10000,
+                0,
+                66,
+                62,
+                63
+            ]
+        ]
+    },
+    "GC Type 00028 (1)": {
+        "target_members": [
+            "OPZ59235.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                60,
+                66,
+                62
+            ]
+        ]
+    },
+    "GC Type 00029 (1)": {
+        "target_members": [
+            "OQB15766.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                29,
+                30
+            ]
+        ]
+    },
+    "GC Type 00030 (1)": {
+        "target_members": [
+            "OQB21461.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00031 (1)": {
+        "target_members": [
+            "OQY91747.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                38,
+                0,
+                27
+            ]
+        ]
+    },
+    "GC Type 00032 (1)": {
+        "target_members": [
+            "PCI74298.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                26,
+                0,
+                59,
+                60,
+                66,
+                63,
+                10000,
+                0,
+                10000
+            ]
+        ]
+    },
+    "GC Type 00033 (1)": {
+        "target_members": [
+            "PID75101.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                25,
+                59,
+                60,
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00034 (1)": {
+        "target_members": [
+            "PID79571.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                35,
+                40,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00035 (1)": {
+        "target_members": [
+            "PKO07036.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                37,
+                59,
+                60,
+                66,
+                62,
+                38,
+                27,
+                36
+            ]
+        ]
+    },
+    "GC Type 00036 (1)": {
+        "target_members": [
+            "PKQ17359.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                54,
+                59,
+                60,
+                66,
+                62,
+                63,
+                54,
+                54
+            ]
+        ]
+    },
+    "GC Type 00037 (1)": {
+        "target_members": [
+            "PKQ28811.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00038 (1)": {
+        "target_members": [
+            "PLS75815.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                24,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00039 (1)": {
+        "target_members": [
+            "PLX18540.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                63
+            ]
+        ]
+    },
+    "GC Type 00040 (1)": {
+        "target_members": [
+            "PYI56111.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                23,
+                59,
+                60,
+                66,
+                63
+            ]
+        ]
+    },
+    "GC Type 00041 (1)": {
+        "target_members": [
+            "PYQ11329.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                10000,
+                42
+            ]
+        ]
+    },
+    "GC Type 00042 (1)": {
+        "target_members": [
+            "PZR60529.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                18,
+                45,
+                59,
+                60,
+                66,
+                62,
+                18,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00043 (1)": {
+        "target_members": [
+            "RIK01244.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                0,
+                29,
+                17
+            ]
+        ]
+    },
+    "GC Type 00044 (1)": {
+        "target_members": [
+            "RLT24846.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                10000,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00045 (1)": {
+        "target_members": [
+            "RMG23772.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00046 (1)": {
+        "target_members": [
+            "TMC83628.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00047 (1)": {
+        "target_members": [
+            "TME15659.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00048 (1)": {
+        "target_members": [
+            "TMK87268.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                14,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00049 (1)": {
+        "target_members": [
+            "TML43051.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                24,
+                10000,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00050 (1)": {
+        "target_members": [
+            "TMM01377.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                10000,
+                54
+            ]
+        ]
+    },
+    "GC Type 00051 (1)": {
+        "target_members": [
+            "TSA16903.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00052 (1)": {
+        "target_members": [
+            "WP_004825665.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00053 (1)": {
+        "target_members": [
+            "WP_008520911.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                13,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00054 (1)": {
+        "target_members": [
+            "WP_009372714.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00055 (1)": {
+        "target_members": [
+            "WP_021939060.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                0,
+                48
+            ]
+        ]
+    },
+    "GC Type 00056 (1)": {
+        "target_members": [
+            "WP_025228702.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00057 (1)": {
+        "target_members": [
+            "PWM50527.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                63
+            ]
+        ]
+    },
+    "GC Type 00058 (1)": {
+        "target_members": [
+            "WP_029165374.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                25
+            ]
+        ]
+    },
+    "GC Type 00059 (1)": {
+        "target_members": [
+            "WP_036741206.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00060 (1)": {
+        "target_members": [
+            "WP_037974870.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00061 (1)": {
+        "target_members": [
+            "WP_041459500.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                13,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00062 (1)": {
+        "target_members": [
+            "WP_044642606.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00063 (1)": {
+        "target_members": [
+            "WP_046510790.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00064 (1)": {
+        "target_members": [
+            "WP_070710341.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00065 (1)": {
+        "target_members": [
+            "WP_082671097.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                16,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00066 (1)": {
+        "target_members": [
+            "WP_084053921.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                63
+            ]
+        ]
+    },
+    "GC Type 00067 (1)": {
+        "target_members": [
+            "WP_084286292.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00068 (1)": {
+        "target_members": [
+            "WP_089722705.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00069 (1)": {
+        "target_members": [
+            "WP_091351128.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00070 (1)": {
+        "target_members": [
+            "WP_091790858.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                57,
+                62,
+                63,
+                0
+            ]
+        ]
+    },
+    "GC Type 00071 (1)": {
+        "target_members": [
+            "WP_092085186.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                18,
+                60,
+                66,
+                62,
+                63,
+                51,
+                0
+            ]
+        ]
+    },
+    "GC Type 00072 (1)": {
+        "target_members": [
+            "WP_092478849.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00073 (1)": {
+        "target_members": [
+            "WP_095041880.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                10000,
+                66,
+                62,
+                38,
+                27,
+                36
+            ]
+        ]
+    },
+    "GC Type 00074 (1)": {
+        "target_members": [
+            "WP_119067951.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                55,
+                59,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00075 (1)": {
+        "target_members": [
+            "WP_124791567.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                62,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00076 (1)": {
+        "target_members": [
+            "WP_138196693.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                54
+            ]
+        ]
+    },
+    "GC Type 00077 (1)": {
+        "target_members": [
+            "WP_156705555.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                0,
+                62,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00078 (1)": {
+        "target_members": [
+            "WP_166626503.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00079 (1)": {
+        "target_members": [
+            "WP_173112693.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                51,
+                51,
+                60,
+                66,
+                62,
+                63,
+                54,
+                10000
+            ]
+        ]
+    },
+    "GC Type 00080 (1)": {
+        "target_members": [
+            "WP_173928157.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                18,
+                45,
+                59,
+                60,
+                66,
+                62,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00081 (1)": {
+        "target_members": [
+            "WP_174621182.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                55,
+                59,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                41
+            ]
+        ]
+    },
+    "GC Type 00082 (1)": {
+        "target_members": [
+            "CBL28406.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                56,
+                0,
+                59,
+                60,
+                66,
+                63,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00083 (1)": {
+        "target_members": [
+            "ESQ12861.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00084 (1)": {
+        "target_members": [
+            "KKP25997.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                63,
+                64,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00085 (1)": {
+        "target_members": [
+            "KKP35792.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                47,
+                0,
+                59,
+                60,
+                66,
+                63,
+                64,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00086 (1)": {
+        "target_members": [
+            "KQC14147.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ]
+        ]
+    },
+    "GC Type 00087 (1)": {
+        "target_members": [
+            "OIP96968.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                66,
+                32,
+                10000
+            ]
+        ]
+    },
+    "GC Type 00088 (1)": {
+        "target_members": [
+            "OQC43023.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00089 (1)": {
+        "target_members": [
+            "PIP12460.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                56,
+                0,
+                60,
+                66,
+                63,
+                64,
+                41
+            ]
+        ]
+    },
+    "GC Type 00090 (1)": {
+        "target_members": [
+            "PIR19223.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                40,
+                60,
+                66,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00091 (1)": {
+        "target_members": [
+            "PKK94860.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66
+            ]
+        ]
+    },
+    "GC Type 00092 (1)": {
+        "target_members": [
+            "PSH03671.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00093 (1)": {
+        "target_members": [
+            "PWL79277.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                52,
+                0,
+                52,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00094 (1)": {
+        "target_members": [
+            "PWM34106.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00095 (1)": {
+        "target_members": [
+            "PZM91784.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                51,
+                0,
+                60,
+                66,
+                62,
+                63,
+                64,
+                19
+            ]
+        ]
+    },
+    "GC Type 00096 (1)": {
+        "target_members": [
+            "PZR62573.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                59,
+                0,
+                60,
+                66,
+                62,
+                63,
+                64,
+                42
+            ]
+        ]
+    },
+    "GC Type 00097 (1)": {
+        "target_members": [
+            "RKU28278.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ]
+        ]
+    },
+    "GC Type 00098 (1)": {
+        "target_members": [
+            "RME08879.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                66,
+                62,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00099 (1)": {
+        "target_members": [
+            "TDI95161.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                64,
+                19
+            ]
+        ]
+    },
+    "GC Type 00100 (1)": {
+        "target_members": [
+            "TMM13716.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                63,
+                64,
+                54,
+                42
+            ]
+        ]
+    },
+    "GC Type 00101 (1)": {
+        "target_members": [
+            "TRZ65843.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                59,
+                60,
+                66,
+                62,
+                63,
+                64,
+                0
+            ]
+        ]
+    },
+    "GC Type 00102 (1)": {
+        "target_members": [
+            "TSA29763.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00103 (1)": {
+        "target_members": [
+            "WP_027889696.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                0,
+                5,
+                5,
+                0
+            ]
+        ]
+    },
+    "GC Type 00104 (1)": {
+        "target_members": [
+            "WP_041739193.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                30,
+                17,
+                8,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00105 (1)": {
+        "target_members": [
+            "WP_071131953.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00106 (1)": {
+        "target_members": [
+            "WP_075276636.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                10000,
+                0
+            ]
+        ]
+    },
+    "GC Type 00107 (1)": {
+        "target_members": [
+            "WP_108059770.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00108 (1)": {
+        "target_members": [
+            "WP_133451944.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                64,
+                51
+            ]
+        ]
+    },
+    "GC Type 00109 (1)": {
+        "target_members": [
+            "WP_133579266.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                58,
+                59,
+                60,
+                66,
+                0,
+                0,
+                57,
+                62
+            ]
+        ]
+    },
+    "GC Type 00110 (1)": {
+        "target_members": [
+            "WP_138268653.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00111 (1)": {
+        "target_members": [
+            "WP_148133815.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                58,
+                59,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00112 (1)": {
+        "target_members": [
+            "WP_165044303.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                59,
+                59,
+                0,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00113 (1)": {
+        "target_members": [
+            "WP_165059976.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                54,
+                53
+            ]
+        ]
+    },
+    "GC Type 00114 (1)": {
+        "target_members": [
+            "WP_168097847.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                58,
+                59,
+                60,
+                66,
+                62,
+                63,
+                0,
+                8
+            ]
+        ]
+    },
+    "GC Type 00115 (1)": {
+        "target_members": [
+            "WP_174356430.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                62,
+                63,
+                63,
+                0
+            ]
+        ]
+    },
+    "GC Type 00116 (1)": {
+        "target_members": [
+            "AMB98951.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                58,
+                59,
+                0,
+                60,
+                66,
+                0,
+                62,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00117 (1)": {
+        "target_members": [
+            "CDE39195.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                52,
+                0,
+                0,
+                60,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00118 (1)": {
+        "target_members": [
+            "CDE95132.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                51,
+                0,
+                60,
+                66,
+                0,
+                50,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00119 (1)": {
+        "target_members": [
+            "KPJ55722.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00120 (1)": {
+        "target_members": [
+            "KXK07983.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                46,
+                44,
+                60,
+                66,
+                0,
+                0,
+                0,
+                50
+            ]
+        ]
+    },
+    "GC Type 00121 (1)": {
+        "target_members": [
+            "OGC16053.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                57,
+                63,
+                63,
+                64
+            ]
+        ]
+    },
+    "GC Type 00122 (1)": {
+        "target_members": [
+            "OGV37652.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                63,
+                64,
+                42,
+                0
+            ]
+        ]
+    },
+    "GC Type 00123 (1)": {
+        "target_members": [
+            "PJE67290.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                46,
+                44,
+                60,
+                66,
+                43,
+                59,
+                10000,
+                0
+            ]
+        ]
+    },
+    "GC Type 00124 (1)": {
+        "target_members": [
+            "PZR71877.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                22,
+                66,
+                63,
+                21,
+                20,
+                36
+            ]
+        ]
+    },
+    "GC Type 00125 (1)": {
+        "target_members": [
+            "PYI93902.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                23,
+                59,
+                60,
+                22,
+                66,
+                63,
+                21,
+                20,
+                36
+            ]
+        ]
+    },
+    "GC Type 00126 (1)": {
+        "target_members": [
+            "RKX69607.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                16,
+                60,
+                66,
+                63,
+                64,
+                42,
+                41
+            ]
+        ]
+    },
+    "GC Type 00127 (1)": {
+        "target_members": [
+            "RLD33598.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00128 (1)": {
+        "target_members": [
+            "RMF93602.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                15,
+                0
+            ]
+        ]
+    },
+    "GC Type 00129 (1)": {
+        "target_members": [
+            "RPH35072.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                62,
+                63,
+                64,
+                66,
+                0
+            ]
+        ]
+    },
+    "GC Type 00130 (1)": {
+        "target_members": [
+            "TET36259.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                66,
+                63,
+                64,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00131 (1)": {
+        "target_members": [
+            "WP_027984593.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                66,
+                0,
+                4,
+                0
+            ]
+        ]
+    },
+    "GC Type 00132 (1)": {
+        "target_members": [
+            "WP_119015225.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                60,
+                66,
+                0,
+                0,
+                47,
+                62
+            ]
+        ]
+    },
+    "GC Type 00133 (1)": {
+        "target_members": [
+            "WP_168722522.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                62,
+                63,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00134 (1)": {
+        "target_members": [
+            "WP_175645309.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                10000,
+                66,
+                0,
+                10000,
+                10000,
+                14
+            ]
+        ]
+    },
+    "GC Type 00135 (1)": {
+        "target_members": [
+            "CBL06223.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                58,
+                0,
+                66,
+                0,
+                57,
+                62,
+                63
+            ]
+        ]
+    },
+    "GC Type 00136 (1)": {
+        "target_members": [
+            "GAK55151.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                49,
+                66,
+                48,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00137 (1)": {
+        "target_members": [
+            "KPJ79156.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                0,
+                0,
+                49,
+                0
+            ]
+        ]
+    },
+    "GC Type 00138 (1)": {
+        "target_members": [
+            "OQY14477.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                28,
+                66,
+                0,
+                59,
+                60,
+                61
+            ]
+        ]
+    },
+    "GC Type 00139 (1)": {
+        "target_members": [
+            "PKN53458.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                28,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00140 (1)": {
+        "target_members": [
+            "RJR47606.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                32,
+                0,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00141 (1)": {
+        "target_members": [
+            "TAK21487.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00142 (1)": {
+        "target_members": [
+            "WP_020370739.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                0,
+                0,
+                51,
+                0
+            ]
+        ]
+    },
+    "GC Type 00143 (1)": {
+        "target_members": [
+            "WP_020588717.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                6,
+                0,
+                0,
+                26,
+                66,
+                6,
+                0,
+                0,
+                48
+            ]
+        ]
+    },
+    "GC Type 00144 (1)": {
+        "target_members": [
+            "WP_027366251.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                7,
+                0,
+                0,
+                0,
+                66,
+                0,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00145 (1)": {
+        "target_members": [
+            "WP_027985545.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                10000,
+                0,
+                0,
+                66,
+                0,
+                28,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00146 (1)": {
+        "target_members": [
+            "WP_084057338.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                7,
+                15,
+                2,
+                3,
+                66,
+                32,
+                0,
+                0,
+                59
+            ]
+        ]
+    },
+    "GC Type 00147 (1)": {
+        "target_members": [
+            "WP_093393933.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                2,
+                3,
+                66,
+                32,
+                0,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00148 (1)": {
+        "target_members": [
+            "WP_108040934.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                0,
+                0,
+                0,
+                0,
+                66,
+                63,
+                64,
+                0,
+                0
+            ]
+        ]
+    },
+    "GC Type 00149 (1)": {
+        "target_members": [
+            "WP_155303092.1"
+        ],
+        "operon_protein_families_structure": [
+            [
+                7,
+                0,
+                0,
+                0,
+                66,
+                0,
+                4,
+                0,
+                0
+            ]
+        ]
+    }
+}

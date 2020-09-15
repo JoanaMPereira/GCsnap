@@ -1,0 +1,942 @@
+{
+    "0": {
+        "name": "Non-conserved",
+        "members": [
+            "NP_415201.1",
+            "NP_415200.1",
+            "NP_415195.1",
+            "NP_415189.1",
+            "ALZ83663.1",
+            "ALZ83661.1",
+            "ALZ83655.1",
+            "ALM84748.1",
+            "ALM84749.1",
+            "ALM84750.1",
+            "AOY00580.1",
+            "AOY00581.1",
+            "AOY00582.1",
+            "AOY02283.1",
+            "ABM44526.1",
+            "ABM45248.1",
+            "ABM45260.1",
+            "ABM45051.1",
+            "KUR80365.1",
+            "KUR80366.1",
+            "KUR80367.1",
+            "AKU90592.1",
+            "AKU90594.1",
+            "AKU90595.1",
+            "AKU90599.1",
+            "AKU90600.1",
+            "ADK84325.1",
+            "ADK84324.1",
+            "ADK84322.1",
+            "ADK84318.1",
+            "ADK84317.1",
+            "CDM65285.1",
+            "CDM65286.1",
+            "CDM65287.1",
+            "CDM65291.1",
+            "CDM65292.1",
+            "OFW14527.1",
+            "OFW14528.1",
+            "OFW14529.1",
+            "OFW14530.1",
+            "OFW14534.1",
+            "OAQ19962.1",
+            "OAQ19961.1",
+            "OAQ19960.1",
+            "OAQ19959.1",
+            "OAQ19957.1",
+            "OAQ19956.1",
+            "OAQ19955.1",
+            "OAQ19954.1",
+            "OGW06853.1",
+            "OGW06854.1",
+            "OGW06855.1",
+            "OGW06856.1",
+            "ABC46242.1",
+            "ABC45197.1",
+            "ABC45660.1",
+            "ABC44289.1",
+            "ABC45405.1",
+            "ABC46034.1",
+            "ABC43779.1",
+            "ABC44328.1",
+            "CDD55825.1",
+            "CDD55823.1",
+            "CDD55822.1",
+            "CDD55819.1",
+            "CDD55817.1",
+            "ADR36648.1",
+            "ADR36649.1",
+            "ADR36650.1",
+            "ADR36651.1",
+            "AAF11543.1",
+            "AAF11542.1",
+            "AAF11550.1",
+            "AAF11541.1",
+            "AAF11549.1",
+            "AAF11538.1",
+            "AAF11537.1",
+            "AAF11536.1",
+            "AFM21329.1",
+            "AFM21334.1",
+            "ADE56881.1",
+            "KWX22257.1",
+            "KWX22358.1",
+            "KWX22259.1",
+            "ADH66149.1",
+            "ADH66150.1",
+            "OFX35327.1",
+            "OFX35343.1",
+            "AGY81689.1",
+            "AGY81691.1",
+            "EUJ33345.1",
+            "EUJ33348.1",
+            "WP_009632332.1",
+            "WP_009632333.1",
+            "WP_009632338.1",
+            "WP_009632339.1",
+            "WP_009632340.1",
+            "ACC81389.1",
+            "ACC81390.1",
+            "ACC81395.1",
+            "ACC81396.1"
+        ],
+        "all_names": [
+            "Non-conserved"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "21": {
+        "name": "(dimethylallyl)adenosine tRNA methylthiotransferase",
+        "members": [
+            "NP_415194.1",
+            "ALZ83660.1",
+            "ALM84751.1",
+            "AOY02282.1",
+            "ABM44770.1",
+            "KUR80368.1"
+        ],
+        "all_names": [
+            "isopentenyl-adenosine A37 tRNA methylthiolase",
+            "tRNA-2-methylthio-N(6)-dimethylallyladenosine synthase MiaB",
+            "(dimethylallyl)adenosine tRNA methylthiotransferase",
+            "tRNA (N6-isopentenyl adenosine(37)-C2)-methylthiotransferase MiaB",
+            "tRNA-i(6)A37 thiotransferase enzyme MiaB",
+            "(dimethylallyl)adenosine tRNA methylthiotransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:4 iron, 4 sulfur cluster binding",
+                "F:metal ion binding",
+                "F:methylthiotransferase activity",
+                "P:tRNA modification"
+            ],
+            "Keywords": [
+                "4Fe-4S",
+                "Cytoplasm",
+                "Iron",
+                "Iron-sulfur",
+                "Metal-binding",
+                "S-adenosyl-L-methionine",
+                "Transferase",
+                "tRNA processing"
+            ],
+            "Function_description": "Catalyzes the methylthiolation of N6-(dimethylallyl)adenosine (i(6)A), leading to the formation of 2-methylthio-N6-(dimethylallyl)adenosine (ms(2)i(6)A) at position 37 in tRNAs that read codons beginning with uridine"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/MIAB_BARBK",
+        "uniprot_code": "MIAB_BARBK",
+        "model_state": "Model exists"
+    },
+    "23": {
+        "name": "PhoH family protein",
+        "members": [
+            "NP_415193.2",
+            "ALZ83659.1",
+            "ALM84752.1",
+            "AOY00583.1",
+            "ABM45079.1",
+            "KUR80369.1",
+            "AKU90596.1",
+            "ADK84321.1",
+            "CDM65288.1",
+            "OFW14531.1",
+            "OAQ19958.1",
+            "OGW06857.1",
+            "ABC43690.1",
+            "CDD55821.1",
+            "ADR36652.1",
+            "AAF11540.1",
+            "AFM21330.1",
+            "ADE56885.1",
+            "KWX22260.1",
+            "ADH66152.1",
+            "OFX35328.1",
+            "AGY81693.1",
+            "EUJ33349.1"
+        ],
+        "all_names": [
+            "PhoH-like protein",
+            "ATP-binding protein",
+            "phosphate starvation-inducible protein PhoH",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "Phosphate starvation-inducible protein PhoH%2C predicted ATPase",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH%2C predicted ATPase",
+            "hypothetical protein",
+            "Phosphate starvation-inducible protein PhoH%2C predicted ATPase",
+            "hypothetical protein",
+            "PhoH family protein",
+            "putative uncharacterized protein",
+            "PhoH family protein",
+            "PhoH-related protein",
+            "phosphate starvation-inducible protein PhoH%2C predicted ATPase",
+            "PhoH family protein",
+            "phosphate starvation protein PhoH",
+            "PhoH family protein",
+            "phosphate starvation-inducible protein PhoH",
+            "phosphate starvation-inducible protein PhoH",
+            "PhoH family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytosol",
+                "F:ATP binding",
+                "F:RNA binding",
+                "F:nucleic acid binding"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Nucleotide-binding",
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/PHOL_ECOLI",
+        "uniprot_code": "PHOL_ECOLI",
+        "model_state": "Model exists"
+    },
+    "22": {
+        "name": "rRNA maturation RNase YbeY",
+        "members": [
+            "NP_415192.1",
+            "ALZ83658.1",
+            "ALM87087.1",
+            "AOY00584.1",
+            "ABM44555.1",
+            "KUR80477.1",
+            "AKU90598.1",
+            "ADK84319.1",
+            "CDM65289.1",
+            "OFW14544.1",
+            "OGW06859.1",
+            "CDD55820.1",
+            "ADR36653.1",
+            "AFM21332.1",
+            "ADE56887.1",
+            "KWX22261.1",
+            "ADH66153.1",
+            "OFX35330.1",
+            "AGY81695.1",
+            "EUJ33351.1"
+        ],
+        "all_names": [
+            "endoribonuclease YbeY",
+            "rRNA maturation factor",
+            "rRNA maturation RNase YbeY",
+            "rRNA maturation RNase YbeY",
+            "conserved hypothetical protein TIGR00043",
+            "rRNA maturation RNase YbeY",
+            "Metal-dependent hydrolase YbeY",
+            "protein of unknown function UPF0054",
+            "probable rRNA maturation factor YbeY",
+            "rRNA maturation RNase YbeY",
+            "rRNA maturation RNase YbeY",
+            "probable rRNA maturation factor",
+            "protein of unknown function UPF0054",
+            "metalloprotein%2C YbeY/UPF0054 family",
+            "protein of unknown function UPF0054",
+            "heat-shock protein",
+            "protein of unknown function UPF0054",
+            "rRNA maturation RNase YbeY",
+            "rRNA maturation factor",
+            "metal-binding heat shock protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:endoribonuclease activity",
+                "F:metalloendopeptidase activity",
+                "F:zinc ion binding",
+                "P:rRNA processing"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Endonuclease",
+                "Hydrolase",
+                "Metal-binding",
+                "Nuclease",
+                "Ribosome biogenesis",
+                "rRNA processing",
+                "Zinc"
+            ],
+            "Function_description": "Single strand-specific metallo-endoribonuclease involved in late-stage 70S ribosome quality control and in maturation of the 3' terminus of the 16S rRNA"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/YBEY_BARBK",
+        "uniprot_code": "YBEY_BARBK",
+        "model_state": "Model exists"
+    },
+    "19": {
+        "name": "magnesium/cobalt efflux protein",
+        "members": [
+            "NP_415191.1",
+            "ALZ83657.1",
+            "ALM84753.1",
+            "AOY00585.1",
+            "ABM45581.1",
+            "KUR80478.1",
+            "CDM65290.1",
+            "OFW14532.1",
+            "ADR36655.1",
+            "AFM21333.1",
+            "ADE56888.1",
+            "KWX22262.1",
+            "ADH66154.1"
+        ],
+        "all_names": [
+            "CorC-HlyC family protein YbeX",
+            "magnesium/cobalt efflux protein",
+            "magnesium/cobalt efflux protein",
+            "magnesium/cobalt efflux protein",
+            "magnesium and cobalt efflux protein CorC",
+            "cobalt transporter",
+            "CBS domain-containing protein",
+            "hypothetical protein",
+            "protein of unknown function DUF21",
+            "CBS domain-containing protein",
+            "protein of unknown function DUF21",
+            "membrane protein",
+            "CBS domain containing protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "F:flavin adenine dinucleotide binding",
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "CBS domain",
+                "Repeat",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Coiled coil",
+                "Signal"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/CORC_ECOLI",
+        "uniprot_code": "CORC_ECOLI",
+        "model_state": "Model exists"
+    },
+    "20": {
+        "name": "apolipoprotein N-acyltransferase",
+        "members": [
+            "NP_415190.1",
+            "ALZ83656.1",
+            "ALM84754.1",
+            "AOY00586.1",
+            "ABM45042.1"
+        ],
+        "all_names": [
+            "apolipoprotein N-acyltransferase",
+            "apolipoprotein N-acyltransferase",
+            "apolipoprotein N-acyltransferase",
+            "apolipoprotein N-acyltransferase",
+            "apolipoprotein N-acyltransferase"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:plasma membrane",
+                "F:N-acyltransferase activity",
+                "P:lipoprotein biosynthetic process"
+            ],
+            "Keywords": [
+                "Acyltransferase",
+                "Cell inner membrane",
+                "Cell membrane",
+                "Lipoprotein",
+                "Membrane",
+                "Transferase",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "Catalyzes the phospholipid dependent N-acylation of the N-terminal cysteine of apolipoprotein, the last step in lipoprotein maturation"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/LNT_ECOLI",
+        "uniprot_code": "LNT_ECOLI",
+        "model_state": "Model exists"
+    },
+    "3": {
+        "name": "LysR family transcriptional regulator",
+        "members": [
+            "ALZ83662.1",
+            "KUR80370.1"
+        ],
+        "all_names": [
+            "LysR family transcriptional regulator",
+            "LysR family transcriptional regulator"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:DNA binding",
+                "F:DNA-binding transcription factor activity"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A117V4R5_9SPHN",
+        "model_state": "Model does not exist"
+    },
+    "4": {
+        "name": "aldo/keto reductase",
+        "members": [
+            "ALM84755.1",
+            "AGY81690.1",
+            "AGY81692.1"
+        ],
+        "all_names": [
+            "aldo/keto reductase",
+            "2%2C5-diketo-D-gluconic acid reductase",
+            "aldehyde oxidase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:oxidoreductase activity"
+            ],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A0S1Y3V7_9BORD",
+        "model_state": "Model does not exist"
+    },
+    "1": {
+        "name": "diguanylate cyclase",
+        "members": [
+            "KUR80371.1",
+            "CDM65284.1"
+        ],
+        "all_names": [
+            "diguanylate cyclase",
+            "diguanylate cyclase with GAF sensor"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A102DF42_9SPHN",
+        "model_state": "Model does not exist"
+    },
+    "13": {
+        "name": "MazG family protein",
+        "members": [
+            "AKU90593.1",
+            "ADK84323.1",
+            "AFM21327.1",
+            "ADE56883.1"
+        ],
+        "all_names": [
+            "Nucleoside triphosphate pyrophosphohydrolase MazG",
+            "MazG family protein",
+            "MazG family protein",
+            "MazG family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:hydrolase activity"
+            ],
+            "Keywords": [
+                "Coiled coil",
+                "Hydrolase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A0K1PAM8_9DELT",
+        "model_state": "Model does not exist"
+    },
+    "11": {
+        "name": "Membrane protein containing HD superfamily hydrolase",
+        "members": [
+            "AKU90597.1",
+            "ADK84320.1",
+            "OGW06858.1",
+            "AFM21331.1",
+            "ADE56886.1",
+            "OFX35329.1",
+            "AGY81694.1",
+            "EUJ33350.1"
+        ],
+        "all_names": [
+            "Membrane protein containing HD superfamily hydrolase",
+            "7TM receptor with intracellular metal dependent phosphohydrolase",
+            "hypothetical protein",
+            "putative domain HDIG-containing protein",
+            "metal dependent phosphohydrolase",
+            "hypothetical protein",
+            "phosphohydrolase",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:hydrolase activity"
+            ],
+            "Keywords": [
+                "Hydrolase",
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Receptor"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1G1DHV0_9BACT",
+        "uniprot_code": "A0A1G1DHV0_9BACT",
+        "model_state": "Model exists"
+    },
+    "6": {
+        "name": "GTPase Era",
+        "members": [
+            "OFW14533.1",
+            "KWX22264.1",
+            "ADH66156.1"
+        ],
+        "all_names": [
+            "GTPase Era",
+            "GTPase Era",
+            "GTP-binding protein Era"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "C:plasma membrane",
+                "F:GTP binding",
+                "F:GTPase activity",
+                "F:small ribosomal subunit rRNA binding",
+                "P:ribosomal small subunit biogenesis"
+            ],
+            "Keywords": [
+                "Cell membrane",
+                "Cytoplasm",
+                "GTP-binding",
+                "Membrane",
+                "Nucleotide-binding",
+                "Ribosome biogenesis",
+                "RNA-binding",
+                "rRNA-binding"
+            ],
+            "Function_description": "An essential GTPase that binds both GDP and GTP, with rapid nucleotide exchange. Plays a role in 16S rRNA processing and 30S ribosomal subunit biogenesis and possibly also in cell cycle regulation and energy metabolism"
+        },
+        "structure": "",
+        "uniprot_code": "A0A1F2TA65_9BACT",
+        "model_state": "Model does not exist"
+    },
+    "8": {
+        "name": "HIT family hydrolase",
+        "members": [
+            "OGW06860.1",
+            "ADH66151.1"
+        ],
+        "all_names": [
+            "HIT family hydrolase",
+            "histidine triad (HIT) protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:catalytic activity",
+                "F:hydrolase activity"
+            ],
+            "Keywords": [
+                "Hydrolase",
+                "Nucleotide-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1G1DHX4_9BACT",
+        "model_state": "Model does not exist"
+    },
+    "15": {
+        "name": "antibiotic ABC transporter ATP-binding protein",
+        "members": [
+            "OGW06861.1",
+            "ACC81397.1"
+        ],
+        "all_names": [
+            "antibiotic ABC transporter ATP-binding protein",
+            "ABC transporter related"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:ATP binding",
+                "F:ATPase activity",
+                "F:ATPase-coupled transmembrane transporter activity"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Coiled coil",
+                "Membrane",
+                "Nucleotide-binding",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1G1DHZ4_9BACT",
+        "model_state": "Model does not exist"
+    },
+    "2": {
+        "name": "30S ribosomal protein S21",
+        "members": [
+            "CDD55824.1",
+            "EUJ33347.1"
+        ],
+        "all_names": [
+            "30S ribosomal protein S21",
+            "30S ribosomal protein S21"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:ribosome",
+                "F:structural constituent of ribosome",
+                "P:translation"
+            ],
+            "Keywords": [
+                "Ribonucleoprotein",
+                "Ribosomal protein"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "W7C8L4_9LIST",
+        "model_state": "Model does not exist"
+    },
+    "10": {
+        "name": "cytidine deaminase",
+        "members": [
+            "CDD55818.1",
+            "ADR36656.1",
+            "ADE56889.1",
+            "AGY81697.1",
+            "EUJ33353.1"
+        ],
+        "all_names": [
+            "putative uncharacterized protein",
+            "cytidine deaminase",
+            "cytidine deaminase",
+            "cytidine deaminase",
+            "cytidine deaminase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:cytidine deaminase activity",
+                "F:zinc ion binding"
+            ],
+            "Keywords": [
+                "Hydrolase",
+                "Metal-binding",
+                "Zinc"
+            ],
+            "Function_description": "This enzyme scavenges exogenous and endogenous cytidine and 2'-deoxycytidine for UMP synthesis"
+        },
+        "structure": "",
+        "uniprot_code": "W7CK22_9LIST",
+        "model_state": "Model does not exist"
+    },
+    "5": {
+        "name": "diacylglycerol kinase",
+        "members": [
+            "ADR36654.1",
+            "OFX35331.1",
+            "AGY81696.1",
+            "EUJ33352.1"
+        ],
+        "all_names": [
+            "diacylglycerol kinase",
+            "hypothetical protein",
+            "UDP kinase",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:kinase activity",
+                "P:phospholipid biosynthetic process"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Cell membrane",
+                "Kinase",
+                "Membrane",
+                "Nucleotide-binding",
+                "Transferase",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A1F3CXV0_9BACT",
+        "model_state": "Model does not exist"
+    },
+    "14": {
+        "name": "transcription-repair coupling factor Mfd",
+        "members": [
+            "AFM21326.1",
+            "ADE56882.1"
+        ],
+        "all_names": [
+            "transcription-repair coupling factor Mfd",
+            "DEAD/DEAH box helicase domain protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:ATP binding",
+                "F:damaged DNA binding",
+                "F:helicase activity",
+                "P:regulation of transcription, DNA-templated",
+                "P:transcription-coupled nucleotide-excision repair, DNA damage recognition"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Coiled coil",
+                "Cytoplasm",
+                "DNA damage",
+                "DNA repair",
+                "DNA-binding",
+                "Helicase",
+                "Hydrolase",
+                "Nucleotide-binding"
+            ],
+            "Function_description": "Couples transcription and DNA repair by recognizing RNA polymerase (RNAP) stalled at DNA lesions. Mediates ATP-dependent release of RNAP and its truncated transcript from the DNA, and recruitment of nucleotide excision repair machinery to the damaged site"
+        },
+        "structure": "",
+        "uniprot_code": "I4BVL9_ACEMN",
+        "model_state": "Model does not exist"
+    },
+    "12": {
+        "name": "pyruvate/oxaloacetate carboxyltransferase",
+        "members": [
+            "AFM21328.1",
+            "ADE56884.1"
+        ],
+        "all_names": [
+            "pyruvate/oxaloacetate carboxyltransferase",
+            "Conserved carboxylase region"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:catalytic activity",
+                "F:transferase activity"
+            ],
+            "Keywords": [
+                "Pyruvate",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "I4BVM1_ACEMN",
+        "model_state": "Model does not exist"
+    },
+    "9": {
+        "name": "ribosomal RNA small subunit methyltransferase E",
+        "members": [
+            "KWX22258.1",
+            "ADH66148.1",
+            "EUJ33346.1"
+        ],
+        "all_names": [
+            "ribosomal RNA small subunit methyltransferase E",
+            "protein of unknown function DUF558",
+            "16S ribosomal RNA methyltransferase RsmE"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:methyltransferase activity",
+                "P:methylation",
+                "P:rRNA processing"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Methyltransferase",
+                "rRNA processing",
+                "S-adenosyl-L-methionine",
+                "Transferase"
+            ],
+            "Function_description": "Specifically methylates the N3 position of the uracil ring of uridine 1498 (m3U1498) in 16S rRNA. Acts on the fully assembled 30S ribosomal subunit"
+        },
+        "structure": "",
+        "uniprot_code": "A0A132PIR7_9MYCO",
+        "model_state": "Model does not exist"
+    },
+    "7": {
+        "name": "cytidine deaminase",
+        "members": [
+            "KWX22263.1",
+            "ADH66155.1"
+        ],
+        "all_names": [
+            "cytidine deaminase",
+            "conserved hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:catalytic activity"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "A0A132PIY6_9MYCO",
+        "model_state": "Model does not exist"
+    },
+    "10000": {
+        "name": "pseudogene",
+        "members": [
+            "A2Z07_13220",
+            "A2Z07_13225",
+            "A2Z07_13230"
+        ],
+        "all_names": [
+            "pseudogene",
+            "pseudogene",
+            "pseudogene"
+        ],
+        "function": "n.a.",
+        "structure": "n.a.",
+        "uniprot_code": "n.a.",
+        "model_state": "n.a."
+    },
+    "18": {
+        "name": "30S ribosomal protein S16",
+        "members": [
+            "WP_009632335.1",
+            "ACC81391.1"
+        ],
+        "all_names": [
+            "30S ribosomal protein S16",
+            "ribosomal protein S16"
+        ],
+        "function": "",
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/RS16_NOSP7",
+        "uniprot_code": "RS16_NOSP7",
+        "model_state": "Model exists"
+    },
+    "17": {
+        "name": "KH domain-containing protein",
+        "members": [
+            "WP_028954273.1",
+            "ACC81392.1"
+        ],
+        "all_names": [
+            "KH domain-containing protein",
+            "conserved hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "B2IVK7_NOSP7",
+        "model_state": "Model does not exist"
+    },
+    "25": {
+        "name": "PhoH family protein",
+        "members": [
+            "WP_009632337.1",
+            "ACC81393.1"
+        ],
+        "all_names": [
+            "PhoH family protein",
+            "PhoH family protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Nucleotide-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "B2IVK8_NOSP7",
+        "model_state": "Model does not exist"
+    },
+    "16": {
+        "name": "conserved hypothetical protein",
+        "members": [
+            "WP_009632341.1",
+            "ACC81394.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "conserved hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "",
+        "uniprot_code": "B2IVK9_NOSP7",
+        "model_state": "Model does not exist"
+    }
+}

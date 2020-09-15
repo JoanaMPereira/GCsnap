@@ -1,0 +1,356 @@
+{
+    "Bacteria": {
+        "Proteobacteria": {
+            "Gammaproteobacteria": {
+                "Enterobacterales": {
+                    "Escherichia": {
+                        "Escherichia coli str. K-12 substr. MG1655": {
+                            "ncbi_codes": [
+                                "NP_415193.2"
+                            ],
+                            "target_members": [
+                                "PHOL_ECOLI"
+                            ]
+                        }
+                    }
+                },
+                "Pseudomonadales": {
+                    "Pseudomonas": {
+                        "Pseudomonas oryzihabitans": {
+                            "ncbi_codes": [
+                                "ALZ83659.1"
+                            ],
+                            "target_members": [
+                                "A0A0U4VKN7_9PSED"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Betaproteobacteria": {
+                "Burkholderiales": {
+                    "Bordetella": {
+                        "Bordetella sp. N": {
+                            "ncbi_codes": [
+                                "ALM84752.1"
+                            ],
+                            "target_members": [
+                                "A0A0S1Y445_9BORD"
+                            ]
+                        }
+                    }
+                },
+                "Neisseriales": {
+                    "Jeongeupia": {
+                        "Jeongeupia sp. USM3": {
+                            "ncbi_codes": [
+                                "AOY00583.1"
+                            ],
+                            "target_members": [
+                                "A0A1D9BE35_9NEIS"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Alphaproteobacteria": {
+                "Rhizobiales": {
+                    "Bartonella": {
+                        "Bartonella bacilliformis KC583": {
+                            "ncbi_codes": [
+                                "ABM45079.1"
+                            ],
+                            "target_members": [
+                                "A1UU40_BARBK"
+                            ]
+                        }
+                    }
+                },
+                "Sphingomonadales": {
+                    "Novosphingobium": {
+                        "Novosphingobium sp. Fuku2-ISO-50": {
+                            "ncbi_codes": [
+                                "KUR80369.1"
+                            ],
+                            "target_members": [
+                                "A0A102DF82_9SPHN"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Deltaproteobacteria": {
+                "Myxococcales": {
+                    "Vulgatibacter": {
+                        "Vulgatibacter incomptus": {
+                            "ncbi_codes": [
+                                "AKU90596.1"
+                            ],
+                            "target_members": [
+                                "A0A0K1PB02_9DELT"
+                            ]
+                        }
+                    }
+                },
+                "Desulfarculales": {
+                    "Desulfarculus": {
+                        "Desulfarculus baarsii DSM 2075": {
+                            "ncbi_codes": [
+                                "ADK84321.1"
+                            ],
+                            "target_members": [
+                                "E1QFI5_DESB2"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Acidobacteria": {
+            "Blastocatellia": {
+                "Blastocatellales": {
+                    "Pyrinomonas": {
+                        "Pyrinomonas methylaliphatogenes": {
+                            "ncbi_codes": [
+                                "CDM65288.1"
+                            ],
+                            "target_members": [
+                                "A0A0B6WVG5_9BACT"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Acidobacteria_na": {
+                "Acidobacteria_na_na": {
+                    "Acidobacteria": {
+                        "Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_21": {
+                            "ncbi_codes": [
+                                "OFW14531.1"
+                            ],
+                            "target_members": [
+                                "A0A1F2T079_9BACT"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Thermodesulfobacteria": {
+            "Thermodesulfobacteria": {
+                "Thermodesulfobacteriales": {
+                    "Thermosulfurimonas": {
+                        "Thermosulfurimonas dismutans": {
+                            "ncbi_codes": [
+                                "OAQ19958.1"
+                            ],
+                            "target_members": [
+                                "A0A179D2U7_9BACT"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Nitrospinae": {
+            "Nitrospinae_na": {
+                "Nitrospinae_na_na": {
+                    "Nitrospinae": {
+                        "Nitrospinae bacterium RIFCSPLOWO2_02_39_17": {
+                            "ncbi_codes": [
+                                "OGW06857.1"
+                            ],
+                            "target_members": [
+                                "A0A1G1DHS7_9BACT"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Bacteroidetes": {
+            "Bacteroidetes_na": {
+                "Bacteroidetes Order II. Incertae sedis": {
+                    "Salinibacter": {
+                        "Salinibacter ruber DSM 13855": {
+                            "ncbi_codes": [
+                                "ABC43690.1"
+                            ],
+                            "target_members": [
+                                "Q2S2P3_SALRD"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Bacteroidia": {
+                "Bacteroidales": {
+                    "Bacteroides": {
+                        "Bacteroides pectinophilus CAG:437": {
+                            "ncbi_codes": [
+                                "CDD55821.1"
+                            ],
+                            "target_members": [
+                                "R7AQW7_9BACE"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Deinococcus-Thermus": {
+            "Deinococci": {
+                "Thermales": {
+                    "Oceanithermus": {
+                        "Oceanithermus profundus DSM 14977": {
+                            "ncbi_codes": [
+                                "ADR36652.1"
+                            ],
+                            "target_members": [
+                                "E4U8H2_OCEP5"
+                            ]
+                        }
+                    }
+                },
+                "Deinococcales": {
+                    "Deinococcus": {
+                        "Deinococcus radiodurans R1": {
+                            "ncbi_codes": [
+                                "AAF11540.1"
+                            ],
+                            "target_members": [
+                                "Q9RSY1_DEIRA"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Synergistetes": {
+            "Synergistia": {
+                "Synergistales": {
+                    "Acetomicrobium": {
+                        "Acetomicrobium mobile DSM 13181": {
+                            "ncbi_codes": [
+                                "AFM21330.1"
+                            ],
+                            "target_members": [
+                                "I4BVM3_ACEMN"
+                            ]
+                        }
+                    },
+                    "Aminobacterium": {
+                        "Aminobacterium colombiense DSM 12261": {
+                            "ncbi_codes": [
+                                "ADE56885.1"
+                            ],
+                            "target_members": [
+                                "D5EEA3_AMICL"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Actinobacteria": {
+            "Actinobacteria": {
+                "Corynebacteriales": {
+                    "Mycolicibacterium": {
+                        "Mycolicibacterium wolinskyi": {
+                            "ncbi_codes": [
+                                "KWX22260.1"
+                            ],
+                            "target_members": [
+                                "A0A132PIT0_9MYCO"
+                            ]
+                        }
+                    }
+                },
+                "Streptosporangiales": {
+                    "Nocardiopsis": {
+                        "Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111": {
+                            "ncbi_codes": [
+                                "ADH66152.1"
+                            ],
+                            "target_members": [
+                                "D7AYG7_NOCDD"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Armatimonadetes": {
+            "Armatimonadetes_na": {
+                "Armatimonadetes_na_na": {
+                    "Armatimonadetes": {
+                        "Armatimonadetes bacterium RBG_16_67_12": {
+                            "ncbi_codes": [
+                                "OFX35328.1"
+                            ],
+                            "target_members": [
+                                "A0A1F3CXR1_9BACT"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Firmicutes": {
+            "Bacilli": {
+                "Lactobacillales": {
+                    "Carnobacterium": {
+                        "Carnobacterium inhibens subsp. gilichinskyi": {
+                            "ncbi_codes": [
+                                "AGY81693.1"
+                            ],
+                            "target_members": [
+                                "U5SC87_9LACT"
+                            ]
+                        }
+                    }
+                },
+                "Bacillales": {
+                    "Listeria": {
+                        "Listeria floridensis FSL S10-1187": {
+                            "ncbi_codes": [
+                                "EUJ33349.1"
+                            ],
+                            "target_members": [
+                                "W7C1W6_9LIST"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Cyanobacteria": {
+            "Cyanobacteria_na": {
+                "Synechococcales": {
+                    "Synechocystis": {
+                        "Synechocystis sp. PCC 7509": {
+                            "ncbi_codes": [
+                                "WP_009632337.1"
+                            ],
+                            "target_members": [
+                                "WP_009632337.1"
+                            ]
+                        }
+                    }
+                },
+                "Nostocales": {
+                    "Nostoc": {
+                        "Nostoc punctiforme PCC 73102": {
+                            "ncbi_codes": [
+                                "ACC81393.1"
+                            ],
+                            "target_members": [
+                                "ACC81393.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

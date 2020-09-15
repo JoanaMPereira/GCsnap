@@ -1,0 +1,841 @@
+
+ ### Family: 1 -> FtsX-like permease family protein
+
+	 WP_162548638.1	FtsX-like permease family protein
+	 WP_144868379.1	FtsX-like permease family protein
+
+ ### Family: 2 -> NAD(P)H-quinone oxidoreductase subunit 4
+
+	 WP_170922231.1	NAD(P)H-quinone oxidoreductase subunit 4
+	 WP_144868365.1	NADH-quinone oxidoreductase subunit M
+
+ ### Family: 3 -> TMEM165/GDT1 family protein
+
+	 WP_106258372.1	TMEM165/GDT1 family protein
+	 WP_162425320.1	TMEM165/GDT1 family protein
+
+ ### Family: 4 -> hypothetical protein
+
+	 WP_096621577.1	hypothetical protein
+	 WP_106300417.1	hypothetical protein
+
+ ### Family: 5 -> glutamate-5-semialdehyde dehydrogenase
+
+	 WP_096621575.1	glutamate-5-semialdehyde dehydrogenase
+	 WP_106300419.1	aldehyde dehydrogenase family protein
+
+ ### Family: 6 -> NAD(P)/FAD-dependent oxidoreductase
+
+	 WP_085435730.1	NAD(P)/FAD-dependent oxidoreductase
+	 WP_161825904.1	glutathione-disulfide reductase
+
+ ### Family: 7 -> 6-carboxytetrahydropterin synthase
+
+	 WP_073607614.1	6-carboxytetrahydropterin synthase
+	 WP_169613986.1	6-pyruvoyl tetrahydropterin synthase
+
+ ### Family: 8 -> DUF4278 domain-containing protein
+
+	 WP_073607613.1	DUF4278 domain-containing protein
+	 WP_169613985.1	DUF4278 domain-containing protein
+
+ ### Family: 9 -> endoribonuclease MazF
+
+	 WP_068817849.1	endoribonuclease MazF
+	 WP_085435713.1	type II toxin-antitoxin system PemK/MazF family toxin
+
+ ### Family: 10 -> photosystem I reaction center subunit IV
+
+	 WP_035155751.1	photosystem I reaction center subunit IV
+	 WP_068510765.1	photosystem I reaction center subunit IV
+
+ ### Family: 11 -> DNA-formamidopyrimidine glycosylase
+
+	 WP_035155749.1	DNA-formamidopyrimidine glycosylase
+	 WP_068510763.1	DNA-formamidopyrimidine glycosylase
+
+ ### Family: 12 -> DUF98 domain-containing protein
+
+	 WP_073548872.1	DUF98 domain-containing protein
+	 WP_148293394.1	chorismate lyase
+	 WP_030007127.1	DUF98 domain-containing protein
+	 WP_075889501.1	chorismate lyase
+
+ ### Family: 13 -> FHA domain-containing protein
+
+	 WP_026102367.1	FHA domain-containing protein
+	 WP_036482463.1	FHA domain-containing protein
+
+ ### Family: 14 -> hypothetical protein
+
+	 WP_026102102.1	hypothetical protein
+	 WP_069790864.1	hypothetical protein
+
+ ### Family: 15 -> hypothetical protein
+
+	 WP_024544483.1	hypothetical protein
+	 WP_065710099.1	hypothetical protein
+
+ ### Family: 16 -> 4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+
+	 WP_024544482.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+	 WP_065710100.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+
+ ### Family: 17 -> insulinase family protein
+
+	 WP_024544477.1	insulinase family protein
+	 WP_065710103.1	insulinase family protein
+	 WP_075889509.1	insulinase family protein
+
+ ### Family: 18 -> NAD(P)H-quinone oxidoreductase subunit N
+
+	 WP_107671291.1	NAD(P)H-quinone oxidoreductase subunit N
+	 WP_021832141.1	NAD(P)H-quinone oxidoreductase subunit N
+
+ ### Family: 19 -> TIGR01777 family protein
+
+	 WP_019504517.1	TIGR01777 family protein
+	 WP_036482481.1	TIGR01777 family protein
+
+ ### Family: 20 -> hypothetical protein
+
+	 WP_026097338.1	hypothetical protein
+	 WP_017658666.1	hypothetical protein
+
+ ### Family: 21 -> TlyA family RNA methyltransferase
+
+	 WP_019504524.1	TlyA family RNA methyltransferase
+	 WP_036482664.1	TlyA family RNA methyltransferase
+	 WP_017658661.1	TlyA family RNA methyltransferase
+
+ ### Family: 22 -> RNA polymerase sigma factor SigC
+
+	 WP_152532077.1	RNA polymerase sigma factor SigC
+	 WP_017326393.1	RNA polymerase sigma factor%2C RpoD/SigA family
+	 WP_121967998.1	RNA polymerase sigma factor SigC
+
+ ### Family: 23 -> DUF4351 domain-containing protein
+
+	 WP_096691554.1	DUF4351 domain-containing protein
+	 WP_096691555.1	DUF4351 domain-containing protein
+	 WP_015230628.1	hypothetical protein
+
+ ### Family: 24 -> hypothetical protein
+
+	 WP_015218060.1	hypothetical protein
+	 WP_155082905.1	hypothetical protein
+
+ ### Family: 25 -> D-alanine--D-alanine ligase
+
+	 WP_015203356.1	D-alanine--D-alanine ligase
+	 WP_106300415.1	D-alanine--D-alanine ligase
+
+ ### Family: 26 -> histidine kinase
+
+	 WP_015203348.1	hypothetical protein
+	 WP_068817857.1	histidine kinase
+	 WP_168572076.1	histidine kinase
+
+ ### Family: 27 -> hemolysin-type calcium-binding protein
+
+	 WP_015200942.1	hemolysin-type calcium-binding protein
+	 WP_015230629.1	hypothetical protein
+	 WP_023071410.1	DUF4114 domain-containing protein
+
+ ### Family: 28 -> cytochrome b6
+
+	 WP_015192776.1	cytochrome b6-f complex subunit 7
+	 WP_019504519.1	cytochrome b6
+	 WP_036482478.1	cytochrome b6
+
+ ### Family: 29 -> 4-hydroxythreonine-4-phosphate dehydrogenase PdxA
+
+	 WP_015192775.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA
+	 WP_019504520.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA
+	 WP_036482475.1	4-hydroxythreonine-4-phosphate dehydrogenase PdxA
+
+ ### Family: 30 -> DUF3769 domain-containing protein
+
+	 WP_012954186.1	DUF3769 domain-containing protein
+	 WP_107671290.1	DUF3769 domain-containing protein
+	 WP_048321219.1	DUF3769 domain-containing protein
+
+ ### Family: 31 -> 1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase
+
+	 WP_155082903.1	1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase
+	 WP_011431091.1	imidazole glycerol phosphate synthase subunit HisF
+
+ ### Family: 32 -> response regulator transcription factor
+
+	 WP_009632333.1	response regulator transcription factor
+	 WP_068390407.1	response regulator transcription factor
+	 WP_015224603.1	diguanylate cyclase
+
+ ### Family: 33 -> mechanosensitive ion channel family protein
+
+	 WP_009555280.1	mechanosensitive ion channel family protein
+	 WP_155973181.1	mechanosensitive ion channel
+
+ ### Family: 34 -> 2Fe-2S iron-sulfur cluster binding domain-containing protein
+
+	 WP_008313374.1	2Fe-2S iron-sulfur cluster binding domain-containing protein
+	 WP_166274706.1	2Fe-2S iron-sulfur cluster binding domain-containing protein
+
+ ### Family: 35 -> photosystem II reaction center protein I
+
+	 WP_008276509.1	photosystem II reaction center protein I
+	 WP_007303656.1	photosystem II reaction center protein I
+
+ ### Family: 36 -> alpha/beta hydrolase
+
+	 WP_015144821.1	alpha/beta hydrolase
+	 WP_006511798.1	alpha/beta hydrolase
+
+ ### Family: 37 -> 1-acyl-sn-glycerol-3-phosphate acyltransferase
+
+	 WP_015166533.1	1-acyl-sn-glycerol-3-phosphate acyltransferase
+	 TVQ43655.1	1-acyl-sn-glycerol-3-phosphate acyltransferase
+
+ ### Family: 38 -> rhodanese-like domain-containing protein
+
+	 TVQ43649.1	rhodanese-like domain-containing protein
+	 TVQ43651.1	DUF2892 domain-containing protein
+
+ ### Family: 39 -> DUF4912 domain-containing protein
+
+	 RNJ67074.1	DUF4912 domain-containing protein
+	 WP_006528483.1	PstS family phosphate ABC transporter substrate-binding protein
+
+ ### Family: 40 -> lipid-A-disaccharide synthase
+
+	 RNJ67073.1	lipid-A-disaccharide synthase
+	 WP_012954189.1	lipid-A-disaccharide synthase
+	 WP_107671287.1	lipid-A-disaccharide synthase
+
+ ### Family: 41 -> hypothetical protein
+
+	 WP_068390418.1	hypothetical protein
+	 RNJ67072.1	hypothetical protein
+
+ ### Family: 42 -> formyltetrahydrofolate deformylase
+
+	 RMF21622.1	formyltetrahydrofolate deformylase
+	 WP_022606382.1	methionyl-tRNA formyltransferase
+
+ ### Family: 43 -> response regulator
+
+	 PZV25618.1	response regulator
+	 WP_155082907.1	pyruvate kinase
+	 WP_069790865.1	pyruvate phosphate dikinase PEP/pyruvate-binding protein
+
+ ### Family: 44 -> competence/damage-inducible protein A
+
+	 WP_015166537.1	competence/damage-inducible protein A
+	 WP_036946039.1	competence/damage-inducible protein A
+	 PZV10927.1	competence/damage-inducible protein A
+
+ ### Family: 45 -> DEAD/DEAH box helicase
+
+	 WP_023071408.1	DEAD/DEAH box helicase
+	 WP_121967812.1	DEAD/DEAH box helicase
+	 PZO49557.1	hypothetical protein
+	 PZO08617.1	ATP-dependent helicase
+	 WP_006457724.1	DEAD/DEAH box helicase
+
+ ### Family: 46 -> photosystem II reaction center protein PsbN
+
+	 WP_073607618.1	photosystem II reaction center protein PsbN
+	 WP_023071404.1	photosystem II reaction center protein PsbN
+	 WP_080808177.1	photosystem II reaction center protein PsbN
+	 WP_106882383.1	photosystem II reaction center protein PsbN
+	 WP_121967816.1	photosystem II reaction center protein PsbN
+	 PZO49554.1	photosystem II reaction center protein PsbN
+	 PZO08613.1	photosystem II reaction center protein PsbN
+	 WP_006457718.1	photosystem II reaction center protein PsbN
+
+ ### Family: 47 -> photosystem II reaction center protein PsbH
+
+	 WP_073607619.1	photosystem II reaction center protein PsbH
+	 WP_023071403.1	photosystem II reaction center protein PsbH
+	 WP_080808173.1	photosystem II reaction center protein PsbH
+	 WP_106882384.1	photosystem II reaction center protein PsbH
+	 WP_121967817.1	photosystem II reaction center protein PsbH
+	 PZO49553.1	photosystem II reaction center protein PsbH
+	 PZO08612.1	photosystem II reaction center protein PsbH
+	 WP_038016562.1	photosystem II reaction center protein PsbH
+
+ ### Family: 48 -> TatA/E family twin arginine-targeting protein translocase
+
+	 WP_073607620.1	TatA/E family twin arginine-targeting protein translocase
+	 WP_023071402.1	TatA/E family twin arginine-targeting protein translocase
+	 WP_080808148.1	TatA/E family twin arginine-targeting protein translocase
+	 WP_106882385.1	TatA/E family twin arginine-targeting protein translocase
+	 WP_121967818.1	TatA/E family twin arginine-targeting protein translocase
+	 PZO49552.1	hypothetical protein
+	 PZO08611.1	twin-arginine translocase TatA/TatE family subunit
+	 WP_006454391.1	TatA/E family twin arginine-targeting protein translocase
+
+ ### Family: 49 -> alpha/beta hydrolase
+
+	 WP_015192777.1	alpha/beta hydrolase
+	 PZD71786.1	Soluble epoxide hydrolase
+
+ ### Family: 50 -> hypothetical protein
+
+	 WP_015153918.1	hypothetical protein
+	 PSP17130.1	hypothetical protein
+
+ ### Family: 51 -> shikimate dehydrogenase
+
+	 WP_106456639.1	shikimate dehydrogenase
+	 PSP17124.1	shikimate dehydrogenase
+
+ ### Family: 52 -> hypothetical protein
+
+	 PSP15039.1	hypothetical protein
+	 WP_017658660.1	hypothetical protein
+
+ ### Family: 53 -> hypothetical protein
+
+	 PSP15033.1	hypothetical protein
+	 PSP17126.1	hypothetical protein
+
+ ### Family: 54 -> hypothetical protein
+
+	 PSP15032.1	hypothetical protein
+	 PSP17125.1	hypothetical protein
+
+ ### Family: 55 -> efflux RND transporter periplasmic adaptor subunit
+
+	 WP_162548637.1	efflux RND transporter periplasmic adaptor subunit
+	 PLS68320.1	efflux transporter periplasmic adaptor subunit
+
+ ### Family: 56 -> DUF2252 domain-containing protein
+
+	 WP_068817856.1	DUF2252 domain-containing protein
+	 OUC15101.1	hypothetical protein
+	 PLS68324.1	DUF2252 domain-containing protein
+
+ ### Family: 57 -> asparaginase
+
+	 OLP20297.1	asparaginase
+	 WP_015126248.1	asparaginase
+
+ ### Family: 58 -> phycobiliprotein lyase
+
+	 OLP20292.1	phycobiliprotein lyase
+	 WP_096626057.1	phycobiliprotein lyase
+
+ ### Family: 59 -> tetratricopeptide repeat protein
+
+	 WP_088243776.1	CHAT domain-containing protein
+	 WP_071102119.1	CHAT domain-containing protein
+	 WP_009632338.1	tetratricopeptide repeat protein
+	 KOR37595.1	hypothetical protein
+	 WP_069967882.1	AAA family ATPase
+	 WP_106258370.1	tetratricopeptide repeat protein
+	 WP_106258363.1	MSMEG_0565 family glycosyltransferase
+	 EDX73313.1	haemagglutination activity domain protein
+	 PZV25620.1	TIGR03032 family protein
+	 WP_015126240.1	tetratricopeptide repeat protein
+	 WP_019500121.1	tetratricopeptide repeat protein
+	 WP_019500120.1	tetratricopeptide repeat protein
+	 WP_155973184.1	tetratricopeptide repeat protein
+	 WP_166274720.1	tetratricopeptide repeat protein
+
+ ### Family: 60 -> SDR family oxidoreductase
+
+	 BAZ39803.1	short-chain dehydrogenase/reductase SDR
+	 WP_006511792.1	SDR family oxidoreductase
+	 WP_146296173.1	3-oxoacyl-ACP reductase FabG
+	 WP_071455492.1	SDR family oxidoreductase
+
+ ### Family: 61 -> pentapeptide repeat-containing protein
+
+	 BAZ39797.1	pentapeptide repeat family protein
+	 WP_052754497.1	pentapeptide repeat-containing protein
+	 WP_015200937.1	pentapeptide repeat-containing protein
+	 KST67725.1	hypothetical protein
+	 WP_106287114.1	DnaJ domain-containing protein
+	 WP_072620596.1	J domain-containing protein
+	 WP_081748143.1	pentapeptide repeat-containing protein
+	 TVQ43657.1	pentapeptide repeat-containing protein
+	 WP_011431093.1	pentapeptide repeat-containing protein
+
+ ### Family: 62 -> GAF domain-containing protein
+
+	 BAZ39796.1	two-component sensor histidine kinase
+	 WP_096691561.1	GAF domain-containing protein
+	 WP_015203355.1	GAF domain-containing protein
+	 WP_009632332.1	HAMP domain-containing histidine kinase
+	 WP_107671284.1	GAF domain-containing protein
+	 WP_166274884.1	HAMP domain-containing protein
+
+ ### Family: 63 -> unknown protein
+
+	 BAG05586.1	unknown protein
+	 WP_104397534.1	hypothetical protein
+
+ ### Family: 64 -> GTPase ObgE
+
+	 BAG05583.1	GTP-binding protein
+	 WP_104397533.1	GTPase ObgE
+	 WP_071455491.1	GTPase ObgE
+
+ ### Family: 65 -> dTDP-glucose 4%2C6-dehydratase
+
+	 WP_041393425.1	NAD-dependent epimerase/dehydratase family protein
+	 BAG05581.1	dTDP-glucose 4%2C6-dehydratase
+	 WP_104397572.1	dTDP-glucose 4%2C6-dehydratase
+
+ ### Family: 66 -> cation efflux system protein
+
+	 BAG05580.1	cation efflux system protein
+	 WP_104397531.1	cation transporter
+
+ ### Family: 67 -> aminopeptidase P family protein
+
+	 WP_015116534.1	aminopeptidase P family protein
+	 WP_015116532.1	pentapeptide repeat-containing protein
+	 WP_015116530.1	30S ribosomal protein S16
+	 WP_015116528.1	PhoH family protein
+	 WP_015116527.1	WD40 repeat domain-containing protein
+	 WP_044291396.1	bifunctional 4-hydroxy-2-oxoglutarate aldolase/2-dehydro-3-deoxy-phosphogluconate aldolase
+	 WP_015116525.1	L%2CD-transpeptidase
+
+ ### Family: 68 -> HlyC/CorC family transporter
+
+	 WP_088243777.1	HlyC/CorC family transporter
+	 PZV25623.1	hypothetical protein
+	 AIE75568.1	Hemolysins-related protein containing CBS domains
+
+ ### Family: 69 -> sugar ABC transporter ATP-binding protein
+
+	 WP_052290059.1	sugar ABC transporter ATP-binding protein
+	 AFY81346.1	ABC-type multidrug transport system%2C ATPase and permease component
+	 WP_106287118.1	ABC transporter ATP-binding protein
+	 WP_073548877.1	ABC transporter ATP-binding protein
+	 WP_146296157.1	ATP-binding cassette domain-containing protein
+	 WP_146296171.1	ATP-binding cassette domain-containing protein
+	 WP_015126242.1	AAA-associated domain-containing protein
+
+ ### Family: 70 -> hypothetical protein
+
+	 WP_067774026.1	hypothetical protein
+	 WP_015200943.1	hypothetical protein
+	 WP_083374047.1	hypothetical protein
+	 WP_046281308.1	hypothetical protein
+	 WP_017719627.1	hypothetical protein
+	 WP_141724406.1	hypothetical protein
+	 WP_168572077.1	hypothetical protein
+	 WP_162548631.1	hypothetical protein
+	 AFY81345.1	hypothetical protein
+	 WP_073548876.1	hypothetical protein
+	 OKH36040.1	hypothetical protein
+	 ERT09093.1	hypothetical protein
+	 WP_171971701.1	hypothetical protein
+
+ ### Family: 71 -> signal recognition particle protein
+
+	 WP_067774039.1	signal recognition particle protein
+	 WP_088243772.1	signal recognition particle protein
+	 BAZ39798.1	signal recognition particle protein
+	 WP_035155739.1	signal recognition particle protein
+	 WP_096691556.1	signal recognition particle protein
+	 WP_015200938.1	signal recognition particle protein
+	 WP_015116531.1	signal recognition particle protein
+	 OLP20295.1	signal recognition particle protein
+	 KST67724.1	signal recognition particle
+	 WP_039715700.1	signal recognition particle protein
+	 WP_015203350.1	signal recognition particle protein
+	 WP_071102124.1	signal recognition particle protein
+	 TKZ26915.1	signal recognition particle protein
+	 WP_068817855.1	signal recognition particle protein
+	 KOR37596.1	signal recognition particle
+	 WP_015192772.1	signal recognition particle protein
+	 WP_017719621.1	signal recognition particle protein
+	 RMF21619.1	signal recognition particle protein
+	 WP_069967888.1	signal recognition particle protein
+	 EDX73345.1	signal recognition particle protein
+	 WP_168571631.1	signal recognition particle protein
+	 AFY81341.1	signal recognition particle subunit FFH/SRP54 (srp54)
+	 WP_106287115.1	signal recognition particle protein
+	 WP_006528477.1	signal recognition particle protein
+	 WP_019504523.1	signal recognition particle protein
+	 WP_071516057.1	signal recognition particle protein
+	 OKH36046.1	signal recognition particle protein
+	 ERT09107.1	signal recognition particle protein
+	 WP_036482466.1	signal recognition particle protein
+	 PSP15037.1	signal recognition particle protein
+	 WP_015166534.1	signal recognition particle protein
+	 PZD71742.1	Signal recognition particle protein
+	 TVQ19914.1	signal recognition particle protein
+	 WP_019500119.1	signal recognition particle protein
+	 WP_023172070.1	signal recognition particle protein
+	 OUC15094.1	signal recognition particle protein
+	 WP_166274710.1	signal recognition particle protein
+	 CDM93746.1	Signal Recognition Particle (SRP) component with 4.5S RNA (ffs)
+	 PLS68319.1	signal recognition particle protein
+	 PSP17129.1	signal recognition particle protein
+
+ ### Family: 72 -> serine/threonine protein kinase
+
+	 WP_015200936.1	serine/threonine protein kinase
+	 WP_146296159.1	protein kinase
+	 ERT09070.1	serine/threonine-protein kinase D
+	 WP_106300424.1	serine/threonine protein kinase
+	 AFY67797.1	serine/threonine protein kinase
+	 WP_015126247.1	serine/threonine protein kinase
+
+ ### Family: 73 -> class I SAM-dependent methyltransferase
+
+	 PZV25625.1	class I SAM-dependent methyltransferase
+	 AFY67794.1	Methyltransferase type 11
+	 WP_065710104.1	class I SAM-dependent methyltransferase
+	 PZD71762.1	Demethylmenaquinone methyltransferase
+	 OUC15100.1	SAM-dependent methyltransferase
+
+ ### Family: 74 -> GTPase Era
+
+	 WP_024544478.1	GTPase Era
+	 AFY67790.1	GTP-binding protein HSR1-related protein
+	 WP_069790860.1	GTP-binding protein
+	 WP_065710101.1	GTPase Era
+	 WP_075889507.1	GTPase Era
+
+ ### Family: 75 -> 30S ribosomal protein S16
+
+	 WP_067774036.1	30S ribosomal protein S16
+	 WP_088243774.1	30S ribosomal protein S16
+	 BAZ39799.1	30S ribosomal protein S16
+	 WP_035155740.1	30S ribosomal protein S16
+	 WP_096691557.1	30S ribosomal protein S16
+	 WP_015200939.1	30S ribosomal protein S16
+	 OLP20294.1	30S ribosomal protein S16
+	 KST67723.1	30S ribosomal protein S16
+	 WP_015153916.1	30S ribosomal protein S16
+	 WP_015144818.1	30S ribosomal protein S16
+	 WP_015203351.1	30S ribosomal protein S16
+	 WP_071102122.1	30S ribosomal protein S16
+	 WP_009632335.1	30S ribosomal protein S16
+	 WP_096621582.1	30S ribosomal protein S16
+	 WP_046281312.1	30S ribosomal protein S16
+	 TKZ26914.1	30S ribosomal protein S16
+	 RMG07955.1	30S ribosomal protein S16
+	 WP_009555278.1	30S ribosomal protein S16
+	 WP_068817854.1	30S ribosomal protein S16
+	 WP_008055729.1	30S ribosomal protein S16
+	 KOR37597.1	30S ribosomal protein S16
+	 ACL45118.1	ribosomal protein S16
+	 WP_015192773.1	30S ribosomal protein S16
+	 WP_017719623.1	30S ribosomal protein S16
+	 WP_013322191.1	30S ribosomal protein S16
+	 RMF21620.1	30S ribosomal protein S16
+	 WP_069967887.1	30S ribosomal protein S16
+	 WP_068393680.1	30S ribosomal protein S16
+	 WP_106258368.1	30S ribosomal protein S16
+	 WP_162425296.1	30S ribosomal protein S16
+	 WP_073607617.1	30S ribosomal protein S16
+	 WP_085435727.1	30S ribosomal protein S16
+	 EDX73299.1	ribosomal protein S16
+	 RNJ67069.1	30S ribosomal protein S16
+	 WP_106456637.1	30S ribosomal protein S16
+	 WP_168571632.1	30S ribosomal protein S16
+	 WP_088893922.1	30S ribosomal protein S16
+	 WP_162548635.1	30S ribosomal protein S16
+	 AFY81342.1	SSU ribosomal protein S16P
+	 WP_006511797.1	30S ribosomal protein S16
+	 WP_106287116.1	30S ribosomal protein S16
+	 PZV25622.1	30S ribosomal protein S16
+	 WP_012954187.1	30S ribosomal protein S16
+	 CBN56018.1	30S ribosomal protein S16
+	 WP_161825903.1	30S ribosomal protein S16
+	 WP_015224606.1	30S ribosomal protein S16
+	 WP_015188235.1	30S ribosomal protein S16
+	 WP_017304342.1	30S ribosomal protein S16
+	 BAG48297.1	30S ribosomal protein S16
+	 WP_006528478.1	30S ribosomal protein S16
+	 WP_002780060.1	30S ribosomal protein S16
+	 WP_146296163.1	30S ribosomal protein S16
+	 WP_019504522.1	30S ribosomal protein S16
+	 WP_071516058.1	30S ribosomal protein S16
+	 WP_124972499.1	30S ribosomal protein S16
+	 WP_017295262.1	30S ribosomal protein S16
+	 WP_107671289.1	30S ribosomal protein S16
+	 OKH36045.1	30S ribosomal protein S16
+	 WP_144868368.1	30S ribosomal protein S16
+	 ERT09076.1	ribosomal protein S16
+	 WP_015218063.1	30S ribosomal protein S16
+	 WP_015230633.1	30S ribosomal protein S16
+	 WP_024544480.1	30S ribosomal protein S16
+	 WP_036482469.1	30S ribosomal protein S16
+	 WP_106300420.1	30S ribosomal protein S16
+	 AFY67792.1	SSU ribosomal protein S16P
+	 WP_069790863.1	30S ribosomal protein S16
+	 PSP15036.1	30S ribosomal protein S16
+	 WP_015166535.1	30S ribosomal protein S16
+	 WP_007309195.1	30S ribosomal protein S16
+	 WP_030007128.1	30S ribosomal protein S16
+	 WP_072620599.1	30S ribosomal protein S16
+	 PZD71844.1	30S ribosomal protein S16
+	 WP_023071405.1	30S ribosomal protein S16
+	 WP_075889503.1	30S ribosomal protein S16
+	 WP_015126243.1	30S ribosomal protein S16
+	 WP_022606387.1	30S ribosomal protein S16
+	 TVQ19913.1	30S ribosomal protein S16
+	 WP_169613989.1	30S ribosomal protein S16
+	 WP_008313380.1	30S ribosomal protein S16
+	 WP_019500118.1	30S ribosomal protein S16
+	 WP_041243701.1	30S ribosomal protein S16
+	 PZV10929.1	30S ribosomal protein S16
+	 WP_068510770.1	30S ribosomal protein S16
+	 WP_018400176.1	30S ribosomal protein S16
+	 AIE75567.1	Prophage Lp2 protein 6
+	 AIE75569.1	SSU ribosomal protein S16p
+	 WP_017711241.1	30S ribosomal protein S16
+	 OUC15093.1	30S ribosomal protein S16
+	 WP_166274712.1	30S ribosomal protein S16
+	 WP_088429435.1	30S ribosomal protein S16
+	 WP_017658664.1	30S ribosomal protein S16
+	 WP_106882382.1	30S ribosomal protein S16
+	 WP_017326398.1	30S ribosomal protein S16
+	 WP_121967815.1	30S ribosomal protein S16
+	 PZO49555.1	30S ribosomal protein S16
+	 TVQ43652.1	30S ribosomal protein S16
+	 CDM93747.1	30S ribosomal subunit protein S16
+	 PZO08614.1	30S ribosomal protein S16
+	 WP_006454975.1	30S ribosomal protein S16
+	 WP_071455490.1	30S ribosomal protein S16
+	 WP_011431088.1	30S ribosomal protein S16
+	 PLS68318.1	30S ribosomal protein S16
+	 PSP17128.1	30S ribosomal protein S16
+
+ ### Family: 76 -> conserved protein of unknown function
+
+	 CDM93749.1	conserved protein of unknown function
+
+ ### Family: 77 -> 30S ribosomal protein S21
+
+	 WP_010996119.1	30S ribosomal protein S21
+	 BAZ39801.1	30S ribosomal protein S21
+	 WP_035155745.1	30S ribosomal protein S21
+	 WP_096691559.1	30S ribosomal protein S21
+	 OLP20416.1	30S ribosomal protein S21
+	 ACL45116.1	ribosomal protein S21
+	 WP_161825943.1	30S ribosomal protein S21
+	 OKH36043.1	30S ribosomal protein S21
+	 AFY67791.1	SSU ribosomal protein S21P
+	 WP_015126245.1	30S ribosomal protein S21
+	 WP_071592280.1	30S ribosomal protein S21
+	 WP_011142630.1	30S ribosomal protein S21
+	 OUC15091.1	30S ribosomal protein S21
+
+ ### Family: 78 -> PhoH family protein
+
+	 WP_067774031.1	PhoH family protein
+	 BAZ39802.1	PhoH family protein
+	 WP_035155747.1	PhoH family protein
+	 WP_096691560.1	PhoH family protein
+	 WP_015200941.1	PhoH family protein
+	 OLP20293.1	phosphate starvation-inducible protein PhoH
+	 KST67721.1	phosphate starvation-inducible protein PhoH
+	 WP_039715698.1	PhoH family protein
+	 WP_015203354.1	PhoH family protein
+	 WP_071102120.1	PhoH family protein
+	 WP_009632337.1	PhoH family protein
+	 WP_046281310.1	PhoH family protein
+	 TKZ26912.1	PhoH family protein
+	 RMG07957.1	PhoH family protein
+	 WP_009555276.1	PhoH family protein
+	 WP_068817852.1	PhoH family protein
+	 KOR37598.1	phosphate starvation-inducible protein PhoH
+	 ACL45115.1	PhoH family protein
+	 WP_017719625.1	PhoH family protein
+	 WP_069967885.1	PhoH family protein
+	 WP_068390410.1	PhoH family protein
+	 WP_106258365.1	PhoH family protein
+	 WP_162425298.1	PhoH family protein
+	 WP_073607615.1	PhoH family protein
+	 EDX73303.1	PhoH family protein
+	 RNJ67071.1	PhoH family protein
+	 WP_168571634.1	PhoH family protein
+	 WP_088893923.1	PhoH family protein
+	 WP_162548633.1	PhoH family protein
+	 AFY81344.1	phosphate starvation-inducible protein PhoH%2C predicted ATPase
+	 WP_106287138.1	PhoH family protein
+	 CBN56021.1	PhoH-like protein
+	 WP_161825901.1	PhoH family protein
+	 WP_015224604.1	PhoH family protein
+	 WP_073548874.1	PhoH family protein
+	 WP_083883597.1	PhoH family protein
+	 WP_146296167.1	AAA family ATPase
+	 WP_071516060.1	PhoH family protein
+	 OKH36042.1	phosphate starvation-inducible protein PhoH
+	 ERT09138.1	DEAD/DEAH box helicase family protein
+	 WP_015230631.1	PhoH family protein
+	 WP_072623062.1	PhoH family protein
+	 PZD71777.1	PhoH-like protein
+	 WP_031291898.1	PhoH family protein
+	 WP_015126246.1	PhoH family protein
+	 WP_022606391.1	PhoH family protein
+	 TVQ19911.1	PhoH family protein
+	 WP_169613987.1	PhoH family protein
+	 WP_008313383.1	PhoH family protein
+	 WP_068510768.1	PhoH family protein
+	 WP_018400174.1	PhoH family protein
+	 WP_017711244.1	PhoH family protein
+	 OUC15090.1	phosphate starvation-inducible protein PhoH
+	 WP_166274716.1	PhoH family protein
+	 WP_080808156.1	PhoH family protein
+	 WP_017658662.1	PhoH family protein
+	 WP_106882381.1	PhoH family protein
+	 WP_121967813.1	PhoH family protein
+	 PZO49556.1	phosphate starvation-inducible protein PhoH
+	 CDM93750.1	PhoH-like protein
+	 PZO08616.1	phosphate starvation-inducible protein PhoH
+	 WP_038016558.1	PhoH family protein
+	 WP_071455907.1	PhoH family protein
+
+ ### Family: 79 -> heme utilization protein HuvX
+
+	 WP_067774029.1	heme utilization protein HuvX
+	 KST67720.1	heme utilization protein HuvX
+	 WP_152964801.1	heme utilization protein HuvX
+	 ACL45114.1	conserved hypothetical protein
+	 WP_017719626.1	heme utilization protein HuvX
+	 WP_069967884.1	heme utilization protein HuvX
+	 WP_168571635.1	heme utilization protein HuvX
+	 WP_162548632.1	heme utilization protein HuvX
+	 CBN56023.1	heme utilization protein HuvX
+	 WP_073548875.1	heme utilization protein HuvX
+	 OKH36041.1	heme utilization protein HuvX
+	 ERT09204.1	hypothetical protein
+	 CDM93751.1	conserved protein of unknown function
+
+ ### Family: 80 -> KH domain-containing protein
+
+	 WP_067774034.1	KH domain-containing protein
+	 WP_088243775.1	KH domain-containing protein
+	 BAZ39800.1	hypothetical protein
+	 WP_144416121.1	KH domain-containing protein
+	 WP_096691558.1	KH domain-containing protein
+	 WP_015200940.1	KH domain-containing protein
+	 WP_015116529.1	KH domain-containing protein
+	 OLP20417.1	KH domain-containing protein
+	 KST67722.1	RNA-binding protein
+	 WP_132866703.1	KH domain-containing protein
+	 WP_015144817.1	KH domain-containing protein
+	 WP_015203352.1	KH domain-containing protein
+	 WP_071102121.1	KH domain-containing protein
+	 WP_028954273.1	KH domain-containing protein
+	 WP_096621581.1	KH domain-containing protein
+	 WP_046281311.1	KH domain-containing protein
+	 TKZ26913.1	KH domain-containing protein
+	 RMG07956.1	KH domain-containing protein
+	 WP_009555277.1	KH domain-containing protein
+	 WP_068817853.1	KH domain-containing protein
+	 WP_052584896.1	KH domain-containing protein
+	 KOR37720.1	hypothetical protein
+	 ACL45117.1	conserved hypothetical protein
+	 WP_015192774.1	KH domain-containing protein
+	 WP_082218351.1	KH domain-containing protein
+	 WP_013322190.1	KH domain-containing protein
+	 RMF21621.1	KH domain-containing protein
+	 WP_069967886.1	KH domain-containing protein
+	 WP_068390409.1	KH domain-containing protein
+	 WP_106258366.1	KH domain-containing protein
+	 WP_162425297.1	KH domain-containing protein
+	 WP_073607616.1	KH domain-containing protein
+	 WP_085435726.1	KH domain-containing protein
+	 EDX73328.1	hypothetical protein
+	 RNJ67070.1	KH domain-containing protein
+	 WP_106456638.1	KH domain-containing protein
+	 WP_168571633.1	KH domain-containing protein
+	 WP_088894709.1	KH domain-containing protein
+	 WP_162548634.1	KH domain-containing protein
+	 AFY81343.1	putative RNA-binding protein (contains KH domain)
+	 WP_006511796.1	KH domain-containing protein
+	 WP_106287117.1	KH domain-containing protein
+	 PZV25621.1	RNA-binding protein
+	 WP_012954188.1	KH domain-containing protein
+	 CBN56019.1	conserved hypothetical protein
+	 WP_161825902.1	KH domain-containing protein
+	 WP_015224605.1	KH domain-containing protein
+	 WP_073548873.1	KH domain-containing protein
+	 WP_017304341.1	KH domain-containing protein
+	 BAG05582.1	RNA-binding protein like
+	 WP_006528479.1	KH domain-containing protein
+	 WP_104397532.1	KH domain-containing protein
+	 WP_146296165.1	KH domain-containing protein
+	 WP_019504521.1	KH domain-containing protein
+	 WP_084639422.1	KH domain-containing protein
+	 WP_124972497.1	KH domain-containing protein
+	 WP_017295263.1	KH domain-containing protein
+	 WP_107671288.1	KH domain-containing protein
+	 OKH36044.1	hypothetical protein
+	 WP_144868371.1	KH domain-containing protein
+	 ERT09159.1	KH domain protein
+	 WP_015218062.1	KH domain-containing protein
+	 WP_015230632.1	KH domain-containing protein
+	 WP_024544479.1	KH domain-containing protein
+	 WP_036482472.1	KH domain-containing protein
+	 WP_106300434.1	KH domain-containing protein
+	 AFY67793.1	hypothetical protein
+	 WP_069790862.1	KH domain-containing protein
+	 PSP15035.1	RNA-binding protein
+	 WP_015166536.1	KH domain-containing protein
+	 WP_048321220.1	KH domain-containing protein
+	 WP_030007129.1	KH domain-containing protein
+	 WP_072620600.1	KH domain-containing protein
+	 PZD71832.1	hypothetical protein
+	 WP_023071406.1	KH domain-containing protein
+	 WP_075889505.1	KH domain-containing protein
+	 WP_015126244.1	KH domain-containing protein
+	 WP_022606389.1	KH domain-containing protein
+	 TVQ19912.1	KH domain-containing protein
+	 WP_169613988.1	KH domain-containing protein
+	 WP_071992200.1	KH domain-containing protein
+	 WP_019500117.1	KH domain-containing protein
+	 WP_023172072.1	KH domain-containing protein
+	 PZV10928.1	KH domain-containing protein
+	 WP_084782559.1	KH domain-containing protein
+	 WP_018400175.1	KH domain-containing protein
+	 AIE75570.1	KH domain RNA binding protein YlqC
+	 WP_017711242.1	KH domain-containing protein
+	 OUC15092.1	hypothetical protein
+	 WP_166274714.1	KH domain-containing protein
+	 WP_080808153.1	KH domain-containing protein
+	 WP_071591932.1	KH domain-containing protein
+	 WP_106882388.1	KH domain-containing protein
+	 WP_026100966.1	KH domain-containing protein
+	 WP_121967814.1	KH domain-containing protein
+	 PZO49560.1	hypothetical protein
+	 TVQ43653.1	KH domain-containing protein
+	 CDM93748.1	conserved protein of unknown function
+	 PZO08615.1	RNA-binding protein
+	 WP_006455717.1	KH domain-containing protein
+	 WP_071455489.1	KH domain-containing protein
+	 WP_011431089.1	KH domain-containing protein
+	 PLS68317.1	KH domain-containing protein
+	 PSP17127.1	RNA-binding protein
+
+ ### Family: 10000 -> pseudogene
+
+	 BJP36_RS00355	pseudogene
+	 SYN7509_RS29205	pseudogene
+	 WN50_RS13410	pseudogene
+	 EBE85_11075	pseudogene
+	 D6728_15585	pseudogene
+	 OSCCYDRAFT_RS26555	pseudogene
+	 ARTHRO_RS22125	pseudogene
+	 OSC10802_RS41775	pseudogene
+	 CYAN7822_RS37620	pseudogene
+	 CYAN7822_RS37615	pseudogene
+	 GS597_RS13035	pseudogene
+	 GLO73106_RS21660	pseudogene
+	 myaer87_RS17080	pseudogene
+	 SYN6308_RS22630	pseudogene
+	 NIES208_RS02805	pseudogene
+	 GlitD10_RS15575	pseudogene
+	 CV045_08565	pseudogene
+	 CV045_08535	pseudogene
