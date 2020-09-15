@@ -49,4 +49,10 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
 ```
 ### 1. Simple job
 
-Using the example in folder `example/ybez_KHI`, 
+Using the example in folder `example/ybez_KHI`, the input file `targets_ybez_selected.txt` contains a list of protein sequence identifiers in UniprotKB format. Running:
+```
+python3 GCsnap.py -targets targets_ybez_selected.txt
+```
+will generate the output folder `targets_ybez_selected`, where all output files and figures are stored.
+
+
