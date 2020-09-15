@@ -37,7 +37,13 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
 **Optional** arguments allow for the tweaking of GCsnap behaviour. There are various optional arguments that can be used, but the most relevant are:
   - '-user_email': it may be required to access the NCBI databases. It is not used for anything else.
   - '-ncbi_api_key': the key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Can be obtained after obtaing an NCBI account.
-  - '-n_flanking': The number of flanking genes (to each side) to be taken. By default, it is set to 4.
-  - '-n_flanking5': The number of flanking genes to be taken on the 5' side. By default, it is set to 4.
-  - '-n_flanking3': The number of flanking genes to be taken on the 3' side. By default, it is set to 4.
-  - 
+  - '-n_flanking': the number of flanking genes (to each side) to be taken. By default, it is set to 4.
+  - '-n_flanking5': the number of flanking genes to be taken on the 5' side. By default, it is set to 4.
+  - '-n_flanking3': the number of flanking genes to be taken on the 3' side. By default, it is set to 4.
+  - '-get_taxonomy': set to false if no taxonomy is to be collected.
+  - '-annotate_TM': set to true to annotate the presence of transmembrane segments and signal peptides.
+  - '-annotation_TM_mode': the mode to use to collect transmembrane and signal peptide annotations (phobius, tmhmm or uniprot).
+  - '-clans_pattern': a set of patterns in CLANS groups names that define different groups to be considered as independent jobs.
+ 
+### Simple job
+
