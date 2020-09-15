@@ -20,7 +20,9 @@ Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (vers
 ## Allowed inputs
 
 GCsnap takes as main input a list of sequence identifiers, which can be in **Entrez, UniprotKB, and UniRef formats, or a mix**. These identifiers can be given as:
-  1. a text file, where each is in a different line
-  2. a fasta file, where the sequence header starts with the sequence identifier
-  3. a sequences cluster file in CLANS format
-  4. direct input in the terminal as a space-separated list
+  - a text file, where each is in a different line
+  - a fasta file, where the sequence header starts with the sequence identifier
+  - a sequences cluster file in CLANS format
+  - direct input in the terminal as a space-separated list
+  
+## Usage
