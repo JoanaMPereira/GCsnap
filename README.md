@@ -62,6 +62,17 @@ python3 GCsnap.py -targets targets_ybez_selected.txt -annotate_TM True
 ```
 which will by default collect that information from Uniprot.
 
+### 2. Job from a CLANS file
 
+Using the example in folder `examples/yqlc_KHII/`, the input file `yqlc_nostoc_blast_nrbac70.clans` is a classification file encompassing two clusters of sequences, which are named `cluster1_cyanobacteria` and `cluster2_allothers`. 
+Running:
+```
+python3 GCsnap.py -targets yqlc_nostoc_blast_nrbac70.clans 
+```
+will make GCsnap consider all identifiers as a single job, while running:
+```
+python3 GCsnap.py -targets yqlc_nostoc_blast_nrbac70.clans -clans_pattern cluster
+```
+will make GCsnap identify all clusters in the CLANS file that have 'cluster' in their name, which will be considered as two independent jobs, generating the two folders `cluster1_cyanobacteria` and `cluster2_allothers`
 
 
