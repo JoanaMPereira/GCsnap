@@ -2,6 +2,8 @@
 
 GCsnap is a flexible Python-based tool that allows for the interactive comparison of the genomic contexts of protein-coding genes from any genome at any taxonomic level, integrating them with functional and structural information for any of the genes shown. 
 
+![figure1](https://github.com/JoanaMPereira/GCsnap/blob/master/examples/Fig1.pdf)
+
 By connecting the output to different protein databases, the user can navigate through the different genomic contexts from a simple interactive platform, facilitating the further analysis of the contexts found. GCsnap is not limited to a single input format, can preform batch jobs and accepts protein classification maps. 
 
 All information is stored in detailed, human and machine-readable files, and customable publication-ready figures.
