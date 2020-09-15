@@ -45,5 +45,6 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
   - '-annotation_TM_mode': the mode to use to collect transmembrane and signal peptide annotations (phobius, tmhmm or uniprot).
   - '-clans_pattern': a set of patterns in CLANS groups names that define different groups to be considered as independent jobs.
  
-### Simple job
+### 1. Simple job
 
+Using the example in folder example/ybez_KHI, 
