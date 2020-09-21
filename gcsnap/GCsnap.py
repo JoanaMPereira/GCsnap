@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 14.09.2020
+## Last changed: 21.09.2020
 
 import subprocess as sp
 import multiprocessing as mp
@@ -19,6 +19,7 @@ import requests
 import sys
 import statistics
 import argparse
+import requests_cache
 
 from Bio.Blast import NCBIXML
 from Bio import Entrez
@@ -149,6 +150,10 @@ clans_patterns = args.clans_patterns
 # define programs location
 blast = args.blast
 
+# install cache to make it faster
+requests_cache.install_cache()
+
+# set starting directory
 starting_directory = os.getcwd()
 
 # HELPING ROUTINES
