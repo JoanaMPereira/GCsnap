@@ -21,7 +21,9 @@ setup(name='gcsnap',
           'bokeh >= 1.3.4, <= 2.1.1',
           'networkx >= 2.3',
           'numpy >= 1.17.2',
-          'pandas >= 0.25.1'
+          'pandas >= 0.25.1',
+          'requests_cache',
+          'scipy'
       ],
       include_package_data=True,
       zip_safe=False)
