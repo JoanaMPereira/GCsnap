@@ -1257,7 +1257,6 @@ def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flank
     for i, column in enumerate(operon_matrix):
         occurence_count = Counter(column) 
         most_common_family = occurence_count.most_common(1)[0][0]
-        print(i, column, occurence_count, most_common_family)
 
         most_common_context['selected_context'].append(most_common_family)
         most_common_context['families_frequency'].append(round(occurence_count.most_common(1)[0][1]*100/len(column), 1))
