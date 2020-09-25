@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(name='gcsnap',
-      version='0.1',
+      version='1.0.0',
       description='Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description='GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts.',
       classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU General Public License v3.0',
-        'Programming Language :: Python :: 3.1',
+        'Programming Language :: Python :: 3',
         'Topic :: Bioinformatics :: Genomic contexts',
       ],
       keywords='genomic contexts homology',
