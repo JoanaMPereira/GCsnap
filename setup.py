@@ -14,7 +14,6 @@ setup(name='gcsnap',
       url='http:https://github.com/JoanaMPereira/GCsnap',
       author='Joana Pereira',
       author_email='pereira.joanam@gmail.com',
-      license='GNU',
       packages=['gcsnap'],
       install_requires=[
           'biopython >= 1.74', 
