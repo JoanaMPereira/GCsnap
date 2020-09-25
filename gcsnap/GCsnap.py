@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 21.09.2020
+## Last changed: 25.09.2020
 
 import subprocess as sp
 import multiprocessing as mp
@@ -29,132 +29,12 @@ from scipy.spatial import distance
 from scipy import stats
 from collections import Counter
 
-# Get inputs
-parser = argparse.ArgumentParser('GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts')
-requiredNamed = parser.add_argument_group('required arguments')
-optionalNamed = parser.add_argument_group('optional arguments with defaults')
-
-# required inputs
-requiredNamed.add_argument('-targets', dest='targets', nargs='+', required=True, help='List of input targets. Can be a list of fasta files, a list of text files encompassing a list of protein sequence identifiers, a list of protein sequence identifiers, or a mix of them')
-# optional inputs
-optionalNamed.add_argument('-user_email', dest='user_email', type=str, default = None, help='Email address of the user. May be required to access NCBI databases and isn not used for anything else (default: None')
-optionalNamed.add_argument('-ncbi_api_key', dest='ncbi_api_key', default = None,type=str, help='The key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Shall be obtained after obtaining an NCBI account (default: None)')
-optionalNamed.add_argument('-get_taxonomy', dest='get_taxonomy', default = 'True',type=str, help='Boolean statement to get and map taxonomy information (default: True)')
-optionalNamed.add_argument('-cpu', dest='n_cpu', default = 1,type=int, help='Number of cpus to use (default: 1)')
-optionalNamed.add_argument('-n_flanking', dest='n_flanking', default = 4,type=int, help='Number of flanking sequences (to each side) to take (default: 4)')
-optionalNamed.add_argument('-n_flanking5', dest='n_flanking5', default = 4,type=int, help="Number of flanking sequences to take on the 5' (default: 4)")
-optionalNamed.add_argument('-n_flanking3', dest='n_flanking3', default = 4,type=int, help="Number of flanking sequences to take on the 3' (default: 4)")
-optionalNamed.add_argument('-exclude_partial', dest='exclude_partial', default = False,type=bool, help='Boolean statement to exclude partial operon/genomic_context blocks (default: False)\nIf turned off, partial cases will still be ignored to get the most common genomic features')
-optionalNamed.add_argument('-n_max_operons', dest='n_max', default = 30,type=int, help='Maximum number of top most populated operon/genomic_context block types (default: 30)')
-optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='psiBLAST number of iterations (default: 1). Required to define protein families.')
-optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='psiBLAST e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
-optionalNamed.add_argument('-base', dest='default_base', default = 10,type=int, help='Artificial distance value for two sequences that do not match with an E-value better than -evalue (default: 10).')
-optionalNamed.add_argument('-psiblast_location', dest='blast', default = 'psiblast',type=str, help='Location of psiBLAST (if not in path) (default: psiblast)')
-optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
-optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
-optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
-# figure making optional inputs
-optionalNamed.add_argument('-genomic_context_cmap', dest='genomic_context_cmap', default = 'Spectral',type=str, help='Color map (as of matplotlib) to assign colors to and plot the syntenic blocks (default: Spectral)')
-optionalNamed.add_argument('-out_format', dest='out_format', default = 'png',type=str, help='Output format of the core figures (default: png)')
-optionalNamed.add_argument('-print_color_summary', dest='print_color_summary', default = False, type=bool, help='Boolean statement to print the RGBA codes of the colors defined (default: False)')
-# annotation optional inputs
-optionalNamed.add_argument('-get_pdb', dest='get_pdbs', default = 'True', type=str, help='Boolean statement to get PDB information for representatives of the families found (default: True)\nTurn off to make it faster.')
-optionalNamed.add_argument('-get_functional_annotations', dest='get_functional_annotations', default = 'True' ,type=str, help='Boolean statement to find functional annotations for representatives of the families found (default: True)\nTurn off to make it faster.')
-optionalNamed.add_argument('-annotate_TM', dest='annotate_TM', default = False, type=bool, help='Boolean statement to find sequence features in the flanking genes (default: False)')
-optionalNamed.add_argument('-annotation_TM_mode', dest='annotation_TM_mode', default = 'uniprot', type=str, choices=['phobius', 'tmhmm', 'uniprot'], help='Method to use to find transmembrane segments (default: uniprot)')
-optionalNamed.add_argument('-annotation_TM_file', dest='annotation_TM_file', default = None, type=str, help='File with pre-computed transmembrane features. Only use when the targets correspond to a single project (no multiple fasta or text files) (default: None)')
-# interactive optional inputs
-optionalNamed.add_argument('-interactive', dest='interactive', default = 'True',type=str, help='Boolean statement to make the interactive html output (default: True). WARNING: It requires the Bokeh python package. It will check if it is installed')
-optionalNamed.add_argument('-gc_legend_mode', dest='gc_legend_mode', default = 'species',type=str, choices=['species', 'ncbi_code'], help='Mode of the genomic context legend (default: species)')
-optionalNamed.add_argument('-min_coocc', dest='min_coocc', default = 0.30,type=float,  help='Minimum maximum co-occurrence of two genes to be connected in the graphs (default: 0.30)')
-optionalNamed.add_argument('-sort_mode', dest='sort_mode', default = 'taxonomy',type=str, choices=['taxonomy', 'as_input', 'tree'], help='Mode to sort the genomic contexts (default: taxonomy)')
-optionalNamed.add_argument('-in_tree', dest='in_tree', default = None, type=str, help='Input phylogenetic tree. Only use when the targets correspond to a single project (no multiple fasta or text files) (default: None)')
-optionalNamed.add_argument('-in_tree_format', dest='in_tree_format', default = "newick", type=str, help='Format of the input phylogenetic tree (default: newick)')
-# clans map optional inputs
-optionalNamed.add_argument('-clans_patterns', dest='clans_patterns', default = None,type=str, nargs='+', help='Patterns to identify the clusters to analyse. They will be used to select the individual clusters in the clans map to analyse (default: None).')
-
-# Define inputs
-args = parser.parse_args()
-
-targets = args.targets
-Entrez.email = args.user_email
-
-n_flanking = args.n_flanking
-n_flanking5 = args.n_flanking5
-n_flanking3 = args.n_flanking3
-
-if n_flanking3 == n_flanking5 and n_flanking != n_flanking3:
-	if n_flanking != 4:
-		n_flanking3 = n_flanking
-		n_flanking5 = n_flanking
-
-exclude_partial = args.exclude_partial
-n_cpus = args.n_cpu
-n_max = args.n_max
-num_alignments = 50000
-max_evalue = args.max_evalue
-num_iterations = args.num_iterations
-default_base = args.default_base
-out_label = args.out_label
-out_label_suffix = args.out_label_suffix
-genomic_context_cmap = args.genomic_context_cmap
-min_coocc = args.min_coocc
-print_color_summary = args.print_color_summary
-tmp_folder = args.tmp_folder
-
-gc_legend_mode = args.gc_legend_mode
-
-annotate_TM = args.annotate_TM
-annotation_TM_mode = args.annotation_TM_mode
-annotation_TM_file = args.annotation_TM_file
-
-ncbi_api_key = args.ncbi_api_key
-if ncbi_api_key != None:
-	Entrez.api_key = ncbi_api_key
-
-if annotation_TM_file != None:
-	annotate_TM = True
-
-get_pdb = args.get_pdbs
-if get_pdb == 'True':
-	get_pdb = True
-else:
-	get_pdb = False
-
-get_functional_annotations = args.get_functional_annotations
-if get_functional_annotations == 'True':
-	get_functional_annotations = True
-else:
-	get_functional_annotations = False
-
-get_taxonomy = args.get_taxonomy
-if get_taxonomy == 'True':
-	get_taxonomy = True
-else:
-	get_taxonomy = False
-
-interactive_output = args.interactive
-if interactive_output == 'True':
-	interactive_output = True
-else:
-	interactive_output = False
-
-in_tree = args.in_tree
-in_tree_format = args.in_tree_format
-sort_mode = args.sort_mode
-if in_tree != None:
-	sort_mode = 'tree'
-
-clans_patterns = args.clans_patterns
-
-# define programs location
-blast = args.blast
-
-# install cache to make it faster
-requests_cache.install_cache()
-
-# set starting directory
-starting_directory = os.getcwd()
+from bokeh.plotting import figure, output_file, gridplot, save
+from bokeh.colors import RGB
+from bokeh.models import HoverTool, TapTool, Range1d, LinearAxis, WheelZoomTool, Circle, MultiLine, Panel, Tabs
+from bokeh.models.callbacks import OpenURL
+from bokeh.models.graphs import from_networkx, NodesAndLinkedEdges
+import bokeh.layouts 
 
 # HELPING ROUTINES
 
@@ -273,7 +153,7 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 	return ncbi_code, assembly_id, assembly_link
 
-def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = ''):
+def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None, label = ''):
 
 	print(' ... ... Downloading and extracting assembly {}'.format(assembly_id))
 
@@ -359,7 +239,7 @@ def parse_assembly(assembly_file):
 				
 # 2. Routines to get the N flanking genes for a given ncbi_code 
 
-def get_n_flanking_genes(target_ncbi_code, assembly,  n_5 = n_flanking5, n_3 = n_flanking3, exclude_partial = exclude_partial):
+def get_n_flanking_genes(target_ncbi_code, assembly,  n_5 = None, n_3 = None, exclude_partial = None):
 
 	if n_5 == n_3:
 		print(' ... ... Extracting {} flanking genes ({} to each side) of {}'.format(n_5+n_3, n_5, target_ncbi_code))
@@ -417,7 +297,7 @@ def get_n_flanking_genes(target_ncbi_code, assembly,  n_5 = n_flanking5, n_3 = n
 		print(' ... ... ... {} was not found in assembly'.format(target_ncbi_code))
 		return 'nan'
 
-def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code, get_pdb = get_pdb):
+def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 
 	print(' ... ... Collecting sequences for flanking proteins')
 
@@ -468,7 +348,7 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 	
 	return out_fasta
 
-def make_blast_database_from_fasta(infasta):
+def make_blast_database_from_fasta(infasta, blast = None):
 
 	print(' ... ... Making BLAST database')
 	blastDB = '{}_blastDB'.format(infasta[:-6])
@@ -484,7 +364,7 @@ def make_blast_database_from_fasta(infasta):
 
 	return blastDB
 
-def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations):
+def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, tmp_folder = None):
 
 	print(' ... ... Running BLAST')
 	blast_outfile = '{}/{}_{}.xml'.format(tmp_folder, seq_fasta.split('/')[-1][:-6], max_evalue)
@@ -501,7 +381,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = n_cpus, 
 
 	return blast_outfile
 
-def extract_distance_matrix_from_blast_output(blast_results, default_base = default_base):
+def extract_distance_matrix_from_blast_output(blast_results, default_base = None):
 
 	print(' ... ... Computing sequences similarity matrix')
 	result_handle = open(blast_results)
@@ -528,21 +408,21 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = defa
 
 	return np.array(distance_matrix), all_queries
 
-def compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label):
+def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None):
 	
 	out_dir = '{}/{}_all_against_all_searches'.format(os.getcwd(), out_label)
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
 	flanking_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label)
-	sequences_database = make_blast_database_from_fasta(flanking_fasta)
-	blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database)
+	sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
+	blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
 
-	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results)
+	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base)
 	
 	return distance_matrix, queries_labels
 
-def get_protein_families_summary(in_syntenies, write_to_file = True, out_label = out_label):
+def get_protein_families_summary(in_syntenies, write_to_file = True, out_label = None):
 
 	families = {}
 
@@ -727,7 +607,7 @@ def parse_uniprot_data(uniprot_data, previous_annotations = ''):
 
 # 5. Routines to find operon types
 
-def compute_operons_distance_matrix(in_syntenies, label = out_label):
+def compute_operons_distance_matrix(in_syntenies, label = None):
 
 	distance_matrix = [[0 for target in in_syntenies] for target in in_syntenies]
 	sorted_ncbi_codes = sorted(list(in_syntenies.keys()))
@@ -777,7 +657,7 @@ def compute_operons_distance_matrix(in_syntenies, label = out_label):
 	
 	return np.array(distance_matrix), sorted_ncbi_codes
 	
-def get_operon_types_summary(in_syntenies, label = out_label, write_to_file = True):
+def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 
 	operon_types = {}
 
@@ -800,7 +680,7 @@ def get_operon_types_summary(in_syntenies, label = out_label, write_to_file = Tr
 						
 	return operon_types
 
-def find_most_populated_operon_types(operon_types_summary, nmax = n_max):
+def find_most_populated_operon_types(operon_types_summary, nmax = None):
 
 	operons_count_matrix = []
 
@@ -829,7 +709,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = n_max):
 
 # 6. Routines to make the genomic_context/operon block figures
 
-def define_family_colors(families, reference_family, mode = 'matplotlib', cmap = 'rainbow', print_summary = print_color_summary):
+def define_family_colors(families, reference_family, mode = 'matplotlib', cmap = 'rainbow', print_summary = False):
 
 	colors = {}
 
@@ -880,7 +760,7 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
    
 	return colors
 
-def draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = out_label):
+def draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = None):
 
 	curr_y_level = len(operons.keys())
 	all_xs = []
@@ -979,7 +859,7 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 	plt.savefig('{}_genomic_context.{}'.format(label, args.out_format), format = args.out_format)
 	plt.close('all')
 
-def draw_genomic_context_legend(families_summary, family_colors, reference_family, label = out_label):
+def draw_genomic_context_legend(families_summary, family_colors, reference_family, label = None):
 
 	curr_y_level = len(family_colors.keys())
 	x_tail = 0
@@ -1092,7 +972,7 @@ def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy'):
 
 # 8. Routines to annotate transmembrane segments and signal peptides
 
-def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = annotation_TM_mode):
+def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	out_file = '{}_{}.out'.format(in_fasta[:-6], annotation_TM_mode)
 
@@ -1239,7 +1119,7 @@ def add_TM_annotations_to_flanking_genes(in_syntenies, protein_annotations):
 
 # 9.1. Routines to draw most conserved features
 
-def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3):
+def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n_flanking3=None):
     
     # will use only the complete genomic contexts and ignore the partial ones    
     operon_matrix = []
@@ -1441,9 +1321,9 @@ def create_most_common_genomic_context_features(most_common_context, families_su
     
     return tooltips, data
 
-def create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family, family_colors):
+def create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family, family_colors, n_flanking5=None, n_flanking3=None):
     
-    most_common_context = find_most_common_genomic_context(operons, all_syntenies)
+    most_common_context = find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
             
     gc_tooltips, gc_data = create_most_common_genomic_context_features(most_common_context, families_summary, reference_family = reference_family, family_colors = family_colors)
         
@@ -1533,7 +1413,7 @@ def get_taxonomy_distance_matrix(taxonomy, operons, input_targets = None, mode =
     
     return taxonomy_distance_matrix, labels 
 
-def get_phylogeny_distance_matrix(in_tree, tree_format = in_tree_format, input_targets = None, print_tree = True):
+def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = None, print_tree = True):
 
 	if starting_directory not in in_tree:
 		in_tree = '{}/{}'.format(starting_directory, in_tree)
@@ -1576,10 +1456,10 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = in_tree_format, input_t
 
 	return distance_matrix, labels
 
-def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy', tree = None):
+def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy', tree = None, tree_format = None):
     
     if tree != None:
-    	distance_matrix, labels = get_phylogeny_distance_matrix(tree, input_targets = input_targets)
+    	distance_matrix, labels = get_phylogeny_distance_matrix(tree, input_targets = input_targets, tree_format = tree_format)
     else:
     	distance_matrix, labels = get_taxonomy_distance_matrix(taxonomy, operons, input_targets = input_targets, mode = mode)
     
@@ -1643,9 +1523,9 @@ def create_dendogram_features(dendogram, leaf_labels, taxonomy):
     
     return tooltips, data
 
-def make_dendogram_figure(taxonomy, operons, input_targets = None, tree = None, mode = 'taxonomy', show_leafs = True, height_factor = 20):
+def make_dendogram_figure(taxonomy, operons, input_targets = None, tree = None, mode = 'taxonomy', show_leafs = True, height_factor = 20, tree_format = None):
 
-    dendogram, leaf_labels = compute_dendogram(taxonomy, operons, input_targets = input_targets, mode = mode, tree = tree)
+    dendogram, leaf_labels = compute_dendogram(taxonomy, operons, input_targets = input_targets, mode = mode, tree = tree, tree_format = tree_format)
     den_tooltips, den_data = create_dendogram_features(dendogram, leaf_labels, taxonomy)
 
     y_range = [0, max(den_data['y'])+min(den_data['y'])+(den_data['y'][1]-den_data['y'][0])]
@@ -2314,7 +2194,7 @@ def get_ncbicodes_order_in_clans(clans_file):
                
    return ncbids_ordered
 
-def get_clusters_from_clans(clans_file, cluster_codes = clans_patterns):
+def get_clusters_from_clans(clans_file, cluster_codes = None):
 
     ncbis_ordered = get_ncbicodes_order_in_clans(clans_file)
 
@@ -2360,7 +2240,7 @@ def write_arguments_file(args, out_label):
 			f.write('{}:\t{}\n'.format(key, args.__dict__[key]))
 
 
-def parse_targets(targets, label = out_label, clans_patterns = clans_patterns):
+def parse_targets(targets, label = None, clans_patterns = None):
 
 	targets_list = {}
 
@@ -2428,7 +2308,7 @@ def download_and_parse_refseq_and_gb_databases(databases = ['genbank', 'refseq']
 		
 	return database_assembly_mapping
 
-def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes):
+def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_assembly_map = None, n_flanking5 = None, n_flanking3 = None, exclude_partial = None, tmp_folder = None):
 
 	out_json = 'genomic_context_information.json'
 	if os.path.isfile(out_json):
@@ -2448,10 +2328,10 @@ def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes):
 
 		if assembly_id != 'nan':
 			print(" ... {} belongs to assembly {} ({}/{})".format(curr_target_code, assembly_id, curr_target_count, len(target_ncbi_codes)))
-			assembly = download_and_extract_assembly(assembly_id, assembly_link, label = curr_target_code)
+			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code)
 
 			if assembly != 'nan':
-				flanking_genes = get_n_flanking_genes(ncbi_code, assembly, n_5 = n_flanking5, n_3 = n_flanking3)
+				flanking_genes = get_n_flanking_genes(ncbi_code, assembly, n_5 = n_flanking5, n_3 = n_flanking3, exclude_partial = exclude_partial)
 				if flanking_genes != 'nan':
 					flanking_genes = add_sequences_to_flanking_genes(flanking_genes, ncbi_code)	
 
@@ -2472,7 +2352,7 @@ def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes):
 
 	return all_syntenies  
 
-def find_and_add_protein_families(in_syntenies, out_label = out_label):
+def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None):
 
 	if os.path.isfile('all_syntenies.json') and os.path.isfile('protein_families_summary.json'):
 
@@ -2485,7 +2365,7 @@ def find_and_add_protein_families(in_syntenies, out_label = out_label):
 	else:
 		print(' ... Doing all against all searches with BLAST')
 
-		distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label)	
+		distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)	
 		protein_clusters = find_clusters_in_distance_matrix(distance_matrix)
 		protein_clusters = mask_singleton_clusters(protein_clusters)
 
@@ -2523,13 +2403,13 @@ def find_and_add_protein_families(in_syntenies, out_label = out_label):
 						protein_family = range(min(protein_clusters), max(protein_clusters)+1)[curr_numbers.index(protein_family)]
 						in_syntenies[target]['flanking_genes']['families'][i] = protein_family
 
-			all_syntenies[target]['target_family'] = in_syntenies[target]['flanking_genes']['families'][in_syntenies[target]['flanking_genes']['ncbi_codes'].index(in_syntenies[target]['assembly_id'][0])]
+			in_syntenies[target]['target_family'] = in_syntenies[target]['flanking_genes']['families'][in_syntenies[target]['flanking_genes']['ncbi_codes'].index(in_syntenies[target]['assembly_id'][0])]
 
 		protein_families = get_protein_families_summary(in_syntenies, write_to_file = True, out_label = out_label)
 	
 	return in_syntenies, protein_families
 
-def update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations):
+def update_families_with_functions_and_structures(protein_families_summary, get_pdb = None, get_functional_annotations = None):
 
 	for family in sorted(list(protein_families_summary.keys())):
 
@@ -2585,7 +2465,7 @@ def update_families_with_functions_and_structures(protein_families_summary, get_
 
 	return protein_families_summary
 
-def find_and_add_operon_types(in_syntenies, label = out_label):
+def find_and_add_operon_types(in_syntenies, label = None):
 
 	if len(in_syntenies) > 1:
 		distance_matrix, ordered_ncbi_codes = compute_operons_distance_matrix(in_syntenies, label = label)
@@ -2601,7 +2481,7 @@ def find_and_add_operon_types(in_syntenies, label = out_label):
 	
 	return in_syntenies, operon_types
 
-def annotate_TMs_in_all(in_syntenies, annotation_TM_mode = annotation_TM_mode, annotation_TM_file = annotation_TM_file, label = out_label):
+def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, label = None):
 
 	out_dir = '{}/{}_TM_annotations'.format(os.getcwd(), label)
 	if not os.path.isdir(out_dir):
@@ -2637,7 +2517,7 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode = annotation_TM_mode, a
 			print('.		 Save in folder: {}'.format(out_dir))
 	return in_syntenies
 
-def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = genomic_context_cmap, label = out_label):
+def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = None, label = None):
 
 	# define the reference family as the one of the target in the most populated operon type
 	reference_family = all_syntenies[operons[most_populated_operon]['target_members'][0]]['target_family']
@@ -2646,7 +2526,7 @@ def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, f
 	draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = label)
 	draw_genomic_context_legend(families_summary, family_colors, reference_family, label = label)
 
-def make_interactive_genomic_context_figure(operons, all_syntenies, families_summary, taxonomy, tree = in_tree, sort_mode = sort_mode, input_targets = None, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, min_coocc = min_coocc):
+def make_interactive_genomic_context_figure(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None):
 
 	# define the reference family as the one of the target in the most populated operon type
 	reference_family = all_syntenies[operons[most_populated_operon]['target_members'][0]]['target_family']
@@ -2656,7 +2536,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 	output_file("{}/{}_interactive_output.html".format(os.getcwd(), label))
 
 	# Work on most conserved genomic context figure
-	most_common_gc_figure = create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family = reference_family, family_colors = family_colors)
+	most_common_gc_figure = create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family = reference_family, family_colors = family_colors, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
 
 	# Work on gene co-occurence figure
 	coocurrence_figure, graph_coord = create_graph_figure(operons, reference_family, families_summary, family_colors, most_common_gc_figure, min_coocc = min_coocc, mode = 'coocurrence')
@@ -2665,7 +2545,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 	# Work on dendogram for the genomic context block
 	if tree != None:
 		input_targets = [target for operon in operons for target in operons[operon]['target_members']]
-	syn_dendogram, syn_den_data = make_dendogram_figure(taxonomy, operons, tree = tree, mode = sort_mode, input_targets = input_targets, show_leafs = False, height_factor = 25*1.2)
+	syn_dendogram, syn_den_data = make_dendogram_figure(taxonomy, operons, tree = tree, mode = sort_mode, input_targets = input_targets, show_leafs = False, height_factor = 25*1.2, tree_format = tree_format)
 
 	# Work on the genomic context block
 	genomic_context_figure = create_genomic_context_figure(operons, all_syntenies, family_colors, syn_den_data, syn_dendogram, most_common_gc_figure, reference_family, legend_mode = gc_legend_mode, height_factor = 25*1.2)
@@ -2685,7 +2565,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 
 	save(grid)
 
-def write_summary_table(operons, all_syntenies, taxonomy, label = out_label):
+def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 
 	out_file = '{}_summary_table.tab'.format(label)
 	
@@ -2717,11 +2597,140 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = out_label):
 					
 # MAIN CODE
 
-if __name__ == '__main__':
+def main():
+
+	# GET INPUTS
+	parser = argparse.ArgumentParser('GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts')
+	requiredNamed = parser.add_argument_group('required arguments')
+	optionalNamed = parser.add_argument_group('optional arguments with defaults')
+
+	# required inputs
+	requiredNamed.add_argument('-targets', dest='targets', nargs='+', required=True, help='List of input targets. Can be a list of fasta files, a list of text files encompassing a list of protein sequence identifiers, a list of protein sequence identifiers, or a mix of them')
+	# optional inputs
+	optionalNamed.add_argument('-user_email', dest='user_email', type=str, default = None, help='Email address of the user. May be required to access NCBI databases and isn not used for anything else (default: None')
+	optionalNamed.add_argument('-ncbi_api_key', dest='ncbi_api_key', default = None,type=str, help='The key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Shall be obtained after obtaining an NCBI account (default: None)')
+	optionalNamed.add_argument('-get_taxonomy', dest='get_taxonomy', default = 'True',type=str, help='Boolean statement to get and map taxonomy information (default: True)')
+	optionalNamed.add_argument('-cpu', dest='n_cpu', default = 1,type=int, help='Number of cpus to use (default: 1)')
+	optionalNamed.add_argument('-n_flanking', dest='n_flanking', default = 4,type=int, help='Number of flanking sequences (to each side) to take (default: 4)')
+	optionalNamed.add_argument('-n_flanking5', dest='n_flanking5', default = 4,type=int, help="Number of flanking sequences to take on the 5' (default: 4)")
+	optionalNamed.add_argument('-n_flanking3', dest='n_flanking3', default = 4,type=int, help="Number of flanking sequences to take on the 3' (default: 4)")
+	optionalNamed.add_argument('-exclude_partial', dest='exclude_partial', default = False,type=bool, help='Boolean statement to exclude partial operon/genomic_context blocks (default: False)\nIf turned off, partial cases will still be ignored to get the most common genomic features')
+	optionalNamed.add_argument('-n_max_operons', dest='n_max', default = 30,type=int, help='Maximum number of top most populated operon/genomic_context block types (default: 30)')
+	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='psiBLAST number of iterations (default: 1). Required to define protein families.')
+	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='psiBLAST e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
+	optionalNamed.add_argument('-base', dest='default_base', default = 10,type=int, help='Artificial distance value for two sequences that do not match with an E-value better than -evalue (default: 10).')
+	optionalNamed.add_argument('-psiblast_location', dest='blast', default = 'psiblast',type=str, help='Location of psiBLAST (if not in path) (default: psiblast)')
+	optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
+	optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
+	optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
+	# figure making optional inputs
+	optionalNamed.add_argument('-genomic_context_cmap', dest='genomic_context_cmap', default = 'Spectral',type=str, help='Color map (as of matplotlib) to assign colors to and plot the syntenic blocks (default: Spectral)')
+	optionalNamed.add_argument('-out_format', dest='out_format', default = 'png',type=str, help='Output format of the core figures (default: png)')
+	optionalNamed.add_argument('-print_color_summary', dest='print_color_summary', default = False, type=bool, help='Boolean statement to print the RGBA codes of the colors defined (default: False)')
+	# annotation optional inputs
+	optionalNamed.add_argument('-get_pdb', dest='get_pdbs', default = 'True', type=str, help='Boolean statement to get PDB information for representatives of the families found (default: True)\nTurn off to make it faster.')
+	optionalNamed.add_argument('-get_functional_annotations', dest='get_functional_annotations', default = 'True' ,type=str, help='Boolean statement to find functional annotations for representatives of the families found (default: True)\nTurn off to make it faster.')
+	optionalNamed.add_argument('-annotate_TM', dest='annotate_TM', default = False, type=bool, help='Boolean statement to find sequence features in the flanking genes (default: False)')
+	optionalNamed.add_argument('-annotation_TM_mode', dest='annotation_TM_mode', default = 'uniprot', type=str, choices=['phobius', 'tmhmm', 'uniprot'], help='Method to use to find transmembrane segments (default: uniprot)')
+	optionalNamed.add_argument('-annotation_TM_file', dest='annotation_TM_file', default = None, type=str, help='File with pre-computed transmembrane features. Only use when the targets correspond to a single project (no multiple fasta or text files) (default: None)')
+	# interactive optional inputs
+	optionalNamed.add_argument('-interactive', dest='interactive', default = 'True',type=str, help='Boolean statement to make the interactive html output (default: True). WARNING: It requires the Bokeh python package. It will check if it is installed')
+	optionalNamed.add_argument('-gc_legend_mode', dest='gc_legend_mode', default = 'species',type=str, choices=['species', 'ncbi_code'], help='Mode of the genomic context legend (default: species)')
+	optionalNamed.add_argument('-min_coocc', dest='min_coocc', default = 0.30,type=float,  help='Minimum maximum co-occurrence of two genes to be connected in the graphs (default: 0.30)')
+	optionalNamed.add_argument('-sort_mode', dest='sort_mode', default = 'taxonomy',type=str, choices=['taxonomy', 'as_input', 'tree'], help='Mode to sort the genomic contexts (default: taxonomy)')
+	optionalNamed.add_argument('-in_tree', dest='in_tree', default = None, type=str, help='Input phylogenetic tree. Only use when the targets correspond to a single project (no multiple fasta or text files) (default: None)')
+	optionalNamed.add_argument('-in_tree_format', dest='in_tree_format', default = "newick", type=str, help='Format of the input phylogenetic tree (default: newick)')
+	# clans map optional inputs
+	optionalNamed.add_argument('-clans_patterns', dest='clans_patterns', default = None,type=str, nargs='+', help='Patterns to identify the clusters to analyse. They will be used to select the individual clusters in the clans map to analyse (default: None).')
+
+	# Define inputs
+	args = parser.parse_args()
+
+	targets = args.targets
+	Entrez.email = args.user_email
+
+	n_flanking = args.n_flanking
+	n_flanking5 = args.n_flanking5
+	n_flanking3 = args.n_flanking3
+
+	if n_flanking3 == n_flanking5 and n_flanking != n_flanking3:
+		if n_flanking != 4:
+			n_flanking3 = n_flanking
+			n_flanking5 = n_flanking
+
+	exclude_partial = args.exclude_partial
+	n_cpus = args.n_cpu
+	n_max = args.n_max
+	num_alignments = 50000
+	max_evalue = args.max_evalue
+	num_iterations = args.num_iterations
+	default_base = args.default_base
+	out_label = args.out_label
+	out_label_suffix = args.out_label_suffix
+	genomic_context_cmap = args.genomic_context_cmap
+	min_coocc = args.min_coocc
+	print_color_summary = args.print_color_summary
+	tmp_folder = args.tmp_folder
+
+	gc_legend_mode = args.gc_legend_mode
+
+	annotate_TM = args.annotate_TM
+	annotation_TM_mode = args.annotation_TM_mode
+	annotation_TM_file = args.annotation_TM_file
+
+	ncbi_api_key = args.ncbi_api_key
+	if ncbi_api_key is not None:
+		Entrez.api_key = ncbi_api_key
+
+	if annotation_TM_file is not None:
+		annotate_TM = True
+
+	get_pdb = args.get_pdbs
+	if get_pdb == 'True':
+		get_pdb = True
+	else:
+		get_pdb = False
+
+	get_functional_annotations = args.get_functional_annotations
+	if get_functional_annotations == 'True':
+		get_functional_annotations = True
+	else:
+		get_functional_annotations = False
+
+	get_taxonomy = args.get_taxonomy
+	if get_taxonomy == 'True':
+		get_taxonomy = True
+	else:
+		get_taxonomy = False
+
+	interactive_output = args.interactive
+	if interactive_output == 'True':
+		interactive_output = True
+	else:
+		interactive_output = False
+
+	in_tree = args.in_tree
+	in_tree_format = args.in_tree_format
+	sort_mode = args.sort_mode
+	if in_tree is not None:
+		sort_mode = 'tree'
+
+	clans_patterns = args.clans_patterns
+
+	# define programs location
+	blast = args.blast
+
+	# install cache to make it faster
+	requests_cache.install_cache()
+
+	# set starting directory
+	starting_directory = os.getcwd()
+
+	## START PIPELINE HERE
 
 	# Get the list of target codes
 	print('\nParsing targets\n')
-	targets = parse_targets(targets)
+	targets = parse_targets(targets, label = out_label, clans_patterns = clans_patterns)
 
 	# Download and parse RefSeq and Genbank databases
 	print('\nDownloading and parsing RefSeq and Genbank summary tables\n')
@@ -2747,17 +2756,17 @@ if __name__ == '__main__':
 		# Collect the genomic_context of all target ncbi codes 
 		curr_targets = targets[out_label]
 		print("\n 1. Collecting the genomic contexts of {} unique input entrezIDs (may take some time)\n".format(len(curr_targets)))
-		all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets)
+		all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder)
 
 		# Find shared protein families by running all-against-all blast searches for all proteins collected
 		print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
-		all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label)
+		all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
 
 		# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
 		if get_pdb or get_functional_annotations:
 
 			print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
-			protein_families_summary = update_families_with_functions_and_structures(protein_families_summary)
+			protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations)
 
 		else:
 			print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
@@ -2765,7 +2774,7 @@ if __name__ == '__main__':
 
 		# Find operon/genomic_context types by clustering them by similarity
 		print("\n 4. Finding operon/genomic_context types\n")
-		all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies)
+		all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
 
 		# Select top N most populated operon/genomic_context types
 		print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
@@ -2803,14 +2812,7 @@ if __name__ == '__main__':
 			print("\n 9. Making interactive html output file\n")
 			#check if Bokeh is available
 			try:
-				from bokeh.plotting import figure, output_file, gridplot, save
-				from bokeh.colors import RGB
-				from bokeh.models import HoverTool, TapTool, Range1d, LinearAxis, WheelZoomTool, Circle, MultiLine, Panel, Tabs
-				from bokeh.models.callbacks import OpenURL
-				from bokeh.models.graphs import from_networkx, NodesAndLinkedEdges
-				import bokeh.layouts 
-
-				make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label)
+				make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
 
 			except:
 				print(sys.exc_info())
@@ -2830,3 +2832,9 @@ if __name__ == '__main__':
 		end = time.time()
 		numb_seconds = end - start
 		print("\n#### Finished {} after: {} \n".format(out_label, time.strftime('%H hours %M min %S sec', time.gmtime(numb_seconds))))
+
+
+if __name__ == '__main__':
+	main()
+
+	
