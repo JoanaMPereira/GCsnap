@@ -6,7 +6,7 @@ setup(name='gcsnap',
       long_description='GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts.',
       classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'License :: OSI Approved :: GNU General Public License v3.0',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python :: 3',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
       ],
