@@ -25,4 +25,8 @@ setup(name='gcsnap',
           'scipy'
       ],
       include_package_data=True,
-      zip_safe=False)
+      zip_safe=False,
+
+      entry_points={  # Optional
+        'console_scripts': 'gcsnap=gcsnap.gcsnap:main',}
+)
