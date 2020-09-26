@@ -29,5 +29,5 @@ setup(name='gcsnap',
       zip_safe=False,
 
       entry_points={  # Optional
-        'console_scripts': 'gcsnap=gcsnap.gcsnap:main',}
+        'console_scripts': 'GCsnap=gcsnap.GCsnap:main',}
 )
