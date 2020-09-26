@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='gcsnap',
-      version='1.0.2',
+      version='1.0.3',
       description='Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description='GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts.',
       classifiers=[
@@ -17,7 +17,7 @@ setup(name='gcsnap',
       packages=['gcsnap'],
       install_requires=[
           'biopython', 
-          'bokeh >= 1.3.4, <= 2.1.1',
+          'bokeh <= 2.1.1',
           'networkx',
           'numpy',
           'pandas',
