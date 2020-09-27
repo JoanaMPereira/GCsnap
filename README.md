@@ -29,6 +29,7 @@ GCsnap is available on PyPi and can be installed through ```pip```. Just downloa
   pip install -r requirements.txt
   pip install -i https://test.pypi.org/simple/ gcsnap
 ```
+If it does not work due to building issues, you can always install from source following the instructions below.
 
 ### Installing from Source
 
