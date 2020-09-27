@@ -1,9 +1,16 @@
 from setuptools import setup
+from os import path
+
+here = path.abspath(path.dirname(__file__))
+
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(name='gcsnap',
-      version='1.0.5',
-      description='Interactive snapshots for the comparison of protein-coding genomic contexts',
-      long_description='GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts.',
+      version='1.0.6',
+      description='GCsnap: Interactive snapshots for the comparison of protein-coding genomic contexts',
+      long_description=long_description,  # Optional
+      long_description_content_type='text/markdown',  # Optional (see note above)
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
