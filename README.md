@@ -12,12 +12,39 @@ All information is stored in detailed, human and machine-readable files, and cus
 
 ## Dependencies
 
-GCsnap is written in Python 3.7.4 and requires mostly core Python modules. Only three external packages are required: 
+GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on Python 3.7 and 3.8. It requires mostly core Python modules and only three external packages are required: 
   - Biopython
   - Bokeh
   - Networkx 
 
+For detailed requirements, check ```requirements.txt```.
+
 Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
+
+## Installation
+
+GCsnap is available on PyPi and can be installed through ```pip```. Just download the ```requirements.txt``` files and run:
+
+```
+  pip install -r requirements.txt
+  pip install -i https://test.pypi.org/simple/ gcsnap
+```
+
+### Installing from Source
+
+Download the zip archive or clone the repository with git:
+
+```
+# To download
+git clone https://github.com/JoanaMPereira/GCsnap
+cd GCsnap
+
+# To update
+git pull origin master
+
+# To install
+python setup.py install
+```
 
 ## Allowed inputs
 
@@ -51,14 +78,14 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
 
 Using the example in folder `example/ybez_KHI`, the input file `targets_ybez_selected.txt` contains a list of protein sequence identifiers in UniprotKB format. Running:
 ```
-python3 GCsnap.py -targets targets_ybez_selected.txt
+GCsnap -targets targets_ybez_selected.txt
 ```
 will generate the output folder `targets_ybez_selected`, where all output files and figures are stored.
 This will NOT annotate transmembrane segments and signal peptides.
 
 In order to do so, one shall run:
 ```
-python3 GCsnap.py -targets targets_ybez_selected.txt -annotate_TM True
+GCsnap -targets targets_ybez_selected.txt -annotate_TM True
 ```
 which will by default collect that information from Uniprot.
 
@@ -67,11 +94,11 @@ which will by default collect that information from Uniprot.
 Using the example in folder `examples/yqlc_KHII/`, the input file `yqlc_nostoc_blast_nrbac70.clans` is a classification file encompassing two clusters of sequences, which are named `cluster1_cyanobacteria` and `cluster2_allothers`. 
 Running:
 ```
-python3 GCsnap.py -targets yqlc_nostoc_blast_nrbac70.clans 
+GCsnap -targets yqlc_nostoc_blast_nrbac70.clans 
 ```
 will make GCsnap consider all identifiers as a single job, while running:
 ```
-python3 GCsnap.py -targets yqlc_nostoc_blast_nrbac70.clans -clans_pattern cluster
+GCsnap -targets yqlc_nostoc_blast_nrbac70.clans -clans_pattern cluster
 ```
 will make GCsnap identify all clusters in the CLANS file that have 'cluster' in their name, which will be considered as two independent jobs, generating the two folders `cluster1_cyanobacteria` and `cluster2_allothers`.
 
