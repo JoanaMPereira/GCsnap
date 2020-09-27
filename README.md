@@ -23,7 +23,7 @@ Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (vers
 
 ## Installation
 
-A preliminary package for GCsnap is available on PyPi and can be installed through ```pip```. Just download the ```requirements.txt``` files and run:
+A preliminary package for GCsnap is available on PyPi and can be installed through ```pip```. Just download the ```requirements.txt``` file and run:
 
 ```
   pip install -r requirements.txt
