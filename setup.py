@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='gcsnap',
-      version='1.0.4',
+      version='1.0.5',
       description='Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description='GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts.',
       classifiers=[
