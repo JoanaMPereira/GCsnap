@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='gcsnap',
-      version='1.0.6',
+      version='1.0.7',
       description='GCsnap: Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description=long_description,  # Optional
       long_description_content_type='text/markdown',  # Optional (see note above)
@@ -24,7 +24,7 @@ setup(name='gcsnap',
       packages=['gcsnap'],
       install_requires=[
           'biopython', 
-          'bokeh <= 2.1.1',
+          'bokeh == 1.3.4',
           'networkx',
           'numpy',
           'pandas',
