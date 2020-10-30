@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 25.09.2020
+## Last changed: 30.10.2020
 
 import subprocess as sp
 import multiprocessing as mp
@@ -2487,7 +2487,7 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, la
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
-	in_fasta = write_flanking_sequences_to_fasta(all_syntenies, out_dir, label, exclude_pseudogenes = True)
+	in_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, label, exclude_pseudogenes = True)
 
 	if annotation_TM_file == None:
 		annotation_TM_file = run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = annotation_TM_mode)
