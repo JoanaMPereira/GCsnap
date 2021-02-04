@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 30.10.2020
+## Last changed: 04.01.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -28,6 +28,7 @@ from scipy.cluster import hierarchy
 from scipy.spatial import distance
 from scipy import stats
 from collections import Counter
+from multiprocessing.pool import ThreadPool
 
 from bokeh.plotting import figure, output_file, gridplot, save
 from bokeh.colors import RGB
@@ -41,7 +42,10 @@ import bokeh.layouts
 # 0. General routines
 
 def chunk_list(l, n):
+
+
 	chunks = np.array_split(np.array(l), n)
+
 	chunks = [list(chunk) for chunk in chunks]
 	return chunks
 
@@ -72,6 +76,10 @@ def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL'):
 
 	if 'UniRef' in uniprot_code:
 		uniprot_label = uniprot_code.split('_')[-1]
+	elif uniprot_code.startswith('ENSG'): # if it is an ensemble gene ID
+		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'ENSEMBL_ID')[uniprot_code]
+	elif uniprot_code.isnumeric():		# it is a gene id
+		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'P_ENTREZGENEID')[uniprot_code]
 	else:
 		uniprot_label = uniprot_code
 
@@ -153,9 +161,9 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 	return ncbi_code, assembly_id, assembly_link
 
-def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None, label = ''):
+def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None, label = '', get_chunk = False, chunk_size = 0, target = None):
 
-	print(' ... ... Downloading and extracting assembly {}'.format(assembly_id))
+	print(' ... ... Downloading and extracting assembly {} annotated gff file'.format(assembly_id))
 
 	assembly_label = assembly_link.split('/')[-1]
 	
@@ -176,8 +184,12 @@ def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None,
 
 		if os.path.isfile(out_assembly_file):
 
-			assembly = parse_assembly(out_assembly_file)
-			print(' ... ... ... Finished parsing assembly {} and found {} CDS entries'.format(assembly_id, len(assembly['ncbi_codes'])))
+			assembly = parse_assembly(out_assembly_file, get_chunk = get_chunk, chunk_size = chunk_size, target = target)
+
+			if not get_chunk:
+				print(' ... ... ... Finished parsing assembly {} and found {} CDS entries'.format(assembly_id, len(assembly['ncbi_codes'])))
+			else:
+				print(' ... ... ... Finished parsing assembly {} and collected {} CDS entries around the target'.format(assembly_id, len(assembly['ncbi_codes'])))
 			return assembly
 
 		else:
@@ -187,10 +199,12 @@ def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None,
 		print(' ... ... ... It was not possible to save assembly {}'.format(assembly_id))
 		return 'nan'
 
-def parse_assembly(assembly_file):
+def parse_assembly(assembly_file, get_chunk = False, chunk_size = 0, target = None):
 
 	assembly = {'ncbi_codes': [], 'starts': [], 'ends': [], 'directions': [], 'names': [], 'scaffolds': []}
 	curr_scaffold = 0
+	found_chunk = False
+	chunk_timer = 0
 	
 	with open(assembly_file, 'r') as in_assembly:
 		for line in in_assembly:
@@ -231,9 +245,24 @@ def parse_assembly(assembly_file):
 						assembly['starts'].append(start)
 						assembly['ends'].append(end)
 						assembly['directions'].append(line_data[6])
+
+					if get_chunk:
+						if ncbi_code == target:
+							chunk_timer = 1
+						elif chunk_timer > 0:
+							chunk_timer += 1
+
+						if chunk_timer == round(chunk_size/2):
+							break
 					
 			elif line.startswith('##sequence-region'):
 				curr_scaffold += 1
+
+	if get_chunk:
+		chunked_assembly = {}
+		for key in assembly:
+			chunked_assembly[key] = assembly[key][-chunk_size:]
+		assembly = chunked_assembly
 
 	return assembly				
 				
@@ -895,14 +924,34 @@ def draw_genomic_context_legend(families_summary, family_colors, reference_famil
 
 # 7. Routines to make taxonomy distribution figures
 
-def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy'):
+def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 
-	if os.path.isfile('taxonomy.json') and mode == 'taxonomy':
-		taxonomy = json.load(open('taxonomy.json', 'r'))
+	# Prepare all parallel jobs
+	separated_jobs = chunk_list(list(in_syntenies.keys()), threads)
+
+	list_arguments = [i for i in zip(separated_jobs, [in_syntenies for job in separated_jobs], [mode for job in separated_jobs], range(threads))]
+
+	pool = ThreadPool(threads)
+	results = pool.imap_unordered(map_taxonomy, list_arguments)
+
+	taxonomy = {key: dic[key] for dic in results for key in dic.keys()}
+
+	return taxonomy
+
+def map_taxonomy(arguments):
+
+	targets = arguments[0]
+	in_syntenies = arguments[1]
+	mode = arguments[2]
+	thread_id = arguments[3]
+
+	out_json = '{}_taxonomy.json'.format(thread_id)
+	if os.path.isfile(out_json) and mode == 'taxonomy':
+		taxonomy = json.load(open(out_json, 'r'))
 	else:
 		taxonomy = {}
 
-		for curr_target in in_syntenies:
+		for curr_target in targets:
 			ncbi_code = in_syntenies[curr_target]['assembly_id'][0]
 			taxID = in_syntenies[curr_target]['flanking_genes']['taxID']
 			species = in_syntenies[curr_target]['flanking_genes']['species']
@@ -964,11 +1013,13 @@ def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy'):
 				taxonomy[superkingdom][phylum][taxclass][order][genus][species]['target_members'].append(curr_target)
 				taxonomy[superkingdom][phylum][taxclass][order][genus][species]['ncbi_codes'].append(ncbi_code)
 
+				if mode == 'taxonomy':
+					json.dump(taxonomy, open(out_json, 'w'), indent=4)
+
 			except:
-				print(' ... Not possible to find taxonomy for {} ({})'.format(curr_target, ncbi_code))
+				print(' ... ... Not possible to find taxonomy for {} ({})'.format(curr_target, ncbi_code))
 
 	return taxonomy
-
 
 # 8. Routines to annotate transmembrane segments and signal peptides
 
@@ -978,15 +1029,13 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	if not os.path.isfile(out_file):
 		if annotation_TM_mode == 'phobius':
-			print(' ERROR: NOT IMPLEMENTED YET')
-			print('        Run phobius online and come back with the input file')
+			print('		Run phobius online and come back with the input file')
 
 			pass
 			 ##### write code
 
 		elif annotation_TM_mode == 'tmhmm':
-			print(' ERROR: NOT IMPLEMENTED YET')
-			print('        Run tmhmm online and come back with the input file')
+			print('		Run tmhmm online and come back with the input file')
 
 			pass
 			##### write code
@@ -1120,298 +1169,298 @@ def add_TM_annotations_to_flanking_genes(in_syntenies, protein_annotations):
 # 9.1. Routines to draw most conserved features
 
 def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n_flanking3=None):
-    
-    # will use only the complete genomic contexts and ignore the partial ones    
-    operon_matrix = []
-    for operon in operons:
-        curr_context = operons[operon]['operon_protein_families_structure'][0]
-        if len(curr_context) == n_flanking5+n_flanking3+1:
-            operon_matrix.append(curr_context)
-    
-    operon_matrix = np.array(operon_matrix).T
-    
-    most_common_context = {'selected_context': [],
-                           'families_frequency': [],
-                           'average_starts': [],
-                           'average_ends': [],
-                           'average_size': [],
-                           'stdev_size': [],
-                           'directions': [],
-                           'tm_annotations': []}
+	
+	# will use only the complete genomic contexts and ignore the partial ones	
+	operon_matrix = []
+	for operon in operons:
+		curr_context = operons[operon]['operon_protein_families_structure'][0]
+		if len(curr_context) == n_flanking5+n_flanking3+1:
+			operon_matrix.append(curr_context)
+	
+	operon_matrix = np.array(operon_matrix).T
+	
+	most_common_context = {'selected_context': [],
+						   'families_frequency': [],
+						   'average_starts': [],
+						   'average_ends': [],
+						   'average_size': [],
+						   'stdev_size': [],
+						   'directions': [],
+						   'tm_annotations': []}
 
-    for i, column in enumerate(operon_matrix):
-        occurence_count = Counter(column) 
-        most_common_family = occurence_count.most_common(1)[0][0]
+	for i, column in enumerate(operon_matrix):
+		occurence_count = Counter(column) 
+		most_common_family = occurence_count.most_common(1)[0][0]
 
-        most_common_context['selected_context'].append(most_common_family)
-        most_common_context['families_frequency'].append(round(occurence_count.most_common(1)[0][1]*100/len(column), 1))
+		most_common_context['selected_context'].append(most_common_family)
+		most_common_context['families_frequency'].append(round(occurence_count.most_common(1)[0][1]*100/len(column), 1))
 
-        all_starts_of_most_common = []
-        all_ends_of_most_common = []
-        all_orientations = []
-        all_sizes = []
-        all_tm_annotations = []
+		all_starts_of_most_common = []
+		all_ends_of_most_common = []
+		all_orientations = []
+		all_sizes = []
+		all_tm_annotations = []
 
-        for operon in operons:
-            curr_target = operons[operon]['target_members'][0]
-            curr_context = operons[operon]['operon_protein_families_structure'][0]
-            
-            if len(curr_context) == n_flanking5+n_flanking3+1:            
-                if operons[operon]['operon_protein_families_structure'][0][i] == most_common_family:
-                    all_starts_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])
-                    all_ends_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_ends'][i])
-                    all_sizes.append((all_syntenies[curr_target]['flanking_genes']['relative_ends'][i] - all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])/3)
-                    all_orientations.append(all_syntenies[curr_target]['flanking_genes']['directions'][i])
-                    
-                    if 'TM_annotations' in all_syntenies[curr_target]['flanking_genes']:
-                        all_tm_annotations.append(all_syntenies[curr_target]['flanking_genes']['TM_annotations'][i])
-        
-        most_common_context['average_starts'].append(int(statistics.median(all_starts_of_most_common)))
-        most_common_context['average_ends'].append(int(statistics.median(all_ends_of_most_common)))
-        most_common_context['average_size'].append(int(statistics.median(all_sizes)))
-        most_common_context['stdev_size'].append(int(stats.median_absolute_deviation(all_sizes)))
-        
-        try:
-            most_common_context['directions'].append(statistics.mode(all_orientations))
-        except:
-            most_common_context['directions'].append('+')
-        
-        try:
-            most_common_context['tm_annotations'].append(statistics.mode(all_tm_annotations))
-        except:
-            most_common_context['tm_annotations'].append('')
-        
-    return most_common_context
+		for operon in operons:
+			curr_target = operons[operon]['target_members'][0]
+			curr_context = operons[operon]['operon_protein_families_structure'][0]
+			
+			if len(curr_context) == n_flanking5+n_flanking3+1:			
+				if operons[operon]['operon_protein_families_structure'][0][i] == most_common_family:
+					all_starts_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])
+					all_ends_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_ends'][i])
+					all_sizes.append((all_syntenies[curr_target]['flanking_genes']['relative_ends'][i] - all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])/3)
+					all_orientations.append(all_syntenies[curr_target]['flanking_genes']['directions'][i])
+					
+					if 'TM_annotations' in all_syntenies[curr_target]['flanking_genes']:
+						all_tm_annotations.append(all_syntenies[curr_target]['flanking_genes']['TM_annotations'][i])
+		
+		most_common_context['average_starts'].append(int(statistics.median(all_starts_of_most_common)))
+		most_common_context['average_ends'].append(int(statistics.median(all_ends_of_most_common)))
+		most_common_context['average_size'].append(int(statistics.median(all_sizes)))
+		most_common_context['stdev_size'].append(int(stats.median_absolute_deviation(all_sizes)))
+		
+		try:
+			most_common_context['directions'].append(statistics.mode(all_orientations))
+		except:
+			most_common_context['directions'].append('+')
+		
+		try:
+			most_common_context['tm_annotations'].append(statistics.mode(all_tm_annotations))
+		except:
+			most_common_context['tm_annotations'].append('')
+		
+	return most_common_context
 
 def create_most_common_genomic_context_features(most_common_context, families_summary, reference_family, family_colors):
 
-    data = {'xs': [],
-            'ys': [],
-            'edgecolor': [],
-            'facecolor': [],
-            'text_x': [],
-            'text_y': [],
-            'family': [],
-            'tm_text_x': [],
-            'tm_text_y': [],
-            'tm_text': [],
-            'tm_pred_text': [],
-            'protein_name': [],
-            'protein_size': [],
-            'family_frequency': [],
-            'transparency': [],
-            'relative_start': [],
-            'relative_end': [],
-            'found_models': [],
-            'model_links': []}
-    
-    for i, family in enumerate(most_common_context['selected_context']):
-        gene_dx = most_common_context['average_ends'][i] - most_common_context['average_starts'][i]+1
-        gene_direction = most_common_context['directions'][i]
+	data = {'xs': [],
+			'ys': [],
+			'edgecolor': [],
+			'facecolor': [],
+			'text_x': [],
+			'text_y': [],
+			'family': [],
+			'tm_text_x': [],
+			'tm_text_y': [],
+			'tm_text': [],
+			'tm_pred_text': [],
+			'protein_name': [],
+			'protein_size': [],
+			'family_frequency': [],
+			'transparency': [],
+			'relative_start': [],
+			'relative_end': [],
+			'found_models': [],
+			'model_links': []}
+	
+	for i, family in enumerate(most_common_context['selected_context']):
+		gene_dx = most_common_context['average_ends'][i] - most_common_context['average_starts'][i]+1
+		gene_direction = most_common_context['directions'][i]
 
-        if gene_direction == '-':
-            gene_x_tail = most_common_context['average_ends'][i]
-            gene_dx = gene_dx*(-1)
-            gene_x_head = gene_x_tail + gene_dx
-            gene_x_head_start = gene_x_head+100
-            text_x = gene_x_tail - (gene_x_tail-gene_x_head_start)/2
-        else:
-            gene_x_tail = most_common_context['average_starts'][i]
-            gene_x_head = gene_x_tail + gene_dx
-            gene_x_head_start = gene_x_head-100
-            text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
+		if gene_direction == '-':
+			gene_x_tail = most_common_context['average_ends'][i]
+			gene_dx = gene_dx*(-1)
+			gene_x_head = gene_x_tail + gene_dx
+			gene_x_head_start = gene_x_head+100
+			text_x = gene_x_tail - (gene_x_tail-gene_x_head_start)/2
+		else:
+			gene_x_tail = most_common_context['average_starts'][i]
+			gene_x_head = gene_x_tail + gene_dx
+			gene_x_head_start = gene_x_head-100
+			text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
 
-        if family == reference_family:
-            facecolor = family_colors[reference_family]['Color (RGBA)']
-            edgecolor = family_colors[reference_family]['Line color']
-            linestyle = family_colors[reference_family]['Line style']
-        elif family == 0:
-            facecolor = family_colors[family]['Color (RGBA)']
-            edgecolor = family_colors[family]['Line color']
-            linestyle = family_colors[family]['Line style']
-        else:
-            facecolor = family_colors[family]['Color (RGBA)']
-            edgecolor = family_colors[family]['Line color']
-            linestyle = family_colors[family]['Line style'] 
-        
-        if family == 0:
-            relative_start = 'n.a.'
-            relative_end = 'n.a.'
-            family_frequency = 'n.a.'
-            protein_size = 'n.a.' 
-            protein_name = 'n.a.'
-            transparency = 0.2
-            tm_annotation = ''
-            tm_pred_text = 'n.a.'
-        else:
-            relative_start = format(gene_x_tail, ',d')
-            relative_end = format(gene_x_head, ',d')
-            family_frequency = '{}%'.format(most_common_context['families_frequency'][i])
-            protein_size = r'{} ({})'.format(most_common_context['average_size'][i], most_common_context['stdev_size'][i])
-            protein_name = families_summary[family]['name']
-            transparency = most_common_context['families_frequency'][i]/100  
-            
-            if 'tm_annotations' in most_common_context:
-                tm_annotation = most_common_context['tm_annotations'][i]
-                if tm_annotation == 'TM':
-                    tm_pred_text = 'Yes'
-                elif tm_annotation == 'SP':
-                    tm_pred_text = 'Contains signal peptide'
-                else:
-                    tm_pred_text = 'No'
-            else:
-                tm_annotation = ''
-                tm_pred_text = 'n.a.' 
-                
-        data['relative_start'].append(relative_start)
-        data['relative_end'].append(relative_end)
-        data['facecolor'].append(facecolor)
-        data['edgecolor'].append(edgecolor)
-        data['family_frequency'].append(family_frequency)
-        data['protein_size'].append(protein_size)
-        data['protein_name'].append(protein_name)
-        data['xs'].append([gene_x_tail, gene_x_tail, gene_x_head_start, gene_x_head, gene_x_head_start])
-        data['ys'].append([1-0.25, 1+0.25, 1+0.25, 1, 1-0.25])
-        data['text_x'].append(text_x)
-        data['text_y'].append(1+0.25)
-        data['transparency'].append(transparency)
-        
-        data['tm_text'].append(tm_annotation)
-        data['tm_text_x'].append(text_x)
-        data['tm_text_y'].append(1)
-        data['tm_pred_text'].append(tm_pred_text)
+		if family == reference_family:
+			facecolor = family_colors[reference_family]['Color (RGBA)']
+			edgecolor = family_colors[reference_family]['Line color']
+			linestyle = family_colors[reference_family]['Line style']
+		elif family == 0:
+			facecolor = family_colors[family]['Color (RGBA)']
+			edgecolor = family_colors[family]['Line color']
+			linestyle = family_colors[family]['Line style']
+		else:
+			facecolor = family_colors[family]['Color (RGBA)']
+			edgecolor = family_colors[family]['Line color']
+			linestyle = family_colors[family]['Line style'] 
+		
+		if family == 0:
+			relative_start = 'n.a.'
+			relative_end = 'n.a.'
+			family_frequency = 'n.a.'
+			protein_size = 'n.a.' 
+			protein_name = 'n.a.'
+			transparency = 0.2
+			tm_annotation = ''
+			tm_pred_text = 'n.a.'
+		else:
+			relative_start = format(gene_x_tail, ',d')
+			relative_end = format(gene_x_head, ',d')
+			family_frequency = '{}%'.format(most_common_context['families_frequency'][i])
+			protein_size = r'{} ({})'.format(most_common_context['average_size'][i], most_common_context['stdev_size'][i])
+			protein_name = families_summary[family]['name']
+			transparency = most_common_context['families_frequency'][i]/100  
+			
+			if 'tm_annotations' in most_common_context:
+				tm_annotation = most_common_context['tm_annotations'][i]
+				if tm_annotation == 'TM':
+					tm_pred_text = 'Yes'
+				elif tm_annotation == 'SP':
+					tm_pred_text = 'Contains signal peptide'
+				else:
+					tm_pred_text = 'No'
+			else:
+				tm_annotation = ''
+				tm_pred_text = 'n.a.' 
+				
+		data['relative_start'].append(relative_start)
+		data['relative_end'].append(relative_end)
+		data['facecolor'].append(facecolor)
+		data['edgecolor'].append(edgecolor)
+		data['family_frequency'].append(family_frequency)
+		data['protein_size'].append(protein_size)
+		data['protein_name'].append(protein_name)
+		data['xs'].append([gene_x_tail, gene_x_tail, gene_x_head_start, gene_x_head, gene_x_head_start])
+		data['ys'].append([1-0.25, 1+0.25, 1+0.25, 1, 1-0.25])
+		data['text_x'].append(text_x)
+		data['text_y'].append(1+0.25)
+		data['transparency'].append(transparency)
+		
+		data['tm_text'].append(tm_annotation)
+		data['tm_text_x'].append(text_x)
+		data['tm_text_y'].append(1)
+		data['tm_pred_text'].append(tm_pred_text)
 
-        if family != 0 and family != reference_family and family < 10000:
-            data['family'].append(family)
-        else:
-            data['family'].append(str(''))
-        
-        if 'model_state' in families_summary[family]:
-            model_state = families_summary[family]['model_state']
+		if family != 0 and family != reference_family and family < 10000:
+			data['family'].append(family)
+		else:
+			data['family'].append(str(''))
+		
+		if 'model_state' in families_summary[family]:
+			model_state = families_summary[family]['model_state']
 
-            if model_state == 'Model exists':
-                model_state = 'Yes (click to view in Swiss-Model repository)'
-            elif model_state == 'Model does not exist':
-                model_state = 'No (click to model with Swiss-Model)'
-            else:
-                if family > 0 and family < 10000:
-                    model_state = 'Not possible to find'
-                else:
-                    model_state = ''
-            
-            structure = families_summary[family]['structure']
-            if structure == '':
-                uniprot_code = families_summary[family]['uniprot_code']
-                structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
-            
-        else:
-            model_state = 'n.a.'
-            structure = 'n.a.'
-        
-        data['found_models'].append(model_state)
-        data['model_links'].append(structure)
-        
-    tooltips = [('Protein name', "@protein_name"),
-                ("Predicted membrane protein", "@tm_pred_text"),
-                ('Structural model found', '@found_models'),
-                ('Frequency in position', '@family_frequency'),
-                ('Median protein size', '@protein_size'),
-                ('Median starting position', '@relative_start'),
-                ('Median end position', '@relative_end')] 
-    
-    return tooltips, data
+			if model_state == 'Model exists':
+				model_state = 'Yes (click to view in Swiss-Model repository)'
+			elif model_state == 'Model does not exist':
+				model_state = 'No (click to model with Swiss-Model)'
+			else:
+				if family > 0 and family < 10000:
+					model_state = 'Not possible to find'
+				else:
+					model_state = ''
+			
+			structure = families_summary[family]['structure']
+			if structure == '':
+				uniprot_code = families_summary[family]['uniprot_code']
+				structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
+			
+		else:
+			model_state = 'n.a.'
+			structure = 'n.a.'
+		
+		data['found_models'].append(model_state)
+		data['model_links'].append(structure)
+		
+	tooltips = [('Protein name', "@protein_name"),
+				("Predicted membrane protein", "@tm_pred_text"),
+				('Structural model found', '@found_models'),
+				('Frequency in position', '@family_frequency'),
+				('Median protein size', '@protein_size'),
+				('Median starting position', '@relative_start'),
+				('Median end position', '@relative_end')] 
+	
+	return tooltips, data
 
 def create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family, family_colors, n_flanking5=None, n_flanking3=None):
-    
-    most_common_context = find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
-            
-    gc_tooltips, gc_data = create_most_common_genomic_context_features(most_common_context, families_summary, reference_family = reference_family, family_colors = family_colors)
-        
-    gc = figure(plot_width=1200, plot_height=200, y_range = [0, 4], title = 'Most conserved gene per position', toolbar_location="left")
+	
+	most_common_context = find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
+			
+	gc_tooltips, gc_data = create_most_common_genomic_context_features(most_common_context, families_summary, reference_family = reference_family, family_colors = family_colors)
+		
+	gc = figure(plot_width=1200, plot_height=200, y_range = [0, 4], title = 'Most conserved gene per position', toolbar_location="left")
 
-    for i, xs in enumerate(gc_data['xs']):
-        gc.patch(xs, gc_data['ys'][i], fill_color = gc_data['facecolor'][i], line_color = gc_data['edgecolor'][i], fill_alpha = gc_data['transparency'][i], line_alpha = gc_data['transparency'][i], line_width = 1)    
-    
-    gc.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = gc_data, 
-              hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
-              selection_fill_color='facecolor', selection_line_color='edgecolor',
-              nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
+	for i, xs in enumerate(gc_data['xs']):
+		gc.patch(xs, gc_data['ys'][i], fill_color = gc_data['facecolor'][i], line_color = gc_data['edgecolor'][i], fill_alpha = gc_data['transparency'][i], line_alpha = gc_data['transparency'][i], line_width = 1)	
+	
+	gc.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = gc_data, 
+			  hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
+			  selection_fill_color='facecolor', selection_line_color='edgecolor',
+			  nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
 
-    gc.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = gc_data)
-    gc.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = gc_data)
-    
-    gc.yaxis.ticker = [1]
-    gc.yaxis.major_label_overrides = {1: max([all_syntenies[target]['species'] for target in all_syntenies], key=len)}
-    gc.yaxis.major_label_text_font_size = {'value': '8pt'}
-    
-    gc.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
-    gc.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
-    gc.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
-    gc.yaxis.axis_line_width = 0
+	gc.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = gc_data)
+	gc.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = gc_data)
+	
+	gc.yaxis.ticker = [1]
+	gc.yaxis.major_label_overrides = {1: max([all_syntenies[target]['species'] for target in all_syntenies], key=len)}
+	gc.yaxis.major_label_text_font_size = {'value': '8pt'}
+	
+	gc.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
+	gc.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
+	gc.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
+	gc.yaxis.axis_line_width = 0
 
-    # define general features
-    gc.grid.visible = False
-    gc.outline_line_width = 0
-    
-    # define xticks
-    gc.xaxis.axis_label = "Position relative to target (bp)"
-    
-    gc.add_tools(HoverTool(tooltips=gc_tooltips))
-    gc.add_tools(TapTool(callback = OpenURL(url='@model_links')))
-    
-    return gc
+	# define general features
+	gc.grid.visible = False
+	gc.outline_line_width = 0
+	
+	# define xticks
+	gc.xaxis.axis_label = "Position relative to target (bp)"
+	
+	gc.add_tools(HoverTool(tooltips=gc_tooltips))
+	gc.add_tools(TapTool(callback = OpenURL(url='@model_links')))
+	
+	return gc
 
 # 9.2. Routines to make the dendogram
 
 def get_taxonomy_distance_matrix(taxonomy, operons, input_targets = None, mode = 'taxonomy'):
-    
-    targets_taxonomy_vector = {}
-
-    for superkingdom in taxonomy:
-        for phylum in taxonomy[superkingdom]:
-            for taxclass in taxonomy[superkingdom][phylum]:
-                for order in taxonomy[superkingdom][phylum][taxclass]:
-                    for genus in taxonomy[superkingdom][phylum][taxclass][order]:
-                        for species in taxonomy[superkingdom][phylum][taxclass][order][genus]:
-                            for target in taxonomy[superkingdom][phylum][taxclass][order][genus][species]['target_members']:
-                                # find if this target is in the operons
-                                operon = [operon for operon in operons if target in operons[operon]['target_members']]
-                                if len(operon) > 0:
-                                    targets_taxonomy_vector[target] = [superkingdom, phylum, taxclass, order, genus, species]
-
-    if mode == 'taxonomy':
-
-	    labels = sorted(list(targets_taxonomy_vector.keys()))
-	    taxonomy_distance_matrix = [[0 for label in targets_taxonomy_vector] for label in targets_taxonomy_vector]
-
-	    for i, target_i in enumerate(labels):
-	        vector_i = targets_taxonomy_vector[target_i]
-	        for j, target_j in enumerate(labels):
-	            vector_j = targets_taxonomy_vector[target_j]
-	            if i >= j:
-	                dist = 0
-	                for k, level in enumerate(vector_i):
-	                    if level != vector_j[k]:
-	                        dist = 6-k
-	                        break
-	                
-	                if dist == 1: # it means they correspond to different species. check if they are just not different strains and fuse them if so
-	                    if len(list(set(vector_i[-1].split()) & set(vector_j[-1].split()))) >= 2: # it means they share the genus and the species at least
-	                        dist = 0                        
-	                    
-	                taxonomy_distance_matrix[i][j] = dist
-	                taxonomy_distance_matrix[j][i] = dist
-
-    elif mode == 'as_input':
-	    labels = list(targets_taxonomy_vector.keys())
-	    taxonomy_distance_matrix = [[0 for label in targets_taxonomy_vector] for label in targets_taxonomy_vector]
-
-	    if input_targets != None:
-	        labels = [in_target for in_target in input_targets if in_target in labels]
 	
-    taxonomy_distance_matrix = np.array(taxonomy_distance_matrix)
-    
-    return taxonomy_distance_matrix, labels 
+	targets_taxonomy_vector = {}
+
+	for superkingdom in taxonomy:
+		for phylum in taxonomy[superkingdom]:
+			for taxclass in taxonomy[superkingdom][phylum]:
+				for order in taxonomy[superkingdom][phylum][taxclass]:
+					for genus in taxonomy[superkingdom][phylum][taxclass][order]:
+						for species in taxonomy[superkingdom][phylum][taxclass][order][genus]:
+							for target in taxonomy[superkingdom][phylum][taxclass][order][genus][species]['target_members']:
+								# find if this target is in the operons
+								operon = [operon for operon in operons if target in operons[operon]['target_members']]
+								if len(operon) > 0:
+									targets_taxonomy_vector[target] = [superkingdom, phylum, taxclass, order, genus, species]
+
+	if mode == 'taxonomy':
+
+		labels = sorted(list(targets_taxonomy_vector.keys()))
+		taxonomy_distance_matrix = [[0 for label in targets_taxonomy_vector] for label in targets_taxonomy_vector]
+
+		for i, target_i in enumerate(labels):
+			vector_i = targets_taxonomy_vector[target_i]
+			for j, target_j in enumerate(labels):
+				vector_j = targets_taxonomy_vector[target_j]
+				if i >= j:
+					dist = 0
+					for k, level in enumerate(vector_i):
+						if level != vector_j[k]:
+							dist = 6-k
+							break
+					
+					if dist == 1: # it means they correspond to different species. check if they are just not different strains and fuse them if so
+						if len(list(set(vector_i[-1].split()) & set(vector_j[-1].split()))) >= 2: # it means they share the genus and the species at least
+							dist = 0						
+						
+					taxonomy_distance_matrix[i][j] = dist
+					taxonomy_distance_matrix[j][i] = dist
+
+	elif mode == 'as_input':
+		labels = list(targets_taxonomy_vector.keys())
+		taxonomy_distance_matrix = [[0 for label in targets_taxonomy_vector] for label in targets_taxonomy_vector]
+
+		if input_targets != None:
+			labels = [in_target for in_target in input_targets if in_target in labels]
+	
+	taxonomy_distance_matrix = np.array(taxonomy_distance_matrix)
+	
+	return taxonomy_distance_matrix, labels 
 
 def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = None, print_tree = True):
 
@@ -1425,7 +1474,7 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = N
 		Phylo.draw_ascii(tree)
 
 	tree.ladderize()
-	tree_depths = tree.depths()    
+	tree_depths = tree.depths()	
 	if not max(tree_depths.values()): 
 		tree_depths = tree.depths(unit_branch_lengths=True) 
 
@@ -1457,721 +1506,721 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = N
 	return distance_matrix, labels
 
 def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy', tree = None, tree_format = None):
-    
-    if tree != None:
-    	distance_matrix, labels = get_phylogeny_distance_matrix(tree, input_targets = input_targets, tree_format = tree_format)
-    else:
-    	distance_matrix, labels = get_taxonomy_distance_matrix(taxonomy, operons, input_targets = input_targets, mode = mode)
-    
-    distance_matrix = distance.squareform(distance_matrix)
+	
+	if tree != None:
+		distance_matrix, labels = get_phylogeny_distance_matrix(tree, input_targets = input_targets, tree_format = tree_format)
+	else:
+		distance_matrix, labels = get_taxonomy_distance_matrix(taxonomy, operons, input_targets = input_targets, mode = mode)
+	
+	distance_matrix = distance.squareform(distance_matrix)
 
-    Z = hierarchy.linkage(distance_matrix, method = 'single')
-    results = hierarchy.dendrogram(Z, no_plot=True, count_sort = 'descending')
+	Z = hierarchy.linkage(distance_matrix, method = 'single')
+	results = hierarchy.dendrogram(Z, no_plot=True, count_sort = 'descending')
 
-    if mode == 'taxonomy' or tree != None:
-	    labels_indeces = list(map(int, results['ivl']))
-	    labels = [labels[i] for i in labels_indeces]
-    
-    return results, labels
+	if mode == 'taxonomy' or tree != None:
+		labels_indeces = list(map(int, results['ivl']))
+		labels = [labels[i] for i in labels_indeces]
+	
+	return results, labels
 
 def create_dendogram_features(dendogram, leaf_labels, taxonomy):
-    
-    data = {'superkingdom': [],
-            'phylum': [],
-            'class': [],
-            'order': [],
-            'genus': [],
-            'species': [],
-            'x': [],
-            'y': [],
-            'leaf_label': leaf_labels}
-    
-    icoord, dcoord = dendogram['icoord'], dendogram['dcoord']
-    
-    data['y'] = list(np.linspace(min(min(icoord)), max(max(icoord)), len(leaf_labels)))    
-    data['x'] = [1 for y in data['y']] 
-        
-    for label in leaf_labels:
-        for superkingdom in taxonomy:
-            for phylum in taxonomy[superkingdom]:
-                for taxclass in taxonomy[superkingdom][phylum]:
-                    for order in taxonomy[superkingdom][phylum][taxclass]:
-                        for genus in taxonomy[superkingdom][phylum][taxclass][order]:
-                            for species in taxonomy[superkingdom][phylum][taxclass][order][genus]:
-                                if species == label:
-                                    data['superkingdom'].append(superkingdom)
-                                    data['phylum'].append(phylum)
-                                    data['class'].append(taxclass)
-                                    data['order'].append(order)
-                                    data['genus'].append(genus)
-                                else:
-                                    for target in taxonomy[superkingdom][phylum][taxclass][order][genus][species]['target_members']:
-                                        if target == label:
-                                            data['superkingdom'].append(superkingdom)
-                                            data['phylum'].append(phylum)
-                                            data['class'].append(taxclass)
-                                            data['order'].append(order)
-                                            data['genus'].append(genus)
-                                            data['species'].append(species)
-    
-    tooltips = [('Superkingdom', '@superkingdom'),
-                ('Phylum', '@phylum'),
-                ('Class', '@class'),
-                ('Order', '@order'),
-                ('Genus', '@genus'),
-                ('Species', '@species')]
-    
-    return tooltips, data
+	
+	data = {'superkingdom': [],
+			'phylum': [],
+			'class': [],
+			'order': [],
+			'genus': [],
+			'species': [],
+			'x': [],
+			'y': [],
+			'leaf_label': leaf_labels}
+	
+	icoord, dcoord = dendogram['icoord'], dendogram['dcoord']
+	
+	data['y'] = list(np.linspace(min(min(icoord)), max(max(icoord)), len(leaf_labels)))	
+	data['x'] = [1 for y in data['y']] 
+		
+	for label in leaf_labels:
+		for superkingdom in taxonomy:
+			for phylum in taxonomy[superkingdom]:
+				for taxclass in taxonomy[superkingdom][phylum]:
+					for order in taxonomy[superkingdom][phylum][taxclass]:
+						for genus in taxonomy[superkingdom][phylum][taxclass][order]:
+							for species in taxonomy[superkingdom][phylum][taxclass][order][genus]:
+								if species == label:
+									data['superkingdom'].append(superkingdom)
+									data['phylum'].append(phylum)
+									data['class'].append(taxclass)
+									data['order'].append(order)
+									data['genus'].append(genus)
+								else:
+									for target in taxonomy[superkingdom][phylum][taxclass][order][genus][species]['target_members']:
+										if target == label:
+											data['superkingdom'].append(superkingdom)
+											data['phylum'].append(phylum)
+											data['class'].append(taxclass)
+											data['order'].append(order)
+											data['genus'].append(genus)
+											data['species'].append(species)
+	
+	tooltips = [('Superkingdom', '@superkingdom'),
+				('Phylum', '@phylum'),
+				('Class', '@class'),
+				('Order', '@order'),
+				('Genus', '@genus'),
+				('Species', '@species')]
+	
+	return tooltips, data
 
 def make_dendogram_figure(taxonomy, operons, input_targets = None, tree = None, mode = 'taxonomy', show_leafs = True, height_factor = 20, tree_format = None):
 
-    dendogram, leaf_labels = compute_dendogram(taxonomy, operons, input_targets = input_targets, mode = mode, tree = tree, tree_format = tree_format)
-    den_tooltips, den_data = create_dendogram_features(dendogram, leaf_labels, taxonomy)
+	dendogram, leaf_labels = compute_dendogram(taxonomy, operons, input_targets = input_targets, mode = mode, tree = tree, tree_format = tree_format)
+	den_tooltips, den_data = create_dendogram_features(dendogram, leaf_labels, taxonomy)
 
-    y_range = [0, max(den_data['y'])+min(den_data['y'])+(den_data['y'][1]-den_data['y'][0])]
+	y_range = [0, max(den_data['y'])+min(den_data['y'])+(den_data['y'][1]-den_data['y'][0])]
 
-    if len(leaf_labels) < 5:
-        height = int(len(leaf_labels)*height_factor)*3
-    elif len(leaf_labels) < 10:
-        height = int(len(leaf_labels)*height_factor)*2
-    else:
-        height = int(len(leaf_labels)*height_factor)
+	if len(leaf_labels) < 5:
+		height = int(len(leaf_labels)*height_factor)*3
+	elif len(leaf_labels) < 10:
+		height = int(len(leaf_labels)*height_factor)*2
+	else:
+		height = int(len(leaf_labels)*height_factor)
 
-    if tree != None:
-    	title = 'Input phylogeny/hierarchy'
-    else:
-    	title = 'Taxonomy hierarchy'
-    
-    if show_leafs:
-        den = figure(title = title, height=height, width=500, x_range=[-max(max(dendogram['dcoord']))-(max(max(dendogram['dcoord']))-min(min(dendogram['dcoord'])))*0.2, 40], y_range = y_range, toolbar_location="left")
-    else:
-        den = figure(title = title, height=height, width=250, x_range=[-max(max(dendogram['dcoord']))-(max(max(dendogram['dcoord']))-min(min(dendogram['dcoord'])))*0.2, 0.2], y_range = y_range, toolbar_location="left")
+	if tree != None:
+		title = 'Input phylogeny/hierarchy'
+	else:
+		title = 'Taxonomy hierarchy'
+	
+	if show_leafs:
+		den = figure(title = title, height=height, width=500, x_range=[-max(max(dendogram['dcoord']))-(max(max(dendogram['dcoord']))-min(min(dendogram['dcoord'])))*0.2, 40], y_range = y_range, toolbar_location="left")
+	else:
+		den = figure(title = title, height=height, width=250, x_range=[-max(max(dendogram['dcoord']))-(max(max(dendogram['dcoord']))-min(min(dendogram['dcoord'])))*0.2, 0.2], y_range = y_range, toolbar_location="left")
 
-    for i, d in zip(dendogram['icoord'], dendogram['dcoord']):
-        d = list(map(lambda x: -x, d))
-        den.line(x=d, y=i, line_color='black')
+	for i, d in zip(dendogram['icoord'], dendogram['dcoord']):
+		d = list(map(lambda x: -x, d))
+		den.line(x=d, y=i, line_color='black')
 
-    if show_leafs:
-        leafs = den.text(x='x', y='y', text = 'leaf_label', text_baseline='middle', text_font_size='8pt', source = den_data)
-    else:
-        leafs = den.circle(x=0.1, y='y', line_color = 'black', fill_color = 'darkgrey', source = den_data, size = (den_data['y'][1] - den_data['y'][0])*0.7)
-    den.add_tools(HoverTool(tooltips=den_tooltips, renderers=[leafs]))
-    
-    den.title.align = "right"
-    den.axis.major_tick_line_color = None
-    den.axis.minor_tick_line_color = None
-    den.axis.major_label_text_color = None
-    den.axis.major_label_text_font_size = '0pt'
-    den.axis.axis_line_color = None
-    den.grid.grid_line_color = None
-    den.outline_line_color = None
+	if show_leafs:
+		leafs = den.text(x='x', y='y', text = 'leaf_label', text_baseline='middle', text_font_size='8pt', source = den_data)
+	else:
+		leafs = den.circle(x=0.1, y='y', line_color = 'black', fill_color = 'darkgrey', source = den_data, size = (den_data['y'][1] - den_data['y'][0])*0.7)
+	den.add_tools(HoverTool(tooltips=den_tooltips, renderers=[leafs]))
+	
+	den.title.align = "right"
+	den.axis.major_tick_line_color = None
+	den.axis.minor_tick_line_color = None
+	den.axis.major_label_text_color = None
+	den.axis.major_label_text_font_size = '0pt'
+	den.axis.axis_line_color = None
+	den.grid.grid_line_color = None
+	den.outline_line_color = None
 
-    return den, den_data
+	return den, den_data
 
 # 9.3. Routines to draw all genomic contexts
 
 def create_genomic_context_features(operons, all_syntenies, family_colors, syn_den_data, reference_family, legend_mode = 'ncbi_code'):
-    
-    data = {'operon':[],
-            'target_id':[],
-            'ncbi_code':[],
-            'ncbi_link':[],
-            'assembly': [],
-            'name':[],
-            'family': [],
-            'superkingdom': [],
-            'phylum': [],
-            'class': [],
-            'order': [],
-            'genus': [],
-            'species': [],
-            'relative_start': [],
-            'relative_end': [],
-            'facecolor': [],
-            'edgecolor': [],
-            'linestyle': [],
-            'xs':[],
-            'ys':[],
-            'half_heights': [],
-            'text_x': [],
-            'text_y': [],
-            'tm_text_x': [],
-            'tm_text_y': [],
-            'tm_text': [],
-            'tm_pred_text': []}
-    
-    yyticklabels = []
-    yys = []
-    y_step = syn_den_data['y'][1] - syn_den_data['y'][0]
-    y_half_height = y_step/4
-    
-    for i, current_target in enumerate(syn_den_data['leaf_label']):
-        operon = [operon for operon in operons if current_target in operons[operon]['target_members']][0]
-        current_assembly = all_syntenies[current_target]['assembly_id'][1]
-        current_species = all_syntenies[current_target]['species']
-        current_genomic_context_block = all_syntenies[current_target]['flanking_genes']
-        current_species = all_syntenies[current_target]['species']
-        current_reference_family = all_syntenies[current_target]['target_family']
-        
-        curr_y = syn_den_data['y'][i]
+	
+	data = {'operon':[],
+			'target_id':[],
+			'ncbi_code':[],
+			'ncbi_link':[],
+			'assembly': [],
+			'name':[],
+			'family': [],
+			'superkingdom': [],
+			'phylum': [],
+			'class': [],
+			'order': [],
+			'genus': [],
+			'species': [],
+			'relative_start': [],
+			'relative_end': [],
+			'facecolor': [],
+			'edgecolor': [],
+			'linestyle': [],
+			'xs':[],
+			'ys':[],
+			'half_heights': [],
+			'text_x': [],
+			'text_y': [],
+			'tm_text_x': [],
+			'tm_text_y': [],
+			'tm_text': [],
+			'tm_pred_text': []}
+	
+	yyticklabels = []
+	yys = []
+	y_step = syn_den_data['y'][1] - syn_den_data['y'][0]
+	y_half_height = y_step/4
+	
+	for i, current_target in enumerate(syn_den_data['leaf_label']):
+		operon = [operon for operon in operons if current_target in operons[operon]['target_members']][0]
+		current_assembly = all_syntenies[current_target]['assembly_id'][1]
+		current_species = all_syntenies[current_target]['species']
+		current_genomic_context_block = all_syntenies[current_target]['flanking_genes']
+		current_species = all_syntenies[current_target]['species']
+		current_reference_family = all_syntenies[current_target]['target_family']
+		
+		curr_y = syn_den_data['y'][i]
 
-        for j, flanking_gene in enumerate(current_genomic_context_block['ncbi_codes']):
-            family = current_genomic_context_block['families'][j]
-            name = current_genomic_context_block['names'][j]
-            gene_dx = current_genomic_context_block['relative_ends'][j] - current_genomic_context_block['relative_starts'][j]+1
-            gene_direction = current_genomic_context_block['directions'][j]
+		for j, flanking_gene in enumerate(current_genomic_context_block['ncbi_codes']):
+			family = current_genomic_context_block['families'][j]
+			name = current_genomic_context_block['names'][j]
+			gene_dx = current_genomic_context_block['relative_ends'][j] - current_genomic_context_block['relative_starts'][j]+1
+			gene_direction = current_genomic_context_block['directions'][j]
 
-            if gene_direction == '-':
-                gene_x_tail = current_genomic_context_block['relative_ends'][j]
-                gene_dx = gene_dx*(-1)
-                gene_x_head = gene_x_tail + gene_dx
-                gene_x_head_start = gene_x_head+100
-                text_x = gene_x_tail - (gene_x_tail-gene_x_head_start)/2
-            else:
-                gene_x_tail = current_genomic_context_block['relative_starts'][j]
-                gene_x_head = gene_x_tail + gene_dx
-                gene_x_head_start = gene_x_head-100
-                text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
+			if gene_direction == '-':
+				gene_x_tail = current_genomic_context_block['relative_ends'][j]
+				gene_dx = gene_dx*(-1)
+				gene_x_head = gene_x_tail + gene_dx
+				gene_x_head_start = gene_x_head+100
+				text_x = gene_x_tail - (gene_x_tail-gene_x_head_start)/2
+			else:
+				gene_x_tail = current_genomic_context_block['relative_starts'][j]
+				gene_x_head = gene_x_tail + gene_dx
+				gene_x_head_start = gene_x_head-100
+				text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
 
-            if family == current_reference_family:
-                facecolor = family_colors[reference_family]['Color (RGBA)']
-                edgecolor = family_colors[reference_family]['Line color']
-                linestyle = family_colors[reference_family]['Line style']
-            elif family == 0:
-                facecolor = family_colors[family]['Color (RGBA)']
-                edgecolor = family_colors[family]['Line color']
-                linestyle = family_colors[family]['Line style']
-            else:
-                facecolor = family_colors[family]['Color (RGBA)']
-                edgecolor = family_colors[family]['Line color']
-                linestyle = family_colors[family]['Line style']    
-                
-            data['operon'].append(operon)
-            data['target_id'].append(current_target)
-            data['ncbi_code'].append(flanking_gene)
-            data['assembly'].append(current_assembly)
-            data['name'].append(name)
-            data['relative_start'].append(format(gene_x_tail, ',d'))
-            data['relative_end'].append(format(gene_x_head, ',d'))
-            data['facecolor'].append(facecolor)
-            data['edgecolor'].append(edgecolor)
-            data['linestyle'].append(linestyle)
-            data['xs'].append([gene_x_tail, gene_x_tail, gene_x_head_start, gene_x_head, gene_x_head_start])
-            data['ys'].append([curr_y-y_half_height, curr_y+y_half_height, curr_y+y_half_height, curr_y, curr_y-y_half_height])
-            data['half_heights'].append(y_half_height)
-            data['text_x'].append(text_x)
-            data['text_y'].append(curr_y+y_half_height)
-            data['ncbi_link'].append('https://www.ncbi.nlm.nih.gov/protein/{}'.format(flanking_gene))
-            data['tm_text_x'].append(text_x)
-            data['tm_text_y'].append(curr_y)
-            
-            if 'TM_annotations' in current_genomic_context_block:
-                tm_annotation = current_genomic_context_block['TM_annotations'][j]
-                if tm_annotation == 'TM':
-                    data['tm_pred_text'].append('Yes')
-                elif tm_annotation == 'SP':
-                    data['tm_pred_text'].append('Contains signal peptide')
-                else:
-                    data['tm_pred_text'].append('No')
-            else:
-                tm_annotation = ''
-                data['tm_pred_text'].append('n.a.')
-                
-            data['tm_text'].append(tm_annotation)
-                                  
-            if family != 0 and family != reference_family and family < 10000:
-                data['family'].append(family)
-            else:
-                data['family'].append(str(''))
-                
-            data['species'].append(current_species)
-            for level in ['superkingdom', 'phylum', 'class', 'order', 'genus']:
-                data[level].append(syn_den_data[level][i])
-        
-        if legend_mode in ['superkingdom', 'phylum', 'class', 'order', 'genus', 'species']:
-            yyticklabels.append(data[legend_mode][-1])
-        else:
-            yyticklabels.append('{} | {}'.format(current_target, operon))
-            
-        yys.append(curr_y)
-        
-    yyticklabels = {int(yys[i]): yyticklabels[i] for i in range(len(yyticklabels))}
+			if family == current_reference_family:
+				facecolor = family_colors[reference_family]['Color (RGBA)']
+				edgecolor = family_colors[reference_family]['Line color']
+				linestyle = family_colors[reference_family]['Line style']
+			elif family == 0:
+				facecolor = family_colors[family]['Color (RGBA)']
+				edgecolor = family_colors[family]['Line color']
+				linestyle = family_colors[family]['Line style']
+			else:
+				facecolor = family_colors[family]['Color (RGBA)']
+				edgecolor = family_colors[family]['Line color']
+				linestyle = family_colors[family]['Line style']	
+				
+			data['operon'].append(operon)
+			data['target_id'].append(current_target)
+			data['ncbi_code'].append(flanking_gene)
+			data['assembly'].append(current_assembly)
+			data['name'].append(name)
+			data['relative_start'].append(format(gene_x_tail, ',d'))
+			data['relative_end'].append(format(gene_x_head, ',d'))
+			data['facecolor'].append(facecolor)
+			data['edgecolor'].append(edgecolor)
+			data['linestyle'].append(linestyle)
+			data['xs'].append([gene_x_tail, gene_x_tail, gene_x_head_start, gene_x_head, gene_x_head_start])
+			data['ys'].append([curr_y-y_half_height, curr_y+y_half_height, curr_y+y_half_height, curr_y, curr_y-y_half_height])
+			data['half_heights'].append(y_half_height)
+			data['text_x'].append(text_x)
+			data['text_y'].append(curr_y+y_half_height)
+			data['ncbi_link'].append('https://www.ncbi.nlm.nih.gov/protein/{}'.format(flanking_gene))
+			data['tm_text_x'].append(text_x)
+			data['tm_text_y'].append(curr_y)
+			
+			if 'TM_annotations' in current_genomic_context_block:
+				tm_annotation = current_genomic_context_block['TM_annotations'][j]
+				if tm_annotation == 'TM':
+					data['tm_pred_text'].append('Yes')
+				elif tm_annotation == 'SP':
+					data['tm_pred_text'].append('Contains signal peptide')
+				else:
+					data['tm_pred_text'].append('No')
+			else:
+				tm_annotation = ''
+				data['tm_pred_text'].append('n.a.')
+				
+			data['tm_text'].append(tm_annotation)
+								  
+			if family != 0 and family != reference_family and family < 10000:
+				data['family'].append(family)
+			else:
+				data['family'].append(str(''))
+				
+			data['species'].append(current_species)
+			for level in ['superkingdom', 'phylum', 'class', 'order', 'genus']:
+				data[level].append(syn_den_data[level][i])
+		
+		if legend_mode in ['superkingdom', 'phylum', 'class', 'order', 'genus', 'species']:
+			yyticklabels.append(data[legend_mode][-1])
+		else:
+			yyticklabels.append('{} | {}'.format(current_target, operon))
+			
+		yys.append(curr_y)
+		
+	yyticklabels = {int(yys[i]): yyticklabels[i] for i in range(len(yyticklabels))}
 
-    tooltips = [('GC type', "@operon"),
-                ('InputID', "@target_id"),
-                ('EntrezID', '@ncbi_code'),
-                ('Genome assembly', '@assembly'),
-                ('Gene relative start', '@relative_start'),
-                ('Gene relative end', '@relative_end'),
-                ("Protein name", "@name"),
-                ("Protein family code", "@family"),
-                ("Predicted membrane protein", "@tm_pred_text"),
-                ('Superkingdom', '@superkingdom'),
-                ('Phylum', '@phylum'),
-                ('Class', '@class'),
-                ('Order', '@order'),
-                ('Genus', '@genus'),
-                ("Species", "@species")] 
-        
-    return tooltips, data, yyticklabels
+	tooltips = [('GC type', "@operon"),
+				('InputID', "@target_id"),
+				('EntrezID', '@ncbi_code'),
+				('Genome assembly', '@assembly'),
+				('Gene relative start', '@relative_start'),
+				('Gene relative end', '@relative_end'),
+				("Protein name", "@name"),
+				("Protein family code", "@family"),
+				("Predicted membrane protein", "@tm_pred_text"),
+				('Superkingdom', '@superkingdom'),
+				('Phylum', '@phylum'),
+				('Class', '@class'),
+				('Order', '@order'),
+				('Genus', '@genus'),
+				("Species", "@species")] 
+		
+	return tooltips, data, yyticklabels
 
 
 def create_genomic_context_figure(operons, all_syntenies, family_colors, syn_den_data, syn_dendogram, most_common_gc_figure, reference_family, legend_mode = 'ncbi_code', height_factor = 25*1.2):
 
-    p_tooltips, p_data, p_yyticklabels = create_genomic_context_features(operons, all_syntenies, family_colors, syn_den_data, reference_family = reference_family, legend_mode = legend_mode)
+	p_tooltips, p_data, p_yyticklabels = create_genomic_context_features(operons, all_syntenies, family_colors, syn_den_data, reference_family = reference_family, legend_mode = legend_mode)
 
-    p = figure(plot_width=most_common_gc_figure.plot_width, plot_height=syn_dendogram.height, x_range = most_common_gc_figure.x_range, y_range = syn_dendogram.y_range, toolbar_location="left", title = 'Representative genomic contexts (hover to get more information)')  # the genomic_context figure
+	p = figure(plot_width=most_common_gc_figure.plot_width, plot_height=syn_dendogram.height, x_range = most_common_gc_figure.x_range, y_range = syn_dendogram.y_range, toolbar_location="left", title = 'Representative genomic contexts (hover to get more information)')  # the genomic_context figure
 
-    for i, xs in enumerate(p_data['xs']):
-        p.patch(xs, p_data['ys'][i], fill_color = p_data['facecolor'][i], line_color = p_data['edgecolor'][i], line_width = 1)
+	for i, xs in enumerate(p_data['xs']):
+		p.patch(xs, p_data['ys'][i], fill_color = p_data['facecolor'][i], line_color = p_data['edgecolor'][i], line_width = 1)
 
-    p.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = p_data, 
-              hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
-              selection_fill_color='facecolor', selection_line_color='edgecolor',
-              nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
+	p.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = p_data, 
+			  hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
+			  selection_fill_color='facecolor', selection_line_color='edgecolor',
+			  nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
 
-    p.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = p_data)
-    p.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = p_data)
-    
-    # define yticks on the left
-    p.yaxis.ticker = list(p_yyticklabels.keys())
-    p.yaxis.major_tick_line_color = None
-    p.yaxis.major_label_overrides = p_yyticklabels
-    p.yaxis.major_label_text_font_size = {'value': '8pt'}
-#     p.yaxis.major_label_text_font_style = 'italic'
-    p.yaxis.axis_line_width = 0
-    
-    # define xticks
-    p.xaxis.axis_label = "Position relative to target (bp)"
+	p.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = p_data)
+	p.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = p_data)
+	
+	# define yticks on the left
+	p.yaxis.ticker = list(p_yyticklabels.keys())
+	p.yaxis.major_tick_line_color = None
+	p.yaxis.major_label_overrides = p_yyticklabels
+	p.yaxis.major_label_text_font_size = {'value': '8pt'}
+#	 p.yaxis.major_label_text_font_style = 'italic'
+	p.yaxis.axis_line_width = 0
+	
+	# define xticks
+	p.xaxis.axis_label = "Position relative to target (bp)"
 
-    # define general features
-    p.grid.visible = False
-    p.outline_line_width = 0
+	# define general features
+	p.grid.visible = False
+	p.outline_line_width = 0
 
-    p.add_tools(HoverTool(tooltips=p_tooltips))
-    p.add_tools(TapTool(callback = OpenURL(url='@ncbi_link')))
-        
-    return p
+	p.add_tools(HoverTool(tooltips=p_tooltips))
+	p.add_tools(TapTool(callback = OpenURL(url='@ncbi_link')))
+		
+	return p
 
 # 9.4. Routines to draw legend figure
 
 def create_legend_features(operons, families_summary, reference_family, family_colors, dx = 50):
-    
-    data = {'xs': [],
-            'ys': [],
-            'edgecolor': [],
-            'facecolor': [],
-            'text': [],
-            'label_x': [],
-            'label_y': [],
-            'text_x': [],
-            'text_y': [],
-            'tm_text_x': [],
-            'tm_text_y': [],
-            'tm_text': [],
-            'tm_type': [],
-            'tm_mode': [],
-            'family': [],
-            'found_models': [],
-            'model_links': [],
-            'keywords': [],
-            'go_terms': [],
-            'function': []}
-    
-    
-    curr_y = len(family_colors.keys())
-    
-    for family in sorted(list(families_summary.keys())):
-        if family == 0:
-            data['text'].append('Non-conserved gene')
-        elif family == reference_family:
-            data['text'].append('Target protein: {}'.format(families_summary[family]['name']))
-        elif family == 10000:
-            data['text'].append('Pseudogene')
-        elif family in families_summary:
-            data['text'].append(families_summary[family]['name'])
-        
-        if family != 0 and family != reference_family and family < 10000:
-            data['family'].append(family)
-        else:
-            data['family'].append(str(''))
-        
-        if 'model_state' in families_summary[family]:
-            model_state = families_summary[family]['model_state']
+	
+	data = {'xs': [],
+			'ys': [],
+			'edgecolor': [],
+			'facecolor': [],
+			'text': [],
+			'label_x': [],
+			'label_y': [],
+			'text_x': [],
+			'text_y': [],
+			'tm_text_x': [],
+			'tm_text_y': [],
+			'tm_text': [],
+			'tm_type': [],
+			'tm_mode': [],
+			'family': [],
+			'found_models': [],
+			'model_links': [],
+			'keywords': [],
+			'go_terms': [],
+			'function': []}
+	
+	
+	curr_y = len(family_colors.keys())
+	
+	for family in sorted(list(families_summary.keys())):
+		if family == 0:
+			data['text'].append('Non-conserved gene')
+		elif family == reference_family:
+			data['text'].append('Target protein: {}'.format(families_summary[family]['name']))
+		elif family == 10000:
+			data['text'].append('Pseudogene')
+		elif family in families_summary:
+			data['text'].append(families_summary[family]['name'])
+		
+		if family != 0 and family != reference_family and family < 10000:
+			data['family'].append(family)
+		else:
+			data['family'].append(str(''))
+		
+		if 'model_state' in families_summary[family]:
+			model_state = families_summary[family]['model_state']
 
-            if model_state == 'Model exists':
-                model_state = families_summary[family]['structure']
-            elif model_state == 'Model does not exist':
-                model_state = 'click to model/view with Swiss-Model'
-            else:
-                if family > 0 and family < 10000:
-                    model_state = 'Not possible to find'
-                else:
-                    model_state = 'n.a.'
-        else:
-            model_state = ''
-            
-        data['found_models'].append(model_state)
-        
-        if family > 0 and family < 10000 and 'function' in families_summary[family]:
-            if 'TM_topology' in families_summary[family]['function']:
-                tm_type = families_summary[family]['function']["TM_topology"]
-                keywords = ', '.join(sorted(families_summary[family]['function']['Keywords']))
-                go_terms = '; '.join(sorted(families_summary[family]['function']['GO_terms']))
-                function = families_summary[family]['function']['Function_description']
+			if model_state == 'Model exists':
+				model_state = families_summary[family]['structure']
+			elif model_state == 'Model does not exist':
+				model_state = 'click to model/view with Swiss-Model'
+			else:
+				if family > 0 and family < 10000:
+					model_state = 'Not possible to find'
+				else:
+					model_state = 'n.a.'
+		else:
+			model_state = ''
+			
+		data['found_models'].append(model_state)
+		
+		if family > 0 and family < 10000 and 'function' in families_summary[family]:
+			if 'TM_topology' in families_summary[family]['function']:
+				tm_type = families_summary[family]['function']["TM_topology"]
+				keywords = ', '.join(sorted(families_summary[family]['function']['Keywords']))
+				go_terms = '; '.join(sorted(families_summary[family]['function']['GO_terms']))
+				function = families_summary[family]['function']['Function_description']
 
-                if len(tm_type) > 0:
-                    tm_text = 'TM'
-                    tm_mode = 'Yes -> type:'
-                else:
-                    tm_text = ''
-                    tm_mode = 'No'
-            else:
-                tm_type = ''
-                tm_text = ''
-                tm_mode = ''
-                keywords = ''
-                go_terms = ''   
-                function = ''
-        else:
-            tm_type = 'n.a.'
-            tm_text = ''
-            tm_mode = 'n.a.'
-            keywords = 'n.a.'
-            go_terms = 'n.a.'   
-            function = 'n.a.'
-        
-        if 'structure' in families_summary[family]:
-            structure = families_summary[family]['structure']
-            if structure == '':
-                uniprot_code = families_summary[family]['uniprot_code']
-                structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
-        else:
-            structure = 'n.a.'
-            
-        data['model_links'].append(structure)
-        
-        data['facecolor'].append(family_colors[family]['Color (RGBA)'])
-        data['edgecolor'].append(family_colors[family]['Line color'])
-        data['xs'].append([5, 5, dx-5, dx, dx-5])
-        data['ys'].append([curr_y-0.25, curr_y+0.25, curr_y+0.25, curr_y, curr_y-0.25])
-        data['text_x'].append(((dx-10)/2)+5)
-        data['text_y'].append(curr_y+0.25)
-        
-        data['label_x'].append(dx + 10) 
-        data['label_y'].append(curr_y) 
-        
-        data['tm_text_x'].append(((dx-10)/2)+5)
-        data['tm_text_y'].append(curr_y)
-        data['tm_text'].append(tm_text)
-        data['tm_type'].append(tm_type)
-        data['tm_mode'].append(tm_mode)
-        
-        data['go_terms'].append(go_terms)
-        data['keywords'].append(keywords)
-        data['function'].append(function)
-        
-        curr_y -= 1
-        
-    tooltips = [('Protein family', '@text'),
-                ('Protein family code', '@family'),
-                ('Structure', '@found_models'),
-                ('Predicted membrane protein', '@tm_mode @tm_type'),
-                ('Keywords', '@keywords'),
-                ('GO terms', '@go_terms'),
-                ('Function', '@function')]
-    
-    return tooltips, data
+				if len(tm_type) > 0:
+					tm_text = 'TM'
+					tm_mode = 'Yes -> type:'
+				else:
+					tm_text = ''
+					tm_mode = 'No'
+			else:
+				tm_type = ''
+				tm_text = ''
+				tm_mode = ''
+				keywords = ''
+				go_terms = ''   
+				function = ''
+		else:
+			tm_type = 'n.a.'
+			tm_text = ''
+			tm_mode = 'n.a.'
+			keywords = 'n.a.'
+			go_terms = 'n.a.'   
+			function = 'n.a.'
+		
+		if 'structure' in families_summary[family]:
+			structure = families_summary[family]['structure']
+			if structure == '':
+				uniprot_code = families_summary[family]['uniprot_code']
+				structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
+		else:
+			structure = 'n.a.'
+			
+		data['model_links'].append(structure)
+		
+		data['facecolor'].append(family_colors[family]['Color (RGBA)'])
+		data['edgecolor'].append(family_colors[family]['Line color'])
+		data['xs'].append([5, 5, dx-5, dx, dx-5])
+		data['ys'].append([curr_y-0.25, curr_y+0.25, curr_y+0.25, curr_y, curr_y-0.25])
+		data['text_x'].append(((dx-10)/2)+5)
+		data['text_y'].append(curr_y+0.25)
+		
+		data['label_x'].append(dx + 10) 
+		data['label_y'].append(curr_y) 
+		
+		data['tm_text_x'].append(((dx-10)/2)+5)
+		data['tm_text_y'].append(curr_y)
+		data['tm_text'].append(tm_text)
+		data['tm_type'].append(tm_type)
+		data['tm_mode'].append(tm_mode)
+		
+		data['go_terms'].append(go_terms)
+		data['keywords'].append(keywords)
+		data['function'].append(function)
+		
+		curr_y -= 1
+		
+	tooltips = [('Protein family', '@text'),
+				('Protein family code', '@family'),
+				('Structure', '@found_models'),
+				('Predicted membrane protein', '@tm_mode @tm_type'),
+				('Keywords', '@keywords'),
+				('GO terms', '@go_terms'),
+				('Function', '@function')]
+	
+	return tooltips, data
 
 def create_legend_figure(operons, families_summary, reference_family, family_colors, grid, rescale_height = False):
-    
-    l_tooltips, l_data = create_legend_features(operons, families_summary, reference_family, family_colors)
-    
-    height = int(len(family_colors)*25*1.2)
-    
-    if len(l_data['ys']) > len(operons) or rescale_height:
-        height = grid.height
-        
-    l = figure(plot_width=500, plot_height=height, x_range = [0,500], title = 'Protein families (click to view in Swiss-Model Repository)', toolbar_location="right")  # the legend figure
-    
-    for i, xs in enumerate(l_data['xs']):
-        l.patch(xs, l_data['ys'][i], fill_color = l_data['facecolor'][i], line_color = l_data['edgecolor'][i], line_width = 1)    
-    
-    l.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = l_data, 
-              hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
-              selection_fill_color='facecolor', selection_line_color='edgecolor',
-              nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
+	
+	l_tooltips, l_data = create_legend_features(operons, families_summary, reference_family, family_colors)
+	
+	height = int(len(family_colors)*25*1.2)
+	
+	if len(l_data['ys']) > len(operons) or rescale_height:
+		height = grid.height
+		
+	l = figure(plot_width=500, plot_height=height, x_range = [0,500], title = 'Protein families (click to view in Swiss-Model Repository)', toolbar_location="right")  # the legend figure
+	
+	for i, xs in enumerate(l_data['xs']):
+		l.patch(xs, l_data['ys'][i], fill_color = l_data['facecolor'][i], line_color = l_data['edgecolor'][i], line_width = 1)	
+	
+	l.patches('xs', 'ys', fill_color = None, line_color = None, line_width = 0, source = l_data, 
+			  hover_fill_color = 'white', hover_line_color = 'edgecolor', hover_fill_alpha = 0.5, 
+			  selection_fill_color='facecolor', selection_line_color='edgecolor',
+			  nonselection_fill_color='facecolor', nonselection_line_color='edgecolor', nonselection_fill_alpha=0.2)
 
-    l.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = l_data)
-    l.text('label_x', 'label_y', text = 'text', text_baseline="middle", text_align="left", text_font_size = {'value': '8pt'}, source = l_data)
-    l.text('tm_text_x', 'tm_text_y', text = 'tm_text',  text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = l_data)
-    
-    l.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
-    l.xaxis.minor_tick_line_color = None  # turn off x-axis minor ticks
-    l.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
-    l.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
-    l.xaxis.major_label_text_color = None  # turn off x-axis tick labels leaving space
-    l.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
-    l.yaxis.axis_line_width = 0
-    l.xaxis.axis_line_width = 0
-    # define general features
-    l.grid.visible = False
-    l.outline_line_width = 0
-    
-    l.add_tools(HoverTool(tooltips=l_tooltips))
-    l.add_tools(TapTool(callback = OpenURL(url='@model_links')))
-            
-    return l
+	l.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = l_data)
+	l.text('label_x', 'label_y', text = 'text', text_baseline="middle", text_align="left", text_font_size = {'value': '8pt'}, source = l_data)
+	l.text('tm_text_x', 'tm_text_y', text = 'tm_text',  text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = l_data)
+	
+	l.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
+	l.xaxis.minor_tick_line_color = None  # turn off x-axis minor ticks
+	l.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
+	l.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
+	l.xaxis.major_label_text_color = None  # turn off x-axis tick labels leaving space
+	l.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
+	l.yaxis.axis_line_width = 0
+	l.xaxis.axis_line_width = 0
+	# define general features
+	l.grid.visible = False
+	l.outline_line_width = 0
+	
+	l.add_tools(HoverTool(tooltips=l_tooltips))
+	l.add_tools(TapTool(callback = OpenURL(url='@model_links')))
+			
+	return l
 
 # 9.5. Routines to make the gene correlation figure
 
 def get_coocurrence_matrix(operons, families_summary, min_coocc = 0.40):
-    
-    family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
-    matrix = [[0 for family in family_labels] for family in family_labels]
+	
+	family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
+	matrix = [[0 for family in family_labels] for family in family_labels]
 
-    context_count = 0
-    for operon in operons:
-        for genomic_context in operons[operon]['operon_protein_families_structure']:
-            for i in range(len(set(genomic_context))):
-                for j in range(len(set(genomic_context))):
-                    if i > j:
-                        out_family = list(set(genomic_context))[i]
-                        in_family = list(set(genomic_context))[j]
+	context_count = 0
+	for operon in operons:
+		for genomic_context in operons[operon]['operon_protein_families_structure']:
+			for i in range(len(set(genomic_context))):
+				for j in range(len(set(genomic_context))):
+					if i > j:
+						out_family = list(set(genomic_context))[i]
+						in_family = list(set(genomic_context))[j]
 
-                        if all(family > 0 and family < 10000 for family in [out_family, in_family]):
-                            matrix[family_labels.index(out_family)][family_labels.index(in_family)] += 1
-                            matrix[family_labels.index(in_family)][family_labels.index(out_family)] += 1
+						if all(family > 0 and family < 10000 for family in [out_family, in_family]):
+							matrix[family_labels.index(out_family)][family_labels.index(in_family)] += 1
+							matrix[family_labels.index(in_family)][family_labels.index(out_family)] += 1
 
 
-    matrix = np.array(matrix)
-    matrix = matrix/np.amax(matrix)
-    matrix = np.where(matrix < min_coocc, 0, matrix)
-    matrix = np.where(matrix!=0, (np.exp(matrix*2)-1)*1, matrix)
+	matrix = np.array(matrix)
+	matrix = matrix/np.amax(matrix)
+	matrix = np.where(matrix < min_coocc, 0, matrix)
+	matrix = np.where(matrix!=0, (np.exp(matrix*2)-1)*1, matrix)
 
-    # remove all columns and lines with all zero
-    indices_with_all_zeros = np.all(matrix == 0, axis=1)
+	# remove all columns and lines with all zero
+	indices_with_all_zeros = np.all(matrix == 0, axis=1)
 
-    matrix = matrix[~indices_with_all_zeros]
-    matrix = matrix.T[~indices_with_all_zeros]
+	matrix = matrix[~indices_with_all_zeros]
+	matrix = matrix.T[~indices_with_all_zeros]
 
-    selected_families = np.array(family_labels)[~indices_with_all_zeros]
-    selected_families_summary = {family: families_summary[family] for family in selected_families}
-    
-    return matrix, selected_families_summary
+	selected_families = np.array(family_labels)[~indices_with_all_zeros]
+	selected_families_summary = {family: families_summary[family] for family in selected_families}
+	
+	return matrix, selected_families_summary
 
 def get_adjcency_matrix(operons, families_summary):
-    
-    family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
-    matrix = [[0 for family in family_labels] for family in family_labels]
-    
-    context_count = 0
-    for operon in operons:
-        for genomic_context in operons[operon]['operon_protein_families_structure']:
-            for i in range(len(genomic_context)-1):
-                out_family = genomic_context[i]
-                in_family = genomic_context[i+1]
+	
+	family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
+	matrix = [[0 for family in family_labels] for family in family_labels]
+	
+	context_count = 0
+	for operon in operons:
+		for genomic_context in operons[operon]['operon_protein_families_structure']:
+			for i in range(len(genomic_context)-1):
+				out_family = genomic_context[i]
+				in_family = genomic_context[i+1]
 
-                if all(family > 0 and family < 10000 for family in [out_family, in_family]):
-                    matrix[family_labels.index(out_family)][family_labels.index(in_family)] += 1
-                    matrix[family_labels.index(in_family)][family_labels.index(out_family)] += 1
+				if all(family > 0 and family < 10000 for family in [out_family, in_family]):
+					matrix[family_labels.index(out_family)][family_labels.index(in_family)] += 1
+					matrix[family_labels.index(in_family)][family_labels.index(out_family)] += 1
 
-    matrix = np.array(matrix)
-    
-    return matrix, family_labels
+	matrix = np.array(matrix)
+	
+	return matrix, family_labels
 
 def get_graph_from_matrix(matrix, selected_families_summary, family_colors):
-    
-    G=nx.from_numpy_matrix(matrix)
+	
+	G=nx.from_numpy_matrix(matrix)
 
-    # take care of the edges
-    edge_params = {'color': {}, 'weight': {}, 'line_width': {}}
-    edge_cmap = matplotlib.cm.get_cmap('Greys')
-    edge_norm = matplotlib.colors.Normalize(vmin = 0, vmax = 4)
+	# take care of the edges
+	edge_params = {'color': {}, 'weight': {}, 'line_width': {}}
+	edge_cmap = matplotlib.cm.get_cmap('Greys')
+	edge_norm = matplotlib.colors.Normalize(vmin = 0, vmax = 4)
 
-    for start_node, end_node, params in G.edges(data=True):
-        edge_color = edge_cmap(edge_norm(round(params['weight'])))
-        edge_params['line_width'][(start_node, end_node)] = params['weight']
-        edge_params['color'][(start_node, end_node)] = RGB(int(255*list(edge_color)[0]), int(255*list(edge_color)[1]), int(255*list(edge_color)[2]))
-        edge_params['weight'][(start_node, end_node)] = 1
-        
-    # take care of the nodes
-    node_params = {'color': {}, 'label': {}}
-    for node, _ in G.nodes(data=True):
-        node_label = sorted(list(selected_families_summary.keys()))[node]
-        node_params['label'][node] = node_label
+	for start_node, end_node, params in G.edges(data=True):
+		edge_color = edge_cmap(edge_norm(round(params['weight'])))
+		edge_params['line_width'][(start_node, end_node)] = params['weight']
+		edge_params['color'][(start_node, end_node)] = RGB(int(255*list(edge_color)[0]), int(255*list(edge_color)[1]), int(255*list(edge_color)[2]))
+		edge_params['weight'][(start_node, end_node)] = 1
+		
+	# take care of the nodes
+	node_params = {'color': {}, 'label': {}}
+	for node, _ in G.nodes(data=True):
+		node_label = sorted(list(selected_families_summary.keys()))[node]
+		node_params['label'][node] = node_label
 
-        node_color = family_colors[node_label]['Color (RGBA)']
-        node_params['color'][node] = node_color
+		node_color = family_colors[node_label]['Color (RGBA)']
+		node_params['color'][node] = node_color
 
-    nx.set_node_attributes(G, node_params['color'], "node_color")
-    nx.set_node_attributes(G, node_params['label'], "node_label")
-    nx.set_edge_attributes(G, edge_params['color'], "edge_color")
-    nx.set_edge_attributes(G, edge_params['line_width'], "line_width")
-    nx.set_edge_attributes(G, edge_params['weight'], "weight")
-    
-    return G
+	nx.set_node_attributes(G, node_params['color'], "node_color")
+	nx.set_node_attributes(G, node_params['label'], "node_label")
+	nx.set_edge_attributes(G, edge_params['color'], "edge_color")
+	nx.set_edge_attributes(G, edge_params['line_width'], "line_width")
+	nx.set_edge_attributes(G, edge_params['weight'], "weight")
+	
+	return G
 
 def remove_non_adjacent_edges(operons, families_summary, G, families_present):
-    
-    adjacency_matrix, family_labels = get_adjcency_matrix(operons, families_summary)
-    
-    edges_to_remove = []
-    for start_node, end_node, params in G.edges(data=True):
-        start_node_index = family_labels.index(families_present[start_node])
-        end_node_index = family_labels.index(families_present[end_node])
-        
-        if adjacency_matrix[start_node_index][end_node_index] == 0:
-            edges_to_remove.append((start_node, end_node))
-    
-    for edge in edges_to_remove:
-        G.remove_edge(*edge)
-    
-    return G
+	
+	adjacency_matrix, family_labels = get_adjcency_matrix(operons, families_summary)
+	
+	edges_to_remove = []
+	for start_node, end_node, params in G.edges(data=True):
+		start_node_index = family_labels.index(families_present[start_node])
+		end_node_index = family_labels.index(families_present[end_node])
+		
+		if adjacency_matrix[start_node_index][end_node_index] == 0:
+			edges_to_remove.append((start_node, end_node))
+	
+	for edge in edges_to_remove:
+		G.remove_edge(*edge)
+	
+	return G
 
 def create_node_features(families_summary, reference_family, node_graph_coords, G):
-    
-    data = {'text_x': [],
-            'text_y': [],
-            'family': [],
-            'tm_text_x': [],
-            'tm_text_y': [],
-            'tm_text': [],
-            'tm_type': [],
-            'tm_pred_text': [],
-            'protein_name': [],
-            'found_models': [],
-            'model_links': []}
-    
-    for node in node_graph_coords:
-        
-        family = G.nodes[node]['node_label']
-        coords = node_graph_coords[node]
-        protein_name = families_summary[family]['name']
-        
-        if family > 0 and family < 10000 and 'function' in families_summary[family]:
-            if 'TM_topology' in families_summary[family]['function']:
-                tm_type = families_summary[family]['function']["TM_topology"]
-                
-                if len(tm_type) > 0:
-                    tm_text = 'TM'
-                    tm_mode = 'Yes -> type:'
-                else:
-                    tm_text = ''
-                    tm_mode = 'No'
-            else:
-                tm_type = ''
-                tm_text = ''
-                tm_mode = ''
-        else:
-            tm_type = 'n.a.'
-            tm_text = ''
-            tm_mode = 'n.a.'
-        
-        if 'model_state' in families_summary[family]:
-            model_state = families_summary[family]['model_state']
+	
+	data = {'text_x': [],
+			'text_y': [],
+			'family': [],
+			'tm_text_x': [],
+			'tm_text_y': [],
+			'tm_text': [],
+			'tm_type': [],
+			'tm_pred_text': [],
+			'protein_name': [],
+			'found_models': [],
+			'model_links': []}
+	
+	for node in node_graph_coords:
+		
+		family = G.nodes[node]['node_label']
+		coords = node_graph_coords[node]
+		protein_name = families_summary[family]['name']
+		
+		if family > 0 and family < 10000 and 'function' in families_summary[family]:
+			if 'TM_topology' in families_summary[family]['function']:
+				tm_type = families_summary[family]['function']["TM_topology"]
+				
+				if len(tm_type) > 0:
+					tm_text = 'TM'
+					tm_mode = 'Yes -> type:'
+				else:
+					tm_text = ''
+					tm_mode = 'No'
+			else:
+				tm_type = ''
+				tm_text = ''
+				tm_mode = ''
+		else:
+			tm_type = 'n.a.'
+			tm_text = ''
+			tm_mode = 'n.a.'
+		
+		if 'model_state' in families_summary[family]:
+			model_state = families_summary[family]['model_state']
 
-            if model_state == 'Model exists':
-                model_state = 'Yes (click to view in Swiss-Model repository)'
-            elif model_state == 'Model does not exist':
-                model_state = 'No (click to model with Swiss-Model)'
-            else:
-                if family > 0 and family < 10000:
-                    model_state = 'Not possible to find'
-                else:
-                    model_state = ''
-            
-            structure = families_summary[family]['structure']
-            if structure == '':
-                uniprot_code = families_summary[family]['uniprot_code']
-                structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
-            
-        else:
-            model_state = 'n.a.'
-            structure = 'n.a.'
-        
-        if family != 0 and family != reference_family and family < 10000:
-            data['family'].append(family)
-        else:
-            data['family'].append(str(''))
-            
-        data['found_models'].append(model_state)
-        data['model_links'].append(structure)
-        
-        y_range = (min([node_graph_coords[node][1] for node in node_graph_coords])-0.5, max([node_graph_coords[node][1] for node in node_graph_coords])+0.5)
-        y_step = (y_range[1]-y_range[0])*0.09
+			if model_state == 'Model exists':
+				model_state = 'Yes (click to view in Swiss-Model repository)'
+			elif model_state == 'Model does not exist':
+				model_state = 'No (click to model with Swiss-Model)'
+			else:
+				if family > 0 and family < 10000:
+					model_state = 'Not possible to find'
+				else:
+					model_state = ''
+			
+			structure = families_summary[family]['structure']
+			if structure == '':
+				uniprot_code = families_summary[family]['uniprot_code']
+				structure = 'https://swissmodel.expasy.org/repository/uniprot/{}'.format(uniprot_code)
+			
+		else:
+			model_state = 'n.a.'
+			structure = 'n.a.'
+		
+		if family != 0 and family != reference_family and family < 10000:
+			data['family'].append(family)
+		else:
+			data['family'].append(str(''))
+			
+		data['found_models'].append(model_state)
+		data['model_links'].append(structure)
+		
+		y_range = (min([node_graph_coords[node][1] for node in node_graph_coords])-0.5, max([node_graph_coords[node][1] for node in node_graph_coords])+0.5)
+		y_step = (y_range[1]-y_range[0])*0.09
 
-        data['text_x'].append(coords[0])
-        data['text_y'].append(coords[1]+y_step)
-        
-        data['tm_text_x'].append(coords[0])
-        data['tm_text_y'].append(coords[1])
-        data['tm_text'].append(tm_text)
-        data['tm_pred_text'].append(tm_mode)
-        data['tm_type'].append(tm_type)
-        
-        data['protein_name'].append(protein_name)
-        
-    
-    tooltips = [('Protein name', "@protein_name"),
-                ('Protein family code', '@family'),
-                ("Predicted membrane protein", "@tm_pred_text @tm_type"),
-                ('Structural model found', '@found_models')] 
-    
-    return data, tooltips
+		data['text_x'].append(coords[0])
+		data['text_y'].append(coords[1]+y_step)
+		
+		data['tm_text_x'].append(coords[0])
+		data['tm_text_y'].append(coords[1])
+		data['tm_text'].append(tm_text)
+		data['tm_pred_text'].append(tm_mode)
+		data['tm_type'].append(tm_type)
+		
+		data['protein_name'].append(protein_name)
+		
+	
+	tooltips = [('Protein name', "@protein_name"),
+				('Protein family code', '@family'),
+				("Predicted membrane protein", "@tm_pred_text @tm_type"),
+				('Structural model found', '@found_models')] 
+	
+	return data, tooltips
 
 def create_graph_figure(operons, reference_family, families_summary, family_colors, gc, min_coocc = 0.40, mode = 'coocurrence', graph_coord = {}, previous_net = ''):
-    
-    matrix, selected_families_summary = get_coocurrence_matrix(operons, families_summary, min_coocc = min_coocc)
-    graph = get_graph_from_matrix(matrix, selected_families_summary, family_colors)
-    
-    if mode == 'coocurrence':
-        title = 'Gene co-occurrence network'
-    elif mode == 'adjacency':
-        graph = remove_non_adjacent_edges(operons, families_summary, graph, families_present = sorted(list(selected_families_summary.keys())))
-        title = 'Gene adjcency network'
-    
-    if len(graph_coord) == 0:
-        graph_coord = nx.spring_layout(graph)
-    
-    node_data, node_tooltips = create_node_features(selected_families_summary, reference_family, graph_coord, graph)
-        
-    if previous_net != '':
-        x_range = previous_net.x_range
-        y_range = previous_net.y_range
-        
-    else:
-        x_range = (min([graph_coord[node][0] for node in graph_coord])-0.5, max([graph_coord[node][0] for node in graph_coord])+0.5)
-        y_range = (min([graph_coord[node][1] for node in graph_coord])-0.5, max([graph_coord[node][1] for node in graph_coord])+0.5)
+	
+	matrix, selected_families_summary = get_coocurrence_matrix(operons, families_summary, min_coocc = min_coocc)
+	graph = get_graph_from_matrix(matrix, selected_families_summary, family_colors)
+	
+	if mode == 'coocurrence':
+		title = 'Gene co-occurrence network'
+	elif mode == 'adjacency':
+		graph = remove_non_adjacent_edges(operons, families_summary, graph, families_present = sorted(list(selected_families_summary.keys())))
+		title = 'Gene adjcency network'
+	
+	if len(graph_coord) == 0:
+		graph_coord = nx.spring_layout(graph)
+	
+	node_data, node_tooltips = create_node_features(selected_families_summary, reference_family, graph_coord, graph)
+		
+	if previous_net != '':
+		x_range = previous_net.x_range
+		y_range = previous_net.y_range
+		
+	else:
+		x_range = (min([graph_coord[node][0] for node in graph_coord])-0.5, max([graph_coord[node][0] for node in graph_coord])+0.5)
+		y_range = (min([graph_coord[node][1] for node in graph_coord])-0.5, max([graph_coord[node][1] for node in graph_coord])+0.5)
 
-    g = figure(width = gc.plot_width, height = gc.plot_height, x_range=x_range, y_range=y_range, title = title)
+	g = figure(width = gc.plot_width, height = gc.plot_height, x_range=x_range, y_range=y_range, title = title)
 
-    graph_renderer = from_networkx(graph, graph_coord, scale=1, center=(0, 0))
-    graph_renderer.edge_renderer.glyph = MultiLine(line_width="line_width", line_color = "edge_color")
-    graph_renderer.node_renderer.glyph = Circle(size=22, fill_color = "node_color")
-    
-    g.renderers.append(graph_renderer)
-    
-    g.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = node_data)
-    g.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = node_data)
-    g.circle('tm_text_x', 'tm_text_y', color = None, size = 22, source = node_data)
-    
-    g.add_tools(HoverTool(tooltips=node_tooltips))
-    g.add_tools(TapTool(callback = OpenURL(url='@model_links')))
+	graph_renderer = from_networkx(graph, graph_coord, scale=1, center=(0, 0))
+	graph_renderer.edge_renderer.glyph = MultiLine(line_width="line_width", line_color = "edge_color")
+	graph_renderer.node_renderer.glyph = Circle(size=22, fill_color = "node_color")
+	
+	g.renderers.append(graph_renderer)
+	
+	g.text('text_x', 'text_y', text = 'family', text_baseline="bottom", text_align="center", text_font_size = {'value': '6pt'}, source = node_data)
+	g.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = node_data)
+	g.circle('tm_text_x', 'tm_text_y', color = None, size = 22, source = node_data)
+	
+	g.add_tools(HoverTool(tooltips=node_tooltips))
+	g.add_tools(TapTool(callback = OpenURL(url='@model_links')))
 
-    g.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
-    g.xaxis.minor_tick_line_color = None  # turn off x-axis minor ticks
-    g.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
-    g.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
-    g.xaxis.major_label_text_color = None  # turn off x-axis tick labels leaving space
-    g.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
-    g.yaxis.axis_line_width = 0
-    g.xaxis.axis_line_width = 0
-    # define general features
-    g.grid.visible = False
-    g.outline_line_width = 0
-    
-    return g, graph_coord
+	g.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
+	g.xaxis.minor_tick_line_color = None  # turn off x-axis minor ticks
+	g.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
+	g.yaxis.minor_tick_line_color = None  # turn off y-axis minor ticks
+	g.xaxis.major_label_text_color = None  # turn off x-axis tick labels leaving space
+	g.yaxis.major_label_text_color = None  # turn off y-axis tick labels leaving space 
+	g.yaxis.axis_line_width = 0
+	g.xaxis.axis_line_width = 0
+	# define general features
+	g.grid.visible = False
+	g.outline_line_width = 0
+	
+	return g, graph_coord
 
 # 10. Routines to deal with Clans maps
 
@@ -2182,52 +2231,52 @@ def get_ncbicodes_order_in_clans(clans_file):
    count = 0
    found_seq = False
    with open(clans_file, 'r') as clans:
-       for line in clans:
-           if '<seq>' in line:
-               found_seq = True
-           elif '</seq>' in line:
-               found_seq = False
-           elif found_seq and line.startswith('>'):
-               line = line[1:]
-               ncbi_code = line.split(' ')[0].split(':')[0].split('|')[0].split('_#')[0].replace('>','').strip()
-               ncbids_ordered.append(ncbi_code)
-               
+	   for line in clans:
+		   if '<seq>' in line:
+			   found_seq = True
+		   elif '</seq>' in line:
+			   found_seq = False
+		   elif found_seq and line.startswith('>'):
+			   line = line[1:]
+			   ncbi_code = line.split(' ')[0].split(':')[0].split('|')[0].split('_#')[0].replace('>','').strip()
+			   ncbids_ordered.append(ncbi_code)
+			   
    return ncbids_ordered
 
 def get_clusters_from_clans(clans_file, cluster_codes = None):
 
-    ncbis_ordered = get_ncbicodes_order_in_clans(clans_file)
+	ncbis_ordered = get_ncbicodes_order_in_clans(clans_file)
 
-    if cluster_codes != None:
-    
-	    clusters = {}
+	if cluster_codes != None:
+	
+		clusters = {}
 
-	    found_seqgroup = False
-	    with open(clans_file, 'r') as in_clans:
-	        for line in in_clans:
-	            for cluster_code in cluster_codes:
-	                if '<seqgroup' in line:
-	                    found_seqgroup = True
-	                    found_allowed_cluster = False
+		found_seqgroup = False
+		with open(clans_file, 'r') as in_clans:
+			for line in in_clans:
+				for cluster_code in cluster_codes:
+					if '<seqgroup' in line:
+						found_seqgroup = True
+						found_allowed_cluster = False
 
-	                elif found_seqgroup:
-	                    if 'name=' in line and cluster_code in line:
-	                        current_cluster = line.split('=')[-1].strip()
-	                        found_allowed_cluster = True
-	                       
-	                    elif 'numbers=' in line and found_allowed_cluster:
-	                        numbers = line.split('=')[-1].split(';')[:-1]
-	                        numbers = [int(i) for i in numbers]
-	                        numbers = [ncbis_ordered[i] for i in numbers]
-	                        clusters[current_cluster] = numbers
+					elif found_seqgroup:
+						if 'name=' in line and cluster_code in line:
+							current_cluster = line.split('=')[-1].strip()
+							found_allowed_cluster = True
+						   
+						elif 'numbers=' in line and found_allowed_cluster:
+							numbers = line.split('=')[-1].split(';')[:-1]
+							numbers = [int(i) for i in numbers]
+							numbers = [ncbis_ordered[i] for i in numbers]
+							clusters[current_cluster] = numbers
 
-	                        found_allowed_cluster = False
+							found_allowed_cluster = False
 
-    else:
-    	label = target.split('/')[-1].split('.')[0]
-    	clusters[label] = ncbis_ordered
+	else:
+		label = target.split('/')[-1].split('.')[0]
+		clusters[label] = ncbis_ordered
 
-    return clusters
+	return clusters
 
 # MAIN ROUTINES (corresponding to the major steps in the pipeline)
 
@@ -2308,14 +2357,36 @@ def download_and_parse_refseq_and_gb_databases(databases = ['genbank', 'refseq']
 		
 	return database_assembly_mapping
 
-def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_assembly_map = None, n_flanking5 = None, n_flanking3 = None, exclude_partial = None, tmp_folder = None):
+def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_assembly_map = None, n_flanking5 = None, n_flanking3 = None, exclude_partial = None, tmp_folder = None, threads = None):
 
-	out_json = 'genomic_context_information.json'
+	# Prepare all parallel jobs
+	separated_jobs = chunk_list(target_ncbi_codes, threads)
+
+	list_arguments = [i for i in zip(separated_jobs, [refseq_gb_assembly_map for job in separated_jobs], [n_flanking5 for job in separated_jobs], [n_flanking3 for job in separated_jobs], [exclude_partial for job in separated_jobs], [tmp_folder for job in separated_jobs], range(threads))]
+
+	pool = ThreadPool(threads)
+	results = pool.imap_unordered(get_genomic_contexts_for_ncbi_codes, list_arguments)
+
+	all_syntenies = {key: dic[key] for dic in results for key in dic.keys()}
+	
+	return all_syntenies  
+
+def get_genomic_contexts_for_ncbi_codes(arguments):
+
+	target_ncbi_codes = arguments[0]
+	refseq_gb_assembly_map = arguments[1]
+	n_flanking5 = arguments[2]
+	n_flanking3 = arguments[3]
+	exclude_partial = arguments[4]
+	tmp_folder = arguments[5]
+	thread_id = arguments[6]
+
+	out_json = '{}_genomic_context_information.json'.format(thread_id)
 	if os.path.isfile(out_json):
 		with open(out_json, 'r') as fp:	 # allows to restart the searches without having to get all the info again in case it crashes
 			all_syntenies = json.load(fp)
 			starting_i = target_ncbi_codes.index(list(all_syntenies.keys())[-1])+1
-			print(' ... A partial search was already performed for {} entrezIDs (from which, {} were valid). Will continue it.\n'.format(starting_i+1, len(all_syntenies)))
+			print(' ... Thread {}: A partial search was already performed for {} entrezIDs (from which, {} were valid). Will continue it.\n'.format(thread_id, starting_i+1, len(all_syntenies)))
 	else:
 		all_syntenies = {}
 		starting_i = 0
@@ -2328,7 +2399,7 @@ def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_
 
 		if assembly_id != 'nan':
 			print(" ... {} belongs to assembly {} ({}/{})".format(curr_target_code, assembly_id, curr_target_count, len(target_ncbi_codes)))
-			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code)
+			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code, get_chunk = True, chunk_size = ((n_flanking5+n_flanking3)*2)+1, target = curr_target_code)
 
 			if assembly != 'nan':
 				flanking_genes = get_n_flanking_genes(ncbi_code, assembly, n_5 = n_flanking5, n_3 = n_flanking3, exclude_partial = exclude_partial)
@@ -2409,18 +2480,46 @@ def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = 
 	
 	return in_syntenies, protein_families
 
-def update_families_with_functions_and_structures(protein_families_summary, get_pdb = None, get_functional_annotations = None):
+def update_families_with_functions_and_structures(protein_families_summary, get_pdb = None, get_functional_annotations = None, threads = 1):
+
+	# Prepare all parallel jobs
+	separated_jobs = chunk_list(sorted(list(protein_families_summary.keys())), threads)
+
+	list_arguments = [i for i in zip(separated_jobs, [protein_families_summary for job in separated_jobs], [get_pdb for job in separated_jobs], [get_functional_annotations for job in separated_jobs])]
+
+	pool = ThreadPool(threads)
+	results = pool.imap_unordered(add_functions_and_structures_to_families, list_arguments)
+
+	protein_families_summary = {key: dic[key] for dic in results for key in dic.keys()}
+
+	json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
+
+	return protein_families_summary
+
+def add_functions_and_structures_to_families(arguments):
+
+	targets = arguments[0]
+	protein_families_summary = arguments[1]
+	get_pdb = arguments[2]
+	get_functional_annotations = arguments[3]
+
+	protein_families_summary = {key.item(): protein_families_summary[key.item()] for key in targets}
 
 	for family in sorted(list(protein_families_summary.keys())):
-
 		if 'function' not in protein_families_summary[family]:
 			if family > 0 and family < 10000:
+
+				print(' ... Family {} ({} members)'.format(family, len(protein_families_summary[family]['members'])))
+
 				family_function = ''
 				family_structure = ''
 				family_uniprot_code = ''
 				family_model_state = 'Model does not exist'
 
+				# print('... ... Mapping to UniProt')
 				family_uniprot_codes = map_codes_to_uniprot(protein_families_summary[family]['members'])
+
+				# print('... ... Finding annotations and/or structures')
 
 				for target in sorted(protein_families_summary[family]['members']):
 					uniprot_code = family_uniprot_codes[target]
@@ -2460,8 +2559,6 @@ def update_families_with_functions_and_structures(protein_families_summary, get_
 			protein_families_summary[family]['structure'] = family_structure
 			protein_families_summary[family]['uniprot_code'] = family_uniprot_code
 			protein_families_summary[family]['model_state'] = family_model_state
-
-			json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
 
 	return protein_families_summary
 
@@ -2561,7 +2658,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 
 	# Make a grid out of them
 	grid = gridplot([[None, tabs, None], 
-	                 [syn_dendogram, genomic_context_figure, legend_figure]], merge_tools = True)
+					 [syn_dendogram, genomic_context_figure, legend_figure]], merge_tools = True)
 
 	save(grid)
 
@@ -2600,14 +2697,17 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser('GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts')
-	requiredNamed = parser.add_argument_group('required arguments')
-	optionalNamed = parser.add_argument_group('optional arguments with defaults')
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.9', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
+									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
+
+	requiredNamed = parser.add_argument_group('Required arguments')
+	optionalNamed = parser.add_argument_group('Options with defaults')
 
 	# required inputs
 	requiredNamed.add_argument('-targets', dest='targets', nargs='+', required=True, help='List of input targets. Can be a list of fasta files, a list of text files encompassing a list of protein sequence identifiers, a list of protein sequence identifiers, or a mix of them')
 	# optional inputs
-	optionalNamed.add_argument('-user_email', dest='user_email', type=str, default = None, help='Email address of the user. May be required to access NCBI databases and isn not used for anything else (default: None')
+	optionalNamed.add_argument('-user_email', dest='user_email', type=str, default = None, help='Email address of the user. May be required to access NCBI databases and is not used for anything else (default: None)')
 	optionalNamed.add_argument('-ncbi_api_key', dest='ncbi_api_key', default = None,type=str, help='The key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Shall be obtained after obtaining an NCBI account (default: None)')
 	optionalNamed.add_argument('-get_taxonomy', dest='get_taxonomy', default = 'True',type=str, help='Boolean statement to get and map taxonomy information (default: True)')
 	optionalNamed.add_argument('-cpu', dest='n_cpu', default = 1,type=int, help='Number of cpus to use (default: 1)')
@@ -2642,6 +2742,11 @@ def main():
 	optionalNamed.add_argument('-in_tree_format', dest='in_tree_format', default = "newick", type=str, help='Format of the input phylogenetic tree (default: newick)')
 	# clans map optional inputs
 	optionalNamed.add_argument('-clans_patterns', dest='clans_patterns', default = None,type=str, nargs='+', help='Patterns to identify the clusters to analyse. They will be used to select the individual clusters in the clans map to analyse (default: None).')
+
+	# print help message if GCsnap is run also without any arguments
+	if len(sys.argv)==1:
+		parser.print_help(sys.stderr)
+		sys.exit(1)
 
 	# Define inputs
 	args = parser.parse_args()
@@ -2755,86 +2860,98 @@ def main():
 			
 		# Collect the genomic_context of all target ncbi codes 
 		curr_targets = targets[out_label]
-		print("\n 1. Collecting the genomic contexts of {} unique input entrezIDs (may take some time)\n".format(len(curr_targets)))
-		all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder)
 
-		# Find shared protein families by running all-against-all blast searches for all proteins collected
-		print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
-		all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
+		if len(curr_targets) > 1:
+			print("\n 1. Collecting the genomic contexts of {} unique input entrezIDs (may take some time)\n".format(len(curr_targets)))
+			all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder, threads = n_cpus)
 
-		# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
-		if get_pdb or get_functional_annotations:
+			if len(all_syntenies) > 1:
+				# Find shared protein families by running all-against-all blast searches for all proteins collected
+				print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
+				all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
 
-			print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
-			protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations)
+				# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
+				if get_pdb or get_functional_annotations:
 
+					print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
+					protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
+
+				else:
+					print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
+
+
+				# Find operon/genomic_context types by clustering them by similarity
+				print("\n 4. Finding operon/genomic_context types\n")
+				all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
+
+				# Select top N most populated operon/genomic_context types
+				print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
+				selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
+				json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
+
+				# get taxonomy information
+				if get_taxonomy:
+					# Map taxonomy to the input targets. Load if already precomputed
+					print("\n 6. Mapping taxonomy (may take some time)\n")
+					taxonomy = map_taxonomy_to_targets(all_syntenies, threads = n_cpus)
+					json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
+
+				else:
+					print("\n 6. Taxonomy will not be mapped\n")
+					taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
+
+				# Annotate transmembrane segments
+				if annotate_TM:
+					# Try to annotate transmembrane segments
+					print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
+					all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
+
+				else:
+					print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
+
+				# Make operon/genomic_context conservation figure
+				print("\n 8. Making operon/genomic_context blocks figure\n")
+				try:
+					make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label)
+				except:
+					print(' ... Images not created due to minor errors (likely they are too big)')
+				# Make interactive HTML output
+				if interactive_output:
+					print("\n 9. Making interactive html output file\n")
+					#check if Bokeh is available
+					try:
+						make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
+
+					except:
+						print(sys.exc_info())
+						print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
+						print("\n ... Interactive html output file will not be generated\n")
+
+				else:
+					print("\n 9. Interactive html output file will not be generated\n")
+
+				# Write summary table
+				print(" Finished {}: Writting summary table\n".format(out_label))
+				write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
+
+				json.dump(all_syntenies, open('all_syntenies.json', 'w'), indent = 4)
+				json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
+
+				end = time.time()
+				numb_seconds = end - start
+				print("\n#### Finished {} after: {} \n".format(out_label, time.strftime('%H hours %M min %S sec', time.gmtime(numb_seconds))))
+
+			else:
+				print('\n --> WARNING: Found genomic contexts for less than 2 targets. Job {} will not be further analysed.'.format(out_label))
 		else:
-			print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
-
-
-		# Find operon/genomic_context types by clustering them by similarity
-		print("\n 4. Finding operon/genomic_context types\n")
-		all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
-
-		# Select top N most populated operon/genomic_context types
-		print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
-		selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
-		json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
-
-		# get taxonomy information
-		if get_taxonomy:
-			# Map taxonomy to the input targets. Load if already precomputed
-			print("\n 6. Mapping taxonomy (may take some time)\n")
-			taxonomy = map_taxonomy_to_targets(all_syntenies)
-			json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
-
-		else:
-			print("\n 6. Taxonomy will not be mapped\n")
-			taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
-
-		# Annotate transmembrane segments
-		if annotate_TM:
-			# Try to annotate transmembrane segments
-			print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
-			all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
-
-		else:
-			print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
-
-		# Make operon/genomic_context conservation figure
-		print("\n 8. Making operon/genomic_context blocks figure\n")
-		try:
-			make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label)
-		except:
-			print(' ... Images not created due to minor errors (likely they are too big)')
-		# Make interactive HTML output
-		if interactive_output:
-			print("\n 9. Making interactive html output file\n")
-			#check if Bokeh is available
-			try:
-				make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
-
-			except:
-				print(sys.exc_info())
-				print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
-				print("\n ... Interactive html output file will not be generated\n")
-
-		else:
-			print("\n 9. Interactive html output file will not be generated\n")
-
-		# Write summary table
-		print(" Finished {}: Writting summary table\n".format(out_label))
-		write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
-
-		json.dump(all_syntenies, open('all_syntenies.json', 'w'), indent = 4)
-		json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
-
-		end = time.time()
-		numb_seconds = end - start
-		print("\n#### Finished {} after: {} \n".format(out_label, time.strftime('%H hours %M min %S sec', time.gmtime(numb_seconds))))
-
+			print('\n --> WARNING: Job {} has less than 2 targets. It will not be analysed.'.format(out_label))
 
 if __name__ == '__main__':
+
+	main_start = time.time()
 	main()
+	main_end = time.time()
+	main_numb_seconds = main_end - main_start
+	print("\n#### Finished job after: {} \n".format(time.strftime('%H hours %M min %S sec', time.gmtime(main_numb_seconds))))
 
 	
