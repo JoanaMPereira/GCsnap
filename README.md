@@ -31,6 +31,8 @@ A preliminary package for GCsnap is available on test-PyPi and can be installed 
 ```
 It was built on ```macosx-10.9-x86_64``` and if it does not work due to building-related issues, you can always install from source following the instructions below.
 
+**We recommend installing from source, though**
+
 ### Installing from Source
 
 Download the zip archive or clone the repository with git:
@@ -49,7 +51,7 @@ python setup.py install
 
 ## Allowed inputs
 
-GCsnap takes as main input a list of sequence identifiers, which can be in **Entrez, UniprotKB, and UniRef formats, or a mix**. These identifiers can be given as:
+GCsnap takes as main input a list of sequence identifiers, which can be in **Entrez, UniprotKB, UniRef, GeneID, and ENSEMBLE ID formats, or a mix**. These identifiers can be given as:
   - a text file, where each is in a different line
   - a fasta file, where the sequence header starts with the sequence identifier
   - a sequences cluster file in CLANS format
@@ -67,6 +69,7 @@ In its most simple mode of usage, GCsnap only requires a list of sequence identi
 ```  
   -user_email: it may be required to access the NCBI databases. It is not used for anything else.
   -ncbi_api_key: the key for NCBI API, which allows for up to 10 queries per second to NCBI databases. Can be obtained after obtaing an NCBI account.
+  -cpu: the number of cpus used for running. By default, it is set to 1. Using more allows GCsnap to parallelize the most time-consuming steps. We recommend using exploiting this in combination with a ncbi api key.
   -n_flanking: the number of flanking genes (to each side) to be taken. By default, it is set to 4.
   -n_flanking5: the number of flanking genes to be taken on the 5' side. By default, it is set to 4.
   -n_flanking3: the number of flanking genes to be taken on the 3' side. By default, it is set to 4.
