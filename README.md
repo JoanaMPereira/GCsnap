@@ -31,7 +31,7 @@ A preliminary package for GCsnap is available on test-PyPi and can be installed 
 ```
 It was built on ```macosx-10.9-x86_64``` and if it does not work due to building-related issues, you can always install from source following the instructions below.
 
-**We recommend installing from source, though**
+***We recommend installing from source, though.***
 
 ### Installing from Source
 
