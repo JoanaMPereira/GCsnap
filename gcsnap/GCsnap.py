@@ -789,7 +789,7 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
    
 	return colors
 
-def draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = None):
+def draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = None, out_format = None):
 
 	curr_y_level = len(operons.keys())
 	all_xs = []
@@ -885,10 +885,10 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 		plt.tight_layout()
 	except:
 		pass
-	plt.savefig('{}_genomic_context.{}'.format(label, args.out_format), format = args.out_format)
+	plt.savefig('{}_genomic_context.{}'.format(label, out_format), format = out_format)
 	plt.close('all')
 
-def draw_genomic_context_legend(families_summary, family_colors, reference_family, label = None):
+def draw_genomic_context_legend(families_summary, family_colors, reference_family, label = None, out_format = None):
 
 	curr_y_level = len(family_colors.keys())
 	x_tail = 0
@@ -919,7 +919,7 @@ def draw_genomic_context_legend(families_summary, family_colors, reference_famil
 	plt.xlim(0, 50)
 	plt.ylim(0, len(family_colors.keys())+1)
 	
-	plt.savefig('{}_genomic_context_legend.{}'.format(label, args.out_format), format = args.out_format)
+	plt.savefig('{}_genomic_context_legend.{}'.format(label, out_format), format = out_format)
 	plt.close('all')
 
 # 7. Routines to make taxonomy distribution figures
@@ -2614,14 +2614,14 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, la
 			print('.		 Save in folder: {}'.format(out_dir))
 	return in_syntenies
 
-def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = None, label = None):
+def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = None, label = None, out_format = None):
 
 	# define the reference family as the one of the target in the most populated operon type
 	reference_family = all_syntenies[operons[most_populated_operon]['target_members'][0]]['target_family']
 	family_colors = define_family_colors(list(families_summary.keys()), reference_family, mode = 'matplotlib', cmap = cmap)
 
-	draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = label)
-	draw_genomic_context_legend(families_summary, family_colors, reference_family, label = label)
+	draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = label, out_format = out_format)
+	draw_genomic_context_legend(families_summary, family_colors, reference_family, label = label, out_format = out_format)
 
 def make_interactive_genomic_context_figure(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None):
 
@@ -2911,10 +2911,10 @@ def main():
 
 				# Make operon/genomic_context conservation figure
 				print("\n 8. Making operon/genomic_context blocks figure\n")
-				try:
-					make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label)
-				except:
-					print(' ... Images not created due to minor errors (likely they are too big)')
+				# try:
+				make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
+				# except:
+				# 	print(' ... Images not created due to minor errors (likely they are too big)')
 				# Make interactive HTML output
 				if interactive_output:
 					print("\n 9. Making interactive html output file\n")
