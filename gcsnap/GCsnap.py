@@ -2911,10 +2911,10 @@ def main():
 
 				# Make operon/genomic_context conservation figure
 				print("\n 8. Making operon/genomic_context blocks figure\n")
-				# try:
-				make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
-				# except:
-				# 	print(' ... Images not created due to minor errors (likely they are too big)')
+				try:
+					make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
+				except:
+					print(' ... Images not created due to minor errors (likely they are too big)')
 				# Make interactive HTML output
 				if interactive_output:
 					print("\n 9. Making interactive html output file\n")
