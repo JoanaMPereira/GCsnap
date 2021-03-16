@@ -109,6 +109,14 @@ will make GCsnap identify all clusters in the CLANS file that have 'cluster' in 
 The figure below depicts the cluster map and the 'most conserved genomic feature' panels from each of these jobs.
 ![figure2](https://github.com/JoanaMPereira/GCsnap/blob/master/examples/Fig2.png)
 
+## Citing GCsnap
+
+GCsnap is going to be published in the Computation Resources (2021) Special Issue of Journal of Molecular Biology (JMB) and you can cite it already:
+
+```
+J. Pereira, GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts, J. Mol. Biol. (2021) 166943. https://doi.org/https://doi.org/10.1016/j.jmb.2021.166943.
+```
+
 ## Acknowledgements
 
 GCsnap was developed during the COVID-19 lockdown. 
