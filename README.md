@@ -114,7 +114,8 @@ The figure below depicts the cluster map and the 'most conserved genomic feature
 GCsnap is going to be published in the Computation Resources (2021) Special Issue of Journal of Molecular Biology (JMB) and you can cite it already:
 
 ```
-J. Pereira, GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts, J. Mol. Biol. (2021) 166943. https://doi.org/https://doi.org/10.1016/j.jmb.2021.166943.
+J. Pereira, GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts, 
+J. Mol. Biol. (2021) 166943. https://doi.org/https://doi.org/10.1016/j.jmb.2021.166943.
 ```
 
 ## Acknowledgements
