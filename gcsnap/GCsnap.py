@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 04.01.2021
+## Last changed: 16.03.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -1029,16 +1029,30 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	if not os.path.isfile(out_file):
 		if annotation_TM_mode == 'phobius':
-			print('		Run phobius online and come back with the input file')
+			run_phobius = sp.Popen(['phobius.pl', infasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+			stdout, stderr = run_phobius.communicate()
 
-			pass
-			 ##### write code
+			if len(stderr) > 0 or len(stdout) == 0:
+				print(stderr)
+				print('		Run phobius online and come back with the input file')
+				pass
+			else:
+				with open(out_file, 'w') as outf:
+					out_file.write(stdout)
+
 
 		elif annotation_TM_mode == 'tmhmm':
-			print('		Run tmhmm online and come back with the input file')
 
-			pass
-			##### write code
+			run_tmhmm = sp.Popen(['tmhmm', infasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+			stdout, stderr = run_phobius.communicate()
+
+			if len(stderr) > 0 or len(stdout) == 0:
+				print(stderr)
+				print('		Run tmhmm online and come back with the input file')
+				pass
+			else:
+				with open(out_file, 'w') as outf:
+					out_file.write(stdout)
 
 		elif annotation_TM_mode == 'uniprot':
 			
@@ -2399,7 +2413,7 @@ def get_genomic_contexts_for_ncbi_codes(arguments):
 
 		if assembly_id != 'nan':
 			print(" ... {} belongs to assembly {} ({}/{})".format(curr_target_code, assembly_id, curr_target_count, len(target_ncbi_codes)))
-			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code, get_chunk = True, chunk_size = ((n_flanking5+n_flanking3)*2)+1, target = curr_target_code)
+			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code, get_chunk = True, chunk_size = ((n_flanking5+n_flanking3)*2)+1, target = ncbi_code)
 
 			if assembly != 'nan':
 				flanking_genes = get_n_flanking_genes(ncbi_code, assembly, n_5 = n_flanking5, n_3 = n_flanking3, exclude_partial = exclude_partial)
@@ -2610,8 +2624,7 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, la
 			print('		  TMHMM webserver: https://services.healthtech.dtu.dk/service.php?TMHMM-2.0')
 			print('		  Run mode: "One line per protein"')
 			print('		  Output file: copy-paste output text below the line to a .txt file')
-
-			print('.		 Save in folder: {}'.format(out_dir))
+			print('		  Save in folder: {}'.format(out_dir))
 	return in_syntenies
 
 def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = None, label = None, out_format = None):
@@ -2697,7 +2710,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.9', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.10', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
