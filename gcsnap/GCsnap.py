@@ -972,8 +972,6 @@ def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 	for dic in results:
 		taxonomy = merge_taxonomy_dictionaries(taxonomy, dic)
 
-		print(taxonomy)
-
 	return taxonomy
 
 def map_taxonomy(arguments):
