@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 16.03.2021
+## Last changed: 29.03.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -36,6 +36,8 @@ from bokeh.models import HoverTool, TapTool, Range1d, LinearAxis, WheelZoomTool,
 from bokeh.models.callbacks import OpenURL
 from bokeh.models.graphs import from_networkx, NodesAndLinkedEdges
 import bokeh.layouts 
+
+plt.switch_backend('agg')
 
 # HELPING ROUTINES
 
@@ -924,6 +926,38 @@ def draw_genomic_context_legend(families_summary, family_colors, reference_famil
 
 # 7. Routines to make taxonomy distribution figures
 
+def merge_taxonomy_dictionaries(taxonomy, dic):
+
+	for superkingdom in dic.keys():
+		if superkingdom not in taxonomy.keys():
+			taxonomy[superkingdom] = dic[superkingdom]
+		else:
+			for phylum in dic[superkingdom].keys():
+				if phylum not in taxonomy[superkingdom].keys():
+					taxonomy[superkingdom][phylum] = dic[superkingdom][phylum]
+				else:
+					for taxclass in dic[superkingdom][phylum].keys():
+						if taxclass not in taxonomy[superkingdom][phylum].keys():
+							taxonomy[superkingdom][phylum][taxclass] = dic[superkingdom][phylum][taxclass]
+						else:
+							for order in dic[superkingdom][phylum][taxclass].keys():
+								if order not in taxonomy[superkingdom][phylum][taxclass].keys():
+									taxonomy[superkingdom][phylum][taxclass][order] = dic[superkingdom][phylum][taxclass][order]
+								else:
+									for genus in dic[superkingdom][phylum][taxclass][order].keys():
+										if genus not in taxonomy[superkingdom][phylum][taxclass][order].keys():
+											taxonomy[superkingdom][phylum][taxclass][order][genus] = dic[superkingdom][phylum][taxclass][order][genus]
+										else:
+											for species in dic[superkingdom][phylum][taxclass][order][genus].keys():
+												if species not in taxonomy[superkingdom][phylum][taxclass][order][genus].keys():
+													taxonomy[superkingdom][phylum][taxclass][order][genus][species] = dic[superkingdom][phylum][taxclass][order][genus][species]
+												else:
+													for key in taxonomy[superkingdom][phylum][taxclass][order][genus][species].keys():
+														taxonomy[superkingdom][phylum][taxclass][order][genus][species][key] += dic[superkingdom][phylum][taxclass][order][genus][species][key]
+														taxonomy[superkingdom][phylum][taxclass][order][genus][species][key] = list(set(taxonomy[superkingdom][phylum][taxclass][order][genus][species][key]))
+
+	return taxonomy
+
 def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 
 	# Prepare all parallel jobs
@@ -934,7 +968,11 @@ def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 	pool = ThreadPool(threads)
 	results = pool.imap_unordered(map_taxonomy, list_arguments)
 
-	taxonomy = {key: dic[key] for dic in results for key in dic.keys()}
+	taxonomy = {}
+	for dic in results:
+		taxonomy = merge_taxonomy_dictionaries(taxonomy, dic)
+
+		print(taxonomy)
 
 	return taxonomy
 
@@ -2710,7 +2748,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.10', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.11', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
@@ -2736,6 +2774,7 @@ def main():
 	optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
 	optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
 	optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
+	optionalNamed.add_argument('-collect_only', dest='collect_only', default = False,type=bool, help='Boolean statement to make GCsnap collect genomic contexts only, without comparing them (default: False).')
 	# figure making optional inputs
 	optionalNamed.add_argument('-genomic_context_cmap', dest='genomic_context_cmap', default = 'Spectral',type=str, help='Color map (as of matplotlib) to assign colors to and plot the syntenic blocks (default: Spectral)')
 	optionalNamed.add_argument('-out_format', dest='out_format', default = 'png',type=str, help='Output format of the core figures (default: png)')
@@ -2777,6 +2816,7 @@ def main():
 			n_flanking5 = n_flanking
 
 	exclude_partial = args.exclude_partial
+	collect_only = args.collect_only
 	n_cpus = args.n_cpu
 	n_max = args.n_max
 	num_alignments = 50000
@@ -2879,76 +2919,79 @@ def main():
 			all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder, threads = n_cpus)
 
 			if len(all_syntenies) > 1:
-				# Find shared protein families by running all-against-all blast searches for all proteins collected
-				print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
-				all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
+				if not collect_only:
+					# Find shared protein families by running all-against-all blast searches for all proteins collected
+					print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
+					all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
 
-				# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
-				if get_pdb or get_functional_annotations:
+					# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
+					if get_pdb or get_functional_annotations:
 
-					print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
-					protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
+						print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
+						protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
 
-				else:
-					print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
+					else:
+						print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
 
+					# Find operon/genomic_context types by clustering them by similarity
+					print("\n 4. Finding operon/genomic_context types\n")
+					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
 
-				# Find operon/genomic_context types by clustering them by similarity
-				print("\n 4. Finding operon/genomic_context types\n")
-				all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
+					# Select top N most populated operon/genomic_context types
+					print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
+					selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
+					json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
 
-				# Select top N most populated operon/genomic_context types
-				print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
-				selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
-				json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
+					# get taxonomy information
+					if get_taxonomy:
+						# Map taxonomy to the input targets. Load if already precomputed
+						print("\n 6. Mapping taxonomy (may take some time)\n")
+						taxonomy = map_taxonomy_to_targets(all_syntenies, threads = n_cpus)
+						json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
 
-				# get taxonomy information
-				if get_taxonomy:
-					# Map taxonomy to the input targets. Load if already precomputed
-					print("\n 6. Mapping taxonomy (may take some time)\n")
-					taxonomy = map_taxonomy_to_targets(all_syntenies, threads = n_cpus)
-					json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
+					else:
+						print("\n 6. Taxonomy will not be mapped\n")
+						taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
 
-				else:
-					print("\n 6. Taxonomy will not be mapped\n")
-					taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
+					# Annotate transmembrane segments
+					if annotate_TM:
+						# Try to annotate transmembrane segments
+						print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
+						all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
 
-				# Annotate transmembrane segments
-				if annotate_TM:
-					# Try to annotate transmembrane segments
-					print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
-					all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
+					else:
+						print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
 
-				else:
-					print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
-
-				# Make operon/genomic_context conservation figure
-				print("\n 8. Making operon/genomic_context blocks figure\n")
-				try:
-					make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
-				except:
-					print(' ... Images not created due to minor errors (likely they are too big)')
-				# Make interactive HTML output
-				if interactive_output:
-					print("\n 9. Making interactive html output file\n")
-					#check if Bokeh is available
+					# Make operon/genomic_context conservation figure
+					print("\n 8. Making operon/genomic_context blocks figure\n")
 					try:
-						make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
-
+						make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
 					except:
-						print(sys.exc_info())
-						print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
-						print("\n ... Interactive html output file will not be generated\n")
+						print(' ... Images not created due to minor errors (likely they are too big)')
+					# Make interactive HTML output
+					if interactive_output:
+						print("\n 9. Making interactive html output file\n")
+						#check if Bokeh is available
+						try:
+							make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
+
+						except:
+							print(sys.exc_info())
+							print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
+							print("\n ... Interactive html output file will not be generated\n")
+
+					else:
+						print("\n 9. Interactive html output file will not be generated\n")
+
+					# Write summary table
+					print(" Finished {}: Writting summary table\n".format(out_label))
+					write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
+					json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
 
 				else:
-					print("\n 9. Interactive html output file will not be generated\n")
-
-				# Write summary table
-				print(" Finished {}: Writting summary table\n".format(out_label))
-				write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
+					print(' GCsnap was asked to collect genomic context only. Will not proceed further.')
 
 				json.dump(all_syntenies, open('all_syntenies.json', 'w'), indent = 4)
-				json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
 
 				end = time.time()
 				numb_seconds = end - start
