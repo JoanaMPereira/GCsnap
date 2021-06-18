@@ -8,3 +8,4 @@ pandas
 requests_cache
 scipy
 matplotlib
+sklearn
