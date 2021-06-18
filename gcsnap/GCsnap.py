@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 29.03.2021
+## Last changed: 18.06.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -30,6 +30,9 @@ from scipy import stats
 from collections import Counter
 from multiprocessing.pool import ThreadPool
 
+from sklearn.manifold import TSNE
+from sklearn.cluster import DBSCAN
+
 from bokeh.plotting import figure, output_file, gridplot, save
 from bokeh.colors import RGB
 from bokeh.models import HoverTool, TapTool, Range1d, LinearAxis, WheelZoomTool, Circle, MultiLine, Panel, Tabs
@@ -51,11 +54,11 @@ def chunk_list(l, n):
 	chunks = [list(chunk) for chunk in chunks]
 	return chunks
 
-def find_clusters_in_distance_matrix(distance_matrix):
+def find_clusters_in_distance_matrix(distance_matrix, t = 0):
 
 	distance_matrix = distance.squareform(distance_matrix)
 	linkage = hierarchy.linkage(distance_matrix, method = 'single')
-	clusters = hierarchy.fcluster(linkage, 0, criterion = 'distance')
+	clusters = hierarchy.fcluster(linkage, t, criterion = 'distance')
 	clusters = [int(i) for i in clusters]
 
 	return clusters
@@ -71,7 +74,26 @@ def mask_singleton_clusters(clusters_list, mask = 0):
 			new_clusters_list.append(value)
 
 	return new_clusters_list
-	
+
+def merge_intervals(intervals):
+
+	intervals = np.array(intervals)
+	intervals = intervals[intervals[:, 0].argsort()]	
+
+	new_intervals = []
+	for interval in intervals:
+		if len(new_intervals) == 0:
+			new_intervals.append(interval)
+		else:
+			previous_interval = list(new_intervals[-1])
+			if interval[0] <= previous_interval[1]:
+				overlap_range = interval+previous_interval
+				new_intervals[-1] = [min(overlap_range), max(overlap_range)]
+			else:
+				new_intervals.append(interval)
+
+	return new_intervals
+
 # 1. Routines to get the assembly for a given ncbi_code (or entrezID), download it and parse it
 
 def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL'):
@@ -364,19 +386,28 @@ def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 
 	return flanking_genes
 
-# 3. Routines to compute all-against-all distance matrix and find protein families
+# 3. Routines to compute all-against-all distance matrix and find protein families and operon types using the advanced mode
 
-def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude_pseudogenes = False):
+def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude_pseudogenes = False, mode = 'flanking_sequences'):
 
-	out_fasta = '{}/{}_flanking_sequences.fasta'.format(out_dir, out_label)
+	out_fasta = '{}/{}_{}.fasta'.format(out_dir, out_label, mode)
+
 	with open(out_fasta, 'w') as outfst:
 		for target in all_syntenies.keys():
-			flanking_genes = all_syntenies[target]['flanking_genes']
-			for i, ncbi_code in enumerate(flanking_genes['ncbi_codes']):
 
-				if flanking_genes['names'][i] != 'pseudogene' or not exclude_pseudogenes:
-					outfst.write('>{}|{}\n{}\n'.format(ncbi_code, flanking_genes['names'][i], flanking_genes['sequences'][i]))
-	
+			if mode == 'flanking_sequences':
+				flanking_genes = all_syntenies[target]['flanking_genes']
+				for i, ncbi_code in enumerate(flanking_genes['ncbi_codes']):
+
+					if flanking_genes['names'][i] != 'pseudogene' or not exclude_pseudogenes:
+						outfst.write('>{}|{}\n{}\n'.format(ncbi_code, flanking_genes['names'][i], flanking_genes['sequences'][i]))
+			
+			if mode == 'operon':
+				outfst.write('>{}\n'.format(target))
+				for sequence in all_syntenies[target]['flanking_genes']['sequences']:
+					outfst.write(sequence)
+				outfst.write('\n')
+
 	return out_fasta
 
 def make_blast_database_from_fasta(infasta, blast = None):
@@ -412,7 +443,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, nu
 
 	return blast_outfile
 
-def extract_distance_matrix_from_blast_output(blast_results, default_base = None):
+def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 90):
 
 	print(' ... ... Computing sequences similarity matrix')
 	result_handle = open(blast_results)
@@ -427,29 +458,45 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 	for record in blast_records:
 		query_name = record.query.split('|')[0]
 		query_index = all_queries.index(query_name)
+		query_total_length = record.query_length
 
 		for alignment in record.alignments:
 			target_name = alignment.title.split('|')[2].split()[1]
 			target_index = all_queries.index(target_name)
+			sbjct_lenght = alignment.length
+			
+			query_intervals = []
+			sbjct_intervals = []
 
-			distance_matrix[query_index][target_index] = 0
-			distance_matrix[target_index][query_index] = 0
+			for hsp in alignment.hsps:
+				query_intervals.append(np.array([hsp.query_start, hsp.query_end]))
+				sbjct_intervals.append(np.array([hsp.sbjct_start, hsp.sbjct_end]))
+
+			query_intervals = merge_intervals(query_intervals)
+			sbjct_intervals = merge_intervals(sbjct_intervals)
+
+			query_coverage = sum([i[-1]-i[0] for i in query_intervals])*100.0/float(query_total_length)
+			sbjct_coverage = sum([i[-1]-i[0] for i in sbjct_intervals])*100.0/float(sbjct_lenght)
+
+			if query_coverage >= min_coverage and sbjct_coverage >= min_coverage:
+				distance_matrix[query_index][target_index] = 0
+				distance_matrix[target_index][query_index] = 0
 
 		distance_matrix[query_index][query_index] = 0
 
 	return np.array(distance_matrix), all_queries
 
-def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None):
+def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None, mode = 'flanking_sequences'):
 	
 	out_dir = '{}/{}_all_against_all_searches'.format(os.getcwd(), out_label)
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
-	flanking_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label)
+	flanking_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label, mode = mode)
 	sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
 	blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
 
-	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base)
+	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, mode = mode)
 	
 	return distance_matrix, queries_labels
 
@@ -675,13 +722,9 @@ def compute_operons_distance_matrix(in_syntenies, label = None):
 							curr_vector = np.append(curr_vector, -1)
 							number_fillings += 1
 
-				dist = 0
-				for family, gene in enumerate(reference_vector):
-					if reference_vector[family] < 10000 and curr_vector[family] < 10000:
-						if reference_vector[family] != curr_vector[family]:
-							dist += 1
-						elif reference_vector[family] == 0 and curr_vector[family] == 0:
-							dist += 1
+				families_present = set(reference_vector+curr_vector)
+				overlapping_families = set(reference_vector).intersection(set(curr_vector))
+				dist = 1-len(overlapping_families)/len(families_present)
 
 				distance_matrix[i][j] = dist
 				distance_matrix[j][i] = dist
@@ -737,6 +780,32 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	print(' ... Selected {} operon/genomic_context types, with most populated corresponding to {}'.format(len(selected_operons), most_populated_operon))
 
 	return selected_operons, most_populated_operon
+
+def find_operon_coordinates_with_tSNE(in_syntenies, protein_families_summary):
+
+	contexts = []
+	data = []
+	families_to_consider = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
+
+	for synteny in in_syntenies:
+		family_vector = [0 for i in families_to_consider]
+		contexts.append(in_syntenies[synteny]['flanking_genes']['families'])
+		for i, family in enumerate(in_syntenies[synteny]['flanking_genes']['families']):
+			if family > 0 and family < 10000:
+				family_vector[family-1] = family_vector[family-1]+i
+		
+		if sum(family_vector) > 0:
+			data.append(np.array(family_vector)/sum(family_vector))
+		else:
+			data.append(np.array(family_vector))
+
+	perplexity = round(round(len(data)/20)+round(len(data[0])/20)/2)
+	data = np.array(data)
+	tsne_coordinates = TSNE(n_components=2, perplexity=perplexity).fit_transform(data)
+
+	print(' ... ... tSNE Perplexity:', perplexity)
+
+	return tsne_coordinates
 
 # 6. Routines to make the genomic_context/operon block figures
 
@@ -1223,9 +1292,9 @@ def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n
 	# will use only the complete genomic contexts and ignore the partial ones	
 	operon_matrix = []
 	for operon in operons:
-		curr_context = operons[operon]['operon_protein_families_structure'][0]
-		if len(curr_context) == n_flanking5+n_flanking3+1:
-			operon_matrix.append(curr_context)
+		for curr_context in operons[operon]['operon_protein_families_structure']:
+			if len(curr_context) == n_flanking5+n_flanking3+1:
+				operon_matrix.append(curr_context)
 	
 	operon_matrix = np.array(operon_matrix).T
 	
@@ -1252,18 +1321,18 @@ def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n
 		all_tm_annotations = []
 
 		for operon in operons:
-			curr_target = operons[operon]['target_members'][0]
-			curr_context = operons[operon]['operon_protein_families_structure'][0]
+			for j, curr_context in enumerate(operons[operon]['operon_protein_families_structure']):
+				curr_target = operons[operon]['target_members'][j]
 			
-			if len(curr_context) == n_flanking5+n_flanking3+1:			
-				if operons[operon]['operon_protein_families_structure'][0][i] == most_common_family:
-					all_starts_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])
-					all_ends_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_ends'][i])
-					all_sizes.append((all_syntenies[curr_target]['flanking_genes']['relative_ends'][i] - all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])/3)
-					all_orientations.append(all_syntenies[curr_target]['flanking_genes']['directions'][i])
-					
-					if 'TM_annotations' in all_syntenies[curr_target]['flanking_genes']:
-						all_tm_annotations.append(all_syntenies[curr_target]['flanking_genes']['TM_annotations'][i])
+				if len(curr_context) == n_flanking5+n_flanking3+1:			
+					if operons[operon]['operon_protein_families_structure'][j][i] == most_common_family:
+						all_starts_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])
+						all_ends_of_most_common.append(all_syntenies[curr_target]['flanking_genes']['relative_ends'][i])
+						all_sizes.append((all_syntenies[curr_target]['flanking_genes']['relative_ends'][i] - all_syntenies[curr_target]['flanking_genes']['relative_starts'][i])/3)
+						all_orientations.append(all_syntenies[curr_target]['flanking_genes']['directions'][i])
+						
+						if 'TM_annotations' in all_syntenies[curr_target]['flanking_genes']:
+							all_tm_annotations.append(all_syntenies[curr_target]['flanking_genes']['TM_annotations'][i])
 		
 		most_common_context['average_starts'].append(int(statistics.median(all_starts_of_most_common)))
 		most_common_context['average_ends'].append(int(statistics.median(all_ends_of_most_common)))
@@ -1555,10 +1624,36 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = N
 
 	return distance_matrix, labels
 
+def get_operons_distance_matrix(operons, input_targets = None):
+
+	genomic_contexts = []
+	labels = []
+
+	for operon_type in operons:
+		for i, target in enumerate(operons[operon_type]['target_members']):
+			if input_targets is None or target in input_targets:
+				genomic_contexts.append(operons[operon_type]['operon_protein_families_structure'][i])
+				labels.append(target)
+
+	distance_matrix = [[0 for i in genomic_contexts] for j in genomic_contexts]
+	for i, vector_i in enumerate(genomic_contexts):
+		for j, vector_j in enumerate(genomic_contexts):
+			if i < j:
+				families_present = set(vector_i+vector_j)
+				overlapping_families = set(vector_i).intersection(set(vector_j))
+				dist = 1-len(overlapping_families)/len(families_present)
+				distance_matrix[i][j] = dist
+				distance_matrix[j][i] = dist
+
+	return distance_matrix, labels
+
+
 def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy', tree = None, tree_format = None):
 	
 	if tree != None:
 		distance_matrix, labels = get_phylogeny_distance_matrix(tree, input_targets = input_targets, tree_format = tree_format)
+	elif mode == 'operon':
+		distance_matrix, labels = get_operons_distance_matrix(operons, input_targets = input_targets)
 	else:
 		distance_matrix, labels = get_taxonomy_distance_matrix(taxonomy, operons, input_targets = input_targets, mode = mode)
 	
@@ -1567,7 +1662,7 @@ def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy'
 	Z = hierarchy.linkage(distance_matrix, method = 'single')
 	results = hierarchy.dendrogram(Z, no_plot=True, count_sort = 'descending')
 
-	if mode == 'taxonomy' or tree != None:
+	if mode == 'taxonomy' or tree != None or mode == 'operon':
 		labels_indeces = list(map(int, results['ivl']))
 		labels = [labels[i] for i in labels_indeces]
 	
@@ -2612,17 +2707,26 @@ def add_functions_and_structures_to_families(arguments):
 
 	return protein_families_summary
 
-def find_and_add_operon_types(in_syntenies, label = None):
+def find_and_add_operon_types(in_syntenies, protein_families_summary, label = None, advanced = False):
+
+	print(' ... Using mode Advanced?', advanced)
 
 	if len(in_syntenies) > 1:
 		distance_matrix, ordered_ncbi_codes = compute_operons_distance_matrix(in_syntenies, label = label)
-		operon_clusters = find_clusters_in_distance_matrix(distance_matrix)
+		operon_clusters = find_clusters_in_distance_matrix(distance_matrix, t = 0.2)
+		if advanced:
+			ordered_ncbi_codes = list(in_syntenies.keys())
+			tsne_coordinates = find_operon_coordinates_with_tSNE(in_syntenies, protein_families_summary)
+		else:
+			tsne_coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	else:
 		operon_clusters = [1]
 		ordered_ncbi_codes = list(in_syntenies.keys())
+		tsne_coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	
 	for i, target in enumerate(ordered_ncbi_codes):
 		in_syntenies[target]['operon_type'] = int(operon_clusters[i])
+		in_syntenies[target]['operon_tSNE'] = list([float(a) for a in tsne_coordinates[i]])
 
 	operon_types = get_operon_types_summary(in_syntenies, write_to_file = True, label = label)
 	
@@ -2746,7 +2850,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.11', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.12', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
@@ -2765,6 +2869,7 @@ def main():
 	optionalNamed.add_argument('-n_flanking3', dest='n_flanking3', default = 4,type=int, help="Number of flanking sequences to take on the 3' (default: 4)")
 	optionalNamed.add_argument('-exclude_partial', dest='exclude_partial', default = False,type=bool, help='Boolean statement to exclude partial operon/genomic_context blocks (default: False)\nIf turned off, partial cases will still be ignored to get the most common genomic features')
 	optionalNamed.add_argument('-n_max_operons', dest='n_max', default = 30,type=int, help='Maximum number of top most populated operon/genomic_context block types (default: 30)')
+	optionalNamed.add_argument('-operon_cluster_advanced', dest='operon_cluster_advanced', default = False,type=bool, help='Boolean statement to use the operon clustering advanced mode (using tSNE) (default: False)')
 	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='psiBLAST number of iterations (default: 1). Required to define protein families.')
 	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='psiBLAST e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
 	optionalNamed.add_argument('-base', dest='default_base', default = 10,type=int, help='Artificial distance value for two sequences that do not match with an E-value better than -evalue (default: 10).')
@@ -2787,7 +2892,7 @@ def main():
 	optionalNamed.add_argument('-interactive', dest='interactive', default = 'True',type=str, help='Boolean statement to make the interactive html output (default: True). WARNING: It requires the Bokeh python package. It will check if it is installed')
 	optionalNamed.add_argument('-gc_legend_mode', dest='gc_legend_mode', default = 'species',type=str, choices=['species', 'ncbi_code'], help='Mode of the genomic context legend (default: species)')
 	optionalNamed.add_argument('-min_coocc', dest='min_coocc', default = 0.30,type=float,  help='Minimum maximum co-occurrence of two genes to be connected in the graphs (default: 0.30)')
-	optionalNamed.add_argument('-sort_mode', dest='sort_mode', default = 'taxonomy',type=str, choices=['taxonomy', 'as_input', 'tree'], help='Mode to sort the genomic contexts (default: taxonomy)')
+	optionalNamed.add_argument('-sort_mode', dest='sort_mode', default = 'taxonomy',type=str, choices=['taxonomy', 'as_input', 'tree', 'operon'], help='Mode to sort the genomic contexts (default: taxonomy)')
 	optionalNamed.add_argument('-in_tree', dest='in_tree', default = None, type=str, help='Input phylogenetic tree. Only use when the targets correspond to a single project (no multiple fasta or text files) (default: None)')
 	optionalNamed.add_argument('-in_tree_format', dest='in_tree_format', default = "newick", type=str, help='Format of the input phylogenetic tree (default: newick)')
 	# clans map optional inputs
@@ -2816,6 +2921,7 @@ def main():
 	exclude_partial = args.exclude_partial
 	collect_only = args.collect_only
 	n_cpus = args.n_cpu
+	operon_cluster_advanced = args.operon_cluster_advanced
 	n_max = args.n_max
 	num_alignments = 50000
 	max_evalue = args.max_evalue
@@ -2933,7 +3039,7 @@ def main():
 
 					# Find operon/genomic_context types by clustering them by similarity
 					print("\n 4. Finding operon/genomic_context types\n")
-					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, label = out_label)
+					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced,)
 
 					# Select top N most populated operon/genomic_context types
 					print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
