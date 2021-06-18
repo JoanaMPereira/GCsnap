@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='gcsnap',
-      version='1.0.11',
+      version='1.0.12',
       description='GCsnap: Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description=long_description,  # Optional
       long_description_content_type='text/markdown',  # Optional (see note above)
@@ -30,7 +30,8 @@ setup(name='gcsnap',
           'pandas',
           'requests_cache',
           'scipy',
-          'matplotlib'
+          'matplotlib',
+          'sklearn'
       ],
       include_package_data=True,
       zip_safe=False,
