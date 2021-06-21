@@ -445,7 +445,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, nu
 
 	return blast_outfile
 
-def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 90, sequences_lengths = {}):
+def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 70, sequences_lengths = {}):
 
 	print(' ... ... Computing sequences similarity matrix')
 	result_handle = open(blast_results)
