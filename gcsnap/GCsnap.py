@@ -833,11 +833,6 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 		if label not in colors:
 			colors[label] = {}
 			
-		if label == reference_family:			   # the reference gene
-			colors[label]['Color (RGBA)'] = 'grey'
-			colors[label]['Color (tuplet)'] = 'grey'
-			colors[label]['Line color'] = 'black'
-			colors[label]['Line style'] = '-'
 		if label == 0:							# a gene without any other homolog in the figure
 			colors[label]['Color (RGBA)'] = 'lightgrey'
 			colors[label]['Color (tuplet)'] = 'lightgrey'
@@ -859,6 +854,12 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 				colors[label]['Color (tuplet)'] = colours[i]
 				colors[label]['Line color'] = 'black'
 				colors[label]['Line style'] = '-'
+
+		if label == reference_family and label != 0:			   # the reference gene
+			colors[label]['Color (RGBA)'] = 'grey'
+			colors[label]['Color (tuplet)'] = 'grey'
+			colors[label]['Line color'] = 'black'
+			colors[label]['Line style'] = '-'
 
 		if print_summary:
 			print('{}\t{}'.format(label, colors[label]['Color (RGBA)']))
