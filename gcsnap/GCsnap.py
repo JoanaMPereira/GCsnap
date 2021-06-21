@@ -1134,8 +1134,12 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	if not os.path.isfile(out_file):
 		if annotation_TM_mode == 'phobius':
-			run_phobius = sp.Popen(['phobius.pl', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-			stdout, stderr = run_phobius.communicate()
+			try:
+				run_phobius = sp.Popen(['phobius.pl', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+				stdout, stderr = run_phobius.communicate()
+			except:
+				stderr = " --> ERROR:  There's no phobius installation"
+				stdout = ""
 
 			if len(stderr) > 0 or len(stdout) == 0:
 				print(stderr)
@@ -1148,8 +1152,12 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 		elif annotation_TM_mode == 'tmhmm':
 
-			run_tmhmm = sp.Popen(['tmhmm', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-			stdout, stderr = run_phobius.communicate()
+			try:
+				run_tmhmm = sp.Popen(['tmhmm', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+				stdout, stderr = run_phobius.communicate()
+			except:
+				stderr = " --> ERROR:  There's no tmhmm installation"
+				stdout = ""
 
 			if len(stderr) > 0 or len(stdout) == 0:
 				print(stderr)
