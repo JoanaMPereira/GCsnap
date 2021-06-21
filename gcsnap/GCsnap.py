@@ -900,7 +900,7 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 				gene_x_tail = current_genomic_context_block['relative_starts'][i]
 
 			# make genomic_context side			
-			if family == current_reference_family:
+			if family == current_reference_family and current_reference_family != 0:
 				zorder = len(current_genomic_context_block['ncbi_codes']) - i + 1
 				facecolor = family_colors[reference_family]['Color (tuplet)']
 				edgecolor = family_colors[reference_family]['Line color']
