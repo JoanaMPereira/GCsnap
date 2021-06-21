@@ -1143,7 +1143,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 			if len(stderr) > 0 or len(stdout) == 0:
 				print(stderr)
-				print('		Run phobius online and come back with the input file')
+				print('     Run phobius online and come back with the input file')
 				pass
 			else:
 				with open(out_file, 'w') as outf:
@@ -1161,7 +1161,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 			if len(stderr) > 0 or len(stdout) == 0:
 				print(stderr)
-				print('		Run tmhmm online and come back with the input file')
+				print('     Run tmhmm online and come back with the input file')
 				pass
 			else:
 				with open(out_file, 'w') as outf:
