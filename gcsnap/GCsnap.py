@@ -833,7 +833,12 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 		if label not in colors:
 			colors[label] = {}
 			
-		if label == 0:							# a gene without any other homolog in the figure
+		if label == reference_family:			   # the reference gene
+			colors[label]['Color (RGBA)'] = 'grey'
+			colors[label]['Color (tuplet)'] = 'grey'
+			colors[label]['Line color'] = 'black'
+			colors[label]['Line style'] = '-'
+		elif label == 0:							# a gene without any other homolog in the figure
 			colors[label]['Color (RGBA)'] = 'lightgrey'
 			colors[label]['Color (tuplet)'] = 'lightgrey'
 			colors[label]['Line color'] = 'lightgrey'
@@ -854,12 +859,6 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 				colors[label]['Color (tuplet)'] = colours[i]
 				colors[label]['Line color'] = 'black'
 				colors[label]['Line style'] = '-'
-
-		if label == reference_family and reference_family != 0:		# the reference gene
-			colors[label]['Color (RGBA)'] = 'grey'
-			colors[label]['Color (tuplet)'] = 'grey'
-			colors[label]['Line color'] = 'black'
-			colors[label]['Line style'] = '-'
 
 		if print_summary:
 			print('{}\t{}'.format(label, colors[label]['Color (RGBA)']))
@@ -887,7 +886,7 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 		current_species = all_syntenies[current_target]['species']
 		current_reference_family = all_syntenies[current_target]['target_family']
 		operon_population = len(operons[operon]['target_members'])*100/len(all_syntenies)
-		
+
 		for i, flanking_gene in enumerate(current_genomic_context_block['ncbi_codes']):
 			family = current_genomic_context_block['families'][i]
 			gene_dx = current_genomic_context_block['relative_ends'][i] - current_genomic_context_block['relative_starts'][i]+1
@@ -900,12 +899,7 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 				gene_x_tail = current_genomic_context_block['relative_starts'][i]
 
 			# make genomic_context side			
-			if family == current_reference_family and current_reference_family != 0:
-				zorder = len(current_genomic_context_block['ncbi_codes']) - i + 1
-				facecolor = family_colors[reference_family]['Color (tuplet)']
-				edgecolor = family_colors[reference_family]['Line color']
-				linestyle = family_colors[reference_family]['Line style']
-			elif family == 0:
+			if family == 0:
 				zorder = family
 				facecolor = family_colors[family]['Color (tuplet)']
 				edgecolor = family_colors[family]['Line color']
@@ -1395,11 +1389,7 @@ def create_most_common_genomic_context_features(most_common_context, families_su
 			gene_x_head_start = gene_x_head-100
 			text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
 
-		if family == reference_family:
-			facecolor = family_colors[reference_family]['Color (RGBA)']
-			edgecolor = family_colors[reference_family]['Line color']
-			linestyle = family_colors[reference_family]['Line style']
-		elif family == 0:
+		if family == 0:
 			facecolor = family_colors[family]['Color (RGBA)']
 			edgecolor = family_colors[family]['Line color']
 			linestyle = family_colors[family]['Line style']
@@ -1833,18 +1823,14 @@ def create_genomic_context_features(operons, all_syntenies, family_colors, syn_d
 				gene_x_head_start = gene_x_head-100
 				text_x = gene_x_tail + (gene_x_head_start-gene_x_tail)/2
 
-			if family == current_reference_family:
-				facecolor = family_colors[reference_family]['Color (RGBA)']
-				edgecolor = family_colors[reference_family]['Line color']
-				linestyle = family_colors[reference_family]['Line style']
-			elif family == 0:
+			if family == 0:
 				facecolor = family_colors[family]['Color (RGBA)']
 				edgecolor = family_colors[family]['Line color']
 				linestyle = family_colors[family]['Line style']
 			else:
 				facecolor = family_colors[family]['Color (RGBA)']
 				edgecolor = family_colors[family]['Line color']
-				linestyle = family_colors[family]['Line style']	
+				linestyle = family_colors[family]['Line style'] 
 				
 			data['operon'].append(operon)
 			data['target_id'].append(current_target)
