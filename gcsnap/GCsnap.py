@@ -855,7 +855,7 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 				colors[label]['Line color'] = 'black'
 				colors[label]['Line style'] = '-'
 
-		if label == reference_family and label != 0:			   # the reference gene
+		if label == reference_family and reference_family != 0:		# the reference gene
 			colors[label]['Color (RGBA)'] = 'grey'
 			colors[label]['Color (tuplet)'] = 'grey'
 			colors[label]['Line color'] = 'black'
