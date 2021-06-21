@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='gcsnap',
-      version='1.0.12',
+      version='1.0.13',
       description='GCsnap: Interactive snapshots for the comparison of protein-coding genomic contexts',
       long_description=long_description,  # Optional
       long_description_content_type='text/markdown',  # Optional (see note above)
