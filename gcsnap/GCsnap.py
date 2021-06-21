@@ -391,6 +391,7 @@ def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude_pseudogenes = False, mode = 'flanking_sequences'):
 
 	out_fasta = '{}/{}_{}.fasta'.format(out_dir, out_label, mode)
+	seqs_lens = {}
 
 	with open(out_fasta, 'w') as outfst:
 		for target in all_syntenies.keys():
@@ -401,6 +402,7 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 
 					if flanking_genes['names'][i] != 'pseudogene' or not exclude_pseudogenes:
 						outfst.write('>{}|{}\n{}\n'.format(ncbi_code, flanking_genes['names'][i], flanking_genes['sequences'][i]))
+						seqs_lens[flanking_genes['names'][i]] = len(flanking_genes['sequences'][i])
 			
 			if mode == 'operon':
 				outfst.write('>{}\n'.format(target))
@@ -408,7 +410,7 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 					outfst.write(sequence)
 				outfst.write('\n')
 
-	return out_fasta
+	return out_fasta, seqs_lens
 
 def make_blast_database_from_fasta(infasta, blast = None):
 
@@ -443,7 +445,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, nu
 
 	return blast_outfile
 
-def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 90):
+def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 90, sequences_lengths = {}):
 
 	print(' ... ... Computing sequences similarity matrix')
 	result_handle = open(blast_results)
@@ -458,12 +460,10 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 	for record in blast_records:
 		query_name = record.query.split('|')[0]
 		query_index = all_queries.index(query_name)
-		query_total_length = record.query_length
 
 		for alignment in record.alignments:
 			target_name = alignment.title.split('|')[2].split()[1]
 			target_index = all_queries.index(target_name)
-			sbjct_lenght = alignment.length
 			
 			query_intervals = []
 			sbjct_intervals = []
@@ -472,15 +472,19 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 				query_intervals.append(np.array([hsp.query_start, hsp.query_end]))
 				sbjct_intervals.append(np.array([hsp.sbjct_start, hsp.sbjct_end]))
 
-			query_intervals = merge_intervals(query_intervals)
-			sbjct_intervals = merge_intervals(sbjct_intervals)
+			query_intervals  = merge_intervals(query_intervals)
+			target_intervals = merge_intervals(sbjct_intervals)
 
-			query_coverage = sum([i[-1]-i[0] for i in query_intervals])*100.0/float(query_total_length)
-			sbjct_coverage = sum([i[-1]-i[0] for i in sbjct_intervals])*100.0/float(sbjct_lenght)
+			if query_name in sequences_lengths and target_name in sequences_lengths:
+				query_length  = sequences_lengths[query_name]
+				target_lenght = sequences_lengths[target_name]
 
-			if query_coverage >= min_coverage and sbjct_coverage >= min_coverage:
-				distance_matrix[query_index][target_index] = 0
-				distance_matrix[target_index][query_index] = 0
+				query_coverage  = sum([i[-1]-i[0] for i in query_intervals])*100.0/float(query_length)
+				target_coverage = sum([i[-1]-i[0] for i in target_intervals])*100.0/float(target_lenght)
+
+				if query_coverage >= min_coverage and sbjct_coverage >= min_coverage:
+					distance_matrix[query_index][target_index] = 0
+					distance_matrix[target_index][query_index] = 0
 
 		distance_matrix[query_index][query_index] = 0
 
@@ -492,11 +496,11 @@ def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_t
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
-	flanking_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label, mode = mode)
+	flanking_fasta, sequences_len = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label, mode = mode)
 	sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
 	blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
 
-	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, mode = mode)
+	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, mode = mode, sequences_lengths = sequences_len)
 	
 	return distance_matrix, queries_labels
 
@@ -2738,7 +2742,7 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, la
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
-	in_fasta = write_flanking_sequences_to_fasta(in_syntenies, out_dir, label, exclude_pseudogenes = True)
+	in_fasta, seqs_lens = write_flanking_sequences_to_fasta(in_syntenies, out_dir, label, exclude_pseudogenes = True)
 
 	if annotation_TM_file == None:
 		annotation_TM_file = run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = annotation_TM_mode)
@@ -2850,7 +2854,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.12', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.13', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
