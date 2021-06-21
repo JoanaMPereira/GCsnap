@@ -1134,7 +1134,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	if not os.path.isfile(out_file):
 		if annotation_TM_mode == 'phobius':
-			run_phobius = sp.Popen(['phobius.pl', infasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+			run_phobius = sp.Popen(['phobius.pl', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 			stdout, stderr = run_phobius.communicate()
 
 			if len(stderr) > 0 or len(stdout) == 0:
@@ -1148,7 +1148,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 		elif annotation_TM_mode == 'tmhmm':
 
-			run_tmhmm = sp.Popen(['tmhmm', infasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+			run_tmhmm = sp.Popen(['tmhmm', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 			stdout, stderr = run_phobius.communicate()
 
 			if len(stderr) > 0 or len(stdout) == 0:
