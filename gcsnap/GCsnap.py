@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 18.06.2021
+## Last changed: 21.06.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -402,7 +402,7 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 
 					if flanking_genes['names'][i] != 'pseudogene' or not exclude_pseudogenes:
 						outfst.write('>{}|{}\n{}\n'.format(ncbi_code, flanking_genes['names'][i], flanking_genes['sequences'][i]))
-						seqs_lens[flanking_genes['names'][i]] = len(flanking_genes['sequences'][i])
+						seqs_lens[ncbi_code] = len(flanking_genes['sequences'][i])
 			
 			if mode == 'operon':
 				outfst.write('>{}\n'.format(target))
@@ -464,27 +464,28 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 		for alignment in record.alignments:
 			target_name = alignment.title.split('|')[2].split()[1]
 			target_index = all_queries.index(target_name)
-			
-			query_intervals = []
-			sbjct_intervals = []
 
-			for hsp in alignment.hsps:
-				query_intervals.append(np.array([hsp.query_start, hsp.query_end]))
-				sbjct_intervals.append(np.array([hsp.sbjct_start, hsp.sbjct_end]))
+			if query_name != target_name:
+				query_intervals = []
+				sbjct_intervals = []
 
-			query_intervals  = merge_intervals(query_intervals)
-			target_intervals = merge_intervals(sbjct_intervals)
+				for hsp in alignment.hsps:
+					query_intervals.append(np.array([hsp.query_start, hsp.query_end]))
+					sbjct_intervals.append(np.array([hsp.sbjct_start, hsp.sbjct_end]))
 
-			if query_name in sequences_lengths and target_name in sequences_lengths:
-				query_length  = sequences_lengths[query_name]
-				target_lenght = sequences_lengths[target_name]
+				query_intervals  = merge_intervals(query_intervals)
+				target_intervals = merge_intervals(sbjct_intervals)
 
-				query_coverage  = sum([i[-1]-i[0] for i in query_intervals])*100.0/float(query_length)
-				target_coverage = sum([i[-1]-i[0] for i in target_intervals])*100.0/float(target_lenght)
+				if query_name in sequences_lengths and target_name in sequences_lengths:
+					query_length  = sequences_lengths[query_name]
+					target_lenght = sequences_lengths[target_name]
 
-				if query_coverage >= min_coverage and sbjct_coverage >= min_coverage:
-					distance_matrix[query_index][target_index] = 0
-					distance_matrix[target_index][query_index] = 0
+					query_coverage  = sum([i[-1]-i[0] for i in query_intervals])*100.0/float(query_length)
+					target_coverage = sum([i[-1]-i[0] for i in target_intervals])*100.0/float(target_lenght)
+
+					if query_coverage >= min_coverage and target_coverage >= min_coverage:
+						distance_matrix[query_index][target_index] = 0
+						distance_matrix[target_index][query_index] = 0
 
 		distance_matrix[query_index][query_index] = 0
 
