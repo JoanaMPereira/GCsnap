@@ -1491,7 +1491,7 @@ def create_most_common_genomic_features_figure(operons, all_syntenies, families_
 			
 	gc_tooltips, gc_data = create_most_common_genomic_context_features(most_common_context, families_summary, reference_family = reference_family, family_colors = family_colors)
 		
-	gc = figure(plot_width=1200, plot_height=200, y_range = [0, 4], title = 'Most conserved gene per position', toolbar_location="left")
+	gc = figure(plot_width=2000, plot_height=200, y_range = [0, 4], title = 'Most conserved gene per position', toolbar_location="left")
 
 	for i, xs in enumerate(gc_data['xs']):
 		gc.patch(xs, gc_data['ys'][i], fill_color = gc_data['facecolor'][i], line_color = gc_data['edgecolor'][i], fill_alpha = gc_data['transparency'][i], line_alpha = gc_data['transparency'][i], line_width = 1)	
