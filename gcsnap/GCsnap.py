@@ -836,6 +836,10 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean)
 
 	# embed into 2D paCMAP space
+	n_dims = len(selected_families)
+	if n_dims < 2:
+		n_dims = 2
+		
 	paCMAP_embedding = pacmap.PaCMAP(n_dims = len(selected_families))
 	paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
