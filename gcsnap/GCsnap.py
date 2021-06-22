@@ -175,6 +175,7 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 							assembly_link = database_assembly_mapping[assembly_id]
 	except:
+		print(sys.exc_info())
 		assembly_id = 'nan'
 		assembly_source = 'nan'
 		assembly_link = 'nan'
