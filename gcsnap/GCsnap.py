@@ -635,15 +635,15 @@ def get_uniprot_annotations(uniprot_code, previous_annotations = ''):
 		uniprot_accession = uniprot_code.split('_')[0]
 		uniprot_link = 'https://www.ebi.ac.uk/proteins/api/proteins/{}'.format(uniprot_accession)
 
-		# try:
-		uniprot_req = requests.get(uniprot_link, headers={ "Accept" : "application/json"})
+		try:
+			uniprot_req = requests.get(uniprot_link, headers={ "Accept" : "application/json"})
 
-		if uniprot_req.ok:
-			uniprot_data = uniprot_req.text
-			uniprot_data = json.loads(uniprot_data)
-			uniprot_annotations = parse_uniprot_data(uniprot_data, previous_annotations = previous_annotations)
-		# except:
-		# 	uniprot_annotations = 'nan'
+			if uniprot_req.ok:
+				uniprot_data = uniprot_req.text
+				uniprot_data = json.loads(uniprot_data)
+				uniprot_annotations = parse_uniprot_data(uniprot_data, previous_annotations = previous_annotations)
+		except:
+			uniprot_annotations = 'nan'
 	
 	return uniprot_annotations
 
@@ -3048,7 +3048,8 @@ def main():
 	blast = args.blast
 
 	# install cache to make it faster
-	# requests_cache.install_cache()
+	if sys.version_info <(3, 8)
+		requests_cache.install_cache()
 
 	# set starting directory
 	starting_directory = os.getcwd()
