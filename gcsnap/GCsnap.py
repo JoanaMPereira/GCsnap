@@ -19,7 +19,7 @@ import requests
 import sys
 import statistics
 import argparse
-# import requests_cache
+import requests_cache
 import pacmap
 
 from Bio.Blast import NCBIXML
@@ -3048,7 +3048,7 @@ def main():
 	blast = args.blast
 
 	# install cache to make it faster
-	requests_cache.install_cache()
+	# requests_cache.install_cache()
 
 	# set starting directory
 	starting_directory = os.getcwd()
