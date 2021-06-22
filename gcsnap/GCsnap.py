@@ -19,7 +19,7 @@ import requests
 import sys
 import statistics
 import argparse
-import requests_cache
+# import requests_cache
 import pacmap
 
 from Bio.Blast import NCBIXML
