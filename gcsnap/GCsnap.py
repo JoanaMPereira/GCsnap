@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 21.06.2021
+## Last changed: 22.06.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -20,6 +20,7 @@ import sys
 import statistics
 import argparse
 import requests_cache
+import pacmap
 
 from Bio.Blast import NCBIXML
 from Bio import Entrez
@@ -30,7 +31,6 @@ from scipy import stats
 from collections import Counter
 from multiprocessing.pool import ThreadPool
 
-from sklearn.manifold import TSNE
 from sklearn.cluster import DBSCAN
 
 from bokeh.plotting import figure, output_file, gridplot, save
@@ -739,13 +739,22 @@ def compute_operons_distance_matrix(in_syntenies, label = None):
 def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 
 	operon_types = {}
+	advanced = False
+	if 'operon_PaCMAP' in in_syntenies[list(in_syntenies.keys())[0]]:
+		advanced = True
 
 	for target in in_syntenies:
 		curr_operon_type = in_syntenies[target]['operon_type']
 		if curr_operon_type not in operon_types:
 			operon_types[curr_operon_type] = {'target_members': [], 'operon_protein_families_structure': []}
+			if advanced:
+				operon_types[curr_operon_type]['operon_PaCMAP'] = []
+
+
 		operon_types[curr_operon_type]['target_members'].append(target)
 		operon_types[curr_operon_type]['operon_protein_families_structure'].append(in_syntenies[target]['flanking_genes']['families'])
+		if advanced:
+			operon_types[curr_operon_type]['operon_PaCMAP'].append(in_syntenies[target]['operon_PaCMAP'])
 
 	print(' ... Found {} operon types (out of a total of {} input targets)'.format(len(operon_types), len(in_syntenies)))
 
@@ -786,31 +795,60 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 
 	return selected_operons, most_populated_operon
 
-def find_operon_coordinates_with_tSNE(in_syntenies, protein_families_summary):
 
-	contexts = []
-	data = []
-	families_to_consider = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
+def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = True):
 
-	for synteny in in_syntenies:
-		family_vector = [0 for i in families_to_consider]
-		contexts.append(in_syntenies[synteny]['flanking_genes']['families'])
-		for i, family in enumerate(in_syntenies[synteny]['flanking_genes']['families']):
-			if family > 0 and family < 10000:
-				family_vector[family-1] = family_vector[family-1]+i
-		
-		if sum(family_vector) > 0:
-			data.append(np.array(family_vector)/sum(family_vector))
-		else:
-			data.append(np.array(family_vector))
+	sorted_ncbi_codes = sorted(list(in_syntenies.keys()))
+	sorted_families   = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
 
-	perplexity = round(round(len(data)/20)+round(len(data[0])/20)/2)
-	data = np.array(data)
-	tsne_coordinates = TSNE(n_components=2, perplexity=perplexity).fit_transform(data)
+	# select only the protein families that are not very frequenct but also not very rare
+	if clean:
+		families_frequency = [len(protein_families_summary[family]['members']) for family in sorted_families]
+		families_frequency = [i/len(in_syntenies) for i in families_frequency]
+		mean_frequency     = np.mean(families_frequency)
+		std_frequency      = np.std(families_frequency)
+		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] < mean_frequency + 4*std_frequency and families_frequency[i] > mean_frequency]
 
-	print(' ... ... tSNE Perplexity:', perplexity)
+	presence_matrix = [[0 for i in sorted_families] for i in sorted_ncbi_codes]
+	for i, target_i in enumerate(sorted_ncbi_codes):
+		operon_i = in_syntenies[target_i]['flanking_genes']['families']
+		for family in operon_i:
+			if family in sorted_families:
+				presence_matrix[i][sorted_families.index(family)] += 1
 
-	return tsne_coordinates
+	return np.array(presence_matrix), sorted_ncbi_codes, sorted_families
+
+def calculate_eps(coordinates):
+
+	distances = []
+	for i, vector_i in enumerate(coordinates):
+		for j, vector_j in enumerate(coordinates):
+			if j>i:
+				dist = np.linalg.norm(np.array(vector_i) - np.array(vector_j))
+				distances.append(dist)
+
+	eps = np.median(distances) - stats.median_absolute_deviation(distances)
+
+	return eps
+
+def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False):
+
+	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean)
+
+	# embed into 2D paCMAP space
+	paCMAP_embedding = pacmap.PaCMAP(n_dims = len(selected_families))
+	paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
+
+	if coordinates_only:
+		return paCMAP_coordinat, sorted_ncbi_codes
+
+	# find clusters in the 2D paCMAP space
+	eps = calculate_eps(paCMAP_coordinat)
+	model = DBSCAN(eps = eps)
+	model.fit(paCMAP_coordinat)
+	clusters = model.fit_predict(paCMAP_coordinat)
+
+	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
 # 6. Routines to make the genomic_context/operon block figures
 
@@ -1628,26 +1666,44 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = N
 
 	return distance_matrix, labels
 
-def get_operons_distance_matrix(operons, input_targets = None):
+def get_operons_distance_matrix(operons, input_targets = None, advanced = False):
 
-	genomic_contexts = []
 	labels = []
 
-	for operon_type in operons:
-		for i, target in enumerate(operons[operon_type]['target_members']):
-			if input_targets is None or target in input_targets:
-				genomic_contexts.append(operons[operon_type]['operon_protein_families_structure'][i])
-				labels.append(target)
+	if 'operon_PaCMAP' in operons[list(operons.keys())[0]]:
+		paCMAP_coordinat = []
+		for operon_type in operons:
+			for i, target in enumerate(operons[operon_type]['target_members']):
+				if input_targets is None or target in input_targets:
+					paCMAP_coordinat.append(operons[operon_type]['operon_PaCMAP'][i])
+					labels.append(target)
 
-	distance_matrix = [[0 for i in genomic_contexts] for j in genomic_contexts]
-	for i, vector_i in enumerate(genomic_contexts):
-		for j, vector_j in enumerate(genomic_contexts):
-			if i < j:
-				families_present = set(vector_i+vector_j)
-				overlapping_families = set(vector_i).intersection(set(vector_j))
-				dist = 1-len(overlapping_families)/len(families_present)
-				distance_matrix[i][j] = dist
-				distance_matrix[j][i] = dist
+		distance_matrix = [[0 for i in paCMAP_coordinat] for j in paCMAP_coordinat]
+		for i, vector_i in enumerate(paCMAP_coordinat):
+			for j, vector_j in enumerate(paCMAP_coordinat):
+				if i < j:
+					dist = np.linalg.norm(np.array(vector_i) - np.array(vector_j))
+					distance_matrix[i][j] = dist
+					distance_matrix[j][i] = dist
+
+
+	else:
+		genomic_contexts = []
+		for operon_type in operons:
+			for i, target in enumerate(operons[operon_type]['target_members']):
+				if input_targets is None or target in input_targets:
+					genomic_contexts.append(operons[operon_type]['operon_protein_families_structure'][i])
+					labels.append(target)
+
+		distance_matrix = [[0 for i in genomic_contexts] for j in genomic_contexts]
+		for i, vector_i in enumerate(genomic_contexts):
+			for j, vector_j in enumerate(genomic_contexts):
+				if i < j:
+					families_present = set(vector_i+vector_j)
+					overlapping_families = set(vector_i).intersection(set(vector_j))
+					dist = 1-len(overlapping_families)/len(families_present)
+					distance_matrix[i][j] = dist
+					distance_matrix[j][i] = dist
 
 	return distance_matrix, labels
 
@@ -2712,21 +2768,26 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 	print(' ... Using mode Advanced?', advanced)
 
 	if len(in_syntenies) > 1:
-		distance_matrix, ordered_ncbi_codes = compute_operons_distance_matrix(in_syntenies, label = label)
-		operon_clusters = find_clusters_in_distance_matrix(distance_matrix, t = 0.2)
 		if advanced:
-			ordered_ncbi_codes = list(in_syntenies.keys())
-			tsne_coordinates = find_operon_coordinates_with_tSNE(in_syntenies, protein_families_summary)
+			# get the clusters by excluding the most common families
+			clean_coordinates, operon_clusters, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True)
+			# and now all PacMap coordinates by assuming all families. This will be later used for sorting the dendogram
+			all_coordinates, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = False, coordinates_only = True)
 		else:
-			tsne_coordinates = [[np.nan, np.nan] for i in operon_clusters]
+			distance_matrix, ordered_ncbi_codes = compute_operons_distance_matrix(in_syntenies, label = label)
+			operon_clusters = find_clusters_in_distance_matrix(distance_matrix, t = 0.2)
+			coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	else:
 		operon_clusters = [1]
 		ordered_ncbi_codes = list(in_syntenies.keys())
-		tsne_coordinates = [[np.nan, np.nan] for i in operon_clusters]
+		coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	
 	for i, target in enumerate(ordered_ncbi_codes):
 		in_syntenies[target]['operon_type'] = int(operon_clusters[i])
-		in_syntenies[target]['operon_tSNE'] = list([float(a) for a in tsne_coordinates[i]])
+
+		if advanced:
+			in_syntenies[target]['operon_filtered_PaCMAP'] = list([float(a) for a in clean_coordinates[i]])
+			in_syntenies[target]['operon_PaCMAP'] = list([float(a) for a in all_coordinates[i]])
 
 	operon_types = get_operon_types_summary(in_syntenies, write_to_file = True, label = label)
 	
@@ -2850,7 +2911,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.13', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.14', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
