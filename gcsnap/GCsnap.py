@@ -643,6 +643,7 @@ def get_uniprot_annotations(uniprot_code, previous_annotations = ''):
 				uniprot_data = json.loads(uniprot_data)
 				uniprot_annotations = parse_uniprot_data(uniprot_data, previous_annotations = previous_annotations)
 		except:
+			print(sys.exc_info())
 			uniprot_annotations = 'nan'
 	
 	return uniprot_annotations
@@ -2723,7 +2724,6 @@ def add_functions_and_structures_to_families(arguments):
 
 				# print('... ... Mapping to UniProt')
 				family_uniprot_codes = map_codes_to_uniprot(protein_families_summary[family]['members'])
-				print(family_uniprot_codes)
 
 				# print('... ... Finding annotations and/or structures')
 
