@@ -802,7 +802,7 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 	sorted_families   = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
 
 	# select only the protein families that are not very frequenct but also not very rare
-	if clean:
+	if clean and len(sorted_families) > 10:
 		families_frequency = [len(protein_families_summary[family]['members']) for family in sorted_families]
 		families_frequency = [i/len(in_syntenies) for i in families_frequency]
 		mean_frequency     = np.mean(families_frequency)
@@ -2723,6 +2723,7 @@ def add_functions_and_structures_to_families(arguments):
 
 				# print('... ... Mapping to UniProt')
 				family_uniprot_codes = map_codes_to_uniprot(protein_families_summary[family]['members'])
+				print(family_uniprot_codes)
 
 				# print('... ... Finding annotations and/or structures')
 
