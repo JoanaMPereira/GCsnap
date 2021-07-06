@@ -874,6 +874,7 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 		# std_frequency      = np.std(families_frequency)
 		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] <= max_freq and families_frequency[i] >= min_freq]
 
+	print(sorted_families)
 	presence_matrix = [[0 for i in sorted_families] for i in sorted_ncbi_codes]
 	for i, target_i in enumerate(sorted_ncbi_codes):
 		operon_i = in_syntenies[target_i]['flanking_genes']['families']
