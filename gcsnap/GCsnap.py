@@ -861,7 +861,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	return selected_operons, most_populated_operon
 
 
-def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = True):
+def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = True, min_freq = 2, max_freq = 20):
 
 	sorted_ncbi_codes = sorted(list(in_syntenies.keys()))
 	sorted_families   = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
@@ -870,9 +870,9 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 	if clean and len(sorted_families) > 10:
 		families_frequency = [len(protein_families_summary[family]['members']) for family in sorted_families]
 		families_frequency = [i/len(in_syntenies) for i in families_frequency]
-		mean_frequency     = np.mean(families_frequency)
-		std_frequency      = np.std(families_frequency)
-		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] < mean_frequency + 4*std_frequency and families_frequency[i] > mean_frequency]
+		# mean_frequency     = np.mean(families_frequency)
+		# std_frequency      = np.std(families_frequency)
+		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] <= max_freq and families_frequency[i] >= min_freq]
 
 	presence_matrix = [[0 for i in sorted_families] for i in sorted_ncbi_codes]
 	for i, target_i in enumerate(sorted_ncbi_codes):
@@ -892,9 +892,6 @@ def calculate_eps(coordinates):
 				dist = np.linalg.norm(np.array(vector_i) - np.array(vector_j))
 				distances.append(dist)
 
-	# eps = np.median(distances) - stats.median_absolute_deviation(distances)
-	# print(np.median(distances), stats.median_absolute_deviation(distances), eps)
-
 	distances = np.array(distances)
 	mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
 	means = mixture.means_.flatten()
@@ -907,9 +904,9 @@ def calculate_eps(coordinates):
 
 	return eps
 
-def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False):
+def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20):
 
-	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean)
+	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
 	# embed into 2D paCMAP space
 	n_dims = len(selected_families)
@@ -2843,14 +2840,14 @@ def add_functions_and_structures_to_families(arguments):
 
 	return protein_families_summary
 
-def find_and_add_operon_types(in_syntenies, protein_families_summary, label = None, advanced = False):
+def find_and_add_operon_types(in_syntenies, protein_families_summary, label = None, advanced = False, min_family_freq = None, max_family_freq = None):
 
 	print(' ... Using mode Advanced?', advanced)
 
 	if len(in_syntenies) > 1:
 		if advanced:
 			# get the clusters by excluding the most common families
-			clean_coordinates, operon_clusters, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True)
+			clean_coordinates, operon_clusters, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, min_freq = min_family_freq, max_freq = max_family_freq)
 			# and now all PacMap coordinates by assuming all families. This will be later used for sorting the dendogram
 			all_coordinates, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = False, coordinates_only = True)
 		else:
@@ -3009,8 +3006,16 @@ def main():
 	optionalNamed.add_argument('-n_flanking5', dest='n_flanking5', default = 4,type=int, help="Number of flanking sequences to take on the 5' (default: 4)")
 	optionalNamed.add_argument('-n_flanking3', dest='n_flanking3', default = 4,type=int, help="Number of flanking sequences to take on the 3' (default: 4)")
 	optionalNamed.add_argument('-exclude_partial', dest='exclude_partial', default = False,type=bool, help='Boolean statement to exclude partial operon/genomic_context blocks (default: False)\nIf turned off, partial cases will still be ignored to get the most common genomic features')
+	optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
+	optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
+	optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
+	optionalNamed.add_argument('-collect_only', dest='collect_only', default = False,type=bool, help='Boolean statement to make GCsnap collect genomic contexts only, without comparing them (default: False).')
+	# operon clustering
 	optionalNamed.add_argument('-n_max_operons', dest='n_max', default = 30,type=int, help='Maximum number of top most populated operon/genomic_context block types (default: 30)')
-	optionalNamed.add_argument('-operon_cluster_advanced', dest='operon_cluster_advanced', default = False,type=bool, help='Boolean statement to use the operon clustering advanced mode (using tSNE) (default: False)')
+	optionalNamed.add_argument('-operon_cluster_advanced', dest='operon_cluster_advanced', default = False,type=bool, help='Boolean statement to use the operon clustering advanced mode (using PacMAP) (default: False)')
+	optionalNamed.add_argument('-max_family_freq', dest='max_family_freq', default = 20,type=int, help='Maximum frequency of a family in the set of genomic cotexts found to be considered for advanced operon clustering (default: 20)')
+	optionalNamed.add_argument('-min_family_freq', dest='min_family_freq', default = 2,type=int, help='Minimum frequency of a family in the set of genomic cotexts found to be considered for advanced operon clustering (default: 20)')
+	#protein family identification
 	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='Number of iterations for all-against-all searches (default: 1). Required to define protein families.')
 	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='Max e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
 	optionalNamed.add_argument('-coverage', dest='min_coverage', default = 70,type=float, help='Minimum coverage of target and subject a match needs to be so that two sequences are considered to be homologous (default: 70%). Required to define protein families.')
@@ -3018,10 +3023,6 @@ def main():
 	optionalNamed.add_argument('-all-against-all_method', dest='clustering_method', default = 'psiblast',type=str, choices=['mmseqs', 'psiblast'], help='Method for clustering (default: psiblast)')
 	optionalNamed.add_argument('-psiblast_location', dest='blast', default = 'psiblast',type=str, help='Location of psiBLAST (if not in path) (default: psiblast)')
 	optionalNamed.add_argument('-mmseqs_location', dest='mmseqs', default = 'mmseqs',type=str, help='Location of MMseqs (if not in path) (default: mmseqs)')
-	optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
-	optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
-	optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
-	optionalNamed.add_argument('-collect_only', dest='collect_only', default = False,type=bool, help='Boolean statement to make GCsnap collect genomic contexts only, without comparing them (default: False).')
 	# figure making optional inputs
 	optionalNamed.add_argument('-genomic_context_cmap', dest='genomic_context_cmap', default = 'Spectral',type=str, help='Color map (as of matplotlib) to assign colors to and plot the syntenic blocks (default: Spectral)')
 	optionalNamed.add_argument('-out_format', dest='out_format', default = 'png',type=str, help='Output format of the core figures (default: png)')
@@ -3066,6 +3067,8 @@ def main():
 	collect_only = args.collect_only
 	n_cpus = args.n_cpu
 	operon_cluster_advanced = args.operon_cluster_advanced
+	max_family_freq = args.max_family_freq
+	min_family_freq = args.min_family_freq
 	method = args.clustering_method
 	n_max = args.n_max
 	num_alignments = 50000
@@ -3187,7 +3190,7 @@ def main():
 
 					# Find operon/genomic_context types by clustering them by similarity
 					print("\n 4. Finding operon/genomic_context types\n")
-					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced)
+					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced, min_family_freq = min_family_freq, max_family_freq = max_family_freq)
 
 					# Select top N most populated operon/genomic_context types
 					print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
