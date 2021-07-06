@@ -32,6 +32,7 @@ from collections import Counter
 from multiprocessing.pool import ThreadPool
 
 from sklearn.cluster import DBSCAN
+from sklearn.mixture import GaussianMixture
 
 from bokeh.plotting import figure, output_file, gridplot, save
 from bokeh.colors import RGB
@@ -891,8 +892,18 @@ def calculate_eps(coordinates):
 				dist = np.linalg.norm(np.array(vector_i) - np.array(vector_j))
 				distances.append(dist)
 
-	eps = np.median(distances) - stats.median_absolute_deviation(distances)
-	print(np.median(distances), stats.median_absolute_deviation(distances), eps)
+	# eps = np.median(distances) - stats.median_absolute_deviation(distances)
+	# print(np.median(distances), stats.median_absolute_deviation(distances), eps)
+
+	distances = np.array(distances)
+	mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
+	means = mixture.means_.flatten()
+	sds = np.sqrt(mixture.covariances_).flatten()
+
+	mean = min(means)
+	sd = sds[list(means).index(mean)]
+
+	eps = mean - sd
 
 	return eps
 
