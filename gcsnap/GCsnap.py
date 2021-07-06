@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 22.06.2021
+## Last changed: 06.07.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -386,7 +386,7 @@ def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 
 	return flanking_genes
 
-# 3. Routines to compute all-against-all distance matrix and find protein families and operon types using the advanced mode
+# 3. Routines to compute all-against-all distance matrix and find protein families 
 
 def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude_pseudogenes = False, mode = 'flanking_sequences'):
 
@@ -411,6 +411,8 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 				outfst.write('\n')
 
 	return out_fasta, seqs_lens
+
+# 3.1. Routines for when the method is based on BLASTp
 
 def make_blast_database_from_fasta(infasta, blast = None):
 
@@ -445,7 +447,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, nu
 
 	return blast_outfile
 
-def extract_distance_matrix_from_blast_output(blast_results, default_base = None, mode = 'flanking_sequences', min_coverage = 70, sequences_lengths = {}):
+def extract_distance_matrix_from_blast_output(blast_results, default_base = None, min_coverage = 70, sequences_lengths = {}):
 
 	print(' ... ... Computing sequences similarity matrix')
 	result_handle = open(blast_results)
@@ -491,18 +493,79 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 
 	return np.array(distance_matrix), all_queries
 
-def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None, mode = 'flanking_sequences'):
+# 3.2. Routines for when the method is based on MMseqs
+
+def get_queries_labels(seq_fasta):
+
+	all_queries = []
+	with open(seq_fasta, 'r') as infasta:
+		for line in infasta:
+			if line.startswith('>'):
+				query = line.split('|')[0].strip('>')
+				all_queries.append(query)
+	return all_queries
+
+def run_mmseqs_for_flanking_sequences(seq_fasta, num_threads = None, max_evalue = None, num_iterations = None, mmseqs = None, tmp_folder = None, sensitivity=7.5, min_coverage=None):
+
+	print(' ... ... Running MMseqs')
+	mmseqs_outfile = '{}/{}_{}.mmseqs'.format(tmp_folder, seq_fasta.split('/')[-1][:-6], max_evalue)
+
+	if not os.path.isfile(mmseqs_outfile):
+		run_mmseqs = sp.Popen(['mmseqs', 'easy-search', seq_fasta, seq_fasta, mmseqs_outfile, tmp_folder, '-e', str(max_evalue), '-s', str(sensitivity), '-c', str(min_coverage), '--num-iterations', str(num_iterations), '--threads', str(num_threads), '--format-output', 'query,target,evalue'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+		stdout, stderr = run_mmseqs.communicate()
+
+		if len(stderr) > 0:
+			try:
+				run_mmseqs = sp.Popen(['{}mmseqs'.format(mmseqs), 'easy-search', seq_fasta, seq_fasta, mmseqs_outfile, tmp_folder, '-e', str(max_evalue), '-s', str(sensitivity), '-c', str(min_coverage), '--num-iterations', str(num_iterations), '--threads', str(num_threads), '--format-output', 'query,target,evalue'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+				stdout, stderr = run_mmseqs.communicate()
+			except:
+				print("\n--> ERROR:  There's no MMseqs installation")
+				exit()
+
+	return mmseqs_outfile
+
+def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, default_base = None):
+
+	print(' ... ... Computing sequences similarity matrix')
+	distance_matrix = [[default_base for query in all_queries] for query in all_queries]
+
+	with open(mmseqs_results, 'r') as mmseqs_records:
+		for hsp in mmseqs_records:
+			hsp = hsp.split()
+			if len(hsp) > 0:
+				query = hsp[0].split('|')[0]
+				query_index = all_queries.index(query)
+
+				target = hsp[1].split('|')[0]
+				if target != query:
+					target_index = all_queries.index(target)
+					distance_matrix[query_index][target_index] = 0
+					distance_matrix[target_index][query_index] = 0
+				else:
+					distance_matrix[query_index][query_index] = 0
+
+	return np.array(distance_matrix)
+
+# 3.3. Wrapping routines
+
+def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, mmseqs = None, default_base = None, tmp_folder = None, mode = 'flanking_sequences', method = 'blast', min_coverage=None):
 	
 	out_dir = '{}/{}_all_against_all_searches'.format(os.getcwd(), out_label)
 	if not os.path.isdir(out_dir):
 		os.mkdir(out_dir)
 
 	flanking_fasta, sequences_len = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label, mode = mode)
-	sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
-	blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
 
-	distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, mode = mode, sequences_lengths = sequences_len)
+	if method == 'psiblast':
+		sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
+		blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
+		distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, sequences_lengths = sequences_len, min_coverage = min_coverage)
 	
+	elif method == 'mmseqs':
+		queries_labels = get_queries_labels(flanking_fasta)
+		mmseqs_results = run_mmseqs_for_flanking_sequences(flanking_fasta, num_threads = num_threads, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage/100, mmseqs = mmseqs, tmp_folder = tmp_folder)
+		distance_matrix = extract_distance_matrix_from_mmseqs_output(mmseqs_results, queries_labels, default_base = default_base)
+
 	return distance_matrix, queries_labels
 
 def get_protein_families_summary(in_syntenies, write_to_file = True, out_label = None):
@@ -727,7 +790,8 @@ def compute_operons_distance_matrix(in_syntenies, label = None):
 							curr_vector = np.append(curr_vector, -1)
 							number_fillings += 1
 
-				families_present = set(reference_vector+curr_vector)
+
+				families_present = set(np.concatenate([reference_vector,curr_vector]))
 				overlapping_families = set(reference_vector).intersection(set(curr_vector))
 				dist = 1-len(overlapping_families)/len(families_present)
 
@@ -2628,7 +2692,7 @@ def get_genomic_contexts_for_ncbi_codes(arguments):
 
 	return all_syntenies  
 
-def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, default_base = None, tmp_folder = None):
+def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, mmseqs = None, min_coverage = None, default_base = None, tmp_folder = None, method = None):
 
 	if os.path.isfile('all_syntenies.json') and os.path.isfile('protein_families_summary.json'):
 
@@ -2639,9 +2703,9 @@ def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = 
 		print(' ... A job was previously run. Found {} families.'.format(len(protein_families)))
 
 	else:
-		print(' ... Doing all against all searches with BLAST')
+		print(' ... Doing all against all searches with {}'.format(method))
 
-		distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)	
+		distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage, method = method, mmseqs = mmseqs, blast = blast, default_base = default_base, tmp_folder = tmp_folder)	
 		protein_clusters = find_clusters_in_distance_matrix(distance_matrix)
 		protein_clusters = mask_singleton_clusters(protein_clusters)
 
@@ -2915,7 +2979,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
 	# GET INPUTS
-	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.14', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+	parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.15', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
 									 description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
 									 epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
@@ -2935,10 +2999,13 @@ def main():
 	optionalNamed.add_argument('-exclude_partial', dest='exclude_partial', default = False,type=bool, help='Boolean statement to exclude partial operon/genomic_context blocks (default: False)\nIf turned off, partial cases will still be ignored to get the most common genomic features')
 	optionalNamed.add_argument('-n_max_operons', dest='n_max', default = 30,type=int, help='Maximum number of top most populated operon/genomic_context block types (default: 30)')
 	optionalNamed.add_argument('-operon_cluster_advanced', dest='operon_cluster_advanced', default = False,type=bool, help='Boolean statement to use the operon clustering advanced mode (using tSNE) (default: False)')
-	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='psiBLAST number of iterations (default: 1). Required to define protein families.')
-	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='psiBLAST e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
+	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='Number of iterations for all-against-all searches (default: 1). Required to define protein families.')
+	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='Max e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
+	optionalNamed.add_argument('-coverage', dest='min_coverage', default = 70,type=float, help='Minimum coverage of target and subject a match needs to be so that two sequences are considered to be homologous (default: 70%). Required to define protein families.')
 	optionalNamed.add_argument('-base', dest='default_base', default = 10,type=int, help='Artificial distance value for two sequences that do not match with an E-value better than -evalue (default: 10).')
+	optionalNamed.add_argument('-all-against-all_method', dest='clustering_method', default = 'psiblast',type=str, choices=['mmseqs', 'psiblast'], help='Method for clustering (default: psiblast)')
 	optionalNamed.add_argument('-psiblast_location', dest='blast', default = 'psiblast',type=str, help='Location of psiBLAST (if not in path) (default: psiblast)')
+	optionalNamed.add_argument('-mmseqs_location', dest='mmseqs', default = 'mmseqs',type=str, help='Location of MMseqs (if not in path) (default: mmseqs)')
 	optionalNamed.add_argument('-out_label', dest='out_label', default = 'default',type=str, help='The label to append to the out folder (default: "default"). Important when the input list corresponds to raw sequence identifiers.')
 	optionalNamed.add_argument('-out_label_suffix', dest='out_label_suffix', default = '',type=str, help='A suffix to add to the out_label (default: "").')
 	optionalNamed.add_argument('-tmp_folder', dest='tmp_folder', default = '/tmp',type=str, help='The temporary folder (default: /tmp). May be changed so that intermediary files (e.g., assembly files) are saved somewhere else.')
@@ -2987,9 +3054,11 @@ def main():
 	collect_only = args.collect_only
 	n_cpus = args.n_cpu
 	operon_cluster_advanced = args.operon_cluster_advanced
+	method = args.clustering_method
 	n_max = args.n_max
 	num_alignments = 50000
 	max_evalue = args.max_evalue
+	min_coverage = args.min_coverage
 	num_iterations = args.num_iterations
 	default_base = args.default_base
 	out_label = args.out_label
@@ -3046,9 +3115,10 @@ def main():
 
 	# define programs location
 	blast = args.blast
+	mmseqs = args.mmseqs
 
 	# install cache to make it faster
-	if sys.version_info <(3, 8)
+	if sys.version_info[0] == 3 and sys.version_info[1] < 8:
 		requests_cache.install_cache()
 
 	# set starting directory
@@ -3092,7 +3162,7 @@ def main():
 				if not collect_only:
 					# Find shared protein families by running all-against-all blast searches for all proteins collected
 					print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
-					all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
+					all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
 
 					# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
 					if get_pdb or get_functional_annotations:
@@ -3101,11 +3171,11 @@ def main():
 						protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
 
 					else:
-						print("\n 3. Neither functions will be annotated, and neither structures will be searched\n")
+						print("\n 3. Neither functions will be annotated, neither structures will be searched\n")
 
 					# Find operon/genomic_context types by clustering them by similarity
 					print("\n 4. Finding operon/genomic_context types\n")
-					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced,)
+					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced)
 
 					# Select top N most populated operon/genomic_context types
 					print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
