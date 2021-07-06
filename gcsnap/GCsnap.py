@@ -869,7 +869,7 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 	# select only the protein families that are not very frequenct but also not very rare
 	if clean and len(sorted_families) > 10:
 		families_frequency = [len(protein_families_summary[family]['members']) for family in sorted_families]
-		families_frequency = [i/len(in_syntenies) for i in families_frequency]
+		families_frequency = [i*100/len(in_syntenies) for i in families_frequency]
 		# mean_frequency     = np.mean(families_frequency)
 		# std_frequency      = np.std(families_frequency)
 		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] <= max_freq and families_frequency[i] >= min_freq]
