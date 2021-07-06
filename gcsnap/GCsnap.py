@@ -529,16 +529,18 @@ def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, defa
 	print(' ... ... Computing sequences similarity matrix')
 	distance_matrix = [[default_base for query in all_queries] for query in all_queries]
 
+	all_queries = {query: i for i, query in enumerate(all_queries)}
+
 	with open(mmseqs_results, 'r') as mmseqs_records:
 		for hsp in mmseqs_records:
 			hsp = hsp.split()
 			if len(hsp) > 0:
 				query = hsp[0].split('|')[0]
-				query_index = all_queries.index(query)
+				query_index = all_queries[query]
 
 				target = hsp[1].split('|')[0]
 				if target != query:
-					target_index = all_queries.index(target)
+					target_index = all_queries[target]
 					distance_matrix[query_index][target_index] = 0
 					distance_matrix[target_index][query_index] = 0
 				else:
