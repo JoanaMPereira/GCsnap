@@ -543,8 +543,6 @@ def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, defa
 					target_index = all_queries[target]
 					distance_matrix[query_index][target_index] = 0
 					distance_matrix[target_index][query_index] = 0
-				else:
-					distance_matrix[query_index][query_index] = 0
 
 	return np.array(distance_matrix)
 
