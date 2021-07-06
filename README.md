@@ -12,26 +12,18 @@ All information is stored in detailed, human and machine-readable files, and cus
 
 ## Dependencies
 
-GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on Python 3.7 and 3.8. It requires mostly core Python modules and only three external packages are required: 
+GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on Python 3.7 and 3.8. It requires mostly core Python modules and only five external packages are required: 
   - Biopython
   - Bokeh
   - Networkx 
+  - PaCMAP
+  - Scikit-learn
 
 For detailed requirements, check ```requirements.txt```.
 
-Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above). 
+Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above) and MMseqs. 
 
 ## Installation
-
-A preliminary package for GCsnap is available on test-PyPi and can be installed through ```pip```. Just download the ```requirements.txt``` file and run:
-
-```
-  pip install -r requirements.txt
-  pip install -i https://test.pypi.org/simple/ gcsnap
-```
-It was built on ```macosx-10.9-x86_64``` and if it does not work due to building-related issues, you can always install from source following the instructions below.
-
-***We recommend installing from source, though.***
 
 ### Installing from Source
 
@@ -123,3 +115,5 @@ J. Mol. Biol. (2021) 166943. https://doi.org/https://doi.org/10.1016/j.jmb.2021.
 GCsnap was developed during the COVID-19 lockdown. 
 
 I would like to thank Prof. Andrei N. Lupas, Dr. Laura Weidmann-Krebs, Dr. Marcus Hartmann, Dr. Vikram Alva, Dr. Felipe Merino, Dr. Jörg Martin, Dr. Adrian Fuchs, Hadeer Elhabashy, Prof. Volkmar Braun, Dr. João Rodrigues and Dr. João Barros for the great support and the insightful discussions that helped the development of GCsnap.
+
+GCsnap is being maintained at the Biozentrum of the University of Basel, and I would like to thank the Schwede team and the Basler group for insightful discussions that are driving many new developments.
