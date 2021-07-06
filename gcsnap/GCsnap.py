@@ -892,6 +892,7 @@ def calculate_eps(coordinates):
 				distances.append(dist)
 
 	eps = np.median(distances) - stats.median_absolute_deviation(distances)
+	print(np.median(distances), stats.median_absolute_deviation(distances), eps)
 
 	return eps
 
