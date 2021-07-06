@@ -527,7 +527,7 @@ def run_mmseqs_for_flanking_sequences(seq_fasta, num_threads = None, max_evalue 
 def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, default_base = None):
 
 	print(' ... ... Computing sequences similarity matrix')
-	distance_matrix = [[default_base for query in all_queries] for query in all_queries]
+	distance_matrix = [[default_base if i!=j else 0 for i in all_queries] for j in all_queries]
 
 	all_queries = {query: i for i, query in enumerate(all_queries)}
 
