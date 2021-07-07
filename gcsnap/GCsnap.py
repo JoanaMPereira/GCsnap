@@ -953,8 +953,6 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 						subcluster_type = cluster_type + subcluster_type*(10**(-iteration-1))
 						clusters[ncbis_idx[i]] = subcluster_type
 
-						print(ncbis_idx[i], clusters[ncbis_idx[i]], subcluster_type)
-
 			except:
 				print(' ... ... Not possible to search')
 				pass
@@ -2893,6 +2891,7 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 		ordered_ncbi_codes = list(in_syntenies.keys())
 		coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	
+	print(operon_clusters)
 	for i, target in enumerate(ordered_ncbi_codes):
 		in_syntenies[target]['operon_type'] = float(operon_clusters[i])
 
