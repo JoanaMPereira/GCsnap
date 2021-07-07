@@ -850,7 +850,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	selected_operons = {}
 	most_populated_operon = ''
 	for i, line in enumerate(operons_count_matrix):
-		label = 'GC Type {:05d}.{} ({})'.format(int(line[0]), int(line[0]-int(line[0])), line[1])
+		label = 'GC Type {:05d} ({})'.format(line[0], line[1])
 		if i == 0:
 			most_populated_operon = label
 		
@@ -932,32 +932,6 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 	model.fit(paCMAP_coordinat)
 	clusters = model.fit_predict(paCMAP_coordinat)
 
-	if iteration < 1:
-		print(' ... ... Found {} clusters'.format(len(set(clusters))))
-
-		for cluster_type in set(clusters):
-			ncbis_idx = np.where(clusters == cluster_type)
-			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
-			ncbis_idx = ncbis_idx[0]
-
-			print(' ... Finding subclusters in cluster {} ({} members)'.format(cluster_type, len(ncbis_in_cluster)))
-
-			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
-
-			try:
-				_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq, max_freq = max_freq, iteration = 1)
-				print(' ... ... Found {} subclusters'.format(len(set(subclusters))))
-
-				for i, subcluster_type in enumerate(subclusters):
-					if subcluster_type > 0:
-						subcluster_type = cluster_type + subcluster_type*(10**(-iteration-1))
-						clusters[ncbis_idx[i]] = subcluster_type
-
-			except:
-				print(' ... ... Not possible to search')
-				pass
-
-	print(clusters)
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
 # 6. Routines to make the genomic_context/operon block figures
@@ -2894,7 +2868,7 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 	
 	print(operon_clusters)
 	for i, target in enumerate(ordered_ncbi_codes):
-		in_syntenies[target]['operon_type'] = float(operon_clusters[i])
+		in_syntenies[target]['operon_type'] = int(operon_clusters[i])
 
 		if advanced:
 			in_syntenies[target]['operon_filtered_PaCMAP'] = list([float(a) for a in clean_coordinates[i]])
