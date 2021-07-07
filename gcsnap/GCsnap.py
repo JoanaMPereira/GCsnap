@@ -957,6 +957,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 				print(' ... ... Not possible to search')
 				pass
 
+	print(clusters)
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
 # 6. Routines to make the genomic_context/operon block figures
