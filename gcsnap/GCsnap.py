@@ -850,7 +850,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	selected_operons = {}
 	most_populated_operon = ''
 	for i, line in enumerate(operons_count_matrix):
-		label = 'GC Type {:05f} ({})'.format(line[0], line[1])
+		label = 'GC Type {:05d}.{d} ({})'.format(line[0], line[1], round(line[1]-int(line[1])))
 		if i == 0:
 			most_populated_operon = label
 		
@@ -950,6 +950,8 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 				for i, subcluster_type in enumerate(subclusters):
 					if subcluster_type > 0:
+						print(subcluster_type*(10**(-iteration+1)), 10**(-iteration+1))
+
 						subcluster_type = cluster_type + subcluster_type*(10**(-iteration+1))
 						clusters[ncbis_idx[i]] = subcluster_type
 
