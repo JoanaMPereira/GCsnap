@@ -927,7 +927,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	for cluster_type in set(clusters):
 		ncbis_idx = np.where(clusters == cluster_type)
-		ncbis_in_cluster = sorted_ncbi_codes[ncbis_idx]
+		ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
 
 		print(ncbis_in_cluster)
 
