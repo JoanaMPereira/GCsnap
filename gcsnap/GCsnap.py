@@ -881,7 +881,7 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 
 	return np.array(presence_matrix), sorted_ncbi_codes, sorted_families
 
-def calculate_eps(coordinates):
+def calculate_start_eps(coordinates):
 
 	distances = []
 	for i, vector_i in enumerate(coordinates):
@@ -898,16 +898,11 @@ def calculate_eps(coordinates):
 	mean = min(means)
 	sd = sds[list(means).index(mean)]
 
-	# mean = np.median(distances)
-	# sd = stats.median_absolute_deviation(distances)
-
 	eps = mean - sd
-	# if eps < 0:
-	# 	eps = mean
 
-	return eps
+	return round(eps, 2)
 
-def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0):
+def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0, max_eps_cost = 1.3, eps_step = 0.02):
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
@@ -923,12 +918,34 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		return paCMAP_coordinat, sorted_ncbi_codes
 
 	# find clusters in the 2D paCMAP space
-	eps = calculate_eps(paCMAP_coordinat)
-	print(' ... ... EPS: {}'.format(eps))
+	# do this by selecting the best eps based on the number of clusters it creates compared to the number of operons 
+	# that are not assigned a clusters (i.e., a given maximum cost)
+	
+	print(' ... Fine tuning EPS')
 
-	model = DBSCAN(eps = eps)
-	model.fit(paCMAP_coordinat)
-	clusters = model.fit_predict(paCMAP_coordinat)
+	eps = calculate_start_eps(paCMAP_coordinat)
+
+	n_clusters = [0]
+	n_singletons = [0]
+	cost = 0
+	while cost <= max_eps_cost and eps > 0:
+		eps = eps - eps_step
+
+		model = DBSCAN(eps = eps)
+		model.fit(paCMAP_coordinat)
+		clusters = model.fit_predict(paCMAP_coordinat)
+
+		n = len(set(clusters))
+		delta_n_clusters = n - n_clusters[-1]
+		delta_singletons = list(clusters).count(-1) - n_singletons[-1]
+		if delta_n > 0:
+			cost = delta_singletons/delta_n
+		else:
+			cost = 0
+
+	print(' ... ... EPS:  {}'.format(eps))
+	print(' ... ... Cost: {}'.format(cost))
+	print(' ... ... N:    {}'.format(n))
 
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
