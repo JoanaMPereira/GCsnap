@@ -901,7 +901,7 @@ def calculate_eps(coordinates):
 	# mean = np.median(distances)
 	# sd = stats.median_absolute_deviation(distances)
 
-	# eps = mean - sd
+	eps = mean - sd
 	# if eps < 0:
 	# 	eps = mean
 
