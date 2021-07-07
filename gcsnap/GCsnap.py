@@ -2881,7 +2881,6 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 		ordered_ncbi_codes = list(in_syntenies.keys())
 		coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	
-	print(operon_clusters)
 	for i, target in enumerate(ordered_ncbi_codes):
 		in_syntenies[target]['operon_type'] = int(operon_clusters[i])
 
