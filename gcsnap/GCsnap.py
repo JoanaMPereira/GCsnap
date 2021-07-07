@@ -850,7 +850,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	selected_operons = {}
 	most_populated_operon = ''
 	for i, line in enumerate(operons_count_matrix):
-		label = 'GC Type {:05d} ({})'.format(line[0], line[1])
+		label = 'GC Type {:05f} ({})'.format(line[0], line[1])
 		if i == 0:
 			most_populated_operon = label
 		
@@ -2894,7 +2894,7 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 		coordinates = [[np.nan, np.nan] for i in operon_clusters]
 	
 	for i, target in enumerate(ordered_ncbi_codes):
-		in_syntenies[target]['operon_type'] = int(operon_clusters[i])
+		in_syntenies[target]['operon_type'] = float(operon_clusters[i])
 
 		if advanced:
 			in_syntenies[target]['operon_filtered_PaCMAP'] = list([float(a) for a in clean_coordinates[i]])
