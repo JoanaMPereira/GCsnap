@@ -908,10 +908,6 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
-	if iteration == 1:
-		print(selected_families)
-		print(presence_matrix.shape)
-
 	# embed into 2D paCMAP space
 	n_dims = len(selected_families)
 	if n_dims < 2:
@@ -925,24 +921,29 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	# find clusters in the 2D paCMAP space
 	eps = calculate_eps(paCMAP_coordinat)
+	print(' ... ... EPS: {}'.format(eps))
+
 	model = DBSCAN(eps = eps)
 	model.fit(paCMAP_coordinat)
 	clusters = model.fit_predict(paCMAP_coordinat)
 
 	if iteration < 1:
+		print(' ... ... Found {} clusters'.format(len(set(clusters))))
+
 		for cluster_type in set(clusters):
+			print(' ... Finding subclusters in cluster {}'.format(cluster_type))
+
 			ncbis_idx = np.where(clusters == cluster_type)
 			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
 
 			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
 
 			try:
-				_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq/2, max_freq = max_freq*2, iteration = 1)
-
-				print(cluster_type)
-				print(subclusters)
+				_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq, max_freq = max_freq, iteration = 1)
+				print(' ... ... Found {} subclusters'.format(len(set(subclusters))))
 
 			except:
+				print(' ... ... No subclusters found')
 				pass
 
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
