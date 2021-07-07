@@ -904,7 +904,7 @@ def calculate_eps(coordinates):
 
 	return eps
 
-def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20):
+def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0):
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
@@ -925,11 +925,18 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 	model.fit(paCMAP_coordinat)
 	clusters = model.fit_predict(paCMAP_coordinat)
 
-	for cluster_type in set(clusters):
-		ncbis_idx = np.where(clusters == cluster_type)
-		ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
+	if iteration < 1:
+		for cluster_type in set(clusters):
+			ncbis_idx = np.where(clusters == cluster_type)
+			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
 
-		print(ncbis_in_cluster)
+			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
+
+			_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq, max_freq = max_freq, iteration = 1)
+
+			print(cluster_type)
+			print(subclusters)
+
 
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
