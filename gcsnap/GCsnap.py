@@ -950,6 +950,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 				for i, subcluster_type in enumerate(subclusters):
 					if subcluster_type > 0:
+						print(subcluster_type, subcluster_type*(10**(-iteration)))
 						subcluster_type = cluster_type + subcluster_type*(10**(-iteration))
 						clusters[ncbis_idx[i]] = subcluster_type
 
