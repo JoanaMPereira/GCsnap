@@ -936,11 +936,14 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
 
-			_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq/2, max_freq = max_freq*2, iteration = 1)
+			try:
+				_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq/2, max_freq = max_freq*2, iteration = 1)
 
-			print(cluster_type)
-			print(subclusters)
+				print(cluster_type)
+				print(subclusters)
 
+			except:
+				pass
 
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
