@@ -906,48 +906,58 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
-	# embed into 2D paCMAP space
-	n_dims = len(selected_families)
-	if n_dims < 2:
-		n_dims = 2
-
-	paCMAP_embedding = pacmap.PaCMAP(n_dims = n_dims)
-	paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
-
 	if coordinates_only:
+
+		paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
+		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
+
 		return paCMAP_coordinat, sorted_ncbi_codes
 
-	# find clusters in the 2D paCMAP space
-	# do this by selecting the best eps based on the number of clusters it creates compared to the number of operons 
-	# that are not assigned a clusters (i.e., a given maximum cost)
-	
-	print(' ... Fine tuning EPS')
+	else:
+		# embed into n-D paCMAP space
+		n_dims = len(selected_families)
+		if n_dims < 2:
+			n_dims = 2
 
-	eps = calculate_start_eps(paCMAP_coordinat)
+		paCMAP_embedding = pacmap.PaCMAP(n_dims = n_dims)
+		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
-	n_clusters = [0]
-	n_singletons = [0]
-	cost = 0
-	while cost <= max_eps_cost and eps > 0:
-		eps = eps - eps_step
+		# find clusters in the paCMAP space
+		# do this by selecting the best eps based on the number of clusters it creates compared to the number of operons 
+		# that are not assigned a clusters (i.e., a given maximum cost)
+		
+		print(' ... Fine tuning EPS')
 
-		model = DBSCAN(eps = eps)
-		model.fit(paCMAP_coordinat)
-		clusters = model.fit_predict(paCMAP_coordinat)
+		eps = calculate_start_eps(paCMAP_coordinat)
 
-		n = len(set(clusters))
-		delta_n_clusters = n - n_clusters[-1]
-		delta_singletons = list(clusters).count(-1) - n_singletons[-1]
-		if delta_n_clusters > 0:
-			cost = delta_singletons/delta_n_clusters
-		else:
-			cost = 0
+		n_clusters = [0]
+		n_singletons = [0]
+		cost = 0
+		while cost <= max_eps_cost and eps > 0:
+			eps = eps - eps_step
 
-	print(' ... ... EPS:  {}'.format(eps))
-	print(' ... ... Cost: {}'.format(cost))
-	print(' ... ... N:    {}'.format(n))
+			model = DBSCAN(eps = eps)
+			model.fit(paCMAP_coordinat)
+			clusters = model.fit_predict(paCMAP_coordinat)
 
-	return paCMAP_coordinat, clusters, sorted_ncbi_codes
+			n = len(set(clusters))
+			delta_n_clusters = n - n_clusters[-1]
+			delta_singletons = list(clusters).count(-1) - n_singletons[-1]
+			if delta_n_clusters > 0:
+				cost = delta_singletons/delta_n_clusters
+			else:
+				cost = 0
+
+		print(' ... ... EPS:  {}'.format(eps))
+		print(' ... ... Cost: {}'.format(cost))
+		print(' ... ... N:    {}'.format(n))
+
+		# and now project into 2D
+
+		paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
+		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
+
+		return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
 # 6. Routines to make the genomic_context/operon block figures
 
