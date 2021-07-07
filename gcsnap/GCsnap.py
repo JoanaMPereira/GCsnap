@@ -938,8 +938,8 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		n = len(set(clusters))
 		delta_n_clusters = n - n_clusters[-1]
 		delta_singletons = list(clusters).count(-1) - n_singletons[-1]
-		if delta_n > 0:
-			cost = delta_singletons/delta_n
+		if delta_n_clusters > 0:
+			cost = delta_singletons/delta_n_clusters
 		else:
 			cost = 0
 
