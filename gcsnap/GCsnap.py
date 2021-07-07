@@ -937,8 +937,8 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 		for cluster_type in set(clusters):
 			ncbis_idx = np.where(clusters == cluster_type)
-			print(ncbis_idx)
 			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
+			ncbis_idx = ncbis_idx[0]
 
 			print(' ... Finding subclusters in cluster {} ({} members)'.format(cluster_type, len(ncbis_in_cluster)))
 
@@ -951,11 +951,10 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 				for i, subcluster_type in enumerate(subclusters):
 					if subcluster_type > 0:
 						subcluster_type = cluster_type + subcluster_type*10**(-iteration)
-						# clusters[]
-
+						clusters[ncbis_idx[i]] = subcluster_type
 
 			except:
-				print(' ... ... No subclusters found')
+				print(' ... ... Not possible to search')
 				pass
 
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
