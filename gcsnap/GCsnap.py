@@ -870,8 +870,6 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 	if clean and len(sorted_families) > 10:
 		families_frequency = [len(protein_families_summary[family]['members']) for family in sorted_families]
 		families_frequency = [i*100/len(in_syntenies) for i in families_frequency]
-		# mean_frequency     = np.mean(families_frequency)
-		# std_frequency      = np.std(families_frequency)
 		sorted_families    = [family for i, family in enumerate(sorted_families) if families_frequency[i] <= max_freq and families_frequency[i] >= min_freq]
 
 	presence_matrix = [[0 for i in sorted_families] for i in sorted_ncbi_codes]
@@ -893,21 +891,21 @@ def calculate_eps(coordinates):
 				distances.append(dist)
 
 	distances = np.array(distances)
-	# mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
-	# means = mixture.means_.flatten()
-	# sds = np.sqrt(mixture.covariances_).flatten()
+	mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
+	means = mixture.means_.flatten()
+	sds = np.sqrt(mixture.covariances_).flatten()
 
-	# mean = min(means)
-	# sd = sds[list(means).index(mean)]
+	mean = min(means)
+	sd = sds[list(means).index(mean)]
 
-	mean = np.median(distances)
-	sd = stats.median_absolute_deviation(distances)
+	# mean = np.median(distances)
+	# sd = stats.median_absolute_deviation(distances)
 
-	eps = mean - sd
-	if eps < 0:
-		eps = mean
+	# eps = mean - sd
+	# if eps < 0:
+	# 	eps = mean
 
-	return eps/10
+	return eps
 
 def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0):
 
