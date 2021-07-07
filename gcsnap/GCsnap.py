@@ -904,6 +904,8 @@ def calculate_eps(coordinates):
 	sd = stats.median_absolute_deviation(distances)
 
 	eps = mean - sd
+	if eps < 0:
+		eps = mean
 
 	return eps
 
@@ -934,10 +936,10 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		print(' ... ... Found {} clusters'.format(len(set(clusters))))
 
 		for cluster_type in set(clusters):
-			print(' ... Finding subclusters in cluster {}'.format(cluster_type))
-
 			ncbis_idx = np.where(clusters == cluster_type)
 			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
+
+			print(' ... Finding subclusters in cluster {} ({} members)'.format(cluster_type, len(ncbis_idx)))
 
 			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
 
