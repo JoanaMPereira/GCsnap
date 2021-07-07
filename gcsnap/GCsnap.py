@@ -925,6 +925,12 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 	model.fit(paCMAP_coordinat)
 	clusters = model.fit_predict(paCMAP_coordinat)
 
+	for cluster_type in set(clusters):
+		ncbis_idx = np.where(clusters == cluster_type)
+		ncbis_in_cluster = sorted_ncbi_codes[ncbis_idx]
+
+		print(ncbis_in_cluster)
+
 	return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
 # 6. Routines to make the genomic_context/operon block figures
