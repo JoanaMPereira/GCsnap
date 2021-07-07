@@ -909,6 +909,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
 	if iteration == 1:
+		print(selected_families)
 		print(presence_matrix.shape)
 
 	# embed into 2D paCMAP space
