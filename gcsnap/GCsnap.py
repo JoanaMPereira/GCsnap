@@ -864,7 +864,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = True, min_freq = 2, max_freq = 20):
 
 	sorted_ncbi_codes = sorted(list(in_syntenies.keys()))
-	sorted_families   = [i for i in sorted(list(protein_families_summary.keys())) if (i>0 and i<10000)]
+	sorted_families   = [i for i in sorted(list(protein_families_summary.keys())) if (i>=0 and i<10000)]
 
 	# select only the protein families that are not very frequenct but also not very rare
 	if clean and len(sorted_families) > 10:
@@ -907,7 +907,7 @@ def calculate_eps(coordinates):
 	if eps < 0:
 		eps = mean
 
-	return eps
+	return eps/10
 
 def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0):
 
@@ -939,13 +939,15 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 			ncbis_idx = np.where(clusters == cluster_type)
 			ncbis_in_cluster = np.array(sorted_ncbi_codes)[ncbis_idx]
 
-			print(' ... Finding subclusters in cluster {} ({} members)'.format(cluster_type, len(ncbis_idx)))
+			print(' ... Finding subclusters in cluster {} ({} members)'.format(cluster_type, len(ncbis_in_cluster)))
 
 			curr_syntenies = {i: in_syntenies[i] for i in ncbis_in_cluster}
 
 			try:
 				_, subclusters, _ = find_operon_clusters_with_PaCMAP(curr_syntenies, protein_families_summary, clean = clean, coordinates_only = coordinates_only, min_freq = min_freq, max_freq = max_freq, iteration = 1)
 				print(' ... ... Found {} subclusters'.format(len(set(subclusters))))
+
+
 
 			except:
 				print(' ... ... No subclusters found')
