@@ -906,11 +906,10 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
+	paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
+	paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
+
 	if coordinates_only:
-
-		paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
-		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
-
 		return paCMAP_coordinat, sorted_ncbi_codes
 
 	else:
@@ -920,7 +919,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 			n_dims = 2
 
 		paCMAP_embedding = pacmap.PaCMAP(n_dims = n_dims)
-		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
+		paCMAP_N_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
 		# find clusters in the paCMAP space
 		# do this by selecting the best eps based on the number of clusters it creates compared to the number of operons 
@@ -928,7 +927,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		
 		print(' ... Fine tuning EPS')
 
-		eps = calculate_start_eps(paCMAP_coordinat)
+		eps = calculate_start_eps(paCMAP_N_coordinat)
 
 		n_clusters = [0]
 		n_singletons = [0]
@@ -952,10 +951,6 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		print(' ... ... Cost: {}'.format(cost))
 		print(' ... ... N:    {}'.format(n))
 
-		# and now project into 2D
-
-		paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
-		paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
 		return paCMAP_coordinat, clusters, sorted_ncbi_codes
 
