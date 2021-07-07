@@ -893,12 +893,15 @@ def calculate_eps(coordinates):
 				distances.append(dist)
 
 	distances = np.array(distances)
-	mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
-	means = mixture.means_.flatten()
-	sds = np.sqrt(mixture.covariances_).flatten()
+	# mixture = GaussianMixture(n_components=2).fit(distances.reshape(-1,1))
+	# means = mixture.means_.flatten()
+	# sds = np.sqrt(mixture.covariances_).flatten()
 
-	mean = min(means)
-	sd = sds[list(means).index(mean)]
+	# mean = min(means)
+	# sd = sds[list(means).index(mean)]
+
+	mean = np.median(distances)
+	sd = stats.median_absolute_deviation(distances)
 
 	eps = mean - sd
 
