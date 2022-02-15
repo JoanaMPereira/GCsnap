@@ -1,5 +1,5 @@
-## GCsnap.py - devoloped by Joana Pereira, Dept. Protein Evolution, Max Planck Institute for Developmental Biology, Tuebingen Germany
-## Last changed: 06.07.2021
+## GCsnap.py - devoloped by Joana Pereira, Structural Computational Biology, Biozentrum University of Basel, Basel Switzerland
+## Last changed: 15.02.2021
 
 import subprocess as sp
 import multiprocessing as mp
@@ -814,12 +814,18 @@ def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 			operon_types[curr_operon_type] = {'target_members': [], 'operon_protein_families_structure': []}
 			if advanced:
 				operon_types[curr_operon_type]['operon_PaCMAP'] = []
+				operon_types[curr_operon_type]['operon_filtered_PaCMAP'] = []
 
 
 		operon_types[curr_operon_type]['target_members'].append(target)
 		operon_types[curr_operon_type]['operon_protein_families_structure'].append(in_syntenies[target]['flanking_genes']['families'])
 		if advanced:
 			operon_types[curr_operon_type]['operon_PaCMAP'].append(in_syntenies[target]['operon_PaCMAP'])
+			operon_types[curr_operon_type]['operon_filtered_PaCMAP'].append(in_syntenies[target]['operon_filtered_PaCMAP'])
+
+	for curr_operon_type in operon_types:
+		centroid_coords = np.mean(operon_types[curr_operon_type]['operon_filtered_PaCMAP'], axis=0)
+		operon_types[curr_operon_type]['operon_centroid_PaCMAP'] = list(centroid_coords)
 
 	print(' ... Found {} operon types (out of a total of {} input targets)'.format(len(operon_types), len(in_syntenies)))
 
@@ -850,7 +856,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	selected_operons = {}
 	most_populated_operon = ''
 	for i, line in enumerate(operons_count_matrix):
-		label = 'GC Type {:05d} ({})'.format(line[0], line[1])
+		label = 'GC Type {:05d}'.format(line[0])
 		if i == 0:
 			most_populated_operon = label
 		
@@ -3045,7 +3051,7 @@ def main():
 	#protein family identification
 	optionalNamed.add_argument('-n_iterations', dest='num_iterations', default = 1,type=int, help='Number of iterations for all-against-all searches (default: 1). Required to define protein families.')
 	optionalNamed.add_argument('-evalue', dest='max_evalue', default = 1e-3,type=float, help='Max e-value at which two sequences are considered to be homologous (default: 1e-3). Required to define protein families.')
-	optionalNamed.add_argument('-coverage', dest='min_coverage', default = 70,type=float, help='Minimum coverage of target and subject a match needs to be so that two sequences are considered to be homologous (default: 70%). Required to define protein families.')
+	optionalNamed.add_argument('-coverage', dest='min_coverage', default = 70,type=float, help='Minimum coverage of target and subject a match needs to be so that two sequences are considered to be homologous (default: 70). Required to define protein families.')
 	optionalNamed.add_argument('-base', dest='default_base', default = 10,type=int, help='Artificial distance value for two sequences that do not match with an E-value better than -evalue (default: 10).')
 	optionalNamed.add_argument('-all-against-all_method', dest='clustering_method', default = 'psiblast',type=str, choices=['mmseqs', 'psiblast'], help='Method for clustering (default: psiblast)')
 	optionalNamed.add_argument('-psiblast_location', dest='blast', default = 'psiblast',type=str, help='Location of psiBLAST (if not in path) (default: psiblast)')
@@ -3072,7 +3078,7 @@ def main():
 
 	# print help message if GCsnap is run also without any arguments
 	if len(sys.argv)==1:
-		parser.print_help(sys.stderr)
+		parser.print_help()
 		sys.exit(1)
 
 	# Define inputs
