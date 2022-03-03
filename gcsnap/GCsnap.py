@@ -823,9 +823,10 @@ def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 			operon_types[curr_operon_type]['operon_PaCMAP'].append(in_syntenies[target]['operon_PaCMAP'])
 			operon_types[curr_operon_type]['operon_filtered_PaCMAP'].append(in_syntenies[target]['operon_filtered_PaCMAP'])
 
-	for curr_operon_type in operon_types:
-		centroid_coords = np.mean(operon_types[curr_operon_type]['operon_filtered_PaCMAP'], axis=0)
-		operon_types[curr_operon_type]['operon_centroid_PaCMAP'] = list(centroid_coords)
+	if advanced:
+		for curr_operon_type in operon_types:
+			centroid_coords = np.mean(operon_types[curr_operon_type]['operon_filtered_PaCMAP'], axis=0)
+			operon_types[curr_operon_type]['operon_centroid_PaCMAP'] = list(centroid_coords)
 
 	print(' ... Found {} operon types (out of a total of {} input targets)'.format(len(operon_types), len(in_syntenies)))
 
