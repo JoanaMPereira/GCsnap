@@ -1,0 +1,486 @@
+{
+    "Bacteria": {
+        "Cyanobacteria": {
+            "Cyanobacteria_na": {
+                "Nostocales": {
+                    "unclassified": {
+                        "unclassified Calothrix": {
+                            "ncbi_codes": [
+                                "WP_096691558.1"
+                            ],
+                            "target_members": [
+                                "WP_096691558.1"
+                            ]
+                        }
+                    },
+                    "Calothrix": {
+                        "Calothrix sp. PCC 6303": {
+                            "ncbi_codes": [
+                                "WP_015200940.1"
+                            ],
+                            "target_members": [
+                                "WP_015200940.1"
+                            ]
+                        }
+                    },
+                    "Rivularia": {
+                        "Rivularia sp. PCC 7116": {
+                            "ncbi_codes": [
+                                "WP_015116529.1"
+                            ],
+                            "target_members": [
+                                "WP_015116529.1"
+                            ]
+                        }
+                    },
+                    "Mastigocoleus": {
+                        "Mastigocoleus testarum BC008": {
+                            "ncbi_codes": [
+                                "KST67722.1"
+                            ],
+                            "target_members": [
+                                "KST67722.1"
+                            ]
+                        }
+                    }
+                },
+                "Pseudanabaenales": {
+                    "Leptolyngbya": {
+                        "Leptolyngbya sp. 'hensonii'": {
+                            "ncbi_codes": [
+                                "OLP20417.1"
+                            ],
+                            "target_members": [
+                                "OLP20417.1"
+                            ]
+                        },
+                        "Leptolyngbya sp. NIES-3755": {
+                            "ncbi_codes": [
+                                "WP_068390409.1"
+                            ],
+                            "target_members": [
+                                "WP_068390409.1"
+                            ]
+                        },
+                        "Leptolyngbya sp. IPPAS B-1204": {
+                            "ncbi_codes": [
+                                "RNJ67070.1"
+                            ],
+                            "target_members": [
+                                "RNJ67070.1"
+                            ]
+                        }
+                    },
+                    "Phormidesmis": {
+                        "Phormidesmis priestleyi": {
+                            "ncbi_codes": [
+                                "WP_068817853.1"
+                            ],
+                            "target_members": [
+                                "WP_068817853.1"
+                            ]
+                        }
+                    },
+                    "Stenomitos": {
+                        "Stenomitos frigidus": {
+                            "ncbi_codes": [
+                                "WP_106258366.1"
+                            ],
+                            "target_members": [
+                                "WP_106258366.1"
+                            ]
+                        }
+                    },
+                    "Myxacorys": {
+                        "Myxacorys almedinensis": {
+                            "ncbi_codes": [
+                                "WP_162425297.1"
+                            ],
+                            "target_members": [
+                                "WP_162425297.1"
+                            ]
+                        }
+                    }
+                },
+                "Pleurocapsales": {
+                    "Pleurocapsa": {
+                        "Pleurocapsa sp. PCC 7327": {
+                            "ncbi_codes": [
+                                "WP_015144817.1"
+                            ],
+                            "target_members": [
+                                "WP_015144817.1"
+                            ]
+                        },
+                        "Pleurocapsa sp. PCC 7319": {
+                            "ncbi_codes": [
+                                "WP_019504521.1"
+                            ],
+                            "target_members": [
+                                "WP_019504521.1"
+                            ]
+                        }
+                    },
+                    "Stanieria": {
+                        "Stanieria cyanosphaera": {
+                            "ncbi_codes": [
+                                "WP_015192774.1"
+                            ],
+                            "target_members": [
+                                "WP_015192774.1"
+                            ]
+                        }
+                    },
+                    "Xenococcus": {
+                        "Xenococcus sp. PCC 7305": {
+                            "ncbi_codes": [
+                                "WP_006511796.1"
+                            ],
+                            "target_members": [
+                                "WP_006511796.1"
+                            ]
+                        }
+                    },
+                    "Hyella": {
+                        "Hyella patelloides": {
+                            "ncbi_codes": [
+                                "WP_144868371.1"
+                            ],
+                            "target_members": [
+                                "WP_144868371.1"
+                            ]
+                        }
+                    }
+                },
+                "Oscillatoriales": {
+                    "Moorena": {
+                        "Moorena producens": {
+                            "ncbi_codes": [
+                                "WP_071102121.1"
+                            ],
+                            "target_members": [
+                                "WP_071102121.1"
+                            ]
+                        }
+                    },
+                    "Planktothricoides": {
+                        "Planktothricoides sp. SR001": {
+                            "ncbi_codes": [
+                                "KOR37720.1"
+                            ],
+                            "target_members": [
+                                "KOR37720.1"
+                            ]
+                        }
+                    },
+                    "unclassified": {
+                        "unclassified Desertifilum": {
+                            "ncbi_codes": [
+                                "WP_069967886.1"
+                            ],
+                            "target_members": [
+                                "WP_069967886.1"
+                            ]
+                        }
+                    },
+                    "Phormidium": {
+                        "Phormidium tenue": {
+                            "ncbi_codes": [
+                                "WP_073607616.1"
+                            ],
+                            "target_members": [
+                                "WP_073607616.1"
+                            ]
+                        },
+                        "Phormidium ambiguum IAM M-71": {
+                            "ncbi_codes": [
+                                "OKH36044.1"
+                            ],
+                            "target_members": [
+                                "OKH36044.1"
+                            ]
+                        }
+                    },
+                    "Coleofasciculus": {
+                        "Coleofasciculus chthonoplastes PCC 7420": {
+                            "ncbi_codes": [
+                                "EDX73328.1"
+                            ],
+                            "target_members": [
+                                "EDX73328.1"
+                            ]
+                        }
+                    },
+                    "Oxynema": {
+                        "Oxynema aestuarii": {
+                            "ncbi_codes": [
+                                "WP_168571633.1"
+                            ],
+                            "target_members": [
+                                "WP_168571633.1"
+                            ]
+                        }
+                    },
+                    "Oscillatoria": {
+                        "Oscillatoria acuminata PCC 6304": {
+                            "ncbi_codes": [
+                                "AFY81343.1"
+                            ],
+                            "target_members": [
+                                "AFY81343.1"
+                            ]
+                        }
+                    },
+                    "Cyanothece": {
+                        "Cyanothece sp. BG0011": {
+                            "ncbi_codes": [
+                                "WP_107671288.1"
+                            ],
+                            "target_members": [
+                                "WP_107671288.1"
+                            ]
+                        }
+                    },
+                    "Lyngbya": {
+                        "Lyngbya aestuarii BL J": {
+                            "ncbi_codes": [
+                                "ERT09159.1"
+                            ],
+                            "target_members": [
+                                "ERT09159.1"
+                            ]
+                        }
+                    }
+                },
+                "Cyanobacteria_na_na": {
+                    "Cyanobacteria": {
+                        "Cyanobacteria bacterium J055": {
+                            "ncbi_codes": [
+                                "RMG07956.1"
+                            ],
+                            "target_members": [
+                                "RMG07956.1"
+                            ]
+                        }
+                    }
+                },
+                "Chroococcales": {
+                    "Gloeothece": {
+                        "Gloeothece verrucosa": {
+                            "ncbi_codes": [
+                                "WP_013322190.1"
+                            ],
+                            "target_members": [
+                                "WP_013322190.1"
+                            ]
+                        }
+                    },
+                    "Candidatus": {
+                        "Candidatus Atelocyanobacterium thalassa": {
+                            "ncbi_codes": [
+                                "WP_012954188.1"
+                            ],
+                            "target_members": [
+                                "WP_012954188.1"
+                            ]
+                        }
+                    },
+                    "Halothece": {
+                        "Halothece sp. PCC 7418": {
+                            "ncbi_codes": [
+                                "WP_015224605.1"
+                            ],
+                            "target_members": [
+                                "WP_015224605.1"
+                            ]
+                        }
+                    },
+                    "Microcystis": {
+                        "Microcystis aeruginosa NIES-843": {
+                            "ncbi_codes": [
+                                "BAG05582.1"
+                            ],
+                            "target_members": [
+                                "BAG05582.1"
+                            ]
+                        },
+                        "Microcystis aeruginosa": {
+                            "ncbi_codes": [
+                                "WP_104397532.1"
+                            ],
+                            "target_members": [
+                                "WP_104397532.1"
+                            ]
+                        }
+                    },
+                    "Gloeocapsa": {
+                        "Gloeocapsa sp. PCC 73106": {
+                            "ncbi_codes": [
+                                "WP_006528479.1"
+                            ],
+                            "target_members": [
+                                "WP_006528479.1"
+                            ]
+                        }
+                    },
+                    "Euhalothece": {
+                        "Euhalothece natronophila": {
+                            "ncbi_codes": [
+                                "WP_146296165.1"
+                            ],
+                            "target_members": [
+                                "WP_146296165.1"
+                            ]
+                        }
+                    },
+                    "Aphanothece": {
+                        "Aphanothece sacrum": {
+                            "ncbi_codes": [
+                                "WP_124972497.1"
+                            ],
+                            "target_members": [
+                                "WP_124972497.1"
+                            ]
+                        }
+                    },
+                    "Geminocystis": {
+                        "Geminocystis herdmanii": {
+                            "ncbi_codes": [
+                                "WP_017295263.1"
+                            ],
+                            "target_members": [
+                                "WP_017295263.1"
+                            ]
+                        }
+                    },
+                    "Cyanobacterium": {
+                        "Cyanobacterium aponinum": {
+                            "ncbi_codes": [
+                                "WP_015218062.1"
+                            ],
+                            "target_members": [
+                                "WP_015218062.1"
+                            ]
+                        }
+                    }
+                },
+                "Synechococcales": {
+                    "Merismopedia": {
+                        "Merismopedia glauca": {
+                            "ncbi_codes": [
+                                "WP_106287117.1"
+                            ],
+                            "target_members": [
+                                "WP_106287117.1"
+                            ]
+                        }
+                    },
+                    "Snowella": {
+                        "Snowella sp.": {
+                            "ncbi_codes": [
+                                "PZV25621.1"
+                            ],
+                            "target_members": [
+                                "PZV25621.1"
+                            ]
+                        }
+                    },
+                    "Petrachloros": {
+                        "Petrachloros mirabilis": {
+                            "ncbi_codes": [
+                                "WP_161825902.1"
+                            ],
+                            "target_members": [
+                                "WP_161825902.1"
+                            ]
+                        }
+                    }
+                },
+                "Spirulinales": {
+                    "Spirulina": {
+                        "Spirulina subsalsa": {
+                            "ncbi_codes": [
+                                "WP_017304341.1"
+                            ],
+                            "target_members": [
+                                "WP_017304341.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Firmicutes": {
+            "Bacilli": {
+                "Bacillales": {
+                    "Bhargavaea": {
+                        "Bhargavaea cecembensis": {
+                            "ncbi_codes": [
+                                "WP_040228095.1"
+                            ],
+                            "target_members": [
+                                "WP_040228095.1"
+                            ]
+                        }
+                    },
+                    "Salinicoccus": {
+                        "Salinicoccus sediminis": {
+                            "ncbi_codes": [
+                                "WP_046510790.1"
+                            ],
+                            "target_members": [
+                                "WP_046510790.1"
+                            ]
+                        }
+                    }
+                }
+            },
+            "Clostridia": {
+                "Eubacteriales": {
+                    "Desulfonispora": {
+                        "Desulfonispora thiosulfatigenes": {
+                            "ncbi_codes": [
+                                "WP_084053921.1"
+                            ],
+                            "target_members": [
+                                "WP_084053921.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Elusimicrobia": {
+            "Elusimicrobia_na": {
+                "Elusimicrobia_na_na": {
+                    "Elusimicrobia": {
+                        "Elusimicrobia bacterium RIFCSPLOWO2_12_FULL_59_9": {
+                            "ncbi_codes": [
+                                "OGS05586.1"
+                            ],
+                            "target_members": [
+                                "OGS05586.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Chloroflexi": {
+            "Chloroflexi_na": {
+                "Chloroflexi_na_na": {
+                    "Chloroflexi": {
+                        "Chloroflexi bacterium HGW-Chloroflexi-3": {
+                            "ncbi_codes": [
+                                "PKO07036.1"
+                            ],
+                            "target_members": [
+                                "PKO07036.1"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

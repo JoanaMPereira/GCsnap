@@ -1,0 +1,4102 @@
+{
+    "PSH03671.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2587,
+                -2053,
+                -1541,
+                -267,
+                1,
+                252,
+                866,
+                1761,
+                2624
+            ],
+            "relative_ends": [
+                -2402,
+                -1700,
+                -882,
+                -16,
+                243,
+                851,
+                1696,
+                2117,
+                2962
+            ],
+            "ncbi_codes": [
+                "PSH03667.1",
+                "PSH03668.1",
+                "PSH03669.1",
+                "PSH03670.1",
+                "PSH03671.1",
+                "PSH03672.1",
+                "PSH03673.1",
+                "PSH03674.1",
+                "PSH03675.1"
+            ],
+            "starts": [
+                13686,
+                14220,
+                14732,
+                16006,
+                16274,
+                16525,
+                17139,
+                18034,
+                18897
+            ],
+            "ends": [
+                13871,
+                14573,
+                15391,
+                16257,
+                16516,
+                17124,
+                17969,
+                18390,
+                19235
+            ],
+            "directions": [
+                "-",
+                "+",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "hypothetical protein",
+                "hypothetical protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MSLGGTKCIVQKITTNSTGKKASIAARTKFIPLAPNRKEMNPEMTSEAKIWEREYEYDTQR",
+                "MQVQFTADELQVLADVLAQHNRELTHEIARTDDRKFKIMLLKKLDVLTQLENQLVQGDVELSSEESDDLVEMLNQSERALYFEIARTDDRDFKHILQKKLERLECAHHKLVEPRAVA",
+                "MAGEAHGNPAVVGLAGFGITTLLLQFHNLGWCGSGVVFCAALMFGGAAQLIAGFQEFKAGNNFGYSAFTAYGAFWISLAFIFLVSNLQTTPNSIIGPPLKITATDIGYFMLVYTVYTLIMFVASLAVHKAMTLTFLTLLLGFSGLDLVFLLGMKSILTITAIDLIFCALVALYMMAHAIFLQVFGRDILPVGEPLVSKPEPVLRRAHQETTRRPVLAEL",
+                "MIRLSRRGARKQPVYRIVVIEKDRARDGRSIEVVGLYNPRTNPATVELKNDRIEYWLGKGAQFSPTLARLYKNAGAAPARPGV",
+                "MSANLPELAKELAKALVDYPEEVSVLAAGDSEYVKLELEVAEDDLGRVIGRSGRTARALRTILSAAAEKNGQRCSLDILE",
+                "MAERSGNAAFITIARVVKVQGRVGEVATELHTDFPERFEQRRRLYAWNTDSDQRRELHLEEFWPHKGGMVLKFEGVDSIEEAEKLLRCEIQIPLEERAELEEGAVYVSDLLGCLVVEVSQAERKVGTVVDVNFGAGTAPLLIVNNESGKEFMIPFVESFIKKLDLKAKQIEMQLPEGMLELDAPLSAGKKVRRQPPEER",
+                "MRFEIVTIFPDFFVGPLDYGIVRRARNAGLIEIGIHDLRAFTQDRHRTVDDRPFGGGEGMLLKPDPLFECIESLGVAPRAERVSGAASESVVVLSASGKMFTQSMAQELARLERVTFVCGRYEGVDERVIEHLADREVSVGDFVMSGGELGAALILDCVTRLLPGALGNEASNKTESFSGVEAEPRFDERGRLEPDSTVATGGLLDYPHYTRPAEFRGIPVPDVLLKGNHEEIRRWRRRSALEKTLRNRPDLLEKGALSPDDKALLQALKREAEEN",
+                "MSSSPIITRMLAKVQRTDLPSFAIGDTIKVHVKIKEGDKERIQIFEGVVIKKANGQQPSFTVRKMSFGQGVERIFPLGSRVIEKLEVVRSAKVRRAKLYYLRALRGKAARLKEVERVK",
+                "MDFHRKWVSPVTAVTFVALTISGLLMLFHIRIPGMRNLHEWTGVVFAFAGIFHLALNWRMLVNHLSTKTGIIAAVSVCVLCVALLAMGDKKGKRHGQDNHGPQGYGERAPAH"
+            ],
+            "species": "Acidobacteria bacterium",
+            "taxID": "1978231"
+        },
+        "assembly_id": [
+            "PSH03671.1",
+            "GCA_003010405.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/010/405/GCA_003010405.1_ASM301040v1"
+        ],
+        "species": "Acidobacteria bacterium"
+    },
+    "PSL51166.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3211,
+                -2097,
+                -1756,
+                -314,
+                1,
+                288,
+                695,
+                1221,
+                2088
+            ],
+            "relative_ends": [
+                -2207,
+                -1756,
+                -398,
+                -42,
+                222,
+                695,
+                1231,
+                1967,
+                2432
+            ],
+            "ncbi_codes": [
+                "PSL51162.1",
+                "PSL51163.1",
+                "PSL51164.1",
+                "PSL51165.1",
+                "PSL51166.1",
+                "PSL51167.1",
+                "PSL51168.1",
+                "PSL51169.1",
+                "PSL51170.1"
+            ],
+            "starts": [
+                75262,
+                76376,
+                76717,
+                78159,
+                78474,
+                78761,
+                79168,
+                79694,
+                80561
+            ],
+            "ends": [
+                76266,
+                76717,
+                78075,
+                78431,
+                78695,
+                79168,
+                79704,
+                80440,
+                80905
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "fused signal recognition particle receptor",
+                "hypothetical protein",
+                "signal recognition particle subunit FFH/SRP54 (srp54)",
+                "SSU ribosomal protein S16P",
+                "RNA-binding protein with KH domain",
+                "YlqD protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanine37-N(1)-) methyltransferase",
+                "LSU ribosomal protein L19P"
+            ],
+            "sequences": [
+                "MSFFKKLKDRVSGQTDTVTEKFKDGLAKTRDSFAGKMNDLMARYRKVDEDFFEELEELLIGADVGVETVMELIDELKTEAKRQNIKDTSELAPLISEKLADKLDKSGEDNTIQHAADGMTVILFVGVNGVGKTTTIGKVAQKYKEEGSRVVMAAGDTFRAGAIEQLEEWGNQVGVDVVKQQAGSDPAAVMYDAIQSARSKGANVLLCDTAGRLQNKVNLMKELEKVKRVIQREIPEAPHEVLLVLDATTGQNAMSQAKTFQEATDVSGIVLTKLDGTAKGGIVLAVRNELDIPVKFVGLGERAEDLQPFDSNQFVYSLFKEIMEAEEENETDES",
+                "MLEKTMRMNALFDFYQPLLTKKQQKYVQLYFLDDYSLGEIADTFDVSRQAVYDNIRRTEQMLEEYEAKLGLYYKYMERHNLYQQLRGELEAGDSQRLSAVVTRLEHLEEEGTE",
+                "MAFEGLAERLQGTLDKIKGKGKVTEADVDEMMREVRLALLEADVNFKVVKKFIKQVKERAVGQEVLKSLTPGQQVIKVVNEELQELMGGEQSKIAHADKPPTVVMMVGLQGAGKTTTVAKLANHLRKEHNRQPLLAAADIYRPAAIDQLETLGKQLDMPVYSLGNQADPVDIAKGAVAQAKDEHRDYVLIDTAGRLHVDEDLMGELQRIKEAVQPEEILLVVDAMTGQDAVNVAESFNEQLDVNGAVLTKLDGDTRGGAAISVKAVTGMPVKFAGMGEKIDQLEPFHPERMASRILGMGDVLSLIEKAQTDVDEDRAKELEKKMRQADLTFDDFLEQLQQVKKMGPIDEVLSMMPGANKMKGLKNAQVDDSQITQVEAIIRSMTRAEKEDPSLINASRKKRIAKGSGTAVKDVNRLLKQFEDMQKMMKQMSSMQKGKGKKKGKNPMQFPFMQ",
+                "MATKIRLKRMGSKKQPYYRVVVADSKAPRDGRFIEELGTYNPLQQPSAFSVNEEKAVQWLLEGAQPSDTVRNLFSDAGIMTRVHNAKKEQ",
+                "MQAMVSPIVDHPDEVTVRTNQGRNGEDVFMLSVHAEDTGQVIGKHGRNIKAVRTILQAAASGTGARPRLDIEE",
+                "MKIKKQAVVKQVLTPSYREKLNEELETKRRRLQTEIEQLEFQLQQRIKENSDPKRRRFLKEKYEKEMKERKEKIERSSFQASRIEALPDDTELPVDRVDVEAHVEVGDVWDDVYQEDEIIVEDGRVKAIRKRGET",
+                "MPGKRYNVGKIVNTHGVRGEVRVIATTDFPEERFVAGGQLYAEIEASQEVVPLTVKSHRKHKQFDLLMFEEVNGADEAERLKPSLLQVAEEDMAPLEAEDEYYYHEIIGCRVVSDEGEDVGVIKEIISPGANDVWVIKRAHGKKDALLPYIDDVVQSIDVHEGVVTVHLLEGLLPDEN",
+                "MKIDFLTLFPEMFTGVLSSSILGQAQADGRITFQVTDFRSYTENKHNKVDDYPYGGGAGMVLTPQPLFDAVDDIKQADEPRVILMCPQGEPLTQSKAEELSTEDQLIFVCGHYEGYDERIRTHLVTDELSIGDFVLTGGELPAMVTADSVTRLLPGVLGNEASAVEDSFSTGLLEHPHYTRPADFRGMEVPEVLRSGHHARIEAWRREEAIKRTAERRPELLESAALSEHERTWAADYLEKIRAEKNE",
+                "MNDIVRDVTKEQLKTDLPNFRPGDTVNVHVKVVEGSRERIQQFQGVVLKRRGSGISETFTVRKVSFGVGIERTFPVHSPRIDKIEVKRRGKVRQARLYYLRGLQGKAAKVKELR"
+            ],
+            "species": "Salsuginibacillus halophilus",
+            "taxID": "517424"
+        },
+        "assembly_id": [
+            "PSL51166.1",
+            "GCA_003014715.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/014/715/GCA_003014715.1_ASM301471v1"
+        ],
+        "species": "Salsuginibacillus halophilus"
+    },
+    "WP_003322053.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3578,
+                -2140,
+                -1799,
+                -293,
+                1,
+                404,
+                819,
+                1340,
+                2200
+            ],
+            "relative_ends": [
+                -2580,
+                -1811,
+                -441,
+                -21,
+                231,
+                826,
+                1340,
+                2086,
+                2544
+            ],
+            "ncbi_codes": [
+                "WP_003322057.1",
+                "WP_003322056.1",
+                "WP_003322055.1",
+                "WP_003322054.1",
+                "WP_003322053.1",
+                "WP_003322052.1",
+                "WP_003322050.1",
+                "WP_003322049.1",
+                "WP_003322048.1"
+            ],
+            "starts": [
+                3803,
+                5241,
+                5582,
+                7088,
+                7382,
+                7785,
+                8200,
+                8721,
+                9581
+            ],
+            "ends": [
+                4801,
+                5570,
+                6940,
+                7360,
+                7612,
+                8207,
+                8721,
+                9467,
+                9925
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "hypothetical protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MSFFKKLKEKITNQTTEVTDKFKSGLEKTRNSVVGRMNDLVYRYRKVDEDFFEELEEILISADVGVTTVMELIDELKDEVRHRNIKDTKDIQPVISEKLAELLEKDSEDAALTLAKDGLSVILVVGVNGVGKTTTIGKLSNHLKKEGKSVLLAAGDTFRAGAIDQLEVWGQRVGVDVIKQQEGSDPAAVVYDALQAAKSREVDVLICDTAGRLQNKVNLMNELEKVKRVIEREVPGAPHEVLLVLDATTGQNALSQAKTFGKSTDVSGIVLTKLDGTAKGGIVLAIRHELDIPVKFVGLGEQVDDLQPFDADQFVYGLFKELIEAPEEEEKA",
+                "MLDKTLRMNYLFDFYQALLTPKQRKYMSLYYLDDFSLGEIAEEFEVSRQAVYDNIKRTEAMLEEYEHKLLLLSKFEERSKLMTDLKTAVTSNATPEETIELINSLEKLD",
+                "MAFEGLAERLQGTLTKIRGKGKVSEQDIKEMMREVRLALLEADVNFKVVKQFIASVKEKALGQEVMKSLTPGQQVIKVVNEELTALMGGEQSKIAVNNKPPTVVMMVGLQGAGKTTTTAKLANHLRKKHNRNPMLVAADIYRPAAIKQLETLGKQLSMPVFSLGDQVSPVEIAKQAIAKAKEEHHDYVLIDTAGRLHIDEKLMDELQQVKEIAKPDEILLVVDAMTGQDAVNVAESFNEQLDVTGVVLTKLDGDTRGGAAISVKAVTNTPIKFAGMGEKIDQLEPFHPERMASRILGMGDVLTLIEKAQMNVDEEKARELEKKMKNMDITFDDFLDQLDQVRNMGPLDELLNMMPGMNKMKGMKDLKVDDKQIGHVEAIVRSMTPMEKQDPSIMNASRKRRIAKGSGTSIQEVNRLLKQFDEMKKMMKQMSNMTSGKGKKKGKGFGGLKLPF",
+                "MAVKIRLKRMGSKKAPFYRVVVADSRAPRDGRFIEEIGTYNPLTQPAKFDVKEEKALDWMLKGAKPSDTVRNLFSNVGLMEKLHNAKNQK",
+                "MKALVEKMVKALVERPEDVQIKEQIDGEQILVEVRVHESDIGKVIGKGGRTAKAIRSVVYAAAMREQKRVRVDIVD",
+                "MEPIQFIRKATVKHMLTERKKGELLQELKEELVGCQRELEQLEFRLHKSLKDSGNKHDQTSIRKRYKKEMDKRKERLYALNFKEQQLHKLEIGSEIRAGTVDTLIEYEIGDKWSEDESALEVIIKDGKIVEFRESRNEDE",
+                "MSEWFKVGKVVNTHGVKGEVRVIASTDFAEERFAIGQELMVQDAQTKEKVIVKVASHRKHKNFDLLTFEGFPNINLVERFKGELLYVSEQFLEELDEHEYYYHEIIGSTVLTEDGEELGKIKEIIETGANDVWVVQRLGGGKDVLIPYIEQVVQKIDVEEKKITVHLMEGLID",
+                "MKIDILTLFPEMFPGVFGSSILKHAQEKELVTINVVDFREFADNKHNKVDDYPYGGGAGMVLRPQPIFDAVEEITSQTEKKPRIVLLCPQGETYSQQKAEELAKEEHLIFLCGHYEGYDERIREHLVTDELSIGDYVLTGGEVGAMVLTDSIVRLLPGVLGNAESAVTDSFSTGLLEHPHYTRPADFRGLKVPDVLLSGHHVNIENWRAKEALRRTWQRRPDLLRERTLTEQEKAWLHQFEEDIKKDL",
+                "MNNIIREITSEQLRTDLPSFRPGDTLVIHVKVVEGTRERIQLFEGVVIKRRGTGISETFTARKISYGVGVERTFPLHSPKIAKIDVKRRGKVRRAKLYYLRELRGKKARIKEIR"
+            ],
+            "species": "Alkalihalobacillus alcalophilus",
+            "taxID": "1445"
+        },
+        "assembly_id": [
+            "WP_003322053.1",
+            "GCF_004802515.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/802/515/GCF_004802515.1_ASM480251v1"
+        ],
+        "species": "Alkalihalobacillus alcalophilus"
+    },
+    "WP_076556693.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3475,
+                -2047,
+                -1713,
+                -287,
+                1,
+                287,
+                677,
+                1195,
+                2050
+            ],
+            "relative_ends": [
+                -2123,
+                -1727,
+                -373,
+                -15,
+                228,
+                676,
+                1195,
+                1920,
+                2394
+            ],
+            "ncbi_codes": [
+                "WP_076556697.1",
+                "WP_076556696.1",
+                "WP_076556695.1",
+                "WP_076556694.1",
+                "WP_076556693.1",
+                "WP_159438122.1",
+                "WP_076556691.1",
+                "WP_076556690.1",
+                "WP_076556689.1"
+            ],
+            "starts": [
+                414273,
+                413877,
+                412523,
+                412165,
+                411922,
+                411474,
+                410955,
+                410230,
+                409756
+            ],
+            "ends": [
+                415625,
+                414197,
+                413863,
+                412437,
+                412149,
+                411863,
+                411473,
+                410955,
+                410100
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "hypothetical protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MGFFKKLKEQFTPIEVEEPASHEEKPTELEKDETEKDNSIQESEVQETSDEQSEAPVAPQEDEEKEEEEKHESPVEEDQPELEAPETSVPQEELEAPKVEEQEETPLPEPEDTEALPEEPAVVESKEKQASIAEKFRKGLAKTRDSFSTKINELVAKYREVDEEFFEELEEVLISADVGVHAVMDLIEELEMEVKRRNIKDTREVREVISEKLVELYYGDEEEEEVQGLRTEPDGLSVYLFVGVNGVGKTTSIGKLAYQLRQEGKKVILAAGDTFRAGAIEQLHSWGDRVGVDVIKHSAGSDPAAVVYDGIKAAKSRKADVLICDTAGRLQNKVNLMNELSKVKKVISREIPGAPHEVLLTLDATTGQNAMSQAKTFSEVTDVTGIVLTKLDGTAKGGIILAIRKELEIPVKLVGLGEGVNDLEAFDAHAFVYGLFADMIDEYEEQGEEE",
+                "MLEKTTRVNFLFDFYQSLLTPKQRNYMELYFLEDYSLGEISETFDVSRQAVYDNIRRTEMMLEEYEKKLLLFDKFSKRQKLLDEMEQSLDQADPYRRYVDQLRELE",
+                "MAFEGLSERLQGTIQKIKGKGKVEEDDVKEMSREVRLALLEADVNFKVVKDFVKRIRERAVGQEVMESLTPGQQVIKVVKEELTELMGGDESKIAVAKKSPTVIMMVGLQGAGKTTTTGKLANLLRKNYNRSPLLAAADVYRPAAIDQLETIGKQLSFPVHSEGTEANPVDIAKRAVEQAKENHQDYVIIDTAGRLHIDGELMGELAQIKEAVTPDEIFLVVDSMTGQDAVNVAQSFDEQLDITGVLLTKLDGDTRGGAALSIKAVTGKPIKFVGMGEKLDELEVFHPERMASRILGMGDMLSLIEKAETQVDEKQAKELEAKMKNASFTFDDFLDQMSQVKNMGPLDEIIDMIPGANKMKGLKNASFDDKQIVHVEAIIQSMTKKERQDPSLMNASRKKRIAKGSGTSVSEVNRLLKQFNEMKKMMKQFSNQKGKKGKGMNFPFM",
+                "MAVKIRLKRMGAKRNPFYRVVVADARAPRDGRIIEQIGTYNPVANPIEVSIDQEKALQWMTDGAQPSDTVRNLFSKEGIMKQFHDSKNQK",
+                "MEALLETMITPLIDYPEEMNVEVKDEADKLVYHVTVHQDDVGKIIGKNGRIAKSIRTVIYAANRDNTKKVYVDIM",
+                "MKVIKKIPVKVVLTENEREAQNNRLDHQLERMEREVEQFHFERKKMEKKHGSLPSNIDERLTQEVRQRKAKIQTLQYHKEQLEILPDFHEFTIEEIESVVEVKEGMEWKKLQEKEIVIENGFVKRVRDG",
+                "MEQEYLNVGKIVNTHGIKGEVKIKRITDFEERFKKGRTLYWTSGETDDPIALTVDTHRIHKGFDLLSFREYPTINDVEPLKNGMLMVKKEEIGSLGADEFYFHEIIGCYVYTKTGLYVGKIKEILTPGANDVWVVDREDKGDALIPYIEDVVIRVDIQKQSVIIEPMEGLLD",
+                "MHIDILTLFPEMFDGVLNSSILKRAQNNGAFSHQFINFRDYSENKHNKVDDYPYGGGAGLVLTPQPMFDAMATIDPENKARVIMMCPQGEPLTQAKAEEFSKEKHLVFLCGHYEGYDERIRENLVTDEISIGDYVLTGGELPAMVTMDAVIRLLPGVLGNEQSAPGDSFSDHLLEHPHYTRPQNFRGMEVPEVLTSGNHAKIDEWRRKESLKRTASRRPDLLKKAELTDSEKEWLDQWGKT",
+                "MQELLHEITKDQLRTDHPTFRPGDTVKVHAKVVEGTRERIQVFEGVVIKRQNGGISETFTVRKISYGVGVERTFPLHSPRIAKIERSRRGKVRQAKLYYLRNLRGKAARIKEII"
+            ],
+            "species": "Salimicrobium flavidum",
+            "taxID": "570947"
+        },
+        "assembly_id": [
+            "WP_076556693.1",
+            "GCF_900156645.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/156/645/GCF_900156645.1_IMG-taxon_2681813511_annotated_assembly"
+        ],
+        "species": "Salimicrobium flavidum"
+    },
+    "OQC43023.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4240,
+                -2170,
+                -1167,
+                -268,
+                1,
+                261,
+                770,
+                1506,
+                2162
+            ],
+            "relative_ends": [
+                -2741,
+                -1160,
+                -556,
+                -35,
+                240,
+                770,
+                1513,
+                2072,
+                2557
+            ],
+            "ncbi_codes": [
+                "OQC43019.1",
+                "OQC43020.1",
+                "OQC43021.1",
+                "OQC43022.1",
+                "OQC43023.1",
+                "OQC43024.1",
+                "OQC43025.1",
+                "OQC43026.1",
+                "OQC43027.1"
+            ],
+            "starts": [
+                3113,
+                5183,
+                6186,
+                7085,
+                7354,
+                7614,
+                8123,
+                8859,
+                9515
+            ],
+            "ends": [
+                4612,
+                6193,
+                6797,
+                7318,
+                7593,
+                8123,
+                8866,
+                9425,
+                9910
+            ],
+            "directions": [
+                "+",
+                "-",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "Serine/threonine-protein kinase pkn1",
+                "hypothetical protein",
+                "hypothetical protein",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "Ribosome maturation factor RimM",
+                "tRNA (guanine-N(1)-)-methyltransferase",
+                "hypothetical protein",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MPSKKRIVWVEYWSLVALIVLFVGACGGDEKGTDTNGNTDISQDRLDTSDTSQDTPDIEDDVTVDVPDTTADDGSEPDDSPSPCAGIDCGGHGSCLVSDSNEAYCDCDAGYHADGTTCVEDCEPKCGDRVCGPNPLCPDESCGDCEENKTCNDQGQCECTSKCGDRVCGPNPLCPDESCGDCEDPETCNDDGQCECVAKCIDRVCGPDPVCPETSCGGDCGENKECNDQGQCECTSKCGDRVCGPNPLCPDESCGDCSVDKVCNRLGECIPKLEADCTEHWCLIPAGDFAMGCSDDSCEPGDYSCAHQGGYFCDQNTYPVHSVTLTRSFYMKRTQVSQKEWRELIGNNPSNFNSCENCPVENVNWFDAVTYANRLSESEQLESCYTITGCTGSVGNVLDNCTVTFSSLDCKGYRLPTEAEWEYVVRAGTTGARYDDVGFIAWYGDNSESSTHPCGTKDPNGWGIHDLYGNVWEWVHDNFDHNYYSDCEAGCTDPVGPTS",
+                "MSNMMFAWDKIKQEDLIVLIRNTANKMKIQETVVEKDYWVCFILDYLFHQSEWNKSFTFKGGTSLSKCFSLIDRFSEDIDLILDWRLLGYEKDEPWQTRSNTKQDLFNKEANKKTEMFLAEVFIVQMKRELEDILTEPFQLIIDEKNPQTILFYYPKFFSSDYLTEAIRLEIGSLAAWTPSETAWIEPYIAVEYSQVFEGKKISLKAVSVERTFWEKATILHHEANRPKDLRIPARYARHYYDIYCIANSVYKERAFAELKLLEKVVKFKAKFYPRKWAKYEEATKTHIKLVPDNYRIEELRKDYEQMREMFMGESPKFEDVMETIRTLESEIHKI",
+                "MEISYKESVVKKIESFETGTVFIANDFLEIASYERIRNILNRLVKDGTIHRILNGVYYHPRYSKLIDEYEAPNVHQVALAIARKYNWTITPSENTALNILGLSTQVPAKWVYLSDGRYVTYSFKGIDIEFKRRSNGEISNMSTITSMVIQAIKAIGKDRITEDQIDSLKKRLSSEEKKALLREGKAATAWIYEILRKIGREDE",
+                "MVKLRLARFGAKQRPFYRIVAMDSRGKRDGRYIELLGTYDPMVTPPAVKLNEERIRYWLSVGAQPTEAVERFVKKMG",
+                "MAGIVELVTMIAKALVDEPEAVVVTELEGEQTRVYELRVAKDDMGKVIGKQGRTAKAIRTVVGAAAARDNKRAILEIVE",
+                "MEKELVEIGVIGAAHGLRGAVFVRLYNPSSSLLEPGTEVLISGQHNTHFLKVMIEMISHSPKGTKVKFYGIDDRDAAENINGWTCAVEQSQLPVLEEDEFYYRDIIGSPVFSTDDIAIGTVEDVFSAATDILVIKTTEGDELLVPVVDVFVISLTPGKVVVDLTGLETD",
+                "MPYPITVLTLFPEMILQAVSHSIIGRAIGNEILDIKVLDIRDFATDKHKTVDDEPYGGGAGMVMKVDVVVAAIREAKKASQGAKVVLMSASGRPFNQAVAKRYASHLGGIILVCGHYEGIDERVAAHYVDEEVSVGDFVLSGGEIPALAILDATARLLPGVLGNAESLDVESHENGLLESPQYTRPQVFEGHEVPAVLLSGNHKEIELFRTKEAIEKTKRMRPDIKLQLEPEPPPMQLGRPRELDNG",
+                "MGNTPVAIVLAHYPVLNRRGETVTTSVTSLDIHDIARAARTYGADPYYLVSPVAAQREMIERVTQRWIDGPEAEHPRGEAIGHIKVASSIEEAADAFGARINGRPFVVVTGANFKAGTTSFHELRLGIEACKWPGVLLVFGTGWGLTNEIAANADARLEPIKGVGEFNHLSVRSAAAIALDRLLSPGI",
+                "MGCAVHKTIQLVETIQLRSDIPQFFPGDTVRVHFRIREGDKERVQVFEGAVIGIRHGGATETFTVRKISYGIGVERVFPLHSPMIAKVEVVTRGRVRRAKLHYLRALRGKASKIREKRTWVTQTGSAETAE"
+            ],
+            "species": "Deltaproteobacteria bacterium ADurb.Bin058",
+            "taxID": "1852865"
+        },
+        "assembly_id": [
+            "OQC43023.1",
+            "GCA_002071095.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/071/095/GCA_002071095.1_ASM207109v1"
+        ],
+        "species": "Deltaproteobacteria bacterium ADurb.Bin058"
+    },
+    "OGR58986.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3065,
+                -2087,
+                -1050,
+                -355,
+                1,
+                228,
+                954,
+                1399,
+                2019
+            ],
+            "relative_ends": [
+                -2118,
+                -1122,
+                -346,
+                4,
+                228,
+                911,
+                1391,
+                2022,
+                2387
+            ],
+            "ncbi_codes": [
+                "OGR58989.1",
+                "OGR58988.1",
+                "OGR58994.1",
+                "OGR58987.1",
+                "OGR58986.1",
+                "OGR58985.1",
+                "OGR58984.1",
+                "A2X36_00880",
+                "OGR58983.1"
+            ],
+            "starts": [
+                18763,
+                17767,
+                16991,
+                16641,
+                16417,
+                15734,
+                15254,
+                14623,
+                14258
+            ],
+            "ends": [
+                19710,
+                18732,
+                17695,
+                17000,
+                16644,
+                16417,
+                15691,
+                15246,
+                14626
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "methionyl-tRNA formyltransferase",
+                "hypothetical protein",
+                "ribulose-phosphate 3-epimerase",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "pseudogene",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MRLLFFGSPAIAVPFLEECLRTGEHSVAAVVTQPDRPAGRGLRLRAPPVKEAALRLGLPVLQPDRPAAAAAELREARADLGVIVAYGRILKREVLDIPRLGLLNVHFSLLPKYRGAAPVQWALLHGERRTGVTLFWLDEGMDSGPVQRTAALDIGPDEDARALFPRLQSLGVAELGGALADVAAGRVRREPQAGESSLAPKVTAETARVDLGMSAAEVHNRVRALRAAPKAALVLAGPERVALLGTGLDDGDSGDGPPPPPGTILRVEREKGFLVQCRPGRLWIREVQPEGKKPLSGADFLNGRRLRAGDRLRPA",
+                "MTSTKGSRVLQVEVLVVLIGLAGLVVFMFQFGIEGAVHNRPVQVVPDLKGKSIGGGLDILAPLKLSLLKDGAEFNAAVPIGSIVRQTPAAGTKVREGKAIHVVVSQGGETVFTPAVAGLPLRNAEMLLRQNQLLLGEVTESYSLRLEKGLVLSQDPAHESSVERNSMVNVVVSAGAPPENIVLMPDFLRKSITEASQWASSVGVPLTIAKDPGSLFPYGTILAQEPQSDAVVSDDTQVKMTVSGRPSDGKDRTAKLNFQYQVPQGSAESLVRILIADQHGERELFNGLRTPGSKIDLSVPGAGNARVKIFLNGILVEERDL",
+                "MPDGRVRVVPSLLAADPADLRGDLAAMAAAGARWASVDVMDGHFVPNLSFGPDLIRSLKRDNRVRLDAHLMVDDPAVLAPAFAEAGADWVIFHLEACARPGALLRALRDQGVGTGLAVKPGTPAARLLPFLKEVDLVLVMTVEPGFGGQRFLPAMLPKLRTLRAAIARSGRRVWLQVDGGIDAASAPLAAEAGADSLVAGSAVFRAGNPAAALRALETSAQRAFLRSTGGATCR",
+                "MSVAIRLQRIGKPKQPYYRVVAIDSRRPCCGKPIEVIGSYNPRAEKAKDKFQVKQERYDHWVKVGAKPSETVGALLRALSKPSADKVPAKRVKKGRKGQEEAKAAAPAAAAPKAEEKAA",
+                "MKELASYLAKNLVDAPDQVEVSSAEDEHSVRVTVRVADPDKGKIIGKQGKVIKAIRAVVGIAAAKSDRKVMLDLE",
+                "MAAPRLRIDVVTLFPAMFAGPLSESILKRARAKGLLSVGFVNPRDFTEDRHRTVDDRPYGGGAGMVMMAEPLTRAIDQVRRRGSLVILMSPQGPRFDQALAQRLSRRRHLVLVCGHYEGIDERALASVDMELSLGDFVMTGGEIPALAVADAVARLVPGVLAKEESAARESFCAGLLDFPQYTRPRVWRRRKVPEDLLSGDHRRIAAWRARAALAATRRKRPDLLRK",
+                "MAASQDKSQVPPFQSGDTVKVHVRVIEGESERIQIFEGVVLRRRGGGASETFTVRKISFGVGVERTFPLTSPRIAKIELARSGRVRRSRLYYLRDLAGKEARLAEDTRGNTLKSEFAAQEKPAEAAPAASDSKETPPKKTEAAPV",
+                "FAKESEQUENCEFAKESEQUENCEFAKESEQUENCEFAKESEQUENCE",
+                "MTRERLALGRSGEARAARVLQGLGWKILERGWRTRFGELDIVACDGETLVFVEVKTRAAAGAFAPESSVGRSKQGRLIRSALSYLESKGIQDRPLRFDVLVFDGPDCCRHIRGAFEAEGYSL"
+            ],
+            "species": "Elusimicrobia bacterium GWA2_69_24",
+            "taxID": "1797927"
+        },
+        "assembly_id": [
+            "OGR58986.1",
+            "GCA_001799695.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/799/695/GCA_001799695.1_ASM179969v1"
+        ],
+        "species": "Elusimicrobia bacterium GWA2_69_24"
+    },
+    "OGC16053.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2855,
+                -2288,
+                -1550,
+                -445,
+                1,
+                244,
+                765,
+                1499,
+                2081
+            ],
+            "relative_ends": [
+                -2370,
+                -1554,
+                -510,
+                -14,
+                243,
+                678,
+                1502,
+                2041,
+                2434
+            ],
+            "ncbi_codes": [
+                "OGC16049.1",
+                "OGC16050.1",
+                "OGC16051.1",
+                "OGC16052.1",
+                "OGC16053.1",
+                "OGC16054.1",
+                "OGC16055.1",
+                "OGC16056.1",
+                "OGC16057.1"
+            ],
+            "starts": [
+                2425,
+                2992,
+                3730,
+                4835,
+                5281,
+                5524,
+                6045,
+                6779,
+                7361
+            ],
+            "ends": [
+                2910,
+                3726,
+                4770,
+                5266,
+                5523,
+                5958,
+                6782,
+                7321,
+                7714
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "hypothetical protein",
+                "chorismate synthase",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "hypothetical protein",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "hypothetical protein",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MLNIARLCSPAPYSQTISFPLLARIAKEGNGSALPARRMQSALSITSFPLHEESLQNILSKKAPKKNEQLAAIVALGYIGKSSKSVGILSNVLIYEPSDEQLLIAAAWALKEIGTKEALHFLDVIKRGGSFLPEAAAARLVCNESEKAKEIIEEIIIGKNS",
+                "MNKNIFIILALIASLSILAIVGIFGCSSSTTGTTNGGNASSVVAGKWALVVTWESTSQSLYLLECTSTSTATTASTDEGTIAIGTNEAAGTYAYNGTTVTFYISNGTTTFSGTFTNNDTLDGSATDGSGNTSTSAHATRNASSDYNLQGRWYQFQEGVEVYNSIVEFFPINATSGTVTLSSSTGVGETVSGTYTYVNGVMDYIANKGQRNWSSVTASFFDAGTLTGTWSNGPDGTNLSYKAYKL",
+                "MLRFLTAGESHGEALVAILDGMVAHLNLSEDAISKELERRQEGAGRGERMKIEKDKAQILSGVAKGETLGSPIALLIPNKAKEAWEKPFTQLRPGHADLAGAIKYNQKNLRPILERSSARETAARVAVGAICKKFLAEFKIKISSSVIHIGGVSSQKDIEQAIEKAKKEGDSLGGVFEVKCENLPIGLGSCMQWDKRLDGLLAQALMSIQAIKGVEIGLGFESTRLKGSKVHDEIFYNNNKFTRGSNNAGGLEGGMTNGEPLILKAAMKPISTLLTPLNSVDIATKKPAKAYVERADICAVTAAAVVGEAMASFVLANAFLEKFGGDSMEEIRSNFSSFQYPKNML",
+                "MAAKIKLQRKGKRGQPAYRFVIQEARAKLGGAVVDVLGEYNPRKEPAFINLNKEKTEAWLKKGAQPTEKVGVLLSKLGLLPAIDLTILPKRKSKKEKKEEAAAAAAQPKTKTEEKITQKPAKETQTQEEAKEGTPSTKPEEKA",
+                "MKDLIEFIVKALVENPDKISVTETQGETVSIIEVRVAETDMGKVIGKEGKIANAIRTIAKAAGGKEQKRVNVEFMAKEAV",
+                "MAEQEKKVELKRVVMVKAIVTEAFKDNLIKELDRAVKNIERQEEQMTEQSKAHMDALKQKGATQQAVAFKNQFQSEKARIAAAKTDLLMKIEEAKKLTINSEFVQGPLEGPVVVGLGDNLYKKVGGAEIIVKDGIIEEIRGIDD",
+                "MKIDILTLFPEMFEGPFSESLLKKAQQKGIISINIINLRDFTSDKHKTADDKAYGGGPGMVLKPEPLFAAIKSLSKNKKTRIIFMSPSGKKLTQEKAKELSKEAHLLILCGHYEDVDQRILKNLVTDEISVGDYVLTGGELPAMVLTDCVSRLIRGVVKEEASVTNESFYDGLLDYPSYTKPEIFNKMAVPGILLSGHHKNISRWRRKEALKETFFKRPDLLGNSDLKKEDKALLEEIIKEERAL",
+                "MTAKIYIALLHHPMYNKNREVISTCITGFDLHDIARTALTFGIKKYYVVNPLPAQIAFAERIINCWQGEKSFTHNWTRAEAFKHVKLKNTLEEVLKELKNPIVVATSAKKVGAVSYKLLKNKIKKAKRPFLILFGTGWGMTKDVLDKADVILRPICGSKDYNHLSVRAAVAITLDRLVGS",
+                "MSIIEEIEKKQINEKVALFNVGDTVKVLSKIVEGNKERLQAFEGIVIKRKGGSNRATFTVRKLVQGIGVERIFPLHSPKIDQIQIMKKGRARRAKLYYLRNKIGSAATKVKEEIKKV"
+            ],
+            "species": "candidate division WOR-1 bacterium RIFOXYA2_FULL_37_7",
+            "taxID": "1802573"
+        },
+        "assembly_id": [
+            "OGC16053.1",
+            "GCA_001771455.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/771/455/GCA_001771455.1_ASM177145v1"
+        ],
+        "species": "candidate division WOR-1 bacterium RIFOXYA2_FULL_37_7"
+    },
+    "WP_044642606.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3239,
+                -2027,
+                -1669,
+                -287,
+                1,
+                231,
+                783,
+                1632,
+                2294
+            ],
+            "relative_ends": [
+                -2319,
+                -1698,
+                -323,
+                -30,
+                228,
+                773,
+                1523,
+                1976,
+                2782
+            ],
+            "ncbi_codes": [
+                "WP_044642602.1",
+                "WP_187118726.1",
+                "WP_044642604.1",
+                "WP_044642605.1",
+                "WP_044642606.1",
+                "WP_044642607.1",
+                "WP_044642966.1",
+                "WP_044642608.1",
+                "WP_044642967.1"
+            ],
+            "starts": [
+                950323,
+                951535,
+                951893,
+                953275,
+                953563,
+                953793,
+                954345,
+                955194,
+                955856
+            ],
+            "ends": [
+                951243,
+                951864,
+                953239,
+                953532,
+                953790,
+                954335,
+                955085,
+                955538,
+                956344
+            ],
+            "directions": [
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "YlxM family DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "signal peptidase I"
+            ],
+            "sequences": [
+                "MPFPKQVSPFALQAENHTHQWVDSFSFFQNDFERDAFLASKFSWLSAYTYPFADYNEQLIVSDWNTWLFLLDDINDQADLGKDHQKLQKRLYDLIELLNHNHVPKHKGVDPIAESLCDLWTRIRKQHPNSKFQQRFIQSVKEYFDGCIWEARNRYLSIAPKTDDYIQNRYFSGAMYTSLNLGDLTEKIDIPSEVINHPTLINMTKLCISTVSWANDLFSFAREHNLQDVHNLVLTIKKQKQLSIEVAVDEVIRIHNEEIAHFCELEQSVPSFGEDYDKQIYRYIRLLKTWMRGHIDWVQCKTLRYE",
+                "MLDQTTEVNLLYDFYGVLLTAKQQKLLELYYQEDWSLSEIAEHQEVSRQAIFEAIKRAQVVLSDYEAKLGLLAKYRERQAKIQQLQDLLKDIEKPSEVETILTHLLELD",
+                "MAFESLSERLQSVMSKLRGRGKVGEADVKEAMREVRLALLEADVNFKVVKEFVNRVKERAVGQEVLKSLTPGQQVIKVVNEELTQLMGGEQAKLAKANKPPTVIMMVGLQGAGKTTSSGKLARFLQKQNHRPLLVAGDIYRPAAIRQLQVLGEQLSIPVFSLGDQESPVKIATEAIAHAKANEHDYVLIDTAGRLHIDENMMDELKQIKENVNPHEILLVVDSMTGQDAVNVAESFHQQMGLTGVILTKLDGDTRGGAALSVKSVTDCSIKFVGLGEKTDALEPFHPDRMASRILGMGDVLSLIEKAQTAVDAEKAKEFERKMRSQSFTLDDFLDQLQQVRKMGPLEDMLAMLPGAGQLKGLKNLNVDEKKIVHVEAIIRSMTQEEKDHPEVINASRRKRIAAGCGRPVQEVNRLLKQFEDMKKMMKQFSSMAKSKKKRKGFKFPFMG",
+                "MAVKIRLKRMGQKKAPFYRVVVADARAPRDGRFIEELGFYNPLTQPATVKIDEEKALKWLNTGAQPSETVKNLLKKEGILEKVQK",
+                "MKELIVLIAKSLVDSPEEVSVEEIPQADSVVFRLTVSKEDRGKVIGKQGRVIKAIRTLVLANSKSTPKRILIEVN",
+                "MSNEKAQSSTYLYIGKIVNTHGIRGELRILENTDFPEQRFAKGNKLFLFLPKQKEPMTLTVEKSRRHKNVRIVKFAEYHNINDVEHLRDARLAVSGDDRLQSEDGQDEYYYDEVLGSLVVTEEGEELGTVQDILSLPANDVWVVRSQDKKEILLPFIEEIVREVNISEKRVTIRWMEGLA",
+                "MRFDILTLFPEMFQGFLGTSIIKRAQQQGIVETNLINFRDFATDKHHTVDDTPYGGGGGMVLKPEPLFRAVESLLEEGKEKPPILLMSPQGATLTQKKAEELAQHSHLILLCGHYEGYDERIRTHLVTEEISIGDYVLTGGELPAMIVVDSVSRLLPGVLGNDSSAVTDSFSTGLLEYPHYTRPADFEGLKVPDILLSGHHQNIETWRRQQALTRTWEKRPDLLETAPLTEEDRNFLQGLARKQRS",
+                "MHPTLKGVTEGQVRTDVPAFRPGDTLRVHVKVVEGQRERIQVFEGVVIQRRGGGISETFTVRKMSSGVGVERTFPLHSPRVDHIDVVRRGKVRRAKLFYLRKLRGKAARIKERR",
+                "MAIGVALLLAVLIRTFLAEPTSVSGRSMIQTLQPGDKVMINKVAYKLGDPERGDIIVFETKEGKDLIKRIIGLPGDKIQAKDGKVILNGKPLTEPYLDKEVVTEDFPETEVPTGKYFVMGDNRPESADSRSELIGLIDQDELIGKASFVYWPFSNIGSVSSK"
+            ],
+            "species": "Risungbinella massiliensis",
+            "taxID": "1329796"
+        },
+        "assembly_id": [
+            "WP_044642606.1",
+            "GCF_000942395.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/942/395/GCF_000942395.1_Pytheasella_massiliensis"
+        ],
+        "species": "Risungbinella massiliensis"
+    },
+    "OQB21461.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3967,
+                -2483,
+                -1984,
+                -496,
+                1,
+                249,
+                817,
+                1558,
+                2189
+            ],
+            "relative_ends": [
+                -2564,
+                -1989,
+                -575,
+                -173,
+                234,
+                803,
+                1551,
+                2115,
+                2584
+            ],
+            "ncbi_codes": [
+                "OQB21465.1",
+                "OQB21464.1",
+                "OQB21463.1",
+                "OQB21462.1",
+                "OQB21461.1",
+                "OQB21460.1",
+                "OQB21459.1",
+                "OQB21458.1",
+                "OQB21457.1"
+            ],
+            "starts": [
+                17886,
+                17311,
+                15897,
+                15495,
+                15088,
+                14519,
+                13771,
+                13207,
+                12738
+            ],
+            "ends": [
+                19289,
+                17805,
+                17306,
+                15818,
+                15321,
+                15073,
+                14505,
+                13764,
+                13133
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "Pectate lyase superfamily protein",
+                "putative DNA-binding protein",
+                "Signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "Ribosome maturation factor RimM",
+                "tRNA (guanine-N(1)-)-methyltransferase",
+                "hypothetical protein",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MGGVILDIKIGAILRQFFVWEGLMKNFVCLIVIIFLTAIQTLMPAAPEDDTHKSVYSVLDFGAKGDGKTDDTDAFQKALDTAAGKDSIGGKVSVPRGIYLIKRHLNIPINVALEGIWEIPTAWSQYKGTTLLVVEGEGNAEGNPFITLWNNSVVNGLAIFYPNQVTSGAPKPYPWTIASGGGDNCSIIDVLIVNPYQAVDFGSKETGRHYIRNLYAQPLYRGLFVDQCYDVGRIENVHFWPFLTCNNPQMESLQDWVIQNGEAFIFGRTDWEYVYNTFCWGYKIGYRFTRTKNGVANGNFLGIGADATQNAVAVDDCAPYGLLITNGEFVSFPGAHPVSVDVSSSNTGVIQFQNCAFWGDPPQIANIKGKGAVTFNACNFQFWGYEKKRLPAIECSGGNLIINACNFQRGGEHVRLNEGTASAVITSNRFAEKPRIVNNCDGDVQVGFNVQSNLKGKKKNINKKISP",
+                "MAPTSDSAFRRVDRINSLMDIYGNLLTEKQRRFVELHYGEDLSFGEIAAQFKVSRQAIYDAVKHALGNLDKFEKTLRLLEMKPAEDEIASAEDAAKAAHPLPQKTVPDVDVSPIVNELQAIRRKVQKQRIIYNVDWLMSDLARVISQIEKLSGISAEETGRNSE",
+                "MFDNLGEKFERIFKKLKGESTISEKNIRDAMHEVKLALLEADVNFKVVKDFIQKVTEKAVGQEVLTSISPGQQIIKFVYDALVDVMGGKPKEFELHQSKINKVMLLGLQGSGKTTFAGKLAKYCLKKGWKPLLVACDVYRPAAINQLKVVGEQAGVPVFEKGQIKPLDIAREAIDFALHEGCNIMIVDTAGRLHINEVLMDELIGLKAFLKPEYAFLVADAMTGQDAVKSASAFDSQVGIDAVCLTKLDGDARGGAALSIRAVTGKPIVFSSIGEKLTDLEMFYPDRMASRILGMGDVVTLVEKAQETFDAKQAQEMQKKLMRQSFTFQDFLDQMKQVKKMGPLKDIMSMIPGVGRQLKDVDFDEAELGRVEAVILSMTPEEREHPEILTGSRRQRIAKGSGATLQDVNALIRQFEEAKKMMQRMMGATGLMGKLNPFSKKRKEEAKADHKFEKQQKKQQLKKKKKKRK",
+                "MSVKIRLTRMGHKRGAYYRVVVADSRPQRDGRFLEILGYYHPLNKKEDAAIKINEEKALDWMWKGARPSETVRSIFSKLGIMKKFHESRKKLYVKTQEPTSGAQSVS",
+                "MEELVKFIAEALVDHPEEVRVRSIEGANSVIVELKVAKDDVGKVIGKGGQTAKAIRKILSAAATKLKKKSLLQILEE",
+                "MTIADANTVEDDFISFGRIVRTQGNKGEVRVAFDTDTPEDFYKFLEQGAYLALPDNSEPKPIEVEDVWLHKGFVIVKIKGVDDMNAAQRLRGAQFQIAHNLRPPLAEGEYYLDQLIGLKALDAETGGELGSIFDMKTIAGNLLMEIQKPDGSVYMAPFVSAFIRGVDLKKRQIHLLLPEGLDQL",
+                "MIRFEILTLFPDFFKGPLSESILNRACEKRLIDIRIINIRDFTADKHHVADDYPYGGGAGMVMKPEPIAKAICSLKEESPQPRVIFLTPQGKPFTQQRARELAQLERIVLLCGHYEGIDERVRMRHVDEEISIGDYVLTGGEAPALIVLDAVARMVPGVLGNEDSFRNDSFYEGILDYPHYTRPEEFEGDRVPETLLSGHHKKIEEWRRREALARTLRVRPDLLEHAPLSEEDHRILNELRKLG",
+                "MPLNIALVHYPIRDKKGDISATSITNFDIHDIARSARTYGVERYYIQNPMPSQKKFAERIIRHWREGFGSEYNPSRGTALELALVIDDLSEVVDDVMERSGGKPPIFVGTSAKTYPNTVTFENLRRRIQNGTEHFCLVFGTGWGLHPSLIMDFDLMLEPIKGAGGYNHLSVRSAAAIILDRLIGR",
+                "MNPKIKEFEAAQLKSNLPNFRPGDTIRVAVRIKEGDKERIQNFEGVCIRRCGSGMRETFTVRRVSYGVGMERVFPLHSPRVETITIVREGKVRRAKLYYQRELRGKKARIMERKKAEPAVPQQPAEQSADN"
+            ],
+            "species": "candidate division BRC1 bacterium ADurb.Bin183",
+            "taxID": "1852823"
+        },
+        "assembly_id": [
+            "OQB21461.1",
+            "GCA_002070185.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/070/185/GCA_002070185.1_ASM207018v1"
+        ],
+        "species": "candidate division BRC1 bacterium ADurb.Bin183"
+    },
+    "WP_109430894.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3138,
+                -2121,
+                -1757,
+                -317,
+                1,
+                360,
+                775,
+                1351,
+                2128
+            ],
+            "relative_ends": [
+                -2188,
+                -1786,
+                -354,
+                -45,
+                228,
+                782,
+                1332,
+                2103,
+                2292
+            ],
+            "ncbi_codes": [
+                "WP_109430891.1",
+                "WP_109430905.1",
+                "WP_109430892.1",
+                "WP_109430893.1",
+                "WP_109430894.1",
+                "WP_245926328.1",
+                "WP_245926329.1",
+                "WP_109430896.1",
+                "WP_219930666.1"
+            ],
+            "starts": [
+                54733,
+                55750,
+                56114,
+                57554,
+                57872,
+                58231,
+                58646,
+                59222,
+                59999
+            ],
+            "ends": [
+                55683,
+                56085,
+                57517,
+                57826,
+                58099,
+                58653,
+                59203,
+                59974,
+                60163
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "YlqD family protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MGLFERLKEGLAKTRQRFADRVGSALFRRKIDDEVYEELEDALLAADIGVATTQFLLERIQKEARKQKLTTADQLMPVLRQLIVDILHAHSCEPSYAQSGPTVVLVVGVNGVGKTTTIGKMANYYRAQGKKVLLAAGDTFRAAAIEQLVIWGQRTGVEVIRQNLGSDAAAVIYDALSAARSRKADILLCDTAGRLQNKAHLMAELEKIYRVIAREIPDAPHEVLLVLDATTGQNAIVQAKLFKEIAKVSGIVLTKLDGTAKGGVIIAINQELQLPVKWIGIGEHKDDLQPFSPDDFARALFPDDALQTESRDPDDK",
+                "MNAPWNTLETHLLFDYYGALLTERQQKVLAMRLFDDLSLTEVAQELEITRQAVHDLFHRTVEQLKDYEQKLGLIAADRRRKKILDELIERLRKEFSVTEEILEALRDVMQG",
+                "MFDTLTSRLQGAFQKLRGKGRLSEDDVKEALREIRRALLEADVNHVVAKEFIERIRERAVGQEILQSLSAAQQVVKIVNDELTDLMGGAQAKLARAAKPPTVILLVGLQGAGKTTAAAKLARHLKASEHRRPLLVAADIYRPAAISQLQVLGEQIGVQVFTLGDQVNPREIALRALDEARRGGFDYVLIDTAGRLHIDETLMQELQDIEKSVNPDEILLVVDAMTGQDAVNVASHFREQLSLTGIIMTKLDGDTRGGAALTVRHVTGCPIKFVGIGEKVDALEPFYPDRMASRILGMGDVMTLIERAQAAIDEKDALELEAKIRRNEFTLEDFLSQLQQVRKLGPLDQLLGLIPGMGKFKQLQGATVDESQIKKIEAIIYSMSIAERRNPDLVMKSSSRRQRIARGSGTEVRDVNQLLRKFDDMRKLMKQFSSLGKNPSRALGGLANQLKGGGGVYGGASRKGKKRR",
+                "MAVKIRLKRMGAKKSPFYRVVVADSRSPRDGRFVEEIGTYNPLTEPAQIKIKEDRAIYWLQTGAQPSDSARNLLSQVGVMKKLHELRQSK",
+                "MKELVELIAKGLVEQPEAVSVREVQREQQTIYEVSVAPSDIGKVVGKGGRLVKAFRTVVSAASFADGKRVNIEIK",
+                "MLTIRQPVAVKVILTEETKQNWLAELRRHINSTIAELEELEFRGKQMLREAEKQGEAAVQAAQQHLENERNQRIARREQLIQQLTQIQQMDLNTEVPNGTLETTADIHIGDSWDKILLGSEIVLKDGIVVEIRRNGIKVE",
+                "MSDVHSIGGRLSLDREPLYTVGVIIGTHGLKGDVKVFSRTDFPELRFVKGSKLLLVTPAENVIPVEVKSARLQGRVFVVSFFQFSTIDEVEKLRGSELKVPESELAPLPSGHYFIHELVGCEVYDDQNRRLGILHEVLTPGANDVYVVRTNEGKDLLFPAIPECILRVDVQNKQINVHVMPGLLD",
+                "MKVDVLTLFPEMIQGAIDASMMKRAREQGLVDIRLVNFREFSTDRHRTVDDYPFGGGAGMVLKPDPVFAAVDALRQGEQSKPRIVLLTPQGERFSQEKAYEFAHESWMILICGHYEGYDERIREHLATDEISIGDYVLTSGELAAMVVMDAVVRLIPGVLGNQESAKSDSFADGLLEFPQYTRPREFRGWSVPEILVSGNHLEIAKWRRWQSLYRTWQRRPDLLAKAHLTDADIELIKDWTRDADLASRL",
+                "MVRNTLRVAESIEQVQVYCIPVAAQVDGLTVQYAVGHTAVRCKWLFSGGLIGFY"
+            ],
+            "species": "Acidibacillus sulfuroxidans",
+            "taxID": "1765684"
+        },
+        "assembly_id": [
+            "WP_109430894.1",
+            "GCF_003144315.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/144/315/GCF_003144315.1_ASM314431v1"
+        ],
+        "species": "Acidibacillus sulfuroxidans"
+    },
+    "WP_027889696.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3125,
+                -2044,
+                -1706,
+                -290,
+                1,
+                447,
+                1191,
+                1510,
+                2054
+            ],
+            "relative_ends": [
+                -2277,
+                -1709,
+                -336,
+                -15,
+                231,
+                1076,
+                1517,
+                1863,
+                2821
+            ],
+            "ncbi_codes": [
+                "WP_027889692.1",
+                "WP_231922708.1",
+                "WP_027889694.1",
+                "WP_027889695.1",
+                "WP_027889696.1",
+                "WP_036254453.1",
+                "WP_027889698.1",
+                "WP_036254456.1",
+                "WP_051177583.1"
+            ],
+            "starts": [
+                676301,
+                677382,
+                677720,
+                679136,
+                679427,
+                679873,
+                680617,
+                680936,
+                681480
+            ],
+            "ends": [
+                677149,
+                677717,
+                679090,
+                679411,
+                679657,
+                680502,
+                680943,
+                681289,
+                682247
+            ],
+            "directions": [
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "-",
+                "-"
+            ],
+            "names": [
+                "AraC family transcriptional regulator",
+                "YlxM family DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "hypothetical protein",
+                "SMR family transporter",
+                "multidrug efflux SMR transporter",
+                "segregation/condensation protein A"
+            ],
+            "sequences": [
+                "MDRNQHIMERKTSSKELYLLSCGWEKCTSIQSYGPAVRNYYMLHFVLEGSGFYFIEDKSFKVNTGQCFLVEPGNLTFYKAESTNPWTYTWICFNGSIVPELLVQCHFTPNQPVVTLSSVQSIAKIIRSMMHHDKLTPANECYIHSELYLLFAKLQEDLHANYNAVELNDNFYITKAIEYIEKNTFTDLSVKNVARYLNISRSYLYALFERELHTSPQQFLMNAKIANARELLRKSTVPVASVALSCGYKNAFAFSRAFKQATGMSPQLYRKTYYKPKNLLNS",
+                "MSALFDFYGPLLTDKQNRCLQMHLFEDFSLSEISAELGISRQAVYDMLKRSEQLMQQYEDKLGLAARSIKEKKELSSILNDLTQIEQEIHDDRLNNIIERISVLTSDSKEA",
+                "MIFESLADRLQETFKKLRGHGKLTADDVNATMREIRIALLEADVNFKVVKDFIKKIKERAVGQEVLESLTPAQAVIKIVNEELTALMGQTQSHINISPKPPTIIMMVGLQGAGKTTSAGKLALMFKKQGKHPVMIAADIYRPAAIKQLQVLGSQINIPVFAKEDCKDAVKIAKEGIEYAHSHANDIVIIDTAGRLHIDENLMQELKSIKAEVKPHEILLVVDAMTGQDAVNVAESFNNDLGLDGVVLTKMDGDARGGAALSVKAVTGCPIKFVGAGEKLEALEPFYPDRMASRILGMGDVLTLIEKAQSAFDAEEAKKMEKAFRKNEFTLDDFLSQLNQVRKLGSFESILGMIPGMGNLKKKLDGVDLDMNGKEIKHIEAIIRAMTPEEKRNTKIINGSRRKRIAMGSGTKVQEVNKLLKQFDEMKKMMKKMSNMKQFNKKGKKGKGGFKLPSLFR",
+                "MAVKIRLNRMGAKKRPFYRIVVADSRAPRDGRFIEILGNYDSTKEPAIVNIDEEKAIDWMLKGAQPTDTVKSLFSKKGIMAKLDTIKFAKK",
+                "MKELVEVIAKSLVDYPEQVIVDEKVDGNHVLIELRVASANMGKVIGKQGRIAKAIRTVVKAVAACENKKVTVDIVE",
+                "MLKKICRLIVLLICLTAAPLCVQAAPATPDTGINAADMNSALDAEKVRLHGEIMQMLQNEQQKKELQDYLIATRPIIEQYQEYFNTASRFAIWSEENIPIIGHLLSNVTMSIVNHFYQNALQEVAQTEVAQKFAELRSYGINIDLNIFQQAIADYLLKQGVDLSLVLDLQQLLNQKSEVHDFMQSIIKSSGAEFMPIDEGDILPKMPDI",
+                "MTDGILGTILIICSVCFDVLANIFLKKSHGFKRKLYGIAAIGCVGIAFLFLAKAITVMDLSIAYSLFGAFGLLLTTFVDKTFFHLKITSLGVAGIITMISGIILIKMI",
+                "MAKTTAWYMLFLAIALEVTGTSTMKFFATHGRMEGYVFMLIFIGLSYFALSKAVIRIPISVAYATWEGVGLIGTAFVAWFVFNENMPPLKILAFAVILSGLLMIKKGTHTAGGDKND",
+                "MQKEQYKVHLKSFEGPLDLLLHLIEKNRIDIYDIPIALLTEQYMDYLNTFKKFNIEIASEFLVMAATLLQIKSKILLPDTKIETDTTEEDEIDPRQELVERLLEYRRYKEISSILSDMAEEAGQRYFRKSTLPEPKHLPPVGLDVKLLWQAFQNVLEGQLEHTPIVANVAREQYTIEDKIVYLLALLKENNGNICFNSVFTTKTSKAELITTFLAMLELIKIKRITVYQTGLFSPIYLKINDTDDTIQENISQNK"
+            ],
+            "species": "Megamonas hypermegale",
+            "taxID": "158847"
+        },
+        "assembly_id": [
+            "WP_027889696.1",
+            "GCF_900187035.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/187/035/GCF_900187035.1_50279_G02"
+        ],
+        "species": "Megamonas hypermegale"
+    },
+    "TMK87268.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4027,
+                -3412,
+                -1735,
+                -305,
+                1,
+                234,
+                749,
+                1516,
+                2164
+            ],
+            "relative_ends": [
+                -3539,
+                -1797,
+                -359,
+                -3,
+                237,
+                713,
+                1435,
+                1920,
+                2751
+            ],
+            "ncbi_codes": [
+                "TMK87280.1",
+                "TMK87271.1",
+                "TMK87270.1",
+                "TMK87269.1",
+                "TMK87268.1",
+                "TMK87267.1",
+                "TMK87279.1",
+                "TMK87266.1",
+                "TMK87278.1"
+            ],
+            "starts": [
+                12255,
+                10513,
+                9075,
+                8719,
+                8479,
+                8003,
+                7281,
+                6796,
+                5965
+            ],
+            "ends": [
+                12743,
+                12128,
+                10451,
+                9021,
+                8715,
+                8482,
+                7967,
+                7200,
+                6552
+            ],
+            "directions": [
+                "+",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "GAF domain-containing protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "signal peptidase I"
+            ],
+            "sequences": [
+                "LHGAGFTPRVLSPFEERRLLYHGLGITNLVRRATASADELSPEELVEGARRLRRRVRRFPPRFVAFLGLTAYRTSFGRPEAVPGPQEDRLAGASVWLLPNPSGLNAHHQLPDLIAGLRLLRKAVRGGPRASGLPVRSSAGETPRRRQRSRARPAWPPPEPEP",
+                "MTAFPAGRVRDLEQAKRLERGLIRVRWFGFVLGVYLVSQSNAGPPPKATHTVFVLGYGIMAALAVGNAIIWLACKRAGDPESLARVGLAAFLFDGLIVFSLAWIYSYDPKGSTWVVVYILLVEGALRYQLGGALASVAMTLANEVAREAFMATRFPDYPFLVANVVFRVGIQFIVALVAGLMSRSLAREAARAADEARRAEQVARREATARRELAAFNTAILTGVAAEDLDSSIRLMAAAIGRDLGYETLSILLREDDHLEVKGMYGMPFFEGVVPIGEGVTGTVAATGRSLIVPDVDAFSGYIVADPDMRSEMAAPMRIGDDVIGVLDVESRQLDAFDQAALDLLVRLADQIALVAHSNRLLSQQAETVRRLQELDQMKSDFVAITSHELRTPITAIRGFVKTLERNMDRLAPEQVTSFMAIIDRQSRRLAHLVEDLLFVSKIESGTIRLSIERVELAHFLRESAESAGPEAKSRVEVRAEPPGVWVPIDPQRVEQILRNLVDNALKFSPSETPVELEGRAFDEVVELSVTDHGRGIR",
+                "MFDTLTDRLNAVFAKLRSRGKLHPKQVDAALADIRTALLDADAALEVVDDFLARVRTRALSAEVMRSLTPAQQVIKVVRDELTATLGGEHKPFKLPGVNPVVIMMAGVQGSGKTTHCAKLALLFREKGRQPLLVAADLQRPAAIEQLITLGREIGVPVVSEGNRPEKVAKSALKQAVREGRNVVIVDTAGRLHVDPDMMREARRVKDALKPHHVLMACDAMTGQDAVLQAREFMREVDVSGFVLTKLDGDARGGAALSITAVTGRPIYFAGMGEKLADLEPFYPDRMASRILGMGDVMTLIERAEKEMDAEQAQAAAEKMASAQFTLEDFLEQMRQVRKLGPLQDLLAMLPGVPGGKQQLKDLQVDEGELARTEAIICSMTTEERRDPAIIGGSRRLRIARGSGTTTAEVNALLKQFAQARKMMKAMMGMAGFGGGGSKGMKGLKLPKLPPGIGLPGT",
+                "MVKIRLMRRGATKRPAYRVVVADSRSPRDGRFIENIGRYQPLADPSVIEIDEERALYWLSRGAQPTEQVQNLLVKLGVWEKFRPGSKAGPKPGERKAAES",
+                "MSVKEVLEYVARSLVDDPDSVSVTETEGEGSVILRLSVAPDDVGKVIGRQGRTVRAIRDVVRAAGTKAGVTAVVEIVG",
+                "MSSPPGVRGEVAVLPLSQVPERFEPGSRLFADQGEDRPLVVASSRRHRARLLVSFEGVRDRDVAEALRGTYLFVPSSEAPPLPDGEYWTHELIGCEVFADDGRPLGRLQEVIHTPANDVWAVQGPQGEVLIPALQDVVAEVRLADRRIRVHDVPGLTSA",
+                "MRADVLTLFPGFFEGPLRESLLGRALAEGVADVRLHDIREHTHDRHRQTDDYAFGGGPGMVMKPGPIFEAVEALGPGRKRVILLSPAGRPFDQELARELAGEPWLVLICGRYEGVDERVVSGLPAEEISVGDFVLAGGESAALVVLEAVIRLVPGVVGNEESLSEESFERGLLDHPHYTRPREFRGMQVPEPLLSGDHGRIEEWRRNAAREKTRRNRPDLLPGDEGPR",
+                "MNRVDLVEKPRLREDLPDFRPGDTVRVHVRVAEAGRERIQVFQGVVIRRRGGGLRETFTVRKVSFGVGVERTFPLHSPTIARVELVARGRVRRAKLYYLRERRGKSARIRERREATTVQPAGAQLDEGEGSEPE",
+                "MAFLGELPFLLLIAFLLALLIKTFLLQAFYIPSESMEPTLDVGDRVLVNKVVYHLHPPRRGDIIVFADPNPAPEPHRNPVASFWHWLTEGLGVSTSPEKDFIKRAIGLPGDLVECKQGTVYINGKALREPYIKVEDDRPCGPFHVPPHSLFVMGDNRLDSKDSRYGLGYIPFDKVIGRAFIKIWPPSRVGWLRGT"
+            ],
+            "species": "Actinobacteria bacterium",
+            "taxID": "2900548"
+        },
+        "assembly_id": [
+            "TMK87268.1",
+            "GCA_005885015.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/005/885/015/GCA_005885015.1_ASM588501v1"
+        ],
+        "species": "Actinobacteria bacterium"
+    },
+    "WP_091790858.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2558,
+                -1988,
+                -1633,
+                -263,
+                1,
+                286,
+                671,
+                1219,
+                2076
+            ],
+            "relative_ends": [
+                -2040,
+                -1623,
+                -287,
+                -12,
+                231,
+                708,
+                1216,
+                1968,
+                2537
+            ],
+            "ncbi_codes": [
+                "WP_091790862.1",
+                "WP_091790861.1",
+                "WP_091790860.1",
+                "WP_091790859.1",
+                "WP_091790858.1",
+                "WP_091790857.1",
+                "WP_091790856.1",
+                "WP_091790855.1",
+                "WP_091790854.1"
+            ],
+            "starts": [
+                160238,
+                159821,
+                158485,
+                158210,
+                157967,
+                157490,
+                156982,
+                156230,
+                155661
+            ],
+            "ends": [
+                160756,
+                160186,
+                159831,
+                158461,
+                158197,
+                157912,
+                157527,
+                156979,
+                156122
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-"
+            ],
+            "names": [
+                "deoxyuridine 5'-triphosphate nucleotidohydrolase",
+                "YlxM family DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "hypothetical protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "6%2C7-dimethyl-8-ribityllumazine synthase"
+            ],
+            "sequences": [
+                "MIYFEKVSAKQFAEDAEKNGYSVLDIKAVYRKISLPVRATAGSAGYDFYTPFQIHLSPGESICIPTGIRAAMPEGVVLLLMPRSGLGIRYRLQLANTIGVIDSDYYGALNEGHILTTITNDSKKGDVLTLAAGERFMQGVFLPHLLCDDDEALAQRTGGFGSTGEKNLDSKG",
+                "MSTTLGHLAEITRLFDFYAPLLTDKQRDLFTLYYEEDLSLAEIASAMDTSRQAVHSTLRRVESLLTDYENRLALAKKDEQYQAYYTQLEGAIKDLAGGDAKVFQVAMDVLSILKGGQNDGF",
+                "MAFDGLADRLQDVFSKITGKGKISEADLKDVLKEVRLALLEADVNYKVVKSFVAHIKDRALGSEVMESLTPGQQVVKIVHDELTQLMGGEQEKIQIASQPPTVIMMVGLQGSGKTTTSGKLARYMRDKMKKRPLLVACDVYRPAAVKQLEVLGDQLDIPVYSEGTDESPVDIAVRAREHARSHNNDVVILDTAGRLHIDAALMEELEGIKAAVDPSEILLVIDAMTGQDAVSVADGFNETLAITGLVLTKLDGDTRGGAALSVKEVTGCPIKFIGMGEKLDALEPFHPDRMANRILGMGDVLTLIDKAQEAFDEEEAQKIQERIINQSFTLEDYLAQMTQMQQMGDMDSLLEMVPGLNKKALKNVKIDAREMERSKAVILSMTKAERQSPKIINGSRRKRIAAGAGVRVQDVNRLLKQFDQSQTLMKQLTQMAGGKGGKKKRLPFFGL",
+                "MATKIRLKRMGAKKKPFYRIVVADSRAPRDGRFIEEIGYYDPNKNPADIKVDAEKAQKWLSTGAQPSDTVRSLFKKAGVKKNA",
+                "MEALVKHLVQALVDYPEAVEVRIKESDTAVNVTVQVAGEDMGKIIGKQGRIANALRTVLKAVGARMHKKVYVEIVE",
+                "MSEEKLTVMGKVTYKQVVTQAYKEKALAEVDEQIAKIDEELANFDKQMDKTMTELTLKAHPQIEQLRQQFNMERQKIAVYREQIESGKQAVDILAEGEEVTAGEGNFVTELAVGEPFNLNLNREVVIKDDVVIDIRRPNA",
+                "MMSSSTSVGPMPKLRTVTVGQVQAAHGVHGELKIKPLCDDPKRFDDLDEIMLAHKEMVEKYTIRSRRYHKGSVLLQLDGLEDRNAAEAVKGYDCLIPFDQRRPLPPDRFYIDDLIGLSVYEDGICLGEIREVLQPGANDVYVVHGTDGKRIYVPALKTVVNRVDLAAGQMDVQLPAGLRDE",
+                "MKIRVFSLFPEMFDGALSASLLGKAQDKGILSLEVINFREFALDKHRHVDDTPYGGGQGMVLMPQPLIAAMEANAPMSDNSEIILLSPQGKTFTQSDAVRLADRDELSFVCGHYEGFDERIRHFVDSEYSIGDYVLTGGELPAMVMIDTIARLIPGVIKERASYEEDSFFQGLLEYPQYTKPRVFRDMEVPDVLLSGHHANIRRWQKKEALRRTWLRRPDLLEDYSLSDEEKKLLLEAQAEEEACHQDG",
+                "MHIINGHLVGNQQKIAIIASRFNELIVNKLIGGAQDALTRHGIDDDNIDLYWVPGAFEIPALAKRIALSNRYDAVICLGAVIRGATPHFDYVCAEVSKGIAAISLEAACPVMFGVLTTDSIAQAIERAGSKAGNKGYDAAVGALEMMDLYQKI"
+            ],
+            "species": "Peptococcus niger",
+            "taxID": "2741"
+        },
+        "assembly_id": [
+            "WP_091790858.1",
+            "GCF_900101835.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/101/835/GCF_900101835.1_IMG-taxon_2634166305_annotated_assembly"
+        ],
+        "species": "Peptococcus niger"
+    },
+    "WP_066661777.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -6588,
+                -3039,
+                -1824,
+                -245,
+                1,
+                314,
+                805,
+                1608,
+                2218
+            ],
+            "relative_ends": [
+                -3043,
+                -1834,
+                -418,
+                -3,
+                252,
+                808,
+                1530,
+                2180,
+                3150
+            ],
+            "ncbi_codes": [
+                "WP_066661760.1",
+                "WP_082867860.1",
+                "WP_066661772.1",
+                "WP_066661774.1",
+                "WP_066661777.1",
+                "WP_082867861.1",
+                "WP_066661787.1",
+                "WP_066661789.1",
+                "WP_066661792.1"
+            ],
+            "starts": [
+                62977,
+                61768,
+                60352,
+                59937,
+                59682,
+                59126,
+                58404,
+                57754,
+                56784
+            ],
+            "ends": [
+                66522,
+                62973,
+                61758,
+                60179,
+                59933,
+                59620,
+                59129,
+                58326,
+                57716
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "chromosome segregation protein SMC",
+                "signal recognition particle-docking protein FtsY",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "hypothetical protein",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "signal peptidase I",
+                "glycine--tRNA ligase subunit alpha"
+            ],
+            "sequences": [
+                "MYLKSLVLKGFKSFADRSVLGFEPGIAAVVGPNGSGKSNISDAVLWVLGERNAKNLRGQAMEDVIFAGSSARKPVGVAEVELVLDNSDGTLPVEFNDVSIMRRMYRSGESEYLINGTIARRMDVLDILHDSGLGTGTHSIIAQGHLAEILQSKPEDRRALIEEAAGVLKHKQRKAKSQRKLERMDEHLARVRDVVAEVERQVKPLERKAKRALQYRDVSKQLAQVNLELAVDDLRTLQRAWDETLKREQSLSSQLEGLRTQIEKTEAVSEELQKKLQAETAEAGVVATHQRRAQAASDKLDSNVLLLHERKRSIQSYLTDLQLQLQGSERSLQDLEERREQAQKQLDEAVAAREAADSAYAAARTHTQELQEKKRSLQQQLDDQTRKRRDALQELEGVRAAQARTQEILASSQAQQKLIATHAAELDERFAAAKAAVESAKSQADAMARDLEEAKKAESEARANVGAAVRKRDELRQALDEARDERATASALVKSLEELERARTAANPLLLWTKEHADDLQSRIAPFIDTLTAAPEVEALVTLLLGSDVEALFVEDEPSALAAATRIVASGETGSVSLLPRDGMRAAELPQVPEGARTLVSMLSYPESAAASVKALLGDVLICDDIASAQRVAAQVSGVRAVTLDGVIVWPNGKVTYALPGDDAENALAAHRELEAARDRLAAAQKAQELAQRALDESEEELRTVQSAVLSTSQDKAKLQGASDAAASQVKQAQSALDALKRESESIESQRTAAQQALEAAQPEAVSLDERATILSGTIDDAKNRIEALRDELAPVRAQADEASNALAEAKLAAATAKERTDYAKRMVIAREQDIRQAKKTREVARRNIERKTVAAHRIDPLLEVCRTLAEVSRVRSQRLEDASAASRELSAGLHEQINDARTKAKEAHDAFDESNELLSQVRVEKGRLEMQVETAIRTITDDCGTPLEVAMRTPELEDRAALEAESFKLQRRIANMGTINPDAAAEYEQLKTRYDYLQSQLDDMMAARRSLVKIVHVIDDRMKDDFVNTFEQVNANFQRIFRELFPGGSGELSLVDPDDPENTGVEVSAQPSGKRILKMSLMSGGEKSLVAMALLFAVYETRATPFYILDEIEAALDDTNLRRLVAYLDSIRDTTQFIMITHQRRTMEMADVLYGVSMQSDGVTKVMSQRLDAALRYAEG",
+                "MFESMKRGMQNTRQRFAERMNMLLDRGPDVDDDFWDGLEEALILADVGAPAACDIVERMRELATRQALPDAYAVMDALADQLAERFASTDVNLFDENPVLVLFVGINGAGKTTTVGKIAYSAKEAGRNVLLGSADTFRAAAIEQLEEWGRRANVEIVERERGSDPASVCYDTIERAEATNADLVLIDTAGRLHTSDDLMRELSKVVGVVRKRSSIPVKTVLVIDATTGQNGLSQARKFNDALDLDGLIVTKLDGTAKGGIALAVSYELGLPIAKIGVGEGLADLQDFDAREFSAALIGAEPVDESGEVATEEETAVASEEPAWQAPSEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEIEDEAEPEAEVDLVDEAEVEQEAPAEEPKKESRLKRAFKWMGF",
+                "MLENLSDRLQSIFGGLRSKGRLTEDDINAAMREIRMALLEADVNFKVVKSFVARTKERCLTAEVLDSLTPAQNVIKVVLDELTRLLGETDSRLVLSSRIPNVIMLVGLQGSGKTTASAKLAYLLKQQNHNPLLVACDVYRPAAADQLQTLGDEMGVRVYRGDGQDPVRIAKEGVQDAIDNLRDVVIIDTAGRLHVDEQMMQEARDIKEATKPDQILMVVDAMTGQDVVNVASAFAEQVDFDGVIMSKMDGDARGGGALSIREVTGKPIKFISQGEKPDSLEEFHPDRMAKRILGMGDVVSLIESATKLQEEQMEAEQTERMMKAQLNLNDFLEMNKRVRKMGGISKLVSALPGGDKALSQGQVDTSALDRMENIIFSMTAEERLHPDILNGSRRARIARGAGVSVTEVNQVMKKFNETKKMLKQMMPAEDMSSGRKGKKGKKRRRRGLPGMPGMNLKDLQKIQDMLDQ",
+                "MVKIRLARHGAKKAPYYRIVVADARSPRDGRLIDEVGRYNPNTDPSMIKIDLEKVDKWIANGAQPTDTVARLIETARKDA",
+                "MSDQTMDLAGLVRTLVEPIVEYPGDLQVSQTESDAGILVEIALNEEDTGKVIGRQGRVIKAIRTLARAAAVRADRHVDVEIAE",
+                "MVQAIAGLPFLLSEGMEVRFVPPTLKGPRSAFVRELFQSKGNACEVSFDGVESASDADLLIGSYCLVRRDSLPEIDYASTPSALAGWRVCDAEFGDLGEIAEVIDNPGQSLLVVRGERGEVLIPVVDEFIRSIQEEERVVGTAIPAGLLTLSESSDEDLPEDES",
+                "MIVDTLSTFPGMYESVMGTSMMRIAQEKGALEFHAHDLRDWTHDRHRTTDDEPYGGGQGLVMKCEPIFEAYDSIASAGPKPYTLFLTPTGEPFNQGLAQELSEKPRLLFICGHYEGIDERAYSLADCCISLGDYVLTSGELASMVVIDAVARLLPGVLGDEGSAVDESFYDGLLEYPQYTRPSTFRGMEVPPVLLSGNHAAIDRWRREQSIERTARLRPDLIEESNLSQQDRDFLKSLHSR",
+                "MNSGNHAPSKSGGFGRACVEFLVIVALIVGCAYLLRTYVITPYEVPSGSMETTIMSDDRIFSEKISYYSRSVQVGDIVTFDDPEVDGRTLVKRVVATGGQTVDLVDGVVYVDGEAAFEPYTNGQQSYPLSTAADVTVEYPYTVPEGYIWVMGDNRGNSADSRYFGAVPVSSVTGHVCFIYWPFQHFGPIS",
+                "MAPQDATVNAGAVPTFQDIIMNLQHYWAEQGCVILQPYDGAVGAGTNHTATTLRSLGPDTWRTAYVQGCRRPTDGRYGENPNRLQYYYQFQVLMKPSPDNIQDLYLGSLRAIGIEPNEHDVRFVEDDWESPTLGAWGLGWEVWLNGMEVTQFTYFQQVGGFECSPVPVEIAYGLERLTMYIQGVDSVYDIIWARGDDGVEFTYGDVYLENEREFSTYNFEIGNTDFLFQLFDNCEAEAQACLAANLPLPAYDWVLKCNHAFNLLDARGVISATERMAYILRVRSMVKDCCASYMEHVVGSAPQLEEEKGE"
+            ],
+            "species": "Denitrobacterium detoxificans",
+            "taxID": "79604"
+        },
+        "assembly_id": [
+            "WP_066661777.1",
+            "GCF_900110565.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/110/565/GCF_900110565.1_IMG-taxon_2593339223_annotated_assembly"
+        ],
+        "species": "Denitrobacterium detoxificans"
+    },
+    "KPJ79156.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2518,
+                -2175,
+                -1095,
+                -405,
+                1,
+                247,
+                582,
+                920,
+                1392
+            ],
+            "relative_ends": [
+                -2312,
+                -1321,
+                -772,
+                -43,
+                234,
+                480,
+                806,
+                1189,
+                3059
+            ],
+            "ncbi_codes": [
+                "KPJ79152.1",
+                "KPJ79153.1",
+                "KPJ79154.1",
+                "KPJ79155.1",
+                "KPJ79156.1",
+                "KPJ79157.1",
+                "KPJ79158.1",
+                "KPJ79159.1",
+                "KPJ79183.1"
+            ],
+            "starts": [
+                97353,
+                97696,
+                98776,
+                99466,
+                99872,
+                100118,
+                100453,
+                100791,
+                101263
+            ],
+            "ends": [
+                97559,
+                98550,
+                99099,
+                99828,
+                100105,
+                100351,
+                100677,
+                101060,
+                102930
+            ],
+            "directions": [
+                "-",
+                "-",
+                "-",
+                "+",
+                "+",
+                "+",
+                "-",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "hypothetical protein",
+                "hypothetical protein",
+                "hypothetical protein",
+                "RNA-binding protein",
+                "hypothetical protein",
+                "hypothetical protein",
+                "DNA-binding protein",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MVRNIMFLVLIGVVLVFVAQNTQVVEVRFLFWTLSMSRALILLITLAIGLVGGWLLTVPRNRKTFKAR",
+                "MKQADPKNIAWNLALITAGSLLCALAIKGILIPQQFLAGSVTGLALLVHFIWPKLPVGVIYFLINIPIYALGWKYVGKRFFLYSVAGLFIFSGAVELINIKIPVQDRFLSILLAGIITGIGSGIILRSRGSAGGLDILSIIVMKVYSIRLGSTILAFNVVLLTLVSVLFGIEASLYALIFIFVSSRLVDLVVSGLSQRKLVMIISESWQEIEQVILQRLNRGVTRVRGEGGYTRRQGTILYSVVTFQELSRLKRMTREIDPQAFVVVTDTLEVMGQRIGNQPHW",
+                "MLPDTERRKSVRAVCSGRIRFSRVDREMTITADLTDFSEEGLGFLSASELKPGSTLMVQVEQIDSAESERPARRLVRSQGIVEVRWCRPVGDRWNTVFATGVKYLLI",
+                "MRNEILIYFKNLLTRQLEELEMQADNQVVDWINRDERATDLIDIAAIESERAYTLRIREREHRLIHKIRQSLEDIQKGTYGICKLCGEDISVSRLKARPVARHCIECKQKMERLERASGF",
+                "MMKALMETIVKSLVDRSESVVIREVKGERITVLELQVAKEDLGKVIGKKGRNAQALRTVLAAASATSGQRYVLEIID",
+                "MQFRINGSIGHQNSHYFTAYRKAEPLPGGSHQAMRLPDFPCVAAQPFFRAEKATVCEKDSLIPCGKVDIKAATAVRR",
+                "MFLFVPMFVAAWLRWHSGFSFAAYRAALRQIESARLVFQLLLESQFEFAAALLAYENRAAHTGKQCLPDSDLSS",
+                "MNKGDLVEEVAKLLSTKKDAQAAVDCVLETIVKSLKRGGDVTLVGFGTFKVASRKARKGRNPQTGEVIQIKASKVPKFVPGKAFKDAVK",
+                "MLVGTLIALAVTAGFAATASDAPVALTTAVQSLLQTRLTTIGSGAAATVQGRHLASPAMVRLFYDQRQYRPAWAGADGSGRPLSELLTALEGLRQEALNPEAYHLQSLQRLYGDLQSSGLLREEVRLELLVDAELLATDAFLTSAGHLLSGRIAPETLGPEQQAVHKDADLIGALETAAHSGRLQPVLSSFLPDHSGYRRLRRILQRYRRIEEKGGWTQLPDGPTLRAGVEDERVSMLRFRLVAEGFLDGRRARDGNHFDSTLKRAVAAFQRQHGLAADGVIGALTREALNVSARSRVRQIELNMERWRWLPRYLGKRYLLVNIADYQMEIVDENRRVMVMRVAVGRDYRRTPVFSAELTRLVLNPHWYVPPTIFTEDLLPAIRSNPEYLRERGYRVFSSLGPDAEEMDPDRIDWQAVDPGNFPYILRKDPGPFNPMGRVKFLFPNKYDVYIHDSPDRSIFTQPKRTFSSGCIRIEKPIELAEYLLKDHFNWTRRRILAEIESGRSEIIEVPAPLPTYIQYWTAWVDESGNVQFREDIYGRDALLGETLSKLPDF"
+            ],
+            "species": "Deltaproteobacteria bacterium SG8_13",
+            "taxID": "1703398"
+        },
+        "assembly_id": [
+            "KPJ79156.1",
+            "GCA_001303025.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/303/025/GCA_001303025.1_ASM130302v1"
+        ],
+        "species": "Deltaproteobacteria bacterium SG8_13"
+    },
+    "PLS75815.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2691,
+                -2063,
+                -1685,
+                -283,
+                1,
+                327,
+                847,
+                1610,
+                1957
+            ],
+            "relative_ends": [
+                -2116,
+                -1737,
+                -315,
+                -14,
+                321,
+                785,
+                1623,
+                1960,
+                2643
+            ],
+            "ncbi_codes": [
+                "PLS75814.1",
+                "PLS75802.1",
+                "PLS75803.1",
+                "PLS75804.1",
+                "PLS75815.1",
+                "PLS75805.1",
+                "PLS75806.1",
+                "PLS75807.1",
+                "PLS75808.1"
+            ],
+            "starts": [
+                3666,
+                4294,
+                4672,
+                6074,
+                6358,
+                6684,
+                7204,
+                7967,
+                8314
+            ],
+            "ends": [
+                4241,
+                4620,
+                6042,
+                6343,
+                6678,
+                7142,
+                7980,
+                8317,
+                9000
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "Uma2 family endonuclease",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "signal peptidase I"
+            ],
+            "sequences": [
+                "MAVQPASPAPHRFTIDEYHRMADAGLFGEDDRIELLDGEIVEMAPIGSRHAGCVNKLTRLLIERAQGRGIVAVQNPILVPDHSEPQPDLAVLRPRSDDYAEAHPLPPDVLLVVEVADTTVAWDRRRKVPLYAAASLLEVWLVDLPAGAIEVFRDAHDGEYTAVTTARPGDVLAPLGLPEVQLRVDEILPSS",
+                "MLTITGVRLALQHLGPALVPVYVFELEGGGEAFPVPAVTDEWIEKSQDRQPGVGGSGDHPVPAPAPVPPXXXVRIAPAPSAVPERVPPAGAEPGGAPAQVEGAPARRP",
+                "MFDSLSDRFEGIFGRLRSRGRLGEAEVDEVLREIRLALLEADVNFLVVKKMLARIKQRCVGIETSQSLSPAQQVIKIVHEELVGILGGETLKLTYASRPPTVVLLAGLQGSGKTTTAGKLARWFKQQGRNPLLVGADLQRPAAVEQLRVLGGQVGVPVFSEATDPVAVSERGLAEAQRLGRDVLIVDTAGRLSIDADLMEEVRQISGKVAPHYTFLVIDAMTGQDAVATAEAFHATLELDGVILTKLDGDARGGAALSVKEVVGRPIAFASVGEKLADFEVFHPDRMASRILGMGDMLTLIEKAEENYDKREAERAAAALMEGTFTLEDFLEQMQQVKKMGPLQGLVGMIPGLPKELKNANIDERELGRIEAIIRSMTPAERVDTTLINGSRRLRIANGSGTTTSEVNGLLKQFKEMQRMMGSMGLGRMLTKKKSKKGKKGGRVTPPKVPSLSQFK",
+                "MAVKLRLIRMGKKKQPTYRVVASDARAPRNGRFIEAVGTYEPRAEPSRILIDGDKALRWLRNGAQPTETVEKLLKITGTWDEFKATTPS",
+                "MTDTTGAGAAAVAAYDDDDTGNRVLGAAARNVLSYLARQIVDEPDAVVVQADEDPNRKRVDLRLHVAPKDMGIVIGRRGRTAQAIRTVVRAAGASEGVEATVDIVD",
+                "MLEVGRVAKPHGLAGEVIVALVTNRSERLSAGSVLATPTRQLTVEASSPHQGRWIVKFAGVSGREEAEALRGAVLSAPALDDPDELWVHELVGAEVAGVDGRSYGPVVEVEANPASDLLVLEGGALVPLRFVVAHDRDAHRVVIDPPEGLLP",
+                "MRIEVLTIFPGLIEGYLAESLIGKARSRGLLDLRVHDLRSATADPHRSVDDTPFGGGAGMVLAPGPIFAAVEAAQPVRPLFLLGPGGRRFDQAQARELASAPGGFSLLCGRYEGVDQRVVDHLVDGELSIGDYVLAGGEAAALVVVEAVARLVPGVVGNEASTVHESFSDGLLEEPHYTRPADFRGWPVPEVLRCGDHGRIARWRRAAALARTLRSRPDLVAARGGLTDQEVQLLADHGYPVASPGGAHEEPEAHEPH",
+                "MNPTDLVDKGRLRDDVPPFSPGDNVKVHVRVVEGTRERIQVFQGDVIARRGDGIRESFTVRKVSFGVGVERTFPVHSPVIARIEVARTGDVRRAKLYYLRERSGKAAKIKEKRAAR",
+                "MRTEKPVASDAPVSTTEPALPPPARRRPPRAWRTVREIPILLGFAALIAFLLKTLVAQAFYIPSESMLSQLEVNDRVVVSKIAYRLHAPRRGDIVVFDCPKAACRLEESEPSTSTWRRALRGVGEAVGVVQPSTEEFIKRVVALPGETVEGKDGHVLVNGRRLIEPYLDAGTMTSTFAAVTVPPAHLWVMGDNRGNSSDSRVFGPITRASVAGRTVLKVWPLGSASFL"
+            ],
+            "species": "Actinobacteria bacterium",
+            "taxID": "2900548"
+        },
+        "assembly_id": [
+            "PLS75815.1",
+            "GCA_002861595.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/861/595/GCA_002861595.1_ASM286159v1"
+        ],
+        "species": "Actinobacteria bacterium"
+    },
+    "PKQ28811.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4273,
+                -3109,
+                -1673,
+                -303,
+                1,
+                227,
+                814,
+                1541,
+                1935
+            ],
+            "relative_ends": [
+                -3137,
+                -2096,
+                -342,
+                -37,
+                231,
+                778,
+                1470,
+                1915,
+                2627
+            ],
+            "ncbi_codes": [
+                "PKQ28807.1",
+                "PKQ28808.1",
+                "PKQ28809.1",
+                "PKQ28810.1",
+                "PKQ28811.1",
+                "PKQ28812.1",
+                "PKQ28856.1",
+                "PKQ28857.1",
+                "PKQ28813.1"
+            ],
+            "starts": [
+                8784,
+                9948,
+                11384,
+                12754,
+                13058,
+                13284,
+                13871,
+                14598,
+                14992
+            ],
+            "ends": [
+                9920,
+                10961,
+                12715,
+                13020,
+                13288,
+                13835,
+                14527,
+                14972,
+                15684
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "signal peptidase I"
+            ],
+            "sequences": [
+                "MAKGKKRLKAPGERRPGPRRAPSAPEDGAATMAARESSSFDARRAVSTEDLSEPKEDISFELDGVGEEEELETPVEGQDEEKQKYRRGMFRSRRFLSKPFVRAATRKAIDSEFWRETEEALIAADTGVACAAEIVKGAKDRIFSAGIRDLEGLKDAFREEVAETIRSFGASPEFGLARPHVIFIVGINGVGKTTTSAKIGYLLKERGHKVIYAAADTFRAAGDEQMEMWAHRVGAPVVRHKTGGDPGAVVFDAIESARARGIDFVIVDTAGRLHTRKNLMDELAKMWRVADRQIEGAPESILVIDATTGQNAVTQARIFSEAFEIGSIALTKMDGSAKGGVVLAIGRELGIPVSYIGCGEGLSDLRPFDSDEYARALF",
+                "MHFDLRFWEELLTPGEIVEKALPFLTEFSASVAVAMHPASLTRKNANAFKKLKEAGIEFAFWPLMEKERGYWPCERNISTYAELVRNQLEWAERNGILPDMVAVDLEMSLLQVQKIMSATSPVKKLRVALSQVWDNLDRERYYKARGRLSELNDEIQDRGIRTLAAVLPWVGLELEWDVELIQDMVETPVAGISWDVISPTVYVSMIAAMSGGTITRRDANWLVYENCGMLRSKYGGRAGISLGVTGVGVLEDEPTFDSPVDLAVGLEAALAAGVRDISIFSLEGIISRPDPREWFEAIKAATPRVPERSRKIAGGLTAARCVYPHVARLVDWYRRV",
+                "MFESLGDRLQDVFAKLRSRGKLSEKDVDVAMREIRLVLLEADVNFKVVKLFVDRVRERAIGEEVVKSITPAQQVVKIVYDEMTEILGGKKRELEFAPHPPSIIMLVGLQGSGKTTAAAKLAVLLRNQGRNPMLVAADVYRPAAVEQLQALGSQIGVPVAYFKHKSALEITEEAVREAARAGNDVLILDTAGRLHIDEEMMQELADIKDSVSPSETMLVVDAMTGQDAVNVANAFLEKIGFEGILVTKMDGDARGGAALSMKSVTGRPIKFASTGEKMNDIEVFHPDRVASRILGMGDVVTLVEKAEGLMTEEKARKMEEKLRKQKFDFNDFLDQMQQLKKMGGLSKVLEMVPGMSGLSRAQGINVDDNHLKKIEAIIHSMTNEERAHPNMLNGSRKRRVAAGSGTSTQDVNQLTRQFAQMQKMLKTFSGKGANMGALKRLFPF",
+                "MVRIRLRRVGKKKQPSYRIVVADSRAPRDGRFIENLGFYDPMTEPSTIELNGERSLYWLGQGAQPSRQVQNLMKIKDVWEQFQSSKKE",
+                "MKDLLEYLARALVDNPDDVHVEVIEGEKSVILQLKVHPDDMGKVIGKQGRIAQAVRMLVKAAAARQGKNVMVEILD",
+                "MEIGLNKNDVAPGGDDLLAVGKIVKPHGIRGALVVEVLSDWPERFAPGSKLLVEVGNQEFREVTVESAAPYGKGMRVFFFGVTDREAALNLRDLYLLAPASNAAPLAEGEYWAHDLKGMKLVEEDGSEHGEVLEVVCRAAQDLLMVTAADGTEFGVPLVSEFIRGVDMEKRVITVNLPNGMAP",
+                "MLLSPMAAGILKKAVDAGALEVRVHDLRALSPDPHHKVDDCPFGGGPGMVLRVDVVAHAMRCVFGADAESLRDRFPVILLTPQGERFDQGRARALAQEETLVFICGRYEGVDERVREHIAGSEISLGDFVLSGGEIATATILEAVARLLPGVLGNEESLKEESFSRGRLECPQYTRPAEFHGWKVPDILVSGDHGRIGKWRQEQGLARTRERRPDLLE",
+                "MNEIETIERSQLREDIVEFQPGDTVKVKIEIKESSGVGEKRTVRTRTQAFQGLVIKRQGAGARETFTVRKISFGVGVERTFPVHSPIIKDIQIVQEGDVRRAKLYYIRDKVGKAARVKNKKIKN",
+                "MAGEGNNGFVKDNHPAEKVGEPFRKKGSLWLAIRESMIILVMAAVVAVGVQSFFLKAFIIPSLSMSPTLQVGDRVMVDRATYCFRKPRRGDVVVWRYPPSGQNSMNTSNPLYWPFEEIGETLHLTHEGVTPYVKRVVATEGETIQLKDGQLYINQKRVNEPYAVKNNCNFGPVKTPKGMFYGFGDNRPNSRDSRSFGPIPYRNVIGRVFLRWWPPNRFGKPQGQDGSAPG"
+            ],
+            "species": "Candidatus Anoxymicrobium japonicum",
+            "taxID": "2013648"
+        },
+        "assembly_id": [
+            "PKQ28811.1",
+            "GCA_002843005.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/843/005/GCA_002843005.1_ASM284300v1"
+        ],
+        "species": "Candidatus Anoxymicrobium japonicum"
+    },
+    "TME15659.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3050,
+                -2279,
+                -1943,
+                -501,
+                1,
+                335,
+                867,
+                1553,
+                2154
+            ],
+            "relative_ends": [
+                -2370,
+                -1947,
+                -594,
+                32,
+                333,
+                850,
+                1556,
+                2083,
+                2786
+            ],
+            "ncbi_codes": [
+                "TME15663.1",
+                "TME15662.1",
+                "TME15661.1",
+                "TME15660.1",
+                "TME15659.1",
+                "TME15658.1",
+                "TME15657.1",
+                "TME15656.1",
+                "TME15655.1"
+            ],
+            "starts": [
+                6205,
+                5782,
+                4429,
+                3803,
+                3502,
+                2985,
+                2279,
+                1752,
+                1049
+            ],
+            "ends": [
+                6885,
+                6114,
+                5778,
+                4336,
+                3834,
+                3500,
+                2968,
+                2282,
+                1681
+            ],
+            "directions": [
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "LysM peptidoglycan-binding domain-containing protein",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "ribonuclease HII"
+            ],
+            "sequences": [
+                "MGVVRAVAVPLAVLFALATGASAFAHGYKVRPGDTLWSISHREGVSYAKLLRANSELTNANLIYPGETISVPDPPAPPAAAAPPAAPARPGLDREQAKALLAAAARHHGLRSSFVLALSYWESGWNQSVVSSSGAIGMMQITPGTAAYAGPWLLGRKVDIRKPADNTELGAALLRRYVDEFKDPKLALAAYYQGEAGTRKHGIYPSSQRYVDGIWALRNRFESNPP",
+                "MLLDSLEARERQVALLERYESLLTDHQRRIADLYLRRDLSLAEIAQRQGVSRAAVHDLVRRSVLQLEEYERRLGLLAEAARRRRDRDALTIEVGELHRRLSRLETRLGSI",
+                "MFETLTQRIGSALHKLGGRGVLRPEDIDAALREVRLALLEADVNFKVVKEFSERVKERTLGAAVLQSLSPAQQVVKVVHEELVALLGDEARGLRYSARPPTVVMLVGLQGAGKTTTAIKLALLARREGHRPVVAGLDLRRPAAVEQLRTLAEREKVGFTTGHGAVEEIASEAVDEAGQTGSDVLILDTAGRLHVDDELMAELRRLKAAVPVSETLLVADAMTGQDAVNVGIAFERAVGIDGFVLTKLDGDARGGAALSLRVATGKPVRFAGVGEKPADLELFHPDRMASRILGMGDVLTLIEKAQRNVDAESAAELEKNVLKGRISFDDMLVQMKQLRGLGSLEGVLSMLPGQAQLKGQLPVDQAEGEVKKMEAIIQSMTRTERSRPDLIDGSRRRRIARGSGTQVADVNRVLKSRETMEQLMRQLTGKGGKRVKGVPDLRGMLGIKGR",
+                "MGAKKRPFYRLVVADSRSPRDGRFIEQLGIYDPLSEPATIRIDEDKVKQWLSHGAQPSEAARSLLRREGILPAVIPTGPPKKSPASKKAEKAAKAAEAAGPAPVETKVEAPAAEEGEAAAAEAGVESQAVDEAPEAEAPEAEAPEVEAPEAEAPEAEAPGKEGEEEPNGATRQQAQE",
+                "MERPDSRPRNDRFAGRRFERDRGFSRGPSGPPVDYRALVEFVAKAIADKPDAVVVESFERSRGTLSVTVKMADEDVGKLIGKGGRNIEALRSLVRAASLRERRRVFVDLA",
+                "MGSTDPAMIRVGQVTGPFGTDGAVKVYSLTDFEDRFEPGSRLYLDGEAREIEWSRARPSALIVKLAGIDNRTLAELHRGRYLEIPRADIRELEEGSFYQFELVGLEVVTESGKPLGRLTNVIARPANDVWVASGEDGAEHLVPATKDAVKSVDRTAGLVVVADWLLQAEDV",
+                "MRFDVVSVFPGMFEPLLNFGVVGRAIAGGLLEVRLHDLREFAHDRHRQVDDMAYGGGPGMVLKPEPIFEAVDAIKPENPGPVILLEPWGEPFTQALARELAGEPGVTLVCGRYEGIDDRVREGLAAREVSIGDYVLTGGELPAMVVIDAVARLRPGVLGEPESLDRDSFTADLVGYPQYTRPAEFRGLKVPEVLLSGNHRSIEAWRRQEAARRTKARVAGRTSARSGKS",
+                "MNVIDQLEKEQAKKKVPQLRSGDTVRVHAKVVEGTRERIQVFEGTVIRVTGAGLRRNFTVRRVTHGVGVERTFLIHSPRIDKIDVVRHGDVRQARLYYLRSKVGKEGRIRERRAKVGVAAVAEAEEVEEVEEEDEAGAEEPEVAAEAGAEADVEEEAESEAEPEQQQEQEPAAKKK",
+                "MKRTRRPQLWASERMARELGFQVVAGIDEVGLGPLAGPVVAGAVVLKIGERLPGLNDSKQLKHDQRVKLDRLIRRRAVAAAVGEVDPDEFNKIGMTRARQRAMERAVGALGLPVEYLLIDAFDVPESPLPQLAVVKGDRSCASIMAASIVAKVHRDLAMVEFDRLYPGYGFALHKGYATAAHQEAIRLLGPSPIHRTSWIRVRQLAGLLC"
+            ],
+            "species": "Chloroflexi bacterium",
+            "taxID": "2026724"
+        },
+        "assembly_id": [
+            "TME15659.1",
+            "GCA_005880695.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/005/880/695/GCA_005880695.1_ASM588069v1"
+        ],
+        "species": "Chloroflexi bacterium"
+    },
+    "WP_135346905.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3134,
+                -2036,
+                -1689,
+                -293,
+                1,
+                401,
+                915,
+                1796,
+                2442
+            ],
+            "relative_ends": [
+                -2139,
+                -1701,
+                -343,
+                -21,
+                231,
+                925,
+                1661,
+                2137,
+                3326
+            ],
+            "ncbi_codes": [
+                "WP_135346901.1",
+                "WP_135346902.1",
+                "WP_135346903.1",
+                "WP_135346904.1",
+                "WP_135346905.1",
+                "WP_135346906.1",
+                "WP_135346907.1",
+                "WP_135346908.1",
+                "WP_135346909.1"
+            ],
+            "starts": [
+                185743,
+                186841,
+                187188,
+                188584,
+                188878,
+                189278,
+                189792,
+                190673,
+                191319
+            ],
+            "ends": [
+                186738,
+                187176,
+                188534,
+                188856,
+                189108,
+                189802,
+                190538,
+                191014,
+                192203
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "ribosome biogenesis GTPase YlqF"
+            ],
+            "sequences": [
+                "MNFFGRMKEKISGSTESVTEKFRNGLSKTRRSFSDQLNNLVKRYRKVDEDFFEELEDLLIESDVGVTTVMDLVEKLKDESRTRNIKDTEELKEVIAEVLSEFLTRDETETQLNMNPEGLSVFLMVGVNGAGKTTTIGKLAGRLKNQGKSVLLAAADTFRAGAIDQLQVWGDRAGVDVIRHQEGSDPASVIFDAIKAAKSRKTDVLLCDTAGRLQNKVNLMKELEKIKRVIEREVPGAPQEVLLVLDATTGQNALNQAKLFRQASDVTGIVLTKLDGTAKGGIVLGVRHELNIPVKLIGLGEKMNDLQTFDADAFIYGLFSELFSDDNHAEA",
+                "MLEKILRVNALYDFYQPLLTPKQQEYLDLYYLNDFSLGEIAESHQVTRQAVYDNLKRAEKTLEAFEEKLGLFRKFNARAALIKELRDQTAELGSEERRKLDAVLDRLEKLE",
+                "MAFESLADRLQATMKKIRGKGKVSEADVKQMAREVRLALLEADVNFKVVKSFVKRIQERAVGQDVLKSLTPGQQVIKVVQEELTELMGGEQTRLNLALKPPTVILFVGLQGAGKTTSAAKLANYIRKMHNKKPLMIAADIYRPAAIKQLQTLGSQLSIPVFSLGDQINPVEIVRQGLEQASADHNDLVMIDTAGRLHVDDALMDELEQIKAVSHPDEIFLVVDAMTGQDAVNVANTFNERLDLTGVIMTKLDGDTRGGAALSIRSVTGKPIKFVGMGEKMDALEPFHPDRMASRILGMGDVLSLIEKAQASVDEERAKEMEQKLRSVSFTLDDFLEQIGQIRKMGPLQDLLSMMPGAGKLKGMKNMQIDEKKIDQVEAMIRSMTPLEKNDPEVINASRKKRIALGSGTSIADVNRLLKQFKDMKKMMKQFMGKTKGKKRGNPFNLPFM",
+                "MSVKIRLKRMGAKKRPFYRVVVADSRAPRDGRFIEEIGTYNPVSTPKAFNVDEDKALDWLKKGAQPSDTVRNLFSKNGLMEKFHNFKLQK",
+                "MEELIKALVVPLIENPEQIQILKQEDSGCITYILTVAKQDMGKVIGRNGQVVSAIRTVISSAASAEGKNIRFLIRE",
+                "MTEWQYVGKIVNTRGIRGEVKVISVTDFPEERFANGAVLYVHDEKAASYLPFSVTGHSRHKQFDYLTFKDYRSINDVEKYKGCSLFVPREQLPLLKDGEFYYYQIIGLDVYTDTGERLGAIKEILSPGANDVWVVQTNGKDILIPYIKDVVRQIDVANKRVTIHLIPGMIDDEG",
+                "MRVDVLTLFPEMFPGVLNGSILGKASEKGSVSYHITDFRQFTTNKHQKVDDYPFGGGAGMVLMPQPLFDAVHSVCAEDDAQPRIILTSPQGKPFTQRDAEDLSAEQRLIFICGHYEGFDERIPQHLVTDEFSVGDFVMTGGELAAMSMIDSIVRLLPGVLGNETSAVTDSFSDGLLEHPHYTRPADFRGMKVPDILLSGNHEKIAEWRHKESLRRTYMRRPDLLKNRQYSEIEKKWLAEFKKTNERIK",
+                "MPNIIDEITKEQLRSDIPDFRPGDTLKVHVKITEGTHERIQVFEGVVIKRHGGGISATFTVRKISYGVGVERAFPVNSPKIDKIEVVRHGKVRRAKLYYLRNLRGKKARIKSK",
+                "MNIQWYPGHMAKAKRQMIEKIKQIDVVIELVDSRIPSASRNPLVDEIASGKPRLLLLNKIDMADPAATAAWKSYHERRGLAVHLVNSQTGQGTSSIAGSVHQLTSQRRKKMEEKGFKPHPDRALILGIPNVGKSTLINRLAGKKIAKIGDRPGVTTAQQWIKVGKTMELLDTPGILWPKFDDPEVGLRLAATGAIKEELLDFQEIAFFLVQLMLQRYRNQLAERYHLSVLPELNRNDQDQEKIIGLFDAIGKSRGCLMSGGLVDYDRTAEIIVRDYRHQKLGCLTLELPAEKTI"
+            ],
+            "species": "Sporolactobacillus shoreae",
+            "taxID": "1465501"
+        },
+        "assembly_id": [
+            "WP_135346905.1",
+            "GCF_004684935.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/684/935/GCF_004684935.1_ASM468493v1"
+        ],
+        "species": "Sporolactobacillus shoreae"
+    },
+    "OQB15766.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4952,
+                -2152,
+                -1773,
+                -360,
+                1,
+                313,
+                803,
+                1537,
+                2136
+            ],
+            "relative_ends": [
+                -2208,
+                -1793,
+                -442,
+                -121,
+                228,
+                813,
+                1489,
+                2139,
+                2720
+            ],
+            "ncbi_codes": [
+                "OQB15770.1",
+                "OQB15769.1",
+                "OQB15768.1",
+                "OQB15767.1",
+                "OQB15766.1",
+                "OQB15765.1",
+                "OQB15764.1",
+                "OQB15763.1",
+                "OQB15762.1"
+            ],
+            "starts": [
+                236504,
+                236089,
+                234738,
+                234417,
+                234068,
+                233483,
+                232807,
+                232157,
+                231576
+            ],
+            "ends": [
+                239248,
+                236448,
+                236069,
+                234656,
+                234295,
+                233983,
+                233493,
+                232759,
+                232160
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "putative DNA-binding protein",
+                "Signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "Ribosome maturation factor RimM",
+                "tRNA (guanine-N(1)-)-methyltransferase",
+                "Nicotinate-nucleotide adenylyltransferase",
+                "putative nicotinate-nucleotide adenylyltransferase"
+            ],
+            "sequences": [
+                "MKKIPIKRMIAIAAFLALFILIVIFSGIYTEYIELREVGERFTEVFWRDFNVGVITFGIAFLVFFTLILSNLLIMRRNLLAIDSSFFYLKKVFPLVLISLVTGVIFADYTRRMVAAKFLPFLTSEWFNLGDPIFHKDVGYYIFQRPFYISVTNTLLAFGVFFMLFTALSYIVLYARFDFYNSKQLLKEKGIIVHQITTIIIYFLLKAASYRYAAEDILYDSGNEFTGGGYVDINVWVQFYRILPILLISIVILTIIFTLNSKYRYAVMTVLLYPTAILVVMLIAQTVQTLIVDPDEFAVEAAYMQSNIDFTRAAYGLDKIENYDFKVKYDLNGQDIMKNLDTVNNIRLIDYAQTVATANRIQSIRNYYHFTDTDIVPYVIGDRPMAVAIAAREITTERLDDTAKNYINTKMKYTHGTGVVMNPINRITEQGQPYFIIRDIPPRSLEGAPTISQPRIYYGETSRDYIITGTRDKELDEIETEGYTYTGSGGIRLSFLNKLIYAFKHGDINLLISDQISRDSRLLKNRNVLERVKMVAPFLSFESDIYILIDDFGRLKWVVDGYTSSSWFPYSQYSGSGDINYIRNSVKAVVDAYDGEVKFYVTDEGDPIIRSYRRIYPTLFEQSAFPSDLARHIRYPEGIFKIQSEMLKRYHVDNSADFYEKRGIWAYAKEKYMGEEEVYVEPYYNLMKVGGGKSEELVLMQPYTLLNKTNMVSWLAARSSPENYGKLVCYNFGNNENVYGPYDIENKIDNEPSIAQELALWNRSGSEVVRGNLLVIPIENSILYVEPIYISAGTEYGRLPEVKRIVVAYGERVVSKPTLDEALKTLFGVNRPTLVTTNEESLEDVINRVVDSFNDVKAFSKDADWENYGKALRELEDNIQSLKEKNEENAQIRKANETISDENSQIGEIPLTRQ",
+                "MSKDLNITLLFDFYHNMLTDKQADVIDLYYNEDLSLAEISEHLCITRQGVRDNIKRAEMILKDAEENLGLARRYIAIKNAAEEILKEIEEMETIENVSAVPWIAPRLKRMKKQLEIIKE",
+                "MAFDSLSEKLQSAFKKLRGKGKVTEADVREGMREIKLALLEADVNFKVVKDFIEKATMRALGAEVLESLTPGQQIIKIVNEELTVLMGGAGAKINISPKPPTVIMMAGLQGAGKTTTAAKLGGLLKKQGKRPLLVPCDVYRPAAVQQLEIVGERLGVPVFKAESTKPVEISKSALLHADKNGNDIVILDTAGRLHIDEELMEELRSIKKNIDVTETLLVIDAMTGQDAVNAAKSFNDSIVIDGVILTKLDGDARGGAALSVRAVTGKPIKFVGTGEKLEDIEPFHPERMASRILGMGDVLSLIEKAQDAFDLKKAEELEKKLRKQQFDLNDFLEQLEQMKNMGPIESILGMLPGINQKALSGAKIDEKKLVRTGAIIKSMTKKERENPSIINSSRKRRIALGSGTQVQDINALLKQFEQMKAMFKQFGGMKKGGRGKMRFPFA",
+                "MAVKIRLRRMGAKKAPFYRVVVADSRYPRDGRFIEEIGTYNPLANPAEIKIDTEKAQKWIKNGAQPTDTVKKLLKISGI",
+                "MKELLEFIAKSLVEKPDEVSVTQVETEMSLVLELRVAATDMGKIIGKQGKIAKAIRSVIRASAAKEKKKVIVDIV",
+                "MDELLEIGKLVNTHGLKGEVKVTPWCDDADIFTRLESVTVNGENHSIENVRFHKGSVILKLDRVDSIDDAERLKNKILYTERSHLGELNEDTYYIKDLIGLEVYEDGQSLGIIDDCFPTGSNDVYVVKSDSGKQILIPAIKQVIKKVDIKNRRMDVELMEGLRDED",
+                "MRIDILTLFPEMVSGILSESIIGRAQKNGIISINCVNIRDFSTDRHRRVDDYPYGGGRGMIMQPEPIYRAYESLAKGGSPFVIYMSPQGRILNQKLAKEFSQKEHIIILCGHYEGVDERIIEEIVDIEVSIGDYVLTGGEIPAAVLCDAVCRLVPGVLPSEECFCDESHYNGLLEYPQYTRPPVFMGREVPPVLLSGHHANIVKWRKEKAKERTMQKRPDLMEKFSDE",
+                "MQKIGVLGGTFDPIHYGHLFIAENAMQVFALDKVMFIPTGIPPHKVMINVTDKQHRFNMVSLAVKSNTCFEVSNIEVAKDTISYTIDTMTELKKLYPNDLFYYIVGADSLYDMASWKNFRKLAKLFEIISINRMTGKFLDVAEISKSITEKYGFVIHTLEVPILEISSTEIRRRVQEGLPIKYMLPDNVERYIRKHKLYK",
+                "MRDDFYMQTDQIRSALKETMSEARFAHCEGVAKEAKALALHYGADAEKAVLAGLAHDCVKELDFDEMFKLCEKYRITLDSITKEEKKLIHAVLGAEYAKRELGIDDPEIYDAIRYHTTAKADMPLLTKIVYVADYTEEGRTFAGVDEIRKTSYINLDLAVLEGLDYTIAKLLRNKRMLHPETVNARNYILLKQR"
+            ],
+            "species": "Firmicutes bacterium ADurb.Bin193",
+            "taxID": "1852885"
+        },
+        "assembly_id": [
+            "OQB15766.1",
+            "GCA_002070105.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/070/105/GCA_002070105.1_ASM207010v1"
+        ],
+        "species": "Firmicutes bacterium ADurb.Bin193"
+    },
+    "WP_155303092.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4877,
+                -3076,
+                -1502,
+                -335,
+                1,
+                536,
+                1397,
+                1748,
+                2203
+            ],
+            "relative_ends": [
+                -3282,
+                -1694,
+                -312,
+                -63,
+                231,
+                1237,
+                1744,
+                2155,
+                2904
+            ],
+            "ncbi_codes": [
+                "WP_155303088.1",
+                "WP_155303089.1",
+                "WP_155303090.1",
+                "WP_155303091.1",
+                "WP_155303092.1",
+                "WP_155303093.1",
+                "WP_155303094.1",
+                "WP_155303095.1",
+                "WP_155303096.1"
+            ],
+            "starts": [
+                1530682,
+                1532483,
+                1534057,
+                1535224,
+                1535560,
+                1536095,
+                1536956,
+                1537307,
+                1537762
+            ],
+            "ends": [
+                1532277,
+                1533865,
+                1535247,
+                1535496,
+                1535790,
+                1536796,
+                1537303,
+                1537714,
+                1538463
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-"
+            ],
+            "names": [
+                "AMP-binding protein",
+                "transposase",
+                "thiolase family protein",
+                "hypothetical protein",
+                "KH domain-containing protein",
+                "lysophospholipid acyltransferase family protein",
+                "4Fe-4S binding protein",
+                "hypothetical protein",
+                "2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase"
+            ],
+            "sequences": [
+                "MAHWMNLGQQLKMNAKKFPGTVALCDAGRRFTYPQVNRRVNRLAHRLMEMGLKKGDKLAVLMENSIEIVEFYLATAKTGIVIVPVNFRLVGPEVAYIVDNADAKAMAVDHEFSPCVDEIKGQLKQIPQENYIVINGPKDGYREYESLIEGAPDDEPQVLVSPSDTWILIYTSGTTGRPKGVVRSHESHIAFYLINAVDFGFDQSDVCMNVMPLCHINSTFFTFTFTYIGATVYIHPARSFRPEEILEIVEKEKITFISLIPTHYNLILNVAEGARKRDTSSIRKLLCSSAPVRKTMKTAIMEFFPGVRLYEGYGSTEAGIVTVLRPEDQMRKLGSIGFESLGTEQVKILDNEGKEVPVCEVGELYSKGPMLFDEYYKLPEKTAASFKDGWFSAGDMARMDEDGFYQIVDRKDNMIITGGEHVYPSEVEEVIGSHPDVFDVAAISLPDDKWGEKVAAVVIPHESADLSEETVFTWCRERMAGYKRPKQVIFIAAEQMPRTGTGKILHRVLRERYADGEAVFPEADSCKAPGK",
+                "MNYPNTFSLSLQKQSDSGRIIDDHELNRAFTELKFRSLARQSNITKKRGYETLSLIFVFVLLPFLKRSLNSFCNGGYIQNYVQAHKDTFYRFLNNEHFNWRKLVQMLASKIIAMRKNVPLKEKVLIADDSICPKSGKEIELVSYHFDHKVRRSILGNQYLQLGFHDGLHFFPIDGAFHTSSHRPNTDMRNIDKRTNGWKRRKETLSKKTDVLVQMLDRAWKSGLDASFVLFDSWFAHDDIIRRIVDVGYGVICRLKRNRVKYGYQGGAYTLKQLWQQVAKKQTVWIKDRTIKGVCLNVTLKKTGSVRVLFVSDGRKQWQALLCTDTELEPSRILDYYARRWSIEVYFKDAKQMLYMGKEQSNTFDALIASQRLVMIRYLLLVYIQIKHGLNACVGPLFRQTSDDQSLWMFSRAVWDRVKELIFKSSDILSYRIEPDLLFHFIDIIEDLIAEQSRWVTAKL",
+                "MLTKAFIPYKGYYSTPFCRWQGAMANENSITLGAKTAARWMAEKKWEPTIFDYLVFGNTISQLHQFYSAPWAASLMGCGGITGMTVSQACTTGTTCIFQAATFIETGMAANAFVLTTDRTSNGPHTIWPNPNGPGGEVISENWLMDNFNSDPNVGLRMVETAENVAREEGFTKEECDRLALRRYEQYRMALDDNRAFQKRYMFGAEIRVSRKKTILVEEDEGIMPTTAEGLAKLRPLIPDGVLSFGAQTHPADGNASIVVTTRENADRLSADAAIPIQVISYGYAREKKGYMAAAPVPAARMALEKANLSIGDIKVIKTHNPFVVNDLNFAKKMGIDADGFNNYGSSMIYGHPQGSTATRLIVEGIEETVMEGGGYFLWTGCAAGDCGASLVLKIG",
+                "MERKSKIDTFNYGAKSVSSQFLYIMEGALNPFPAIRSTEGWINPRHKLKSRRGAAFIIRKKSGPASFEVTDPLFNALWAAGPGSTDFEDK",
+                "MKQLVEEIAKALVDLPEQVSVNEIESQQSIVIELAVAKQDLGKIIGRKGQNVQAIRTILNAASGKSKKRIILELLE",
+                "MSYTIKQRTKAAIIGFFVTWLARMWFATVRVTIVNQNVYDRHFRQTGRPHHVVGASWHRHAIFLFYFFRNLGDRLIMISRSLDGEMTANIARRFGYTVVRGSSSRGGSQALEQMIDVMNAGGKKYLCGTAVDGPRGPARIMKKGMVAVARQTGALFVPMACSGSRLITFPKAWDKTILPKPFSRMTIIFGEPVPIPADLGHFELETICRNLEDRLNHLTDEVDSICGYRTVSR",
+                "MPWISKDRCTGCEECIDVCTVGAISMENGVAVIDEDRCIRCAVCHDVCSDDAVRHDGERIPEEVEANMKWVQGLLEHPYYLNDKDKQKGLIQRLQKYFGKNRKVIEKTIARLENL",
+                "MKVLFWYCDNFAWKPTIKTLPDAPDAAASEHQRCIVAFIHVEPEDVEKGSSAETKLVKNAKWLARKWETQRVVLHSFTHLAEDKAEPEGAKMLIDRVHSRLEKADYDPVQTPYGHFNDLSIQAPGHPLARIFKAF",
+                "MICAVIVAGGSGSRMQAPVKKQYLQLDGIPILSRTLMAFDGCSDLDRIVLALPEVDLQRFRKEVLLPLKLDHDVHLVAGGSDRQASVRNGLDNAGPSDGTVMIHDGVRPFVRASLISACLAGSKATGACIPVISATDTVKQVDDKGIVVGTLDRDTIRLAQTPQTFATGLIRRAHRIALAKGFTATDDASVAEFAGERVHTVPGDPDNIKITRPQDLAMAGAILSRWREEGIA"
+            ],
+            "species": "Desulfosarcina widdelii",
+            "taxID": "947919"
+        },
+        "assembly_id": [
+            "WP_155303092.1",
+            "GCF_009688965.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/688/965/GCF_009688965.1_ASM968896v1"
+        ],
+        "species": "Desulfosarcina widdelii"
+    },
+    "PZM91784.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3346,
+                -2616,
+                -1909,
+                -259,
+                1,
+                241,
+                732,
+                1516,
+                1929
+            ],
+            "relative_ends": [
+                -2621,
+                -1867,
+                -341,
+                -5,
+                228,
+                735,
+                1448,
+                1884,
+                3536
+            ],
+            "ncbi_codes": [
+                "PZM91795.1",
+                "PZM91781.1",
+                "PZM91782.1",
+                "PZM91783.1",
+                "PZM91784.1",
+                "PZM91785.1",
+                "PZM91786.1",
+                "PZM91787.1",
+                "PZM91788.1"
+            ],
+            "starts": [
+                11536,
+                12266,
+                12973,
+                14623,
+                14883,
+                15123,
+                15614,
+                16398,
+                16811
+            ],
+            "ends": [
+                12261,
+                13015,
+                14541,
+                14877,
+                15110,
+                15617,
+                16330,
+                16766,
+                18418
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "ABC transporter permease",
+                "ABC transporter ATP-binding protein",
+                "hypothetical protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MARMGARLLVLTIRPPYRLRNLLSAMEAIGFGSLSVVVLTAFFAGAVFSLQVSLAFSLFNAETLVGATIALSMARELAPVLTALMVTGRAGSAIATELGTMRVSEQIDALATMAVEPEHYLLVPRVWAGVLTLPLLTAIFNLVAILAASFVAITVENLSVAAFWARIPSWVDPKDVIGGLIKSAVFGLILSLAGCYKGYNATGGARGVGLATTQAVVLGSVLILVSDYLLTTVMLPWWRSS",
+                "MRRTVIEVVGLHKSFGPNHVLRGLDLTVEKGAIQVIIGASGSGKSVLLKHIIGLLSPDAGRIYVDGEEITRMSPREIMRVRKKFGMVFQTSALFDSLTVAENVAFPLRVGDRQYGEEEIRRIVREKLALVHLEGVEHLMPAELSGGMKKRVALARAVAHDPEIVLYDEPTTGLDPITVESVNDLILETRDRLQVTSVVISHDMASALYIADDIAVLKEGRIIFRGTPEEIQRADHPYVRRFLHPRAARP",
+                "MRTALLAPPRGETLICRPLSAIGTNVKVGFLLLAGIVAFIVIYNFVQDRQGGGRANEYWALFGDASGLSPRSDVRVAGVKVGEISAITLQGGRARVEIAVRSDVPVYPNAVLMKRRTSILGDALLELDPGFPEPRNGGDAPLPPGSQIRNVQEGISVEQILELLGDVTRDVRRITANLDRIIADESGSIQQILRSVEDLTGRLDRLVERSTDEIAVILENAEVISYNLRELTSGKNDDVEEILANAREITREARDALAGLRASLGEGEEGMGPTVARLSRTLEHLESIVRRIDRGEGALGRLISDEELGERVGAALEGVSNYVTRLDSLQTEISLRTEYLFRAESAKNYVTLRLIPSPDQFFLLQIVDDPLGFVRRESVLRSPPGEDEAAHQEIRTTTDILKFSVELAKRYSFLAIRFGLIESTGGFGFDLNFLDDRLTFTLDAFDFARPEASFPRIRTYTNLTVIPHFYLTVGLDDAFARARWDPVTGRFRMGRDFFVGAGLSFSDEDLKVLFGTISGGLP",
+                "MAVHIRLTRAGAKKAPYYRIIAADSRSRRDGRFLETLGSYQPSTGEVRIDEAALDKWIKNGAQLTETVRSLLRKRARLAQSAEG",
+                "MRDLVEYVARALADAPDEVQVDERVGATTAITLRVAPEDLGRVIGRQGKTVKALRTLVAAKARVEGRRVMLEILD",
+                "MIRVGRVARPHGVRGAVAVTLDNPDSESLFGAEYVHLGPERRRHEVVGVSRGRKGQVILQLQGVERIEQAEKLRGFEVWLMEEQLPPLGEEEYWQRDLLGLEAVDEEGRSLGRVTEIVDTAEVAVLVVSRGGRERFVPFTREYVPEVRLSEGRVVVRPLEEAEE",
+                "MIFEIITLFPRLLESPLQESILGKAVARGLVEVRIRDLRAHAHDKHQVTDDTPYGGGAGMVMKPEPLVEAIEAARESVPGARVVLLDPAGRRFDQAVAREYAALGRLVLVCGRYEGVDERVRAFVDEELSLGDFVLTGGELAALCVVDACARLVPGVLGNEQSAGSESFEQGLLDYPQYTRPPEFRGMRVPEVLLSGDHARIARWRRKQALLRTRDRRPDLFARLKLGEEDRKLLGDA",
+                "MRNPIIESVERNQLRNDIPNFDAGDTVRVHTRIREGDKERVQVFEGVVLRVKKAGLRTTFTVRKISYGIGVERIFPLHSPRIEKIEVVTGGRVRRARIYYLRNLRGRAARLKEEEVRPAENR",
+                "MRIREVVFEGPDGLGEPVRYALGAGHAVVGPNEPLLGWLSILLFGGDGGAGWEGLLRVEVEEDGERRAIERHLGPFQAIEPLMDPAQAAARWLRPLPRPVVLSPQERERLSALLPQLEAELSAQSELERLDEELRALQHEIFTVDTRIEELERARAAEREALDRAAPFRAVELPADLDARLEAFDRALARRSEKEARLRKELDAVQQWERESPVDPLRDVRLWSGVGVGLGSMALGLLTAWKGLAILAIPAFGIPAAILLGAISASQQREQAARRRGFLEERLAELERSFASESRGVQELFAATGTESVEQFRAWLQAAREADEAARRATAAREAVEARDDIRQAAETKARLAREVETREKKMAGLAAGSFRSAGEIQREINEIRSRLSGEEERADASSEFVDAAAGFAGCDRATLLRTLGKRASQLLSALTDGKWKSVGWGASGGLAVKGDSGVARFPELSHEDREAARAALVFAVAEARGGPLLLDRPFDDLPAAFQARLARALKWLAGQGVQIVHRTEVAGFRRDAAVVEAA"
+            ],
+            "species": "Proteobacteria bacterium",
+            "taxID": "1977087"
+        },
+        "assembly_id": [
+            "PZM91784.1",
+            "GCA_003242475.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/242/475/GCA_003242475.1_ASM324247v1"
+        ],
+        "species": "Proteobacteria bacterium"
+    },
+    "KKT84964.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -1795,
+                -1350,
+                -1114,
+                -269,
+                1,
+                241,
+                875,
+                1654,
+                2278
+            ],
+            "relative_ends": [
+                -1337,
+                -1111,
+                -410,
+                -3,
+                240,
+                894,
+                1657,
+                2265,
+                3306
+            ],
+            "ncbi_codes": [
+                "KKT84960.1",
+                "KKT84961.1",
+                "KKT84962.1",
+                "KKT84963.1",
+                "KKT84964.1",
+                "KKT84965.1",
+                "KKT84966.1",
+                "KKT84967.1",
+                "KKT84968.1"
+            ],
+            "starts": [
+                22178,
+                22623,
+                22859,
+                23704,
+                23974,
+                24214,
+                24848,
+                25627,
+                26251
+            ],
+            "ends": [
+                22636,
+                22862,
+                23563,
+                23970,
+                24213,
+                24867,
+                25630,
+                26238,
+                27279
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "-"
+            ],
+            "names": [
+                "N utilization substance protein B-like protein",
+                "Acyl carrier protein",
+                "Ribonuclease 3",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "tRNA (guanine-N(1)-)-methyltransferase",
+                "hypothetical protein",
+                "hypothetical protein",
+                "putative type 4 fimbrial biogenesis protein"
+            ],
+            "sequences": [
+                "MQKMNRFLSSKVDSRHEARKLALLKLYSELYGGQEGLPEDLVFEIPQTAEANLALLETMVKGVRANLSQIDQIITECAPEWPIDRIAKLDLVIMRVAVYELMAADISKNVVIDEAIELAKEFGSESSGKFVNGVLGSVVDLLHKKAAEHEEQ",
+                "MKNSNFKDKVKQIISKKAGVEPCDVDEELFFGDDLNLGDIELTEILEELEELFKVELLEDQSKIESVRDLMELLEEKLE",
+                "MIDLAELAKTLQTAIQDHSLFETAFTHRSYLNEHHAVNTNSNERLEFLGDAVLQLLSSDYLFTNFPNSPEGELTNYRSAIVCTPSLAQESQRLDYGKFLLLSRGEESTGGRTREYILANTFEAVLGALYLQNGLDFCREFVKRELLYKIDDIVKEEKYKDAKSKFQELAQEKLGITPEYELVSSWGLDHEKTFKIAAKVGGKTYGEGTGKSKQKAEMEAAAEALNKLTGTGQAL",
+                "MSIKIRLARIGKRNAPTYKIVVTQTRSKRNGKVLAILGDYNPITSTKPVINAKGIEDWVKKGALVTDAVKSLLDGTYTYQKYTPKASA",
+                "MKDFIDFLVKKIVKNPDAVSIDETSEGTNFMFLISVDPTDMGLLIGKEGRTINSIRTLAKARAVKENIWVDVNVKETQV",
+                "MHNYYVVTLFPELIEPYLAHLPFKRALEKNLIQVRLVNLRDFAIDKRGTVDSPPYGSGPGMILRPEPLYNAVQSVAKGLTNNPRIIFLTPRGKTFNQQIAQEIAKAENMILICGRYEGFDQRVVEELQAEELSIGKYVLSGGEAAATVVLECSIRLIPGAIDNAKALVNESFNTANVEHPQYARPQTWRGRSVPKILTEGHHKKIASWKLSAKAWVE",
+                "MIVIENLNVKSEERARQVAAGFRDFIINFAIPLLFLIIIVGLAVFVITPVYKSLPDLAGQLESKTVEAASLQAKVAQLEDLETNRGLVTEDLTKLSWALEERDKVPELSEQVRRMSTDAKVIFNSLSYTNKAEDLPAVPVAEASTEGQPISPAPDPALYREEDVDVKIETADLQKLVDFLQVSENSIRLFKVGKIASSFNDTSYETSLLMASPYLNPGFSVYTQTSASIDLKDTKYRDFMGRLDEFTNYAQAIDATLPKL",
+                "MLQVDLTPPQEIKRQKTQYFVGTSTKISAVLLVMCLLAAGYVVYRSLSYKAQIFAVDQRVLALESRRAELSDVEEVSKKLAGKYFLLQRYMETRVAYSSVVKELIARVPSEVTVDDIAFESGGKKANVSGFSTNPSQVAAFITELSRSGNAASDPAVELTGKNAFTDVRLETLSVDDRKAQTRKAGSVEYAISFKINEGAFLK",
+                "MPSIIGLDLGNTSYRAVEVFSKSKSKNLTLEKAFVCSECVKENTKEAEEGFKHFIRDSGFATRDVLLSLPETKVFSTSVSLPFRDPKEIRNYLDIQGGKVFPKPVSEIVYSFQIVGPGEQNKSENEISIVACDRNFSESMFIKARSAGLRVLAVEPESHAVVRALMRNRTQAANEVDLIANIGANDTDTMVIKNGYVSFSRNVALGGIAMTKAISSALALSYEQAEAYKKSYGVEAGVLDDKVRKAILPVLESLINEIKRTMNFYFTRNNLCVFKRVVYTGGSSVMPGLLAYSAEMLDTEVELANPFEGLILSPKLENQKDFLIANGPLFSVAIGLALRDFI"
+            ],
+            "species": "candidate division WWE3 bacterium GW2011_GWC2_44_9",
+            "taxID": "1619125"
+        },
+        "assembly_id": [
+            "KKT84964.1",
+            "GCA_000994815.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/994/815/GCA_000994815.1_ASM99481v1"
+        ],
+        "species": "candidate division WWE3 bacterium GW2011_GWC2_44_9"
+    },
+    "WP_088005904.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3160,
+                -2082,
+                -1742,
+                -286,
+                1,
+                323,
+                838,
+                1695,
+                2130
+            ],
+            "relative_ends": [
+                -2150,
+                -1759,
+                -387,
+                -14,
+                237,
+                841,
+                1566,
+                2039,
+                2693
+            ],
+            "ncbi_codes": [
+                "WP_088005901.1",
+                "WP_088006011.1",
+                "WP_088005902.1",
+                "WP_088005903.1",
+                "WP_088005904.1",
+                "WP_088006012.1",
+                "WP_088005905.1",
+                "WP_088005906.1",
+                "WP_088005907.1"
+            ],
+            "starts": [
+                42021,
+                43099,
+                43439,
+                44895,
+                45182,
+                45504,
+                46019,
+                46876,
+                47311
+            ],
+            "ends": [
+                43031,
+                43422,
+                44794,
+                45167,
+                45418,
+                46022,
+                46747,
+                47220,
+                47874
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "signal peptidase I"
+            ],
+            "sequences": [
+                "MSFLKKLKNKFTGTAAEEQTAEKYEKGLEKTRTSFTSKINDLVAKYRKVDEDFFEELEELLLQADVGFETVMELMDELRFEVQRKNVKDTSEVQSVISEKLVEIYEAGEQETQELNMQEGLTVILFVGVNGVGKTTTIGKLAHRFKEEGRSVLLAAGDTFRAGAIEQLDEWGRRVGVDVIKQAAGSDPAAVMYDAIRSAKSRQADVLICDTAGRLQNKVNLMNELQKVHRVIGRELPGAPHEVLLALDATTGQNALIQAQTFKEATDVTGIVLTKLDGTAKGGIVLAIRNKLKIPVKFVGLGEKMDDLQPFDPQKYVYGLFAEGLQTEEQQEESDK",
+                "MGLEKTTRMNFLFDFYQALLTPKQRNYMMLYYLDDLSLGEIAAEYDISRQAVYDNIRRTEAMLEEYEDKLGLFEKFKNRRRLIEDYEEGPFSEERTAELLERLKEWE",
+                "MAFEGLSERLQGTLQRIKGKGKISEADVKEMMREVRFALIEADVNLKVVKSFVKKVSERAIGQDVMSSLTPGQQVVKIVKDELTELMGGEQSKIEFAAKNPTVIMMVGLQGAGKTTTAGKLALSLRKKNNRKPLLVAADIYRPAAVQQLETIGKQLSLPVFSKGTDVSPVEIAREAIELAKQEHHDTVIIDTAGRLHIDEELMQELQDIKALKEPDEVLLVVDAMTGQDAVTVSQSFNEALGITGVILTKLDGDTRGGAALSVRSVTEKPVKFVGMGEKLDALEPFHPERMASRILGMGDMLSLIEKAQTNVDEAKAKELEEKFRTQSFTFDDFLEQLGQVKQMGPLDEILKMLPGAGKIKGLENAQVDESQMGRVEAIIYSMTPKEKTNPEIINANRRRRIAKGSGTTIQDVNRLLKQFEDMKKMMKQMSNMNQKGKKKGKMPNLDAFFK",
+                "MSVKIRLKRMGAKKSPFYRIVVADSRSPRDGRQIETVGTYNPLTKPAEVKIDEELALKWLGNGAKPSDTVRNLFSQNGIMEKFHNAKLNK",
+                "MKKLIETMVKPLVDHPEDVRIETEESGNRVVCNLTVHPQDIGKVIGKQGRTAKAIRSIVYSAAGSQQDGKTIVVNIVD",
+                "MDWFNVGKIVNTHGIRGEVRVLSRTDFPEERFAEGARLGIFKEDAKKPVPVKVASHRKHKNFDLLTFEGYSSINQVEEFKNADLKVADHELDELEEHEYYYHEIIGCTVVTEDGREIGMVTDILETGANDVWAVKPETGKMQYIPYIEDVVKEIDVENKKIVIELMEGLLNE",
+                "MKVHVLSLFPAMFDGVFRQSIMRKAQEKGAVEFSVTDFREFADNPRQVDDYPYGGGAGMVLKPEPVFRATEAVTEGRKPRVILMCPQGERFTQRKAEELAQEEELVFICGHYEGYDERIREHLVTDEISIGDFVLTGGELAAMTVIDSVVRLLPGVLGNSESPVSDSFSTGVLEHPHYTRPADFRGFGVPEVLMSGNHAKIGEWREEQALKRTLDRRPDLLEELELTEKQQKILEKLKSEKG",
+                "MQQIIADITKEQLRTDLPAFRPGDTVRVHVKVVEGTRERIQIFEGVVIKRRGGGISETFTVRKISYGVGVERTFPVHTPKIATLEVVRRGKVRRAKLYYLRNLRGKAARIKEIR",
+                "METETKQKNELWEWSKALLIAFGLAAIIRFFFFAPIVVDGESMMPTLENGDRMIVNKIEYNVGAAERFDIVVFHTEGEKDFIKRIIGLPGDHVAYENDKLYINGEVVEEPYLEELKANTEGNLTEDFTLEEVTEGNVSVIPEGYVFVLGDNRRASKDSRYIGLVPMEEIVGSTRIVFWPFEEAGLVR"
+            ],
+            "species": "Indiicoccus explosivorum",
+            "taxID": "1917864"
+        },
+        "assembly_id": [
+            "WP_088005904.1",
+            "GCF_002167005.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/167/005/GCF_002167005.1_ASM216700v1"
+        ],
+        "species": "Indiicoccus explosivorum"
+    },
+    "OQY91747.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3781,
+                -2880,
+                -1862,
+                -441,
+                1,
+                315,
+                934,
+                2063,
+                3759
+            ],
+            "relative_ends": [
+                -3074,
+                -2041,
+                -525,
+                -130,
+                279,
+                878,
+                2040,
+                3706,
+                4826
+            ],
+            "ncbi_codes": [
+                "OQY91743.1",
+                "OQY91744.1",
+                "OQY91745.1",
+                "OQY91746.1",
+                "OQY91747.1",
+                "OQY91748.1",
+                "OQY91749.1",
+                "OQY91750.1",
+                "OQY91751.1"
+            ],
+            "starts": [
+                9635,
+                10536,
+                11554,
+                12975,
+                13417,
+                13731,
+                14350,
+                15479,
+                17175
+            ],
+            "ends": [
+                10342,
+                11375,
+                12891,
+                13286,
+                13695,
+                14294,
+                15456,
+                17122,
+                18242
+            ],
+            "directions": [
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "hypothetical protein",
+                "16S rRNA processing protein RimM",
+                "DNA protecting protein DprA",
+                "hypothetical protein",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MSDTTLVAQFLAVALFAACFYHSWNVEGRRLAQQWFFIGYIFFLLLQSLLVVTGQIAFDAAFLTIGAAPSVWVMVYPALFYLAYTIAKFLADEQNLRAMCYLMFLLTPALALPVDATGLRMGWWTYPSESIAFLNGVPFYLPFAWGVIGAAFMYMFGRIRKIHFRGSGQLFALMLAAPLLAGFSIFLIALVQVIVDTIAAFAGETWLYGLLLVLFGALPLGVALRSPRASNAKRK",
+                "MPNARRGSRQNGVGALRSIHSFMLSFGELRKKSLAWQLEISAVEKIYALDWLLKGIFDRAALRDALTLRGAAALANAYFENYPRVADADFARAAHLDDTVLERELDAAAADAARASGLRFKQRSFHSTEARIEFAGPLGRRSAAQPLIVARFVAAPPRVEPTLRPLLHPFGDECQATVRAIALEELAAERIVLYSQKPRARDVYDLWFILTRGADALDLRATRALAQRFADAKHVALYSDLDGTYAPMLERAWENALKQIQPHPTLAQARADIALCLKD",
+                "MFESLSDKLEGVFKRLSGKGKLTEADVDVALREVRMALLEADVNLKVVRQFLERVRARAIGAEVMQSLTPAQAVVKIVNEELIATLGEPAKLDLAGAAPHTIMLIGLQGSGKTTTAAKLALHLRKQGQRSLMVAADTRRPAAIQQLQTLGKQLDINVYAVDPKTPPPQICADAVKHATASAYSVVILDTAGRLHIDDDLMKELEQVKSRTNPQETILIVDSMTGQEAVRVADEFNKRVGLTGLILTKVDGDARGGAALSVRSVTGVPIKFLGVGEKPDALEPFYPDRLASRILGMGDVLTLIERAQQNLDQEQARQAAEKMLKAQFTLEDFLQQMQQIKKLGPLTQIMSMIPGFAQVAKEIPEEATEQQFKRIEAIIHSMTPQERRQPDVLNARRRQRIAAGSGTTVQDVNELMREFKQMQKMMQQLKSGKGRGLPRFPGFPGFG",
+                "MATKIKLTRKGMKKQPTYRVVIQEERSKRDGKFIENLGVYDPRQNPPLVQLKADRVNYWLKAGATPTDSVGRLLKIAGITDKYYQQRKKTNSAPADAKTSAAG",
+                "MQELVEYITKSLVDDPEQIHVRVMENAHTVNVELQVAPSDMGRIIGKGGRVVNSLRTLVRIAAVRQGKRATLEILDSNGNVSHPNAASLHHA",
+                "MKRARRKSLRLPSRLMSDDTQPYLVVGQVLKPWGFRGEIKIKILSDYPERLLKHKTLYVGTPARAFQVEHARLHSGYALFKFAGCETDASVAKLRGALVQIPREAAAKLKKGQYYHYQIIGLNVVTLSGEPLGAISQILETGANDVYIVHTPDGKEILLPALKSVIKKIDLAAQTMTVELLPGLTDL",
+                "MTDIRYFIGFNRVSGIGPAKLQRLRDFFGALETAWRADAFELARAGLDKRALENLLRARQELNLDAEVEKARRACDVILTWDDPQYPRLLQEIPQPPPILYLKGAFETQDEWALAIVGTRHASAYGKEIARAFSMELARNKLTIVSGLARGIDAAAHIAALDAGGRTIAALGNGIDQIYPPEHAKLARMIAERGALVSDYPIGMKPDAANFPPRNRIISGLALGTLLVEGDEQSGAMITCEFALEQDREVFAVPGNIFRKESRGPNKLIRESRAKLITRVEDILEELNLTMIAEKRQARAIIPSNETEATLLKYISADPAHVDEIHQQSGLPIAQVTATLALMELKGMVTQTSGMNYTLAREAKENYS",
+                "MERFVVFLENSSNRLPGPGKFILSALISDRQALRVLVACMASLLAATLQPPILSLSVPELQQGLRDPSSGIPIQIAAAYLLLAVLTLAGGVSGDLFGRKRFLLLGLAGILITNLGGMFLYETWLYRAIHALNLISSVLIMPMTVALVTVAFSAQGRPFAYGALFACQGIGMVLAASLNGIFAQTNFIWVAFIPAITFGIIAIRLVFRDATESRAPKTTSRHDLFLNLAWAAAIFGLVYGLLAYGGGITGRNMFLIIAICAIGFIIGYRWVAQRLEKQTKLYNIRDMSFAIFAGIMLSVGQGALFFQIGAFFQQIQNIGPVRAGLQLLPYILAMMLATVFIARLALIFDARRIITAGLALMGLGLASMFFVQVSTPYWQLIIPFSIIGFGLGLAAPARTTVVLTNATPGMTGMAAGVNTAAGQSGFTLGILISSYMVTYFADMAFLRQLEQNGAPAAVIQSVAAIFQKTFASAISGNLTALPDEIAKQVVIGFSDAFAAGMVVTFILLAIVLLAAAIAVLVGMNKGLKASLIDQPLSEISSSSESNAL",
+                "MPSHLYAIILAGGVGSRLWPRSRKLQPKQLLDLVSTRTMLQETHDRIASLTPPENIFVVTNREYVEQVRAQLPDAPPAQIIGEPEGRGTAPPAALVALLLRERDPDAITIILPADHVIQKTQSFVDTLRAAAALANQKYLVTLGVTPTYPETGYGYIEAGDAIALDGHAAFHAHRFREKPNLETAQEFLERGNFYWNSGIFIWRGDAILNAFAQHMPQTLAQLQKIVAAGLDAPTFDAEWGALENETLDFGIMERATRVAMTPLDAGWNDVGSWSALYALMPHDARENVVQGNHIGVHTRASFIYGERRLIATIGLENMIVVDTDDALLICPQDRAQEVKKIVDELKRRQAHEYL"
+            ],
+            "species": "Chloroflexi bacterium UTCFX4",
+            "taxID": "1961111"
+        },
+        "assembly_id": [
+            "OQY91747.1",
+            "GCA_002050085.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/050/085/GCA_002050085.1_ASM205008v1"
+        ],
+        "species": "Chloroflexi bacterium UTCFX4"
+    },
+    "WP_165044303.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3679,
+                -2730,
+                -1299,
+                -249,
+                1,
+                283,
+                784,
+                1752,
+                2361
+            ],
+            "relative_ends": [
+                -2756,
+                -1312,
+                -484,
+                -4,
+                255,
+                774,
+                1683,
+                2318,
+                3332
+            ],
+            "ncbi_codes": [
+                "WP_165247046.1",
+                "WP_165247048.1",
+                "WP_165247050.1",
+                "WP_165044301.1",
+                "WP_165044303.1",
+                "WP_241159133.1",
+                "WP_165247053.1",
+                "WP_165044309.1",
+                "WP_165247055.1"
+            ],
+            "starts": [
+                55443,
+                56392,
+                57823,
+                58873,
+                59123,
+                59405,
+                59906,
+                60874,
+                61483
+            ],
+            "ends": [
+                56366,
+                57810,
+                58638,
+                59118,
+                59377,
+                59896,
+                60805,
+                61440,
+                62454
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "signal recognition particle protein",
+                "GNAT family N-acetyltransferase",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "signal peptidase I",
+                "glycine--tRNA ligase subunit alpha"
+            ],
+            "sequences": [
+                "MGFFDRISEGLARSRERFTEQMNVLLDRGPNVDDEFWDGLEETLILADIGCAAASEAVENLRDQATRKALPDAYAVLDLLNDQIASRFCEGGEQIFGGEPALVLFVGINGTGKTTTVGKLAKEATDAGRNVILGSADTFRAAAIEQLEVWARRAQVEMVTRERGSDPASVCYATIERAEETGADLVLIDTAGRLHTSADLMRELGKVVNVVRKRSKLPVYTVLVIDATTGQNGLAQAREFNRELDLDALIVTKLDGTAKGGIALAISHELQLPIVKIGVGEGLSDLRDFDAHDFARALIGNFDARQN",
+                "MLENLSERLQGIFSGLRGKGRLTEDDINAAMREIRMALLEADVNFKVVKNFVARTKERCLTAEVLESLTPTQNVVKIVLDELTELLGRTDSRLVLSSRIPNVIMLVGLQGSGKTTAAAKLAYLLKQQNHSPLLVACDVYRPAAADQLQTLGQEIGVRVYRGDGADPVRIAQEGVRDAIDSLRDVVIVDTAGRLHVDEQMMEEAQAIKHAVKPDQVLMVVDAMTGQDVVNVAAAFAERVDFDGVIMSKMDGDARGGGALSVRQVTGKPIKFISSGEKPDSLEEFHPDRMAKRILGMGDMISLIESAVKVQQDQEELEVAERLAKSQITLNDFIDMNRQIRKMGGISKLISALPGGDKAYASGQVDEGALDRMEVIINSMTKEERTRPEVLNGSRRARIAAGAGVTVTDVNQVIKKFNETKKMMKKMMPAMEDYQGGKKGKKGKRGRGHRRMGIPGMGGMSMSDLRKLQDMMSE",
+                "MAIVYRAFREEDLPAICKIWNEVVEAGDAFPQTSPLDVDTAREFFGGQTLTQVADVNGVIFGMYILHPNNVGRCAHIANASYAVASPSRGLGLGRELVKDSLEQARKAGFRGLQFNAVVSSNVVAIHLYEDLGFVRVGTIPGGYVNGVGAYEPVYIFYRHCVEAPDAMHPNLMDTSDVEQIATPDVPDASAAPDEPDVPSEASCAKGEAQQQEEASDNDSFEKADVDESVAEGKKPKKESGKNSGKKKDSKGKKQKKEKKAKKEKKEKHSK",
+                "MAVKIRLARHGAKKRPYYRIVVADSRAPRDGRFIEQIGRYNPCVNPALVEFDAEKLDKWLGNGAQPTDTVASLIKQARENA",
+                "MAELTDDIVGLVDVVVRPLVEFPDDLKLEGSESADGSILVEIRVNEEDAGKVIGRQGRVIKAIRTLARAAASREGVHVEVELID",
+                "MTKTKTLTGGLVARSASGLPFLLHEGLLVAFVPPQLDAPRRARVSHVRDEGRGAYVVTFEGISSIDVAERLVGCHCLVRRADLPGDALMLEGEDLVGFHLIDCTLGPVGTITDVISSPGQLLLEVDCGRADVVLVPLVDDLLVEWDEDACTVLMDLPAGLLDV",
+                "MIIETLSTFPGMYESVMGSSMMRIAQEKGIIDFFAHDLRDWTHDKHRTTDDEPYGGGAGLVMKCEPIFEAVDDIAGNSTLVTPLLGQRNALSLRQSCSYKSAAGAFDSCGTRLVSTPSPEERGDVNAPKPTIIFLAPQGQRFDDALACELAREERLLFVCGHYEGIDERAYALADRVISLGDYVLTSGELASMVIIDAVVRKLPGVLGAQGGAETESFADGLLEYPQYTRPAVFRGMEVPPVLLSGDHGKVDRWRREQSLERTARMRPDLLEGMSLPNADLEFLQSLSIGERCASDALS",
+                "MDSGRHADRPRGGIIRSFFSLIIMVAFVVACSWALRTFVFQPYEIPSGSMETTIMPGDMVFAEKISYYLRDPEPGDIVTFNDPQIPGRILIKRCIATAGQTININDADGLVYVDGVPLNEPYVNGEPSYTLSGGVSFPYTVPVGCIWVMGDNRTNSQDSRYFGAVPISSVTGKAALVYWPITSFGLLE",
+                "MSTIGDRLACAACEQPPTFQDVIMNLQRYWGDQGCVVLQPYDNEVGAGTNAPATTLRSLGPDTWRTCYVQGSRRPTDGRYGENPNRTQHYFQFQVLMKPSPDNIQDLYLGSLRAIGVDVDAHDVRFVEDDWESPTLGAWGLGWEVWIDGMEVTQFTYFQQVGGFECAPVPVEIAYGLERLTMFVQGVDSMFDIVWSRGADGVEFTYGDVYLENERQYSTFNFEVADTDFLFQEFNDREAECMRTLEAGLPLPAYDSVLKCCHTFNLLDARGVISATERMAYILRVRTLAKAVCASYMKHVVGIEVEDDTPASATAEGKEAARG"
+            ],
+            "species": "unclassified Adlercreutzia",
+            "taxID": "2636013"
+        },
+        "assembly_id": [
+            "WP_165044303.1",
+            "GCF_011038965.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/038/965/GCF_011038965.1_ASM1103896v1"
+        ],
+        "species": "unclassified Adlercreutzia"
+    },
+    "PWL41573.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2933,
+                -1950,
+                -1624,
+                -255,
+                1,
+                218,
+                744,
+                1542,
+                2044
+            ],
+            "relative_ends": [
+                -2064,
+                -1624,
+                -305,
+                -10,
+                234,
+                754,
+                1499,
+                1883,
+                2901
+            ],
+            "ncbi_codes": [
+                "PWL41569.1",
+                "PWL41570.1",
+                "PWL41571.1",
+                "PWL41572.1",
+                "PWL41573.1",
+                "PWL41574.1",
+                "PWL41575.1",
+                "PWL41576.1",
+                "PWL41577.1"
+            ],
+            "starts": [
+                33247,
+                34230,
+                34556,
+                35925,
+                36181,
+                36398,
+                36924,
+                37722,
+                38224
+            ],
+            "ends": [
+                34116,
+                34556,
+                35875,
+                36170,
+                36414,
+                36934,
+                37679,
+                38063,
+                39081
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "ribosome biogenesis GTPase YlqF"
+            ],
+            "sequences": [
+                "MLQNTKSGLLKRLARFFTGALSDDFYDELEEALILCDVGAETTIHVVDTLRERVKEKGIKDAQKAKEELVEIITEVLTPAGADPNFHYPLLLLVVGVNGAGKTTAIGRLAHRFTQQGKRVLLCAGDTFRAAAIEQLDMWAGRAGVQIIKSTMGADPAAVVYDSIMAAKARGTDVILCDTAGRLQNKKNLMDELGKITRVAKREFEGEIKTLLVLDANTGQNGISQAKEFGQVAQVDGMMITKLDGTAKGGVALAVAHELKYPVWYCGIGERMEDMEAFDPRKFAREMIG",
+                "MEERIWTGLLLDFYGGLLTEHQRSTLELYLMEDLSLGEIGEQLGITRQGVRDAIVRGEAALRKAEENAGIVARYLTFRERMEEVRRLAQGQETLLRELDAAMEIWEGD",
+                "MAFEGLSEKLSKVFKKLSNRGMLRESDVKEAMREVRLALLEADVNFKIAKEFVAKVSEKAVGEEVLRSLTPGQQVVKIVHEELTSMMGGENAKLAVASKPPTIIVLCGLQGAGKTTFAAKLALYLKKRGKKPLLAACDIYRPAAVEQLMTVGKAAEVPVYSIEGGKPVQIAQGAVKHARDELLDTVIVDTAGRTHIDADMMEEIQAVCSALNPAEVLLVVDAMTGQEAVNIASSFDQSVALSGIVLTKLDGDTRGGAALSMRAVTGKPIKFASVGEKLEDVEVFHPDRMASRILGMGDVLSLIEKAQESFDMEQAKKLEEKLRKNEFTLNDFLNQMAQIRNMGGAEQIMSMMPGMGKMKVPNQELDQKRMARMEAVVRSMTEQERLRPEIINASRKRRIARGCGQQVSDVNRLLNQYESIRKMVRMMKGGRKGGFKLPF",
+                "MAVKIRLKRMGAKKAPFYRVVVADSRTPRDGRFIEEIGYYNPLTDPTDIKIDVERAQYWVKNGAQPSDTVRAILKKSGAIS",
+                "MEELITFIAQNLVDHPENVKTVVKGTENDVTIELSVHPDDMGKIIGKQGRMAKALRTIVKAAAVKEGKQIHYNVEII",
+                "MSRSFNDDYVRIGLILKPKGIKGELKVQPLTDDPERYRGLTEGYLEHNGTMDPVKVSVNRIEPDAVYLYIGGVYTMSAAEELRNAYLCVSRENAVQLPEGTWFIRDLTGMAVYVEAERVGTLTEVLQTGGVDVYVVEKIEGGRMLFPALRRVIHRVDVEEKRMVLLREPLLEVAVHED",
+                "MRISVLTLFPDMIRSVVNESLIGRAIKNGILEIAVYDIRDYAQNKHRHTDDYPFGGGSGMLMTPQPLFDCMEAAMAACKAKPHRIFPSPRGKVFDNDTAKRLAGMEEIILLCGHYEGVDERVVDALIDEEISLGDFILTGGEIPALAIIDSTARYVEGVLGNAASTQEESFNMGLLEHPQYTRPANFRGMEVPEVLLSGNHKEIQRWCRERSLELTYRLRPDLLEKAELSPADRAYLNQLEEYCPREDGML",
+                "MNEVIKSIEKKQLKENVPEIAIGDTVRVFVKVVEGNRERLQAFEGVVIARKGGGLSETFTVRRVSYGIGVERTFPVHSQRVDRVEVVRHGRVRRAKLYYLRDRVGKASKLKER",
+                "MQINWYPGHMAKAKREMEANIGLIDCAVELLDARAPLASRNPDLKQMLGNKPKITVLNKSDLADPDLTKAWLSYFTDEGERAVAFCASRSGGRKEVLGAIEGATAEIVERWRKRGAKKTLRVMVCGIPNVGKSSLINNLSGAGRTKTGSRPGVTRGKQWVRLTPYLELMDTPGVLWPKLTDLEGAKRLAYLNAINDDVISYYELAVELSNLLYEQKPRQLAEKYGMPQGEDAEAILRAVARTRGFLQKGQDFDLEKAARVLMEEFRSGKLGRFTLETPPQEGAPS"
+            ],
+            "species": "Firmicutes bacterium",
+            "taxID": "1879010"
+        },
+        "assembly_id": [
+            "PWL41573.1",
+            "GCA_003150225.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/150/225/GCA_003150225.1_ASM315022v1"
+        ],
+        "species": "Firmicutes bacterium"
+    },
+    "WP_012861499.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -2069,
+                -1531,
+                -701,
+                -459,
+                1,
+                269,
+                769,
+                1506,
+                2024
+            ],
+            "relative_ends": [
+                -1515,
+                -701,
+                -462,
+                -43,
+                246,
+                772,
+                1509,
+                2027,
+                2587
+            ],
+            "ncbi_codes": [
+                "WP_012861495.1",
+                "WP_012861496.1",
+                "WP_115388846.1",
+                "WP_012861498.1",
+                "WP_012861499.1",
+                "WP_012861500.1",
+                "WP_012861501.1",
+                "WP_012861502.1",
+                "WP_012861503.1"
+            ],
+            "starts": [
+                2178819,
+                2179357,
+                2180187,
+                2180429,
+                2180889,
+                2181157,
+                2181657,
+                2182394,
+                2182912
+            ],
+            "ends": [
+                2179373,
+                2180187,
+                2180426,
+                2180845,
+                2181134,
+                2181660,
+                2182397,
+                2182915,
+                2183475
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypoxanthine phosphoribosyltransferase",
+                "16S rRNA (adenine(1518)-N(6)/adenine(1519)-N(6))-dimethyltransferase RsmA",
+                "DUF4911 domain-containing protein",
+                "acyl-CoA thioesterase",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "gamma carbonic anhydrase family protein",
+                "RNA methyltransferase"
+            ],
+            "sequences": [
+                "MTKKDWEYGISKTLIDSETLRARIKELGAEITRDFAGKEEDLVVVCLLKGSLLFMADLIREIKLPITIDFMEISSYGNDFASTREVKILKDLEGSIMGKDVLIVEDIIDSGLTLKKVLKIIGGRGAKEVYLCTLLDKKVKREADINVQYVGFEIDDEFVLGYGLDFKQEYRNIPYIAVMGEDFE",
+                "MKILNNTGEKNYRTKKKYGQNFLENKVILEEIFSYADINKTDTVIEIGPGLGFLTESLAEKAGQVYAFEIDDDLVKILSEKFSKVENLKIIHTDFMDYDLSEIVEKEKNIKVVANIPYYITSPIVGKLIKYRDSIDEIYIMVQKEVAERISAVSPSSDISLLTHAVQFFGNAEYLFTVKKELFNPVPKVDSAFLGIKLYKDREYEKQIDEAEYFKYLKAAFSNKRKSLGNNMKNLGYDKQQTGSALEKTGKKPLARAEEFSVQEFIDFINALKDEK",
+                "MKSWEYIIKTRKSDIDYINKIIEVHEGTANVRTLNSEEGMVKILTNEFFLNDVELILEKLKKHGVVLEILEKREWQGVL",
+                "MKEKIVEHRVYYYDTDKMGVVYHSNYLKWMEVARTEFFRDILPYSTLEEMGVMLPVKTLNIEYFNSVKYDELIKIKIKLLEFSKIKIKFLYEIYDESFTQLKAKAETVNVFTDADGNLKRLSGEVRDLFGNYISVSSK",
+                "MSRYFDTVNFLVENLVEDKSSFHLESNEKGKSIFIKIIVDETNMGKLIGKNGRIITSIRTLISSIAKKENKIVKIEIKKAG",
+                "MELVNIGTITGTHHLNGAVKVTSIFQDTDVIISEKVLLEKNNDKKLCTVKSVKRINNKKLIVEFSEISNINDAKSLNGYQVKIRRDLLPEKTEEDFYYNDLLGMKVFEKEEYLGDILDTMETAAHDILVVVNSDGREILVPMVDIFVKKIDFEAGKIEVELIEGMKE",
+                "MKFTVLTLFPEIFELYLNQTIIQRAVDMGIVTYEIVNIREFSGNKHGQVDDTPFGGGAGMVLKPEPYWNYFKIKNAENPKKPFVIFVTPQGIPANQNIISDIAEKEDVVLISGRYEGLDQRVIDNFVDMEVSIGDFVLSSGDLPVLCLMDSVIRIKDGVIKKESFETDSFYNGLLGFPQYTKPAVIEGVEVPEVLTSGHHKKIDEYRLLESLKKTCKNRPDLLEKKIKEDENFRAVWEKYKKEIEL",
+                "MIYSLGEKMPKVDKDTYVAESAAVIGDVELADGVNIWFGAVLRGDLEKISIGSGSNVQDNSTIHTDFGIPCRIGKNVTVGHNVILHSCDIGDNVIVGMGSTVLNGAKVGTNCLIGANSLVTHKLPHEDGVLIMGQPAKVIRKLTEDEIKHIFENADHYVKNGRYFKENLKEIK",
+                "MREKVYVGLVHYPVYNKNNDIVATSVTNFDIHDISRTCRTYDIENYFIITPLDAQKELTGRIIGFWQEGCGIEFNKNRNEAFEHTRLMDSIEDCIKKITEKEGKEPRIITTSAKTFPNSVSYKELSSEIYDDENPYFLLFGTGWGLTDEIMEMSYKILNPIRGKTEYNHLSVRSAVSIILDRLFGDN"
+            ],
+            "species": "Sebaldella termitidis",
+            "taxID": "826"
+        },
+        "assembly_id": [
+            "WP_012861499.1",
+            "GCF_900456835.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/456/835/GCF_900456835.1_57530_C01"
+        ],
+        "species": "Sebaldella termitidis"
+    },
+    "OQX29578.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3653,
+                -2946,
+                -1625,
+                -257,
+                1,
+                212,
+                742,
+                1462,
+                2498
+            ],
+            "relative_ends": [
+                -2943,
+                -2017,
+                -291,
+                -6,
+                234,
+                745,
+                1431,
+                1842,
+                2857
+            ],
+            "ncbi_codes": [
+                "OQX29574.1",
+                "OQX29575.1",
+                "OQX29576.1",
+                "OQX29577.1",
+                "OQX29578.1",
+                "OQX29579.1",
+                "OQX29580.1",
+                "OQX29581.1",
+                "B0D92_02980"
+            ],
+            "starts": [
+                9000,
+                9707,
+                11028,
+                12396,
+                12654,
+                12865,
+                13395,
+                14115,
+                15151
+            ],
+            "ends": [
+                9710,
+                10636,
+                12362,
+                12647,
+                12887,
+                13398,
+                14084,
+                14495,
+                15510
+            ],
+            "directions": [
+                "-",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-"
+            ],
+            "names": [
+                "ABC transporter",
+                "hypothetical protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "pseudogene"
+            ],
+            "sequences": [
+                "MKLNQTRTIFRREFSSFLKSPGAYILLTLYLLITGWFFFSTFFLSGRADLRSFFQLMPLILSFTIPAITMRQFSEEYRSGSMEILGTLPVTTGDVIAGKSLSSLLFVGCMLLPTLSYPVFISFLGELDWGPVIGGYLGALFLSAAYIGIGLLASSATNNQIVAFIIGTVICLFLSIIDRMLVLIPSGLGQLLQNLGTGYHFTNISRGIIDSRDIIYFASMIFLSHYAAWIINREHR",
+                "MIKIQNLSKRYGSTLAVDDLSVDIPQGEILGLLGPNGAGKSTTLRIMTGYLPPTSGTILVDEHDVTEASLAVKKLMGYLPESAPLYTDMLVYDYLSCIADVRGISSQNKISRLKELARLCSIGEVMHKPISNLSKGYRQRVGLALALMDDPPILILDEPTSGLDPNQIAEIRSIIREIGKQKTIIFSTHILSEAEATCDRVVIINKGKIAADGSADSLKSTLSDSTLRLRLKNAQSAEVQSVLEAVNGVHQCGISAEGNELAVEVKSASDMRESIYGAIKSRDWTLMEMVQEKQSLEKIFRELTTEAAK",
+                "MLEKLTETFSGVVRRFSGNARISEKNIREAVEEIKTALLEADVNLRVVRRLVNHTIEEALGESVLKSVNPGQQFVKIIHDRIVALLGDAAAGLNLRGPDVVSVILMTGLQGSGKTTTAAKLAGRLKGEGRRVLMAAADLTRPAAADQLEILGKQLGVAVYREQNSRPEKVARQALKLAKKEQYNVLIVDTAGRMQVDADLMKEIARIKEAVGGDEILLAADAMTGQNAVEIAKSFDEVLNLTGIILSKFDSDARGGAALSIKSIIGKPIKFIGTGEKITDLEVFHPERIASRILGMGDVVSLVEKAQEVIDAEDAEKLQAKIIKATFTLEDYLVQIGQMKKMGTMKSILDMMPGMAIDESKIDDSRLAKEEAIIQSMTLSERRNHYIIGLPRRKRIANGSGTSIAEVGKLLKNFDKSRNMMKKMAKNKKMQQSFMENMAGSSMM",
+                "MSVKIRLKRMGAKKRPYYRVVVMDSRKPRDGRTIDEVGVYHPIEAEARQFMVKEEKVREWLKVGARPTPTVKRLLNRKSITIS",
+                "MEKDLIEYIVKPLVDKPDEVEVSMIDGKSLTIWELKAAEEDQGKIIGRQGRIAKAMRTLLSASAKDSNKRFALEILD",
+                "MPSKFSTEPESLIAIGSVRTSFGVHGWVKVASHSGEWPHFYALNSVVLEDVQTGNRIPFEIEGFTMHHGGGILKFAGLDSPEKAKMLAGREILAAREFAAPLGADEWYLKDLTGLAMVTEQGGELGKIVGVIEAADDILEVRRGDGSSFMVPFRQQFVSEPDFAAQTIVLFAPWLAE",
+                "MKFTVLSLFPAILEGFFSESIMAKAVARGLLDYQLVNIRDYAYDKHHVCDDAPYGGGAGMVLKPEPLSRALDAVGASGKKVVYPTPSGRKFNQEMALKLSEEDELVIICGRYEGVDQRVIDIYADDEISIGDYVISSGEVAAMVIVDAVYRQLDGVIAKESLAEESFTQPLLEYPHYTRPEEFRGLRVPQVLLSGHHAEIEAWRLNQRVEKTLKYRPELLRNPDENGHL",
+                "MDIIKAVENEQVKENAENFRIGDTIKVHYRIIEGKTERIQVYEGLVIAIDNSGISRTVTVRKISYGVGVERIFPLHSPRVEKFEVVRHGKVRRAKLYYLRNRIGKKATKVKELIKSKSDTAAAKTG",
+                "FAKESEQUENCEFAKESEQUENCEFAKESEQUENCEFAKESEQUENCE"
+            ],
+            "species": "Spirochaeta sp. LUC14_002_19_P3",
+            "taxID": "1940821"
+        },
+        "assembly_id": [
+            "OQX29578.1",
+            "GCA_002084135.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/084/135/GCA_002084135.1_ASM208413v1"
+        ],
+        "species": "Spirochaeta sp. LUC14_002_19_P3"
+    },
+    "WP_124791567.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -5253,
+                -3661,
+                -1968,
+                -396,
+                1,
+                237,
+                825,
+                1773,
+                2907
+            ],
+            "relative_ends": [
+                -3721,
+                -2204,
+                -466,
+                -157,
+                231,
+                758,
+                1727,
+                2633,
+                3704
+            ],
+            "ncbi_codes": [
+                "WP_124791575.1",
+                "WP_124791573.1",
+                "WP_124791571.1",
+                "WP_124791569.1",
+                "WP_124791567.1",
+                "WP_260424552.1",
+                "WP_124791565.1",
+                "WP_124791563.1",
+                "WP_124791613.1"
+            ],
+            "starts": [
+                129966,
+                128449,
+                126711,
+                126402,
+                126014,
+                125487,
+                124518,
+                123612,
+                122541
+            ],
+            "ends": [
+                131498,
+                129906,
+                128213,
+                126641,
+                126244,
+                126008,
+                125420,
+                124472,
+                123338
+            ],
+            "directions": [
+                "-",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "+"
+            ],
+            "names": [
+                "glutamine-hydrolyzing GMP synthase",
+                "IMP dehydrogenase",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "radical SAM mobile pair protein B",
+                "bifunctional DNA-formamidopyrimidine glycosylase/DNA-(apurinic or apyrimidinic site) lyase",
+                "aldolase/citrate lyase family protein"
+            ],
+            "sequences": [
+                "MPSKVIIIDYGSQVTQLIARRVREAGVYSEIHSCVTTAAQVAAMKPSAIILSGGPASVDEADAPALDAGFLELGVPVLGICYGMQLLARHLGGELASSLTREYGPAELSATAPCALWDGIAFPSRVWMSHGDKVLAPPPGFVTTGCTSSLDVAAMSDEKRKIHAVQFHPEVHHSADGERMLRNFLFGVAEITPDWTMSSFVERATAEMAAQAGDSHVVCALSGGIDSTVVAVLLHRAIGKRLHCIFVDNGLLRLGESDEVVGLLREFDLNLTFVQAQERFLGRLKGVEDPEKKRKIIGHTFIEIFDEEAKKLPQVDFLAQGTLYPDVIESVSHKGPSAVIKSHHNVGGLPETMKLKLIEPLRELFKDEVRKVAKQLGLPDSIVWRHPFPGPGLAIRVLGEVTEERLNILRQADRIVQQELRQSGWYNKVWQGFAVLLPLKTVGVMGDGRTYEHVIALRVVNSVDAMTADWARLPAELIERMSGRIINEVVGVNRVVYDVSSKPPSTIEWE",
+                "MFTNQGKALTFDDILLIPGFSDITPDAVDISTRLTPDIPLGIPLLSAAMDTVTEAAMAISMARMGGMGIIHKNMSEERQRLEVEKVKKSESGMILDPVTISPGNTVQEALALMADFRVSGLPVVEDDRLVGILTNRDVRFVEDGHAVRVADVMTSKNLVTVPLGTSLEESKRHLHEHRIEKLLVVDDQGRLRGLITMKDIDKVQKYPNACKDANGRLRVGAAIGIGRDCESRAAQLLEGGADVLVLDSAHGHSANVLNAIRAIKGSFPSCQLIAGNVATYEGAKAILQAGADTVKVGIGPGSICTTRIVAGVGVPQVTAVMEASRAAREMDRCCIADGGIKFSGDIVKALVVGAHSIMIGSLFAGTEESPGETILYQGRTYKIYRGMGSIDAMKEGSSDRYFQEKSKKLVPEGIVGRVPYRGPVMEAVYQLMGGLRSGMGYVGAHNLQQLFENTAFCEISPAGLRESHVHDVVITKEAPNYRLEN",
+                "MFESLSDRLSGVFRSFGGRGQLTEENVREGLREVRLALLEADVNFRVARDFVESVREKCLGQELLRGVNPAQQVVKIVHDELVALLGGATSGLQLQGREPAVIMLAGLQGSGKTTSAGKIANLLRRQKMRPYLVPADVYRPAAIEQLTVLAKQLDIPCFPSTADMNPVDIARNALEAARAEQATVVLLDTAGRLHVDEPLMQELEAVKAAVQPQEILFVADAMTGQDAVTVAESFNNRLGLTGVVLTKMDGDARGGAALSIRAVTGAPVKFVGTGEKLSEMEVFHPDRIAGRILGMGDVLTLVEKAQTAIDAEEAEALARKMKQATFTLEDFRTQMRRIKKIGSLDSILKLIPGLGGLREKLAEAGGAVPEKELARTEAIINSMTMAERRNPDILNGSRRARIARGAGVTVAQVNQLVRQFEQMRQMMKGMMGGKGIKMPRMRGMPPGMGMPGGLPGMGGLPGMGLPGMEGMGLPPARPGKGKSAAKKRKKKERPKRGKK",
+                "MAVKLKLTRLGSKKRPFYRVVAATDETRRDGRPLEFLGYYNPMTDPADVRLDADKIREWLNRGAEPTETVRALLKKHMA",
+                "MKDLVEYMARSLAEYPDQVEITAAENEQGSVLELRVAREDLGKVIGRQGRTARAMRVILGAASARTGQRVALEILE",
+                "MPEDWIQMGTLARAHGIRGELSVDWHADSPLLADMPLWLRDGGGHVRKVRPRSVRRHKGRPLVLLEGVDDRTAAEALRGCALLVRRDALPAVREGEAYVRDLQGCRAVLPDGTVLGVIDHFEYPAGREIWVILTDDGREVLFPARPEFIAAFDLAASAVHIAPPEGLLDIYLS",
+                "MTIALKEITVKNILTKSNLPVADYSANPYVGCVHACRYCYASFMKRFANHPEPWGTFVDVKQWPPVSRPEKFAGKEIFFSSVTDPYQPPEKRYRRTRALLEQMQGSGCSISIATKSDLVLRDLDIIKTFPGARVSWSINTLDNAFQRDMDKAVSIERRFAAMKAFHEAGVRTTCFISPIFPGITDPCAIIRRAKSQCNLVWLENLNLRGGFKKDILDYIAARYPALSGLYESIYVRGDKGYWTEMDAELRAFTRKEGLPYVRDDDSLQRPFAAPPVVVNYFFHEEIVPSAKKAQKAGGVR",
+                "MPELPEVETVARTLYPLVHNAVLESAKILRPSSLHAASIPPDSLCGCRIGTVRRRGKLLLLELDAANAHNAAVRGMPDLVLAVHLRMTGRLTVRSGQEQPGPHTRCVFALRTPNGAAAQLFFDDIRAFGVVLAATPAILQQWSFWRELGPEPLDLDENGFAACLAGRKGALKAALLDQRVIAGIGNIYADESLFAARLDPRRRADTLTAKQRGGLLRSLKAVLWQSIAQCGSSIRDYRDANGNVGAFQNSFAVYGRGGLPCRICGRPLGKIRVAGRGTVFCPRCQK",
+                "MTIRDIRALLAQDRPTVGTWLQLPSPDVAELMARAGYDWVAVDMEHGSFGRTGLPDIFRAIECGGAVPFARIGEAKKTEIKSALEAGAQGLIFPMIESREQLDRAIDLATYPGQDFWRASGSVAAEYRGVGYCRANVFGKHFDRYREEVAPEIFLVAQIEHVRAVENLESILTHPRLDAIMVGPYDLSGSMGLTGRFDHPDFAGVMERIARMCRDCGMRMGLHIVRPDAAELARQVAAGCRFIAYGIDSVFLWGAAQRPRQGENQ"
+            ],
+            "species": "unclassified Desulfovibrio",
+            "taxID": "2593640"
+        },
+        "assembly_id": [
+            "WP_124791567.1",
+            "GCF_003859815.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/859/815/GCF_003859815.1_ASM385981v1"
+        ],
+        "species": "unclassified Desulfovibrio"
+    },
+    "PWM34106.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3763,
+                -2109,
+                -1693,
+                -261,
+                1,
+                407,
+                2145,
+                3120,
+                4058
+            ],
+            "relative_ends": [
+                -2330,
+                -1765,
+                -344,
+                -19,
+                237,
+                1804,
+                3074,
+                3866,
+                5371
+            ],
+            "ncbi_codes": [
+                "PWM34103.1",
+                "PWM34104.1",
+                "PWM34129.1",
+                "PWM34105.1",
+                "PWM34106.1",
+                "PWM34107.1",
+                "PWM34108.1",
+                "PWM34109.1",
+                "PWM34110.1"
+            ],
+            "starts": [
+                1387,
+                3041,
+                3457,
+                4889,
+                5151,
+                5557,
+                7295,
+                8270,
+                9208
+            ],
+            "ends": [
+                2820,
+                3385,
+                4806,
+                5131,
+                5387,
+                6954,
+                8224,
+                9016,
+                10521
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "-",
+                "-"
+            ],
+            "names": [
+                "sodium:alanine symporter family protein",
+                "DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "citrate synthase",
+                "elongation factor Ts",
+                "30S ribosomal protein S2",
+                "aminoacetone oxidase family FAD-binding enzyme"
+            ],
+            "sequences": [
+                "MSRAFSQYSHIVNILHKATLLSGARDAYNPSGGGDAGMDSVMTVTSLFILAVSGYFAVRLRGMRAVRPLRRLRAALTPRRSGTGVSPLGGMCMALAGTLGVGNIAGVATALWLGGPGAIFWMIFSGLAVTVLKYAEIVLAIRHRRRTANGTVGGAPYYISDLLFARGHAGAGRLLACLFAWLCLLNALTMGSVLQINAAASALHGAFGLPPLVTGLTAAGLCAVVMSGGASRIAALTERLVPFMTVGFLLLCGAVLILRRERLPDAVAAILREAFSPANAGAAAGGGVGGFLLTRAVRVGVMRGLVSNEAGCGTAPMAHAAADTDSPATQGVLGMLEVFVDTVLLCSITALTVLVGDTGYTAFGADGAACARAAFTSVLGDWAGGVFGISVFLFALASAFCWAHYGMTCVGYLRARRPGTGLCWRMLFTLAFCSALILGALMAPSLAWTLADAAIAAMTILNLSCLLLGAREIATAR",
+                "MFEKNLEVGLLLDFYGDILPERRREMIELYYNDDLSLAEVAEQLGVTRQAVRETVKKTETELYFYEEKLGLLRRFTEAQTCAGRIRALCEAEKDCVSPALREAIDRLCDAVGAG",
+                "MFSSLSEKLENAFKKFRSRGKLTEADVKAGMREIKLALLEADVNFKVVKDFVRIVSERAVGTEVMESLMPGQQIVKIVDEELTRLMGGSQSKLEIASKPPTIVMMVGLQGAGKTTHAGKLAGMYKKQGKRPLLVACDVYRPAAIRQLEVLGEKLDIPVFQMGDREDPVRIAAEGVKLAEQKGYDMVFIDTAGRLQIDEALMNELIRIKQTVKPTEILLTVDSMIGQESVNVAETFNNLLDITGVILTKLDGDTRGGAALSIRYVTGKPIKFVGIGEKLDAIEPFYPDRMANRILGMGDVLTLIDKAQQQFDEKKAAELEQKIRQSTFTLDDYLDQFEQLKNMGSLEQLAGMIPGVKPGALKDAQIDEKALAHQQAIIRAMTADERRRPDIVLNASRKKRIAVGSGTTVEEINKLLKQFEQIRKLMKQFTDMGGKPGRKGRPGRGMRFPF",
+                "MVKIRLTRTGAKKAPSYRVVVADSRYPRDGRFIDIIGTYNPMVTPAEVKLDADKAKDWLSKGAQPTETVKSLFKKNGILA",
+                "MAELQTTLRDIAAAIVDHPDEVAVTCEETEDSVTLTLSVAPDDMGMVIGRHGRIAKAIRTVIKAASANCGKRVNVDIR",
+                "MSLESTLKFCQLPPDAEEKTESEFRDLLDSCRTAYTIPAAAFDSYKVKRGLREPDGTGVTAGVTRIGNAHGYVVNEGEKCPVDGVLEYRGYNICDLLEGCIAEGRFGFEECAFLLFMGHLPTRWELQEFADVLAMLRHLPPRFTEDIIMKAPSRSIMNKLEVAVLSLYAYDDNPDDTSLENMMRQSMELVARLPVIAGQAYAVYRNTFFNKSLNLHNPRDGLSTAENFLRILRPDKSYTPEEAHLLDLCLIIHAEHGGGNASTFATRVLSSTGTDTYSAIAAGIGALKGPLHGGANIKVQEMFDCVKANVRDPHNDDELSDFLLRILKGKANDGSGLIYGMGHAVYTKSDPRAVMLKRYARQLAQDKGYGEDFELLESIERLTPEVFNTYKGKHHDICANVDLYSGLVYRMLGIPTEMYTPLFTIARTAGWCAHRMEEILSSGKIMRPGYKCIERERPYTELTRR",
+                "MAVITAKDVAALRAKTGIGMMECKKALVEADGDMEAAVKILREKGELKAQSKIATRIAADGLVDVMKEGDTTAIIEVNSETDFVAKNELFREFVKNLLKTIIANKPADVEALMSCKYAGEDCTVDEKLKEMIFKIGEKLSIRRFAVTEGITSTYIHGIGSIGVIVRFDTDVADKEGFAQFAKNIALQVGAYTTPYINRDQVPASVLEAETAIVRAQIENDPALSQKPDAIKEKMAVGRLNKFYENNCLLDMEYFLEDSMKVGQYVEKTAKELGGKIVVAEMYRFEKGEGIQKKEEDFAAEIEKLAGGNK",
+                "MSIVTIKQLLEAGVHFGHHTRRWNPKMQEYIFTERNGIYIIDLQKTVKKFEEAYNFVRDLSANGGTLLFVGTKKQAAEAIREEAERCGMYYVNVRWPGGMMTNFKTIKRSINRLNTLNKMQEDGTFDLLPKKEVAAKQKEIFDLEKNLGGIKTMERLPDAIFIVDPHKEHIAVLEAKKLGIPVIAIVDTNCDPDDADYVIPGNDDAIRAIKLISSVMADAVIEGRQGEETAKAEAEAEAPAEKPADEE",
+                "MTDRPRVLVVGAGAAGMMAAIAAAQTLQTAGEPDGGVLLLERGDRPCRKLRITGKGRCNVTNDCDREEFLRHVLTNPRFLYSALSGFDTQDTRTFFEGCGVALKVERGRRVFPVSDRAGDIVDALVRTCRAAGVRNQTGLVTGLALVEGEESAPRIAGVRIGERLIPADTVILCTGGCSYPITGSDGGGYRLAESVGHTVLPPAPSLIPIVCDGDICRRMMGLSLRNVRLRVLDTAHGNRVLYEDMGEMLFTHFGVTGPLVLTASAHMTDTAGVRTGRYRLRIDLKPALDEAALDARIQADFSKFSNRDFINALSDLLPQKAIQPVAELSGIPFRKKVHDVTREERRALIGVLKGLELQPIGFRPLAEAIVTRGGVDVREVDPRTMQSKLCPGLYFAGEMLDVDATTGGYNLQIAFSTGHLAGISAAQAASANVNKV"
+            ],
+            "species": "Oscillospiraceae bacterium",
+            "taxID": "2485925"
+        },
+        "assembly_id": [
+            "PWM34106.1",
+            "GCA_003150135.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/150/135/GCA_003150135.1_ASM315013v1"
+        ],
+        "species": "Oscillospiraceae bacterium"
+    },
+    "WP_133451944.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3744,
+                -3425,
+                -2167,
+                -280,
+                1,
+                271,
+                768,
+                1631,
+                2118
+            ],
+            "relative_ends": [
+                -3460,
+                -2286,
+                -719,
+                -5,
+                228,
+                771,
+                1493,
+                1978,
+                4310
+            ],
+            "ncbi_codes": [
+                "WP_243721480.1",
+                "WP_133451947.1",
+                "WP_133451946.1",
+                "WP_133451945.1",
+                "WP_133451944.1",
+                "WP_133451943.1",
+                "WP_133451942.1",
+                "WP_133451941.1",
+                "WP_133451940.1"
+            ],
+            "starts": [
+                50804,
+                49630,
+                48063,
+                47349,
+                47116,
+                46573,
+                45851,
+                45366,
+                43034
+            ],
+            "ends": [
+                51088,
+                50769,
+                49511,
+                47624,
+                47343,
+                47073,
+                46576,
+                45713,
+                45226
+            ],
+            "directions": [
+                "+",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "monovalent cation/H(+) antiporter subunit G",
+                "N-acetylglucosamine-6-phosphate deacetylase",
+                "N-acetylglucosamine-specific PTS transporter subunit IIBC",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "ABC transporter ATP-binding protein/permease"
+            ],
+            "sequences": [
+                "MTLISTIGIVKFKDVYTRSHAATKSSTLGVLLTLSGVFIYFWVNDHYFSVRIILGIVFLYITSPVAGHLITRAAYHSGVEMYTEEKGKKAERLN",
+                "MSYVLTNGTIHTEKGSVNGHIIIEESHIKAVQEGPYSGPLETIDLEGKHILPGFIDIHIHGGYGEDFMDANALGLHHLSRSLLSEGTTSYLATTMTQSTEVIRTALDTLKTYHAQQLPHDAEMLGIHLEGPFISPDKVGAQNPAYVQRPTIQAINDLQDKADGLIKIMTFAPEIEGADEVLRHFKDDIIFSVGHTTADYGQINQAADNGAKHITHLYNASSPFQHRSPGAFGAAWLNDQLSAEVIVDGVHSHPAAVAIAYRMKGRDRFYLITDAMRAKGMSEGTYDLGGQDVIVKNQTARLSDGTLAGSILKMNEGLRLLKEYTGRPLSELWPVTSLNQAKALGIADHKGSIAPGKDADLVILDDDCQVQMTIKKGHQH",
+                "MLSFFQKLGRSLMLPVAILPAAAIIIGIANTMIAIQEKPNAVSSFIQNAGLSILGLMGVLFAVGTALGMAKKNDGAVALAAVVGFFMVSTILKPVNVALYLGVDVAKVNPGFEKLDNSNVFVGIIVGLIAAYMYNRFSETELPMALSFFSGKRLVPIMTAFASMFLAFILLFVWPVVFSGLVNFGEMILGLGPVGAGLYGFFNRLLIPVGLHHALNSVFWFDVANVNDIVNFQQGKGVEGMTGRYMAGFFPVMMFGMPAAALAMYHTAKTEQKKRVAGLLLAGSVSAFFVGITEPIEFAFMFVAPVLFVIHAILTGLSMFIAASFQWTAGFSFSAGLIDFLLSLLNPMSNQPWMLMMQGIVFFVLYYVIFRAAIQFFDLKTLGREDDMAEHIDEGVAEGEGKYSAMARHIIKGLGGEDNIDTLTNCATRLRLEVKDNSVINVNEIKQAGAAGVIKSGRTQAQIIIGTHVQQVADEVERQLDR",
+                "MAVKIRLTRMGSKRNPFYRIVVADARAPRDGRIIEAIGTYNPVAKPAAEIKVDEALALKWLADGAKPTDTVRNILSSQGIMEKFHNQKIAK",
+                "MEQLLQTIIEPLVDFPEDIQISKEDHHSSVTYHISVNKEDTGKVIGKQGRLIKAIRTLTMAGQHESGKKVFVEID",
+                "MSVNVGKIVNMHGIKGEVRVLSASDFTQERFKPGNEIIIRQNNEETPVKIKSYRTHKNFHLLQFEGMENINVVEKFKGADIFQDIDEIDIPLAENEFYYHDIIGCTVFNAGEAVGRVIDIFETGANDVWVVKGDKEYLIPYIEDVVKEVDVANKTIVIEAMDGLLS",
+                "MRIDYLTLFPEMFETLNHSIMKRSQDKGIVTLNPVNFRAFSNNKHQQVDDYPYGGGQGMVLKPEPVFSAVQSLEVTEETRIILMCPQGERFDQAKAEELAHAEHLIFICGHYEGYDERIRTELVTDEISLGDFVLTGGELAAMTMTDAIVRLIPDVLGNEVSHEDDSFSSGLLEHPQYTRPADYNGLQVPAVLLSGNHKLIEEWRHHESLKRTYERRPDLLESYPLTAADIQYLETLGYQE",
+                "MNNKLIDAITKEQLRTDIPAFRPGDTLKVHVRIVEGTRERIQVFEGVVIKRRGGGISETFTVRKISYGVGVERTFPLHTPKIEKIEVLRRGKVRRAKLYYLRSLRGKAARIKEIR",
+                "MLYIFRYLKAFMLPLLLAVVLLFVQAFSDLSLPNYMSDIVDNGIQQHGVTDEAPEAISQAGMKLMQTFMTDSQKEKVKASYKLVDADQYKDTYKKAEGQFYLRQDVSSSKLKDLNRTFHKSSLGLFNALSDAPKSQKQSSQPAGKKLDVTQLYKIQPVLDQLPETKKEAYRNQQADNDIMTKQLGVSLTQSFYHELGLDLTKIQTAYIIKMGLVMLGVALIGGLATILVSLLSSRIAAGLTRDLRRDVFRKIESFSFKEIDNFSTASLITRSTNDMTQIQQFFMIGIRMICYAPIMGAGGVIMAINKSNAMSWIIVIAVVILLAFIGIIMALAIPKFKIIQQLVDKVNLVSREFLSGLMVVRAFGTGEHEKKRFNVANKDLTDTNLFIGRVMSLMSPVMTLIMNGVSLVIVWVGAHRIADASMQVGDMMAFIQYTTQIIMAFLMLSFTFILIPRAAVSAGRIKEILETDLSIADHQNTKEFINHSGLVEFRNVSFKHDGAKEYALKDIDIVARPGEMTAVIGSTGAGKSTLINLLLRFYDTTHGEVLLDGVNVRDVKLQSLRDRIALVPQKAALLKGTVRSNLRVGKEDATDEEMLEALDIAQATEFIAQMDGLDTEISQNGSNLSGGQKQRLAIARAVLRDAEVLIFDDSFSALDARTEKQLRLALFNQQKRKTIIVIGQRVTSIMGAEQIIVLDKGEVVGRGTHDELLRTNEEYFEIASSQLSEEELA"
+            ],
+            "species": "Macrococcus bovicus",
+            "taxID": "69968"
+        },
+        "assembly_id": [
+            "WP_133451944.1",
+            "GCF_004359575.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/359/575/GCF_004359575.1_ASM435957v1"
+        ],
+        "species": "Macrococcus bovicus"
+    },
+    "WP_097677401.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3936,
+                -2588,
+                -1322,
+                -385,
+                1,
+                314,
+                773,
+                1507,
+                2113
+            ],
+            "relative_ends": [
+                -2617,
+                -1341,
+                -633,
+                -65,
+                246,
+                769,
+                1510,
+                2076,
+                3024
+            ],
+            "ncbi_codes": [
+                "WP_077598004.1",
+                "WP_077598003.1",
+                "WP_077598002.1",
+                "WP_077598001.1",
+                "WP_097677401.1",
+                "WP_234966854.1",
+                "WP_077597998.1",
+                "WP_077597997.1",
+                "WP_077597996.1"
+            ],
+            "starts": [
+                857879,
+                856603,
+                855895,
+                855327,
+                855016,
+                854493,
+                853752,
+                853186,
+                852238
+            ],
+            "ends": [
+                859198,
+                857850,
+                856584,
+                855647,
+                855261,
+                854948,
+                854489,
+                853755,
+                853149
+            ],
+            "directions": [
+                "-",
+                "-",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "DNA polymerase IV",
+                "HAMP domain-containing histidine kinase",
+                "response regulator transcription factor",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "signal peptidase I",
+                "glycine--tRNA ligase subunit alpha"
+            ],
+            "sequences": [
+                "MERASHKERQAETARDAGWSGPAIGLLDLDAFFASVEQLDHPEWRGRPVIVGGSPERRGVVSTASYEARRLGVHSAMPSWQAVRLCPNAIWTRGNFPRYRELSRKVMSRIADETPLVEQVSIDEAFFDITPGRFSNENPLDICLRLQRRVDELGISCSIGLGVNKTVAKIASERRKPHGLSVVLPGSEKDFLAPLSVRSMSGIGSSSERRLAKMGIHTLAELAAADEERLSLAFGVTGPRLRLRASGAERNAIRSLAEPEEAKSVSNERTFARDLRTREELEAAIDHVGAVVGSRLRKRSLRGRRVTLKLRLDLDHGRSAQRHLSHPTDDEHVFCALAKELLDGIWAEGQGVRLVGVGLAEFGEEESCQLELFSDVTAREAQGEARARRDLRELSIVADQVRERFGSTALGWGRDLRLGGLGSDTPALNGAGVPGGGTP",
+                "MLKRLKVKFILIVMTLVGLVLASVLAFSLFSSYAAQQRLIDESLARGVAGSLNDIPVIGGAGSSEAEGLSSSSMLMLALDISPDGTILARSSSPVTISSDTLGEVLDDIQLRDSRKGRLPERHVAWMSGEGGDAGTRIVIVDTRGSDAAMYSQLVQAAAIMLVGLFALFGITVFLSDWALRPVARAWDQQRRFIADASHELKTPLSVIIANTEILASSRSLSAEDREWVRRTASESRHMKALVADLLQLARTDDAEAQGYATAINRTTIDLSEMASSAALEFEPLAFEKGCSIEMRVQDGVSMQGDREWVDRMIRILLDNACKYASPDSKITLGLTEQGQHRILSVNNMGNPIEAKDLAHVFERFYRSDKARARGEGAGGFGLGLAIAKGVAEAHGGSISVTSGRREGTTFTVQL",
+                "MNILVVEDERNLADAIVHILQDAGYNAEAAYDGSVGLSSAQSGLFDAVILDVMLPDMDGLQIVHELRHANNPIPILMLTALTSTMDKVQGLDAGADDYMTKPFETPELLARLRALTRRQGDVVIDEVTFADLTLDLATHDLRTEHRGVHLSGKEFEVLRLLMSSTTRVISKQDLLGRVWGTDADASENSVEAYISFLRKKLAHVRSNVQITTLRMLGYRLEDFSDQDVE",
+                "MAVKIRLARHGAKKHPYYRVVVADGRMPRDGRYIELVGRYNPLTTPKTIDLDLEKVDEWIAKGAQPSGAVSHLIDIVRSGTPAPEKKQKLSKKAAAKAAKAAEDAE",
+                "MASDKVADLVEYIVCGLVTNEDAVSLDVTDSDGSALIEVSCSEEDAGRIIGRRGRTIKAIRTLARALGSRVGTSVEVEVLG",
+                "MADAVHGLPLLLREDMHVTLVPPELKGPRGHVVTSESAGGSAQLVSLSGVYDIDAASRLVGRWVLARQDELPGDFELHDPRSLVGREVEDAELGSLGSVCDLLVGPANDVWVVRGPYGEVLIPAVEPIVRSWNDEGPILVRVPEGILGLGG",
+                "MRFEALSVFPEFFDSYLDMSIMGRARKRSVFEFVAHDLRSWTHDRHNTVDDSPFGGGQGMLMKPAPLFEAIEDISSRGEARPHVVFFSPCGRPYCQAVAEELSHKNRILLVCGRYEGMDERAYELADDIVSMGDYVLTGGELAALCVIDSVVRLLPGALGDEMSAKDESFSDGLLEYAQYTRPAVFRGRAVPEVLLSGNHAAVDAWRRRNAIERTARWRPDLLEVAELTDEERAFAERSMREERQ",
+                "MRHARTEGAHLLPSWLEWILTIIAGLAIAFLLRSLVIGVYLVPSGSMLETIHEGDRLVGEKISYRSHAPSKGDVVTFDDPADPRVTLIKRVVATEGQTVDLRDGRLVVDGLAQEEAYTLGKPSYPLQGHAPNLSEDISYPYVVPEGCVWVMGDNRTNSLDSRYFGAVRMSSISSHALFIYWPPTDARAL",
+                "MAARPLTFQDMILALEHYWADKGCTVMQPYDSEVGAGTFHTATLLRSLGPSAWRTCYPQPCRRPADGRYGENPNRMQHYYQFQVILKPSPADSQELYLGSLAAIGLDPKEHDVRFVEDDWESPTLGAWGLGWEVWMDGMEVTQYTYFQQVGGIEVSPVPVEITYGLERIAMYAQGVNSVYDIVWSYLPDGTPMTYGDVFLENEREFSAYNFEVANVALMREKFDEYEAECHACLERKLPLPAYDCVMKCSHAFNLLDSRGAISATERANYILRVRSVAKACCEAYLAEVATKSPAHAFEGEVA"
+            ],
+            "species": "Olsenella urininfantis",
+            "taxID": "1871033"
+        },
+        "assembly_id": [
+            "WP_097677401.1",
+            "GCF_900155635.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/155/635/GCF_900155635.1_Olsenella_urinainfantis"
+        ],
+        "species": "Olsenella urininfantis"
+    },
+    "WP_033023251.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3214,
+                -2068,
+                -1718,
+                -283,
+                1,
+                327,
+                729,
+                1247,
+                2119
+            ],
+            "relative_ends": [
+                -2228,
+                -1736,
+                -378,
+                -11,
+                237,
+                713,
+                1247,
+                1981,
+                2469
+            ],
+            "ncbi_codes": [
+                "WP_061912709.1",
+                "WP_061912710.1",
+                "WP_033022952.1",
+                "WP_033022953.1",
+                "WP_033023251.1",
+                "WP_033022954.1",
+                "WP_033022955.1",
+                "WP_033022956.1",
+                "WP_033022957.1"
+            ],
+            "starts": [
+                176747,
+                177893,
+                178243,
+                179678,
+                179962,
+                180288,
+                180690,
+                181208,
+                182080
+            ],
+            "ends": [
+                177733,
+                178225,
+                179583,
+                179950,
+                180198,
+                180674,
+                181208,
+                181942,
+                182430
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "YlqD family protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MGFFQKLKEKWTKQADTVTEKFKEGLSKTRTSFAGKVNDLIARYRKVDEEFFEELEEILIAADVGVATVMELVDELKMEVKRRNIQDPAQMRDVIAEKLIDIYRAGADDKELSALNIQEGGLTVILFVGVNGVGKTTTIGKLAHKLKAEGKSVLLAAGDTFRAGAIEQLEVWGERVGVDVIKQAAGSDPAAVMYDAIQAAKARGVDVLLCDTAGRLQNKVNLMKELEKVKRVISREIPGAPHEVLLVLDATTGQNAMSQAKLFKEATDVTGIVLTKLDGTAKGGIVLAIRNELNIPVKLVGLGEKMDDLQVFDPEQYVYGLFADWLDS",
+                "MLEKTMRMNYLYDFYQALLTPKQRNYMALYYLDDYSLGEIAEQYQVSRQAVYDNIRRTEAMLEQYEEKLGLLRKYERRRQIIERLKDYISRHYGADAELAALVRELDELD",
+                "MAFEGLSERLQQVMSRIRGKGKVTEADVKEMMREVRLALLEADVNFKVVKDFIKQVSERAVGQEVMKSLTPGQQVIKIVKEELTALMGGEQSQIAVAKKPPTVVMMVGLQGAGKTTTTGKLANWLRKRHNRKPLLVAADVYRPAAIKQLETLGKQLSVPVFSLGEHENPVEIAKRALEQAKAEHCDYVLIDTAGRLHIDEGLMDELRQMKEAVKPDEIFLVVDAMTGQDAVNVAQSFHEQLGITGVILTKLDGDTRGGAALSIRAVTGAPIKFAGMGEKLDALEPFHPERMASRILGMGDVLTLIEKAQAAVDEEKAKELEQKMRTATFTLDDFLDQLGQVRKLGPLDELIKMLPGANKIKGLANIQVDEKQIARVEAIIRSMTKEEKMHPEIINGSRKKRIAKGSGTTVQEVNRLLKQFDEMKKMMKMMTNVPKGKKKGFRFPFM",
+                "MAVKIRLKRMGAKKKPFYRIVVADSRSPRDGRFIETIGTYDPVAEPAQINIDEELALKWLQNGAKPSDTVRSLLSKQGILEKFHHLKYGK",
+                "MKPLIETIVKALVDHPEAVAVECREGEAALLCELSVHDDDIGKVIGKHGRTIQAIRTVVAAAAAGASKRVIVQVKDKG",
+                "MKLIQTVEVRQVVTERSKQTLAASFLQRKQQLERECDQLRFEQKRVEKSGKHPPALVKHYFAKEIDERIEKIKLLEFQLEQLRILPLGSELKERDVEALIEVNVGDRWEEVTKARAIIIEDGVVKEIR",
+                "MERWFNVGKIVNTHGIRGEVRVISRTDFPEKRYKKGNKLYIFRERDNEPIEVTVKSHRVHKSFDLLSFEGYDSINEVEPFKGAMLKVPESQLGELDEGEYYFHEIIGCTVVTEGGETIGAVTEILTPGANDVWVVRREDGSDVLIPYIEEVVIHVDPEQKTIVIRPMEGLLA",
+                "MRIDILTLFPGMFSGVLNESILKKAQEKGAVAIHLVDFREFADNKHKTVDDYPYGGGAGMVLKPQPIFDAVEHVTAGSPGARIILLCPQGERYTQKKAEELAKAEHLVLICGHYEGYDERIRQYLATDEISIGDYILTGGELGAMVIVDSVVRLLPGVLGNEASPVDDSFSSGLLEYPQYTRPADFRGLKVPDVLLSGNHQRIAEWREKESLRRTFLRRPDLLADYPLTDKQKQWLKEWEEERQ",
+                "MHHLIQEITKEQLRTDLPDFRPGDTVRVHVKVVEGNRERIQVFEGVVIKRRGAGISETFTVRKVSYGVGVERTFPVHTPKIAKLEVVRRGKVRRAKLYYLRELRGKAARIKEKTAQ"
+            ],
+            "species": "Geobacillus",
+            "taxID": "129337"
+        },
+        "assembly_id": [
+            "WP_033023251.1",
+            "GCF_001587475.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/587/475/GCF_001587475.1_B4113"
+        ],
+        "species": "Geobacillus"
+    },
+    "WP_116552985.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3210,
+                -2120,
+                -1775,
+                -354,
+                1,
+                529,
+                948,
+                1469,
+                2323
+            ],
+            "relative_ends": [
+                -2203,
+                -1791,
+                -426,
+                -82,
+                228,
+                921,
+                1472,
+                2206,
+                2667
+            ],
+            "ncbi_codes": [
+                "WP_116552981.1",
+                "WP_116552982.1",
+                "WP_116552983.1",
+                "WP_116552984.1",
+                "WP_116552985.1",
+                "WP_116552986.1",
+                "WP_116552987.1",
+                "WP_116552988.1",
+                "WP_116552989.1"
+            ],
+            "starts": [
+                172471,
+                173561,
+                173906,
+                175327,
+                175682,
+                176210,
+                176629,
+                177150,
+                178004
+            ],
+            "ends": [
+                173478,
+                173890,
+                175255,
+                175599,
+                175909,
+                176602,
+                177153,
+                177887,
+                178348
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "signal recognition particle-docking protein FtsY",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "YlqD family protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "MSFFKNLKDKITRQTDTVTEKFKQGLTKTRDSFAGKMNDLVKRYRKVDEEFFEELEEILISADVGVVTVMDLIEMLKDEARTKNIQDTEELKTVISEKLAELLEKEEGDADLNIQKDGMTIILVVGVNGVGKTTTIGKLAHKFKTEGKSVVLAAGDTFRAGAIEQLEVWGERVGVDVIKHQEGSDPAAVIFDAIQSARSKKADILICDTAGRLQNKVNLMKELEKVKKVIAREVPSAPHEVLLVLDATTGQNAMNQAKIFREATDVTGIALTKLDGTAKGGIVLAIRHELDIPVKLIGLGEQMEDLQPFDAGTFVYGLFSDMIEKNSENNDEDGL",
+                "MLEKTIRVNALYDFYHPLLTPKQQSYMSLYYINDFSLREIADECNVSRQAVYDTIKRTEIMLEDYEEKLHLYEKFKKRGDVIRQLYDVLDNKKNTEVMLNLIKQLEKLD",
+                "MAFEGLADRLQSTLQKIRGKGKLTEADVNEMMREIRLALLEADVNFKVVKDFIKRVKERAIGQEILQSLTPGQQVVKIVHDELKQLMGGEQSKIAVASKPPTVIMMVGLQGAGKTTTTGKLANHLRKQLNRKPLLVAADIYRPAAINQLQTLGKQLSLPVFSLGDKVSPVEIAKQAIEKAKEEHQDYVLIDTAGRLHIDEELMQELVDVKEAVKPDEIYLVVDAMTGQDAVNVADNFNEQLDITGVILTKLDGDTRGGAALSIREVTDKPIKFVGMGEKMDALEPFHPERMASRILGMGDVLTLIEKAQTNIDENKAKELEKKMRTASFTFDDFLEQLGNVRKMGPLDELIGMLPGANKMKGLKNVQIDEKQLVHVEAIIQSMTPKEKESPEIINASRRKRIAKGSGTTIQEVNRLIKQFDEMRKMMKQMTGMQKGKGKKKGNFPFPFM",
+                "MAVKIRLKRIGAKKAPFYRLVVADSRSPRDGRFIEEIGYYNPVKSPVEVKIDEEKALQWMLKGAKPSDTVRNLFSKAGLMEKLHNTKHAK",
+                "MTELIETIVKPLVDYPDEVVVTKSMNEGLVTYSLSVHKNDMGKVIGKHGRTAKSIRSVVNAAGANRNERIHLEIV",
+                "MKVIKRAIVKQVLTETSKAEFLKVFTEEKNRYVTECEQLDFERRKALKNQDKKNHSSIAARFNEEIDRRKEKVRSIDFQMEQLKILPLGTEVVEKEIETISELKVGDNWKQSSRPAEIVVKDGVVLEIRP",
+                "MRWFNVGKIVNTHGLKGEVRVISTTDFPDLRYQIGNTLTFFSENHANEKPLTIRTHRKHKNFDLLSFEGYSNVSEVEPLKGGTLKISEDQLGEEELNENEFYYYEIIGCEVFSENGEKIGVVEEILSPGANDVWAVRKDADKKLVYIPYIESVVKNVDIPEKKITIHLLEGLIE",
+                "MKIDILTLFPRMFEGVFNESILKKAQEKSLLRFNLVNYRDYSLNKHHKVDDYPYGGGAGMVLSPQPIFDAVEAVVRTSKTKPRILLMCPQGEPFTQKKAEELSEEKHLIFICGHYEGYDERIRTHLATDELSIGDFILTGGELASMVIIDSVARLIPGVLGNQASHQQDSYSTGLLEHPHYTRPQDFRGMKVPEVLLSGDHKKIGEWRRKESLRRTIERRPDLLKENLLTEEDKLFLSKLKQEKS",
+                "MSDKIAEITKEQLKTDLPNFRPGDTVKVHVKVIEGTRERIQIFEGVVIKRRGSGISETFTVRKISYGVGVERTFPVHSPKIANLEVVRRGKVRRAKLYYLRNLRGKAARIKEIR"
+            ],
+            "species": "Pueribacillus theae",
+            "taxID": "2171751"
+        },
+        "assembly_id": [
+            "WP_116552985.1",
+            "GCF_003097615.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/097/615/GCF_003097615.1_ASM309761v1"
+        ],
+        "species": "Pueribacillus theae"
+    },
+    "WP_155111253.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -4391,
+                -2039,
+                -1717,
+                -282,
+                1,
+                424,
+                815,
+                1335,
+                2214
+            ],
+            "relative_ends": [
+                -3408,
+                -1731,
+                -374,
+                -10,
+                231,
+                804,
+                1345,
+                2066,
+                2558
+            ],
+            "ncbi_codes": [
+                "GKZ89_RS04775",
+                "WP_155111342.1",
+                "WP_155111251.1",
+                "WP_155111252.1",
+                "WP_155111253.1",
+                "WP_155111254.1",
+                "WP_155111255.1",
+                "WP_194201622.1",
+                "WP_155111257.1"
+            ],
+            "starts": [
+                150413,
+                152765,
+                153087,
+                154522,
+                154805,
+                155228,
+                155619,
+                156139,
+                157018
+            ],
+            "ends": [
+                151396,
+                153073,
+                154430,
+                154794,
+                155035,
+                155608,
+                156149,
+                156870,
+                157362
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "pseudogene",
+                "putative DNA-binding protein",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "KH domain-containing protein",
+                "YlqD family protein",
+                "ribosome maturation factor RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19"
+            ],
+            "sequences": [
+                "FAKESEQUENCEFAKESEQUENCEFAKESEQUENCEFAKESEQUENCE",
+                "MNYLFDFYQSLLTSKQKSYMSLYYLDDYSLGEIAEEYSISRQAVYDNIKRTEAMLEQYEEKLLLLHKFQKRNAIMKQVRELVPETEQREQLLDLIEALDNLE",
+                "MAFEGLADRLQQTITKIRGKGKVSEADVKEMMREVRLALLEADVNFKVVKDFVKRVNERAIGQEVMQSLTPGQQVIKVVKEELTVLMGGEQSKIAVAKKSPTVIMMVGLQGAGKTTTTGKLANLLRKKQNRKPLLVAADIYRPAAIKQLETLGKQLSMDVFSLGDQVSPVEIARQAIAHAKAEHHDYVLIDTAGRLHVDENLMDELSQVKELANPDEIFLVVDAMTGQDAVNVAQSFNEQLGLTGVVLTKLDGDTRGGAALSIRAVTDTPIKFVGLGEKLDAIEAFHPERMASRILGMGDVLTLIEKAQANVDESKAKELEQKMRTASFTFDDFLEQLGQVRSMGPLDELLGMIPGAGKMKGLKNVQVDEKQIGSVEAIIRSMTKQEKQHPEVINASRRKRIAKGSGTTVPEVNRLLKQFEDMKKMMKQMTSMSKGKRKGGMKFPFM",
+                "MAVKIRLKRMGAKKSPFYRIVVADSRSPRDGRFIETVGTYNPVAQPAEVKIDEALALQWMQNGAKPSDTVRNLFSSQGIMEKFHNSKLNK",
+                "MVGLIETIVKPLVDEPDAVSVEEEVQSRTVVYRLTVSKNDIGKVIGKQGRIARAIRSVVYAAGTRSSKRIQLEIND",
+                "MKILQTVSVMQVLTEKSKSKLLDGFTSNREQLLRECDQLYFQLKKLEKTNISNEMHQQYKKEIEKRKDKIKMVDFQIDQLQTLPLGSELKETEMQALVELEAGDAWPGLKAERCIIVKDGIITEIR",
+                "METKWFNVGKIVNTHGIRGEIRVVSVTDFAEERYKPGKTIFLFGEQKDQPKEVVIDSHRKHKNFDLLTLKGYPNINDVEPFKGMTIRVPESELGDLQENEFYFHEIIGCTVYTEQGEEIGTVREILTPGANDVWVIKRPRRKDVLIPYIGEIVKEIDPASKKIIISLMEGLIDDEN",
+                "MRIDFLSIFPEMFEGVLHHSIMKKAQEKKAVEFNVINFRDYADNKHQTVDDYPYGGGAGMVLKPQPIFDAVHSIKSTSSADPRIILVCPQGERFNQQKAEELAGAEHLVFICGHYEGYDERIREHLVTDEISIGDFVLTGGELPSMTIADSVVRLLPGVLGNEDSPVQDSFSSGLLEHPHYTRPADFRGLKVPDTLISGNHKLIEEWREEESLRRTVERRPDLLESFELSDRQKKVLEKLKKN",
+                "MQKLIEDITKEQLKTDLPAFRPGDTVRVHVKVVEGTRERIQLFEGVVIKRRGGGISETFTVRKVSYGVGVERTFPVHTPKIANLEIVRRGKVRRAKLYYLRELRGKKARIKEIR"
+            ],
+            "species": "Metabacillus mangrovi",
+            "taxID": "1491830"
+        },
+        "assembly_id": [
+            "WP_155111253.1",
+            "GCF_009711125.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/711/125/GCF_009711125.1_ASM971112v1"
+        ],
+        "species": "Metabacillus mangrovi"
+    },
+    "GAK55151.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -6001,
+                -4696,
+                -3953,
+                -457,
+                1,
+                487,
+                2300,
+                3366,
+                4815
+            ],
+            "relative_ends": [
+                -4937,
+                -4430,
+                -1023,
+                -179,
+                291,
+                1893,
+                3283,
+                4640,
+                5018
+            ],
+            "ncbi_codes": [
+                "GAK55147.1",
+                "GAK55148.1",
+                "GAK55149.1",
+                "GAK55150.1",
+                "GAK55151.1",
+                "GAK55152.1",
+                "GAK55153.1",
+                "GAK55154.1",
+                "GAK55155.1"
+            ],
+            "starts": [
+                493014,
+                494319,
+                495062,
+                498558,
+                499016,
+                499502,
+                501315,
+                502381,
+                503830
+            ],
+            "ends": [
+                494078,
+                494585,
+                497992,
+                498836,
+                499306,
+                500908,
+                502298,
+                503655,
+                504033
+            ],
+            "directions": [
+                "-",
+                "-",
+                "-",
+                "+",
+                "+",
+                "-",
+                "+",
+                "+",
+                "-"
+            ],
+            "names": [
+                "hypothetical protein",
+                "hypothetical protein",
+                "peptidase S9B dipeptidylpeptidase IV domain protein",
+                "bacterial nucleoid protein Hbs",
+                "hypothetical protein",
+                "nitrate/sulfonate/bicarbonate ABC transporter substrate-binding protein",
+                "methicillin resistance protein",
+                "phosphoribosylamine--glycine ligase",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MSIFFTRPYWKITIFLLFFTGKIGFLFSSVRAAVEPNGQEGVCGPYYIWYQVSPADYDYAVDYVDLCGIIMNISDIVDDFDFVYFENTDGYQWRSLDKNHDGISDLFFIRREQDHLKWQPESGCIRIYMRNCRGKTLNEQCGHAAIRIQPKYGVREGSAKLSIHTIAKCPPTGFDCSKSFTLIHKYSNCLISTPLPDFLVQKQVNDVLFISTISSRMPRFEYTLLVQNTSSEIKDTELTDSMSDGTKGGALILSEVKIDRCPSSATCFLTGIDDNRMHFSFKNFPPGEQAKIIYIFKGNSDDIARDEVSYFTNIATLSKGNSAQVTVGIKGLLFQTPRPERPRHGSEPTHPRDR",
+                "MYWFELKGALLYGQPQITNEMLQPEALKMAVREIARLVNFGWIDKLTDDTLQRIQTACSIGHCPEVWDEFHYSNLQLLARSQKHALSC",
+                "MRKKIIVLWGIIFTLLLLAGLESSIEAQLTSYFGKNKVHYKDFKWATLKTTHFMIYFYSGEEQLARNTAKMAERAYQHLSTALQHEFTEKIPLICYASSDDFQQTEIISGFIGEGIGGVTESLRGRIVIPFLGSYRYFNHVLIHELVHAFQFDILREAGFGGGIFSSGLYVPLWFMEGMPEYLSEYRNPLTEMWLRDAVYNDTLPKINQIEDIEDIRAYRFGQSLWQHLGEMYGESLPGDLLRELAKTGNWQEAIKNVKDTTWKAVYRDWLEDVQKTYAAENEGRRPIEEQAVRLIAHKKDDFALNILPAVSPDGKYIALISDRDVYRTIYLASAETGKIIRPLVEGERRGTFETLRFLNTSLAWDSESQHLAFNAKAGGENAIYVMNVHSEKVIKKLVPAVASISFLAWSPDRRSIVFTGTQNGQEDLYLINIDDQRLVQLTNDLYSNRHPSWSPDGKAIAFTTDSGQFSDPEELKFGPSNLALYEMASGNVYRLADNAYNDFTPVWSPDGSSLAFISDRDGVCNIYLLALKNTPDASRKYRIDAITQVTNVNTGIVGLTEDNPALTWAQETGKLFFSGFADKGWDIFALDNPLKDTQTPLTAHEPGELIEKLSLSESLTSFGKKDWKHPLTFKKVPEPKKYRARLQPEYIFGGGGGNDKNLVILARLGLSDMLSNHRLTLGLNLTEVFDESDFLIQYSNRASRLSYEIHGFQFGDSYGTYSLKDAEFEVEVQRGIGVNFHWPFDKFRRVELGLEGWMVSGEKLEDTTREELEDQFFAVPTLAYVHDTTLYTSFGPLDGRRSRYSLSPAFGDFLYLTAAADQRWYIQATKRSTLALRMLTAVSVGENARIFNISGPYTFRSGAFDTDEEEEIEGTKIALANLEYRFPLLPKLNLLRGNVFWDMALGWTDNVRPLTTEQTSFIRLKDLRAAYGIGVRVPISGPFGSILLRFDMTQETDLTKNIGERKWLFSLGQDF",
+                "MNKDSLIAAMAEKSGLTRKDCESGLNAFIESISDALAKKEKVTLIGFGTFSVVTRASRTGRNPSTGAPMEIPAKDVPKFSPGTSLKDKVAGK",
+                "MNRESLCGFRNPVEQQHEGSMKEMVRYIAEALADEPEHVEVVEIQGSHSTIVELKVSERDRGKIIGRQGRTADAMRTLLKAAGRKVGKTYILEIID",
+                "MEQMLIAWGTKNLNTSAQLVLAKRLGFFRQEGIQIQCRLFPSEEDLFKAFTTMQEKPLIWVQTAPDIFRLQASGFPIRIIAPLADISASYQVILRENAGIVLPGDLEGRKIGIVRDSLIDLMFRNMARDFSLDLGSMEFINAAPVRQLELFAAGQLDVVACWEPWASQACYMGGHFYFSGLFSKIPGHEGPVNWLTGQSLLATYADHLHADREQLFSCLKAIKKATDYLNTTVQKAVSILSDLLSLEHDELAELLQKNLYSMKMDETFQIGLSSARDLFTTSALEHVPAMTELYTAELLAQLDASLVSQTVQSSCLPSQGSASSQQSQILAEGNIYYAMQARIQRSRSVPLRYIIVDDTRVVLDVFATIVDMLDGQVVGTASTGAEGVVLYVDQLPDVVVMDISMPDMNGIEAIKSIFKINPAANVIVISGNDYEEIRQRVFELGVKVFIGKPFHVEQILTILHRLLS",
+                "MQITFSSVVNRDDWNYVLQHAELANVFHSPEYFDIQTALGHKLLYSCCYDGGEPVGVIVGIRNDSGYHQDIIEIGTKSGGLPVMIPRYDQTPEAKELKNRFIEKFIRQYFQPPQRFIFYPCFHLDDCLLADPSWQCMQQYDSTLFLDLQLEENTLWMGLNGKCRNAVRYAQRQGVTARIANELPYFERFYHFYKEIRTKRNTKYIGYEELRMKFDAFTRNGLADLWVAFLDEMPLAYAFIWKYKRMINFVYGSSDDGTWSYKPNNLIQWELIKYYKQQGYTLYNMWGIRNMNFSETRPPAEREIEGYGKFKLSFGAELRDLVRYVRV",
+                "MPTGTTQSPYRIMVFGVGAFTQGMIRVLKENGAEVSTYLTRDYAHYGPMVEGKTFHKEYYPNPCEILQQEQIDYVIPMSLDWALQEWTEDFLRSGIPILCATGEGYQIERDRDFSQQLCQRFGVPFAKSYLARNRLEAEQILEQDPLPYVIKNPYCSPTSPIHTIVSETVEQTRTWLKHVDYKEGVFLQQYLGRLEGGHIAFVSHGEIYSLISNQEYKRAFDGNQGIVAGAPLGGLVEQDPEDKYELARKLLHPLLPWFREVNFHGPIQVTALKYEGVWHVVEYNIRLGVTCGPLILRMLKDPAMILAQTAMNQPLDLAFHEDRKYGCSLTLAGYGYPYTQIVPPKLSVQATEPFDCDVWWNEVDTDLKGNVYTSGHRIADVVATGRTVEEAIESSYRNIKKIVCPGSYYRTDIGKTLWPLTHV",
+                "MNTDFTASFAKDLRNLRDQRILKHIQRVIHAIENARDACRSQTSQKIAGHGELLSYHGRRLSGRFHC"
+            ],
+            "species": "Candidatus Vecturithrix granuli",
+            "taxID": "1499967"
+        },
+        "assembly_id": [
+            "GAK55151.1",
+            "GCA_000739535.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/739/535/GCA_000739535.1_ASM73953v1"
+        ],
+        "species": "Candidatus Vecturithrix granuli"
+    },
+    "PJE67290.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -1449,
+                -1252,
+                -887,
+                -214,
+                1,
+                234,
+                935,
+                1463,
+                2479
+            ],
+            "relative_ends": [
+                -1249,
+                -884,
+                -204,
+                4,
+                237,
+                932,
+                1462,
+                2482,
+                2764
+            ],
+            "ncbi_codes": [
+                "PJE67294.1",
+                "PJE67293.1",
+                "PJE67292.1",
+                "PJE67291.1",
+                "PJE67290.1",
+                "PJE67289.1",
+                "PJE67288.1",
+                "COU95_03200",
+                "PJE67287.1"
+            ],
+            "starts": [
+                4014,
+                3649,
+                2969,
+                2761,
+                2528,
+                1833,
+                1303,
+                283,
+                1
+            ],
+            "ends": [
+                4214,
+                4017,
+                3652,
+                2979,
+                2764,
+                2531,
+                1830,
+                1302,
+                286
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "-",
+                "-"
+            ],
+            "names": [
+                "50S ribosomal protein L32",
+                "transcription antitermination factor NusB",
+                "ribonuclease III",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "hypothetical protein",
+                "hypothetical protein",
+                "pseudogene",
+                "hypothetical protein"
+            ],
+            "sequences": [
+                "MTPLPKRRHSTRRQGKRRASISYILPNLVICPNCQELKPAHQVCPKCGYYKDRQVVKIKIKKEKKK",
+                "MKTPFDPRHQKRREAVQALFAWGFKDGKIENEVASKVISNLGKIDSLIAKSAPEWPIDQINRLDLAVLRLAIFELQIAKIEPPKVIIDEAVELAKEFGSESSPSFVNGVLGTVLKKASKKKK",
+                "MNLSDLEKKLEISFKNKNLLREALTHRSYLNEHPDFSLSSNERLEFLGDAILEFLISRLLFEQFPSFSEGILTACRSKIVRTKTLSSLAKDFSLGEFLFLSKGEEEGGGRVNLGLLENAFEALLGAIFLDQGMEKADQFVKKHFLPLLREIKPSELKDAKSLLQELAQEKEKITPTYKVISGIGPDHAKIFTVGVFLGKKKIGEGKGVSKQEAEEEAAQKALDRYVS",
+                "MSLKIRLAKTKTARVFRIVVGETRSKRDGKAIDILGNATLSKTPQVKIDNQKYQKWLLKGAKPTKSVQKLLK",
+                "MKNLLEFIIKSLVDKPDEVKVDLSEKDGEIILTFSVNKEDMGKVIGKDGKIIKAIRTIIRARSIKEGKRVEINLEEKT",
+                "MKNLSLSELLFRYERILFIFIGIFLVFISWSFIIPKTRDVLEAKKALDQEKIRLSRLEAKLADLKTLNEFELSERTTLSLQAIPDKKNVMAVMTSLRTQATETGAAIESLQVSPGELSATASAKPGVDKLDFKLEIVGTLDSVLNLFEKIQSSLPLVSLSQVKIELSGETVTVSLTLESYFLPLPETLGAIDSPVPKLTSDEEKVLGEISSYSFLPPVSFPPVVGRTNPFSF",
+                "MAGVLGINLLPGKKPTLEEKRVSKKIRTWGTVILAGYVIFVAGIFIFGATLSFQRNQVKGKVTALEQQIKSEQKKESLELALKGRIGEVGKIIKGRANYASLITKILSLAPSGTSFQELDFSKGKVSLSGEATNALVIADFLEKLKKETDFSWVYLNSLSRTKTGGYSFSLEIAF",
+                "FAKESEQUENCEFAKESEQUENCEFAKESEQUENCEFAKESEQUENCE",
+                "KTFQFGATLDISGFRGGTKTLLFARLRLLYSSDSHVLGAKATGTGTSTFPSQGVEIESTGTAGTSTRKVEVVRFHPTPPEIFDFAIYSGGSLSK"
+            ],
+            "species": "Candidatus Shapirobacteria bacterium CG10_big_fil_rev_8_21_14_0_10_40_9",
+            "taxID": "1974888"
+        },
+        "assembly_id": [
+            "PJE67290.1",
+            "GCA_002793695.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/793/695/GCA_002793695.1_ASM279369v1"
+        ],
+        "species": "Candidatus Shapirobacteria bacterium CG10_big_fil_rev_8_21_14_0_10_40_9"
+    },
+    "CDE39195.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3657,
+                -2276,
+                -1063,
+                -271,
+                1,
+                331,
+                1554,
+                2065,
+                2414
+            ],
+            "relative_ends": [
+                -2368,
+                -1209,
+                -395,
+                1,
+                252,
+                1557,
+                2012,
+                2250,
+                3940
+            ],
+            "ncbi_codes": [
+                "CDE39191.1",
+                "CDE39192.1",
+                "CDE39193.1",
+                "CDE39194.1",
+                "CDE39195.1",
+                "CDE39196.1",
+                "CDE39197.1",
+                "CDE39198.1",
+                "CDE39199.1"
+            ],
+            "starts": [
+                7183,
+                8564,
+                9777,
+                10569,
+                10841,
+                11171,
+                12394,
+                12905,
+                13254
+            ],
+            "ends": [
+                8472,
+                9631,
+                10445,
+                10841,
+                11092,
+                12397,
+                12852,
+                13090,
+                14780
+            ],
+            "directions": [
+                "+",
+                "-",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "histidine--tRNA ligase 1",
+                "copper amine oxidase-like domain-containing protein",
+                "unknown",
+                "30S ribosomal protein S16",
+                "uPF0109 protein HMPREF9402_2339",
+                "enolase",
+                "putative uncharacterized protein",
+                "putative uncharacterized protein",
+                "conserved domain protein"
+            ],
+            "sequences": [
+                "MKIMNVKGTVDSLPSKEIIRRKVVNTLTDTFEKYGYLPLDTSILCYYDLLASKYSGGSEILKEVYTLKDQGDRTLGLRYDLTVPFSKVISMNAGKTINLPFKRYEIGKVFRDGPVKTGRAREFYQCDVDVCGIEGSFIEAEMLMMTIECYKKLGIEVYVEINNRKLLEGFIISSGIDKELTSKVILSVDKLAKIGEDGVREELKEYNKASEKLDNLFSLFKCNINELDNMNIDNEEFIEGKSEIKELFSYIDYLNLNEYARFTPYLARGLEIYTGTVWEVFDKKQRLTCAIGGGGRYDKIITNFIDDGNKYPAVGISFGLVPICELLEESTSDSLYDLLIIPMDTNKESLLLASKLRNNGIKVIIEMNKRKVKKALESANKNSIPYVIILGQNEIDTNTIELKDMNNSKSIKINLDNTNEIVDIIKNKH",
+                "MKSLVKYFIIGFKEIFSNKILIISLSIMNLFLISGVVYKAANNKKELNKYEDLKSQITEKMETKLVIEENSSNDSEVHGVTKITNCLKKSIPKEELSDNLLNIGKQIEDAMNASNLNFAFKYKDLYTGFSLSYNANQPIFAASTIKAPEAIYIYEEAEKGNINLDEVLTYTSNYYSEGTGVLKNTAFNKNYTIRQLVGYSVIHSDNAAHLMLNNRYQVQNIREYWQNKGTTSIYKTNSPWGNLSANDAAIYMEELYNYYLTNTSNSNELINYFKSAWKVISVPDNITIANKSGWSDNSLHDAAIVFDDNPYVLVILSSRGYTEYTSYFNQISNLVYDFHHAYWDEKINRCTNISE",
+                "MKEKNSNKINKFLLVTTILSMTILLIGGTFSYFTLSTMSKMNALAVSAGKVRLGLGVSPVYTGYPIIPLKDEYISAAYKQKCKDDLDHGACLAYGLEVFNFEEKSEIEGIIDFHLNGLENLSYMVLDENDNVYLDITHINKDNPTNLSLGKAFTLAKAVDGITPSKKFTLLIWLTDNNDVQDETDAGKSFSADITYRTSEGGRLTASVDGKQAENSDPSNNT",
+                "MAVKIRLKRMGAKKAPFYRVIVADSRSPRDGRFIDTIGTYNPLTTPAEIKLNEESAIKWLNNGAIPTDTVKNLFSKAGIMEKYHNLKQGK",
+                "MNNLVELTELIIKKLVKDSESVSVKEFESDEDNTILIEVMVSSEDMPKVIGHGGKTINSIRTIVQAASFNMDNKLVKINVDSY",
+                "MSKIKNIYAREILDSRGNPTVEVELTLESGIKAVASVPSGASTGKNEALELRDNDKNRYHGKGVLKAINNVNNIIKPLLIGKDSLNQEEIDRIMLEKDGTENKEVLGANAILGVSLANLKTAAKYKGLELYEYLGKEYSMPRCMMNILNGGVHASNNLDFQEFMIVPNKEEYHENLRMGSEVFNTLKNVLKERNLLCGVGDEGGFAPQINDAKEALELIKEAITKSGYELGKDINIALDVAASEFYNEEEDIYLLEGVKYTKEELVSYYQSLVDKYHIISIEDGMAEEDYEGWKLLTSKLSNIQLVGDDLFVTNKKLLQKGIDMHIANAILIKLNQIGTVTETLETIKLARDNNYKTIISHRSGETEDNYISDFAVGLNLGQIKTGSMSRGERLSKYNRLLRIEEQVK",
+                "MKKLVVLIIPILLLTACTSNEEDKIAYLEYKNELEKQETFSPEDELDFNVYFNISKEGEEITNYSILINNPKVNMHKVKALLIHNYIIDEAYPSIGIMDKPVELLKDNNNKIELKGKIQTSENISNVKYKLYIEYTTDDGKENKIYYDVKRG",
+                "MKVKVIDEEHEKDLENSINTFIKENNIDIIDIKLSSSCSIYSEEQIYCFTALIMYTEIKEE",
+                "MRTKKIFLNMICDILPYLLIGVVGIIKMDVLIKYIGDVGNGYYQTINQIISYVFLAQAGFSDAVIYSLYKPFAEKNKDDINAIYGGARKVFRIIGFIILGIIFLVTLGLHLFYNFEEGYKVSALICFFIISTSYLISYFGKGQTYMAVLSAAQEKYVYSLIFNGVKLLCDILIVVVTIKFKTLESIAIVILAMKILEEIINRIVVKKKYPELHEIARKDTSMVKMTKDLAWTQLGYLILNNVDALLLMGFNGPVMVSIYTTYNYILRFLTEIASRVELSSVYSFGNVFAKKEEKRVYPLFKEYMMMFILIAFSMCLTFMIGIRGFVSVWVGKENYILDYITVVLFTSTSFLNILYFPLVALINADGLFKDNKKHIFICASVNLILSIILINYLGINGILLGTGVAFLVNIALKSNLISKKITKEIKLSNILKYYIITIILFIVLSVALKPIENYFLLTAGSFITTILKLGIIFIIITLLTSLILYVVSNDAKNLFRRLLNLIKRKLKK"
+            ],
+            "species": "Firmicutes bacterium CAG:321",
+            "taxID": "1263018"
+        },
+        "assembly_id": [
+            "CDE39195.1",
+            "GCA_000437695.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/437/695/GCA_000437695.1_MGS321"
+        ],
+        "species": "Firmicutes bacterium CAG:321"
+    },
+    "PID79571.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3948,
+                -3332,
+                -2102,
+                -718,
+                1,
+                228,
+                751,
+                1616,
+                2003
+            ],
+            "relative_ends": [
+                -3223,
+                -2571,
+                -762,
+                -95,
+                228,
+                767,
+                1503,
+                1960,
+                2614
+            ],
+            "ncbi_codes": [
+                "PID79557.1",
+                "PID79558.1",
+                "PID79559.1",
+                "PID79560.1",
+                "PID79571.1",
+                "PID79561.1",
+                "PID79562.1",
+                "PID79563.1",
+                "PID79572.1"
+            ],
+            "starts": [
+                182,
+                798,
+                2028,
+                3412,
+                4131,
+                4358,
+                4881,
+                5746,
+                6133
+            ],
+            "ends": [
+                907,
+                1559,
+                3368,
+                4035,
+                4358,
+                4897,
+                5633,
+                6090,
+                6744
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+            ],
+            "names": [
+                "hypothetical protein",
+                "ribulose-phosphate 3-epimerase",
+                "signal recognition particle protein",
+                "30S ribosomal protein S16",
+                "RNA-binding protein",
+                "16S rRNA processing protein RimM",
+                "tRNA (guanosine(37)-N1)-methyltransferase TrmD",
+                "50S ribosomal protein L19",
+                "ribonuclease HII"
+            ],
+            "sequences": [
+                "MKLWKFLLLMVGMVVLGGVAVLGINFLVLPQIIHQNKVVVMPDIRGMSVAGAETQLRRDDLEVVVRRSMPHPTIPEGMILDQVPAPQKGIRGGRTVSVITSSGPPAGSLPDLKGLGLRQAEITLQRENYRLGRVLQLRQPGATQTVVQYQSPEPGQELYKGAVVDLVVAVPPAAELVRMPDLRGTSLYRARQIISAAGFVLAPVTYERTGAVEPNTVLEQDPPAGKRIAKGERLELVASSR",
+                "MNAPAPWSPTRFWSRTRLRASASPKENALNWLPRPAEGRAWVAPSVLSADFASLEADLGSMVAAGAHALHLDVMDGHFVPNLTFGPFICAAIRRLCDLPLDAHLMISRPDKYLEPFAKSGIDGLTIHVEAEAEIAPTLGRIGELGMKRGLSLNPGTDLAAVLPYLDQVDLVLVMSVQPGFGGQKFNPVAVDKIAELARRRQAQGLEFLISVDGGINGETGALCRDAGADVLVSGSWLFKAEDRAPKVALLSGS",
+                "MFQELTKRLDATMKKLAGKDRLTEDNIKEALREVRLALLEADVNYGVAKKLVAAIREKALGQDVLESLTPAQQVVKVVNEELTALLGGHAADLNIPQDGGIATLMVMGLQGSGKTTFCGKLARKLKKEGRSPLLVAADIYRPAAIDQLHVIGESVGVPVHSDRGRDNAGQIVKMGLRKAQDNKCDVMIVDTAGRLHIDDVLMDELKAIEKAVKMDEKLLVLDAMIGQEAVNVATEFGEQVGFDGAVLTKLDGDARGGAALSVLEVTGRPIKLVGVGEKLEDLEVFHPDRMASRILGMGDVLTLIEQAEEKMDLDEAEHLAGRFAEGQFTLEDFLKQIQQMKKMGSLKGMLKMLPGMGGDMLDKAKIDDKQFVKVEAMIQSMTFQERRNPDIINGSRRKRIARGSGTTVSQVNKLLKQYRDMRRMMKQINAAGGLQEFGKSLMGGRQ",
+                "MGRPAKPSQWRSIVPTTIRLTRMGRKKRPFYRLVVLDSRKRRDGAYLANLGYYNPFSEPHEIELRGDEIIDWMQKGATVSETAKSLLRSEGVLYKYSLIKQGLGEGEVEAKMAEWKAGVDKREAAREAAEAKKIAEAKAAAEAEAKAAAEAEAKAAAEAKAAAEAKAKAEAEAAAKAEEEAKAAAEAAETAGEEGAEAPAADEEEKS",
+                "MELISFIVVNLVDKPENVTVDLVRKADREVYQVKVDAEDLGKVIGKGGQTARALRTLLTAATSQDEQRIGLEIVE",
+                "MKDFVCVGEIVKAIGLKGELKLYPLLDYFDGLLDSPYTVWQDGSPVKILRHRPARSCVALMVEGVQSREAAEAMLGRELGFMRGSYVRDDFPVPPGGLAFRYLGRRVVTRGGDEIGRVDEVRLMGGAHMLVVPDGKREILIPAVEPILVRDDRSLEGDLVIDPPEGLLDVEGLQDVQAD",
+                "MSRRTEAPVIKILTLFPDMVREVLATSMAGRAERQGNVRYEVVDIRDFAVDKHRTVDDTAYGGGAGMIMMAPPVVEAVESCRENAAAPVILTTPQGETFNEDLTLELLAELREKGEIILICGHYKGIDERARELVVTREISIGDYVLTGGELPALVIADAVVRRLDGVLHNRDSAENDSFTATREGGLDCQWYTKPPEYRGLGVPEVLLSGHHANIEQWRAREAARRTQERRPDLLPESSSGRSGDRNSD",
+                "MNIVEQMRAEGLRDDLPDFKIGDTVNVAVRITEAGKSRIQNFIGAVIAKHGTGLEASVTVRKVTGGIAVERIFPLESPSVDSITVKKRGRIRRAKLYYLRGRTGRKARIREARR",
+                "MVLFDREQSRDRRHLLAGVDEAGRGCWAGPVVAAAVILPDDADLAGLDDSKKLSAKRREALCEEIRASALHWGACAVSAPDIDRINILQATLRAMSRSLAKLGTRPELVLVDGLQTPDIAIPARAVTKGDGRSAAIAAASILAKVFRDRIMTAYDRHYPGYGFAGHKGYGSAAHRAALQRLGPCALHRFSYRPIAELDQGRLF"
+            ],
+            "species": "bacterium DOLZORAL124_64_63",
+            "taxID": "2044883"
+        },
+        "assembly_id": [
+            "PID79571.1",
+            "GCA_002747875.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/747/875/GCA_002747875.1_ASM274787v1"
+        ],
+        "species": "bacterium DOLZORAL124_64_63"
+    },
+    "PKN53458.1": {
+        "flanking_genes": {
+            "relative_starts": [
+                -3437,
+                -2700,
+                -1629,
+                -585,
+                1,
+                550,
+                940,
+                2229,
+                4092
+            ],
+            "relative_ends": [
+                -2748,
+                -2188,
+                -622,
+                -256,
+                231,
+                756,
+                2166,
+                4025,
+                4766
+            ],
+            "ncbi_codes": [
+                "PKN53462.1",
+                "PKN53461.1",
+                "PKN53460.1",
+                "PKN53459.1",
+                "PKN53458.1",
+                "PKN53457.1",
+                "PKN53456.1",
+                "PKN53455.1",
+                "PKN53454.1"
+            ],
+            "starts": [
+                192750,
+                192190,
+                190624,
+                190258,
+                189771,
+                189246,
+                187836,
+                185977,
+                185236
+            ],
+            "ends": [
+                193439,
+                192702,
+                191631,
+                190587,
+                190001,
+                189452,
+                189062,
+                187773,
+                185910
+            ],
+            "directions": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "+",
+                "-",
+                "-",
+                "-"
+            ],
+            "names": [
+                "anaerobic ribonucleoside-triphosphate reductase activating protein",
+                "hypothetical protein",
+                "aldo/keto reductase",
+                "carboxymuconolactone decarboxylase family protein",
+                "RNA-binding protein",
+                "cold-shock protein",
+                "coproporphyrinogen III oxidase",
+                "elongation factor 4",
+                "adenylate kinase"
+            ],
+            "sequences": [
+                "MKIGGLQRVSLIDYPGLISAVVFLQGCNFKCSYCHNPELVDPRLFQPCLRENDIFDFLDTRKGKLDAVSITGGEPTLQDKLPAFIKHIRKMGFAVKMDTNGSQPKVIRNLLAEKLLDFIAMDIKAPLEKYKDIVKATVNPDSIKESINLILKAKIPYEFRTTIVESQLGENDILQIGKLIAGADHYVLQNFVSTKTLDKKFLKEKPFSDEKLQKIKSHLEKQITSVTIR",
+                "MDAKKTEYKGIIFDSKSEAVFARTLDLGGHQWIYHPPEHCSHVWDFLVFRKHMGDKSTPLFVEYKPIMPTNTYVDELTERMSVDPKESVVVWGNPWDGVDHSIDGPQECCYRVYPIFCSHGKYGWGDFIRLADNGGDWPTSYRHVTWDVLGITEEMAQEAKNFRFDLVVV",
+                "MQKRKLGKSGLEVSALGLGCMGMSFSYGPPKDKKEMTALLHAAVERGVTFFDTAEVYGPFINEELVGEALAPFRRQVVIATKFGFDLSPDLDPRGMKGAPGLNSRPEHIKKAVEGSLKRLKIEVIDLLYQHRVDLSVPIEDVAGTVKELIGQGKVKHFGLSEAGAQTIRRAHAVQPVTALQSEYSLWTRTPEKEVIPTLEELGIGLVPYSPLGKGFLTGKMDEKTTFDSSDFRNILPRFTPEALKANQALIDLLARIAKQKQATPAQIALAWLLARKPWIVPIPGTTKVNRLEENIGAVAVELTPDDLSEIETATSKITVQGARYPEKLEQMTGR",
+                "MLMANNGEQKTLDDLKAVAPEFAKLTEDFVFGDIWKRPELSQRDKSLITVTCLVALNRIEQVEFHLKKAFENGLTKEELVAAITHIAIYAGWPAAVSGFNHLKKVIDQQ",
+                "MKELIKQISQSLVDNADKVEVTEVIGDQSYIIELRVAKEDIGKVIGKHGRTAQAIRTILSAASAKAHKRVVLDILD",
+                "MPEGKVKWFNASKGFGFIEQEGGGKDLFVHHSAIQGQEGFKSLAEGDRVSFDIGEGAKGPAAENVRKL",
+                "MPAKSGIQKLKIILDSVSRFACTELQIFIKNIPMKEEQAGLYIHIPFCLSKCGYCSFYSIKSVDLIPEYIAALKKEIKHYRNVFSSFDTIYIGGGTPSLLSTGQIDDLFSTINKYFDIDRKAEITIEVNPGDVSLEYLQALRKSGINRLNIGIQSFDDKILRFLERRHSSKEAIAAIKAAKAAGFDNLGVDLIYGVHGLGIKSWKNTLQKAVSFAPEHISCYQLSLDDRTPLYKKYSSEGWKLPDENTELKLFFTTADVLENAGYLHYEVSNFARLDKFKSRHNQKYWQHVPYLGLGPAAHSFLGNKRWWNKATVKTYLNEIAAGKMPVEDMENLSTDQLQLEALFLGLRTKAGINLKRYKTRYGIDLLVDKKTIIDALIKNKLVELKNGFLRPTRAGMAVADSLALI",
+                "MENIRNFSIIAHIDHGKSTLADRLIQFTGVCNERNFQDQILDNMDIERERGITIKSNAISLPYRAKDGKNYILNLIDTPGHVDFSYEVSRSLASCEGVLLLIDAAQGVQAQTLANLYLALDHNLEIIPIINKIDLPSADIERVLEEIESELGLDPDLHIKCSAKEGTGIEEILEAIVTRIPPPKGDAANPLAALIFDAKYDSFRGTIIHCRVFEGTVKSGDIIKFMYNGTTYKVEEVGHFLLTRTKRDKLSAGEVGYIIAGVKTVADVRTGDTITLQDRPCSQPLPGFKEVKPVVFASIYPIASDDYQDLADSLEKYKLNDASFIYEKDSSAALGQGFRCGFLGLLHLDIVQERLEREYDLSIILSVPSVRYRFTLKDRKVIYVDNPAHYPDPSEIEKGEEPYIRAAMMLPERYLGAVMKLCMEKRGVNSNMNYTGPGRVELSYEMPLAEVIYDFYDRFKSVTQGYGSFDYDIIDYRDSNLVLMDILVNSEKVDALSQIVHRERARSRALLACDRLKEEIPKQMFKIAIQGAIGGEIIARSTISAFRKDVTAKCYGGDITRKRKLLEKQKAGKKRMKMIGSVSIPQSAFLAVLKSDTD",
+                "MNILIFGPNGSGKGTQGAIVQKKYGVPHIETGVIFRQNISKKTPLGEKAKAFIDRGELVPDDITIPMILDRLKEDDCKKGWLLDGFPRNLAQAEALWAALQKENINLDYVIEINLDREIAKKRIMGRRLCKTDNNHPNNIFIDAIKPNDKAGKLSCRVCGCEELSARADDQDTAAIDKRHGIYYDTKTGTLAAVNYFKDRTKVIGVDGSVGVKEVSEELMKKLA"
+            ],
+            "species": "Deltaproteobacteria bacterium HGW-Deltaproteobacteria-13",
+            "taxID": "2013740"
+        },
+        "assembly_id": [
+            "PKN53458.1",
+            "GCA_002840555.1",
+            "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/840/555/GCA_002840555.1_ASM284055v1"
+        ],
+        "species": "Deltaproteobacteria bacterium HGW-Deltaproteobacteria-13"
+    }
+}

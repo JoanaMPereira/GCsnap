@@ -1,0 +1,699 @@
+{
+    "23": {
+        "name": "Competence protein A",
+        "members": [
+            "KXK07987.1",
+            "OGY24463.1",
+            "PIU69086.1",
+            "KKS90377.1",
+            "OGY31580.1",
+            "CDE95134.1",
+            "KKT84968.1"
+        ],
+        "all_names": [
+            "Competence protein A",
+            "hypothetical protein",
+            "hypothetical protein",
+            "type IV pilus assembly protein PilM",
+            "hypothetical protein",
+            "cell division protein ftsA",
+            "putative type 4 fimbrial biogenesis protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:plasma membrane",
+                "P:cell cycle",
+                "P:cell division"
+            ],
+            "Keywords": [
+                "Cell cycle",
+                "Cell division",
+                "Cell membrane",
+                "Membrane"
+            ],
+            "Function_description": "Cell division protein that is involved in the assembly of the Z ring. May serve as a membrane anchor for the Z ring"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/R7M240",
+        "uniprot_code": "R7M240",
+        "model_state": "Model exists"
+    },
+    "24": {
+        "name": "ribonuclease III",
+        "members": [
+            "KXK07981.1",
+            "OGY24469.1",
+            "PIU69081.1",
+            "KKS90372.1",
+            "OGY31574.1",
+            "KKT84962.1",
+            "PJE67292.1"
+        ],
+        "all_names": [
+            "Ribonuclease 3",
+            "ribonuclease III",
+            "ribonuclease III",
+            "Ribonuclease 3",
+            "ribonuclease III",
+            "Ribonuclease 3",
+            "ribonuclease III"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:metal ion binding",
+                "F:ribonuclease III activity",
+                "F:rRNA binding",
+                "P:mRNA processing",
+                "P:rRNA processing",
+                "P:tRNA processing"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "Endonuclease",
+                "Hydrolase",
+                "Magnesium",
+                "Metal-binding",
+                "mRNA processing",
+                "Nuclease",
+                "RNA-binding",
+                "rRNA processing",
+                "rRNA-binding",
+                "tRNA processing"
+            ],
+            "Function_description": "Digests double-stranded RNA. Involved in the processing of primary rRNA transcript to yield the immediate precursors to the large and small rRNAs (23S and 16S). Processes some mRNAs, and tRNAs when they are encoded in the rRNA operon. Processes pre-crRNA and tracrRNA of type II CRISPR loci if present in the organism"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A0G1CY76",
+        "uniprot_code": "A0A0G1CY76",
+        "model_state": "Model exists"
+    },
+    "25": {
+        "name": "transcription antitermination factor NusB",
+        "members": [
+            "KXK07980.1",
+            "OGY24471.1",
+            "PIU69079.1",
+            "KKS90370.1",
+            "OGY31572.1",
+            "KKT84960.1",
+            "PJE67293.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "transcription antitermination factor NusB",
+            "transcription antitermination factor NusB",
+            "N utilization substance protein B-like protein",
+            "transcription antitermination factor NusB",
+            "N utilization substance protein B-like protein",
+            "transcription antitermination factor NusB"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:RNA binding",
+                "P:DNA-templated transcription termination",
+                "P:regulation of DNA-templated transcription",
+                "P:transcription antitermination"
+            ],
+            "Keywords": [
+                "RNA-binding",
+                "Transcription",
+                "Transcription antitermination",
+                "Transcription regulation"
+            ],
+            "Function_description": "Involved in transcription antitermination. Required for transcription of ribosomal RNA (rRNA) genes. Binds specifically to the boxA antiterminator sequence of the ribosomal RNA (rrn) operons"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A0G1CX82",
+        "uniprot_code": "A0A0G1CX82",
+        "model_state": "Model exists"
+    },
+    "26": {
+        "name": "cold-shock protein",
+        "members": [
+            "OQY14488.1",
+            "PKN53457.1"
+        ],
+        "all_names": [
+            "cold-shock protein",
+            "cold-shock protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytosol",
+                "F:nucleic acid binding"
+            ],
+            "Keywords": [
+                "Cytoplasm"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1W9TZV6",
+        "uniprot_code": "A0A1W9TZV6",
+        "model_state": "Model exists"
+    },
+    "27": {
+        "name": "glycine--tRNA ligase subunit alpha",
+        "members": [
+            "WP_165059988.1",
+            "WP_028264292.1",
+            "WP_123208287.1",
+            "CDD67301.1",
+            "PWL79273.1",
+            "WP_012798240.1",
+            "WP_013708729.1",
+            "WP_231699617.1",
+            "WP_066661792.1",
+            "WP_165247055.1",
+            "WP_077597996.1"
+        ],
+        "all_names": [
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase alpha subunit",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha",
+            "glycine--tRNA ligase subunit alpha"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:ATP binding",
+                "F:glycine-tRNA ligase activity",
+                "P:glycyl-tRNA aminoacylation"
+            ],
+            "Keywords": [
+                "Aminoacyl-tRNA synthetase",
+                "ATP-binding",
+                "Cytoplasm",
+                "Ligase",
+                "Nucleotide-binding",
+                "Protein biosynthesis"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/R7BNB1",
+        "uniprot_code": "R7BNB1",
+        "model_state": "Model exists"
+    },
+    "28": {
+        "name": "type I DNA topoisomerase",
+        "members": [
+            "PKO07032.1",
+            "WP_095041876.1",
+            "OGO26186.1"
+        ],
+        "all_names": [
+            "type I DNA topoisomerase",
+            "type I DNA topoisomerase",
+            "DNA topoisomerase I"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:chromosome",
+                "F:DNA binding",
+                "F:DNA topoisomerase type I (single strand cut, ATP-independent) activity",
+                "F:metal ion binding",
+                "P:DNA topological change"
+            ],
+            "Keywords": [
+                "DNA-binding",
+                "Isomerase",
+                "Magnesium",
+                "Metal-binding",
+                "Topoisomerase",
+                "Zinc",
+                "Zinc-finger"
+            ],
+            "Function_description": "Releases the supercoiling and torsional tension of DNA, which is introduced during the DNA replication and transcription, by transiently cleaving and rejoining one strand of the DNA duplex. Introduces a single-strand break via transesterification at a target site in duplex DNA. The scissile phosphodiester is attacked by the catalytic tyrosine of the enzyme, resulting in the formation of a DNA-(5'-phosphotyrosyl)-enzyme intermediate and the expulsion of a 3'-OH DNA strand. The free DNA strand then undergoes passage around the unbroken strand, thus removing DNA supercoils. Finally, in the religation step, the DNA 3'-OH attacks the covalent intermediate to expel the active-site tyrosine and restore the DNA phosphodiester backbone"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1F8PSM6",
+        "uniprot_code": "A0A1F8PSM6",
+        "model_state": "Model exists"
+    },
+    "29": {
+        "name": "mannose-1-phosphate guanylyltransferase",
+        "members": [
+            "PKO07033.1",
+            "WP_095041877.1",
+            "OQY91751.1"
+        ],
+        "all_names": [
+            "mannose-1-phosphate guanylyltransferase",
+            "NTP transferase domain-containing protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:nucleotidyltransferase activity",
+                "P:biosynthetic process"
+            ],
+            "Keywords": [
+                "Nucleotidyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A2N2NLE9",
+        "uniprot_code": "A0A2N2NLE9",
+        "model_state": "Model exists"
+    },
+    "30": {
+        "name": "DNA protecting protein DprA",
+        "members": [
+            "PKO07034.1",
+            "WP_095041878.1",
+            "OGO26175.1",
+            "OQY91749.1"
+        ],
+        "all_names": [
+            "DNA-protecting protein DprA",
+            "DNA-processing protein DprA",
+            "DNA protecting protein DprA",
+            "DNA protecting protein DprA"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "P:DNA-mediated transformation"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1F8PSW1",
+        "uniprot_code": "A0A1F8PSW1",
+        "model_state": "Model exists"
+    },
+    "31": {
+        "name": "DegV family protein",
+        "members": [
+            "PKO07039.1",
+            "OGO26179.1"
+        ],
+        "all_names": [
+            "DegV family protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:lipid binding"
+            ],
+            "Keywords": [
+                "Lipid-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1F8PSQ0",
+        "uniprot_code": "A0A1F8PSQ0",
+        "model_state": "Model exists"
+    },
+    "32": {
+        "name": "RNA methyltransferase",
+        "members": [
+            "WP_084053925.1",
+            "PID75104.1",
+            "WP_089722708.1",
+            "PWM50523.1",
+            "CAE79959.1",
+            "PIE57016.1",
+            "OGF52862.1",
+            "OQC43026.1",
+            "OGC16056.1",
+            "OQB21458.1",
+            "WP_012861503.1"
+        ],
+        "all_names": [
+            "RNA methyltransferase",
+            "hypothetical protein",
+            "RNA methyltransferase",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "RNA methyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:methyltransferase activity",
+                "P:methylation"
+            ],
+            "Keywords": [
+                "Methyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/Q6ML98",
+        "uniprot_code": "Q6ML98",
+        "model_state": "Model exists"
+    },
+    "33": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_015218060.1",
+            "WP_155082905.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Coiled coil"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/K9Z1T3",
+        "uniprot_code": "K9Z1T3",
+        "model_state": "Model exists"
+    },
+    "34": {
+        "name": "GuaB3 family IMP dehydrogenase-related protein",
+        "members": [
+            "WP_006528480.1",
+            "WP_124791573.1"
+        ],
+        "all_names": [
+            "GuaB3 family IMP dehydrogenase-related protein",
+            "IMP dehydrogenase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:IMP dehydrogenase activity",
+                "P:purine nucleotide biosynthetic process"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/L8LRK7",
+        "uniprot_code": "L8LRK7",
+        "model_state": "Model exists"
+    },
+    "35": {
+        "name": "unknown protein",
+        "members": [
+            "BAG05586.1",
+            "WP_194014222.1"
+        ],
+        "all_names": [
+            "unknown protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/B0JI24",
+        "uniprot_code": "B0JI24",
+        "model_state": "Model exists"
+    },
+    "36": {
+        "name": "cation efflux system protein",
+        "members": [
+            "BAG05580.1",
+            "WP_228009515.1"
+        ],
+        "all_names": [
+            "cation efflux system protein",
+            "cation diffusion facilitator family transporter"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:cation transmembrane transporter activity"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Transport"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/B0JI18",
+        "uniprot_code": "B0JI18",
+        "model_state": "Model exists"
+    },
+    "37": {
+        "name": "DUF3769 domain-containing protein",
+        "members": [
+            "WP_012954186.1",
+            "WP_107671290.1"
+        ],
+        "all_names": [
+            "DUF3769 domain-containing protein",
+            "DUF3769 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/D3EPU9",
+        "uniprot_code": "D3EPU9",
+        "model_state": "Model exists"
+    },
+    "38": {
+        "name": "ABC transporter ATP-binding protein",
+        "members": [
+            "WP_106287118.1",
+            "WP_020370736.1",
+            "WP_173112683.1",
+            "WP_173112686.1",
+            "PZM91781.1",
+            "OQX29575.1"
+        ],
+        "all_names": [
+            "ABC transporter ATP-binding protein",
+            "LPS export ABC transporter ATP-binding protein",
+            "ATP-binding cassette domain-containing protein",
+            "ATP-binding cassette domain-containing protein",
+            "ABC transporter ATP-binding protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding",
+                "C:ATP-binding cassette (ABC) transporter complex",
+                "P:transmembrane transport"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Nucleotide-binding"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1W9NB77",
+        "uniprot_code": "A0A1W9NB77",
+        "model_state": "Model exists"
+    },
+    "39": {
+        "name": "fatty acyl-AMP ligase",
+        "members": [
+            "WP_006511795.1",
+            "WP_014258531.1",
+            "WP_084057343.1",
+            "WP_155303088.1"
+        ],
+        "all_names": [
+            "fatty acyl-AMP ligase",
+            "acetate--CoA ligase",
+            "acetoacetate--CoA ligase",
+            "AMP-binding protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:acetate-CoA ligase activity",
+                "F:AMP binding",
+                "F:ATP binding",
+                "F:metal ion binding",
+                "P:acetyl-CoA biosynthetic process from acetate"
+            ],
+            "Keywords": [
+                "Acetylation",
+                "ATP-binding",
+                "Ligase",
+                "Magnesium",
+                "Metal-binding",
+                "Nucleotide-binding"
+            ],
+            "Function_description": "Catalyzes the conversion of acetate into acetyl-CoA (AcCoA), an essential intermediate at the junction of anabolic and catabolic pathways. AcsA undergoes a two-step reaction. In the first half reaction, AcsA combines acetate with ATP to form acetyl-adenylate (AcAMP) intermediate. In the second half reaction, it can then transfer the acetyl group from AcAMP to the sulfhydryl group of CoA, forming the product AcCoA"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/F3YU73",
+        "uniprot_code": "F3YU73",
+        "model_state": "Model exists"
+    },
+    "40": {
+        "name": "ABC-type multidrug transport system%2C ATPase and permease component",
+        "members": [
+            "AFY81346.1",
+            "WP_146296157.1",
+            "CDE95129.1"
+        ],
+        "all_names": [
+            "ABC-type multidrug transport system%2C ATPase and permease component",
+            "ABC transporter ATP-binding protein/permease",
+            "putative lipid A export ATP-binding/permease protein MsbA"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:ABC-type transporter activity",
+                "F:ATP binding"
+            ],
+            "Keywords": [
+                "ATP-binding",
+                "Membrane",
+                "Nucleotide-binding",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/K9TGU7",
+        "uniprot_code": "K9TGU7",
+        "model_state": "Model exists"
+    },
+    "41": {
+        "name": "lipid-A-disaccharide synthase",
+        "members": [
+            "RNJ67073.1",
+            "WP_012954189.1",
+            "WP_107671287.1"
+        ],
+        "all_names": [
+            "lipid-A-disaccharide synthase",
+            "lipid-A-disaccharide synthase",
+            "lipid-A-disaccharide synthase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:lipid-A-disaccharide synthase activity",
+                "P:lipid A biosynthetic process"
+            ],
+            "Keywords": [
+                "Glycosyltransferase",
+                "Lipid A biosynthesis",
+                "Lipid biosynthesis",
+                "Lipid metabolism",
+                "Transferase"
+            ],
+            "Function_description": "Condensation of UDP-2,3-diacylglucosamine and 2,3-diacylglucosamine-1-phosphate to form lipid A disaccharide, a precursor of lipid A, a phosphorylated glycolipid that anchors the lipopolysaccharide to the outer membrane of the cell"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A3M9Z2Z6",
+        "uniprot_code": "A0A3M9Z2Z6",
+        "model_state": "Model exists"
+    },
+    "42": {
+        "name": "TMEM165/GDT1 family protein",
+        "members": [
+            "WP_106258372.1",
+            "WP_202925262.1"
+        ],
+        "all_names": [
+            "TMEM165/GDT1 family protein",
+            "TMEM165/GDT1 family protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "43": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_068390418.1",
+            "RNJ67072.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A3M9Z419",
+        "uniprot_code": "A0A3M9Z419",
+        "model_state": "Model exists"
+    },
+    "44": {
+        "name": "response regulator transcription factor",
+        "members": [
+            "WP_068390407.1",
+            "WP_028264298.1",
+            "WP_118694619.1",
+            "WP_077598002.1"
+        ],
+        "all_names": [
+            "response regulator transcription factor",
+            "response regulator transcription factor",
+            "response regulator transcription factor",
+            "response regulator transcription factor"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:DNA binding",
+                "P:phosphorelay signal transduction system",
+                "P:regulation of DNA-templated transcription"
+            ],
+            "Keywords": [
+                "DNA-binding",
+                "Phosphoprotein"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A0S3UBV3",
+        "uniprot_code": "A0A0S3UBV3",
+        "model_state": "Model exists"
+    },
+    "45": {
+        "name": "histidine kinase",
+        "members": [
+            "WP_068817857.1",
+            "WP_246259776.1"
+        ],
+        "all_names": [
+            "histidine kinase",
+            "histidine kinase"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    }
+}

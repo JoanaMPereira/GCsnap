@@ -1,0 +1,593 @@
+{
+    "69": {
+        "name": "aspartate aminotransferase",
+        "members": [
+            "WP_006453858.1",
+            "CBL28402.1"
+        ],
+        "all_names": [
+            "aspartate aminotransferase",
+            "Aspartate/tyrosine/aromatic aminotransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:N2-acetyl-L-ornithine:2-oxoglutarate 5-aminotransferase activity",
+                "F:pyridoxal phosphate binding",
+                "F:succinyldiaminopimelate transaminase activity",
+                "P:biosynthetic process",
+                "F:transaminase activity"
+            ],
+            "Keywords": [
+                "Aminotransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/D4M957",
+        "uniprot_code": "D4M957",
+        "model_state": "Model exists"
+    },
+    "70": {
+        "name": "heme utilization protein HuvX",
+        "members": [
+            "CDM93751.1",
+            "WP_067774029.1",
+            "KST67720.1",
+            "WP_069967884.1",
+            "WP_168571635.1",
+            "OKH36041.1",
+            "ERT09204.1"
+        ],
+        "all_names": [
+            "conserved protein of unknown function",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "heme utilization protein HuvX",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/U7QMJ7",
+        "uniprot_code": "U7QMJ7",
+        "model_state": "Model exists"
+    },
+    "71": {
+        "name": "DEAD/DEAH box helicase",
+        "members": [
+            "WP_121967812.1",
+            "WP_006457724.1"
+        ],
+        "all_names": [
+            "DEAD/DEAH box helicase",
+            "DEAD/DEAH box helicase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:ATP binding",
+                "F:ATP-dependent chromatin remodeler activity"
+            ],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/B4WKP7",
+        "uniprot_code": "B4WKP7",
+        "model_state": "Model exists"
+    },
+    "72": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_026097338.1",
+            "WP_017658666.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "73": {
+        "name": "photosystem II reaction center protein PsbN",
+        "members": [
+            "WP_080808177.1",
+            "WP_121967816.1",
+            "WP_006457718.1",
+            "WP_073607618.1"
+        ],
+        "all_names": [
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN",
+            "photosystem II reaction center protein PsbN"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:plasma membrane-derived thylakoid membrane",
+                "P:photosynthesis"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "May play a role in photosystem I and II biogenesis"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/B4WKQ1",
+        "uniprot_code": "B4WKQ1",
+        "model_state": "Model exists"
+    },
+    "74": {
+        "name": "photosystem II reaction center protein PsbH",
+        "members": [
+            "WP_080808173.1",
+            "WP_121967817.1",
+            "WP_038016562.1",
+            "WP_073607619.1"
+        ],
+        "all_names": [
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH",
+            "photosystem II reaction center protein PsbH"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "C:photosystem II",
+                "C:plasma membrane-derived thylakoid membrane",
+                "F:phosphate ion binding",
+                "P:photosynthesis",
+                "P:protein stabilization"
+            ],
+            "Keywords": [
+                "Membrane",
+                "Photosynthesis",
+                "Photosystem II",
+                "Thylakoid",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": "One of the components of the core complex of photosystem II (PSII), required for its stability and/or assembly. PSII is a light-driven water:plastoquinone oxidoreductase that uses light energy to abstract electrons from H(2)O, generating O(2) and a proton gradient subsequently used for ATP formation. It consists of a core antenna complex that captures photons, and an electron transfer chain that converts photonic excitation into a charge separation"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1U7J867",
+        "uniprot_code": "A0A1U7J867",
+        "model_state": "Model exists"
+    },
+    "75": {
+        "name": "TatA/E family twin arginine-targeting protein translocase",
+        "members": [
+            "WP_080808148.1",
+            "WP_073607620.1"
+        ],
+        "all_names": [
+            "TatA/E family twin arginine-targeting protein translocase",
+            "TatA/E family twin arginine-targeting protein translocase"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of plasma membrane",
+                "C:TAT protein transport complex",
+                "F:protein transmembrane transporter activity",
+                "P:protein transport by the Tat complex"
+            ],
+            "Keywords": [
+                "Cell membrane",
+                "Membrane",
+                "Protein transport",
+                "Translocation",
+                "Transmembrane",
+                "Transmembrane helix",
+                "Transport"
+            ],
+            "Function_description": "Part of the twin-arginine translocation (Tat) system that transports large folded proteins containing a characteristic twin-arginine motif in their signal peptide across membranes. TatA could form the protein-conducting channel of the Tat system"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1U7J853",
+        "uniprot_code": "A0A1U7J853",
+        "model_state": "Model exists"
+    },
+    "76": {
+        "name": "DUF2252 domain-containing protein",
+        "members": [
+            "OUC15101.1",
+            "WP_068817856.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "DUF2252 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A251WHE6",
+        "uniprot_code": "A0A251WHE6",
+        "model_state": "Model exists"
+    },
+    "77": {
+        "name": "Hemolysins-related protein containing CBS domains",
+        "members": [
+            "AIE75568.1",
+            "WP_088243777.1",
+            "PZV25623.1"
+        ],
+        "all_names": [
+            "Hemolysins-related protein containing CBS domains",
+            "hemolysin family protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "alpha-helical",
+            "GO_terms": [
+                "C:integral component of membrane",
+                "F:flavin adenine dinucleotide binding"
+            ],
+            "Keywords": [
+                "CBS domain",
+                "Membrane",
+                "Repeat",
+                "Transmembrane",
+                "Transmembrane helix"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A068N271",
+        "uniprot_code": "A0A068N271",
+        "model_state": "Model exists"
+    },
+    "78": {
+        "name": "tetratricopeptide repeat protein",
+        "members": [
+            "WP_019500121.1",
+            "WP_019500120.1"
+        ],
+        "all_names": [
+            "tetratricopeptide repeat protein",
+            "tetratricopeptide repeat protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "79": {
+        "name": "DUF4278 domain-containing protein",
+        "members": [
+            "WP_169613985.1",
+            "WP_073607613.1"
+        ],
+        "all_names": [
+            "DUF4278 domain-containing protein",
+            "DUF4278 domain-containing protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1U7J871",
+        "uniprot_code": "A0A1U7J871",
+        "model_state": "Model exists"
+    },
+    "80": {
+        "name": "6-carboxytetrahydropterin synthase",
+        "members": [
+            "WP_169613986.1",
+            "WP_073607614.1"
+        ],
+        "all_names": [
+            "6-carboxytetrahydropterin synthase",
+            "6-carboxytetrahydropterin synthase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:6-carboxy-5,6,7,8-tetrahydropterin synthase activity",
+                "F:metal ion binding"
+            ],
+            "Keywords": [
+                "Lyase",
+                "Metal-binding",
+                "Zinc"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1U7J8C7",
+        "uniprot_code": "A0A1U7J8C7",
+        "model_state": "Model exists"
+    },
+    "81": {
+        "name": "aspartate--tRNA ligase",
+        "members": [
+            "WP_040655547.1",
+            "PWL79432.1"
+        ],
+        "all_names": [
+            "aspartate--tRNA ligase",
+            "aspartate--tRNA ligase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:aspartate-tRNA ligase activity",
+                "F:aspartate-tRNA(Asn) ligase activity",
+                "F:ATP binding",
+                "F:nucleic acid binding",
+                "P:aspartyl-tRNA aminoacylation"
+            ],
+            "Keywords": [
+                "Aminoacyl-tRNA synthetase",
+                "ATP-binding",
+                "Cytoplasm",
+                "Ligase",
+                "Nucleotide-binding",
+                "Protein biosynthesis"
+            ],
+            "Function_description": "Aspartyl-tRNA synthetase with relaxed tRNA specificity since it is able to aspartylate not only its cognate tRNA(Asp) but also tRNA(Asn). Reaction proceeds in two steps: L-aspartate is first activated by ATP to form Asp-AMP and then transferred to the acceptor end of tRNA(Asp/Asn)"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A316P3A8",
+        "uniprot_code": "A0A316P3A8",
+        "model_state": "Model exists"
+    },
+    "82": {
+        "name": "methionyl-tRNA formyltransferase",
+        "members": [
+            "WP_022606382.1",
+            "PCI38743.1",
+            "OGS05590.1",
+            "OGR58989.1"
+        ],
+        "all_names": [
+            "methionyl-tRNA formyltransferase",
+            "methionyl-tRNA formyltransferase",
+            "methionyl-tRNA formyltransferase",
+            "methionyl-tRNA formyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:methionyl-tRNA formyltransferase activity"
+            ],
+            "Keywords": [
+                "Protein biosynthesis",
+                "Transferase"
+            ],
+            "Function_description": "Attaches a formyl group to the free amino group of methionyl-tRNA(fMet). The formyl group appears to play a dual role in the initiator identity of N-formylmethionyl-tRNA by promoting its recognition by IF2 and preventing the misappropriation of this tRNA by the elongation apparatus"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1F9RYQ5",
+        "uniprot_code": "A0A1F9RYQ5",
+        "model_state": "Model exists"
+    },
+    "83": {
+        "name": "asparaginase",
+        "members": [
+            "WP_015126248.1",
+            "OLP20297.1"
+        ],
+        "all_names": [
+            "asparaginase",
+            "asparaginase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:asparaginase activity"
+            ],
+            "Keywords": [
+                "Hydrolase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A1Q8ZJJ4",
+        "uniprot_code": "A0A1Q8ZJJ4",
+        "model_state": "Model exists"
+    },
+    "84": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_171971701.1",
+            "WP_067774026.1",
+            "WP_015200943.1",
+            "WP_071102118.1",
+            "WP_241829324.1",
+            "WP_246259778.1",
+            "AFY81345.1",
+            "OKH36040.1",
+            "ERT09093.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [],
+            "Keywords": [
+                "Signal"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/K9TFN0",
+        "uniprot_code": "K9TFN0",
+        "model_state": "Model exists"
+    },
+    "85": {
+        "name": "Demethylmenaquinone methyltransferase",
+        "members": [
+            "PZD71762.1",
+            "OUC15100.1"
+        ],
+        "all_names": [
+            "Demethylmenaquinone methyltransferase",
+            "SAM-dependent methyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:methyltransferase activity",
+                "P:methylation",
+                "F:demethylmenaquinone methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylmenaquinol methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylmenaquinol-7 methyltransferase activity",
+                "F:S-adenosylmethionine:2-demethylquinol-8 methyltransferase activity"
+            ],
+            "Keywords": [
+                "Methyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A251WHR9",
+        "uniprot_code": "A0A251WHR9",
+        "model_state": "Model exists"
+    },
+    "86": {
+        "name": "Soluble epoxide hydrolase",
+        "members": [
+            "PZD71786.1",
+            "WP_015192777.1"
+        ],
+        "all_names": [
+            "Soluble epoxide hydrolase",
+            "alpha/beta hydrolase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:epoxide hydrolase activity",
+                "F:haloacetate dehalogenase activity"
+            ],
+            "Keywords": [
+                "Hydrolase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A2W1JDE7",
+        "uniprot_code": "A0A2W1JDE7",
+        "model_state": "Model exists"
+    },
+    "87": {
+        "name": "hypothetical protein",
+        "members": [
+            "WP_175551105.1",
+            "WP_193372405.1"
+        ],
+        "all_names": [
+            "hypothetical protein",
+            "hypothetical protein"
+        ],
+        "function": "",
+        "structure": "",
+        "uniprot_code": "",
+        "model_state": "Not possible to map"
+    },
+    "88": {
+        "name": "ACP S-malonyltransferase",
+        "members": [
+            "QLL29337.1",
+            "PIE57021.1"
+        ],
+        "all_names": [
+            "ACP S-malonyltransferase",
+            "[acyl-carrier-protein] S-malonyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "F:[acyl-carrier-protein] S-malonyltransferase activity"
+            ],
+            "Keywords": [
+                "Acyltransferase",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A2G6MAH1",
+        "uniprot_code": "A0A2G6MAH1",
+        "model_state": "Model exists"
+    },
+    "89": {
+        "name": "1-acyl-sn-glycerol-3-phosphate acyltransferase",
+        "members": [
+            "AXY68225.1",
+            "TVQ43655.1"
+        ],
+        "all_names": [
+            "1-acyl-sn-glycerol-3-phosphate acyltransferase",
+            "1-acyl-sn-glycerol-3-phosphate acyltransferase"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:membrane",
+                "F:1-acylglycerol-3-phosphate O-acyltransferase activity",
+                "P:phospholipid biosynthetic process",
+                "F:acyltransferase activity"
+            ],
+            "Keywords": [
+                "Acyltransferase",
+                "Lipid biosynthesis",
+                "Lipid metabolism",
+                "Phospholipid biosynthesis",
+                "Phospholipid metabolism",
+                "Transferase"
+            ],
+            "Function_description": ""
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/A0A3B7MF62",
+        "uniprot_code": "A0A3B7MF62",
+        "model_state": "Model exists"
+    },
+    "90": {
+        "name": "SsrA-binding protein SmpB",
+        "members": [
+            "WP_015166539.1",
+            "WP_025228704.1"
+        ],
+        "all_names": [
+            "SsrA-binding protein SmpB",
+            "SsrA-binding protein SmpB"
+        ],
+        "function": {
+            "TM_topology": "",
+            "GO_terms": [
+                "C:cytoplasm",
+                "F:RNA binding",
+                "P:trans-translation"
+            ],
+            "Keywords": [
+                "Cytoplasm",
+                "RNA-binding"
+            ],
+            "Function_description": "Required for rescue of stalled ribosomes mediated by trans-translation. Binds to transfer-messenger RNA (tmRNA), required for stable association of tmRNA with ribosomes. tmRNA and SmpB together mimic tRNA shape, replacing the anticodon stem-loop with SmpB. tmRNA is encoded by the ssrA gene; the 2 termini fold to resemble tRNA(Ala) and it encodes a 'tag peptide', a short internal open reading frame. During trans-translation Ala-aminoacylated tmRNA acts like a tRNA, entering the A-site of stalled ribosomes, displacing the stalled mRNA. The ribosome then switches to translate the ORF on the tmRNA; the nascent peptide is terminated with the 'tag peptide' encoded by the tmRNA and targeted for degradation. The ribosome is freed to recommence translation, which seems to be the essential function of trans-translation"
+        },
+        "structure": "https://swissmodel.expasy.org/repository/uniprot/K9SN62",
+        "uniprot_code": "K9SN62",
+        "model_state": "Model exists"
+    }
+}
