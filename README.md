@@ -105,7 +105,7 @@ The figure below depicts the cluster map and the 'most conserved genomic feature
 
 ### NEW: 3. Advanced genomic context analysis
 
-Since version 1.0.16, GCsnap incorporates an "Advanced mode", which can be used by setting the `-operon_cluster_advanced` flag to True. This mode uses `PacMap` (https://github.com/YingfanWang/PaCMAP) to identify clusters of similar genomic contexts and, instead of displaying all contexts in one single view, first generates a summary page displaying the clusters of genomic contexts found as well as a "family composition spectrum" that allows for an easier interpretation of the diversity of genomic contexts identified. In addition, a detailed page is generated for each genomic context type defined, which includes the classic genomic context block but also a table listing the properties of families found. This is useful for very large input sets (thousands of sequences or large clans maps)
+Since version 1.0.16, GCsnap incorporates an "Advanced mode", which can be used by setting the `-operon_cluster_advanced` flag to True. This mode uses `PaCMAP` (https://github.com/YingfanWang/PaCMAP) to search for clusters of similar genomic contexts and, instead of displaying all contexts in one single view, first generates a summary page displaying the clusters of genomic contexts found and a "family composition spectrum", allowing for better interpretation of the diversity of genomic contexts found. In addition, a detailed page is generated for each genomic context cluster/type defined, which includes the classic genomic context block but also a table listing the properties of the protein families defined. This new mode is useful for the analysis of very large input sets (thousands of sequences or large CLANS cluster maps)
 
 Using the example in folder `examples/yqlc_KHII/` and the input file `yqlc_nostoc_blast_nrbac70.clans` without defining target clusters (i.e., it will use all sequences in the map), we can run a simple advanced job by running:
 
@@ -113,11 +113,9 @@ Using the example in folder `examples/yqlc_KHII/` and the input file `yqlc_nosto
 GCsnap -targets yqlc_nostoc_blast_nrbac70.clans -get_taxonomy True -operon_cluster_advanced True -get_pdb True -get_functional_annotations True -interactive True
 ```
 
-The output summary page displays on the top 3 different scatter plots, where the color of the dots corresponds to the type of the genomic context they belong to. As the output file was a CLANS file, GCsnap recognized it as such and so diplays it. Otherwise, the area would be white unless an input CLANS file is given explicitly.
-
+The output summary page displays on the top 3 different scatter plots, where the color of the dots corresponds to the type of the genomic context they belong to. As the input file was a CLANS file, GCsnap recognized it as such and thus diplays it. Otherwise, the area would be white unless an input CLANS file is given explicitly. Each sequence is listed below these 3 scatter plots within a table, with their corresponding associated genomic context type as well as their collected taxonomy. The button next to the top of the table allows for changing the display and shows a sorted spectrum of family compositions for each context type.
 ![figure3](https://github.com/JoanaMPereira/GCsnap/blob/master/examples/Fig3.png)
 
-Each sequence is listed below in a table, with their corresponding associated genomic context type as well as the collected taxonomy. The button next to the top of the table allows for changing the display to show a sorted spectrum of family compositions for each context type:
 
 The figure below shows the summary page for genomic context type 0000.
 ![figure4](https://github.com/JoanaMPereira/GCsnap/blob/master/examples/Fig4.png)
