@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Structural Computational Biology, Biozentrum University of Basel, Basel Switzerland
-## Last changed: 16.10.2022
+## Last changed: 02.11.2022
 
 import subprocess as sp
 import multiprocessing as mp
@@ -117,30 +117,30 @@ def merge_intervals(intervals):
 
 def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS'):
 
-	if 'UniRef' in uniprot_code:
-		uniprot_label = uniprot_code.split('_')[-1]
-	elif uniprot_code.startswith('UPI'):  # if it is a UniParc ID
-		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'UniParc')[uniprot_code]
-	elif uniprot_code.startswith('ENSG'): # if it is an ensemble gene ID
-		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'Ensembl')[uniprot_code]
-	elif uniprot_code.isnumeric():		# it is a gene id
-		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'GeneID')[uniprot_code]
-	else:
-		uniprot_label = uniprot_code
+    if 'UniRef' in uniprot_code:
+        uniprot_label = uniprot_code.split('_')[-1]
+    elif uniprot_code.startswith('UPI'):  # if it is a UniParc ID
+        uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'UniParc')[uniprot_code]
+    elif uniprot_code.startswith('ENSG'): # if it is an ensemble gene ID
+        uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'Ensembl')[uniprot_code]
+    elif uniprot_code.isnumeric():        # it is a gene id
+        uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'GeneID')[uniprot_code]
+    else:
+        uniprot_label = uniprot_code
 
-	results = get_mappings_through_uniprot([uniprot_code], from_database = 'UniProtKB_AC-ID', to_database = search_database)
+    results = get_mappings_through_uniprot([uniprot_code], from_database = 'UniProtKB_AC-ID', to_database = search_database)
 
-	ncbi_code = 'nan'
-	if results is not None:
-		ncbi_code = results[0]['to']
+    ncbi_code = 'nan'
+    if results is not None:
+        ncbi_code = results[0]['to']
 
-	if ncbi_code == 'nan':
-		if search_database != 'RefSeq_Protein':
-			ncbi_code, search_database =  map_uniprot_to_ncbi(uniprot_code, search_database = 'RefSeq_Protein')
-	else:
-		print(" ... {} corresponds to {} in {} database".format(uniprot_code, ncbi_code, search_database))
+    if ncbi_code == 'nan':
+        if search_database != 'RefSeq_Protein':
+            ncbi_code, search_database =  map_uniprot_to_ncbi(uniprot_code, search_database = 'RefSeq_Protein')
+    else:
+        print(" ... {} corresponds to {} in {} database".format(uniprot_code, ncbi_code, search_database))
 
-	return ncbi_code, search_database
+    return ncbi_code, search_database
 
 def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
@@ -155,7 +155,7 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 		ncbi_code, search_database = map_uniprot_to_ncbi(uniprot_code)
 
 	try:
-		handle = Entrez.efetch(db="protein", id=ncbi_code, rettype="ipg", retmode="xml")
+		handle = Entrez.efetch(db="ipg", id=ncbi_code, rettype="ipg", retmode="xml")
 		record = Entrez.read(handle)
 
 		assemblies_found = {}
@@ -630,165 +630,166 @@ def get_protein_families_summary(in_syntenies, write_to_file = True, out_label =
 
 # 4. Routines to annotate functions and find structures for protein families
 
-def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_database = 'UniProtKB', POLLING_INTERVAL = 10, API_URL = "https://rest.uniprot.org"):
+def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_database = 'UniProtKB', POLLING_INTERVAL = 3, API_URL = "https://rest.uniprot.org"):
 
-	# The code below is copy-pasted from the help page of UniProt API (https://www.uniprot.org/help/id_mapping)
+    # The code below is copy-pasted from the help page of UniProt API (https://www.uniprot.org/help/id_mapping)
 
-	def check_response(response):
-		try:
-			response.raise_for_status()
-		except requests.HTTPError:
-			raise
+    retries = Retry(total=5, backoff_factor=0.25, status_forcelist=[500, 502, 503, 504])
+    session = requests.Session()
+    session.mount("https://", HTTPAdapter(max_retries=retries))
 
-	def submit_id_mapping(from_db, to_db, ids):
-		request = requests.post(f"{API_URL}/idmapping/run",data={"from": from_db, "to": to_db, "ids": ",".join(ids)})
-		check_response(request)
-		return request.json()["jobId"]
+    def check_response(response):
+        try:
+            response.raise_for_status()
+        except requests.HTTPError:
+            raise
 
-	def get_next_link(headers):
-		re_next_link = re.compile(r'<(.+)>; rel="next"')
-		if "Link" in headers:
-			match = re_next_link.match(headers["Link"])
-			if match:
-				return match.group(1)
+    def submit_id_mapping(from_db, to_db, ids):
+        request = requests.post(f"{API_URL}/idmapping/run",data={"from": from_db, "to": to_db, "ids": ",".join(ids)})
+        check_response(request)
+        return request.json()["jobId"]
 
-	def check_id_mapping_results_ready(job_id):
-		while True:
-			request = session.get(f"{API_URL}/idmapping/status/{job_id}")
-			check_response(request)
-			j = request.json()
-			if "jobStatus" in j:
-				if j["jobStatus"] == "RUNNING":
-					# print(f"Retrying in {POLLING_INTERVAL}s")
-					time.sleep(POLLING_INTERVAL)
-				else:
-					raise Exception(j["jobStatus"])
-			else:
-				try:
-					return bool(j["results"] or j["failedIds"])
-				except:
-					return False
+    def get_next_link(headers):
+        re_next_link = re.compile(r'<(.+)>; rel="next"')
+        if "Link" in headers:
+            match = re_next_link.match(headers["Link"])
+            if match:
+                return match.group(1)
 
-	def get_batch(batch_response, file_format, compressed):
-		batch_url = get_next_link(batch_response.headers)
-		while batch_url:
-			batch_response = session.get(batch_url)
-			batch_response.raise_for_status()
-			yield decode_results(batch_response, file_format, compressed)
-			batch_url = get_next_link(batch_response.headers)
+    def check_id_mapping_results_ready(job_id):
+        while True:
+            request = session.get(f"{API_URL}/idmapping/status/{job_id}")
+            check_response(request)
+            j = request.json()
+            if "jobStatus" in j:
+                if j["jobStatus"] == "RUNNING":
+                    print(f"Retrying in {POLLING_INTERVAL}s")
+                    time.sleep(POLLING_INTERVAL)
+                else:
+                    raise Exception(j["jobStatus"])
+            else:
+                return bool(j["results"] or j["failedIds"])
 
-	def combine_batches(all_results, batch_results, file_format):
-		if file_format == "json":
-			for key in ("results", "failedIds"):
-				if key in batch_results and batch_results[key]:
-					all_results[key] += batch_results[key]
-		elif file_format == "tsv":
-			return all_results + batch_results[1:]
-		else:
-			return all_results + batch_results
-		return all_results
+    def get_batch(batch_response, file_format, compressed):
+        batch_url = get_next_link(batch_response.headers)
+        while batch_url:
+            batch_response = session.get(batch_url)
+            batch_response.raise_for_status()
+            yield decode_results(batch_response, file_format, compressed)
+            batch_url = get_next_link(batch_response.headers)
 
-	def get_id_mapping_results_link(job_id):
-		url = f"{API_URL}/idmapping/details/{job_id}"
-		request = session.get(url)
-		check_response(request)
-		return request.json()["redirectURL"]
+    def combine_batches(all_results, batch_results, file_format):
+        if file_format == "json":
+            for key in ("results", "failedIds"):
+                if key in batch_results and batch_results[key]:
+                    all_results[key] += batch_results[key]
+        elif file_format == "tsv":
+            return all_results + batch_results[1:]
+        else:
+            return all_results + batch_results
+        return all_results
 
-	def decode_results(response, file_format, compressed):
-		if compressed:
-			decompressed = zlib.decompress(response.content, 16 + zlib.MAX_WBITS)
-			if file_format == "json":
-				j = json.loads(decompressed.decode("utf-8"))
-				return j
-			elif file_format == "tsv":
-				return [line for line in decompressed.decode("utf-8").split("\n") if line]
-			elif file_format == "xlsx":
-				return [decompressed]
-			elif file_format == "xml":
-				return [decompressed.decode("utf-8")]
-			else:
-				return decompressed.decode("utf-8")
-		elif file_format == "json":
-			return response.json()
-		elif file_format == "tsv":
-			return [line for line in response.text.split("\n") if line]
-		elif file_format == "xlsx":
-			return [response.content]
-		elif file_format == "xml":
-			return [response.text]
-		return response.text
+    def get_id_mapping_results_link(job_id):
+        url = f"{API_URL}/idmapping/details/{job_id}"
+        request = session.get(url)
+        check_response(request)
+        return request.json()["redirectURL"]
 
-	def get_xml_namespace(element):
-		m = re.match(r"\{(.*)\}", element.tag)
-		return m.groups()[0] if m else ""
+    def decode_results(response, file_format, compressed):
+        if compressed:
+            decompressed = zlib.decompress(response.content, 16 + zlib.MAX_WBITS)
+            if file_format == "json":
+                j = json.loads(decompressed.decode("utf-8"))
+                return j
+            elif file_format == "tsv":
+                return [line for line in decompressed.decode("utf-8").split("\n") if line]
+            elif file_format == "xlsx":
+                return [decompressed]
+            elif file_format == "xml":
+                return [decompressed.decode("utf-8")]
+            else:
+                return decompressed.decode("utf-8")
+        elif file_format == "json":
+            return response.json()
+        elif file_format == "tsv":
+            return [line for line in response.text.split("\n") if line]
+        elif file_format == "xlsx":
+            return [response.content]
+        elif file_format == "xml":
+            return [response.text]
+        return response.text
 
-	def merge_xml_results(xml_results):
-		merged_root = ElementTree.fromstring(xml_results[0])
-		for result in xml_results[1:]:
-			root = ElementTree.fromstring(result)
-			for child in root.findall("{http://uniprot.org/uniprot}entry"):
-				merged_root.insert(-1, child)
-		ElementTree.register_namespace("", get_xml_namespace(merged_root[0]))
-		return ElementTree.tostring(merged_root, encoding="utf-8", xml_declaration=True)
+    def get_xml_namespace(element):
+        m = re.match(r"\{(.*)\}", element.tag)
+        return m.groups()[0] if m else ""
 
-	def get_id_mapping_results_search(url):
-		parsed = urlparse(url)
-		query = parse_qs(parsed.query)
-		file_format = query["format"][0] if "format" in query else "json"
-		if "size" in query:
-			size = int(query["size"][0])
-		else:
-			size = 500
-			query["size"] = size
-		compressed = (query["compressed"][0].lower() == "true" if "compressed" in query else False)
-		parsed = parsed._replace(query=urlencode(query, doseq=True))
-		url = parsed.geturl()
-		request = session.get(url)
-		check_response(request)
-		results = decode_results(request, file_format, compressed)
-		total = int(request.headers["x-total-results"])
-		for i, batch in enumerate(get_batch(request, file_format, compressed), 1):
-			results = combine_batches(results, batch, file_format)
-		if file_format == "xml":
-			return merge_xml_results(results)
-		return results
+    def merge_xml_results(xml_results):
+        merged_root = ElementTree.fromstring(xml_results[0])
+        for result in xml_results[1:]:
+            root = ElementTree.fromstring(result)
+            for child in root.findall("{http://uniprot.org/uniprot}entry"):
+                merged_root.insert(-1, child)
+        ElementTree.register_namespace("", get_xml_namespace(merged_root[0]))
+        return ElementTree.tostring(merged_root, encoding="utf-8", xml_declaration=True)
+
+    def get_id_mapping_results_search(url):
+        parsed = urlparse(url)
+        query = parse_qs(parsed.query)
+        file_format = query["format"][0] if "format" in query else "json"
+        if "size" in query:
+            size = int(query["size"][0])
+        else:
+            size = 500
+            query["size"] = size
+        compressed = (query["compressed"][0].lower() == "true" if "compressed" in query else False)
+        parsed = parsed._replace(query=urlencode(query, doseq=True))
+        url = parsed.geturl()
+        request = session.get(url)
+        check_response(request)
+        results = decode_results(request, file_format, compressed)
+        total = int(request.headers["x-total-results"])
+        for i, batch in enumerate(get_batch(request, file_format, compressed), 1):
+            results = combine_batches(results, batch, file_format)
+        if file_format == "xml":
+            return merge_xml_results(results)
+        return results
 
 
-	job_id = submit_id_mapping(from_db=from_database, to_db="UniProtKB", ids=codes)
-	
-	results = None
-	if check_id_mapping_results_ready(job_id):
-		link = get_id_mapping_results_link(job_id)
-		results = get_id_mapping_results_search(link)['results']
+    job_id = submit_id_mapping(from_db=from_database, to_db=to_database, ids=codes)
+    
+    results = None
+    if check_id_mapping_results_ready(job_id):
+        link = get_id_mapping_results_link(job_id)
+        results = get_id_mapping_results_search(link)['results']
 
-	return results
+    return results
 
 
 def map_codes_to_uniprot(codes, uniprot_codes = {}, from_database = 'RefSeq_Protein'):
-	
-	if uniprot_codes == {}:
-		uniprot_codes = {code: 'nan' for code in codes}
-		
-	results = get_mappings_through_uniprot(codes, from_database = from_database, to_database = 'UniProtKB')
-	
-	if results is not None:
-		for result in results:
-			in_code = result['from']
-			uniprot_code = result['to']['primaryAccession']
-			uniprot_codes[in_code] = uniprot_code 
+    
+    if uniprot_codes == {}:
+        uniprot_codes = {code: 'nan' for code in codes}
+        
+    results = get_mappings_through_uniprot(codes, from_database = from_database, to_database = 'UniProtKB')
+    
+    if results is not None:
+        for result in results:
+            in_code = result['from']
+            uniprot_code = result['to']['primaryAccession']
+            uniprot_codes[in_code] = uniprot_code 
 
-	unmapped_codes = [code for code in uniprot_codes if uniprot_codes[code] == 'nan']
-	if len(unmapped_codes) > 0 and from_database == 'RefSeq_Protein':
-		uniprot_codes =  map_codes_to_uniprot(unmapped_codes, uniprot_codes = uniprot_codes, from_database = 'EMBL-GenBank-DDBJ_CDS')  
+    unmapped_codes = [code for code in uniprot_codes if uniprot_codes[code] == 'nan']
+    if len(unmapped_codes) > 0 and from_database == 'RefSeq_Protein':
+        uniprot_codes =  map_codes_to_uniprot(unmapped_codes, uniprot_codes = uniprot_codes, from_database = 'EMBL-GenBank-DDBJ_CDS')  
 
-	upi_codes = [uniprot_codes[code] for code in uniprot_codes if 'UPI' in uniprot_codes[code]]
-	if len(upi_codes) > 0:
-		upi_codes =  map_codes_to_uniprot(upi_codes, from_database = 'UniParc')
-		for code in uniprot_codes:
-			if uniprot_codes[code] in upi_codes:
-				uniprot_codes[code] = upi_codes[uniprot_codes[code]]
+    upi_codes = [uniprot_codes[code] for code in uniprot_codes if 'UPI' in uniprot_codes[code]]
+    if len(upi_codes) > 0:
+        upi_codes =  map_codes_to_uniprot(upi_codes, from_database = 'UniParc')
+        for code in uniprot_codes:
+            if uniprot_codes[code] in upi_codes:
+                uniprot_codes[code] = upi_codes[uniprot_codes[code]]
 
-	return uniprot_codes
+    return uniprot_codes
 
 def find_uniprot_in_swiss_model_repository(uniprot_code):
 
