@@ -1,5 +1,5 @@
 ## GCsnap.py - devoloped by Joana Pereira, Structural Computational Biology, Biozentrum University of Basel, Basel Switzerland
-## Last changed: 02.11.2022
+## Last changed: 16.11.2022
 
 import subprocess as sp
 import multiprocessing as mp
@@ -115,7 +115,7 @@ def merge_intervals(intervals):
 
 # 1. Routines to get the assembly for a given ncbi_code (or entrezID), download it and parse it
 
-def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS'):
+def map_uniprot_to_ncbi(uniprot_code, search_database = 'RefSeq_Protein'):
 
     if 'UniRef' in uniprot_code:
         uniprot_label = uniprot_code.split('_')[-1]
@@ -135,8 +135,8 @@ def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS')
         ncbi_code = results[0]['to']
 
     if ncbi_code == 'nan':
-        if search_database != 'RefSeq_Protein':
-            ncbi_code, search_database =  map_uniprot_to_ncbi(uniprot_code, search_database = 'RefSeq_Protein')
+        if search_database != 'EMBL-GenBank-DDBJ_CDS':
+            ncbi_code, search_database =  map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS')
     else:
         print(" ... {} corresponds to {} in {} database".format(uniprot_code, ncbi_code, search_database))
 
@@ -4061,7 +4061,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 def main():
 
     # GET INPUTS
-    parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.15', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
+    parser = argparse.ArgumentParser(prog = 'GCsnap v1.0.17', usage = 'GCsnap -targets <targets> -user_email <user_email> [options]', 
                                      description = 'GCsnap is a python-based, local tool that generates interactive snapshots\nof conserved protein-coding genomic contexts.',
                                      epilog = 'Example: GCsnap -targets PHOL_ECOLI A0A0U4VKN7_9PSED A0A0S1Y445_9BORD -user_email <user_email')
 
