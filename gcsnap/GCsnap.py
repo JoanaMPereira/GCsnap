@@ -2611,6 +2611,9 @@ def get_graph_from_matrix(matrix, selected_families_summary, family_colors):
     edge_norm = matplotlib.colors.Normalize(vmin = 0, vmax = 4)
 
     for start_node, end_node, params in G.edges(data=True):
+        if np.isnan(params['weight']):
+            params['weight'] = 0
+            
         edge_color = edge_cmap(edge_norm(round(params['weight'])))
         edge_params['line_width'][(start_node, end_node)] = params['weight']
         edge_params['color'][(start_node, end_node)] = RGB(int(255*list(edge_color)[0]), int(255*list(edge_color)[1]), int(255*list(edge_color)[2]))
