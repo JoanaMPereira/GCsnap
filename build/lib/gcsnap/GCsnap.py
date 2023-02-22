@@ -127,11 +127,11 @@ def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS')
 		uniprot_label = map_codes_to_uniprot([uniprot_code], from_database = 'GeneID')[uniprot_code]
 	else:
 		uniprot_label = uniprot_code
-
+	
 	results = get_mappings_through_uniprot([uniprot_code], from_database = 'UniProtKB_AC-ID', to_database = search_database)
-
+	
 	ncbi_code = 'nan'
-	if results is not None:
+	if results != []:
 		ncbi_code = results[0]['to']
 
 	if ncbi_code == 'nan':
@@ -634,16 +634,23 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 
 	# The code below is copy-pasted from the help page of UniProt API (https://www.uniprot.org/help/id_mapping)
 
+
 	def check_response(response):
 		try:
 			response.raise_for_status()
 		except requests.HTTPError:
+			print(response.json())
 			raise
 
+
 	def submit_id_mapping(from_db, to_db, ids):
-		request = requests.post(f"{API_URL}/idmapping/run",data={"from": from_db, "to": to_db, "ids": ",".join(ids)})
+		request = requests.post(
+			f"{API_URL}/idmapping/run",
+			data={"from": from_db, "to": to_db, "ids": ",".join(ids)},
+		)
 		check_response(request)
 		return request.json()["jobId"]
+
 
 	def get_next_link(headers):
 		re_next_link = re.compile(r'<(.+)>; rel="next"')
@@ -652,6 +659,7 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 			if match:
 				return match.group(1)
 
+
 	def check_id_mapping_results_ready(job_id):
 		while True:
 			request = session.get(f"{API_URL}/idmapping/status/{job_id}")
@@ -659,7 +667,7 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 			j = request.json()
 			if "jobStatus" in j:
 				if j["jobStatus"] == "RUNNING":
-					# print(f"Retrying in {POLLING_INTERVAL}s")
+					print(f"Retrying in {POLLING_INTERVAL}s")
 					time.sleep(POLLING_INTERVAL)
 				else:
 					raise Exception(j["jobStatus"])
@@ -667,7 +675,8 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 				try:
 					return bool(j["results"] or j["failedIds"])
 				except:
-					return False
+					return True
+
 
 	def get_batch(batch_response, file_format, compressed):
 		batch_url = get_next_link(batch_response.headers)
@@ -676,6 +685,7 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 			batch_response.raise_for_status()
 			yield decode_results(batch_response, file_format, compressed)
 			batch_url = get_next_link(batch_response.headers)
+
 
 	def combine_batches(all_results, batch_results, file_format):
 		if file_format == "json":
@@ -688,11 +698,13 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 			return all_results + batch_results
 		return all_results
 
+
 	def get_id_mapping_results_link(job_id):
 		url = f"{API_URL}/idmapping/details/{job_id}"
 		request = session.get(url)
 		check_response(request)
 		return request.json()["redirectURL"]
+
 
 	def decode_results(response, file_format, compressed):
 		if compressed:
@@ -718,9 +730,11 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 			return [response.text]
 		return response.text
 
+
 	def get_xml_namespace(element):
 		m = re.match(r"\{(.*)\}", element.tag)
 		return m.groups()[0] if m else ""
+
 
 	def merge_xml_results(xml_results):
 		merged_root = ElementTree.fromstring(xml_results[0])
@@ -731,6 +745,12 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 		ElementTree.register_namespace("", get_xml_namespace(merged_root[0]))
 		return ElementTree.tostring(merged_root, encoding="utf-8", xml_declaration=True)
 
+
+	def print_progress_batches(batch_index, size, total):
+		n_fetched = min((batch_index + 1) * size, total)
+		print(f"Fetched: {n_fetched} / {total}")
+
+
 	def get_id_mapping_results_search(url):
 		parsed = urlparse(url)
 		query = parse_qs(parsed.query)
@@ -740,26 +760,44 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 		else:
 			size = 500
 			query["size"] = size
-		compressed = (query["compressed"][0].lower() == "true" if "compressed" in query else False)
+		compressed = (
+			query["compressed"][0].lower() == "true" if "compressed" in query else False
+		)
 		parsed = parsed._replace(query=urlencode(query, doseq=True))
 		url = parsed.geturl()
 		request = session.get(url)
 		check_response(request)
 		results = decode_results(request, file_format, compressed)
 		total = int(request.headers["x-total-results"])
+		print_progress_batches(0, size, total)
 		for i, batch in enumerate(get_batch(request, file_format, compressed), 1):
 			results = combine_batches(results, batch, file_format)
+			print_progress_batches(i, size, total)
 		if file_format == "xml":
 			return merge_xml_results(results)
 		return results
 
 
-	job_id = submit_id_mapping(from_db=from_database, to_db="UniProtKB", ids=codes)
-	
-	results = None
+	def get_id_mapping_results_stream(url):
+		if "/stream/" not in url:
+			url = url.replace("/results/", "/results/stream/")
+		request = session.get(url)
+		check_response(request)
+		parsed = urlparse(url)
+		query = parse_qs(parsed.query)
+		file_format = query["format"][0] if "format" in query else "json"
+		compressed = (
+			query["compressed"][0].lower() == "true" if "compressed" in query else False
+		)
+		return decode_results(request, file_format, compressed)
+
+
+	job_id = submit_id_mapping(
+		from_db=from_database, to_db=to_database, ids=codes
+	)
 	if check_id_mapping_results_ready(job_id):
 		link = get_id_mapping_results_link(job_id)
-		results = get_id_mapping_results_search(link)['results']
+		results = get_id_mapping_results_search(link)["results"]
 
 	return results
 
@@ -1057,7 +1095,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
 
-	paCMAP_embedding = pacmap.PaCMAP(n_dims = 2)
+	paCMAP_embedding = pacmap.PaCMAP(n_components = 2)
 	paCMAP_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
 	if coordinates_only:
@@ -1069,7 +1107,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 		if n_dims < 2:
 			n_dims = 2
 
-		paCMAP_embedding = pacmap.PaCMAP(n_dims = n_dims)
+		paCMAP_embedding = pacmap.PaCMAP(n_components = n_dims)
 		paCMAP_N_coordinat = paCMAP_embedding.fit_transform(presence_matrix)
 
 		# find clusters in the paCMAP space
@@ -3692,9 +3730,10 @@ def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = 
 			in_syntenies[target]['flanking_genes']['families'] = []
 			for i, ncbi_code in enumerate(in_syntenies[target]['flanking_genes']['ncbi_codes']):
 				protein_name = in_syntenies[target]['flanking_genes']['names'][i]
-
-				protein_family = protein_clusters[ordered_ncbi_codes.index(ncbi_code)]
-
+				try:
+					protein_family = protein_clusters[ordered_ncbi_codes.index(ncbi_code)]
+				except:
+					protein_family = 10000
 				
 				if protein_name == 'pseudogene':
 					protein_family = 10000
