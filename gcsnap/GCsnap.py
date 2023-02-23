@@ -57,7 +57,7 @@ plt.switch_backend('agg')
 
 # set parameters for uniprot requests
 
-retries = Retry(total=5, backoff_factor=0.25, status_forcelist=[500, 502, 503, 504])
+retries = Retry(total=5, backoff_factor=0.25, status_forcelist=[500, 502, 503, 504, 400])
 session = requests.Session()
 session.mount("https://", HTTPAdapter(max_retries=retries))
 
