@@ -1677,7 +1677,7 @@ def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n
 		most_common_context['average_starts'].append(int(statistics.median(all_starts_of_most_common)))
 		most_common_context['average_ends'].append(int(statistics.median(all_ends_of_most_common)))
 		most_common_context['average_size'].append(int(statistics.median(all_sizes)))
-		most_common_context['stdev_size'].append(int(stats.median_absolute_deviation(all_sizes)))
+		most_common_context['stdev_size'].append(int(stats.median_abs_deviation(all_sizes)))
 		
 		try:
 			most_common_context['directions'].append(statistics.mode(all_orientations))
@@ -2127,7 +2127,7 @@ def create_dendogram_features(dendogram, leaf_labels, taxonomy, operons = None, 
 
 	icoord, dcoord = dendogram['icoord'], dendogram['dcoord']
 
-	data['y'] = list(np.linspace(min(min(icoord)), max(max(icoord)), len(leaf_labels)))
+	data['y'] = list(np.linspace(min([num for sublist in icoord for num in sublist]), max([num for sublist in icoord for num in sublist]), len(leaf_labels)))
 	data['x'] = [1 for y in data['y']] 
 
 	for label in leaf_labels:
@@ -2350,7 +2350,7 @@ def create_genomic_context_features(operons, all_syntenies, family_colors, syn_d
 			
 		yys.append(curr_y)
 		
-	yyticklabels = {yys[i]: yyticklabels[i] for i in range(len(yyticklabels))}
+	yyticklabels = {int(yys[i]): yyticklabels[i] for i in range(len(yyticklabels))}
 
 	tooltips = [('GC type', "@operon"),
 				('InputID', "@target_id"),
@@ -2389,9 +2389,9 @@ def create_genomic_context_figure(operons, all_syntenies, family_colors, syn_den
 	p.text('tm_text_x', 'tm_text_y', text = 'tm_text', text_color = "white", text_baseline="middle", text_align="center", text_font_size = {'value': '6pt'}, source = p_data)
 	
 	# define yticks on the left
-	p.yaxis.ticker = list(p_yyticklabels.keys())
+	p.yaxis.ticker = [int(n) for n in list(p_yyticklabels.keys())]
 	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_overrides = {int(i): p_yyticklabels[i] for i in p_yyticklabels.keys()}
+	p.yaxis.major_label_overrides = {int(i): p_yyticklabels[i] for i in [int(n) for n in p_yyticklabels.keys()]}
 #	 p.yaxis.major_label_text_font_size = {'value': '8pt'}
 #	 p.yaxis.major_label_text_font_style = 'italic'
 	p.yaxis.axis_line_width = 0
@@ -2637,7 +2637,7 @@ def get_adjcency_matrix(operons, families_summary):
 
 def get_graph_from_matrix(matrix, selected_families_summary, family_colors):
 	
-	G=nx.from_numpy_matrix(matrix)
+	G=nx.from_numpy_array(matrix)
 
 	# take care of the edges
 	edge_params = {'color': {}, 'weight': {}, 'line_width': {}}
