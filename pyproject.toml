@@ -4,7 +4,6 @@ name = "gcsnap"
 version = "1.0.17"
 description = "GCsnap: Interactive snapshots for the comparison of protein-coding genomic contexts"
 authors = [
-    {name = "pentamorfico", email = "amarrod96@gmail.com"},
     {name = "Joana Pereira", email = "pereira.joanam@gmail.com"},
 ]
 dependencies = [
