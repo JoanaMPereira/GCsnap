@@ -17,7 +17,8 @@ dependencies = [
     "pacmap",
     "requests_cache",
     "scikit-learn",
-    "jinja2==3.0"
+    "jinja2==3.0",
+    "numba==0.56.4"
 ]
 requires-python = "<3.9"
 readme = "README.md"
