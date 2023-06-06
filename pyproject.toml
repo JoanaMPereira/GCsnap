@@ -39,3 +39,6 @@ GCsnap = "gcsnap.GCsnap:main"
 [build-system]
 requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
