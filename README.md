@@ -38,7 +38,9 @@ cd GCsnap
 git pull origin master
 
 # To install
-python setup.py install
+conda create -n GCsnap -c bioconda -c conda-forge python=3.8 blast
+conda activate GCsnap
+pip install .
 ```
 
 ## Allowed inputs
