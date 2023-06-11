@@ -19,7 +19,7 @@ GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on P
   - PaCMAP
   - Scikit-learn
 
-For detailed requirements, check ```requirements.txt```.
+For detailed requirements, check ```pyproject.toml```.
 
 Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above) and MMseqs. 
 
@@ -38,7 +38,7 @@ cd GCsnap
 git pull origin master
 
 # To install
-conda create -n GCsnap -c bioconda -c conda-forge python=3.8 blast
+conda create -n GCsnap -c bioconda -c conda-forge python=3.8 blast mmseqs2
 conda activate GCsnap
 pip install .
 ```
