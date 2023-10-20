@@ -2911,16 +2911,40 @@ def parse_coordinates_from_clans(clans_file):
 				ncbi_code = seq_map[int(coords[0])]
 				clans_coords[ncbi_code]['xy'] = coords[1:3]
 			
-	
 	return clans_coords
 
-def create_data_structure(operons, clans_file, clusters_colors, all_syntenies):
+def generate_coordinates_for_clans(all_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
+
+	in_syntenies = {}
+	for target in all_syntenies:
+		in_syntenies[target] = {'flanking_genes': {}}
+
+		assembly_targetid = all_syntenies[target]['assembly_id'][0]
+		context_idx = all_syntenies[target]['flanking_genes']['ncbi_codes'].index(assembly_targetid)
+
+		for key in all_syntenies[target]['flanking_genes']:
+			if type(all_syntenies[target]['flanking_genes'][key]) == list:
+				if key == 'ncbi_codes':
+					in_syntenies[target]['flanking_genes'][key] = [target]
+				else:
+					in_syntenies[target]['flanking_genes'][key] = [all_syntenies[target]['flanking_genes'][key][context_idx]]
+
+	distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = '{}_targets'.format(out_label), num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage, method = method, mmseqs = mmseqs, blast = blast, default_base = default_base, tmp_folder = tmp_folder)	
+
+	paCMAP_embedding = pacmap.PaCMAP(n_components = 2)
+	paCMAP_coordinat = paCMAP_embedding.fit_transform(distance_matrix)
+
+	clans_coords = {ordered_ncbi_codes[i]: {'xy': paCMAP_coordinat[i]} for i in range(len(paCMAP_coordinat))}
+
+	return clans_coords
+
+def create_data_structure(operons, clans_file, clusters_colors, all_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
 
 	if clans_file is not None:
 		clans_coords = parse_coordinates_from_clans(clans_file)
 		seq_in_clans_without_operon = list(set(clans_coords.keys()).difference(list(all_syntenies.keys())))
 	else:
-		clans_coords = {}
+		clans_coords = generate_coordinates_for_clans(all_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage, method = method, mmseqs = mmseqs, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
 		seq_in_clans_without_operon = []
 	
 	data = {'x': [],		  # pacmap x coord for individual operon
@@ -3023,12 +3047,12 @@ def create_data_structure(operons, clans_file, clusters_colors, all_syntenies):
 	return tooltips, ColumnDataSource(data)
 
 def create_operons_clusters_scatter(scatter_data):
-	
+
 	p_tooltips, p_data = scatter_data
-	
+
 	p = figure(title = 'Genomic context types/clusters', plot_width=500, plot_height=500)
 	p.add_layout(Legend(orientation="horizontal"), 'above')
-	
+
 #	 p.circle('x', 'y', size='size', line_color='edgecolor', fill_color='facecolor', legend_field='type', alpha=1, source = p_data)
 	p.circle('x', 'y', size='size', line_color='edgecolor', fill_color='facecolor', alpha=1, source = p_data)
 
@@ -3046,56 +3070,56 @@ def create_operons_clusters_scatter(scatter_data):
 
 	p.xaxis.axis_label = ""
 	p.yaxis.axis_label = ""
-	
+
 	p.add_tools(HoverTool(tooltips=p_tooltips))
 	p.add_tools(LassoSelectTool())
-	
+
 	p.background_fill_color = "lightgrey"
 	p.background_fill_alpha = 0.2
-	
+
 	p.legend.click_policy="hide"
-	
+
 	return p
 
 def create_edges_data(scatter_data, operons, alpha_matrix, labels):
-	
+
 	data = {'x': [],
 			'y': [],
 			'color': [],
 			'alpha':[]}
-	
+
 	for i, i_operon_type in enumerate(labels):
 		for j, j_operon_type in enumerate(labels):
 			if i > j:
 				x_start, y_start = operons[i_operon_type]['operon_centroid_PaCMAP']
 				x_end, y_end = operons[j_operon_type]['operon_centroid_PaCMAP']
-				
+
 				data['x'].append([x_start, x_end])
 				data['y'].append([y_start, y_end])
 				data['color'].append('black')
 				data['alpha'].append(round(alpha_matrix[i][j], 1))
-	
+
 	tooltips = [('Relative distance/alpha', '@alpha')]
-	
+
 	return tooltips, data
 
 def create_avg_operons_clusters_network(operons, operons_scatter, scatter_data, max_family_freq, min_family_freq):
-	
+
 	p_tooltips, p_data = scatter_data
-	
+
 	similarity_matrix, operons_labels = get_avgoperons_distance_matrix(operons)
 	similarity_matrix = normalize_matrix(similarity_matrix)
-	
+
 	edge_tooltips, edge_data = create_edges_data(p_data, operons, similarity_matrix, operons_labels)
-	
+
 	p = figure(title = 'Genomic context types/clusters similarity network', plot_width=operons_scatter.plot_width, 
 			   plot_height=operons_scatter.height, x_range = operons_scatter.x_range, y_range = operons_scatter.y_range)
 	p.add_layout(Legend(orientation="horizontal"), 'above')
-	
+
 #	 p.circle('x', 'y', size='size', line_color='edgecolor', fill_color='facecolor', legend_field='type', alpha=1, source = p_data)
 	p.multi_line('x', 'y', color='color', alpha='alpha', source=edge_data, name='edges')
 	p.circle('avg_x', 'avg_y', size='node_size', line_color='edgecolor', fill_color='facecolor', alpha=1, source = p_data, name='nodes')
-	
+
 	p.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
 	p.xaxis.minor_tick_line_color = None  # turn off x-axis minor ticks
 	p.yaxis.major_tick_line_color = None  # turn off y-axis major ticks
@@ -3110,25 +3134,25 @@ def create_avg_operons_clusters_network(operons, operons_scatter, scatter_data, 
 
 	p.xaxis.axis_label = ""
 	p.yaxis.axis_label = ""
-	
+
 	p.add_tools(HoverTool(tooltips=p_tooltips, names=['nodes']))
 	p.add_tools(HoverTool(tooltips=edge_tooltips, names=['edges']))
 	p.add_tools(LassoSelectTool())
-	
+
 	p.background_fill_color = "lightgrey"
 	p.background_fill_alpha = 0.2
-	
+
 	p.legend.click_policy="hide"
-	
+
 	return p, similarity_matrix
 	
 def create_clans_map_scatter(scatter_data):
-	
+
 	p_tooltips, p_data = scatter_data
-		
+
 	p = figure(title = 'Sequence similarity cluster (CLANS) map', plot_width=500, plot_height=500)
 	p.add_layout(Legend(orientation="horizontal"), 'above')
-	
+
 	p.circle('clans_x', 'clans_y', size='size', line_color='edgecolor', fill_color='facecolor', alpha=1, source = p_data)
 
 	p.xaxis.major_tick_line_color = None  # turn off x-axis major ticks
@@ -3145,15 +3169,15 @@ def create_clans_map_scatter(scatter_data):
 
 	p.xaxis.axis_label = ""
 	p.yaxis.axis_label = ""
-	
+
 	p.add_tools(HoverTool(tooltips=p_tooltips))
 	p.add_tools(LassoSelectTool())
-	
+
 	p.background_fill_color = "lightgrey"
 	p.background_fill_alpha = 0.2
-	
+
 #	 p.legend.click_policy="hide"
-	
+
 	return p
 
 def create_targets_table_data(all_syntenies, taxonomy, clusters_colors):
@@ -3963,7 +3987,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 
 	save(grid)
 
-def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None, max_family_freq=None, min_family_freq=None, min_family_freq_accross_contexts=None, clans_file=None):
+def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None, max_family_freq=None, min_family_freq=None, min_family_freq_accross_contexts=None, clans_file=None, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
 
 	# define the reference family as the one of the target in the most populated operon type
 	reference_family = all_syntenies[operons[most_populated_operon]['target_members'][0]]['target_family']
@@ -3975,7 +3999,7 @@ def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, fa
 
 	# Create the dataframe with all data used to plot. it allows for cross interativity between plots
 	clusters_colors = define_operons_colors(operons.keys(), mode = 'bokeh', cmap='gist_rainbow')
-	scatter_data = create_data_structure(operons, clans_file, clusters_colors=clusters_colors, all_syntenies=all_syntenies)
+	scatter_data = create_data_structure(operons, clans_file, clusters_colors=clusters_colors, all_syntenies=all_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage, method = method, mmseqs = mmseqs, blast = blast, default_base = default_base, tmp_folder = tmp_folder)
 
 	# Plot the scatter of the operons PaCMAP coordinates
 	operons_scatter = create_operons_clusters_scatter(scatter_data)
@@ -3983,11 +4007,8 @@ def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, fa
 	operons_network, operons_distance_matrix = create_avg_operons_clusters_network(operons, operons_scatter, scatter_data, max_family_freq, min_family_freq)
 
 	# Plot the CLANS map of the input target sequences if given
-	if clans_file is not None:
-		clans_scatter = create_clans_map_scatter(scatter_data)
-		scatter_row = gridplot([[operons_scatter, operons_network, clans_scatter]])
-	else:
-		scatter_row = gridplot([[operons_scatter, operons_network]])
+	clans_scatter = create_clans_map_scatter(scatter_data)
+	scatter_row = gridplot([[operons_scatter, operons_network, clans_scatter]], merge_tools = True)
 
 	# Now create two tabs
 	all_tabs = []
@@ -4347,7 +4368,7 @@ def main():
 						#check if Bokeh is available
 						# try:
 						if operon_cluster_advanced:
-							make_advanced_interactive_genomic_context_figures(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format, max_family_freq=max_family_freq, min_family_freq=min_family_freq, min_family_freq_accross_contexts=min_family_freq_accross_contexts, clans_file=clans_file)
+							make_advanced_interactive_genomic_context_figures(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format, max_family_freq=max_family_freq, min_family_freq=min_family_freq, min_family_freq_accross_contexts=min_family_freq_accross_contexts, clans_file=clans_file, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
 						else:
 							make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
 
