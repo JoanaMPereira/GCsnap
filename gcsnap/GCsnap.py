@@ -51,6 +51,15 @@ from bokeh.models.graphs import from_networkx, NodesAndLinkedEdges
 from bokeh.models.widgets import Div
 from bokeh.layouts import row, column
 
+# for timings
+from codetiming import Timer
+from humanfriendly import format_timespan
+from datetime import datetime
+
+# now = datetime.now()
+# current_time = now.strftime("%d-%m-%Y_%H-%M-%S")
+# timing_log_file = f'times_{current_time}.tsv'
+
 # import bokeh.layouts 
 
 plt.switch_backend('agg')
@@ -73,6 +82,7 @@ def chunk_list(l, n):
 	chunks = [list(chunk) for chunk in chunks]
 	return chunks
 
+@Timer("find_clusters_in_distance_matrix", text=lambda secs: f"Time to find clusters in distance matrix: {format_timespan(secs)}")
 def find_clusters_in_distance_matrix(distance_matrix, t = 0):
 
 	distance_matrix = distance.squareform(distance_matrix)
@@ -82,6 +92,7 @@ def find_clusters_in_distance_matrix(distance_matrix, t = 0):
 
 	return clusters
 
+#@Timer("mask_singleton_clusters", text=lambda secs: f"Time to mask singleton clusters: {format_timespan(secs)}")
 def mask_singleton_clusters(clusters_list, mask = 0):
 	
 	new_clusters_list = []
@@ -115,6 +126,7 @@ def merge_intervals(intervals):
 
 # 1. Routines to get the assembly for a given ncbi_code (or entrezID), download it and parse it
 
+#@Timer("map_uniprot_to_ncbi", text=lambda secs: f"Time to map uniprot to ncbi: {format_timespan(secs)}")
 def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS'):
 
 	if 'UniRef' in uniprot_code:
@@ -142,6 +154,7 @@ def map_uniprot_to_ncbi(uniprot_code, search_database = 'EMBL-GenBank-DDBJ_CDS')
 
 	return ncbi_code, search_database
 
+#@Timer("find_ncbi_code_assembly", text=lambda secs: f"Time to find ncbi code assembly: {format_timespan(secs)}")
 def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 	assembly_id = 'nan'
@@ -191,6 +204,7 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 	return ncbi_code, assembly_id, assembly_link
 
+#@Timer("download_and_extract_assembly", text=lambda secs: f"Time to download and extract assembly: {format_timespan(secs)}")
 def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None, label = '', get_chunk = False, chunk_size = 0, target = None):
 
 	print(' ... ... Downloading and extracting assembly {} annotated gff file'.format(assembly_id))
@@ -203,18 +217,30 @@ def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None,
 
 	if not os.path.isfile(out_assembly_file) and not os.path.isfile(out_assembly_file_gz):
 		download_assembly = sp.Popen(['wget', assembly_genomic_file_link, '-O', out_assembly_file_gz], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+		t1 = Timer('download_assembly',
+				   text=lambda secs: f"Time to download assembly {assembly_id}: {format_timespan(secs)}")
+		t1.start()
 		stdout, stderr = download_assembly.communicate()
+		t1.stop()
 
 	if os.path.isfile(out_assembly_file_gz) or os.path.isfile(out_assembly_file):
 
 		print(' ... ... ... Downloaded assembly {} ....'.format(assembly_id))
 
 		extract_assembly_file = sp.Popen(['gunzip', out_assembly_file_gz], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+		t2 = Timer('extract_assembly_file',
+				   text=lambda secs: f"Time to extract assembly file {assembly_id}: {format_timespan(secs)}")
+		t2.start()
 		stdout, stderr = extract_assembly_file.communicate()
+		t2.stop()
 
 		if os.path.isfile(out_assembly_file):
 
+			t3 = Timer('parse_assembly',
+					   text=lambda secs: f"Time to parse assembly {assembly_id}: {format_timespan(secs)}")
+			t3.start()
 			assembly = parse_assembly(out_assembly_file, get_chunk = get_chunk, chunk_size = chunk_size, target = target)
+			t3.stop()
 
 			if not get_chunk:
 				print(' ... ... ... Finished parsing assembly {} and found {} CDS entries'.format(assembly_id, len(assembly['ncbi_codes'])))
@@ -229,6 +255,7 @@ def download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = None,
 		print(' ... ... ... It was not possible to save assembly {}'.format(assembly_id))
 		return 'nan'
 
+#@Timer("parse_assembly", text=lambda secs: f"Time to parse assembly: {format_timespan(secs)}")
 def parse_assembly(assembly_file, get_chunk = False, chunk_size = 0, target = None):
 
 	assembly = {'ncbi_codes': [], 'starts': [], 'ends': [], 'directions': [], 'names': [], 'scaffolds': []}
@@ -298,6 +325,7 @@ def parse_assembly(assembly_file, get_chunk = False, chunk_size = 0, target = No
 				
 # 2. Routines to get the N flanking genes for a given ncbi_code 
 
+#@Timer("get_n_flanking_genes", text=lambda secs: f"Time to get {n_flanking5 + n_flanking3} flanking_genes: {format_timespan(secs)}")
 def get_n_flanking_genes(target_ncbi_code, assembly,  n_5 = None, n_3 = None, exclude_partial = None):
 
 	if n_5 == n_3:
@@ -356,6 +384,7 @@ def get_n_flanking_genes(target_ncbi_code, assembly,  n_5 = None, n_3 = None, ex
 		print(' ... ... ... {} was not found in assembly'.format(target_ncbi_code))
 		return 'nan'
 
+#@Timer("add_sequences_to_flanking_genes", text=lambda secs: f"Time to add sequences to flanking_genes: {format_timespan(secs)}")
 def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 
 	print(' ... ... Collecting sequences for flanking proteins')
@@ -394,6 +423,7 @@ def add_sequences_to_flanking_genes(flanking_genes, target_ncbi_code):
 
 # 3. Routines to compute all-against-all distance matrix and find protein families 
 
+#@Timer("write_flanking_sequences_to_fasta", text=lambda secs: f"Time to write flanking sequences to fasta: {format_timespan(secs)}")
 def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude_pseudogenes = False, mode = 'flanking_sequences'):
 
 	out_fasta = '{}/{}_{}.fasta'.format(out_dir, out_label, mode)
@@ -420,6 +450,7 @@ def write_flanking_sequences_to_fasta(all_syntenies, out_dir, out_label, exclude
 
 # 3.1. Routines for when the method is based on BLASTp
 
+@Timer("make_blast_database_from_fasta", text=lambda secs: f"Time to make blast database from fasta: {format_timespan(secs)}")
 def make_blast_database_from_fasta(infasta, blast = None):
 
 	print(' ... ... Making BLAST database')
@@ -436,6 +467,7 @@ def make_blast_database_from_fasta(infasta, blast = None):
 
 	return blastDB
 
+@Timer("run_blast_for_flanking_sequences", text=lambda secs: f"Time to run blast for flanking sequences: {format_timespan(secs)}")
 def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, tmp_folder = None):
 
 	print(' ... ... Running BLAST')
@@ -453,6 +485,7 @@ def run_blast_for_flanking_sequences(seq_fasta, database, num_threads = None, nu
 
 	return blast_outfile
 
+@Timer("extract_distance_matrix_from_blast_output", text=lambda secs: f"Time to extract distance matrix from blast output: {format_timespan(secs)}")
 def extract_distance_matrix_from_blast_output(blast_results, default_base = None, min_coverage = 70, sequences_lengths = {}):
 
 	print(' ... ... Computing sequences similarity matrix')
@@ -501,6 +534,7 @@ def extract_distance_matrix_from_blast_output(blast_results, default_base = None
 
 # 3.2. Routines for when the method is based on MMseqs
 
+#@Timer("get_queries_labels", text=lambda secs: f"Time to get queries labels: {format_timespan(secs)}")
 def get_queries_labels(seq_fasta):
 
 	all_queries = []
@@ -511,6 +545,7 @@ def get_queries_labels(seq_fasta):
 				all_queries.append(query)
 	return all_queries
 
+#@Timer("run_mmseqs_for_flanking_sequences", text=lambda secs: f"Time to run mmseqs for flanking sequences: {format_timespan(secs)}")
 def run_mmseqs_for_flanking_sequences(seq_fasta, num_threads = None, max_evalue = None, num_iterations = None, mmseqs = None, tmp_folder = None, sensitivity=7.5, min_coverage=None):
 
 	print(' ... ... Running MMseqs')
@@ -530,6 +565,7 @@ def run_mmseqs_for_flanking_sequences(seq_fasta, num_threads = None, max_evalue 
 
 	return mmseqs_outfile
 
+#@Timer("extract_distance_matrix_from_mmseqs_output", text=lambda secs: f"Time to extract distance matrix from mmseqs output: {format_timespan(secs)}")
 def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, default_base = None):
 
 	print(' ... ... Computing sequences similarity matrix')
@@ -554,6 +590,7 @@ def extract_distance_matrix_from_mmseqs_output(mmseqs_results, all_queries, defa
 
 # 3.3. Wrapping routines
 
+#@Timer("compute_all_agains_all_distance_matrix", text=lambda secs: f"Time to compute all agains all distance matrix: {format_timespan(secs)}")
 def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, mmseqs = None, default_base = None, tmp_folder = None, mode = 'flanking_sequences', method = 'blast', min_coverage=None):
 	
 	out_dir = '{}/{}_all_against_all_searches'.format(os.getcwd(), out_label)
@@ -563,6 +600,7 @@ def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_t
 	flanking_fasta, sequences_len = write_flanking_sequences_to_fasta(in_syntenies, out_dir, out_label, mode = mode)
 
 	if method == 'psiblast':
+
 		sequences_database = make_blast_database_from_fasta(flanking_fasta, blast = blast)
 		blast_results = run_blast_for_flanking_sequences(flanking_fasta, sequences_database, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, tmp_folder = tmp_folder)
 		distance_matrix, queries_labels = extract_distance_matrix_from_blast_output(blast_results, default_base = default_base, sequences_lengths = sequences_len, min_coverage = min_coverage)
@@ -574,6 +612,7 @@ def compute_all_agains_all_distance_matrix(in_syntenies, out_label = None, num_t
 
 	return distance_matrix, queries_labels
 
+#@Timer("get_protein_families_summary", text=lambda secs: f"Time to get protein families summary: {format_timespan(secs)}")
 def get_protein_families_summary(in_syntenies, write_to_file = True, out_label = None):
 
 	families = {}
@@ -630,6 +669,7 @@ def get_protein_families_summary(in_syntenies, write_to_file = True, out_label =
 
 # 4. Routines to annotate functions and find structures for protein families
 
+#@Timer("get_mappings_through_uniprot", text=lambda secs: f"Time to get mappings through uniprot: {format_timespan(secs)}")
 def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_database = 'UniProtKB', POLLING_INTERVAL = 10, API_URL = "https://rest.uniprot.org"):
 
 	# The code below is copy-pasted from the help page of UniProt API (https://www.uniprot.org/help/id_mapping)
@@ -802,6 +842,7 @@ def get_mappings_through_uniprot(codes, from_database = 'RefSeq_Protein', to_dat
 	return results
 
 
+#@Timer("map_codes_to_uniprot", text=lambda secs: f"Time to map codes to uniprot: {format_timespan(secs)}")
 def map_codes_to_uniprot(codes, uniprot_codes = {}, from_database = 'RefSeq_Protein'):
 	
 	if uniprot_codes == {}:
@@ -828,6 +869,7 @@ def map_codes_to_uniprot(codes, uniprot_codes = {}, from_database = 'RefSeq_Prot
 
 	return uniprot_codes
 
+#@Timer("find_uniprot_in_swiss_model_repository", text=lambda secs: f"Time to find uniprot in swiss model repository: {format_timespan(secs)}")
 def find_uniprot_in_swiss_model_repository(uniprot_code):
 
 	link = 'nan'
@@ -854,6 +896,7 @@ def find_uniprot_in_swiss_model_repository(uniprot_code):
 
 	return link
 
+#@Timer("find_uniprot_in_alphafold_database", text=lambda secs: f"Time to find uniprot in alphafold database: {format_timespan(secs)}")
 def find_uniprot_in_alphafold_database(uniprot_code):
 
 	link = 'nan'
@@ -873,6 +916,7 @@ def find_uniprot_in_alphafold_database(uniprot_code):
 
 	return link
 
+#@Timer("get_uniprot_annotations", text=lambda secs: f"Time to get uniprot annotations: {format_timespan(secs)}")
 def get_uniprot_annotations(uniprot_code, previous_annotations = ''):
 
 	uniprot_annotations = 'nan'
@@ -893,6 +937,7 @@ def get_uniprot_annotations(uniprot_code, previous_annotations = ''):
 	
 	return uniprot_annotations
 
+#@Timer("parse_uniprot_data", text=lambda secs: f"Time to parse uniprot data: {format_timespan(secs)}")
 def parse_uniprot_data(uniprot_data, previous_annotations = ''):
 
 	if previous_annotations == '':
@@ -936,6 +981,7 @@ def parse_uniprot_data(uniprot_data, previous_annotations = ''):
 
 # 5. Routines to find operon types
 
+#@Timer("compute_operons_distance_matrix", text=lambda secs: f"Time to compute operons distance matrix: {format_timespan(secs)}")
 def compute_operons_distance_matrix(in_syntenies, label = None):
 
 	distance_matrix = [[0 for target in in_syntenies] for target in in_syntenies]
@@ -983,6 +1029,7 @@ def compute_operons_distance_matrix(in_syntenies, label = None):
 	
 	return np.array(distance_matrix), sorted_ncbi_codes
 	
+@Timer("get_operon_types_summary", text=lambda secs: f"Time to get operon types summary: {format_timespan(secs)}")
 def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 
 	operon_types = {}
@@ -1022,6 +1069,7 @@ def get_operon_types_summary(in_syntenies, label = None, write_to_file = True):
 						
 	return operon_types
 
+#@Timer("find_most_populated_operon_types", text=lambda secs: f"Time to find most populated operon types: {format_timespan(secs)}")
 def find_most_populated_operon_types(operon_types_summary, nmax = None):
 
 	operons_count_matrix = []
@@ -1050,6 +1098,7 @@ def find_most_populated_operon_types(operon_types_summary, nmax = None):
 	return selected_operons, most_populated_operon
 
 
+#@Timer("get_family_presence_matrix", text=lambda secs: f"Time to get family presence matrix: {format_timespan(secs)}")
 def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = True, min_freq = 2, max_freq = 20):
 
 	sorted_ncbi_codes = sorted(list(in_syntenies.keys()))
@@ -1070,6 +1119,7 @@ def get_family_presence_matrix(in_syntenies, protein_families_summary, clean = T
 
 	return np.array(presence_matrix), sorted_ncbi_codes, sorted_families
 
+#@Timer("calculate_start_eps", text=lambda secs: f"Time to calculate start eps: {format_timespan(secs)}")
 def calculate_start_eps(coordinates):
 
 	distances = []
@@ -1091,6 +1141,7 @@ def calculate_start_eps(coordinates):
 
 	return round(eps, 2)
 
+#@Timer("find_operon_clusters_with_PaCMAP", text=lambda secs: f"Time to find operon clusters with PaCMAP: {format_timespan(secs)}")
 def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, coordinates_only = False, min_freq = 2, max_freq = 20, iteration = 0, max_eps_cost = 1.3, eps_step = 0.02):
 
 	presence_matrix, sorted_ncbi_codes, selected_families = get_family_presence_matrix(in_syntenies, protein_families_summary, clean = clean, min_freq = min_freq, max_freq = max_freq)
@@ -1145,6 +1196,7 @@ def find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, cle
 
 # 6. Routines to make the genomic_context/operon block figures
 
+#@Timer("define_family_colors", text=lambda secs: f"Time to define family colors: {format_timespan(secs)}")
 def define_family_colors(families, reference_family, mode = 'matplotlib', cmap = 'rainbow', print_summary = False):
 
 	colors = {}
@@ -1197,6 +1249,7 @@ def define_family_colors(families, reference_family, mode = 'matplotlib', cmap =
 	return colors
 
 
+#@Timer("draw_genomic_context", text=lambda secs: f"Time to draw genomic context: {format_timespan(secs)}")
 def draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = None, out_format = None):
 
 	curr_y_level = len(operons.keys())
@@ -1291,6 +1344,7 @@ def draw_genomic_context(operons, all_syntenies, family_colors, reference_family
 	plt.savefig('{}_genomic_context.{}'.format(label, out_format), format = out_format)
 	plt.close('all')
 
+#@Timer("draw_genomic_context_legend", text=lambda secs: f"Time to draw genomic context legend: {format_timespan(secs)}")
 def draw_genomic_context_legend(families_summary, family_colors, reference_family, label = None, out_format = None):
 
 	curr_y_level = len(family_colors.keys())
@@ -1327,6 +1381,7 @@ def draw_genomic_context_legend(families_summary, family_colors, reference_famil
 
 # 7. Routines to make taxonomy distribution figures
 
+#@Timer("merge_taxonomy_dictionaries", text=lambda secs: f"Time to merge taxonomy dictionaries: {format_timespan(secs)}")
 def merge_taxonomy_dictionaries(taxonomy, dic):
 
 	for superkingdom in dic.keys():
@@ -1359,6 +1414,7 @@ def merge_taxonomy_dictionaries(taxonomy, dic):
 
 	return taxonomy
 
+#@Timer("map_taxonomy_to_targets", text=lambda secs: f"Time to map taxonomy to targets: {format_timespan(secs)}")
 def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 
 	# Prepare all parallel jobs
@@ -1375,6 +1431,7 @@ def map_taxonomy_to_targets(in_syntenies, mode = 'taxonomy', threads = 1):
 
 	return taxonomy
 
+#@Timer("map_taxonomy", text=lambda secs: f"Time to map taxonomy: {format_timespan(secs)}")
 def map_taxonomy(arguments):
 
 	targets = arguments[0]
@@ -1393,8 +1450,10 @@ def map_taxonomy(arguments):
 			taxID = in_syntenies[curr_target]['flanking_genes']['taxID']
 			species = in_syntenies[curr_target]['flanking_genes']['species']
 
-			try:	
-			  
+			try:
+				t1 = Timer('map_taxonomy',
+						   text=lambda secs: f"Time to map taxonomy for {ncbi_code}: {format_timespan(secs)}")
+				t1.start()
 				superkingdom = 'na'
 				phylum = 'na'
 				taxclass = 'na'
@@ -1453,6 +1512,8 @@ def map_taxonomy(arguments):
 				if mode == 'taxonomy':
 					json.dump(taxonomy, open(out_json, 'w'), indent=4)
 
+				t1.stop()
+
 			except:
 				print(' ... ... Not possible to find taxonomy for {} ({})'.format(curr_target, ncbi_code))
 
@@ -1460,6 +1521,7 @@ def map_taxonomy(arguments):
 
 # 8. Routines to annotate transmembrane segments and signal peptides
 
+#@Timer("run_TM_signal_peptide_annotation", text=lambda secs: f"Time to run TM signal peptide annotation in {annotation_TM_mode} mode: {format_timespan(secs)}")
 def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	out_file = '{}_{}.out'.format(in_fasta[:-6], annotation_TM_mode)
@@ -1486,7 +1548,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 			try:
 				run_tmhmm = sp.Popen(['tmhmm', in_fasta, '-short'], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-				stdout, stderr = run_phobius.communicate()
+				stdout, stderr = run_tmhmm.communicate()
 			except:
 				stderr = " --> ERROR:  There's no tmhmm installation"
 				stdout = ""
@@ -1507,7 +1569,11 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 			with open(out_file, 'w') as outf:
 				for ncbi_code in ncbi_codes:
 					uniprot_code = uniprot_codes[ncbi_code]
+					t1 = Timer('get_unirpot_annotation_for_each_peptide',
+						   text=lambda secs: f"Time to get uniprot tm annotation for {ncbi_code}: {format_timespan(secs)}")
+					t1.start()
 					curr_uniprot_annotations = get_uniprot_annotations(uniprot_code)
+					t1.stop()
 
 					if curr_uniprot_annotations != 'nan':
 						tm_annotation = curr_uniprot_annotations['TM_topology']
@@ -1522,6 +1588,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 
 	return out_file
 
+#@Timer("parse_fasta_file", text=lambda secs: f"Time to parse fasta file: {format_timespan(secs)}")
 def parse_fasta_file(infasta, sep = '|'):
 
 	sequences = {}
@@ -1535,6 +1602,7 @@ def parse_fasta_file(infasta, sep = '|'):
 
 	return sequences
 
+#@Timer("parse_annotation_TM_file", text=lambda secs: f"Time to parse annotation TM file: {format_timespan(secs)}")
 def parse_annotation_TM_file(annotation_TM_file, annotation_TM_mode):
 
 	if annotation_TM_mode == 'phobius':
@@ -1552,6 +1620,7 @@ def parse_annotation_TM_file(annotation_TM_file, annotation_TM_mode):
 
 	return annotations
 
+#@Timer("parse_phobius_output", text=lambda secs: f"Time to parse phobius output: {format_timespan(secs)}")
 def parse_phobius_output(annotation_TM_file):
 
 	annotations = {}
@@ -1572,6 +1641,7 @@ def parse_phobius_output(annotation_TM_file):
 
 	return annotations
 
+#@Timer("parse_tmhmm_output", text=lambda secs: f"Time to parse tmhmm output: {format_timespan(secs)}")
 def parse_tmhmm_output(annotation_TM_file):
 
 	annotations = {}
@@ -1589,6 +1659,7 @@ def parse_tmhmm_output(annotation_TM_file):
 
 	return annotations
 
+#@Timer("parse_tm_uniprot_output", text=lambda secs: f"Time to parse_tm_uniprot_output: {format_timespan(secs)}")
 def parse_tm_uniprot_output(annotation_TM_file):
 
 	annotations = {}
@@ -1605,6 +1676,7 @@ def parse_tm_uniprot_output(annotation_TM_file):
 
 	return annotations
 
+#@Timer("add_TM_annotations_to_flanking_genes", text=lambda secs: f"Time to add_TM_annotations_to_flanking_genes: {format_timespan(secs)}")
 def add_TM_annotations_to_flanking_genes(in_syntenies, protein_annotations):
 
 	for curr_target in in_syntenies:
@@ -1627,6 +1699,7 @@ def add_TM_annotations_to_flanking_genes(in_syntenies, protein_annotations):
 
 # 9.1. Routines to draw most conserved features
 
+#@Timer("find_most_common_genomic_context", text=lambda secs: f"Time to find most common genomic context: {format_timespan(secs)}")
 def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n_flanking3=None):
 	
 	# will use only the complete genomic contexts and ignore the partial ones	
@@ -1691,6 +1764,7 @@ def find_most_common_genomic_context(operons, all_syntenies, n_flanking5=None, n
 		
 	return most_common_context
 
+#@Timer("create_most_common_genomic_context_features", text=lambda secs: f"Time to create most common genomic context features: {format_timespan(secs)}")
 def create_most_common_genomic_context_features(most_common_context, families_summary, reference_family, family_colors):
 
 	data = {'xs': [],
@@ -1825,6 +1899,7 @@ def create_most_common_genomic_context_features(most_common_context, families_su
 	
 	return tooltips, data
 
+#@Timer("create_most_common_genomic_features_figure", text=lambda secs: f"Time to create most common genomic features figure: {format_timespan(secs)}")
 def create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family, family_colors, n_flanking5=None, n_flanking3=None):
 	
 	most_common_context = find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
@@ -1865,6 +1940,7 @@ def create_most_common_genomic_features_figure(operons, all_syntenies, families_
 	
 	return gc
 
+#@Timer("create_most_common_genomic_features_figure_2", text=lambda secs: f"Time to create most common genomic features figure 2: {format_timespan(secs)}")
 def create_most_common_genomic_features_figure(operons, all_syntenies, families_summary, reference_family, family_colors, n_flanking5=None, n_flanking3=None):
 	
 	most_common_context = find_most_common_genomic_context(operons, all_syntenies, n_flanking5=n_flanking5, n_flanking3=n_flanking3)
@@ -1907,6 +1983,7 @@ def create_most_common_genomic_features_figure(operons, all_syntenies, families_
 
 # 9.2. Routines to make the dendogram
 
+#@Timer("get_taxonomy_distance_matrix", text=lambda secs: f"Time to get taxonomy distance matrix: {format_timespan(secs)}")
 def get_taxonomy_distance_matrix(taxonomy, operons, input_targets = None, mode = 'taxonomy'):
 	
 	targets_taxonomy_vector = {}
@@ -1957,6 +2034,7 @@ def get_taxonomy_distance_matrix(taxonomy, operons, input_targets = None, mode =
 	
 	return taxonomy_distance_matrix, labels 
 
+#@Timer("get_phylogeny_distance_matrix", text=lambda secs: f"Time to get phylogeny distance matrix: {format_timespan(secs)}")
 def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = None, print_tree = True):
 
 	if starting_directory not in in_tree:
@@ -2000,6 +2078,7 @@ def get_phylogeny_distance_matrix(in_tree, tree_format = None, input_targets = N
 
 	return distance_matrix, labels
 
+#@Timer("get_operons_distance_matrix", text=lambda secs: f"Time to get operons distance matrix: {format_timespan(secs)}")
 def get_operons_distance_matrix(operons, input_targets = None, advanced = False):
 
 	labels = []
@@ -2040,6 +2119,7 @@ def get_operons_distance_matrix(operons, input_targets = None, advanced = False)
 
 	return distance_matrix, labels
 
+#@Timer("get_avgoperons_distance_matrix", text=lambda secs: f"Time to get avgoperons distance matrix: {format_timespan(secs)}")
 def get_avgoperons_distance_matrix(operons):
 		
 	matrix = [[0 for i in operons if '-' not in i] for i in operons if '-' not in i]
@@ -2061,6 +2141,7 @@ def get_avgoperons_distance_matrix(operons):
 	
 	return np.array(matrix), selected_operons
 
+#@Timer("normalize_matrix", text=lambda secs: f"Time to normalize matrix: {format_timespan(secs)}")
 def normalize_matrix(similarity_matrix, power=30):
 
 	min_dist = pd.DataFrame(similarity_matrix).min().min()
@@ -2071,6 +2152,7 @@ def normalize_matrix(similarity_matrix, power=30):
 	
 	return normalised_matrix
 
+#@Timer("compute_dendogram", text=lambda secs: f"Time to compute dendogram: {format_timespan(secs)}")
 def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy', tree = None, tree_format = None, distance_matrix = None, labels = None):
 	
 	if distance_matrix is None:
@@ -2094,6 +2176,7 @@ def compute_dendogram(taxonomy, operons, input_targets = None, mode = 'taxonomy'
 
 	return results, labels
 
+#@Timer("create_dendogram_features", text=lambda secs: f"Time to create dendogram features: {format_timespan(secs)}")
 def create_dendogram_features(dendogram, leaf_labels, taxonomy, operons = None, mode = 'taxonomy', colors = None):
 
 	if mode == 'operon clusters':
@@ -2175,6 +2258,7 @@ def create_dendogram_features(dendogram, leaf_labels, taxonomy, operons = None, 
 
 	return tooltips, data
 
+#@Timer("make_dendogram_figure", text=lambda secs: f"Time to make dendogram figure: {format_timespan(secs)}")
 def make_dendogram_figure(taxonomy, operons, input_targets = None, tree = None, mode = 'taxonomy', show_leafs = True, height_factor = 20, tree_format = None, distance_matrix = None, labels = None, colors = None):
 
 	dendogram, leaf_labels = compute_dendogram(taxonomy, operons, input_targets = input_targets, mode = mode, tree = tree, tree_format = tree_format, distance_matrix = distance_matrix, labels = labels)
@@ -2226,6 +2310,7 @@ def make_dendogram_figure(taxonomy, operons, input_targets = None, tree = None, 
 
 # 9.3. Routines to draw all genomic contexts
 
+#@Timer("create_genomic_context_features", text=lambda secs: f"Time to create genomic context features: {format_timespan(secs)}")
 def create_genomic_context_features(operons, all_syntenies, family_colors, syn_den_data, reference_family, legend_mode = 'ncbi_code'):
 	
 	data = {'operon':[],
@@ -2371,6 +2456,7 @@ def create_genomic_context_features(operons, all_syntenies, family_colors, syn_d
 	return tooltips, data, yyticklabels
 
 
+#@Timer("create_genomic_context_figure", text=lambda secs: f"Time to create genomic context figure: {format_timespan(secs)}")
 def create_genomic_context_figure(operons, all_syntenies, family_colors, syn_den_data, syn_dendogram, most_common_gc_figure, reference_family, legend_mode = 'ncbi_code', height_factor = 25*1.2):
 
 	p_tooltips, p_data, p_yyticklabels = create_genomic_context_features(operons, all_syntenies, family_colors, syn_den_data, reference_family = reference_family, legend_mode = legend_mode)
@@ -2410,6 +2496,7 @@ def create_genomic_context_figure(operons, all_syntenies, family_colors, syn_den
 
 # 9.4. Routines to draw legend figure
 
+#@Timer("create_legend_features", text=lambda secs: f"Time to create legend features: {format_timespan(secs)}")
 def create_legend_features(operons, families_summary, reference_family, family_colors, dx = 50):
 	
 	data = {'xs': [],
@@ -2538,6 +2625,7 @@ def create_legend_features(operons, families_summary, reference_family, family_c
 	
 	return tooltips, data
 
+#@Timer("create_legend_figure", text=lambda secs: f"Time to create legend figure: {format_timespan(secs)}")
 def create_legend_figure(operons, families_summary, reference_family, family_colors, grid, rescale_height = False):
 	
 	l_tooltips, l_data = create_legend_features(operons, families_summary, reference_family, family_colors)
@@ -2580,6 +2668,7 @@ def create_legend_figure(operons, families_summary, reference_family, family_col
 
 # 9.5. Routines to make the gene correlation figure
 
+#@Timer("get_coocurrence_matrix", text=lambda secs: f"Time to get coocurrence matrix: {format_timespan(secs)}")
 def get_coocurrence_matrix(operons, families_summary, min_coocc = 0.40):
 	
 	family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
@@ -2615,6 +2704,7 @@ def get_coocurrence_matrix(operons, families_summary, min_coocc = 0.40):
 	
 	return matrix, selected_families_summary
 
+#@Timer("get_adjcency_matrix", text=lambda secs: f"Time to get adjcency matrix: {format_timespan(secs)}")
 def get_adjcency_matrix(operons, families_summary):
 	
 	family_labels = sorted([family for family in families_summary.keys() if family > 0 and family < 10000])
@@ -2635,6 +2725,7 @@ def get_adjcency_matrix(operons, families_summary):
 	
 	return matrix, family_labels
 
+#@Timer("get_graph_from_matrix", text=lambda secs: f"Time to get graph from matrix: {format_timespan(secs)}")
 def get_graph_from_matrix(matrix, selected_families_summary, family_colors):
 	
 	G=nx.from_numpy_array(matrix)
@@ -2667,6 +2758,7 @@ def get_graph_from_matrix(matrix, selected_families_summary, family_colors):
 	
 	return G
 
+#@Timer("remove_non_adjacent_edges", text=lambda secs: f"Time to remove non adjacent edges: {format_timespan(secs)}")
 def remove_non_adjacent_edges(operons, families_summary, G, families_present):
 	
 	adjacency_matrix, family_labels = get_adjcency_matrix(operons, families_summary)
@@ -2684,6 +2776,7 @@ def remove_non_adjacent_edges(operons, families_summary, G, families_present):
 	
 	return G
 
+#@Timer("create_node_features", text=lambda secs: f"Time to create node features: {format_timespan(secs)}")
 def create_node_features(families_summary, reference_family, node_graph_coords, G):
 	
 	data = {'text_x': [],
@@ -2775,6 +2868,7 @@ def create_node_features(families_summary, reference_family, node_graph_coords, 
 	
 	return data, tooltips
 
+#@Timer("create_graph_figure", text=lambda secs: f"Time to create graph figure: {format_timespan(secs)}")
 def create_graph_figure(operons, reference_family, families_summary, family_colors, gc, min_coocc = 0.40, mode = 'coocurrence', graph_coord = {}, previous_net = ''):
 	
 	matrix, selected_families_summary = get_coocurrence_matrix(operons, families_summary, min_coocc = min_coocc)
@@ -2830,6 +2924,7 @@ def create_graph_figure(operons, reference_family, families_summary, family_colo
 
 # 9.6. Routines for advenced interactive plotting
 
+#@Timer("define_operons_colors", text=lambda secs: f"Time to define operons colors: {format_timespan(secs)}")
 def define_operons_colors(clusters, mode = 'matplotlib', cmap = 'rainbow', print_summary = False):
 
 	colors = {}
@@ -2874,6 +2969,7 @@ def define_operons_colors(clusters, mode = 'matplotlib', cmap = 'rainbow', print
 
 	return colors 
 
+#@Timer("parse_coordinates_from_clans", text=lambda secs: f"Time to parse coordinates from clans: {format_timespan(secs)}")
 def parse_coordinates_from_clans(clans_file):
 	
 	clans_coords = {}
@@ -2913,6 +3009,7 @@ def parse_coordinates_from_clans(clans_file):
 			
 	return clans_coords
 
+#@Timer("generate_coordinates_for_clans", text=lambda secs: f"Time to generate coordinates for clans: {format_timespan(secs)}")
 def generate_coordinates_for_clans(all_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
 
 	in_syntenies = {}
@@ -2938,6 +3035,7 @@ def generate_coordinates_for_clans(all_syntenies, out_label = None, num_threads 
 
 	return clans_coords
 
+#@Timer("create_data_structure", text=lambda secs: f"Time to create data structure: {format_timespan(secs)}")
 def create_data_structure(operons, clans_file, clusters_colors, all_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
 
 	if clans_file is not None:
@@ -3046,6 +3144,7 @@ def create_data_structure(operons, clans_file, clusters_colors, all_syntenies, o
 	
 	return tooltips, ColumnDataSource(data)
 
+#@Timer("create_operons_clusters_scatter", text=lambda secs: f"Time to create operons clusters scatter: {format_timespan(secs)}")
 def create_operons_clusters_scatter(scatter_data):
 
 	p_tooltips, p_data = scatter_data
@@ -3081,6 +3180,7 @@ def create_operons_clusters_scatter(scatter_data):
 
 	return p
 
+#@Timer("create_edges_data", text=lambda secs: f"Time to create edges data: {format_timespan(secs)}")
 def create_edges_data(scatter_data, operons, alpha_matrix, labels):
 
 	data = {'x': [],
@@ -3103,6 +3203,7 @@ def create_edges_data(scatter_data, operons, alpha_matrix, labels):
 
 	return tooltips, data
 
+#@Timer("create_avg_operons_clusters_network", text=lambda secs: f"Time to create avg operons clusters network: {format_timespan(secs)}")
 def create_avg_operons_clusters_network(operons, operons_scatter, scatter_data, max_family_freq, min_family_freq):
 
 	p_tooltips, p_data = scatter_data
@@ -3146,6 +3247,7 @@ def create_avg_operons_clusters_network(operons, operons_scatter, scatter_data, 
 
 	return p, similarity_matrix
 	
+#@Timer("create_clans_map_scatter", text=lambda secs: f"Time to create clans map scatter: {format_timespan(secs)}")
 def create_clans_map_scatter(scatter_data):
 
 	p_tooltips, p_data = scatter_data
@@ -3180,6 +3282,7 @@ def create_clans_map_scatter(scatter_data):
 
 	return p
 
+#@Timer("create_targets_table_data", text=lambda secs: f"Time to create targets table data: {format_timespan(secs)}")
 def create_targets_table_data(all_syntenies, taxonomy, clusters_colors):
 
 	data = {'Target EntrezID': [],
@@ -3225,12 +3328,14 @@ def create_targets_table_data(all_syntenies, taxonomy, clusters_colors):
 
 	return data, columns
 
+#@Timer("create_targets_summary_table", text=lambda secs: f"Time to create targets summary table: {format_timespan(secs)}")
 def create_targets_summary_table(all_syntenies, taxonomy, clusters_colors):
 
 	t_data, t_columns = create_targets_table_data(all_syntenies, taxonomy, clusters_colors)	
 	t = DataTable(source=ColumnDataSource(t_data), columns=t_columns, width=1500, height=500)
 	return t
 
+#@Timer("compute_families_frequencies", text=lambda secs: f"Time to compute families frequencies: {format_timespan(secs)}")
 def compute_families_frequencies(operons):
 
 	families_frequencies = {}
@@ -3246,6 +3351,7 @@ def compute_families_frequencies(operons):
 
 	return families_frequencies, number_of_operons
 
+#@Timer("compute_families_frequencies_per_operon_cluster", text=lambda secs: f"Time to compute families frequencies per operon cluster: {format_timespan(secs)}")
 def compute_families_frequencies_per_operon_cluster(operons):
 
 	families_frequencies = {}
@@ -3258,6 +3364,7 @@ def compute_families_frequencies_per_operon_cluster(operons):
 
 	return families_frequencies
 
+#@Timer("clean_uncommon_families", text=lambda secs: f"Time to clean uncommon families: {format_timespan(secs)}")
 def clean_uncommon_families(families_frequencies, families_summary, operons_labels, min_freq = 0.05):
 
 	families_labels = [i for i in sorted(families_summary.keys()) if i < 10000 and i > 0]
@@ -3276,6 +3383,7 @@ def clean_uncommon_families(families_frequencies, families_summary, operons_labe
 
 	return matrix  
 
+#@Timer("create_family_spectrum_data", text=lambda secs: f"Time to create family spectrum data: {format_timespan(secs)}")
 def create_family_spectrum_data(families_frequencies_matrix, families_summary, family_colors, oprn_den_data, reference_family, dx = 1):
 
 	data = {'xs': [],
@@ -3404,6 +3512,7 @@ def create_family_spectrum_data(families_frequencies_matrix, families_summary, f
 
 	return tooltips, data, yyticklabels
 
+#@Timer("create_family_frequency_per_operon_figure", text=lambda secs: f"Time to create family frequency per operon figure: {format_timespan(secs)}")
 def create_family_frequency_per_operon_figure(operons, families_summary, family_colors, oprn_dendogram, oprn_den_data, reference_family, height_factor = 25*1.2, min_freq = 0.05):
 
 	families_frequencies = compute_families_frequencies_per_operon_cluster(operons)
@@ -3438,6 +3547,7 @@ def create_family_frequency_per_operon_figure(operons, families_summary, family_
 
 	return p
 
+#@Timer("create_family_table_data", text=lambda secs: f"Time to create family table data: {format_timespan(secs)}")
 def create_family_table_data(operons, families_summary):
 		
 	data = {'Family': [],
@@ -3518,6 +3628,7 @@ def create_family_table_data(operons, families_summary):
 	
 	return data, columns
 
+#@Timer("create_families_frequency_table", text=lambda secs: f"Time to create families frequency table: {format_timespan(secs)}")
 def create_families_frequency_table(operons, families_summary):
 	
 	t_data, t_columns = create_family_table_data(operons, families_summary)
@@ -3531,6 +3642,7 @@ def create_families_frequency_table(operons, families_summary):
 
 # 10. Routines to deal with Clans maps as input source of IDs
 
+#@Timer("get_ncbicodes_order_in_clans", text=lambda secs: f"Time to get ncbicodes order in clans: {format_timespan(secs)}")
 def get_ncbicodes_order_in_clans(clans_file):
    
    ncbids_ordered = []
@@ -3550,6 +3662,7 @@ def get_ncbicodes_order_in_clans(clans_file):
 			   
    return ncbids_ordered
 
+#@Timer("get_clusters_from_clans", text=lambda secs: f"Time to get clusters from clans: {format_timespan(secs)}")
 def get_clusters_from_clans(clans_file, cluster_codes = None):
 
 	ncbis_ordered = get_ncbicodes_order_in_clans(clans_file)
@@ -3586,6 +3699,7 @@ def get_clusters_from_clans(clans_file, cluster_codes = None):
 
 # MAIN ROUTINES (corresponding to the major steps in the pipeline)
 
+#@Timer("write_arguments_file", text=lambda secs: f"Time to write arguments file: {format_timespan(secs)}")
 def write_arguments_file(args, out_label):
 
 	out_file = '{}_input_arguments.log'.format(out_label)
@@ -3595,6 +3709,7 @@ def write_arguments_file(args, out_label):
 			f.write('{}:\t{}\n'.format(key, args.__dict__[key]))
 
 
+@Timer("parse_targets", text=lambda secs: f"Time to parse targets: {format_timespan(secs)}")
 def parse_targets(targets, label = None, clans_patterns = None):
 
 	targets_list = {}
@@ -3633,6 +3748,7 @@ def parse_targets(targets, label = None, clans_patterns = None):
 	
 	return targets_list
 
+@Timer("download_and_parse_refseq_and_gb_databases", text=lambda secs: f"Time to download and parse refseq and gb databases: {format_timespan(secs)}")
 def download_and_parse_refseq_and_gb_databases(databases = ['genbank', 'refseq']):
 	
 	database_assembly_mapping = {}
@@ -3644,25 +3760,31 @@ def download_and_parse_refseq_and_gb_databases(databases = ['genbank', 'refseq']
 
 		if not os.path.isfile(summary_table):
 			link = 'ftp://ftp.ncbi.nlm.nih.gov/genomes/{}/assembly_summary_{}.txt'.format(db, db)
-
 			print(' ... ... Downloading')
+			t1 = Timer('db_download_single', text=lambda secs: f"Time for download {db}: {format_timespan(secs)}")
+			t1.start()
 			download_db_table = sp.Popen(['wget', link], stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 			stdout, stderr = download_db_table.communicate()
+			t1.stop()
 			print(' ... ... Done Downloading')
 
 		else:
 			print(' ... ... Summary table already exists (version from: {})'.format(time.ctime(os.path.getmtime(summary_table))))
-		
+
+		t2 = Timer('db_parsing_single', text=lambda secs: f"Time for parsing {db}: {format_timespan(secs)}")
+		t2.start()
 		with open(summary_table, 'r') as summary:
 			print(' ... ... Parsing summary table')
 			for line in summary:
 				if not line.startswith('#'):
 					data = line.strip().split('\t')
 					database_assembly_mapping[data[0]] = data[19]
+		t2.stop()
 		print(' ... ... Done parsing')
-		
+
 	return database_assembly_mapping
 
+#@Timer("get_genomic_context_information_for_ncbi_codes", text=lambda secs: f"Time to get genomic context information for ncbi codes: {format_timespan(secs)}")
 def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_assembly_map = None, n_flanking5 = None, n_flanking3 = None, exclude_partial = None, tmp_folder = None, threads = None):
 
 	# Prepare all parallel jobs
@@ -3677,6 +3799,7 @@ def get_genomic_context_information_for_ncbi_codes(target_ncbi_codes, refseq_gb_
 	
 	return all_syntenies  
 
+#@Timer("get_genomic_contexts_for_ncbi_codes", text=lambda secs: f"Time to get genomic contexts for ncbi codes: {format_timespan(secs)}")
 def get_genomic_contexts_for_ncbi_codes(arguments):
 
 	target_ncbi_codes = arguments[0]
@@ -3697,20 +3820,38 @@ def get_genomic_contexts_for_ncbi_codes(arguments):
 		all_syntenies = {}
 		starting_i = 0
 
+	t1 = Timer('collecting_genomic_context', text=lambda secs: f"Time to collect all genomic context: {format_timespan(secs)}")
+	t1.start()
 	for i in range(starting_i, len(target_ncbi_codes)):
 		curr_target_code = target_ncbi_codes[i].strip()
 		curr_target_count = i+1
-		
+
+		t2 = Timer('find_ncbi_code_assembly',
+				   text=lambda secs: f"Time to find assembly ncbi code for {curr_target_code}: {format_timespan(secs)}")
+		t2.start()
 		ncbi_code, assembly_id, assembly_link = find_ncbi_code_assembly(curr_target_code, refseq_gb_assembly_map)
+		t2.stop()
 
 		if assembly_id != 'nan':
 			print(" ... {} belongs to assembly {} ({}/{})".format(curr_target_code, assembly_id, curr_target_count, len(target_ncbi_codes)))
+			t3 = Timer('download_and_extract_assembly', text=lambda secs: f"Time to download and extract assembly {assembly_id} ({curr_target_code}): {format_timespan(secs)}")
+			t3.start()
 			assembly = download_and_extract_assembly(assembly_id, assembly_link, tmp_folder = tmp_folder, label = curr_target_code, get_chunk = True, chunk_size = ((n_flanking5+n_flanking3)*2)+1, target = ncbi_code)
+			t3.stop()
 
 			if assembly != 'nan':
+				t4 = Timer('extract_flanking_genes',
+						   text=lambda millisecs: f"Time to extract {n_flanking5 + n_flanking3} flanking genes for {curr_target_code} from {assembly_id}: {format_timespan(millisecs)}")
+				t4.start()
 				flanking_genes = get_n_flanking_genes(ncbi_code, assembly, n_5 = n_flanking5, n_3 = n_flanking3, exclude_partial = exclude_partial)
+				t4.stop()
 				if flanking_genes != 'nan':
-					flanking_genes = add_sequences_to_flanking_genes(flanking_genes, ncbi_code)	
+					t5 = Timer('add_sequences_to_flanking_genes',
+							   text=lambda
+								   millisecs: f"Time to add_sequences_to_flanking_genes for {curr_target_code} from {assembly_id}: {format_timespan(millisecs)}")
+					t5.start()
+					flanking_genes = add_sequences_to_flanking_genes(flanking_genes, ncbi_code)
+					t5.stop()
 
 					print(' ... ... Species: {}'.format(flanking_genes['species'])) 
 
@@ -3721,16 +3862,19 @@ def get_genomic_contexts_for_ncbi_codes(arguments):
 					all_syntenies[curr_target_code]['assembly_id'] = [ncbi_code, assembly_id, assembly_link]
 					all_syntenies[curr_target_code]['species'] = all_syntenies[curr_target_code]['flanking_genes']['species']
 		else:
-		   print("\n ... > There is no assembly for {} ({}/{})\n".format(curr_target_code, curr_target_count, len(target_ncbi_codes)))
- 
-		with open(out_json, 'w') as fp:
-		   json.dump(all_syntenies, fp, indent=4)
+			print("\n ... > There is no assembly for {} ({}/{})\n".format(curr_target_code, curr_target_count, len(target_ncbi_codes)))
 
+		with open(out_json, 'w') as fp:
+			json.dump(all_syntenies, fp, indent=4)
+	t1.stop()
 
 	return all_syntenies  
 
+#@Timer("find_and_add_protein_families", text=lambda secs: f"Time to find and add protein families: {format_timespan(secs)}")
 def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, blast = None, mmseqs = None, min_coverage = None, default_base = None, tmp_folder = None, method = None):
-
+	t1 = Timer(f"find_and_add_protein_families_{method}",
+		   text=lambda secs: f"Time to find and add protein families using {method}: {format_timespan(secs)}")
+	t1.start()
 	if os.path.isfile('all_syntenies.json') and os.path.isfile('protein_families_summary.json'):
 
 		in_syntenies = json.load(open('all_syntenies.json', 'r'))
@@ -3742,13 +3886,31 @@ def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = 
 	else:
 		print(' ... Doing all against all searches with {}'.format(method))
 
+		t2 = Timer(f"compute_all_agains_all_distance_matrix_{method}",
+				   text=lambda secs: f"Time to compute all agains all distance matrix using {method}: {format_timespan(secs)}")
+		t2.start()
 		distance_matrix, ordered_ncbi_codes = compute_all_agains_all_distance_matrix(in_syntenies, out_label = out_label, num_threads = num_threads, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, min_coverage = min_coverage, method = method, mmseqs = mmseqs, blast = blast, default_base = default_base, tmp_folder = tmp_folder)	
+		t2.stop()
+
+		t3 = Timer('find_clusters_in_distance_matrix',
+				   text=lambda secs: f"Time to find clusters in distance matrix using {method}: {format_timespan(secs)}")
+		t3.start()
 		protein_clusters = find_clusters_in_distance_matrix(distance_matrix)
+		t3.stop()
+
+		t4 = Timer('mask_singleton_clusters',
+				   text=lambda secs: f"Time to mask_singleton_clusters using {method}: {format_timespan(secs)}")
+		t4.start()
 		protein_clusters = mask_singleton_clusters(protein_clusters)
+		t4.stop()
 
 		print(' ... Assigning families')
 		# define the correct numbering of the families so that the reference family is the largest, pseudogenes are > 10000 and all the others
 		# are continuous
+		t5 = Timer('assign_families',
+				   text=lambda secs: f"Time to assign families: {format_timespan(secs)}")
+		t5.start()
+
 		curr_numbers = []
 		for target in in_syntenies:
 			in_syntenies[target]['flanking_genes']['families'] = []
@@ -3782,11 +3944,19 @@ def find_and_add_protein_families(in_syntenies, out_label = None, num_threads = 
 						in_syntenies[target]['flanking_genes']['families'][i] = protein_family
 
 			in_syntenies[target]['target_family'] = in_syntenies[target]['flanking_genes']['families'][in_syntenies[target]['flanking_genes']['ncbi_codes'].index(in_syntenies[target]['assembly_id'][0])]
+		t5.stop()
 
+		t6 = Timer('get_protein_families_summary',
+				   text=lambda secs: f"Time to get protein families summary: {format_timespan(secs)}")
+		t6.start()
 		protein_families = get_protein_families_summary(in_syntenies, write_to_file = True, out_label = out_label)
-	
+		t6.stop()
+
+	t1.stop()
+
 	return in_syntenies, protein_families
 
+#@Timer("update_families_with_functions_and_structures", text=lambda secs: f"Time to update families with functions and structures: {format_timespan(secs)}")
 def update_families_with_functions_and_structures(protein_families_summary, get_pdb = None, get_functional_annotations = None, threads = 1):
 
 	# Prepare all parallel jobs
@@ -3803,6 +3973,7 @@ def update_families_with_functions_and_structures(protein_families_summary, get_
 
 	return protein_families_summary
 
+#@Timer("add_functions_and_structures_to_families", text=lambda secs: f"Time to add functions and structures to families: {format_timespan(secs)}")
 def add_functions_and_structures_to_families(arguments):
 
 	targets = arguments[0]
@@ -3818,7 +3989,11 @@ def add_functions_and_structures_to_families(arguments):
 	print(' ... Thread {}: Mapping {} members'.format(job_id, len(all_members)))
 	family_uniprot_codes = map_codes_to_uniprot(all_members)
 
+	t1 = Timer('mapping_all_family_members', text=lambda secs: f"Time to map {len(all_members)} family members: {format_timespan(secs)}")
+	t1.start()
 	for family in sorted(list(protein_families_summary.keys())):
+		t2 = Timer('map_one_familiy', text=lambda secs: f"Time to map one single family: {format_timespan(secs)}")
+		t2.start()
 		if 'function' not in protein_families_summary[family]:
 			if family > 0 and family < 10000:
 
@@ -3871,23 +4046,33 @@ def add_functions_and_structures_to_families(arguments):
 			protein_families_summary[family]['model_state'] = family_model_state
 
 			json.dump(protein_families_summary, open('{}_protein_families_summary.json'.format(job_id), 'w'), indent = 4)
-
+		t2.stop()
+	t1.stop()
 	return protein_families_summary
 
+#@Timer("find_and_add_operon_types", text=lambda secs: f"Time to find and add operon types: {format_timespan(secs)}")
 def find_and_add_operon_types(in_syntenies, protein_families_summary, label = None, advanced = False, min_family_freq = None, max_family_freq = None):
 
 	print(' ... Using mode Advanced?', advanced)
 
 	if len(in_syntenies) > 1:
 		if advanced:
+			t1 = Timer('find_operon_types_advanced',
+					   text=lambda secs: f"Time to find operon types in advanced mode: {format_timespan(secs)}")
+			t1.start()
 			# get the clusters by excluding the most common families
 			clean_coordinates, operon_clusters, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = True, min_freq = min_family_freq, max_freq = max_family_freq)
 			# and now all PacMap coordinates by assuming all families. This will be later used for sorting the dendogram
 			all_coordinates, ordered_ncbi_codes = find_operon_clusters_with_PaCMAP(in_syntenies, protein_families_summary, clean = False, coordinates_only = True)
+			t1.stop()
 		else:
+			t2 = Timer('find_operon_types_standard',
+					   text=lambda secs: f"Time to find operon types in standard mode: {format_timespan(secs)}")
+			t2.start()
 			distance_matrix, ordered_ncbi_codes = compute_operons_distance_matrix(in_syntenies, label = label)
 			operon_clusters = find_clusters_in_distance_matrix(distance_matrix, t = 0.2)
 			coordinates = [[np.nan, np.nan] for i in operon_clusters]
+			t2.stop()
 	else:
 		operon_clusters = [1]
 		ordered_ncbi_codes = list(in_syntenies.keys())
@@ -3904,6 +4089,7 @@ def find_and_add_operon_types(in_syntenies, protein_families_summary, label = No
 	
 	return in_syntenies, operon_types
 
+#@Timer("annotate_TMs_in_all", text=lambda secs: f"Time to annotate TMs in all: {format_timespan(secs)}")
 def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, label = None):
 
 	out_dir = '{}/{}_TM_annotations'.format(os.getcwd(), label)
@@ -3939,6 +4125,7 @@ def annotate_TMs_in_all(in_syntenies, annotation_TM_mode, annotation_TM_file, la
 			print('		  Save in folder: {}'.format(out_dir))
 	return in_syntenies
 
+#@Timer("make_genomic_context_figure", text=lambda secs: f"Time to make genomic context figure: {format_timespan(secs)}")
 def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, families_summary, cmap = None, label = None, out_format = None):
 
 	# define the reference family as the one of the target in the most populated operon type
@@ -3948,6 +4135,7 @@ def make_genomic_context_figure(operons, most_populated_operon, all_syntenies, f
 	draw_genomic_context(operons, all_syntenies, family_colors, reference_family, label = label, out_format = out_format)
 	draw_genomic_context_legend(families_summary, family_colors, reference_family, label = label, out_format = out_format)
 
+#@Timer("make_interactive_genomic_context_figure", text=lambda secs: f"Time to make interactive genomic context figure: {format_timespan(secs)}")
 def make_interactive_genomic_context_figure(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None):
 
 	# define the reference family as the one of the target in the most populated operon type
@@ -3987,6 +4175,7 @@ def make_interactive_genomic_context_figure(operons, all_syntenies, families_sum
 
 	save(grid)
 
+#@Timer("make_advanced_interactive_genomic_context_figures", text=lambda secs: f"Time to make advanced interactive genomic context figures: {format_timespan(secs)}")
 def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, families_summary, taxonomy, most_populated_operon, tree = None, sort_mode = None, input_targets = None, gc_legend_mode = None, cmap = None, label = None, min_coocc = None, n_flanking5=None, n_flanking3=None, tree_format=None, max_family_freq=None, min_family_freq=None, min_family_freq_accross_contexts=None, clans_file=None, out_label = None, num_threads = None, num_alignments = None, max_evalue = None, num_iterations = None, min_coverage = None, method = None, mmseqs = None, blast = None, default_base = None, tmp_folder = None):
 
 	# define the reference family as the one of the target in the most populated operon type
@@ -4082,6 +4271,7 @@ def make_advanced_interactive_genomic_context_figures(operons, all_syntenies, fa
 			save(grid)
 
 
+#@Timer("write_summary_table", text=lambda secs: f"Time to write summary table: {format_timespan(secs)}")
 def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 
 	out_file = '{}_summary_table.tab'.format(label)
@@ -4114,6 +4304,7 @@ def write_summary_table(operons, all_syntenies, taxonomy, label = None):
 					
 # MAIN CODE
 
+@Timer("main", text=lambda secs: f"Time to run main: {format_timespan(secs)}")
 def main():
 
 	# GET INPUTS
@@ -4280,131 +4471,200 @@ def main():
 
 	## START PIPELINE HERE
 
-	# Get the list of target codes
-	print('\nParsing targets\n')
-	targets = parse_targets(targets, label = out_label, clans_patterns = clans_patterns)
+	try:
+		# Get the list of target codes
+		print('\nParsing targets\n')
+		targets = parse_targets(targets, label = out_label, clans_patterns = clans_patterns)
 
-	# Download and parse RefSeq and Genbank databases
-	print('\nDownloading and parsing RefSeq and Genbank summary tables\n')
-	refseq_gb_assembly_map = download_and_parse_refseq_and_gb_databases()
+		# Download and parse RefSeq and Genbank databases
+		print('\nDownloading and parsing RefSeq and Genbank summary tables\n')
+		refseq_gb_assembly_map = download_and_parse_refseq_and_gb_databases()
 
-	for out_label in targets:
-		
-		start = time.time()
-		# Define job and create working directory
-		print("\nWorking on job '{}'".format(out_label))
-		if len(out_label_suffix) > 0:
-			working_dir = '{}/{}_{}'.format(starting_directory, out_label, out_label_suffix)
-		else:
-			working_dir = '{}/{}'.format(starting_directory, out_label)
+		for out_label in targets:
 
-		if not os.path.isdir(working_dir):
-			os.mkdir(working_dir)
-		os.chdir(working_dir)
+			start = time.time()
+			# Define job and create working directory
+			print("\nWorking on job '{}'".format(out_label))
+			if len(out_label_suffix) > 0:
+				working_dir = '{}/{}_{}'.format(starting_directory, out_label, out_label_suffix)
+			else:
+				working_dir = '{}/{}'.format(starting_directory, out_label)
 
-		# Write arguments file, which summarises all arguments used
-		write_arguments_file(args, out_label)
-			
-		# Collect the genomic_context of all target ncbi codes 
-		curr_targets = targets[out_label]
+			if not os.path.isdir(working_dir):
+				os.mkdir(working_dir)
+			os.chdir(working_dir)
 
-		if len(curr_targets) > 1:
-			print("\n 1. Collecting the genomic contexts of {} unique input entrezIDs (may take some time)\n".format(len(curr_targets)))
-			all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder, threads = n_cpus)
+			# Write arguments file, which summarises all arguments used
+			write_arguments_file(args, out_label)
 
-			if len(all_syntenies) > 1:
-				if not collect_only:
-					# Find shared protein families by running all-against-all blast searches for all proteins collected
-					print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
-					all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
+			# Collect the genomic_context of all target ncbi codes
+			curr_targets = targets[out_label]
 
-					# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
-					if get_pdb or get_functional_annotations:
+			t_all_steps = Timer('t_all_steps', text=lambda secs: f"Time to run steps 1-9: {format_timespan(secs)}")
+			t_all_steps.start()
+			if len(curr_targets) > 1:
+				print("\n 1. Collecting the genomic contexts of {} unique input entrezIDs (may take some time)\n".format(len(curr_targets)))
+				t1 = Timer('step_1', text=lambda secs: f"Time to run step 1: {format_timespan(secs)}")
+				t1.start()
+				all_syntenies = get_genomic_context_information_for_ncbi_codes(curr_targets, refseq_gb_assembly_map = refseq_gb_assembly_map, n_flanking5 = n_flanking5, n_flanking3 = n_flanking3, exclude_partial = exclude_partial, tmp_folder = tmp_folder, threads = n_cpus)
+				t1.stop()
 
-						print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
-						protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
+				if len(all_syntenies) > 1:
+					if not collect_only:
+						# Find shared protein families by running all-against-all blast searches for all proteins collected
+						print("\n 2. Finding protein families (may take some time depending on the number of flanking sequences taken)\n")
+						t2 = Timer('step_2', text=lambda secs: f"Time run step 2: {format_timespan(secs)}")
+						t2.start()
+						all_syntenies, protein_families_summary = find_and_add_protein_families(all_syntenies, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
+						t2.stop()
 
-					else:
-						print("\n 3. Neither functions will be annotated, neither structures will be searched\n")
+						# Search for functional information and pdb structures (experimental or homology-models, in Swiss-repository) for representatives of the families found
+						if get_pdb or get_functional_annotations:
 
-					# Find operon/genomic_context types by clustering them by similarity
-					print("\n 4. Finding operon/genomic_context types\n")
-					all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced, min_family_freq = min_family_freq, max_family_freq = max_family_freq)
-
-					# Select top N most populated operon/genomic_context types
-					print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
-					selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
-					json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
-
-					# get taxonomy information
-					if get_taxonomy:
-						# Map taxonomy to the input targets. Load if already precomputed
-						print("\n 6. Mapping taxonomy (may take some time)\n")
-						taxonomy = map_taxonomy_to_targets(all_syntenies, threads = n_cpus)
-						json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
-
-					else:
-						print("\n 6. Taxonomy will not be mapped\n")
-						taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
-
-					# Annotate transmembrane segments
-					if annotate_TM:
-						# Try to annotate transmembrane segments
-						print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
-						all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
-
-					else:
-						print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
-
-					# Make operon/genomic_context conservation figure
-					print("\n 8. Making operon/genomic_context blocks figure\n")
-					try:
-						make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
-					except:
-						print(' ... Images not created due to minor errors (likely they are too big)')
-					# Make interactive HTML output
-					if interactive_output:
-						print("\n 9. Making interactive html output file\n")
-						#check if Bokeh is available
-						# try:
-						if operon_cluster_advanced:
-							make_advanced_interactive_genomic_context_figures(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format, max_family_freq=max_family_freq, min_family_freq=min_family_freq, min_family_freq_accross_contexts=min_family_freq_accross_contexts, clans_file=clans_file, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
+							print("\n 3. Annotating functions and/or finding structures for the protein families found\n")
+							t3 = Timer('step_3', text=lambda secs: f"Time run step 3: {format_timespan(secs)}")
+							t3.start()
+							protein_families_summary = update_families_with_functions_and_structures(protein_families_summary, get_pdb = get_pdb, get_functional_annotations = get_functional_annotations, threads = n_cpus)
+							t3.stop()
 						else:
-							make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
+							print("\n 3. Neither functions will be annotated, neither structures will be searched\n")
 
-						# except:
-						#	 print(sys.exc_info())
-						#	 print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
-						#	 print("\n ... Interactive html output file will not be generated\n")
+						# Find operon/genomic_context types by clustering them by similarity
+						print("\n 4. Finding operon/genomic_context types\n")
+						t4 = Timer('step_4', text=lambda secs: f"Time run step 4: {format_timespan(secs)}")
+						t4.start()
+						all_syntenies, operon_types_summary = find_and_add_operon_types(all_syntenies, protein_families_summary, label = out_label, advanced = operon_cluster_advanced, min_family_freq = min_family_freq, max_family_freq = max_family_freq)
+						t4.stop()
+
+						# Select top N most populated operon/genomic_context types
+						print("\n 5. Selecting top {} most common operon/genomic_context types\n".format(n_max))
+						t5 = Timer('step_5', text=lambda secs: f"Time run step 5: {format_timespan(secs)}")
+						t5.start()
+						selected_operons, most_populated_operon = find_most_populated_operon_types(operon_types_summary, nmax = n_max)
+						json.dump(selected_operons, open('selected_operons.json', 'w'), indent = 4)
+						t5.stop()
+
+						# get taxonomy information
+						if get_taxonomy:
+							# Map taxonomy to the input targets. Load if already precomputed
+							print("\n 6. Mapping taxonomy (may take some time)\n")
+							t6 = Timer('step_6', text=lambda secs: f"Time run step 6: {format_timespan(secs)}")
+							t6.start()
+							taxonomy = map_taxonomy_to_targets(all_syntenies, threads = n_cpus)
+							json.dump(taxonomy, open('taxonomy.json', 'w'), indent = 4)
+							t6.stop()
+
+						else:
+							print("\n 6. Taxonomy will not be mapped\n")
+							t6b = Timer('step_6b', text=lambda secs: f"Time run step 6b: {format_timespan(secs)}")
+							t6b.start()
+							taxonomy = map_taxonomy_to_targets(all_syntenies, mode = 'as_input')
+							t6b.stop()
+
+						# Annotate transmembrane segments
+						if annotate_TM:
+							# Try to annotate transmembrane segments
+							print("\n 7. Finding ALL proteins with transmembrane segments and signal peptides\n")
+							t7 = Timer('step_7', text=lambda secs: f"Time run step 7 using {annotation_TM_mode}: {format_timespan(secs)}")
+							t7.start()
+							all_syntenies = annotate_TMs_in_all(all_syntenies, annotation_TM_mode, annotation_TM_file, label = out_label)
+							t7.stop()
+
+						else:
+							print("\n 7. Transmembrane segments and signal peptides will not be searched\n")
+
+						# Make operon/genomic_context conservation figure
+						print("\n 8. Making operon/genomic_context blocks figure\n")
+						try:
+							t8 = Timer('step_8', text=lambda secs: f"Time run step 8: {format_timespan(secs)}")
+							t8.start()
+							make_genomic_context_figure(selected_operons, most_populated_operon, all_syntenies, protein_families_summary, cmap = genomic_context_cmap, label = out_label, out_format = args.out_format)
+							t8.stop()
+						except:
+							print(' ... Images not created due to minor errors (likely they are too big)')
+						# Make interactive HTML output
+						if interactive_output:
+							print("\n 9. Making interactive html output file\n")
+							#check if Bokeh is available
+							# try:
+							t9 = Timer('step_9', text=lambda secs: f"Time run step 9 (operon cluster advanced mode: {operon_cluster_advanced}): {format_timespan(secs)}")
+							t9.start()
+							if operon_cluster_advanced:
+								make_advanced_interactive_genomic_context_figures(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format, max_family_freq=max_family_freq, min_family_freq=min_family_freq, min_family_freq_accross_contexts=min_family_freq_accross_contexts, clans_file=clans_file, out_label = out_label, num_threads = n_cpus, num_alignments = num_alignments, max_evalue = max_evalue, num_iterations = num_iterations, blast = blast, mmseqs = mmseqs, min_coverage = min_coverage, default_base = default_base, tmp_folder = tmp_folder, method = method)
+							else:
+								make_interactive_genomic_context_figure(selected_operons, all_syntenies, protein_families_summary, taxonomy, most_populated_operon, input_targets = curr_targets, tree = in_tree, gc_legend_mode = gc_legend_mode, cmap = genomic_context_cmap, label = out_label, sort_mode = sort_mode, min_coocc = min_coocc, n_flanking5=n_flanking5, n_flanking3=n_flanking3, tree_format = in_tree_format)
+							t9.stop()
+
+							# except:
+							#	 print(sys.exc_info())
+							#	 print(' --> ERROR: Not possible to generate the interactive output. If the error is about Bokeh, check if the correct version is installed and run again. You can install it with "pip install bokeh==1.3.4"')
+							#	 print("\n ... Interactive html output file will not be generated\n")
+
+						else:
+							print("\n 9. Interactive html output file will not be generated\n")
+
+						# Write summary table
+						print("\n Finished {}: Writting summary table\n".format(out_label))
+						write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
+						json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
 
 					else:
-						print("\n 9. Interactive html output file will not be generated\n")
+						print(' GCsnap was asked to collect genomic context only. Will not proceed further.')
 
-					# Write summary table
-					print("\n Finished {}: Writting summary table\n".format(out_label))
-					write_summary_table(selected_operons, all_syntenies, taxonomy, label = out_label)
-					json.dump(protein_families_summary, open('protein_families_summary.json', 'w'), indent = 4)
+					json.dump(all_syntenies, open('all_syntenies.json', 'w'), indent = 4)
+
+					end = time.time()
+					numb_seconds = end - start
+					print("\n#### Finished {} after: {} \n".format(out_label, time.strftime('%H hours %M min %S sec', time.gmtime(numb_seconds))))
 
 				else:
-					print(' GCsnap was asked to collect genomic context only. Will not proceed further.')
-
-				json.dump(all_syntenies, open('all_syntenies.json', 'w'), indent = 4)
-
-				end = time.time()
-				numb_seconds = end - start
-				print("\n#### Finished {} after: {} \n".format(out_label, time.strftime('%H hours %M min %S sec', time.gmtime(numb_seconds))))
-
+					print('\n --> WARNING: Found genomic contexts for less than 2 targets. Job {} will not be further analysed.'.format(out_label))
 			else:
-				print('\n --> WARNING: Found genomic contexts for less than 2 targets. Job {} will not be further analysed.'.format(out_label))
-		else:
-			print('\n --> WARNING: Job {} has less than 2 targets. It will not be analysed.'.format(out_label))
+				print('\n --> WARNING: Job {} has less than 2 targets. It will not be analysed.'.format(out_label))
+
+			t_all_steps.stop()
+
+		with open(timing_log_file, 'a+') as f:
+			f.write(f'{out_label}\n')
+			f.write(f'nr_of_targets: {len(targets[list(targets.keys())[0]])}\n')
+			f.write(f'\tTotal_time\tCount\tMax\tMin\tMean\tStd\tMedian\n')
+
+			for timing in Timer.timers:
+				line_to_write = [timing, '\t', str(Timer.timers.total(timing)), '\t', str(Timer.timers.count(timing)),
+								 '\t', str(Timer.timers.max(timing)), '\t', str(Timer.timers.min(timing)),
+								 '\t', str(Timer.timers.mean(timing)), '\t', str(Timer.timers.stdev(timing)),
+								 '\t', str(Timer.timers.median(timing)), '\n']
+				f.writelines(line_to_write)
+
+	except Exception as e:
+		print(e)
+		with open(timing_log_file, 'a+') as f:
+			f.write(f'{out_label}\n')
+			f.write(f'nr_of_targets: {len(targets[list(targets.keys())[0]])}\n')
+			f.write(f'\tTotal_time\tCount\tMax\tMin\tMean\tStd\tMedian\n')
+
+			for timing in Timer.timers:
+				line_to_write = [timing, '\t', str(Timer.timers.total(timing)), '\t', str(Timer.timers.count(timing)),
+								 '\t', str(Timer.timers.max(timing)), '\t', str(Timer.timers.min(timing)),
+								 '\t', str(Timer.timers.mean(timing)), '\t', str(Timer.timers.stdev(timing)),
+								 '\t', str(Timer.timers.median(timing)), '\n']
+				f.writelines(line_to_write)
+
 
 if __name__ == '__main__':
+	now = datetime.now()
+	current_time = now.strftime("%d-%m-%Y_%H-%M-%S")
+	timing_log_file = f'times_{current_time}.tsv'
 
 	main_start = time.time()
 	main()
 	main_end = time.time()
 	main_numb_seconds = main_end - main_start
-	print("\n#### Finished job after: {} \n".format(time.strftime('%H hours %M min %S sec', time.gmtime(main_numb_seconds))))
 
-	
+	# add time for running main() to timing log file
+	with open(timing_log_file, 'a+') as f:
+		line_to_write = ['main', '\t', str(Timer.timers.total('main')), '\t', str(Timer.timers.count('main')),
+						 '\t', str(Timer.timers.max('main')), '\t', str(Timer.timers.min('main')),
+						 '\t', str(Timer.timers.mean('main')), '\t', str(Timer.timers.stdev('main')),
+						 '\t', str(Timer.timers.median('main')), '\n']
+		f.writelines(line_to_write)
