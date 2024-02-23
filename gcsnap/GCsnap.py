@@ -165,9 +165,16 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 
 	if '.' not in ncbi_code:
 		uniprot_code = ncbi_code
+		t1 = Timer('map_uniprot_to_ncbi',
+				   text=lambda secs: f"Time to map uniprot id to ncbi code for {uniprot_code}: {format_timespan(secs)}")
+		t1.start()
 		ncbi_code, search_database = map_uniprot_to_ncbi(uniprot_code)
+		t1.stop()
 
 	try:
+		t2 = Timer('get_assembly_id_from_ncbi_code',
+				   text=lambda secs: f"Time to get assembly id from ncbi code for {ncbi_code}: {format_timespan(secs)}")
+		t2.start()
 		handle = Entrez.efetch(db="protein", id=ncbi_code, rettype="ipg", retmode="xml")
 		record = Entrez.read(handle)
 
@@ -193,6 +200,7 @@ def find_ncbi_code_assembly(ncbi_code, database_assembly_mapping):
 							assembly_source = source
 
 							assembly_link = database_assembly_mapping[assembly_id]
+		t2.stop()
 	except:
 		assembly_id = 'nan'
 		assembly_source = 'nan'
@@ -1569,7 +1577,7 @@ def run_TM_signal_peptide_annotation(in_fasta, annotation_TM_mode = None):
 			with open(out_file, 'w') as outf:
 				for ncbi_code in ncbi_codes:
 					uniprot_code = uniprot_codes[ncbi_code]
-					t1 = Timer('get_unirpot_annotation_for_each_peptide',
+					t1 = Timer('get_uniprot_annotation_for_each_peptide',
 						   text=lambda secs: f"Time to get uniprot tm annotation for {ncbi_code}: {format_timespan(secs)}")
 					t1.start()
 					curr_uniprot_annotations = get_uniprot_annotations(uniprot_code)
@@ -4010,9 +4018,18 @@ def add_functions_and_structures_to_families(arguments):
 					if family_uniprot_code == '' or family_structure == '' or (family_function == '' or family_function['Function_description'] == ''):
 
 						if get_pdb and family_structure == '':
+							t3 = Timer('find_uniprot_in_swiss_model_repository',
+									   text=lambda secs: f"Time to find {uniprot_code} in swiss model repository: {format_timespan(secs)}")
+							t3.start()
 							curr_pdb = find_uniprot_in_swiss_model_repository(uniprot_code)
+							t3.stop()
 							if 'nan' in curr_pdb:
+								t4 = Timer('find_uniprot_in_alphafold_database',
+										   text=lambda
+											   secs: f"Time to find {uniprot_code} in alphafold database: {format_timespan(secs)}")
+								t4.start()
 								curr_pdb = find_uniprot_in_alphafold_database(uniprot_code)
+								t4.stop()
 
 							if 'nan' not in curr_pdb:
 								family_structure = curr_pdb
@@ -4023,7 +4040,12 @@ def add_functions_and_structures_to_families(arguments):
 								family_uniprot_code = uniprot_code
 
 						if get_functional_annotations and (family_function == '' or family_function['Function_description'] == ''):
+							t5 = Timer('get_uniprot_annotations',
+									   text=lambda
+										   secs: f"Time to get uniprot annotation for {uniprot_code}: {format_timespan(secs)}")
+							t5.start()
 							curr_uniprot_annotations = get_uniprot_annotations(uniprot_code, previous_annotations = family_function)
+							t5.stop()
 
 							if curr_uniprot_annotations != 'nan':
 								family_function = curr_uniprot_annotations
