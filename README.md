@@ -10,6 +10,16 @@ GCsnap is not limited to a single input format, can preform batch jobs and accep
 
 All information is stored in detailed, human and machine-readable files, and customable publication-ready figures.
 
+## User Survey
+
+If you use GCsnap for your research, we would very much appreciate your feedback so that we can further improve or extend its functionalities to better meet your needs.
+
+We are conducting a survey and would very much appreciate your feedback and suggestions. You can participate by following this link: https://docs.google.com/forms/d/e/1FAIpQLSd2MaUpyz_45wNOKmF0AynSFA8OZl68vrRw-i0iIJBA2TzF3Q/viewform?usp=sf_link 
+
+Although you need a google account and will be asked to provide an email address, *responses will be anonymous* and we will not collect this information.
+
+Thank you for using and showing interest on GCsnap!
+
 ## Dependencies
 
 GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on Python 3.7 and 3.8. It requires mostly core Python modules and only five external packages are required: 
@@ -19,7 +29,7 @@ GCsnap is written in Python 3.7 and should run on Python 3.x. It was tested on P
   - PaCMAP
   - Scikit-learn
 
-For detailed requirements, check ```pyproject.toml```.
+For detailed requirements, check ```requirements.txt```.
 
 Additionally, GCsnap relies on a local installation of BLASTp and PsiBlast (versions 2.4.0+ and above) and MMseqs. 
 
@@ -38,9 +48,7 @@ cd GCsnap
 git pull origin master
 
 # To install
-conda create -n GCsnap -c bioconda -c conda-forge python=3.8 blast mmseqs2
-conda activate GCsnap
-pip install .
+python setup.py install
 ```
 
 ## Allowed inputs
@@ -124,8 +132,6 @@ The figure below shows the summary page for genomic context type 0000.
 
 ## Citing GCsnap
 
-GCsnap is going to be published in the Computation Resources (2021) Special Issue of Journal of Molecular Biology (JMB) and you can cite it already:
-
 ```
 J. Pereira, GCsnap: interactive snapshots for the comparison of protein-coding genomic contexts, 
 J. Mol. Biol. (2021) 166943. https://doi.org/https://doi.org/10.1016/j.jmb.2021.166943.
@@ -137,4 +143,4 @@ GCsnap was developed during the COVID-19 lockdown.
 
 I would like to thank Prof. Andrei N. Lupas, Dr. Laura Weidmann-Krebs, Dr. Marcus Hartmann, Dr. Vikram Alva, Dr. Felipe Merino, Dr. Jörg Martin, Dr. Adrian Fuchs, Hadeer Elhabashy, Prof. Volkmar Braun, Dr. João Rodrigues and Dr. João Barros for the great support and the insightful discussions that helped the development of GCsnap.
 
-GCsnap is being maintained at the Biozentrum of the University of Basel, and I would like to thank the Schwede team and the Basler group for insightful discussions that are driving many new developments.
+GCsnap is being maintained and further developed at the Biozentrum of the University of Basel, and I would like to thank the Schwede team, the Basler group and the Ciorba group for insightful discussions that are driving many new developments.
